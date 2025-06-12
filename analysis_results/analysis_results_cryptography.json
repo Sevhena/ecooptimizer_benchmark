@@ -1,0 +1,1585 @@
+[
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "noxfile",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 9,
+                "endColumn": 71,
+                "endLine": 199,
+                "line": 199
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/noxfile.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "noxfile",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 9,
+                "endColumn": 67,
+                "endLine": 200,
+                "line": 200
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/noxfile.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "noxfile",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 9,
+                "endColumn": 66,
+                "endLine": 201,
+                "line": 201
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/noxfile.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "noxfile",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 9,
+                "endColumn": 66,
+                "endLine": 202,
+                "line": 202
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/noxfile.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "noxfile",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 9,
+                "endColumn": 71,
+                "endLine": 282,
+                "line": 282
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/noxfile.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "noxfile",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 9,
+                "endColumn": 67,
+                "endLine": 283,
+                "line": 283
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/noxfile.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "noxfile",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 9,
+                "endColumn": 66,
+                "endLine": 284,
+                "line": 284
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/noxfile.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "noxfile",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 9,
+                "endColumn": 66,
+                "endLine": 285,
+                "line": 285
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/noxfile.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.backends.openssl.backend",
+        "obj": "Backend.openssl_assert",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 82,
+                "line": 82
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/backends/openssl/backend.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.backends.openssl.backend",
+        "obj": "Backend.openssl_version_text",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 92,
+                "line": 92
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/backends/openssl/backend.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.backends.openssl.backend",
+        "obj": "Backend.openssl_version_number",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 30,
+                "endLine": 101,
+                "line": 101
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/backends/openssl/backend.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.backends.openssl.backend",
+        "obj": "Backend._consume_errors",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 162,
+                "line": 162
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/backends/openssl/backend.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.backends.openssl.backend",
+        "obj": "Backend.dh_supported",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 253,
+                "line": 253
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/backends/openssl/backend.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.backends.openssl.backend",
+        "obj": "Backend.pkcs7_supported",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 295,
+                "line": 295
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/backends/openssl/backend.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "rust_openssl.is_fips_enabled()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: rust_openssl.is_fips_enabled()",
+        "messageId": "CRC001",
+        "module": "backend",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 45,
+                "endLine": 89,
+                "line": 89
+            },
+            {
+                "column": 29,
+                "endColumn": 59,
+                "endLine": 90,
+                "line": 90
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/backends/openssl/backend.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "cryptography.hazmat.primitives.twofactor.totp",
+        "obj": "TOTP.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 20,
+                "line": 20
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/twofactor/totp.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "cryptography.hazmat.primitives.kdf.kbkdf",
+        "obj": "_KBKDFDeriver.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 38,
+                "line": 38
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/kdf/kbkdf.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "cryptography.hazmat.primitives.kdf.kbkdf",
+        "obj": "KBKDFHMAC.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 182,
+                "line": 182
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/kdf/kbkdf.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "cryptography.hazmat.primitives.kdf.kbkdf",
+        "obj": "KBKDFCMAC.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 240,
+                "line": 240
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/kdf/kbkdf.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatRSA.get_public",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 316,
+                "line": 316
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatRSA.load_private",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 333,
+                "line": 333
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatRSA.encode_public",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 357,
+                "line": 357
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatRSA.encode_private",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 365,
+                "line": 365
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatDSA.get_public",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 390,
+                "line": 390
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatDSA._validate",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 445,
+                "line": 445
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatEd25519.get_public",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 532,
+                "line": 532
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatEd25519.encode_public",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 563,
+                "line": 563
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatSKEd25519.load_public",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 611,
+                "line": 611
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatSKEd25519.get_public",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 619,
+                "line": 619
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatSKECDSA.load_public",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 637,
+                "line": 637
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.hazmat.primitives.serialization.ssh",
+        "obj": "_SSHFormatSKECDSA.get_public",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 645,
+                "line": 645
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_sshstr(data)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 6
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (6/2). Consider caching the result: _get_sshstr(data)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 40,
+                "endLine": 705,
+                "line": 705
+            },
+            {
+                "column": 20,
+                "endColumn": 37,
+                "endLine": 706,
+                "line": 706
+            },
+            {
+                "column": 23,
+                "endColumn": 40,
+                "endLine": 707,
+                "line": 707
+            },
+            {
+                "column": 20,
+                "endColumn": 37,
+                "endLine": 713,
+                "line": 713
+            },
+            {
+                "column": 22,
+                "endColumn": 39,
+                "endLine": 730,
+                "line": 730
+            },
+            {
+                "column": 22,
+                "endColumn": 39,
+                "endLine": 759,
+                "line": 759
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_u32(edata)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: _get_u32(edata)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 32,
+                "endLine": 763,
+                "line": 763
+            },
+            {
+                "column": 17,
+                "endColumn": 32,
+                "endLine": 764,
+                "line": 764
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_sshstr(edata)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: _get_sshstr(edata)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 40,
+                "endLine": 769,
+                "line": 769
+            },
+            {
+                "column": 15,
+                "endColumn": 33,
+                "endLine": 778,
+                "line": 778
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_FragList()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: _FragList()",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 30,
+                "endLine": 815,
+                "line": 815
+            },
+            {
+                "column": 19,
+                "endColumn": 30,
+                "endLine": 839,
+                "line": 839
+            },
+            {
+                "column": 13,
+                "endColumn": 24,
+                "endLine": 850,
+                "line": 850
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "f_secrets.size()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: f_secrets.size()",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 11,
+                "endColumn": 27,
+                "endLine": 860,
+                "line": 860
+            },
+            {
+                "column": 43,
+                "endColumn": 59,
+                "endLine": 847,
+                "line": 847
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_sshstr(rest)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 9
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (9/2). Consider caching the result: _get_sshstr(rest)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 27,
+                "endColumn": 44,
+                "endLine": 1059,
+                "line": 1059
+            },
+            {
+                "column": 22,
+                "endColumn": 39,
+                "endLine": 1063,
+                "line": 1063
+            },
+            {
+                "column": 23,
+                "endColumn": 40,
+                "endLine": 1068,
+                "line": 1068
+            },
+            {
+                "column": 27,
+                "endColumn": 44,
+                "endLine": 1069,
+                "line": 1069
+            },
+            {
+                "column": 29,
+                "endColumn": 46,
+                "endLine": 1076,
+                "line": 1076
+            },
+            {
+                "column": 21,
+                "endColumn": 38,
+                "endLine": 1078,
+                "line": 1078
+            },
+            {
+                "column": 18,
+                "endColumn": 35,
+                "endLine": 1081,
+                "line": 1081
+            },
+            {
+                "column": 28,
+                "endColumn": 45,
+                "endLine": 1082,
+                "line": 1082
+            },
+            {
+                "column": 30,
+                "endColumn": 47,
+                "endLine": 1090,
+                "line": 1090
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_u64(rest)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: _get_u64(rest)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 37,
+                "endLine": 1066,
+                "line": 1066
+            },
+            {
+                "column": 28,
+                "endColumn": 42,
+                "endLine": 1074,
+                "line": 1074
+            },
+            {
+                "column": 29,
+                "endColumn": 43,
+                "endLine": 1075,
+                "line": 1075
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_sshstr(exts_opts)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: _get_sshstr(exts_opts)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 48,
+                "endLine": 1136,
+                "line": 1136
+            },
+            {
+                "column": 27,
+                "endColumn": 49,
+                "endLine": 1142,
+                "line": 1142
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_mpint(data)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: _get_mpint(data)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 320,
+                "line": 320
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 321,
+                "line": 321
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_mpint(data)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 6
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (6/2). Consider caching the result: _get_mpint(data)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 337,
+                "line": 337
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 338,
+                "line": 338
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 339,
+                "line": 339
+            },
+            {
+                "column": 21,
+                "endColumn": 37,
+                "endLine": 340,
+                "line": 340
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 341,
+                "line": 341
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 342,
+                "line": 342
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_mpint(data)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 4
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (4/2). Consider caching the result: _get_mpint(data)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 392,
+                "line": 392
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 393,
+                "line": 393
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 394,
+                "line": 394
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 395,
+                "line": 395
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_sshstr(data)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: _get_sshstr(data)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 39,
+                "endLine": 471,
+                "line": 471
+            },
+            {
+                "column": 22,
+                "endColumn": 39,
+                "endLine": 472,
+                "line": 472
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_get_sshstr(exts_opts)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: _get_sshstr(exts_opts)",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 48,
+                "endLine": 1136,
+                "line": 1136
+            },
+            {
+                "column": 27,
+                "endColumn": 49,
+                "endLine": 1142,
+                "line": 1142
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_FragList()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 11
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (11/2). Consider caching the result: _FragList()",
+        "messageId": "CRC001",
+        "module": "ssh",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 1536,
+                "line": 1536
+            },
+            {
+                "column": 22,
+                "endColumn": 33,
+                "endLine": 1543,
+                "line": 1543
+            },
+            {
+                "column": 16,
+                "endColumn": 27,
+                "endLine": 1549,
+                "line": 1549
+            },
+            {
+                "column": 15,
+                "endColumn": 26,
+                "endLine": 1559,
+                "line": 1559
+            },
+            {
+                "column": 14,
+                "endColumn": 25,
+                "endLine": 1573,
+                "line": 1573
+            },
+            {
+                "column": 19,
+                "endColumn": 30,
+                "endLine": 1582,
+                "line": 1582
+            },
+            {
+                "column": 26,
+                "endColumn": 37,
+                "endLine": 1553,
+                "line": 1553
+            },
+            {
+                "column": 26,
+                "endColumn": 37,
+                "endLine": 1563,
+                "line": 1563
+            },
+            {
+                "column": 19,
+                "endColumn": 30,
+                "endLine": 1590,
+                "line": 1590
+            },
+            {
+                "column": 23,
+                "endColumn": 34,
+                "endLine": 1592,
+                "line": 1592
+            },
+            {
+                "column": 19,
+                "endColumn": 30,
+                "endLine": 1604,
+                "line": 1604
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/hazmat/primitives/serialization/ssh.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "cryptography.x509.extensions",
+        "obj": "KeyUsage.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 1139,
+                "line": 1139
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/x509/extensions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.x509.extensions",
+        "obj": "NameConstraints._validate_ip_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 1392,
+                "line": 1392
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/x509/extensions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "cryptography.x509.extensions",
+        "obj": "NameConstraints._validate_dns_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 1405,
+                "line": 1405
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/x509/extensions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "cryptography.x509.extensions",
+        "obj": "IssuingDistributionPoint.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 2001,
+                "line": 2001
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/x509/extensions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "cryptography.x509.ocsp",
+        "obj": "_SingleResponse.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 56,
+                "line": 56
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/x509/ocsp.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "cryptography.x509.ocsp",
+        "obj": "OCSPResponseBuilder.add_response",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/x509/ocsp.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "cryptography.x509.ocsp",
+        "obj": "OCSPResponseBuilder.add_response_by_hash",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 252,
+                "line": 252
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/x509/ocsp.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "cryptography.x509.base",
+        "obj": "CertificateBuilder.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 366,
+                "line": 366
+            }
+        ],
+        "path": "/root/ecooptimizer/cryptography/src/cryptography/x509/base.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    }
+]

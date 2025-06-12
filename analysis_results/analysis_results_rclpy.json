@@ -1,0 +1,5573 @@
+[
+    {
+        "additionalInfo": {
+            "callString": "future.result()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: future.result()",
+        "messageId": "CRC001",
+        "module": "test_parameter_service",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 67,
+                "line": 67
+            },
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 78,
+                "line": 78
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_parameter_service.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_parameter",
+        "obj": "TestParameter.test_parameter_value_to_python",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 38,
+                "endLine": 213,
+                "line": 213
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_parameter.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_validate_topic_name",
+        "obj": "TestValidateTopicName.test_validate_topic_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 32,
+                "endLine": 24,
+                "line": 24
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_validate_topic_name.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_time_source",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 25,
+                "endLine": 107,
+                "line": 107
+            },
+            {
+                "column": 14,
+                "endColumn": 25,
+                "endLine": 114,
+                "line": 114
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_time_source.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "Clock(clock_type=ClockType.SYSTEM_TIME).now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: Clock(clock_type=ClockType.SYSTEM_TIME).now()",
+        "messageId": "CRC001",
+        "module": "test_time_source",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 66,
+                "endLine": 108,
+                "line": 108
+            },
+            {
+                "column": 21,
+                "endColumn": 66,
+                "endLine": 115,
+                "line": 115
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_time_source.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "test_rosout_subscription",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 82,
+                "endLine": 85,
+                "line": 85
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_rosout_subscription.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.get_logger()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.node.get_logger()",
+        "messageId": "CRC001",
+        "module": "test_rosout_subscription",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 39,
+                "endLine": 62,
+                "line": 62
+            },
+            {
+                "column": 17,
+                "endColumn": 39,
+                "endLine": 67,
+                "line": 67
+            },
+            {
+                "column": 17,
+                "endColumn": 39,
+                "endLine": 73,
+                "line": 73
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_rosout_subscription.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.get_logger().get_child('child')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.get_logger().get_child('child')",
+        "messageId": "CRC001",
+        "module": "test_rosout_subscription",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 58,
+                "endLine": 92,
+                "line": 92
+            },
+            {
+                "column": 18,
+                "endColumn": 59,
+                "endLine": 93,
+                "line": 93
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_rosout_subscription.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_logging",
+        "obj": "TestLogging.test_get_logging_directory",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 34,
+                "endLine": 373,
+                "line": 373
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_logging.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "rclpy.logging._root_logger.get_effective_level()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: rclpy.logging._root_logger.get_effective_level()",
+        "messageId": "CRC001",
+        "module": "test_logging",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 76,
+                "endLine": 31,
+                "line": 31
+            },
+            {
+                "column": 26,
+                "endColumn": 74,
+                "endLine": 35,
+                "line": 35
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_logging.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "rclpy.logging.get_logger_effective_level(name)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: rclpy.logging.get_logger_effective_level(name)",
+        "messageId": "CRC001",
+        "module": "test_logging",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 74,
+                "endLine": 42,
+                "line": 42
+            },
+            {
+                "column": 30,
+                "endColumn": 76,
+                "endLine": 47,
+                "line": 47
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_logging.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "rclpy.logging._root_logger.get_effective_level()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: rclpy.logging._root_logger.get_effective_level()",
+        "messageId": "CRC001",
+        "module": "test_logging",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 76,
+                "endLine": 324,
+                "line": 324
+            },
+            {
+                "column": 12,
+                "endColumn": 60,
+                "endLine": 312,
+                "line": 312
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_logging.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.create_timer(1.0, lambda : None, callback_group=group)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.create_timer(1.0, lambda : None, callback_group=group)",
+        "messageId": "CRC001",
+        "module": "test_callback_group",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 13,
+                "endColumn": 76,
+                "endLine": 43,
+                "line": 43
+            },
+            {
+                "column": 13,
+                "endColumn": 76,
+                "endLine": 44,
+                "line": 44
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_callback_group.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.create_timer(1.0, lambda : None, callback_group=group)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.create_timer(1.0, lambda : None, callback_group=group)",
+        "messageId": "CRC001",
+        "module": "test_callback_group",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 13,
+                "endColumn": 76,
+                "endLine": 135,
+                "line": 135
+            },
+            {
+                "column": 13,
+                "endColumn": 76,
+                "endLine": 136,
+                "line": 136
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_callback_group.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.perf_counter()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.perf_counter()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 33,
+                "endColumn": 52,
+                "endLine": 90,
+                "line": 90
+            },
+            {
+                "column": 31,
+                "endColumn": 50,
+                "endLine": 94,
+                "line": 94
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "get_threads()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: get_threads()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 27,
+                "endColumn": 40,
+                "endLine": 188,
+                "line": 188
+            },
+            {
+                "column": 48,
+                "endColumn": 61,
+                "endLine": 196,
+                "line": 196
+            },
+            {
+                "column": 48,
+                "endColumn": 61,
+                "endLine": 198,
+                "line": 198
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.perf_counter()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.perf_counter()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 43,
+                "endLine": 214,
+                "line": 214
+            },
+            {
+                "column": 22,
+                "endColumn": 41,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.perf_counter()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.perf_counter()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 43,
+                "endLine": 497,
+                "line": 497
+            },
+            {
+                "column": 22,
+                "endColumn": 41,
+                "endLine": 499,
+                "line": 499
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "threading.Thread(target=lambda : set_future_result(future))",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: threading.Thread(target=lambda : set_future_result(future))",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 78,
+                "endLine": 524,
+                "line": 524
+            },
+            {
+                "column": 20,
+                "endColumn": 78,
+                "endLine": 533,
+                "line": 533
+            },
+            {
+                "column": 20,
+                "endColumn": 78,
+                "endLine": 542,
+                "line": 542
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 35,
+                "endLine": 649,
+                "line": 649
+            },
+            {
+                "column": 22,
+                "endColumn": 33,
+                "endLine": 658,
+                "line": 658
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 27,
+                "endLine": 677,
+                "line": 677
+            },
+            {
+                "column": 14,
+                "endColumn": 25,
+                "endLine": 686,
+                "line": 686
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.perf_counter()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.perf_counter()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 33,
+                "endColumn": 52,
+                "endLine": 90,
+                "line": 90
+            },
+            {
+                "column": 31,
+                "endColumn": 50,
+                "endLine": 94,
+                "line": 94
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.perf_counter()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.perf_counter()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 43,
+                "endLine": 214,
+                "line": 214
+            },
+            {
+                "column": 22,
+                "endColumn": 41,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.perf_counter()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.perf_counter()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 43,
+                "endLine": 497,
+                "line": 497
+            },
+            {
+                "column": 22,
+                "endColumn": 41,
+                "endLine": 499,
+                "line": 499
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "threading.Thread(target=lambda : set_future_result(future))",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: threading.Thread(target=lambda : set_future_result(future))",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 78,
+                "endLine": 524,
+                "line": 524
+            },
+            {
+                "column": 20,
+                "endColumn": 78,
+                "endLine": 533,
+                "line": 533
+            },
+            {
+                "column": 20,
+                "endColumn": 78,
+                "endLine": 542,
+                "line": 542
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "test_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 35,
+                "endLine": 649,
+                "line": 649
+            },
+            {
+                "column": 22,
+                "endColumn": 33,
+                "endLine": 658,
+                "line": 658
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_waitable",
+        "obj": "TestNumberOfEntities.test_add",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 423,
+                "line": 423
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_waitable.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_waitable",
+        "obj": "TestNumberOfEntities.test_add_assign",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 434,
+                "line": 434
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_waitable.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "rclpy.context.Context()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: rclpy.context.Context()",
+        "messageId": "CRC001",
+        "module": "test_init_shutdown",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 37,
+                "endLine": 49,
+                "line": 49
+            },
+            {
+                "column": 14,
+                "endColumn": 37,
+                "endLine": 53,
+                "line": 53
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_init_shutdown.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_validate_namespace",
+        "obj": "TestValidateNamespace.test_validate_namespace",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 31,
+                "endLine": 23,
+                "line": 23
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_validate_namespace.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_qos",
+        "obj": "TestQosProfile.test_depth_only_constructor",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 35,
+                "endLine": 39,
+                "line": 39
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_qos",
+        "obj": "TestQosProfile.test_policy_short_names",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 31,
+                "endLine": 109,
+                "line": 109
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_qos",
+        "obj": "TestQosProfile.test_preset_profiles",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 124,
+                "line": 124
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_qos",
+        "obj": "TestQosProfile.test_keep_last_zero_depth_constructor",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 45,
+                "endLine": 131,
+                "line": 131
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_qos",
+        "obj": "TestQosProfile.test_keep_last_zero_depth_set",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 37,
+                "endLine": 140,
+                "line": 140
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_qos",
+        "obj": "TestCheckQosCompatibility.test_compatible",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 154,
+                "line": 154
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_qos",
+        "obj": "TestCheckQosCompatibility.test_incompatible",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 171,
+                "line": 171
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_qos",
+        "obj": "TestCheckQosCompatibility.test_warn_of_possible_incompatibility",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 45,
+                "endLine": 198,
+                "line": 198
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_validate_full_topic_name",
+        "obj": "TestValidateFullTopicName.test_validate_full_topic_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 37,
+                "endLine": 24,
+                "line": 24
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_validate_full_topic_name.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_node",
+        "obj": "TestNodeAllowUndeclaredParameters.modify_parameter_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 33,
+                "endLine": 409,
+                "line": 409
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_node",
+        "obj": "TestNode.return_none_parameter_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 38,
+                "endLine": 914,
+                "line": 914
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_node",
+        "obj": "TestNode.reject_parameter_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 33,
+                "endLine": 917,
+                "line": 917
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_node",
+        "obj": "TestNode.reject_parameter_callback_1",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 35,
+                "endLine": 921,
+                "line": 921
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_node",
+        "obj": "TestNode.modify_parameter_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 33,
+                "endLine": 1389,
+                "line": 1389
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_node",
+        "obj": "TestNode.empty_parameter_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 32,
+                "endLine": 1398,
+                "line": 1398
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_node",
+        "obj": "TestCreateNode.test_node_get_fully_qualified_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 42,
+                "endLine": 2434,
+                "line": 2434
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_node",
+        "obj": "TestCreateNode.test_node_get_fully_qualified_name_global_remap",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 55,
+                "endLine": 2493,
+                "line": 2493
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.get_publishers_info_by_topic(fq_topic_name)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.node.get_publishers_info_by_topic(fq_topic_name)",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 78,
+                "endLine": 286,
+                "line": 286
+            },
+            {
+                "column": 25,
+                "endColumn": 78,
+                "endLine": 309,
+                "line": 309
+            },
+            {
+                "column": 25,
+                "endColumn": 78,
+                "endLine": 271,
+                "line": 271
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.get_subscriptions_info_by_topic(fq_topic_name)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.node.get_subscriptions_info_by_topic(fq_topic_name)",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 84,
+                "endLine": 310,
+                "line": 310
+            },
+            {
+                "column": 25,
+                "endColumn": 81,
+                "endLine": 272,
+                "line": 272
+            },
+            {
+                "column": 25,
+                "endColumn": 81,
+                "endLine": 289,
+                "line": 289
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.declare_parameters('', parameters)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 5
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (5/2). Consider caching the result: self.node.declare_parameters('', parameters)",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 61,
+                "endLine": 786,
+                "line": 786
+            },
+            {
+                "column": 12,
+                "endColumn": 56,
+                "endLine": 848,
+                "line": 848
+            },
+            {
+                "column": 12,
+                "endColumn": 56,
+                "endLine": 858,
+                "line": 858
+            },
+            {
+                "column": 12,
+                "endColumn": 56,
+                "endLine": 867,
+                "line": 867
+            },
+            {
+                "column": 12,
+                "endColumn": 56,
+                "endLine": 877,
+                "line": 877
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.set_parameters(parameters)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.node.set_parameters(parameters)",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 53,
+                "endLine": 1099,
+                "line": 1099
+            },
+            {
+                "column": 12,
+                "endColumn": 48,
+                "endLine": 1096,
+                "line": 1096
+            },
+            {
+                "column": 12,
+                "endColumn": 48,
+                "endLine": 1144,
+                "line": 1144
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.set_parameters([Parameter('foo', Parameter.Type.INTEGER, 42)])",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.set_parameters([Parameter('foo', Parameter.Type.INTEGER, 42)])",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 90,
+                "endLine": 1425,
+                "line": 1425
+            },
+            {
+                "column": 18,
+                "endColumn": 90,
+                "endLine": 1438,
+                "line": 1438
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.set_parameters([Parameter(name=parameter_tuple[0], value=\n    parameter_tuple[1])])",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.set_parameters([Parameter(name=parameter_tuple[0], value=\n    parameter_tuple[1])])",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 9,
+                "endLine": 1511,
+                "line": 1504
+            },
+            {
+                "column": 17,
+                "endColumn": 9,
+                "endLine": 1528,
+                "line": 1521
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.get_parameter('param1')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.get_parameter('param1')",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 61,
+                "endLine": 1554,
+                "line": 1554
+            },
+            {
+                "column": 25,
+                "endColumn": 58,
+                "endLine": 1568,
+                "line": 1568
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.get_parameter('param2')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.get_parameter('param2')",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 61,
+                "endLine": 1555,
+                "line": 1555
+            },
+            {
+                "column": 25,
+                "endColumn": 58,
+                "endLine": 1569,
+                "line": 1569
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.set_parameters([Parameter('foo', Parameter.Type.INTEGER, 42)])",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.set_parameters([Parameter('foo', Parameter.Type.INTEGER, 42)])",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 90,
+                "endLine": 1669,
+                "line": 1669
+            },
+            {
+                "column": 12,
+                "endColumn": 62,
+                "endLine": 1659,
+                "line": 1658
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.set_parameters_atomically(parameters)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.node.set_parameters_atomically(parameters)",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 64,
+                "endLine": 1750,
+                "line": 1750
+            },
+            {
+                "column": 12,
+                "endColumn": 59,
+                "endLine": 1747,
+                "line": 1747
+            },
+            {
+                "column": 12,
+                "endColumn": 59,
+                "endLine": 1791,
+                "line": 1791
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.set_parameters_atomically([Parameter(\"foo\", Parameter.Type.\n    INTEGER, 42)])",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.set_parameters_atomically([Parameter(\"foo\", Parameter.Type.\n    INTEGER, 42)])",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 69,
+                "endLine": 1823,
+                "line": 1822
+            },
+            {
+                "column": 12,
+                "endColumn": 62,
+                "endLine": 1812,
+                "line": 1811
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.describe_parameter('foo')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.describe_parameter('foo')",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 56,
+                "endLine": 1973,
+                "line": 1973
+            },
+            {
+                "column": 12,
+                "endColumn": 47,
+                "endLine": 1957,
+                "line": 1957
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.describe_parameter('foo')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.node.describe_parameter('foo')",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 56,
+                "endLine": 2080,
+                "line": 2080
+            },
+            {
+                "column": 21,
+                "endColumn": 56,
+                "endLine": 2103,
+                "line": 2103
+            },
+            {
+                "column": 12,
+                "endColumn": 47,
+                "endLine": 2060,
+                "line": 2060
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.declare_parameters('', parameters)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.node.declare_parameters('', parameters)",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 37,
+                "endColumn": 81,
+                "endLine": 2150,
+                "line": 2150
+            },
+            {
+                "column": 17,
+                "endColumn": 61,
+                "endLine": 2208,
+                "line": 2208
+            },
+            {
+                "column": 12,
+                "endColumn": 56,
+                "endLine": 2193,
+                "line": 2193
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.declare_parameters('', parameters)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.node.declare_parameters('', parameters)",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 74,
+                "endLine": 2232,
+                "line": 2232
+            },
+            {
+                "column": 17,
+                "endColumn": 61,
+                "endLine": 2290,
+                "line": 2290
+            },
+            {
+                "column": 12,
+                "endColumn": 56,
+                "endLine": 2275,
+                "line": 2275
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.get_parameter('int_param')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.node.get_parameter('int_param')",
+        "messageId": "CRC001",
+        "module": "test_node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 56,
+                "endLine": 2312,
+                "line": 2312
+            },
+            {
+                "column": 25,
+                "endColumn": 61,
+                "endLine": 2349,
+                "line": 2349
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "sub_node.expect_pub_info()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: sub_node.expect_pub_info()",
+        "messageId": "CRC001",
+        "module": "test_events_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 51,
+                "endLine": 465,
+                "line": 465
+            },
+            {
+                "column": 25,
+                "endColumn": 51,
+                "endLine": 480,
+                "line": 480
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_events_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "sub_node.expect_message()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: sub_node.expect_message()",
+        "messageId": "CRC001",
+        "module": "test_events_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 51,
+                "endLine": 466,
+                "line": 466
+            },
+            {
+                "column": 30,
+                "endColumn": 55,
+                "endLine": 489,
+                "line": 489
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_events_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "pub_node.expect_sub_info()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: pub_node.expect_sub_info()",
+        "messageId": "CRC001",
+        "module": "test_events_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 51,
+                "endLine": 474,
+                "line": 474
+            },
+            {
+                "column": 25,
+                "endColumn": 51,
+                "endLine": 482,
+                "line": 482
+            },
+            {
+                "column": 25,
+                "endColumn": 51,
+                "endLine": 494,
+                "line": 494
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_events_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "sub_node.expect_message()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: sub_node.expect_message()",
+        "messageId": "CRC001",
+        "module": "test_events_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 51,
+                "endLine": 519,
+                "line": 519
+            },
+            {
+                "column": 30,
+                "endColumn": 55,
+                "endLine": 527,
+                "line": 527
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_events_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "rostime_node.expect_tick()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: rostime_node.expect_tick()",
+        "messageId": "CRC001",
+        "module": "test_events_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 56,
+                "endLine": 588,
+                "line": 588
+            },
+            {
+                "column": 34,
+                "endColumn": 60,
+                "endLine": 600,
+                "line": 600
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_events_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "rostime_node.create_timer(0.01, handler)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: rostime_node.create_timer(0.01, handler)",
+        "messageId": "CRC001",
+        "module": "test_events_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 57,
+                "endLine": 617,
+                "line": 617
+            },
+            {
+                "column": 17,
+                "endColumn": 57,
+                "endLine": 618,
+                "line": 618
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_events_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "server_node.expect_goal()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: server_node.expect_goal()",
+        "messageId": "CRC001",
+        "module": "test_events_executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 51,
+                "endLine": 633,
+                "line": 633
+            },
+            {
+                "column": 30,
+                "endColumn": 55,
+                "endLine": 670,
+                "line": 670
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_events_executor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_client",
+        "obj": "TestClient.test_get_service_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 175,
+                "line": 175
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_client.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_client",
+        "obj": "TestClient.test_get_service_name_after_remapping",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 45,
+                "endLine": 192,
+                "line": 192
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_client.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 80,
+                "line": 80
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 82,
+                "line": 82
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 91,
+                "line": 91
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 93,
+                "line": 93
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 103,
+                "line": 103
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 105,
+                "line": 105
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "cli.call_async(GetParameters.Request())",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: cli.call_async(GetParameters.Request())",
+        "messageId": "CRC001",
+        "module": "test_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 61,
+                "endLine": 119,
+                "line": 119
+            },
+            {
+                "column": 22,
+                "endColumn": 61,
+                "endLine": 120,
+                "line": 120
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_clock",
+        "obj": "TestClock.test_clock_now",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 87,
+                "line": 87
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_clock",
+        "obj": "TestClock.test_ros_time_is_active",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 31,
+                "endLine": 110,
+                "line": 110
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_clock",
+        "obj": "TestClock.test_triggered_time_jump_callbacks",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 42,
+                "endLine": 117,
+                "line": 117
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_clock",
+        "obj": "TestClock.test_triggered_clock_change_callbacks",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 45,
+                "endLine": 168,
+                "line": 168
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 269,
+                "line": 269
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 271,
+                "line": 271
+            },
+            {
+                "column": 29,
+                "endColumn": 40,
+                "endLine": 270,
+                "line": 270
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 280,
+                "line": 280
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 282,
+                "line": 282
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 291,
+                "line": 291
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 293,
+                "line": 293
+            },
+            {
+                "column": 29,
+                "endColumn": 40,
+                "endLine": 292,
+                "line": 292
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 302,
+                "line": 302
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 304,
+                "line": 304
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 328,
+                "line": 328
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 330,
+                "line": 330
+            },
+            {
+                "column": 35,
+                "endColumn": 46,
+                "endLine": 317,
+                "line": 317
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 356,
+                "line": 356
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 358,
+                "line": 358
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 382,
+                "line": 382
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 384,
+                "line": 384
+            },
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 371,
+                "line": 371
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 407,
+                "line": 407
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 409,
+                "line": 409
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 438,
+                "line": 438
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 440,
+                "line": 440
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 470,
+                "line": 470
+            },
+            {
+                "column": 11,
+                "endColumn": 22,
+                "endLine": 472,
+                "line": 472
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "clock.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 4
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (4/2). Consider caching the result: clock.now()",
+        "messageId": "CRC001",
+        "module": "test_clock",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 25,
+                "endLine": 91,
+                "line": 91
+            },
+            {
+                "column": 15,
+                "endColumn": 26,
+                "endLine": 98,
+                "line": 98
+            },
+            {
+                "column": 14,
+                "endColumn": 25,
+                "endLine": 103,
+                "line": 103
+            },
+            {
+                "column": 19,
+                "endColumn": 30,
+                "endLine": 106,
+                "line": 106
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_clock.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_time",
+        "obj": "TestTime.test_time_message_conversions",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 37,
+                "endLine": 203,
+                "line": 203
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_time.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_time",
+        "obj": "TestTime.test_time_message_conversions_big_nanoseconds",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 53,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_time.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_time",
+        "obj": "TestTime.test_duration_message_conversions",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 41,
+                "endLine": 226,
+                "line": 226
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_time.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_time",
+        "obj": "TestTime.test_seconds_nanoseconds",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 32,
+                "endLine": 234,
+                "line": 234
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_time.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_time",
+        "obj": "TestTime.test_infinite_duration",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 30,
+                "endLine": 239,
+                "line": 239
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_time.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "future.result()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: future.result()",
+        "messageId": "CRC001",
+        "module": "test_parameter_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 82,
+                "line": 82
+            },
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 89,
+                "line": 89
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_parameter_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "future.result()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: future.result()",
+        "messageId": "CRC001",
+        "module": "test_parameter_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 32,
+                "endLine": 129,
+                "line": 129
+            },
+            {
+                "column": 17,
+                "endColumn": 32,
+                "endLine": 137,
+                "line": 137
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_parameter_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "future.result()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: future.result()",
+        "messageId": "CRC001",
+        "module": "test_parameter_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 189,
+                "line": 189
+            },
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 198,
+                "line": 198
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_parameter_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "future.result()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: future.result()",
+        "messageId": "CRC001",
+        "module": "test_parameter_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 232,
+                "line": 232
+            },
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 252,
+                "line": 252
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_parameter_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "future.result()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: future.result()",
+        "messageId": "CRC001",
+        "module": "test_parameter_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 265,
+                "line": 265
+            },
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 282,
+                "line": 282
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_parameter_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "future.result()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: future.result()",
+        "messageId": "CRC001",
+        "module": "test_logging_service",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 34,
+                "endLine": 96,
+                "line": 96
+            },
+            {
+                "column": 19,
+                "endColumn": 34,
+                "endLine": 112,
+                "line": 112
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_logging_service.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "future.result()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: future.result()",
+        "messageId": "CRC001",
+        "module": "test_logging_service",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 34,
+                "endLine": 151,
+                "line": 151
+            },
+            {
+                "column": 19,
+                "endColumn": 34,
+                "endLine": 168,
+                "line": 168
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_logging_service.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_rate",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 29,
+                "endColumn": 45,
+                "endLine": 52,
+                "line": 52
+            },
+            {
+                "column": 22,
+                "endColumn": 38,
+                "endLine": 56,
+                "line": 56
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_rate.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_service_introspection",
+        "obj": "TestServiceEvents.srv_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 55,
+                "line": 55
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_service_introspection.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_service_introspection",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 32,
+                "endLine": 76,
+                "line": 76
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 81,
+                "line": 81
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_service_introspection.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_service_introspection",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 32,
+                "endLine": 122,
+                "line": 122
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 127,
+                "line": 127
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_service_introspection.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_action_graph",
+        "obj": "TestActionGraph.get_names_and_types",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 98,
+                "line": 98
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_graph.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_action_graph",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 32,
+                "endLine": 107,
+                "line": 107
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 113,
+                "line": 113
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_graph.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_context",
+        "obj": "test_on_shutdown_method.SomeClass.on_shutdown",
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 23,
+                "endLine": 27,
+                "line": 27
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_context.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "serialize_message(msg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: serialize_message(msg)",
+        "messageId": "CRC001",
+        "module": "test_serialization",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 43,
+                "endLine": 65,
+                "line": 65
+            },
+            {
+                "column": 21,
+                "endColumn": 43,
+                "endLine": 71,
+                "line": 71
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_serialization.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "deserialize_message(msg_serialized, BasicTypes)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: deserialize_message(msg_serialized, BasicTypes)",
+        "messageId": "CRC001",
+        "module": "test_serialization",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 70,
+                "endLine": 66,
+                "line": 66
+            },
+            {
+                "column": 23,
+                "endColumn": 70,
+                "endLine": 72,
+                "line": 72
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_serialization.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_action_server",
+        "obj": "TestActionServer.execute_goal_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 114,
+                "line": 114
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_server.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "test_action_server",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 32,
+                "endLine": 110,
+                "line": 110
+            },
+            {
+                "column": 15,
+                "endColumn": 26,
+                "endLine": 111,
+                "line": 111
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_server.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.mock_action_client.send_goal(goal_msg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.mock_action_client.send_goal(goal_msg)",
+        "messageId": "CRC001",
+        "module": "test_action_server",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 61,
+                "endLine": 273,
+                "line": 273
+            },
+            {
+                "column": 18,
+                "endColumn": 61,
+                "endLine": 275,
+                "line": 275
+            },
+            {
+                "column": 18,
+                "endColumn": 61,
+                "endLine": 277,
+                "line": 277
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_server.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.mock_action_client.send_goal(goal_msg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.mock_action_client.send_goal(goal_msg)",
+        "messageId": "CRC001",
+        "module": "test_action_server",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 61,
+                "endLine": 309,
+                "line": 309
+            },
+            {
+                "column": 18,
+                "endColumn": 61,
+                "endLine": 310,
+                "line": 310
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_server.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_action_server",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 32,
+                "endLine": 815,
+                "line": 815
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 819,
+                "line": 819
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_server.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_action_server",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 32,
+                "endLine": 875,
+                "line": 875
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 879,
+                "line": 879
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_server.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "GetState.Request()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: GetState.Request()",
+        "messageId": "CRC001",
+        "module": "test_lifecycle",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 10,
+                "endColumn": 28,
+                "endLine": 171,
+                "line": 171
+            },
+            {
+                "column": 10,
+                "endColumn": 28,
+                "endLine": 179,
+                "line": 179
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_lifecycle.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "get_state_cli.call(req)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: get_state_cli.call(req)",
+        "messageId": "CRC001",
+        "module": "test_lifecycle",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 11,
+                "endColumn": 34,
+                "endLine": 172,
+                "line": 172
+            },
+            {
+                "column": 11,
+                "endColumn": 34,
+                "endLine": 180,
+                "line": 180
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_lifecycle.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "GetAvailableTransitions.Request()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: GetAvailableTransitions.Request()",
+        "messageId": "CRC001",
+        "module": "test_lifecycle",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 10,
+                "endColumn": 43,
+                "endLine": 189,
+                "line": 189
+            },
+            {
+                "column": 10,
+                "endColumn": 43,
+                "endLine": 194,
+                "line": 194
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_lifecycle.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "test_timer",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 33,
+                "endColumn": 44,
+                "endLine": 93,
+                "line": 93
+            },
+            {
+                "column": 56,
+                "endColumn": 67,
+                "endLine": 95,
+                "line": 95
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_timer.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 6
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (6/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "test_timer",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 33,
+                "endColumn": 44,
+                "endLine": 127,
+                "line": 127
+            },
+            {
+                "column": 33,
+                "endColumn": 44,
+                "endLine": 137,
+                "line": 137
+            },
+            {
+                "column": 33,
+                "endColumn": 44,
+                "endLine": 145,
+                "line": 145
+            },
+            {
+                "column": 56,
+                "endColumn": 67,
+                "endLine": 128,
+                "line": 128
+            },
+            {
+                "column": 56,
+                "endColumn": 67,
+                "endLine": 138,
+                "line": 138
+            },
+            {
+                "column": 56,
+                "endColumn": 67,
+                "endLine": 146,
+                "line": 146
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_timer.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "timer.time_until_next_call()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: timer.time_until_next_call()",
+        "messageId": "CRC001",
+        "module": "test_timer",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 31,
+                "endColumn": 59,
+                "endLine": 173,
+                "line": 173
+            },
+            {
+                "column": 31,
+                "endColumn": 59,
+                "endLine": 178,
+                "line": 178
+            },
+            {
+                "column": 15,
+                "endColumn": 43,
+                "endLine": 183,
+                "line": 183
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_timer.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_action_client",
+        "obj": "MockActionServer.goal_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 64,
+                "line": 64
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_action_client",
+        "obj": "MockActionServer.cancel_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 70,
+                "line": 70
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_action_client",
+        "obj": "MockActionServer.result_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 76,
+                "line": 76
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "test_action_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 32,
+                "endLine": 115,
+                "line": 115
+            },
+            {
+                "column": 15,
+                "endColumn": 26,
+                "endLine": 116,
+                "line": 116
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_action_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 150,
+                "line": 150
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 152,
+                "line": 152
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_action_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 161,
+                "line": 161
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 163,
+                "line": 163
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_action_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 172,
+                "line": 172
+            },
+            {
+                "column": 18,
+                "endColumn": 34,
+                "endLine": 174,
+                "line": 174
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "ac.send_goal_async(Fibonacci.Goal())",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: ac.send_goal_async(Fibonacci.Goal())",
+        "messageId": "CRC001",
+        "module": "test_action_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 59,
+                "endLine": 323,
+                "line": 323
+            },
+            {
+                "column": 23,
+                "endColumn": 59,
+                "endLine": 324,
+                "line": 324
+            },
+            {
+                "column": 23,
+                "endColumn": 59,
+                "endLine": 325,
+                "line": 325
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_action_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 432,
+                "line": 432
+            },
+            {
+                "column": 22,
+                "endColumn": 38,
+                "endLine": 436,
+                "line": 436
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "test_action_client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 473,
+                "line": 473
+            },
+            {
+                "column": 22,
+                "endColumn": 38,
+                "endLine": 477,
+                "line": 477
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_action_client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_task",
+        "obj": "TestFuture.test_cancel_invokes_callbacks",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 37,
+                "endLine": 283,
+                "line": 283
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_task.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_task",
+        "obj": "TestFuture.test_set_result_invokes_callbacks",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 41,
+                "endLine": 295,
+                "line": 295
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_task.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_task",
+        "obj": "TestFuture.test_set_exception_invokes_callbacks",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 44,
+                "endLine": 307,
+                "line": 307
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_task.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_task",
+        "obj": "TestFuture.test_add_done_callback_invokes_callback",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 47,
+                "endLine": 319,
+                "line": 319
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_task.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "test_logging_rosout",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 28,
+                "endLine": 78,
+                "line": 78
+            },
+            {
+                "column": 50,
+                "endColumn": 61,
+                "endLine": 80,
+                "line": 80
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_logging_rosout.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_qos_event",
+        "obj": "TestQoSEvent.test_default_incompatible_qos_callbacks.MockLogger.warning",
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 23,
+                "endLine": 158,
+                "line": 158
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos_event.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.create_publisher(EmptyMsg, self.topic_name, 10, event_callbacks=\n    callbacks)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 4
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (4/2). Consider caching the result: self.node.create_publisher(EmptyMsg, self.topic_name, 10, event_callbacks=\n    callbacks)",
+        "messageId": "CRC001",
+        "module": "test_qos_event",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 69,
+                "endLine": 74,
+                "line": 73
+            },
+            {
+                "column": 24,
+                "endColumn": 73,
+                "endLine": 83,
+                "line": 82
+            },
+            {
+                "column": 24,
+                "endColumn": 73,
+                "endLine": 91,
+                "line": 90
+            },
+            {
+                "column": 24,
+                "endColumn": 73,
+                "endLine": 98,
+                "line": 97
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos_event.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.node.create_subscription(EmptyMsg, self.topic_name, message_callback, \n    10, event_callbacks=callbacks)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 4
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (4/2). Consider caching the result: self.node.create_subscription(EmptyMsg, self.topic_name, message_callback, \n    10, event_callbacks=callbacks)",
+        "messageId": "CRC001",
+        "module": "test_qos_event",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 87,
+                "endLine": 118,
+                "line": 117
+            },
+            {
+                "column": 27,
+                "endColumn": 91,
+                "endLine": 127,
+                "line": 126
+            },
+            {
+                "column": 27,
+                "endColumn": 91,
+                "endLine": 135,
+                "line": 134
+            },
+            {
+                "column": 27,
+                "endColumn": 91,
+                "endLine": 142,
+                "line": 141
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos_event.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "matched_event_handle.take_event()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: matched_event_handle.take_event()",
+        "messageId": "CRC001",
+        "module": "test_qos_event",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 58,
+                "endLine": 402,
+                "line": 402
+            },
+            {
+                "column": 25,
+                "endColumn": 58,
+                "endLine": 419,
+                "line": 419
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos_event.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "wait_set.add_event(matched_event_handle)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: wait_set.add_event(matched_event_handle)",
+        "messageId": "CRC001",
+        "module": "test_qos_event",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 34,
+                "endColumn": 74,
+                "endLine": 386,
+                "line": 386
+            },
+            {
+                "column": 34,
+                "endColumn": 74,
+                "endLine": 394,
+                "line": 394
+            },
+            {
+                "column": 34,
+                "endColumn": 74,
+                "endLine": 411,
+                "line": 411
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos_event.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "matched_event_handle.take_event()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: matched_event_handle.take_event()",
+        "messageId": "CRC001",
+        "module": "test_qos_event",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 58,
+                "endLine": 451,
+                "line": 451
+            },
+            {
+                "column": 25,
+                "endColumn": 58,
+                "endLine": 468,
+                "line": 468
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos_event.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "wait_set.add_event(matched_event_handle)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: wait_set.add_event(matched_event_handle)",
+        "messageId": "CRC001",
+        "module": "test_qos_event",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 34,
+                "endColumn": 74,
+                "endLine": 435,
+                "line": 435
+            },
+            {
+                "column": 34,
+                "endColumn": 74,
+                "endLine": 443,
+                "line": 443
+            },
+            {
+                "column": 34,
+                "endColumn": 74,
+                "endLine": 460,
+                "line": 460
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_qos_event.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "test.test_validate_node_name",
+        "obj": "TestValidateNodeName.test_validate_node_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 31,
+                "endLine": 23,
+                "line": 23
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/test/test_validate_node_name.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "rclpy.client",
+        "obj": "Client.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 40,
+                "line": 40
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/client.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "rclpy",
+        "obj": "create_node",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 15,
+                "endLine": 214,
+                "line": 214
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/__init__.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "rclpy.service",
+        "obj": "Service.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 37,
+                "line": 37
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/service.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "rclpy.qos",
+        "obj": "QoSProfile.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 75,
+                "line": 75
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/qos.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "rclpy.parameter_client",
+        "obj": "AsyncParameterClient.on_parameter_event",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 355,
+                "line": 355
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/parameter_client.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "rclpy.action.client",
+        "obj": "ActionClient.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 169,
+                "line": 169
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/action/client.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.action.client",
+        "obj": "ActionClient._generate_random_uuid",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 246,
+                "line": 246
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/action/client.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "rclpy.action.server",
+        "obj": "ActionServer.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 231,
+                "line": 231
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/action/server.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "server",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 67,
+                "endLine": 345,
+                "line": 345
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/action/server.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "rclpy.timer",
+        "obj": "Timer.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 68,
+                "line": 68
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/timer.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "rclpy.node",
+        "obj": "Node.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 135,
+                "line": 135
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/node.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.node",
+        "obj": "Node.handle",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 362,
+                "line": 362
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.node",
+        "obj": "Node._apply_integer_range",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 1323,
+                "line": 1323
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.node",
+        "obj": "Node._validate_qos_or_depth_parameter",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 40,
+                "endLine": 1517,
+                "line": 1517
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/node.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "rclpy.node",
+        "obj": "Node.create_publisher",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 1572,
+                "line": 1572
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/node.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "rclpy.node",
+        "obj": "Node.create_subscription",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 1646,
+                "line": 1646
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/node.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.get_parameter(name)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.get_parameter(name)",
+        "messageId": "CRC001",
+        "module": "node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 52,
+                "endLine": 1484,
+                "line": 1484
+            },
+            {
+                "column": 15,
+                "endColumn": 39,
+                "endLine": 1505,
+                "line": 1505
+            },
+            {
+                "column": 23,
+                "endColumn": 47,
+                "endLine": 1479,
+                "line": 1479
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 27,
+                "endLine": 2368,
+                "line": 2368
+            },
+            {
+                "column": 14,
+                "endColumn": 25,
+                "endLine": 2372,
+                "line": 2372
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.logging_service",
+        "obj": "LoggingService._get_logger_levels",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 48,
+                "line": 48
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/logging_service.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.logging_service",
+        "obj": "LoggingService._set_logger_levels",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 61,
+                "line": 61
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/logging_service.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "rclpy.event_handler",
+        "obj": "SubscriptionEventCallbacks.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 188,
+                "line": 188
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/event_handler.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "rclpy.event_handler",
+        "obj": "PublisherEventCallbacks.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 309,
+                "line": 309
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/event_handler.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.__execute_callback(self._state_machine.current_state[0], life_cycle_state)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.__execute_callback(self._state_machine.current_state[0], life_cycle_state)",
+        "messageId": "CRC001",
+        "module": "node",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 67,
+                "endLine": 402,
+                "line": 401
+            },
+            {
+                "column": 32,
+                "endColumn": 71,
+                "endLine": 414,
+                "line": 413
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/lifecycle/node.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.lifecycle.managed_entity",
+        "obj": "ManagedEntity.on_configure",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 30,
+                "line": 30
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.lifecycle.managed_entity",
+        "obj": "ManagedEntity.on_cleanup",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 34,
+                "line": 34
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.lifecycle.managed_entity",
+        "obj": "ManagedEntity.on_shutdown",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 38,
+                "line": 38
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.lifecycle.managed_entity",
+        "obj": "ManagedEntity.on_activate",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 42,
+                "line": 42
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.lifecycle.managed_entity",
+        "obj": "ManagedEntity.on_deactivate",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 46,
+                "line": 46
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.lifecycle.managed_entity",
+        "obj": "ManagedEntity.on_error",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 50,
+                "line": 50
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "os.path.realpath(inspect.getframeinfo(frame).filename)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: os.path.realpath(inspect.getframeinfo(frame).filename)",
+        "messageId": "CRC001",
+        "module": "rcutils_logger",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 70,
+                "endLine": 64,
+                "line": 64
+            },
+            {
+                "column": 20,
+                "endColumn": 74,
+                "endLine": 71,
+                "line": 71
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/impl/rcutils_logger.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "policy.name.lower()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: policy.name.lower()",
+        "messageId": "CRC001",
+        "module": "qos_overriding_options",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 37,
+                "endLine": 183,
+                "line": 183
+            },
+            {
+                "column": 17,
+                "endColumn": 36,
+                "endLine": 202,
+                "line": 202
+            },
+            {
+                "column": 55,
+                "endColumn": 74,
+                "endLine": 197,
+                "line": 197
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/qos_overriding_options.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "rclpy.waitable",
+        "obj": "NumberOfEntities.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 38,
+                "line": 38
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/waitable.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "rclpy.publisher",
+        "obj": "Publisher.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 31,
+                "line": 31
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/publisher.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "rclpy.topic_endpoint_info",
+        "obj": "TopicEndpointInfo.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 48,
+                "line": 48
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/topic_endpoint_info.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.executors",
+        "obj": "Executor._take_timer",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 425,
+                "line": 425
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/executors.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.executors",
+        "obj": "Executor._take_subscription",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 470,
+                "line": 470
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/executors.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.executors",
+        "obj": "Executor._take_service",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 526,
+                "line": 526
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/executors.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.executors",
+        "obj": "Executor._take_guard_condition",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 549,
+                "line": 549
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/executors.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "rclpy.executors",
+        "obj": "Executor.can_execute",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 623,
+                "line": 623
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/executors.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "time.monotonic()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+        "messageId": "CRC001",
+        "module": "executors",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 370,
+                "line": 370
+            },
+            {
+                "column": 22,
+                "endColumn": 38,
+                "endLine": 381,
+                "line": 381
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/executors.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "rclpy.parameter_event_handler",
+        "obj": "ParameterEventHandler.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 183,
+                "line": 183
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/parameter_event_handler.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "rclpy.subscription",
+        "obj": "Subscription.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 46,
+                "line": 46
+            }
+        ],
+        "path": "/root/ecooptimizer/rclpy/rclpy/rclpy/subscription.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    }
+]

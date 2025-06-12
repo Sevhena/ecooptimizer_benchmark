@@ -1,0 +1,3286 @@
+[
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.extra.rate_limiter",
+        "obj": "BaseRateLimiter._clock",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 92,
+                "line": 92
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/extra/rate_limiter.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.extra.rate_limiter",
+        "obj": "RateLimiter.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 209,
+                "line": 209
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/extra/rate_limiter.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.extra.rate_limiter",
+        "obj": "AsyncRateLimiter.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 332,
+                "line": 332
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/extra/rate_limiter.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.adapters",
+        "obj": "URLLibAdapter._decode_page",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 351,
+                "line": 351
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/adapters.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.adapters",
+        "obj": "RequestsAdapter.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 386,
+                "line": 386
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/adapters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.adapters",
+        "obj": "AioHTTPAdapter._raise_for_status",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 31,
+                "endLine": 584,
+                "line": 584
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/adapters.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.adapters",
+        "obj": "AioHTTPAdapter._normalize_exceptions",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 610,
+                "line": 610
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/adapters.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.geocodio",
+        "obj": "Geocodio.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 39,
+                "line": 39
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geocodio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.geocodio",
+        "obj": "Geocodio._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 190,
+                "line": 190
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geocodio.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.geocodio",
+        "obj": "Geocodio._get_error_message",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 236,
+                "line": 236
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geocodio.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self._get_error_message(error)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._get_error_message(error)",
+        "messageId": "CRC001",
+        "module": "geocodio",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 58,
+                "endLine": 222,
+                "line": 222
+            },
+            {
+                "column": 28,
+                "endColumn": 58,
+                "endLine": 230,
+                "line": 230
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geocodio.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.smartystreets",
+        "obj": "LiveAddress.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 22,
+                "line": 22
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/smartystreets.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.smartystreets",
+        "obj": "LiveAddress._geocoder_exception_handler",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 35,
+                "endLine": 115,
+                "line": 115
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/smartystreets.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.smartystreets",
+        "obj": "LiveAddress._format_structured_address",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 34,
+                "endLine": 134,
+                "line": 134
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/smartystreets.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.geocodeearth",
+        "obj": "GeocodeEarth.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 18,
+                "line": 18
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geocodeearth.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.yandex",
+        "obj": "Yandex.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 21,
+                "line": 21
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/yandex.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.yandex",
+        "obj": "Yandex._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 182,
+                "line": 182
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/yandex.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "yandex",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 76,
+                "endLine": 190,
+                "line": 190
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/yandex.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.woosmap",
+        "obj": "Woosmap.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 24,
+                "line": 24
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/woosmap.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.woosmap",
+        "obj": "Woosmap._format_components_param",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 32,
+                "endLine": 80,
+                "line": 80
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/woosmap.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.woosmap",
+        "obj": "Woosmap.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 98,
+                "line": 98
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/woosmap.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.woosmap",
+        "obj": "Woosmap.reverse",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 178,
+                "line": 178
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/woosmap.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.woosmap",
+        "obj": "Woosmap._check_status",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 257,
+                "line": 257
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/woosmap.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "woosmap",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 61,
+                "endLine": 248,
+                "line": 248
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/woosmap.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "woosmap",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 62,
+                "endLine": 249,
+                "line": 249
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/woosmap.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.databc",
+        "obj": "DataBC.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 21,
+                "line": 21
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/databc.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.databc",
+        "obj": "DataBC.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 69,
+                "line": 69
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/databc.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.databc",
+        "obj": "DataBC._parse_feature",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 141,
+                "line": 141
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/databc.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.pickpoint",
+        "obj": "PickPoint.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 17,
+                "line": 17
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/pickpoint.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.azure",
+        "obj": "AzureMaps.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 17,
+                "line": 17
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/azure.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.banfrance",
+        "obj": "BANFrance.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 21,
+                "line": 21
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/banfrance.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.banfrance",
+        "obj": "BANFrance._parse_feature",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 163,
+                "line": 163
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/banfrance.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.what3words",
+        "obj": "What3Words.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 40,
+                "line": 40
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/what3words.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.what3words",
+        "obj": "What3Words._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 140,
+                "line": 140
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/what3words.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.what3words",
+        "obj": "What3WordsV3.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 246,
+                "line": 246
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/what3words.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.what3words",
+        "obj": "What3WordsV3._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 339,
+                "line": 339
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/what3words.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "lang.lower()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: lang.lower()",
+        "messageId": "CRC001",
+        "module": "what3words",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 27,
+                "endLine": 213,
+                "line": 213
+            },
+            {
+                "column": 20,
+                "endColumn": 32,
+                "endLine": 217,
+                "line": 217
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/what3words.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "lang.lower()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: lang.lower()",
+        "messageId": "CRC001",
+        "module": "what3words",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 27,
+                "endLine": 413,
+                "line": 413
+            },
+            {
+                "column": 24,
+                "endColumn": 36,
+                "endLine": 417,
+                "line": 417
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/what3words.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.geolake",
+        "obj": "Geolake.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 35,
+                "line": 35
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geolake.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.geolake",
+        "obj": "Geolake._get_address",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 173,
+                "line": 173
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geolake.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.base",
+        "obj": "Geocoder.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 219,
+                "line": 219
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/base.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.base",
+        "obj": "Geocoder._coerce_point_to_string",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 31,
+                "endLine": 294,
+                "line": 294
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/base.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.base",
+        "obj": "Geocoder._format_bounding_box",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 312,
+                "line": 312
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/base.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "func(self, *args, **kwargs)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: func(self, *args, **kwargs)",
+        "messageId": "CRC001",
+        "module": "base",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 46,
+                "endLine": 441,
+                "line": 441
+            },
+            {
+                "column": 22,
+                "endColumn": 49,
+                "endLine": 460,
+                "line": 460
+            },
+            {
+                "column": 22,
+                "endColumn": 49,
+                "endLine": 468,
+                "line": 468
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/base.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "compat.current_task()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: compat.current_task()",
+        "messageId": "CRC001",
+        "module": "base",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 51,
+                "endLine": 466,
+                "line": 466
+            },
+            {
+                "column": 15,
+                "endColumn": 36,
+                "endLine": 459,
+                "line": 459
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/base.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self._adapter_error_handler(error)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._adapter_error_handler(error)",
+        "messageId": "CRC001",
+        "module": "base",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 52,
+                "endLine": 388,
+                "line": 388
+            },
+            {
+                "column": 30,
+                "endColumn": 64,
+                "endLine": 379,
+                "line": 379
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/base.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self._geocoder_exception_handler(error)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._geocoder_exception_handler(error)",
+        "messageId": "CRC001",
+        "module": "base",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 57,
+                "endLine": 402,
+                "line": 402
+            },
+            {
+                "column": 18,
+                "endColumn": 57,
+                "endLine": 413,
+                "line": 413
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/base.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.bing",
+        "obj": "Bing.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 37,
+                "line": 37
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/bing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.bing",
+        "obj": "Bing.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 91,
+                "line": 91
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/bing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.bing",
+        "obj": "Bing._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/bing.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "bing",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 55,
+                "endLine": 234,
+                "line": 234
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/bing.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "bing",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 58,
+                "endLine": 255,
+                "line": 255
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/bing.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "bing",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 59,
+                "endLine": 256,
+                "line": 256
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/bing.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.here",
+        "obj": "Here.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 49,
+                "line": 49
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/here.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.here",
+        "obj": "Here.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 146,
+                "line": 146
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/here.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.here",
+        "obj": "Here.reverse",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 253,
+                "line": 253
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/here.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.here",
+        "obj": "Here._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 332,
+                "line": 332
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/here.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.here",
+        "obj": "HereV7.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 412,
+                "line": 412
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/here.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.here",
+        "obj": "HereV7.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 468,
+                "line": 468
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/here.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.here",
+        "obj": "HereV7._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 617,
+                "line": 617
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/here.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.here",
+        "obj": "HereV7._geocoder_exception_handler",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 35,
+                "endLine": 638,
+                "line": 638
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/here.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (4/3)",
+        "messageId": "LEC001",
+        "module": "here",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 60,
+                "endLine": 351,
+                "line": 351
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/here.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.geonames",
+        "obj": "GeoNames.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 38,
+                "line": 38
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geonames.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.geonames",
+        "obj": "GeoNames.reverse",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 163,
+                "line": 163
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geonames.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.geonames",
+        "obj": "GeoNames._raise_for_error",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 301,
+                "line": 301
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geonames.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.opencage",
+        "obj": "OpenCage.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 26,
+                "line": 26
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/opencage.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.opencage",
+        "obj": "OpenCage.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 81,
+                "line": 81
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/opencage.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.opencage",
+        "obj": "OpenCage._check_status",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 225,
+                "line": 225
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/opencage.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.mapquest",
+        "obj": "MapQuest.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 28,
+                "line": 28
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/mapquest.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.mapquest",
+        "obj": "MapQuest._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 87,
+                "line": 87
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/mapquest.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "mapquest",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 50,
+                "endLine": 89,
+                "line": 89
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/mapquest.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.ignfrance",
+        "obj": "IGNFrance.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 39,
+                "line": 39
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/ignfrance.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.ignfrance",
+        "obj": "IGNFrance.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 127,
+                "line": 127
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/ignfrance.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.ignfrance",
+        "obj": "IGNFrance.reverse",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 229,
+                "line": 229
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/ignfrance.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.ignfrance",
+        "obj": "IGNFrance._xml_to_json_places",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 361,
+                "line": 361
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/ignfrance.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.ignfrance",
+        "obj": "IGNFrance._parse_place",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 455,
+                "line": 455
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/ignfrance.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "place.get('street')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: place.get('street')",
+        "messageId": "CRC001",
+        "module": "ignfrance",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 27,
+                "endColumn": 46,
+                "endLine": 465,
+                "line": 465
+            },
+            {
+                "column": 19,
+                "endColumn": 38,
+                "endLine": 473,
+                "line": 473
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/ignfrance.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.maptiler",
+        "obj": "MapTiler.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 21,
+                "line": 21
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/maptiler.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.maptiler",
+        "obj": "MapTiler._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 73,
+                "line": 73
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/maptiler.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.maptiler",
+        "obj": "MapTiler.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 90,
+                "line": 90
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/maptiler.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.tomtom",
+        "obj": "TomTom.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 23,
+                "line": 23
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/tomtom.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.tomtom",
+        "obj": "TomTom.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 74,
+                "line": 74
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/tomtom.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.tomtom",
+        "obj": "TomTom._boolean_value",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 177,
+                "line": 177
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/tomtom.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.tomtom",
+        "obj": "TomTom._parse_search_result",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 200,
+                "line": 200
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/tomtom.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.tomtom",
+        "obj": "TomTom._parse_reverse_result",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/tomtom.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.tomtom",
+        "obj": "TomTom._geocoder_exception_handler",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 35,
+                "endLine": 221,
+                "line": 221
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/tomtom.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.openmapquest",
+        "obj": "OpenMapQuest.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 24,
+                "line": 24
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/openmapquest.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.google",
+        "obj": "GoogleV3.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 38,
+                "line": 38
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/google.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.google",
+        "obj": "GoogleV3._format_components_param",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 32,
+                "endLine": 156,
+                "line": 156
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/google.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.google",
+        "obj": "GoogleV3.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 174,
+                "line": 174
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/google.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.google",
+        "obj": "GoogleV3._normalize_timezone_at_time",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 35,
+                "endLine": 380,
+                "line": 380
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/google.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.google",
+        "obj": "GoogleV3._check_status",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 411,
+                "line": 411
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/google.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "google",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 59,
+                "endLine": 402,
+                "line": 402
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/google.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "google",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 60,
+                "endLine": 403,
+                "line": 403
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/google.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.nominatim",
+        "obj": "Nominatim.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 53,
+                "line": 53
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/nominatim.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.nominatim",
+        "obj": "Nominatim._construct_url",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 120,
+                "line": 120
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/nominatim.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.nominatim",
+        "obj": "Nominatim.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 135,
+                "line": 135
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/nominatim.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.nominatim",
+        "obj": "Nominatim.reverse",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 299,
+                "line": 299
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/nominatim.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.nominatim",
+        "obj": "Nominatim._parse_code",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 374,
+                "line": 374
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/nominatim.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.pelias",
+        "obj": "Pelias.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 25,
+                "line": 25
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/pelias.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.pelias",
+        "obj": "Pelias.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 85,
+                "line": 85
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/pelias.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.pelias",
+        "obj": "Pelias._parse_code",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 230,
+                "line": 230
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/pelias.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.baidu",
+        "obj": "Baidu.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 32,
+                "line": 32
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/baidu.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.baidu",
+        "obj": "Baidu._format_components_param",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 32,
+                "endLine": 88,
+                "line": 88
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/baidu.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.baidu",
+        "obj": "Baidu._check_status",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 210,
+                "line": 210
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/baidu.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.arcgis",
+        "obj": "ArcGIS.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 33,
+                "line": 33
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/arcgis.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.arcgis",
+        "obj": "ArcGIS._parse_geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 175,
+                "line": 175
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/arcgis.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.arcgis",
+        "obj": "ArcGIS._parse_reverse",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 229,
+                "line": 229
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/arcgis.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "arcgis",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 43,
+                "endColumn": 74,
+                "endLine": 237,
+                "line": 237
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/arcgis.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": "\"\"\"&\"\"\".join((url, urlencode({\"token\": self.token})))",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: \"\"\"&\"\"\".join((url, urlencode({\"token\": self.token})))",
+        "messageId": "CRC001",
+        "module": "arcgis",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 72,
+                "endLine": 268,
+                "line": 268
+            },
+            {
+                "column": 23,
+                "endColumn": 72,
+                "endLine": 286,
+                "line": 286
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/arcgis.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.mapbox",
+        "obj": "MapBox.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 21,
+                "line": 21
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/mapbox.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.mapbox",
+        "obj": "MapBox._parse_json",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 81,
+                "line": 81
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/mapbox.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.mapbox",
+        "obj": "MapBox.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 97,
+                "line": 97
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/mapbox.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "mapbox",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 61,
+                "endLine": 89,
+                "line": 89
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/mapbox.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "mapbox",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 60,
+                "endLine": 90,
+                "line": 90
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/mapbox.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.geokeo",
+        "obj": "Geokeo.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 30,
+                "line": 30
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geokeo.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.geokeo",
+        "obj": "Geokeo._check_status",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 189,
+                "line": 189
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geokeo.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "geokeo",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 59,
+                "endLine": 180,
+                "line": 180
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geokeo.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "geokeo",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 60,
+                "endLine": 181,
+                "line": 181
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/geokeo.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.photon",
+        "obj": "Photon.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 30,
+                "line": 30
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/photon.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "geopy.geocoders.photon",
+        "obj": "Photon.geocode",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 80,
+                "line": 80
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/photon.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "geopy.geocoders.photon",
+        "obj": "Photon._parse_resource",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 232,
+                "line": 232
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/photon.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "photon",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 57,
+                "endLine": 241,
+                "line": 241
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/photon.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "photon",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 58,
+                "endLine": 242,
+                "line": 242
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/geocoders/photon.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": "match.group(\"latitude_direction_front\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: match.group(\"latitude_direction_front\")",
+        "messageId": "CRC001",
+        "module": "point",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 54,
+                "endLine": 429,
+                "line": 429
+            },
+            {
+                "column": 37,
+                "endColumn": 76,
+                "endLine": 430,
+                "line": 430
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/point.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "match.group(\"longitude_direction_front\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: match.group(\"longitude_direction_front\")",
+        "messageId": "CRC001",
+        "module": "point",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 55,
+                "endLine": 435,
+                "line": 435
+            },
+            {
+                "column": 38,
+                "endColumn": 78,
+                "endLine": 436,
+                "line": 436
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/point.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "match.group(\"latitude_direction_back\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: match.group(\"latitude_direction_back\")",
+        "messageId": "CRC001",
+        "module": "point",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 55,
+                "endLine": 431,
+                "line": 431
+            },
+            {
+                "column": 37,
+                "endColumn": 75,
+                "endLine": 432,
+                "line": 432
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/point.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "match.group(\"longitude_direction_back\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: match.group(\"longitude_direction_back\")",
+        "messageId": "CRC001",
+        "module": "point",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 56,
+                "endLine": 437,
+                "line": 437
+            },
+            {
+                "column": 38,
+                "endColumn": 77,
+                "endLine": 438,
+                "line": 438
+            }
+        ],
+        "path": "/root/ecooptimizer/geopy/geopy/point.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    }
+]

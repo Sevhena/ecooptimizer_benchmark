@@ -1,0 +1,6 @@
+root = "seaborn"
+target = "seaborn"
+recursive = true
+analyze_only = true
+analysis_results_file = "analysis_results/analysis_results_seaborn.json"
+exclude = [ "frontend", "plugin", "continuous_integration", "aten", "maint_tools", "sep", "changelog", "autoload", "tests", "testing", "LICENSE", "vendored-meson", "branding", "guides", ".devcontainer", "LICENSES", "ext", "sbase", "asv_bench", "scripts", "ci", "docs", "mypy_plugins", "meson_cpu", "help_docs", "intergration_tests", "asv_benchmarks", "gitpod", "mkdocs_build", ".vscode", ".ctags.d", "cmake", "c10", "test", "shell", "third_party", "binaries", "functorch", "extern", "caffe2", "component-lib", "benchmarks", ".venv", "events_executor", ".circleci", "android", "build_tools", "examples", "requirements", ".ci", "subprojects", "typings", ".git", "gpiozerocli", "bench", "js_tests", "licences", ".binder", "web", "tools", "tests_typing", "proto", "tooling", ".tx", ".spin", ".kokoro", ".cursor", "integrations", "extras", "galleries", "gallery", ".github", "doc",]
