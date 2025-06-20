@@ -1,0 +1,1330 @@
+Code Smell Statistics (Per File and Smell Type)
+=============================================
+
+File: analysis_results/analysis_results_SeleniumBase.json
+
+	=============================================
+	Total Smells: 286
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 116)
+		Threshold groupings:
+			3/2: 38
+			4/2: 19
+			5/2: 12
+			6/2: 8
+			7/2: 5
+			8/2: 4
+			9/2: 1
+			10/2: 2
+			11/2: 5
+			12/2: 1
+			16/2: 2
+			18/2: 2
+			21/2: 1
+			29/2: 1
+			31/2: 1
+			32/2: 1
+			35/2: 1
+			41/2: 2
+			48/2: 4
+			50/2: 6
+
+	Smell type: long-element-chain (Total: 29)
+		Threshold groupings:
+			3/3: 29
+
+	Smell type: long-lambda-expr (Total: 10)
+
+	Smell type: long-message-chain (Total: 13)
+		Threshold groupings:
+			3/3: 13
+
+	Smell type: no-self-use (Total: 51)
+
+	Smell type: string-concat-loop (Total: 23)
+
+	Smell type: too-many-arguments (Total: 41)
+		Threshold groupings:
+			7/6: 13
+			8/6: 4
+			9/6: 5
+			10/6: 3
+			11/6: 3
+			13/6: 2
+			14/6: 1
+			15/6: 2
+			21/6: 1
+			54/6: 1
+			55/6: 1
+			57/6: 1
+			58/6: 1
+			60/6: 1
+			75/6: 1
+			105/6: 1
+
+	Smell type: use-a-generator (Total: 3)
+
+==================================================
+
+File: analysis_results/analysis_results_black.json
+
+	=============================================
+	Total Smells: 28
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 5)
+		Threshold groupings:
+			3/2: 2
+			5/2: 3
+
+	Smell type: long-element-chain (Total: 2)
+		Threshold groupings:
+			3/3: 2
+
+	Smell type: long-lambda-expr (Total: 0)
+
+	Smell type: long-message-chain (Total: 4)
+		Threshold groupings:
+			3/3: 3
+			4/3: 1
+
+	Smell type: no-self-use (Total: 9)
+
+	Smell type: string-concat-loop (Total: 3)
+
+	Smell type: too-many-arguments (Total: 5)
+		Threshold groupings:
+			7/6: 1
+			8/6: 1
+			10/6: 2
+			29/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_cryptography.json
+
+	=============================================
+	Total Smells: 45
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 7)
+		Threshold groupings:
+			3/2: 2
+			4/2: 1
+			6/2: 2
+			9/2: 1
+			11/2: 1
+
+	Smell type: long-element-chain (Total: 8)
+		Threshold groupings:
+			3/3: 8
+
+	Smell type: long-lambda-expr (Total: 0)
+
+	Smell type: long-message-chain (Total: 0)
+
+	Smell type: no-self-use (Total: 20)
+
+	Smell type: string-concat-loop (Total: 0)
+
+	Smell type: too-many-arguments (Total: 10)
+		Threshold groupings:
+			7/6: 1
+			8/6: 2
+			9/6: 2
+			10/6: 2
+			11/6: 1
+			12/6: 2
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_dask.json
+
+	=============================================
+	Total Smells: 263
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 40)
+		Threshold groupings:
+			3/2: 26
+			4/2: 8
+			5/2: 3
+			6/2: 1
+			7/2: 2
+
+	Smell type: long-element-chain (Total: 7)
+		Threshold groupings:
+			3/3: 5
+			4/3: 2
+
+	Smell type: long-lambda-expr (Total: 1)
+
+	Smell type: long-message-chain (Total: 24)
+		Threshold groupings:
+			3/3: 24
+
+	Smell type: no-self-use (Total: 26)
+
+	Smell type: string-concat-loop (Total: 8)
+
+	Smell type: too-many-arguments (Total: 150)
+		Threshold groupings:
+			7/6: 56
+			8/6: 29
+			9/6: 24
+			10/6: 17
+			11/6: 8
+			12/6: 3
+			13/6: 7
+			14/6: 4
+			17/6: 2
+
+	Smell type: use-a-generator (Total: 7)
+
+==================================================
+
+File: analysis_results/analysis_results_django.json
+
+	=============================================
+	Total Smells: 730
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 45)
+		Threshold groupings:
+			3/2: 32
+			4/2: 6
+			5/2: 1
+			6/2: 4
+			9/2: 1
+			10/2: 1
+
+	Smell type: long-element-chain (Total: 10)
+		Threshold groupings:
+			3/3: 10
+
+	Smell type: long-lambda-expr (Total: 3)
+
+	Smell type: long-message-chain (Total: 48)
+		Threshold groupings:
+			3/3: 42
+			4/3: 3
+			5/3: 3
+
+	Smell type: no-self-use (Total: 474)
+
+	Smell type: string-concat-loop (Total: 9)
+
+	Smell type: too-many-arguments (Total: 139)
+		Threshold groupings:
+			7/6: 57
+			8/6: 26
+			9/6: 17
+			10/6: 11
+			11/6: 11
+			12/6: 5
+			13/6: 2
+			14/6: 2
+			15/6: 2
+			16/6: 1
+			18/6: 1
+			21/6: 1
+			23/6: 1
+			25/6: 2
+
+	Smell type: use-a-generator (Total: 2)
+
+==================================================
+
+File: analysis_results/analysis_results_flask.json
+
+	=============================================
+	Total Smells: 24
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 0)
+
+	Smell type: long-element-chain (Total: 1)
+		Threshold groupings:
+			3/3: 1
+
+	Smell type: long-lambda-expr (Total: 1)
+
+	Smell type: long-message-chain (Total: 0)
+
+	Smell type: no-self-use (Total: 16)
+
+	Smell type: string-concat-loop (Total: 0)
+
+	Smell type: too-many-arguments (Total: 6)
+		Threshold groupings:
+			8/6: 1
+			9/6: 1
+			11/6: 4
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_geopandas.json
+
+	=============================================
+	Total Smells: 50
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 17)
+		Threshold groupings:
+			3/2: 11
+			5/2: 3
+			6/2: 3
+
+	Smell type: long-element-chain (Total: 2)
+		Threshold groupings:
+			3/3: 1
+			6/3: 1
+
+	Smell type: long-lambda-expr (Total: 1)
+
+	Smell type: long-message-chain (Total: 5)
+		Threshold groupings:
+			3/3: 5
+
+	Smell type: no-self-use (Total: 2)
+
+	Smell type: string-concat-loop (Total: 1)
+
+	Smell type: too-many-arguments (Total: 22)
+		Threshold groupings:
+			7/6: 7
+			8/6: 3
+			9/6: 6
+			10/6: 2
+			11/6: 1
+			14/6: 1
+			20/6: 1
+			30/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_geopy.json
+
+	=============================================
+	Total Smells: 116
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 1)
+		Threshold groupings:
+			3/2: 1
+
+	Smell type: long-element-chain (Total: 17)
+		Threshold groupings:
+			3/3: 16
+			4/3: 1
+
+	Smell type: long-lambda-expr (Total: 0)
+
+	Smell type: long-message-chain (Total: 0)
+
+	Smell type: no-self-use (Total: 45)
+
+	Smell type: string-concat-loop (Total: 0)
+
+	Smell type: too-many-arguments (Total: 53)
+		Threshold groupings:
+			7/6: 10
+			8/6: 13
+			9/6: 22
+			10/6: 4
+			12/6: 2
+			13/6: 1
+			14/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_gpiozero.json
+
+	=============================================
+	Total Smells: 43
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 0)
+
+	Smell type: long-element-chain (Total: 0)
+
+	Smell type: long-lambda-expr (Total: 1)
+
+	Smell type: long-message-chain (Total: 3)
+		Threshold groupings:
+			3/3: 3
+
+	Smell type: no-self-use (Total: 15)
+
+	Smell type: string-concat-loop (Total: 0)
+
+	Smell type: too-many-arguments (Total: 24)
+		Threshold groupings:
+			7/6: 10
+			8/6: 7
+			9/6: 5
+			11/6: 2
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_keras.json
+
+	=============================================
+	Total Smells: 1180
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 256)
+		Threshold groupings:
+			3/2: 148
+			4/2: 68
+			5/2: 20
+			6/2: 2
+			7/2: 5
+			8/2: 2
+			9/2: 4
+			10/2: 2
+			14/2: 1
+			20/2: 2
+			34/2: 2
+
+	Smell type: long-element-chain (Total: 17)
+		Threshold groupings:
+			3/3: 17
+
+	Smell type: long-lambda-expr (Total: 15)
+
+	Smell type: long-message-chain (Total: 153)
+		Threshold groupings:
+			3/3: 153
+
+	Smell type: no-self-use (Total: 327)
+
+	Smell type: string-concat-loop (Total: 18)
+
+	Smell type: too-many-arguments (Total: 390)
+		Threshold groupings:
+			7/6: 112
+			8/6: 91
+			9/6: 55
+			10/6: 25
+			11/6: 21
+			12/6: 11
+			13/6: 11
+			14/6: 9
+			15/6: 8
+			16/6: 10
+			17/6: 13
+			18/6: 4
+			19/6: 3
+			20/6: 5
+			22/6: 1
+			23/6: 2
+			24/6: 3
+			25/6: 2
+			28/6: 4
+
+	Smell type: use-a-generator (Total: 4)
+
+==================================================
+
+File: analysis_results/analysis_results_librosa.json
+
+	=============================================
+	Total Smells: 102
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 7)
+		Threshold groupings:
+			3/2: 4
+			4/2: 2
+			7/2: 1
+
+	Smell type: long-element-chain (Total: 0)
+
+	Smell type: long-lambda-expr (Total: 0)
+
+	Smell type: long-message-chain (Total: 1)
+		Threshold groupings:
+			3/3: 1
+
+	Smell type: no-self-use (Total: 0)
+
+	Smell type: string-concat-loop (Total: 0)
+
+	Smell type: too-many-arguments (Total: 94)
+		Threshold groupings:
+			7/6: 13
+			8/6: 16
+			9/6: 10
+			10/6: 13
+			11/6: 17
+			12/6: 4
+			13/6: 5
+			14/6: 4
+			15/6: 7
+			17/6: 2
+			19/6: 2
+			25/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_matplotlib.json
+
+	=============================================
+	Total Smells: 615
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 45)
+		Threshold groupings:
+			3/2: 31
+			4/2: 6
+			5/2: 3
+			6/2: 3
+			8/2: 1
+			9/2: 1
+
+	Smell type: long-element-chain (Total: 6)
+		Threshold groupings:
+			3/3: 6
+
+	Smell type: long-lambda-expr (Total: 6)
+
+	Smell type: long-message-chain (Total: 82)
+		Threshold groupings:
+			3/3: 70
+			4/3: 6
+			5/3: 4
+			6/3: 2
+
+	Smell type: no-self-use (Total: 158)
+
+	Smell type: string-concat-loop (Total: 3)
+
+	Smell type: too-many-arguments (Total: 314)
+		Threshold groupings:
+			7/6: 108
+			8/6: 52
+			9/6: 51
+			10/6: 17
+			11/6: 15
+			12/6: 20
+			13/6: 6
+			14/6: 5
+			15/6: 9
+			16/6: 6
+			17/6: 8
+			18/6: 1
+			19/6: 3
+			20/6: 2
+			21/6: 1
+			22/6: 3
+			23/6: 3
+			24/6: 1
+			30/6: 2
+			38/6: 1
+
+	Smell type: use-a-generator (Total: 1)
+
+==================================================
+
+File: analysis_results/analysis_results_nltk.json
+
+	=============================================
+	Total Smells: 688
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 120)
+		Threshold groupings:
+			3/2: 60
+			4/2: 27
+			5/2: 7
+			6/2: 11
+			7/2: 2
+			8/2: 7
+			9/2: 2
+			12/2: 1
+			14/2: 1
+			15/2: 1
+			29/2: 1
+
+	Smell type: long-element-chain (Total: 68)
+		Threshold groupings:
+			3/3: 49
+			4/3: 19
+
+	Smell type: long-lambda-expr (Total: 34)
+
+	Smell type: long-message-chain (Total: 34)
+		Threshold groupings:
+			3/3: 23
+			4/3: 5
+			5/3: 3
+			10/3: 1
+			33/3: 1
+			66/3: 1
+
+	Smell type: no-self-use (Total: 274)
+
+	Smell type: string-concat-loop (Total: 47)
+
+	Smell type: too-many-arguments (Total: 110)
+		Threshold groupings:
+			7/6: 60
+			8/6: 26
+			9/6: 9
+			10/6: 6
+			11/6: 3
+			12/6: 3
+			13/6: 1
+			14/6: 1
+			19/6: 1
+
+	Smell type: use-a-generator (Total: 1)
+
+==================================================
+
+File: analysis_results/analysis_results_numpy.json
+
+	=============================================
+	Total Smells: 334
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 59)
+		Threshold groupings:
+			3/2: 31
+			4/2: 19
+			5/2: 3
+			6/2: 3
+			8/2: 2
+			15/2: 1
+
+	Smell type: long-element-chain (Total: 44)
+		Threshold groupings:
+			3/3: 37
+			4/3: 7
+
+	Smell type: long-lambda-expr (Total: 4)
+
+	Smell type: long-message-chain (Total: 15)
+		Threshold groupings:
+			3/3: 13
+			4/3: 2
+
+	Smell type: no-self-use (Total: 61)
+
+	Smell type: string-concat-loop (Total: 21)
+
+	Smell type: too-many-arguments (Total: 126)
+		Threshold groupings:
+			7/6: 55
+			8/6: 21
+			9/6: 30
+			10/6: 2
+			11/6: 2
+			12/6: 6
+			13/6: 2
+			14/6: 4
+			16/6: 1
+			17/6: 1
+			22/6: 1
+			25/6: 1
+
+	Smell type: use-a-generator (Total: 4)
+
+==================================================
+
+File: analysis_results/analysis_results_paho.mqtt.python.json
+
+	=============================================
+	Total Smells: 20
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 2)
+		Threshold groupings:
+			3/2: 1
+			5/2: 1
+
+	Smell type: long-element-chain (Total: 0)
+
+	Smell type: long-lambda-expr (Total: 0)
+
+	Smell type: long-message-chain (Total: 3)
+		Threshold groupings:
+			3/3: 3
+
+	Smell type: no-self-use (Total: 3)
+
+	Smell type: string-concat-loop (Total: 1)
+
+	Smell type: too-many-arguments (Total: 11)
+		Threshold groupings:
+			7/6: 2
+			8/6: 2
+			9/6: 3
+			11/6: 1
+			14/6: 1
+			15/6: 2
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_pandas.json
+
+	=============================================
+	Total Smells: 555
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 69)
+		Threshold groupings:
+			3/2: 46
+			4/2: 13
+			5/2: 4
+			6/2: 1
+			7/2: 4
+			9/2: 1
+
+	Smell type: long-element-chain (Total: 1)
+		Threshold groupings:
+			3/3: 1
+
+	Smell type: long-lambda-expr (Total: 6)
+
+	Smell type: long-message-chain (Total: 42)
+		Threshold groupings:
+			3/3: 39
+			4/3: 1
+			5/3: 1
+			14/3: 1
+
+	Smell type: no-self-use (Total: 84)
+
+	Smell type: string-concat-loop (Total: 7)
+
+	Smell type: too-many-arguments (Total: 346)
+		Threshold groupings:
+			7/6: 89
+			8/6: 73
+			9/6: 50
+			10/6: 47
+			11/6: 24
+			12/6: 7
+			13/6: 12
+			14/6: 6
+			15/6: 5
+			16/6: 4
+			17/6: 9
+			18/6: 4
+			19/6: 2
+			20/6: 3
+			22/6: 6
+			24/6: 3
+			44/6: 2
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_pytest.json
+
+	=============================================
+	Total Smells: 115
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 9)
+		Threshold groupings:
+			3/2: 7
+			4/2: 2
+
+	Smell type: long-element-chain (Total: 0)
+
+	Smell type: long-lambda-expr (Total: 0)
+
+	Smell type: long-message-chain (Total: 8)
+		Threshold groupings:
+			3/3: 8
+
+	Smell type: no-self-use (Total: 53)
+
+	Smell type: string-concat-loop (Total: 3)
+
+	Smell type: too-many-arguments (Total: 40)
+		Threshold groupings:
+			7/6: 25
+			8/6: 7
+			9/6: 5
+			10/6: 2
+			12/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+	Smell type: unknown-option-value (Total: 2)
+
+==================================================
+
+File: analysis_results/analysis_results_pytorch.json
+
+	=============================================
+	Total Smells: 3441
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 448)
+		Threshold groupings:
+			3/2: 302
+			4/2: 78
+			5/2: 35
+			6/2: 19
+			7/2: 6
+			8/2: 3
+			9/2: 3
+			12/2: 1
+			15/2: 1
+
+	Smell type: long-element-chain (Total: 44)
+		Threshold groupings:
+			3/3: 33
+			4/3: 9
+			5/3: 1
+			6/3: 1
+
+	Smell type: long-lambda-expr (Total: 314)
+
+	Smell type: long-message-chain (Total: 366)
+		Threshold groupings:
+			3/3: 250
+			4/3: 55
+			5/3: 32
+			6/3: 12
+			8/3: 10
+			11/3: 1
+			12/3: 4
+			13/3: 2
+
+	Smell type: no-self-use (Total: 860)
+
+	Smell type: string-concat-loop (Total: 93)
+
+	Smell type: too-many-arguments (Total: 1316)
+		Threshold groupings:
+			7/6: 405
+			8/6: 284
+			9/6: 145
+			10/6: 113
+			11/6: 89
+			12/6: 68
+			13/6: 51
+			14/6: 55
+			15/6: 35
+			16/6: 21
+			17/6: 14
+			18/6: 7
+			19/6: 8
+			20/6: 2
+			21/6: 3
+			22/6: 3
+			23/6: 3
+			24/6: 1
+			25/6: 1
+			27/6: 2
+			28/6: 2
+			29/6: 1
+			32/6: 1
+			50/6: 1
+			55/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_rclpy.json
+
+	=============================================
+	Total Smells: 112
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 28)
+		Threshold groupings:
+			3/2: 23
+			4/2: 3
+			5/2: 1
+			6/2: 1
+
+	Smell type: long-element-chain (Total: 0)
+
+	Smell type: long-lambda-expr (Total: 0)
+
+	Smell type: long-message-chain (Total: 2)
+		Threshold groupings:
+			3/3: 2
+
+	Smell type: no-self-use (Total: 64)
+
+	Smell type: string-concat-loop (Total: 0)
+
+	Smell type: too-many-arguments (Total: 18)
+		Threshold groupings:
+			7/6: 8
+			8/6: 3
+			9/6: 2
+			10/6: 2
+			12/6: 1
+			13/6: 1
+			15/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_requests.json
+
+	=============================================
+	Total Smells: 15
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 2)
+		Threshold groupings:
+			3/2: 1
+			4/2: 1
+
+	Smell type: long-element-chain (Total: 0)
+
+	Smell type: long-lambda-expr (Total: 0)
+
+	Smell type: long-message-chain (Total: 0)
+
+	Smell type: no-self-use (Total: 7)
+
+	Smell type: string-concat-loop (Total: 0)
+
+	Smell type: too-many-arguments (Total: 6)
+		Threshold groupings:
+			7/6: 2
+			9/6: 1
+			11/6: 2
+			17/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_scikit-learn.json
+
+	=============================================
+	Total Smells: 628
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 49)
+		Threshold groupings:
+			3/2: 30
+			4/2: 12
+			5/2: 4
+			6/2: 3
+
+	Smell type: long-element-chain (Total: 7)
+		Threshold groupings:
+			3/3: 7
+
+	Smell type: long-lambda-expr (Total: 4)
+
+	Smell type: long-message-chain (Total: 39)
+		Threshold groupings:
+			3/3: 22
+			4/3: 11
+			5/3: 1
+			6/3: 2
+			8/3: 2
+			9/3: 1
+
+	Smell type: no-self-use (Total: 75)
+
+	Smell type: string-concat-loop (Total: 8)
+
+	Smell type: too-many-arguments (Total: 442)
+		Threshold groupings:
+			7/6: 95
+			8/6: 76
+			9/6: 59
+			10/6: 48
+			11/6: 25
+			12/6: 30
+			13/6: 24
+			14/6: 14
+			15/6: 9
+			16/6: 19
+			17/6: 11
+			18/6: 5
+			19/6: 3
+			20/6: 5
+			21/6: 5
+			22/6: 9
+			24/6: 2
+			25/6: 3
+
+	Smell type: use-a-generator (Total: 4)
+
+==================================================
+
+File: analysis_results/analysis_results_scipy.json
+
+	=============================================
+	Total Smells: 1154
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 176)
+		Threshold groupings:
+			3/2: 110
+			4/2: 40
+			5/2: 5
+			6/2: 9
+			7/2: 3
+			9/2: 1
+			11/2: 1
+			13/2: 1
+			16/2: 1
+			31/2: 1
+			32/2: 1
+			119/2: 1
+			366/2: 1
+			723/2: 1
+
+	Smell type: long-element-chain (Total: 14)
+		Threshold groupings:
+			3/3: 13
+			4/3: 1
+
+	Smell type: long-lambda-expr (Total: 47)
+
+	Smell type: long-message-chain (Total: 28)
+		Threshold groupings:
+			3/3: 25
+			4/3: 3
+
+	Smell type: no-self-use (Total: 251)
+
+	Smell type: string-concat-loop (Total: 24)
+
+	Smell type: too-many-arguments (Total: 604)
+		Threshold groupings:
+			7/6: 190
+			8/6: 135
+			9/6: 90
+			10/6: 51
+			11/6: 32
+			12/6: 30
+			13/6: 15
+			14/6: 12
+			15/6: 13
+			16/6: 6
+			17/6: 8
+			18/6: 4
+			19/6: 3
+			20/6: 1
+			21/6: 2
+			22/6: 2
+			23/6: 7
+			25/6: 2
+			26/6: 1
+
+	Smell type: use-a-generator (Total: 10)
+
+==================================================
+
+File: analysis_results/analysis_results_scrapy.json
+
+	=============================================
+	Total Smells: 162
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 2)
+		Threshold groupings:
+			3/2: 2
+
+	Smell type: long-element-chain (Total: 0)
+
+	Smell type: long-lambda-expr (Total: 5)
+
+	Smell type: long-message-chain (Total: 4)
+		Threshold groupings:
+			3/3: 4
+
+	Smell type: no-self-use (Total: 122)
+
+	Smell type: string-concat-loop (Total: 4)
+
+	Smell type: too-many-arguments (Total: 25)
+		Threshold groupings:
+			7/6: 5
+			8/6: 5
+			9/6: 6
+			10/6: 2
+			13/6: 1
+			14/6: 4
+			15/6: 1
+			16/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+==================================================
+
+File: analysis_results/analysis_results_seaborn.json
+
+	=============================================
+	Total Smells: 159
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 16)
+		Threshold groupings:
+			3/2: 15
+			5/2: 1
+
+	Smell type: long-element-chain (Total: 0)
+
+	Smell type: long-lambda-expr (Total: 0)
+
+	Smell type: long-message-chain (Total: 14)
+		Threshold groupings:
+			3/3: 11
+			4/3: 2
+			5/3: 1
+
+	Smell type: no-self-use (Total: 61)
+
+	Smell type: string-concat-loop (Total: 1)
+
+	Smell type: too-many-arguments (Total: 64)
+		Threshold groupings:
+			7/6: 10
+			8/6: 9
+			9/6: 6
+			10/6: 1
+			11/6: 2
+			12/6: 4
+			13/6: 2
+			14/6: 1
+			15/6: 3
+			16/6: 2
+			17/6: 2
+			18/6: 2
+			19/6: 2
+			20/6: 2
+			21/6: 1
+			22/6: 1
+			23/6: 1
+			24/6: 1
+			26/6: 1
+			27/6: 1
+			28/6: 2
+			29/6: 1
+			30/6: 1
+			31/6: 2
+			33/6: 1
+			34/6: 2
+			40/6: 1
+
+	Smell type: use-a-generator (Total: 3)
+
+==================================================
+
+File: analysis_results/analysis_results_streamlit.json
+
+	=============================================
+	Total Smells: 579
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 27)
+		Threshold groupings:
+			3/2: 17
+			4/2: 4
+			5/2: 4
+			6/2: 1
+			8/2: 1
+
+	Smell type: long-element-chain (Total: 1)
+		Threshold groupings:
+			3/3: 1
+
+	Smell type: long-lambda-expr (Total: 18)
+
+	Smell type: long-message-chain (Total: 310)
+		Threshold groupings:
+			3/3: 262
+			4/3: 47
+			5/3: 1
+
+	Smell type: no-self-use (Total: 53)
+
+	Smell type: string-concat-loop (Total: 0)
+
+	Smell type: too-many-arguments (Total: 169)
+		Threshold groupings:
+			7/6: 27
+			8/6: 18
+			9/6: 9
+			10/6: 9
+			11/6: 17
+			12/6: 16
+			13/6: 15
+			14/6: 11
+			15/6: 31
+			16/6: 7
+			17/6: 8
+			18/6: 1
+
+	Smell type: use-a-generator (Total: 0)
+
+	Smell type: syntax-error (Total: 1)
+
+==================================================
+
+File: analysis_results/analysis_results_tensorflow.json
+
+	=============================================
+	Total Smells: 5841
+	=============================================
+
+	Smell type: cached-repeated-calls (Total: 739)
+		Threshold groupings:
+			3/2: 450
+			4/2: 187
+			5/2: 37
+			6/2: 26
+			7/2: 11
+			8/2: 3
+			9/2: 4
+			10/2: 2
+			11/2: 6
+			12/2: 2
+			13/2: 1
+			14/2: 4
+			15/2: 1
+			16/2: 1
+			17/2: 1
+			18/2: 2
+			31/2: 1
+
+	Smell type: long-element-chain (Total: 234)
+		Threshold groupings:
+			3/3: 213
+			4/3: 20
+			5/3: 1
+
+	Smell type: long-lambda-expr (Total: 154)
+
+	Smell type: long-message-chain (Total: 681)
+		Threshold groupings:
+			3/3: 622
+			4/3: 45
+			5/3: 7
+			6/3: 4
+			7/3: 3
+
+	Smell type: no-self-use (Total: 1693)
+
+	Smell type: string-concat-loop (Total: 34)
+
+	Smell type: too-many-arguments (Total: 1166)
+		Threshold groupings:
+			7/6: 471
+			8/6: 227
+			9/6: 157
+			10/6: 105
+			11/6: 56
+			12/6: 36
+			13/6: 22
+			14/6: 13
+			15/6: 15
+			16/6: 10
+			17/6: 21
+			18/6: 7
+			19/6: 4
+			20/6: 5
+			21/6: 6
+			22/6: 3
+			23/6: 6
+			27/6: 1
+			55/6: 1
+
+	Smell type: use-a-generator (Total: 20)
+
+	Smell type: unknown-option-value (Total: 1094)
+
+	Smell type: useless-option-value (Total: 26)
+
+==================================================
+
+
+
+========== SUMMARY STATISTICS =============
+============================================
+	Total repos processed:	26
+	Total smells detected:	16162
+
+	======= Smell Type Breakdown ==========
+		UNKNOWN:	1123
+		cached-repeated-calls:	2285
+		long-element-chain:	512
+		long-lambda-expr:	624
+		long-message-chain:	1879
+		no-self-use:	4804
+		string-concat-loop:	308
+		too-many-arguments:	5691
+		use-a-generator:	59
+
+	========== Repo Breakdown =============
+		dask: 8 smell types
+		numpy: 8 smell types
+		scipy: 8 smell types
+		tensorflow: 8 smell types
+		django: 8 smell types
+		nltk: 8 smell types
+		keras: 8 smell types
+		scikit-learn: 8 smell types
+		SeleniumBase: 8 smell types
+		matplotlib: 8 smell types
+		pytorch: 7 smell types
+			1 smell types not present: use-a-generator
+		pandas: 7 smell types
+			1 smell types not present: use-a-generator
+		geopandas: 7 smell types
+			1 smell types not present: use-a-generator
+		black: 6 smell types
+			2 smell types not present: long-lambda-expr, use-a-generator
+		streamlit: 6 smell types
+			2 smell types not present: string-concat-loop, use-a-generator
+		seaborn: 6 smell types
+			2 smell types not present: long-element-chain, long-lambda-expr
+		scrapy: 6 smell types
+			2 smell types not present: long-element-chain, use-a-generator
+		paho.mqtt.python: 5 smell types
+			3 smell types not present: long-element-chain, long-lambda-expr, use-a-generator
+		pytest: 5 smell types
+			3 smell types not present: long-element-chain, long-lambda-expr, use-a-generator
+		geopy: 4 smell types
+			4 smell types not present: long-lambda-expr, long-message-chain, string-concat-loop, use-a-generator
+		gpiozero: 4 smell types
+			4 smell types not present: cached-repeated-calls, long-element-chain, string-concat-loop, use-a-generator
+		rclpy: 4 smell types
+			4 smell types not present: long-element-chain, long-lambda-expr, string-concat-loop, use-a-generator
+		flask: 4 smell types
+			4 smell types not present: cached-repeated-calls, long-message-chain, string-concat-loop, use-a-generator
+		cryptography: 4 smell types
+			4 smell types not present: long-lambda-expr, long-message-chain, string-concat-loop, use-a-generator
+		requests: 3 smell types
+			5 smell types not present: long-element-chain, long-lambda-expr, long-message-chain, string-concat-loop, use-a-generator
+		librosa: 3 smell types
+			5 smell types not present: long-element-chain, long-lambda-expr, no-self-use, string-concat-loop, use-a-generator

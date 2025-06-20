@@ -93,7 +93,7 @@ def write_statistics(
 
         for file_path, smells in sorted(file_stats.items(), key=lambda x: str(x[0])):
             total_files += 1
-            f.write(f"File: {file_path.relative_to(Path.cwd())}\n\n")
+            f.write(f"File: {file_path}\n\n")
 
             # Calculate total smells for this file
             total_smells = sum(
@@ -131,7 +131,7 @@ def write_statistics(
         # Write summary statistics
         f.write("\n\n========== SUMMARY STATISTICS =============\n")
         f.write("============================================\n")
-        f.write(f"\tTotal files processed:\t{total_files}\n")
+        f.write(f"\tTotal repos processed:\t{total_files}\n")
         f.write(
             f"\tTotal smells detected:\t{sum(global_smell_counts.values()) - global_smell_counts['UNKNOWN']}\n\n"
         )
@@ -139,6 +139,25 @@ def write_statistics(
         f.write("\t======= Smell Type Breakdown ==========\n")
         for smell_type, count in sorted(global_smell_counts.items()):
             f.write(f"\t\t{smell_type}:\t{count}\n")
+
+        f.write("\n")
+
+        f.write("\t========== Repo Breakdown =============\n")
+        smells_found = defaultdict(list[str])
+        for file_path, smells in file_stats.items():
+            repo = file_path.name.split("_", 3)[2].replace(".json", "")
+            smells_found[repo] = [
+                smell for smell, val in smells.items() if smell in ALL_SMELL_TYPES and val
+            ]
+
+        smells_found = dict(sorted(smells_found.items(), key=lambda x: len(x[1]), reverse=True))
+        for repo, smells in smells_found.items():
+            f.write(f"\t\t{repo}: {len(smells)} smell types\n")
+            smells_missing = [smell for smell in ALL_SMELL_TYPES if smell not in smells]
+            if smells_missing:
+                f.write(
+                    f"\t\t\t{len(smells_missing)} smell types not present: {', '.join(smells_missing)}\n"
+                )
 
 
 def make_sound() -> None:
