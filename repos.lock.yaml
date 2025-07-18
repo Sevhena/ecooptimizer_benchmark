@@ -1,0 +1,106 @@
+repos:
+  - name: SeleniumBase
+    url: https://github.com/seleniumbase/SeleniumBase.git
+    commit: 916bdb12452f45f569837dc4db47f2b54ef316d5
+  - name: airflow
+    url: https://github.com/apache/airflow.git
+    commit: a8a9fc5ead28ab4902a328a6911fe2c95e737776
+  - name: beautifulsoup
+    url: https://git.launchpad.net/beautifulsoup
+    commit: 53d328406ec8c37c0edbd00ace3782be63e2e7e5
+  - name: black
+    url: https://github.com/psf/black.git
+    commit: 7987951e246b4e76cc5225b2ccd89b5519a25ac8
+  - name: celery
+    url: https://github.com/celery/celery.git
+    commit: ce7fe8a65f5edf2efca3476bdf94193d17f70192
+  - name: cryptography
+    url: https://github.com/pyca/cryptography.git
+    commit: 61a347d44aca3b5c73db75e20798fee6e23e7654
+  - name: dask
+    url: https://github.com/dask/dask.git
+    commit: c37e61378ecb15a92963d8936a4a45f89fb98f3d
+  - name: django
+    url: https://github.com/django/django.git
+    commit: 2714bc3f2c8675d32caae764c874ac381c836c7f
+  - name: fastapi
+    url: https://github.com/fastapi/fastapi.git
+    commit: 1cf4b8c2de1cb737b1442b102422d910b4168696
+  - name: flask
+    url: https://github.com/pallets/flask.git
+    commit: d6009c0aeb3c7fe3a841733e9dbdfbbb63b9bfd1
+  - name: geopandas
+    url: https://github.com/geopandas/geopandas.git
+    commit: 1a1585ddfba8ef229ebdfc05b1c20ef3eb1e67a7
+  - name: geopy
+    url: https://github.com/geopy/geopy.git
+    commit: f495974c32a7a7b1eb433e7b8c87166e96375c32
+  - name: gpiozero
+    url: https://github.com/gpiozero/gpiozero.git
+    commit: 859029006a46843336725b5f32d97b60b5113f3f
+  - name: keras
+    url: https://github.com/keras-team/keras.git
+    commit: 08ad93b77488f911328da6a676f04709b6e9f788
+  - name: librosa
+    url: https://github.com/librosa/librosa.git
+    commit: e403272fc984bc4aeb316e5f15899042224bb9fe
+  - name: matplotlib
+    url: https://github.com/matplotlib/matplotlib.git
+    commit: c44ae00ac0d384d8a514883a993fb0c83cc3d9fa
+  - name: nltk
+    url: https://github.com/nltk/nltk.git
+    commit: ebaf5f9ce0736fab9c57ba145081693ab19fd2ee
+  - name: numpy
+    url: https://github.com/numpy/numpy.git
+    commit: 30a4883d32a720a4af8a273d34673e671819e7b1
+  - name: paho.mqtt.python
+    url: https://github.com/eclipse-paho/paho.mqtt.python.git
+    commit: d45de3737879cfe7a6acc361631fa5cb1ef584bb
+  - name: pandas
+    url: https://github.com/pandas-dev/pandas.git
+    commit: b8371f5e6f329bfe1b5f1e099e221c8219fc6bbd
+  - name: pytest
+    url: https://github.com/pytest-dev/pytest.git
+    commit: 9e9633de9da7a9fab03b4bba3a326bf85b412050
+  - name: pytorch
+    url: https://github.com/pytorch/pytorch.git
+    commit: b1b8e57cda03bd016594a4fc4944fa5e7f9dd961
+  - name: rclpy
+    url: https://github.com/ros2/rclpy.git
+    commit: 4c1a7dfab0f4519f607ab3e21164887e0bfd80b4
+  - name: requests
+    url: https://github.com/psf/requests.git
+    commit: 8ff173b186f135670879db9fbe1e68a6b5209c89
+  - name: sanic
+    url: https://github.com/sanic-org/sanic.git
+    commit: a64d7fe6edb65ac60537f91d4d6c34fe7bc224b9
+  - name: scikit-learn
+    url: https://github.com/scikit-learn/scikit-learn.git
+    commit: 1fae098375f9670c5b472d5a3ca2d6bec5939b56
+  - name: scipy
+    url: https://github.com/scipy/scipy.git
+    commit: 7bed15d22dba3ee15d51dcd014e4fdeaf09b6253
+  - name: scrapy
+    url: https://github.com/scrapy/scrapy.git
+    commit: b4d11b8b2565b5686c9f395ca1a8dd085609aafc
+  - name: seaborn
+    url: https://github.com/mwaskom/seaborn.git
+    commit: 86b5481ca47cb46d3b3e079a5ed9b9fb46e315ef
+  - name: streamlit
+    url: https://github.com/streamlit/streamlit.git
+    commit: 5260c9e2364a4fd71df39d30a90b2e7e24cfe55a
+  - name: taichi
+    url: https://github.com/taichi-dev/taichi.git
+    commit: e2b5e9d184160d1c49cdafa730e873756439043d
+  - name: tensorflow
+    url: https://github.com/tensorflow/tensorflow.git
+    commit: f82e1a99ccfb7c1b335ad7789a9301f82befcbb4
+  - name: tornado
+    url: https://github.com/tornadoweb/tornado.git
+    commit: aace116c3f195e127c63b00fd5afadf1587c99d0
+  - name: tqdm
+    url: https://github.com/tqdm/tqdm.git
+    commit: 0ed5d7f18fa3153834cbac0aa57e8092b217cc16
+  - name: uvicorn
+    url: https://github.com/encode/uvicorn.git
+    commit: 5432729137988a53bb70d2f3e0c790f9bdf33ec5
