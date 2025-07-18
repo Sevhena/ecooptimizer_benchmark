@@ -1,0 +1,4061 @@
+{
+    "0031f46c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0031f46c",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "dtw",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 131,
+                "line": 131
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "009e5c0b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "009e5c0b",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "dtw",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 61,
+                "line": 61
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "00dcf179": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "00dcf179",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.filters",
+        "obj": "mel",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 128,
+                "line": 128
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/filters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "0134a900": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0134a900",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "__dtw_calc_accu_cost",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 24,
+                "endLine": 515,
+                "line": 515
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "03428813": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "03428813",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "mfcc",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 1834,
+                "line": 1834
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "0adf6abc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0adf6abc",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.filters",
+        "obj": "chroma",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 10,
+                "endLine": 266,
+                "line": 266
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/filters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "0afff8c4": {
+        "additionalInfo": {
+            "callString": "np.empty(n_states)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0afff8c4",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.empty(n_states)",
+        "messageId": "CRC001",
+        "module": "sequence",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 36,
+                "endLine": 1729,
+                "line": 1729
+            },
+            {
+                "column": 17,
+                "endColumn": 35,
+                "endLine": 1740,
+                "line": 1740
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "0d7ba5ee": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0d7ba5ee",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.display",
+        "obj": "FJSFormatter.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 395,
+                "line": 395
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "0d7daff2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0d7daff2",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.segment",
+        "obj": "cross_similarity",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 20,
+                "endLine": 76,
+                "line": 76
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "0e721ba1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0e721ba1",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.pitch",
+        "obj": "piptrack",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 12,
+                "endLine": 181,
+                "line": 181
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/pitch.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "0f9876a3": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0f9876a3",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.beat",
+        "obj": "beat_track",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 36,
+                "line": 36
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/beat.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "10eb4543": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "10eb4543",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.filters",
+        "obj": "wavelet",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 11,
+                "endLine": 847,
+                "line": 847
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/filters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "13c77d98": {
+        "additionalInfo": {
+            "callString": "np.mod(degrees + Sa, 12)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "13c77d98",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.mod(degrees + Sa, 12)",
+        "messageId": "CRC001",
+        "module": "display",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 42,
+                "endLine": 1423,
+                "line": 1423
+            },
+            {
+                "column": 18,
+                "endColumn": 42,
+                "endLine": 1437,
+                "line": 1437
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "1577cf27": {
+        "additionalInfo": {
+            "callString": "int(target_sr)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1577cf27",
+        "message": "Repeated function call detected (2/2). Consider caching the result: int(target_sr)",
+        "messageId": "CRC001",
+        "module": "audio",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 34,
+                "endLine": 649,
+                "line": 649
+            },
+            {
+                "column": 38,
+                "endColumn": 52,
+                "endLine": 640,
+                "line": 640
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "1774fd96": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1774fd96",
+        "message": "Too many arguments (19/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.rhythm",
+        "obj": "tempogram_ratio",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 19,
+                "endLine": 457,
+                "line": 457
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/rhythm.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "17b7cb11": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "17b7cb11",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "spectral_contrast",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 21,
+                "endLine": 352,
+                "line": 352
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "1c6788dc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1c6788dc",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "dtw",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 79,
+                "line": 79
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "1ee30a0e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1ee30a0e",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.audio",
+        "obj": "load",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 56,
+                "line": 56
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "1ef94a18": {
+        "additionalInfo": {
+            "callString": "scipy.ndimage.convolve(R, kernel, **kwargs)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1ef94a18",
+        "message": "Repeated function call detected (2/2). Consider caching the result: scipy.ndimage.convolve(R, kernel, **kwargs)",
+        "messageId": "CRC001",
+        "module": "segment",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 66,
+                "endLine": 1291,
+                "line": 1291
+            },
+            {
+                "column": 26,
+                "endColumn": 69,
+                "endLine": 1295,
+                "line": 1295
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "1f2aa365": {
+        "additionalInfo": {
+            "callString": "np.empty(n_states)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1f2aa365",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.empty(n_states)",
+        "messageId": "CRC001",
+        "module": "sequence",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 36,
+                "endLine": 1513,
+                "line": 1513
+            },
+            {
+                "column": 17,
+                "endColumn": 35,
+                "endLine": 1524,
+                "line": 1524
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "214e8e6d": {
+        "additionalInfo": {
+            "callString": "len(onset_envelope)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 4
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "214e8e6d",
+        "message": "Repeated function call detected (4/2). Consider caching the result: len(onset_envelope)",
+        "messageId": "CRC001",
+        "module": "beat",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 27,
+                "endLine": 529,
+                "line": 529
+            },
+            {
+                "column": 23,
+                "endColumn": 42,
+                "endLine": 538,
+                "line": 538
+            },
+            {
+                "column": 33,
+                "endColumn": 52,
+                "endLine": 545,
+                "line": 545
+            },
+            {
+                "column": 23,
+                "endColumn": 42,
+                "endLine": 548,
+                "line": 548
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/beat.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "26342e33": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "26342e33",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "pcen",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 2344,
+                "line": 2344
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "2af82b4b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2af82b4b",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.filters",
+        "obj": "_multirate_fb",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 17,
+                "endLine": 1243,
+                "line": 1243
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/filters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "2c288171": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2c288171",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "spectral_centroid",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 21,
+                "endLine": 45,
+                "line": 45
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "2d31bc8c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2d31bc8c",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.constantq",
+        "obj": "hybrid_cqt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 193,
+                "line": 193
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "2dc3a1a9": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2dc3a1a9",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "reassigned_spectrogram",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 26,
+                "endLine": 990,
+                "line": 990
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "384547cf": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "384547cf",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.util.utils",
+        "obj": "peak_pick",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 13,
+                "endLine": 1234,
+                "line": 1234
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/util/utils.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "39fa1755": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "39fa1755",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "spectral_flatness",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 21,
+                "endLine": 681,
+                "line": 681
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "3d38c7a5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3d38c7a5",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.pitch",
+        "obj": "yin",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 476,
+                "line": 476
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/pitch.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "3f617210": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3f617210",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.rhythm",
+        "obj": "tempo",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 9,
+                "endLine": 281,
+                "line": 281
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/rhythm.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "418208d9": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "418208d9",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "harmonic",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 13,
+                "endLine": 295,
+                "line": 285
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/harmonic.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    "4a07b197": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4a07b197",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "istft",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 9,
+                "endLine": 394,
+                "line": 394
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "4a5863f5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4a5863f5",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.constantq",
+        "obj": "__cqt_response",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 18,
+                "endLine": 1120,
+                "line": 1120
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "4fea4340": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4fea4340",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.filters",
+        "obj": "constant_q",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 437,
+                "line": 437
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/filters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "52139466": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "52139466",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.constantq",
+        "obj": "icqt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 534,
+                "line": 534
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "52ca5e12": {
+        "additionalInfo": {
+            "callString": "core.note_to_hz(\"C1\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 7
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "52ca5e12",
+        "message": "Repeated function call detected (7/2). Consider caching the result: core.note_to_hz(\"C1\")",
+        "messageId": "CRC001",
+        "module": "display",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 40,
+                "endLine": 1445,
+                "line": 1445
+            },
+            {
+                "column": 25,
+                "endColumn": 46,
+                "endLine": 1523,
+                "line": 1523
+            },
+            {
+                "column": 19,
+                "endColumn": 40,
+                "endLine": 1552,
+                "line": 1552
+            },
+            {
+                "column": 19,
+                "endColumn": 40,
+                "endLine": 1592,
+                "line": 1592
+            },
+            {
+                "column": 19,
+                "endColumn": 40,
+                "endLine": 1610,
+                "line": 1610
+            },
+            {
+                "column": 25,
+                "endColumn": 46,
+                "endLine": 1628,
+                "line": 1628
+            },
+            {
+                "column": 25,
+                "endColumn": 46,
+                "endLine": 1643,
+                "line": 1643
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "57d74490": {
+        "additionalInfo": {
+            "callString": "np.log2(fmin)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "57d74490",
+        "message": "Repeated function call detected (3/2). Consider caching the result: np.log2(fmin)",
+        "messageId": "CRC001",
+        "module": "display",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 32,
+                "endLine": 1563,
+                "line": 1563
+            },
+            {
+                "column": 19,
+                "endColumn": 32,
+                "endLine": 1594,
+                "line": 1594
+            },
+            {
+                "column": 19,
+                "endColumn": 32,
+                "endLine": 1612,
+                "line": 1612
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "5891055f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5891055f",
+        "message": "Too many arguments (25/6)",
+        "messageId": "R0913",
+        "module": "librosa.display",
+        "obj": "specshow",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 12,
+                "endLine": 924,
+                "line": 924
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "58bf75d8": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "58bf75d8",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.rhythm",
+        "obj": "fourier_tempogram",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 21,
+                "endLine": 179,
+                "line": 179
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/rhythm.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "58d96df1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "58d96df1",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.constantq",
+        "obj": "__early_downsample",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 22,
+                "endLine": 1159,
+                "line": 1159
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "5b2bb7b4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5b2bb7b4",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "__reassign_frequencies",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 26,
+                "endLine": 646,
+                "line": 646
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "5ec58fca": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5ec58fca",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.effects",
+        "obj": "percussive",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 252,
+                "line": 252
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/effects.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "60f477e9": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "60f477e9",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.rhythm",
+        "obj": "tempogram",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 13,
+                "endLine": 24,
+                "line": 24
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/rhythm.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "63a5dc5a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "63a5dc5a",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.filters",
+        "obj": "constant_q_lengths",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 22,
+                "endLine": 602,
+                "line": 602
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/filters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "67bf6ecf": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "67bf6ecf",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.audio",
+        "obj": "stream",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 10,
+                "endLine": 290,
+                "line": 290
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "68b48c41": {
+        "additionalInfo": {
+            "callString": "np.argmax(vec[:init_limit])",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "68b48c41",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.argmax(vec[:init_limit])",
+        "messageId": "CRC001",
+        "module": "sequence",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 57,
+                "endLine": 983,
+                "line": 983
+            },
+            {
+                "column": 30,
+                "endColumn": 57,
+                "endLine": 1006,
+                "line": 1006
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "6a209d64": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6a209d64",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "_spectrogram",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 16,
+                "endLine": 2863,
+                "line": 2863
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "6cee2d63": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6cee2d63",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.onset",
+        "obj": "onset_detect",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 16,
+                "endLine": 29,
+                "line": 29
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/onset.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "71221e96": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "71221e96",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.audio",
+        "obj": "__lpc",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 9,
+                "endLine": 1043,
+                "line": 1043
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "7343a1c9": {
+        "additionalInfo": {
+            "callString": "np.zeros_like(S)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7343a1c9",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.zeros_like(S)",
+        "messageId": "CRC001",
+        "module": "pitch",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 30,
+                "endLine": 334,
+                "line": 334
+            },
+            {
+                "column": 11,
+                "endColumn": 27,
+                "endLine": 335,
+                "line": 335
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/pitch.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "75dc4f1a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "75dc4f1a",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "dtw",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 114,
+                "line": 114
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "7695ab45": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7695ab45",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "pcen",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 2300,
+                "line": 2300
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "76ade13c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "76ade13c",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "librosa.onset",
+        "obj": "onset_strength_multi",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 24,
+                "endLine": 445,
+                "line": 445
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/onset.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "7aa6bfa1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7aa6bfa1",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.segment",
+        "obj": "recurrence_matrix",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 21,
+                "endLine": 366,
+                "line": 366
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "7be62465": {
+        "additionalInfo": {
+            "callString": "istft(angles, hop_length=hop_length, win_length=win_length, n_fft=n_fft,\n    window=window, center=center, dtype=dtype, length=length, out=inverse)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7be62465",
+        "message": "Repeated function call detected (2/2). Consider caching the result: istft(angles, hop_length=hop_length, win_length=win_length, n_fft=n_fft,\n    window=window, center=center, dtype=dtype, length=length, out=inverse)",
+        "messageId": "CRC001",
+        "module": "spectrum",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 11,
+                "endColumn": 5,
+                "endLine": 2860,
+                "line": 2850
+            },
+            {
+                "column": 18,
+                "endColumn": 9,
+                "endLine": 2826,
+                "line": 2816
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "7d4507b6": {
+        "additionalInfo": {
+            "callString": "np.zeros(3)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7d4507b6",
+        "message": "Repeated function call detected (3/2). Consider caching the result: np.zeros(3)",
+        "messageId": "CRC001",
+        "module": "sequence",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 28,
+                "endLine": 916,
+                "line": 916
+            },
+            {
+                "column": 19,
+                "endColumn": 30,
+                "endLine": 917,
+                "line": 917
+            },
+            {
+                "column": 10,
+                "endColumn": 21,
+                "endLine": 918,
+                "line": 918
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "7e4904d6": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7e4904d6",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "chroma_stft",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 15,
+                "endLine": 1132,
+                "line": 1132
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "80c65e50": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "80c65e50",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.onset",
+        "obj": "onset_strength",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 18,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/onset.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "812b7e55": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "812b7e55",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.beat",
+        "obj": "plp",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 267,
+                "line": 267
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/beat.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "84c41aa5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "84c41aa5",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "melspectrogram",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 18,
+                "endLine": 2013,
+                "line": 2013
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "8501c76c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8501c76c",
+        "message": "Too many arguments (19/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.constantq",
+        "obj": "griffinlim_cqt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 18,
+                "endLine": 1209,
+                "line": 1209
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "85705830": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "85705830",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.harmonic",
+        "obj": "f0_harmonics",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 16,
+                "endLine": 303,
+                "line": 303
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/harmonic.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "883842c0": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "883842c0",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "dtw",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 184,
+                "line": 184
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "89b85af9": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "89b85af9",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "spectral_rolloff",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 20,
+                "endLine": 533,
+                "line": 533
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "8b184527": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8b184527",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "iirt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 1477,
+                "line": 1477
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "8c292ed3": {
+        "additionalInfo": {
+            "callString": "int(orig_sr)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8c292ed3",
+        "message": "Repeated function call detected (2/2). Consider caching the result: int(orig_sr)",
+        "messageId": "CRC001",
+        "module": "audio",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 30,
+                "endLine": 648,
+                "line": 648
+            },
+            {
+                "column": 11,
+                "endColumn": 23,
+                "endLine": 640,
+                "line": 640
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "8f515620": {
+        "additionalInfo": {
+            "callString": "np.log2(core.note_to_hz(\"C1\"))",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8f515620",
+        "message": "Repeated function call detected (3/2). Consider caching the result: np.log2(core.note_to_hz(\"C1\"))",
+        "messageId": "CRC001",
+        "module": "display",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 47,
+                "endLine": 1523,
+                "line": 1523
+            },
+            {
+                "column": 17,
+                "endColumn": 47,
+                "endLine": 1628,
+                "line": 1628
+            },
+            {
+                "column": 17,
+                "endColumn": 47,
+                "endLine": 1643,
+                "line": 1643
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "93b8f55a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "93b8f55a",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "__reassign_times",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 20,
+                "endLine": 809,
+                "line": 809
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "945f870b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "945f870b",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "griffinlim",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 2634,
+                "line": 2634
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "96c163fa": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "96c163fa",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.segment",
+        "obj": "recurrence_matrix",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 21,
+                "endLine": 348,
+                "line": 348
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "98a21c07": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "98a21c07",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "dtw",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 96,
+                "line": 96
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "99d69af7": {
+        "additionalInfo": {
+            "callString": "np.log2(Sa)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "99d69af7",
+        "message": "Repeated function call detected (3/2). Consider caching the result: np.log2(Sa)",
+        "messageId": "CRC001",
+        "module": "display",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 39,
+                "endLine": 1537,
+                "line": 1537
+            },
+            {
+                "column": 51,
+                "endColumn": 62,
+                "endLine": 1537,
+                "line": 1537
+            },
+            {
+                "column": 17,
+                "endColumn": 28,
+                "endLine": 1655,
+                "line": 1655
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "9a821f13": {
+        "additionalInfo": {
+            "callString": "np.array((sigma_i_data * sigma_j_data) ** 0.5)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9a821f13",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.array((sigma_i_data * sigma_j_data) ** 0.5)",
+        "messageId": "CRC001",
+        "module": "segment",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 64,
+                "endLine": 1392,
+                "line": 1392
+            },
+            {
+                "column": 18,
+                "endColumn": 64,
+                "endLine": 1410,
+                "line": 1410
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "9aecdb5d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9aecdb5d",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.pitch",
+        "obj": "__pyin_helper",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 17,
+                "endLine": 896,
+                "line": 896
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/pitch.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "9ee217f2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9ee217f2",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "stft",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 55,
+                "line": 55
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "9f9d5839": {
+        "additionalInfo": {
+            "callString": "np.arange(0, cur_filter_output.shape[-1] - win_length_STMSP_round,\n    hop_length_STMSP)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9f9d5839",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.arange(0, cur_filter_output.shape[-1] - win_length_STMSP_round,\n    hop_length_STMSP)",
+        "messageId": "CRC001",
+        "module": "spectrum",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 9,
+                "endLine": 1645,
+                "line": 1643
+            },
+            {
+                "column": 24,
+                "endColumn": 13,
+                "endLine": 1655,
+                "line": 1651
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "a253ac43": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a253ac43",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.filters",
+        "obj": "window_sumsquare",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 20,
+                "endLine": 1530,
+                "line": 1530
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/filters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "a2b569df": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a2b569df",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.constantq",
+        "obj": "vqt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 760,
+                "line": 760
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "a2bf45c5": {
+        "additionalInfo": {
+            "callString": "np.empty_like(rec.data)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 4
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a2bf45c5",
+        "message": "Repeated function call detected (4/2). Consider caching the result: np.empty_like(rec.data)",
+        "messageId": "CRC001",
+        "module": "segment",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 46,
+                "endLine": 1382,
+                "line": 1382
+            },
+            {
+                "column": 23,
+                "endColumn": 46,
+                "endLine": 1383,
+                "line": 1383
+            },
+            {
+                "column": 23,
+                "endColumn": 46,
+                "endLine": 1396,
+                "line": 1396
+            },
+            {
+                "column": 23,
+                "endColumn": 46,
+                "endLine": 1397,
+                "line": 1397
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "a8652c52": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a8652c52",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.display",
+        "obj": "SvaraFormatter.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 305,
+                "line": 305
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "af551ca0": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "af551ca0",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "pcen",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 2366,
+                "line": 2366
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "b3bb7e7c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b3bb7e7c",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.display",
+        "obj": "waveshow",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 12,
+                "endLine": 1834,
+                "line": 1834
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "b3be1793": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b3be1793",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "dtw",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 200,
+                "line": 200
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "b79ab41f": {
+        "additionalInfo": {
+            "callString": "np.zeros(shape, dtype=dtype)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b79ab41f",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.zeros(shape, dtype=dtype)",
+        "messageId": "CRC001",
+        "module": "spectrum",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 40,
+                "endLine": 545,
+                "line": 545
+            },
+            {
+                "column": 22,
+                "endColumn": 50,
+                "endLine": 569,
+                "line": 569
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "bcfae2a9": {
+        "additionalInfo": {
+            "callString": "np.empty_like(S)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bcfae2a9",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.empty_like(S)",
+        "messageId": "CRC001",
+        "module": "decompose",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 11,
+                "endColumn": 27,
+                "endLine": 389,
+                "line": 389
+            },
+            {
+                "column": 11,
+                "endColumn": 27,
+                "endLine": 392,
+                "line": 392
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/decompose.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "be87efb5": {
+        "additionalInfo": {
+            "callString": "np.empty(2)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "be87efb5",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.empty(2)",
+        "messageId": "CRC001",
+        "module": "sequence",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 32,
+                "endLine": 1755,
+                "line": 1755
+            },
+            {
+                "column": 20,
+                "endColumn": 31,
+                "endLine": 1756,
+                "line": 1756
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "bfc517c1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bfc517c1",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "rms",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 801,
+                "line": 801
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "c077458f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c077458f",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.audio",
+        "obj": "resample",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 12,
+                "endLine": 514,
+                "line": 514
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "c0dd1642": {
+        "additionalInfo": {
+            "callString": "np.argmax(score_values[:init_limit])",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c0dd1642",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.argmax(score_values[:init_limit])",
+        "messageId": "CRC001",
+        "module": "sequence",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 66,
+                "endLine": 974,
+                "line": 974
+            },
+            {
+                "column": 30,
+                "endColumn": 66,
+                "endLine": 996,
+                "line": 996
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "c15a97de": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c15a97de",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.audio",
+        "obj": "chirp",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 9,
+                "endLine": 1494,
+                "line": 1494
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "c17c494d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c17c494d",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.effects",
+        "obj": "harmonic",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 12,
+                "endLine": 166,
+                "line": 166
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/effects.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "c1caf494": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c1caf494",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.segment",
+        "obj": "recurrence_matrix",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 21,
+                "endLine": 384,
+                "line": 384
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "c6ba3229": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c6ba3229",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.constantq",
+        "obj": "__vqt_filter_fft",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 20,
+                "endLine": 1049,
+                "line": 1049
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "c8c7a3da": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c8c7a3da",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.segment",
+        "obj": "cross_similarity",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 20,
+                "endLine": 61,
+                "line": 61
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "cb0aacab": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cb0aacab",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.util.utils",
+        "obj": "__peak_pick",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 15,
+                "endLine": 1202,
+                "line": 1202
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/util/utils.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "cbddb4a2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cbddb4a2",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "librosa.display",
+        "obj": "__decorate_axis",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 19,
+                "endLine": 1383,
+                "line": 1383
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "cc770067": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cc770067",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.constantq",
+        "obj": "pseudo_cqt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 377,
+                "line": 377
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "ce6f1c00": {
+        "additionalInfo": {
+            "callString": "np.array((sigma_i_data + sigma_j_data) / 2)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ce6f1c00",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.array((sigma_i_data + sigma_j_data) / 2)",
+        "messageId": "CRC001",
+        "module": "segment",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 61,
+                "endLine": 1390,
+                "line": 1390
+            },
+            {
+                "column": 18,
+                "endColumn": 61,
+                "endLine": 1408,
+                "line": 1408
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "cefaf223": {
+        "additionalInfo": {
+            "callString": "str.maketrans({\"\u266f\": \"#\", \"\ud834\udd2a\": \"##\", \"\u266d\": \"b\", \"\ud834\udd2b\": \"bb\", \"\u266e\": \"n\"})",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cefaf223",
+        "message": "Repeated function call detected (2/2). Consider caching the result: str.maketrans({\"\u266f\": \"#\", \"\ud834\udd2a\": \"##\", \"\u266d\": \"b\", \"\ud834\udd2b\": \"bb\", \"\u266e\": \"n\"})",
+        "messageId": "CRC001",
+        "module": "notation",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 102,
+                "endLine": 844,
+                "line": 844
+            },
+            {
+                "column": 27,
+                "endColumn": 106,
+                "endLine": 750,
+                "line": 750
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/notation.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "d58c343c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d58c343c",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "dtw",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 166,
+                "line": 166
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d5b710a7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d5b710a7",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "fmt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 2101,
+                "line": 2101
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d6995f7f": {
+        "additionalInfo": {
+            "callString": "filters.wavelet_lengths(freqs=freqs, sr=sr, window=window, filter_scale=\n    filter_scale, gamma=gamma, alpha=alpha)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d6995f7f",
+        "message": "Repeated function call detected (2/2). Consider caching the result: filters.wavelet_lengths(freqs=freqs, sr=sr, window=window, filter_scale=\n    filter_scale, gamma=gamma, alpha=alpha)",
+        "messageId": "CRC001",
+        "module": "constantq",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 29,
+                "endColumn": 5,
+                "endLine": 960,
+                "line": 953
+            },
+            {
+                "column": 21,
+                "endColumn": 9,
+                "endLine": 1039,
+                "line": 1032
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "d6f42d8d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d6f42d8d",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "chroma_cens",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 15,
+                "endLine": 1419,
+                "line": 1419
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d8dae076": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d8dae076",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "librosa.sequence",
+        "obj": "dtw",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 149,
+                "line": 149
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/sequence.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "db45c8d3": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "db45c8d3",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.harmonic",
+        "obj": "salience",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 12,
+                "endLine": 18,
+                "line": 18
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/harmonic.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "de418e33": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "de418e33",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "poly_features",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 17,
+                "endLine": 914,
+                "line": 914
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "e08ef101": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e08ef101",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.effects",
+        "obj": "hpss",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 66,
+                "line": 66
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/effects.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "e32bd0dd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e32bd0dd",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.segment",
+        "obj": "cross_similarity",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 20,
+                "endLine": 91,
+                "line": 91
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "e3331735": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e3331735",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "spectral_bandwidth",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 22,
+                "endLine": 192,
+                "line": 192
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "e34b629e": {
+        "additionalInfo": {
+            "callString": "scipy.ndimage.convolve(R, kernel, **kwargs)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e34b629e",
+        "message": "Repeated function call detected (2/2). Consider caching the result: scipy.ndimage.convolve(R, kernel, **kwargs)",
+        "messageId": "CRC001",
+        "module": "segment",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 66,
+                "endLine": 1291,
+                "line": 1291
+            },
+            {
+                "column": 26,
+                "endColumn": 69,
+                "endLine": 1295,
+                "line": 1295
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "e730546d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e730546d",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.spectrum",
+        "obj": "pcen",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 2322,
+                "line": 2322
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "e9865a87": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e9865a87",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "chroma_cqt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 1289,
+                "line": 1289
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "e9a59dbc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e9a59dbc",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.spectral",
+        "obj": "chroma_vqt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 1567,
+                "line": 1567
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/spectral.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "eb4d9c2f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "eb4d9c2f",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "librosa.filters",
+        "obj": "cq_to_chroma",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 16,
+                "endLine": 995,
+                "line": 995
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/filters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "ec131e1a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ec131e1a",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "librosa.feature.inverse",
+        "obj": "mel_to_audio",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 16,
+                "endLine": 110,
+                "line": 110
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/feature/inverse.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "ef765821": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ef765821",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.constantq",
+        "obj": "cqt",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 28,
+                "line": 28
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/constantq.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "f0465edb": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f0465edb",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.segment",
+        "obj": "path_enhance",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 16,
+                "endLine": 1142,
+                "line": 1142
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/segment.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "f2df5f09": {
+        "additionalInfo": {
+            "callString": "np.arange(0, cur_filter_output.shape[-1] - win_length_STMSP_round,\n    hop_length_STMSP)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f2df5f09",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.arange(0, cur_filter_output.shape[-1] - win_length_STMSP_round,\n    hop_length_STMSP)",
+        "messageId": "CRC001",
+        "module": "spectrum",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 9,
+                "endLine": 1645,
+                "line": 1643
+            },
+            {
+                "column": 24,
+                "endColumn": 13,
+                "endLine": 1655,
+                "line": 1651
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/spectrum.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "f68d3ddc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f68d3ddc",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.pitch",
+        "obj": "pyin",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 652,
+                "line": 652
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/pitch.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "f7d5969e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f7d5969e",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.audio",
+        "obj": "clicks",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 10,
+                "endLine": 1285,
+                "line": 1285
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "f89614d6": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f89614d6",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.core.audio",
+        "obj": "get_duration",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 16,
+                "endLine": 690,
+                "line": 690
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "f9806ad4": {
+        "additionalInfo": {
+            "callString": "__audioread_load(path, offset, duration, dtype)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f9806ad4",
+        "message": "Repeated function call detected (2/2). Consider caching the result: __audioread_load(path, offset, duration, dtype)",
+        "messageId": "CRC001",
+        "module": "audio",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 70,
+                "endLine": 172,
+                "line": 172
+            },
+            {
+                "column": 31,
+                "endColumn": 78,
+                "endLine": 184,
+                "line": 184
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/core/audio.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "f99b709c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f99b709c",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "librosa.display",
+        "obj": "AdaptiveWaveplot.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 681,
+                "line": 681
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/librosa/librosa/display.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    }
+}

@@ -1,0 +1,11 @@
+repos:
+  - tensorflow
+  - numpy
+  - scipy
+  - dask
+  - airflow
+  - gpiozero
+  - paho.mqtt.python
+  - scikit-learn
+  - streamlit
+  - django

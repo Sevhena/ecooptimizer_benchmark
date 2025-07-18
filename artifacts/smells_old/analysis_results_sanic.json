@@ -1,0 +1,2865 @@
+[
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "directory_page",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 59,
+                "endLine": 63,
+                "line": 63
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/pages/directory_page.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "error",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 21,
+                "endLine": 112,
+                "line": 110
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/pages/error.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.application.state",
+        "obj": "ApplicationState.set_verbosity",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 80,
+                "line": 80
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/application/state.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.logging.formatter",
+        "obj": "DebugFormatter._color_exception_line",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 155,
+                "line": 155
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/logging/formatter.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.logging.formatter",
+        "obj": "DebugFormatter._color_file_line",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 163,
+                "line": 163
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/logging/formatter.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.logging.formatter",
+        "obj": "DebugFormatter._color_code_line",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 175,
+                "line": 175
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/logging/formatter.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self._make_format()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._make_format()",
+        "messageId": "CRC001",
+        "module": "formatter",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 29,
+                "endColumn": 48,
+                "endLine": 56,
+                "line": 56
+            },
+            {
+                "column": 27,
+                "endColumn": 46,
+                "endLine": 58,
+                "line": 58
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/logging/formatter.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.signals",
+        "obj": "SignalRouter.dispatch",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 265,
+                "line": 265
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/signals.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.signals",
+        "obj": "SignalRouter._clean_trigger",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 416,
+                "line": 416
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/signals.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.cli.console",
+        "obj": "REPLProtocol.send",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 64,
+                "line": 64
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/console.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "threading.Event()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: threading.Event()",
+        "messageId": "CRC001",
+        "module": "console",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 45,
+                "endLine": 174,
+                "line": 174
+            },
+            {
+                "column": 30,
+                "endColumn": 47,
+                "endLine": 175,
+                "line": 175
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/console.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.cli.executor",
+        "obj": "Executor._add_arguments",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 80,
+                "line": 80
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/executor.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Lambda function too long (113 characters, max 100)",
+        "messageId": "LLE001",
+        "module": "executor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 13,
+                "endLine": 62,
+                "line": 57
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/executor.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.cli.arguments",
+        "obj": "Group.prepare",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 45,
+                "line": 45
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/arguments.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.cli.app",
+        "obj": "SanicCLI._get_app",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/app.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Lambda function too long (113 characters, max 100)",
+        "messageId": "LLE001",
+        "module": "app",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 13,
+                "endLine": 59,
+                "line": 54
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/app.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "app",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 46,
+                "endLine": 158,
+                "line": 156
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/app.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": "get_logo(True)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: get_logo(True)",
+        "messageId": "CRC001",
+        "module": "app",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 38,
+                "endColumn": 52,
+                "endLine": 73,
+                "line": 73
+            },
+            {
+                "column": 38,
+                "endColumn": 52,
+                "endLine": 84,
+                "line": 84
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/app.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.parser.parse_known_args(args=parse_args)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.parser.parse_known_args(args=parse_args)",
+        "messageId": "CRC001",
+        "module": "app",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 75,
+                "endLine": 107,
+                "line": 107
+            },
+            {
+                "column": 27,
+                "endColumn": 72,
+                "endLine": 114,
+                "line": 114
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cli/app.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "str(location)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: str(location)",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 32,
+                "endLine": 99,
+                "line": 99
+            },
+            {
+                "column": 30,
+                "endColumn": 43,
+                "endLine": 113,
+                "line": 113
+            },
+            {
+                "column": 62,
+                "endColumn": 75,
+                "endLine": 131,
+                "line": 131
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "sanic.worker.serve",
+        "obj": "worker_serve",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 16,
+                "endLine": 24,
+                "line": 24
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/serve.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "Sanic.get_app(app_name)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: Sanic.get_app(app_name)",
+        "messageId": "CRC001",
+        "module": "serve",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 41,
+                "endLine": 58,
+                "line": 58
+            },
+            {
+                "column": 20,
+                "endColumn": 43,
+                "endLine": 72,
+                "line": 72
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/serve.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.worker.reloader",
+        "obj": "Reloader.python_files",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 85,
+                "line": 85
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/reloader.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.worker.multiplexer",
+        "obj": "WorkerMultiplexer.manage",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 42,
+                "line": 42
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/multiplexer.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.worker.restarter",
+        "obj": "Restarter._restart_process",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 89,
+                "line": 89
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/restarter.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.worker.inspector",
+        "obj": "Inspector.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 40,
+                "line": 40
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/inspector.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.worker.inspector",
+        "obj": "Inspector._respond",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 106,
+                "line": 106
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/inspector.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.worker.manager",
+        "obj": "WorkerManager.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 60,
+                "line": 60
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/manager.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "sanic.worker.manager",
+        "obj": "WorkerManager.manage",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 91,
+                "line": 91
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/manager.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.worker.manager",
+        "obj": "WorkerManager._handle_manage",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 510,
+                "line": 510
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/manager.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "sanic.worker.process",
+        "obj": "WorkerProcess.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 27,
+                "line": 27
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/process.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "sanic.worker.process",
+        "obj": "Worker.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 234,
+                "line": 234
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/process.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.worker.state",
+        "obj": "WorkerState._write_error",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 80,
+                "line": 80
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/worker/state.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.exceptions",
+        "obj": "SanicException.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 61,
+                "line": 61
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/exceptions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "sanic.exceptions",
+        "obj": "MethodNotAllowed.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 188,
+                "line": 188
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/exceptions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "sanic.exceptions",
+        "obj": "FileNotFound.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 309,
+                "line": 309
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/exceptions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.exceptions",
+        "obj": "RangeNotSatisfiable.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 439,
+                "line": 439
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/exceptions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.exceptions",
+        "obj": "PyFileError.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 530,
+                "line": 530
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/exceptions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.exceptions",
+        "obj": "Unauthorized.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 613,
+                "line": 613
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/exceptions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "sanic.router",
+        "obj": "Router.add",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 78,
+                "line": 78
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/router.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.router",
+        "obj": "Router._normalize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 254,
+                "line": 254
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/router.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "router",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 57,
+                "endLine": 115,
+                "line": 115
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/router.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": "asyncio.Event()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: asyncio.Event()",
+        "messageId": "CRC001",
+        "module": "asgi",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 27,
+                "endColumn": 42,
+                "endLine": 20,
+                "line": 20
+            },
+            {
+                "column": 25,
+                "endColumn": 40,
+                "endLine": 22,
+                "line": 22
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/models/asgi.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "http_types",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 73,
+                "endLine": 18,
+                "line": 18
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/models/http_types.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "sanic.views",
+        "obj": "HTTPMethodView.__init_subclass__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 119,
+                "line": 119
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/views.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "sanic.views",
+        "obj": "HTTPMethodView.attach",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 205,
+                "line": 205
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/views.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.handlers.directory",
+        "obj": "DirectoryHandler._prepare_file",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 84,
+                "line": 84
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/handlers/directory.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "sanic.response.convenience",
+        "obj": "file",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 206,
+                "line": 206
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/response/convenience.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.response.types",
+        "obj": "BaseHTTPResponse._encode_body",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 59,
+                "line": 59
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/response/types.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "sanic.response.types",
+        "obj": "BaseHTTPResponse.add_cookie",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 124,
+                "line": 124
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/response/types.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.blueprints",
+        "obj": "Blueprint.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 115,
+                "line": 115
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/blueprints.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.blueprints",
+        "obj": "Blueprint.copy",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 201,
+                "line": 201
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/blueprints.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.blueprints",
+        "obj": "Blueprint._event",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 559,
+                "line": 559
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/blueprints.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self._setup_uri(future.uri, url_prefix)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._setup_uri(future.uri, url_prefix)",
+        "messageId": "CRC001",
+        "module": "blueprints",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 57,
+                "endLine": 362,
+                "line": 362
+            },
+            {
+                "column": 18,
+                "endColumn": 57,
+                "endLine": 436,
+                "line": 436
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/blueprints.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "http1",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 28,
+                "endLine": 452,
+                "line": 450
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/http/http1.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.http.tls.creators",
+        "obj": "CertCreator._try_select",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 161,
+                "line": 161
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/http/tls/creators.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.server.websockets.impl",
+        "obj": "WebsocketImplProtocol.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 65,
+                "line": 65
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/websockets/impl.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "asyncio.Lock()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: asyncio.Lock()",
+        "messageId": "CRC001",
+        "module": "impl",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 40,
+                "endLine": 83,
+                "line": 83
+            },
+            {
+                "column": 25,
+                "endColumn": 39,
+                "endLine": 84,
+                "line": 84
+            },
+            {
+                "column": 35,
+                "endColumn": 49,
+                "endLine": 86,
+                "line": 86
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/websockets/impl.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.ws_proto.data_to_send()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.ws_proto.data_to_send()",
+        "messageId": "CRC001",
+        "module": "impl",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 44,
+                "endLine": 314,
+                "line": 314
+            },
+            {
+                "column": 35,
+                "endColumn": 63,
+                "endLine": 322,
+                "line": 322
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/websockets/impl.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self.ws_proto.data_to_send()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.ws_proto.data_to_send()",
+        "messageId": "CRC001",
+        "module": "impl",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 27,
+                "endColumn": 55,
+                "endLine": 358,
+                "line": 358
+            },
+            {
+                "column": 32,
+                "endColumn": 60,
+                "endLine": 360,
+                "line": 360
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/websockets/impl.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "asyncio.Lock()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: asyncio.Lock()",
+        "messageId": "CRC001",
+        "module": "frame",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 40,
+                "endLine": 58,
+                "line": 58
+            },
+            {
+                "column": 27,
+                "endColumn": 41,
+                "endLine": 59,
+                "line": 59
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/websockets/frame.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "asyncio.Event()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: asyncio.Event()",
+        "messageId": "CRC001",
+        "module": "frame",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 32,
+                "endColumn": 47,
+                "endLine": 64,
+                "line": 64
+            },
+            {
+                "column": 31,
+                "endColumn": 46,
+                "endLine": 66,
+                "line": 66
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/websockets/frame.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (18/6)",
+        "messageId": "R0913",
+        "module": "sanic.server.runners",
+        "obj": "serve",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 9,
+                "endLine": 42,
+                "line": 42
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/runners.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "sanic.server.runners",
+        "obj": "_serve_http_1",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 17,
+                "endLine": 198,
+                "line": 198
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/runners.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.server.runners",
+        "obj": "_serve_http_3",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 17,
+                "endLine": 313,
+                "line": 313
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/runners.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.server.protocols.http_protocol",
+        "obj": "HttpProtocol.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 120,
+                "line": 120
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/protocols/http_protocol.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "asyncio.Event()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: asyncio.Event()",
+        "messageId": "CRC001",
+        "module": "base_protocol",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 41,
+                "endLine": 53,
+                "line": 53
+            },
+            {
+                "column": 30,
+                "endColumn": 45,
+                "endLine": 58,
+                "line": 58
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/server/protocols/base_protocol.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "sanic.cookies.response",
+        "obj": "CookieJar.add_cookie",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 144,
+                "line": 144
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cookies/response.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.cookies.response",
+        "obj": "CookieJar.delete_cookie",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 233,
+                "line": 233
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cookies/response.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "sanic.cookies.response",
+        "obj": "Cookie.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 388,
+                "line": 388
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cookies/response.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "len(str)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: len(str)",
+        "messageId": "CRC001",
+        "module": "request",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 16,
+                "endLine": 25,
+                "line": 25
+            },
+            {
+                "column": 22,
+                "endColumn": 30,
+                "endLine": 17,
+                "line": 17
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/cookies/request.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.request.types",
+        "obj": "Request.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 147,
+                "line": 147
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/request/types.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "deque(sorted(request_middleware, key=attrgetter(\"order\"), reverse=True))",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: deque(sorted(request_middleware, key=attrgetter(\"order\"), reverse=True))",
+        "messageId": "CRC001",
+        "module": "middleware",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 34,
+                "endColumn": 9,
+                "endLine": 223,
+                "line": 217
+            },
+            {
+                "column": 45,
+                "endColumn": 13,
+                "endLine": 201,
+                "line": 195
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/middleware.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "deque(sorted(response_middleware, key=attrgetter(\"order\"), reverse=True)[::-1])",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: deque(sorted(response_middleware, key=attrgetter(\"order\"), reverse=True)[::-1])",
+        "messageId": "CRC001",
+        "module": "middleware",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 35,
+                "endColumn": 9,
+                "endLine": 230,
+                "line": 224
+            },
+            {
+                "column": 46,
+                "endColumn": 13,
+                "endLine": 208,
+                "line": 202
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/middleware.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "sorted(request_middleware, key=attrgetter(\"order\"), reverse=True)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: sorted(request_middleware, key=attrgetter(\"order\"), reverse=True)",
+        "messageId": "CRC001",
+        "module": "middleware",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 13,
+                "endLine": 222,
+                "line": 218
+            },
+            {
+                "column": 16,
+                "endColumn": 17,
+                "endLine": 200,
+                "line": 196
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/middleware.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "sorted(response_middleware, key=attrgetter(\"order\"), reverse=True)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: sorted(response_middleware, key=attrgetter(\"order\"), reverse=True)",
+        "messageId": "CRC001",
+        "module": "middleware",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 13,
+                "endLine": 229,
+                "line": 225
+            },
+            {
+                "column": 16,
+                "endColumn": 17,
+                "endLine": 207,
+                "line": 203
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/middleware.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (16/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.route",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 38,
+                "line": 38
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.add_route",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 213,
+                "line": 213
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.get",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 309,
+                "line": 309
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.post",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 362,
+                "line": 362
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.put",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 413,
+                "line": 413
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.head",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 464,
+                "line": 464
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.options",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 517,
+                "line": 517
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.patch",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 570,
+                "line": 570
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.delete",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 621,
+                "line": 621
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.websocket",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 671,
+                "line": 671
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin.add_websocket_route",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 724,
+                "line": 724
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin._get_response_types.HttpResponseVisitor.visit_Return",
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 28,
+                "endLine": 786,
+                "line": 786
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin._get_response_types",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 782,
+                "line": 782
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.mixins.routes",
+        "obj": "RouteMixin._build_route_context",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 806,
+                "line": 806
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/routes.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (16/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.static",
+        "obj": "StaticMixin.static",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 32,
+                "line": 32
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/static.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.static",
+        "obj": "StaticHandleMixin._static_request_handler",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 37,
+                "endLine": 249,
+                "line": 249
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/static.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.mixins.static",
+        "obj": "StaticHandleMixin._get_file_path",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 347,
+                "line": 347
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/static.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "uri.rstrip(\"/\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: uri.rstrip(\"/\")",
+        "messageId": "CRC001",
+        "module": "static",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 37,
+                "endLine": 200,
+                "line": 200
+            },
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 208,
+                "line": 208
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/static.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.startup",
+        "obj": "StartupMixin.run",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 154,
+                "line": 154
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/startup.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (25/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.startup",
+        "obj": "StartupMixin.prepare",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 284,
+                "line": 284
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/startup.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.startup",
+        "obj": "StartupMixin.create_server",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 466,
+                "line": 466
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/startup.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "sanic.mixins.startup",
+        "obj": "StartupMixin._helper",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 632,
+                "line": 632
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/startup.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "id": "",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "sanic.mixins.startup",
+        "obj": "StartupMixin._run_server",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 1377,
+                "line": 1377
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/mixins/startup.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "sanic.app",
+        "obj": "Sanic.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 230,
+                "line": 230
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "sanic.app",
+        "obj": "Sanic.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 251,
+                "line": 251
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "sanic.app",
+        "obj": "Sanic.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 272,
+                "line": 272
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "sanic.app",
+        "obj": "Sanic.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 293,
+                "line": 293
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "sanic.app",
+        "obj": "Sanic.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 313,
+                "line": 313
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.app",
+        "obj": "Sanic.dispatch",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 650,
+                "line": 650
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.app",
+        "obj": "Sanic.dispatch",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 662,
+                "line": 662
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.app",
+        "obj": "Sanic.dispatch",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 673,
+                "line": 673
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "sanic.app",
+        "obj": "Sanic.blueprint",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 854,
+                "line": 854
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "deque()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: deque()",
+        "messageId": "CRC001",
+        "module": "app",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 57,
+                "endColumn": 64,
+                "endLine": 556,
+                "line": 556
+            },
+            {
+                "column": 58,
+                "endColumn": 65,
+                "endLine": 562,
+                "line": 562
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/sanic/sanic/app.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    }
+]

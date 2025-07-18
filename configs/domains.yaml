@@ -1,0 +1,39 @@
+domains:
+  machine_learning:
+    - tensorflow
+    - keras
+    - pytorch
+    - scikit-learn
+    - taichi
+    - librosa
+  web:
+    - django
+    - streamlit
+    - sanic
+    - fastapi
+    - flask
+    - uvicorn
+    - tornado
+    - beautifulsoup
+  data_science:
+    - scipy
+    - nltk
+    - matplotlib
+    - pandas
+    - geopandas
+    - seaborn
+  infrastructure:
+    - airflow
+    - numpy
+    - SeleniumBase
+    - dask
+    - celery
+    - black
+    - pytest
+    - cryptography
+    - requests
+    - tqdm
+  embedded:
+    - paho.mqtt.python
+    - gpiozero
+    - rclpy

@@ -25,13 +25,15 @@ TARGETED_SMELLS: set[str] = {
 FUNCTION_CONTEXT_SMELLS = {"no-self-use", "too-many-arguments"}
 LOOP_CONTEXT_SMELLS = {"string-concat-loop"}
 
-OUTPUT_DIR: Path = Path("extracted_snippets")
+CURRENT_DIR = Path(__file__).parent.resolve()
+
+OUTPUT_DIR: Path = (CURRENT_DIR / "../analysis_data/extracted_snippets").resolve()
 SEPARATOR: str = "# " + "=" * 50 + "\n"
 MAX_WORKERS: int = os.cpu_count() or 4
 BASE_SOURCE_DIR: Path = Path("/root/ecooptimizer")
 
 # Configure logging (file-only)
-LOG_DIR: Path = Path("logs")
+LOG_DIR: Path = (CURRENT_DIR / "../logs").resolve()
 LOG_DIR.mkdir(exist_ok=True)
 logging.basicConfig(
     level=logging.DEBUG,
@@ -127,11 +129,21 @@ class SnippetExtractor:
         return "\n".join(line[min_indent:] if line.strip() else line for line in lines)
 
     def get_expanded_snippet(
-        self, file_path: str, line: int, end_line: int, smell_type: str
+        self, str_path: str, line: int, end_line: int, smell_type: str
     ) -> Optional[str]:
         """Get snippet with expanded context when needed"""
+
+        path_components = list(Path(str_path).parts)
+        # Ensure compatibility with old directory structure
         try:
-            file_path = Path(file_path)
+            main_proj_dir_id = path_components.index("ecooptimizer")
+            path_components[main_proj_dir_id] = "ecooptimizer_benchmark"
+            path_components.insert(main_proj_dir_id + 1, "repositories")
+        except ValueError:
+            pass
+
+        file_path = Path(*path_components)
+        try:
             with file_path.open("r", encoding="utf-8") as f:
                 lines = f.readlines()
 
@@ -159,12 +171,11 @@ class SnippetExtractor:
             self.error_log.append(error_msg)
             return None
 
-    def process_json_file(self, json_path: str):
+    def process_json_file(self, json_path: Path):
         """Process JSON file with expanded snippet context"""
         try:
             logger.info(f"Processing: {json_path}")
 
-            json_path = Path(json_path)
             with json_path.open("r", encoding="utf-8") as f:
                 data = json.load(f)
 
@@ -173,7 +184,7 @@ class SnippetExtractor:
             repo_output_dir.mkdir(exist_ok=True, parents=True)
 
             # Structure: {smell_type: {file_path: [occurrences]}}
-            smell_file_map: defaultdict[str, defaultdict[str, list[dict]]] = defaultdict(
+            smell_file_map: defaultdict[str, defaultdict[str, list[dict[str, int]]]] = defaultdict(
                 lambda: defaultdict(list)
             )
 
@@ -238,7 +249,7 @@ class SnippetExtractor:
             logger.error(error_msg, exc_info=True)
             self.error_log.append(error_msg)
 
-    def group_occurrences(self, occurrences: list[dict]) -> list[list[dict]]:
+    def group_occurrences(self, occurrences: list[dict[str, int]]) -> list[list[dict[str, int]]]:
         """Group consecutive or nearby occurrences"""
         if not occurrences:
             return []
@@ -282,7 +293,7 @@ def main():
     OUTPUT_DIR.mkdir(exist_ok=True)
     extractor = SnippetExtractor()
 
-    analysis_dir = Path("analysis_results")
+    analysis_dir = Path("analysis_data/analysis_results")
     json_files = [
         f
         for f in analysis_dir.iterdir()

@@ -1,0 +1,19 @@
+diff --git a/example.py b/example.py
+index f6eb21e..6e78741 100644
+--- a/example.py
++++ b/example.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ import random
+ import datetime
+ import math
+@@ -115,7 +116,8 @@ class Driver:
+         return self.car
+ 
+ def get_driver_engine_status(driver):
+-    return driver.get_car().get_engine().get_status()
++    with EmissionsTracker(project_name='test_repo-benchmark', experiment_id='test_repo_LMC001_0b4c4364', output_file='/root/ecooptimizer_benchmark/results/test_repo/long-message-chain/0b4c4364.csv') as tracker:
++        return driver.get_car().get_engine().get_status()
+ 
+ # Useless member-ignoring method
+ class MathOps:

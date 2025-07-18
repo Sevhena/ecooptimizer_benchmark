@@ -1,0 +1,502 @@
+[
+    {
+        "additionalInfo": {
+            "callString": "bool(RE_ANSI.search(data))",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: bool(RE_ANSI.search(data))",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 45,
+                "endLine": 393,
+                "line": 393
+            },
+            {
+                "column": 24,
+                "endColumn": 50,
+                "endLine": 396,
+                "line": 396
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "float('inf')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: float('inf')",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 45,
+                "endColumn": 57,
+                "endLine": 201,
+                "line": 201
+            },
+            {
+                "column": 45,
+                "endColumn": 57,
+                "endLine": 208,
+                "line": 208
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "float('inf')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: float('inf')",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 45,
+                "endColumn": 57,
+                "endLine": 201,
+                "line": 201
+            },
+            {
+                "column": 45,
+                "endColumn": 57,
+                "endLine": 208,
+                "line": 208
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "len(delim)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: len(delim)",
+        "messageId": "CRC001",
+        "module": "cli",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 26,
+                "endLine": 82,
+                "line": 82
+            },
+            {
+                "column": 36,
+                "endColumn": 46,
+                "endLine": 105,
+                "line": 105
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/cli.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "fin.read(buf_size)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: fin.read(buf_size)",
+        "messageId": "CRC001",
+        "module": "cli",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 32,
+                "endLine": 85,
+                "line": 85
+            },
+            {
+                "column": 18,
+                "endColumn": 36,
+                "endLine": 70,
+                "line": 70
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/cli.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "tqdm.std",
+        "obj": "tqdm.format_meter",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 465,
+                "line": 465
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/std.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "id": "",
+        "message": "Too many arguments (27/6)",
+        "messageId": "R0913",
+        "module": "tqdm.std",
+        "obj": "tqdm.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 954,
+                "line": 954
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/std.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    {
+        "additionalInfo": {
+            "callString": "bar_format.format(bar=full_bar, **format_dict)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 4
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (4/2). Consider caching the result: bar_format.format(bar=full_bar, **format_dict)",
+        "messageId": "CRC001",
+        "module": "std",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 66,
+                "endLine": 631,
+                "line": 631
+            },
+            {
+                "column": 18,
+                "endColumn": 64,
+                "endLine": 642,
+                "line": 642
+            },
+            {
+                "column": 20,
+                "endColumn": 66,
+                "endLine": 650,
+                "line": 650
+            },
+            {
+                "column": 18,
+                "endColumn": 64,
+                "endLine": 656,
+                "line": 656
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/std.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "inner_generator()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 10
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (10/2). Consider caching the result: inner_generator()",
+        "messageId": "CRC001",
+        "module": "std",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 32,
+                "endColumn": 49,
+                "endLine": 925,
+                "line": 925
+            },
+            {
+                "column": 39,
+                "endColumn": 56,
+                "endLine": 926,
+                "line": 926
+            },
+            {
+                "column": 35,
+                "endColumn": 52,
+                "endLine": 930,
+                "line": 930
+            },
+            {
+                "column": 42,
+                "endColumn": 59,
+                "endLine": 931,
+                "line": 931
+            },
+            {
+                "column": 33,
+                "endColumn": 50,
+                "endLine": 941,
+                "line": 941
+            },
+            {
+                "column": 35,
+                "endColumn": 52,
+                "endLine": 937,
+                "line": 937
+            },
+            {
+                "column": 42,
+                "endColumn": 59,
+                "endLine": 939,
+                "line": 939
+            },
+            {
+                "column": 37,
+                "endColumn": 54,
+                "endLine": 946,
+                "line": 946
+            },
+            {
+                "column": 39,
+                "endColumn": 56,
+                "endLine": 947,
+                "line": 947
+            },
+            {
+                "column": 52,
+                "endColumn": 69,
+                "endLine": 949,
+                "line": 949
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/std.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "inner_generator('map')",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 4
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (4/2). Consider caching the result: inner_generator('map')",
+        "messageId": "CRC001",
+        "module": "std",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 52,
+                "endLine": 927,
+                "line": 927
+            },
+            {
+                "column": 37,
+                "endColumn": 59,
+                "endLine": 928,
+                "line": 928
+            },
+            {
+                "column": 33,
+                "endColumn": 55,
+                "endLine": 933,
+                "line": 933
+            },
+            {
+                "column": 40,
+                "endColumn": 62,
+                "endLine": 934,
+                "line": 934
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/std.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self._get_free_pos(self)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._get_free_pos(self)",
+        "messageId": "CRC001",
+        "module": "std",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 27,
+                "endColumn": 51,
+                "endLine": 989,
+                "line": 989
+            },
+            {
+                "column": 27,
+                "endColumn": 51,
+                "endLine": 999,
+                "line": 999
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/std.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "_screen_shape_wrapper()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: _screen_shape_wrapper()",
+        "messageId": "CRC001",
+        "module": "std",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 32,
+                "endColumn": 55,
+                "endLine": 1014,
+                "line": 1014
+            },
+            {
+                "column": 33,
+                "endColumn": 56,
+                "endLine": 1018,
+                "line": 1018
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/std.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "self._time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "id": "",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._time()",
+        "messageId": "CRC001",
+        "module": "std",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 32,
+                "endLine": 1233,
+                "line": 1233
+            },
+            {
+                "column": 24,
+                "endColumn": 36,
+                "endLine": 1236,
+                "line": 1236
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/std.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    {
+        "additionalInfo": {
+            "callString": "deque([])",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "id": "",
+        "message": "Repeated function call detected (3/2). Consider caching the result: deque([])",
+        "messageId": "CRC001",
+        "module": "gui",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 34,
+                "endLine": 57,
+                "line": 57
+            },
+            {
+                "column": 25,
+                "endColumn": 34,
+                "endLine": 58,
+                "line": 58
+            },
+            {
+                "column": 25,
+                "endColumn": 34,
+                "endLine": 59,
+                "line": 59
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/tqdm/tqdm/gui.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    }
+]

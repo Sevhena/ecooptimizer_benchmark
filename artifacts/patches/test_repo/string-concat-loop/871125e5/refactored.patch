@@ -1,0 +1,31 @@
+diff --git a/example.py b/example.py
+index f6eb21e..c052155 100644
+--- a/example.py
++++ b/example.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ import random
+ import datetime
+ import math
+@@ -65,9 +66,11 @@ def register_user(name, email, password, birthdate, phone, country, region, pref
+     print(f"Registered {name} ({email}) from {country}/{region}")
+ 
+ def process_data(data):
+-    log = ""
+-    for item in data:
+-        log += "Processed: " + str(item) + "\n"  # <- Smell
++    log = []
++    with EmissionsTracker(project_name='test_repo-benchmark', experiment_id='test_repo_SCL001_871125e5', output_file='/root/ecooptimizer_benchmark/results/test_repo/string-concat-loop/871125e5_refactored.csv') as tracker:
++        for item in data:
++            log.append('Processed: ' + str(item) + '\n')
++        log = ''.join(log)
+     return log
+ 
+ class Logger:
+@@ -154,4 +157,4 @@ if __name__ == "__main__":
+     print("Logger time:", get_logger_time(logger))
+ 
+     print("Multiply 5 * 6 =", MathOps.multiply(5, 6))
+-    print("Avg of [3, 4, 5] =", Report.compute_average([3, 4, 5]))
++    print("Avg of [3, 4, 5] =", Report.compute_average([3, 4, 5]))
+\ No newline at end of file

@@ -2,3 +2,9 @@ repositories
 .vscode
 .venv
 logs
+smell_visual.md
+repo_desc.md
+extracted_snippets
+output
+.python-version
+other_repos/

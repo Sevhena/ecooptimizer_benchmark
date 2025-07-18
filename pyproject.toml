@@ -18,7 +18,7 @@ license     = { file = "LICENSE" }
 readme      = "README.md"
 
 [tool.ruff]
-extend-exclude = ["extracted_snippets", "repositories"]
+extend-exclude = [".venv", "extracted_snippets", "repositories"]
 line-length    = 100
 
 [tool.ruff.lint]
@@ -51,7 +51,12 @@ mypy-init-return        = true
 suppress-none-returning = true
 
 [tool.pyright]
-exclude = ["extracted_snippets", "repositories"]
+exclude = [
+  ".venv",
+  "extracted_snippets",
+  "other_repos",
+  "repositories",
+]
 
 disableBytesTypePromotions         = true
 reportAttributeAccessIssue         = false
@@ -65,7 +70,7 @@ reportIncompatibleVariableOverride = true
 reportInconsistentConstructor      = true
 reportMatchNotExhaustive           = "warning"
 reportMissingImports               = true
-reportMissingTypeArgument          = true
+reportMissingTypeArgument          = false
 reportOverlappingOverload          = true
 reportPrivateUsage                 = true
 reportPropertyTypeMismatch         = true
