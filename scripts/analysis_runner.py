@@ -9,8 +9,6 @@ import concurrent.futures
 
 import yaml
 
-from run_benchmark import SELECTED_YAML
-
 CURRENT_DIR = Path().resolve()
 
 # Configuration
