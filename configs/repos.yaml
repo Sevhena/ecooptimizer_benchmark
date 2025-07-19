@@ -117,6 +117,13 @@ pandas:
     - "**/_*/**"
     - "**/tests/**"
     - "**/test_*.py"
+geopy:
+  venv_command: ""
+  test_command: ""
+  target: "geopy/geopy"
+  patterns_to_exclude:
+    - "**/test/**"
+    - "**/test_*.py"
 geopandas:
   venv_command: ""
   test_command: ""

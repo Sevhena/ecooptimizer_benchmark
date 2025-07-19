@@ -1,79 +1,79 @@
 {
-    "082adf44": {
+    "0b94b6cb": {
         "additionalInfo": {
-            "callString": "normalize_string_prefix(leaf.value)",
+            "callString": "line.clone()",
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": 2
+            "repetitions": 3
         },
-        "confidence": "MEDIUM",
+        "confidence": "HIGH",
         "energyMetadata": {
             "end": null,
             "isFunc": false,
             "start": null,
             "useOccurences": true
         },
-        "id": "082adf44",
-        "message": "Repeated function call detected (2/2). Consider caching the result: normalize_string_prefix(leaf.value)",
+        "id": "0b94b6cb",
+        "message": "Repeated function call detected (3/2). Consider caching the result: line.clone()",
         "messageId": "CRC001",
-        "module": "linegen",
+        "module": "trans",
         "obj": null,
         "occurences": [
             {
-                "column": 25,
-                "endColumn": 60,
-                "endLine": 502,
-                "line": 502
+                "column": 20,
+                "endColumn": 32,
+                "endLine": 1671,
+                "line": 1671
             },
             {
-                "column": 28,
-                "endColumn": 63,
-                "endLine": 425,
-                "line": 425
+                "column": 24,
+                "endColumn": 36,
+                "endLine": 1650,
+                "line": 1650
+            },
+            {
+                "column": 34,
+                "endColumn": 46,
+                "endLine": 1699,
+                "line": 1699
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/linegen.py",
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
         "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "123da23e": {
+    "0e8e2bae": {
         "additionalInfo": {
-            "callString": "create_token(n_chars)",
+            "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": 2
+            "repetitions": null
         },
-        "confidence": "MEDIUM",
+        "confidence": "UNDEFINED",
         "energyMetadata": {
             "end": null,
             "isFunc": false,
             "start": null,
             "useOccurences": true
         },
-        "id": "123da23e",
-        "message": "Repeated function call detected (2/2). Consider caching the result: create_token(n_chars)",
-        "messageId": "CRC001",
-        "module": "handle_ipynb_magics",
+        "id": "0e8e2bae",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "__init__",
         "obj": null,
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 33,
-                "endLine": 216,
-                "line": 216
-            },
-            {
-                "column": 16,
-                "endColumn": 37,
-                "endLine": 219,
-                "line": 219
+                "column": 15,
+                "endColumn": 80,
+                "endLine": 1135,
+                "line": 1135
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/handle_ipynb_magics.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/__init__.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
     },
-    "14577398": {
+    "10d91ae7": {
         "additionalInfo": {
             "callString": "_safe_add_trailing_comma(trailing_comma_safe, delimiter_priority, current_line)",
             "concatTarget": null,
@@ -87,7 +87,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "14577398",
+        "id": "10d91ae7",
         "message": "Repeated function call detected (2/2). Consider caching the result: _safe_add_trailing_comma(trailing_comma_safe, delimiter_priority, current_line)",
         "messageId": "CRC001",
         "module": "linegen",
@@ -110,106 +110,38 @@
         "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "166d34e5": {
+    "2c2a7c45": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": null
         },
-        "confidence": "UNDEFINED",
+        "confidence": "INFERENCE",
         "energyMetadata": {
             "end": null,
             "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "166d34e5",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "black.concurrency",
-        "obj": "schedule_formatting",
+        "id": "2c2a7c45",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "black.trans",
+        "obj": "StringSplitter._iter_fexpr_slices",
         "occurences": [
             {
-                "column": 0,
-                "endColumn": 29,
-                "endLine": 122,
-                "line": 122
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/concurrency.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "26bba300": {
-        "additionalInfo": {
-            "callString": "datetime.now(timezone.utc)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "26bba300",
-        "message": "Repeated function call detected (2/2). Consider caching the result: datetime.now(timezone.utc)",
-        "messageId": "CRC001",
-        "module": "__init__",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 11,
-                "endColumn": 37,
-                "endLine": 1010,
-                "line": 1010
-            },
-            {
-                "column": 18,
-                "endColumn": 44,
-                "endLine": 1035,
-                "line": 1035
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/__init__.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "49006f9b": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": "temp_value",
-            "innerLoopLine": 1680,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": 1683,
-            "isFunc": false,
-            "start": 1680,
-            "useOccurences": false
-        },
-        "id": "49006f9b",
-        "message": "String concatenation inside loop detected",
-        "messageId": "SCL001",
-        "module": "trans.py",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 16,
-                "endColumn": 51,
-                "endLine": 1681,
-                "line": 1681
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 1739,
+                "line": 1739
             }
         ],
         "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
-        "symbol": "string-concat-loop",
-        "type": "performance"
+        "symbol": "no-self-use",
+        "type": "refactor"
     },
-    "4f6400b1": {
+    "2c4af0e7": {
         "additionalInfo": {
             "callString": "right_leaves.pop()",
             "concatTarget": null,
@@ -223,7 +155,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "4f6400b1",
+        "id": "2c4af0e7",
         "message": "Repeated function call detected (3/2). Consider caching the result: right_leaves.pop()",
         "messageId": "CRC001",
         "module": "trans",
@@ -252,81 +184,236 @@
         "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "5917402a": {
+    "34dcd05c": {
         "additionalInfo": {
-            "callString": "sorted(versions, reverse=True)",
+            "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": 2
+            "repetitions": null
         },
-        "confidence": "MEDIUM",
+        "confidence": "UNDEFINED",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "5917402a",
-        "message": "Repeated function call detected (2/2). Consider caching the result: sorted(versions, reverse=True)",
-        "messageId": "CRC001",
-        "module": "parsing",
-        "obj": null,
+        "id": "34dcd05c",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "black.concurrency",
+        "obj": "schedule_formatting",
         "occurences": [
             {
-                "column": 19,
-                "endColumn": 49,
-                "endLine": 142,
-                "line": 142
-            },
-            {
-                "column": 19,
-                "endColumn": 49,
-                "endLine": 150,
-                "line": 150
+                "column": 0,
+                "endColumn": 29,
+                "endLine": 122,
+                "line": 122
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/parsing.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/concurrency.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
     },
-    "5a4bcc98": {
+    "3ae249b4": {
         "additionalInfo": {
-            "callString": "line.clone()",
+            "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": 2
+            "repetitions": null
         },
-        "confidence": "MEDIUM",
+        "confidence": "INFERENCE",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "5a4bcc98",
-        "message": "Repeated function call detected (2/2). Consider caching the result: line.clone()",
-        "messageId": "CRC001",
-        "module": "trans",
-        "obj": null,
+        "id": "3ae249b4",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "black.trans",
+        "obj": "StringSplitter._normalize_f_string",
         "occurences": [
             {
-                "column": 21,
-                "endColumn": 33,
-                "endLine": 2181,
-                "line": 2181
-            },
-            {
-                "column": 20,
-                "endColumn": 32,
-                "endLine": 2262,
-                "line": 2262
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 1850,
+                "line": 1850
             }
         ],
         "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "5349f130": {
+        "additionalInfo": {
+            "callString": "create_token(n_chars)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5349f130",
+        "message": "Repeated function call detected (2/2). Consider caching the result: create_token(n_chars)",
+        "messageId": "CRC001",
+        "module": "handle_ipynb_magics",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 33,
+                "endLine": 216,
+                "line": 216
+            },
+            {
+                "column": 16,
+                "endColumn": 37,
+                "endLine": 219,
+                "line": 219
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/handle_ipynb_magics.py",
         "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "5b54ed69": {
+    "553afd2e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "553afd2e",
+        "message": "Method chain too long (4/3)",
+        "messageId": "LMC001",
+        "module": "strings",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 25,
+                "endLine": 152,
+                "line": 149
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/strings.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    "6bd921f3": {
+        "additionalInfo": {
+            "callString": "normalize_string_prefix(leaf.value)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6bd921f3",
+        "message": "Repeated function call detected (2/2). Consider caching the result: normalize_string_prefix(leaf.value)",
+        "messageId": "CRC001",
+        "module": "linegen",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 60,
+                "endLine": 502,
+                "line": 502
+            },
+            {
+                "column": 28,
+                "endColumn": 63,
+                "endLine": 425,
+                "line": 425
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/linegen.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "84dacda1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "84dacda1",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "black.trans",
+        "obj": "StringParenStripper._transform_to_new_line",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 30,
+                "endLine": 1008,
+                "line": 1008
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "89f9813d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "89f9813d",
+        "message": "Too many arguments (29/6)",
+        "messageId": "R0913",
+        "module": "black",
+        "obj": "main",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 512,
+                "line": 512
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/__init__.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "8f89e779": {
         "additionalInfo": {
             "callString": "preceding_leaf(p)",
             "concatTarget": null,
@@ -340,7 +427,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "5b54ed69",
+        "id": "8f89e779",
         "message": "Repeated function call detected (5/2). Consider caching the result: preceding_leaf(p)",
         "messageId": "CRC001",
         "module": "nodes",
@@ -381,69 +468,7 @@
         "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "5d513774": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "5d513774",
-        "message": "Too many arguments (10/6)",
-        "messageId": "R0913",
-        "module": "black",
-        "obj": "get_sources",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 15,
-                "endLine": 727,
-                "line": 727
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/__init__.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "5e617f56": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "5e617f56",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "black.trans",
-        "obj": "StringSplitter._normalize_f_string",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 27,
-                "endLine": 1850,
-                "line": 1850
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "63cc7ffd": {
+    "9bc465ea": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -457,7 +482,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "63cc7ffd",
+        "id": "9bc465ea",
         "message": "Dictionary chain too long (3/3)",
         "messageId": "LEC001",
         "module": "output",
@@ -474,100 +499,7 @@
         "symbol": "long-element-chain",
         "type": "convention"
     },
-    "6853a143": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6853a143",
-        "message": "Method chain too long (4/3)",
-        "messageId": "LMC001",
-        "module": "strings",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 25,
-                "endLine": 152,
-                "line": 149
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/strings.py",
-        "symbol": "long-message-chain",
-        "type": "convention"
-    },
-    "6877fc0d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6877fc0d",
-        "message": "Dictionary chain too long (3/3)",
-        "messageId": "LEC001",
-        "module": "output",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 20,
-                "endColumn": 56,
-                "endLine": 49,
-                "line": 49
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/output.py",
-        "symbol": "long-element-chain",
-        "type": "convention"
-    },
-    "6bc34f43": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": "res",
-            "innerLoopLine": 489,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": 490,
-            "isFunc": false,
-            "start": 489,
-            "useOccurences": false
-        },
-        "id": "6bc34f43",
-        "message": "String concatenation inside loop detected",
-        "messageId": "SCL001",
-        "module": "lines.py",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 12,
-                "endColumn": 36,
-                "endLine": 490,
-                "line": 490
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/lines.py",
-        "symbol": "string-concat-loop",
-        "type": "performance"
-    },
-    "7c18a0ac": {
+    "a26ddace": {
         "additionalInfo": {
             "callString": "self._normalize_f_string(next_value, prefix)",
             "concatTarget": null,
@@ -581,7 +513,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "7c18a0ac",
+        "id": "a26ddace",
         "message": "Repeated function call detected (2/2). Consider caching the result: self._normalize_f_string(next_value, prefix)",
         "messageId": "CRC001",
         "module": "trans",
@@ -604,69 +536,44 @@
         "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "804401fe": {
+    "a9286735": {
         "additionalInfo": {
-            "callString": null,
+            "callString": "line.clone()",
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": null
+            "repetitions": 2
         },
-        "confidence": "INFERENCE",
+        "confidence": "MEDIUM",
         "energyMetadata": {
             "end": null,
-            "isFunc": true,
+            "isFunc": false,
             "start": null,
             "useOccurences": true
         },
-        "id": "804401fe",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "black.trans",
-        "obj": "StringParenStripper._transform_to_new_line",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 30,
-                "endLine": 1008,
-                "line": 1008
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "9149ca8e": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": "res",
-            "innerLoopLine": 487,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": 488,
-            "isFunc": false,
-            "start": 487,
-            "useOccurences": false
-        },
-        "id": "9149ca8e",
-        "message": "String concatenation inside loop detected",
-        "messageId": "SCL001",
-        "module": "lines.py",
+        "id": "a9286735",
+        "message": "Repeated function call detected (2/2). Consider caching the result: line.clone()",
+        "messageId": "CRC001",
+        "module": "trans",
         "obj": null,
         "occurences": [
             {
-                "column": 12,
+                "column": 21,
                 "endColumn": 33,
-                "endLine": 488,
-                "line": 488
+                "endLine": 2181,
+                "line": 2181
+            },
+            {
+                "column": 20,
+                "endColumn": 32,
+                "endLine": 2262,
+                "line": 2262
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/lines.py",
-        "symbol": "string-concat-loop",
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
+        "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "b13a06cf": {
+    "af382b69": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -680,7 +587,143 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "b13a06cf",
+        "id": "af382b69",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "black",
+        "obj": "get_sources",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 15,
+                "endLine": 727,
+                "line": 727
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/__init__.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "c423885e": {
+        "additionalInfo": {
+            "callString": "sorted(versions, reverse=True)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c423885e",
+        "message": "Repeated function call detected (2/2). Consider caching the result: sorted(versions, reverse=True)",
+        "messageId": "CRC001",
+        "module": "parsing",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 49,
+                "endLine": 142,
+                "line": 142
+            },
+            {
+                "column": 19,
+                "endColumn": 49,
+                "endLine": 150,
+                "line": 150
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/parsing.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "c612ec25": {
+        "additionalInfo": {
+            "callString": "self._normalize_f_string(next_value, prefix)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c612ec25",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._normalize_f_string(next_value, prefix)",
+        "messageId": "CRC001",
+        "module": "trans",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 29,
+                "endColumn": 73,
+                "endLine": 1642,
+                "line": 1642
+            },
+            {
+                "column": 37,
+                "endColumn": 81,
+                "endLine": 1633,
+                "line": 1633
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "c6fe0911": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c6fe0911",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "output",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 56,
+                "endLine": 49,
+                "line": 49
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/output.py",
+        "symbol": "long-element-chain",
+        "type": "convention"
+    },
+    "dde2689c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "dde2689c",
         "message": "Too many arguments (10/6)",
         "messageId": "R0913",
         "module": "black.files",
@@ -697,143 +740,38 @@
         "symbol": "too-many-arguments",
         "type": "refactor"
     },
-    "c4dcb252": {
+    "e3512b80": {
         "additionalInfo": {
             "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
+            "concatTarget": "temp_value",
+            "innerLoopLine": 1680,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
+            "end": 1683,
             "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "start": 1680,
+            "useOccurences": false
         },
-        "id": "c4dcb252",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "__init__",
+        "id": "e3512b80",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "trans.py",
         "obj": null,
         "occurences": [
             {
-                "column": 15,
-                "endColumn": 80,
-                "endLine": 1135,
-                "line": 1135
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/__init__.py",
-        "symbol": "long-message-chain",
-        "type": "convention"
-    },
-    "d46d40a5": {
-        "additionalInfo": {
-            "callString": "line.clone()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d46d40a5",
-        "message": "Repeated function call detected (3/2). Consider caching the result: line.clone()",
-        "messageId": "CRC001",
-        "module": "trans",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 20,
-                "endColumn": 32,
-                "endLine": 1671,
-                "line": 1671
-            },
-            {
-                "column": 24,
-                "endColumn": 36,
-                "endLine": 1650,
-                "line": 1650
-            },
-            {
-                "column": 34,
-                "endColumn": 46,
-                "endLine": 1699,
-                "line": 1699
+                "column": 16,
+                "endColumn": 51,
+                "endLine": 1681,
+                "line": 1681
             }
         ],
         "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
-        "symbol": "cached-repeated-calls",
+        "symbol": "string-concat-loop",
         "type": "performance"
     },
-    "d6018579": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d6018579",
-        "message": "Too many arguments (29/6)",
-        "messageId": "R0913",
-        "module": "black",
-        "obj": "main",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 8,
-                "endLine": 512,
-                "line": 512
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/__init__.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "da0d5bf9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "da0d5bf9",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "black.trans",
-        "obj": "StringSplitter._iter_fexpr_slices",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 1739,
-                "line": 1739
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "f7c19fce": {
+    "e99415ab": {
         "additionalInfo": {
             "callString": "_leaf_line_end(last)",
             "concatTarget": null,
@@ -847,7 +785,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "f7c19fce",
+        "id": "e99415ab",
         "message": "Repeated function call detected (2/2). Consider caching the result: _leaf_line_end(last)",
         "messageId": "CRC001",
         "module": "ranges",
@@ -870,9 +808,40 @@
         "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "fcc57c23": {
+    "edac0534": {
         "additionalInfo": {
-            "callString": "self._normalize_f_string(next_value, prefix)",
+            "callString": null,
+            "concatTarget": "res",
+            "innerLoopLine": 489,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 490,
+            "isFunc": false,
+            "start": 489,
+            "useOccurences": false
+        },
+        "id": "edac0534",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "lines.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 36,
+                "endLine": 490,
+                "line": 490
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/lines.py",
+        "symbol": "string-concat-loop",
+        "type": "performance"
+    },
+    "f69ab8cb": {
+        "additionalInfo": {
+            "callString": "datetime.now(timezone.utc)",
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": 2
@@ -884,27 +853,58 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "fcc57c23",
-        "message": "Repeated function call detected (2/2). Consider caching the result: self._normalize_f_string(next_value, prefix)",
+        "id": "f69ab8cb",
+        "message": "Repeated function call detected (2/2). Consider caching the result: datetime.now(timezone.utc)",
         "messageId": "CRC001",
-        "module": "trans",
+        "module": "__init__",
         "obj": null,
         "occurences": [
             {
-                "column": 29,
-                "endColumn": 73,
-                "endLine": 1642,
-                "line": 1642
+                "column": 11,
+                "endColumn": 37,
+                "endLine": 1010,
+                "line": 1010
             },
             {
-                "column": 37,
-                "endColumn": 81,
-                "endLine": 1633,
-                "line": 1633
+                "column": 18,
+                "endColumn": 44,
+                "endLine": 1035,
+                "line": 1035
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/trans.py",
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/__init__.py",
         "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "fecd4154": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "res",
+            "innerLoopLine": 487,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 488,
+            "isFunc": false,
+            "start": 487,
+            "useOccurences": false
+        },
+        "id": "fecd4154",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "lines.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 33,
+                "endLine": 488,
+                "line": 488
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/black/src/black/lines.py",
+        "symbol": "string-concat-loop",
         "type": "performance"
     }
 }
