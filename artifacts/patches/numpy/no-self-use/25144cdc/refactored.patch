@@ -1,0 +1,17 @@
+diff --git a/numpy/lib/tests/test_ufunclike.py b/numpy/lib/tests/test_ufunclike.py
+index b4257ebf91..8605bd231f 100644
+--- a/numpy/lib/tests/test_ufunclike.py
++++ b/numpy/lib/tests/test_ufunclike.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ import numpy as np
+ from numpy import fix, isneginf, isposinf
+ from numpy.testing import assert_, assert_array_equal, assert_equal, assert_raises
+@@ -5,6 +6,7 @@
+ 
+ class TestUfunclike:
+ 
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_25144cdc', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/25144cdc_refactored.csv')
+     def test_isposinf(self):
+         a = np.array([np.inf, -np.inf, np.nan, 0.0, 3.0, -3.0])
+         out = np.zeros(a.shape, bool)

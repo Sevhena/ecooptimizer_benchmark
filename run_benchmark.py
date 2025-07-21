@@ -12,18 +12,23 @@ import sys
 
 # --- Paths ---
 BENCHMARK_ROOT = Path().resolve()
-WORKTREES_DIR = BENCHMARK_ROOT / "worktrees"
-PATCHES_DIR = BENCHMARK_ROOT / "artifacts" / "patches"
-ANALYSIS_RESULTS_DIR = BENCHMARK_ROOT / "artifacts" / "smells"
-RESULTS_DIR = BENCHMARK_ROOT / "results"
-REPOS_YAML = BENCHMARK_ROOT / "configs" / "repos.yaml"
-SELECTED_YAML = BENCHMARK_ROOT / "configs" / "selected.yaml"
-DOMAIN_YAML = BENCHMARK_ROOT / "configs" / "domains.yaml"
-LOG_DIR = BENCHMARK_ROOT / "logs"
-DEFAULT_ITERS = 30
 
-RESULTS_DIR.mkdir(parents=True, exist_ok=True)
-LOG_DIR.mkdir(parents=True, exist_ok=True)
+WORKTREES_DIR = BENCHMARK_ROOT / "worktrees"
+EMISSIONS_DIR = BENCHMARK_ROOT / "emissions"
+
+EMISSIONS_DIR.mkdir(parents=True, exist_ok=True)
+
+ARTIFACTS_DIR = BENCHMARK_ROOT / "artifacts"
+PATCHES_DIR = ARTIFACTS_DIR / "patches"
+SMELLS_DIR = ARTIFACTS_DIR / "smells" / "annotated"
+
+CONFIGS_DIR = BENCHMARK_ROOT / "configs"
+REPOS_YAML = CONFIGS_DIR / "repos.yaml"
+SELECTED_YAML = CONFIGS_DIR / "selected.yaml"
+DOMAIN_YAML = CONFIGS_DIR / "domains.yaml"
+
+
+DEFAULT_ITERS = 30
 
 # --- Smell Types ---
 ALL_SMELL_TYPES = [
@@ -47,7 +52,9 @@ class UTCFormatter(logging.Formatter):
 
 def setup_logging():
     """Configure logging to file and console."""
-    log_file = LOG_DIR / "benchmark.log"
+    log_dir = BENCHMARK_ROOT / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_file = log_dir / "benchmark.log"
 
     file_handler = logging.FileHandler(log_file)
     file_handler.setLevel(logging.DEBUG)
@@ -80,7 +87,7 @@ def apply_patch(patch_path: Path, repo_path: Path):
 
 def load_analysis_results(repo_name: str) -> dict[str, dict] | None:
     """Load analysis results for a specific repository."""
-    results_file = ANALYSIS_RESULTS_DIR / f"analysis_results_{repo_name}.json"
+    results_file = SMELLS_DIR / f"{repo_name}.json"
     if not results_file.exists():
         logging.error(f"No analysis results found for {repo_name}")
         return None
@@ -132,14 +139,14 @@ def run_test_suite(
     avg_cpu = sum(cpu_percentages) / len(cpu_percentages) if cpu_percentages else 0
 
     # Rename CodeCarbon file
-    original_csv = RESULTS_DIR / repo / smell_type / f"{smell_id}.csv"
+    original_csv = EMISSIONS_DIR / repo / smell_type / f"{smell_id}.csv"
     if original_csv.exists():
-        timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
         renamed = Path(str(original_csv).replace(".csv", f"_{timestamp}.csv"))
         shutil.move(original_csv, renamed)
     else:
         logging.warning(
-            f"No emissions data found in {RESULTS_DIR / repo / smell_type} for {smell_id}"
+            f"No emissions data found in {EMISSIONS_DIR / repo / smell_type} for {smell_id}"
         )
 
     logging.info(

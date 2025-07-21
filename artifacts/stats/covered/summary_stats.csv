@@ -1,0 +1,65 @@
+SUMMARY STATISTICS
+
+Total repos processed:,3
+Total smells detected:,13543
+
+SMELL TYPE BREAKDOWN
+Smell Type,Total Count
+cached-repeated-calls,871
+long-element-chain,66
+long-lambda-expr,11
+long-message-chain,129
+no-self-use,11587
+string-concat-loop,8
+too-many-arguments,851
+use-a-generator,20
+
+THRESHOLD BREAKDOWN
+Smell Type,Threshold,Count
+cached-repeated-calls,10/2,2
+cached-repeated-calls,11/2,3
+cached-repeated-calls,119/2,1
+cached-repeated-calls,12/2,4
+cached-repeated-calls,13/2,2
+cached-repeated-calls,14/2,1
+cached-repeated-calls,15/2,1
+cached-repeated-calls,16/2,1
+cached-repeated-calls,3/2,527
+cached-repeated-calls,31/2,1
+cached-repeated-calls,32/2,1
+cached-repeated-calls,366/2,1
+cached-repeated-calls,4/2,178
+cached-repeated-calls,5/2,59
+cached-repeated-calls,6/2,36
+cached-repeated-calls,7/2,20
+cached-repeated-calls,723/2,1
+cached-repeated-calls,8/2,18
+cached-repeated-calls,9/2,14
+long-element-chain,3/3,61
+long-element-chain,4/3,5
+long-message-chain,3/3,128
+long-message-chain,4/3,1
+too-many-arguments,10/6,57
+too-many-arguments,11/6,36
+too-many-arguments,12/6,39
+too-many-arguments,13/6,17
+too-many-arguments,14/6,16
+too-many-arguments,15/6,13
+too-many-arguments,16/6,6
+too-many-arguments,17/6,8
+too-many-arguments,18/6,5
+too-many-arguments,19/6,3
+too-many-arguments,21/6,2
+too-many-arguments,22/6,3
+too-many-arguments,23/6,6
+too-many-arguments,25/6,2
+too-many-arguments,26/6,1
+too-many-arguments,7/6,318
+too-many-arguments,8/6,190
+too-many-arguments,9/6,129
+
+REPO BREAKDOWN
+Repository,Total Smells,Smell Types Present,Smell Types Under Threshold,Smell Types Missing
+scipy,8568,8,"long-lambda-expr:5, string-concat-loop:3",
+numpy,4933,8,"long-lambda-expr:5, string-concat-loop:5, use-a-generator:2",
+gpiozero,42,4,"cached-repeated-calls:0, long-element-chain:0, long-lambda-expr:1, long-message-chain:2, string-concat-loop:0, use-a-generator:0","cached-repeated-calls, long-element-chain, string-concat-loop, use-a-generator"

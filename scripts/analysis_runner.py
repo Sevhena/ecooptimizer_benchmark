@@ -12,11 +12,11 @@ import yaml
 CURRENT_DIR = Path().resolve()
 
 # Configuration
-REPO_DIR = (CURRENT_DIR / "repositories").resolve()
-ANALYSIS_RESULTS_DIR = (CURRENT_DIR / "artifacts/smells").resolve()
-DATA_COLLECTOR = CURRENT_DIR / "scripts/data_csv_collect.py"
-REPO_CONFIG_FILE = CURRENT_DIR / "configs/repos.yaml"
-SELECTED_REPOS_FILE = CURRENT_DIR / "configs/selected.yaml"
+REPO_DIR = CURRENT_DIR / "repositories"
+RAW_SMELLS_DIR = CURRENT_DIR / "artifacts" / "smells" / "raw"
+DATA_COLLECTOR = CURRENT_DIR / "scripts" / "data_csv_collect.py"
+REPO_CONFIG_FILE = CURRENT_DIR / "configs" / "repos.yaml"
+SELECTED_REPOS_FILE = CURRENT_DIR / "configs" / "selected.yaml"
 
 LOG_DIR = Path("logs")
 LOG_DIR.mkdir(exist_ok=True)
@@ -62,11 +62,9 @@ def get_existing_repos() -> set[str]:
     """Get list of already analyzed repos"""
     analyzed = set()
     try:
-        if ANALYSIS_RESULTS_DIR.exists():
-            for f in ANALYSIS_RESULTS_DIR.iterdir():
-                if f.name.startswith("analysis_results_") and f.name.endswith(".json"):
-                    repo_name = f.name[len("analysis_results_") : -len(".json")]
-                    analyzed.add(repo_name)
+        if RAW_SMELLS_DIR.exists():
+            for file in RAW_SMELLS_DIR.iterdir():
+                analyzed.add(file.stem)
         logger.debug(f"Found {len(analyzed)} already analyzed repos")
         return analyzed
     except Exception as e:
@@ -136,7 +134,7 @@ def run_analysis(repo_name: str) -> None:
                     "--exclude",
                     ",".join(exclusions),
                     "--analysis-results-file",
-                    f"{ANALYSIS_RESULTS_DIR.relative_to(CURRENT_DIR)}/analysis_results_{repo_name}.json",
+                    f"{RAW_SMELLS_DIR.relative_to(CURRENT_DIR)}/{repo_name}.json",
                 ],
                 stdout=log_file,
                 stderr=subprocess.STDOUT,
@@ -158,7 +156,7 @@ def run_data_collector() -> None:
         if DATA_COLLECTOR.exists():
             logger.info("Starting data collection...")
             result = subprocess.run(
-                ["python", str(DATA_COLLECTOR), str(ANALYSIS_RESULTS_DIR)],
+                ["python", str(DATA_COLLECTOR), str(RAW_SMELLS_DIR)],
                 check=True,
                 capture_output=True,
                 text=True,
@@ -345,7 +343,7 @@ def main() -> None:
 
     try:
         # Create analysis_results directory if it doesn't exist
-        ANALYSIS_RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+        RAW_SMELLS_DIR.mkdir(parents=True, exist_ok=True)
 
         last_new_repos = []
         menu_active = True

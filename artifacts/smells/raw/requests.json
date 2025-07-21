@@ -1,0 +1,756 @@
+{
+    "04385641": {
+        "additionalInfo": {
+            "callString": "len(string)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "04385641",
+        "message": "Repeated function call detected (2/2). Consider caching the result: len(string)",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 34,
+                "endLine": 575,
+                "line": 575
+            },
+            {
+                "column": 16,
+                "endColumn": 27,
+                "endLine": 576,
+                "line": 576
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "102536af": {
+        "additionalInfo": {
+            "callString": "preferred_clock()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "102536af",
+        "message": "Repeated function call detected (2/2). Consider caching the result: preferred_clock()",
+        "messageId": "CRC001",
+        "module": "sessions",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 33,
+                "endLine": 700,
+                "line": 700
+            },
+            {
+                "column": 18,
+                "endColumn": 35,
+                "endLine": 706,
+                "line": 706
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/sessions.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "119030dc": {
+        "additionalInfo": {
+            "callString": "x.encode(\"utf-8\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 4
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "119030dc",
+        "message": "Repeated function call detected (4/2). Consider caching the result: x.encode(\"utf-8\")",
+        "messageId": "CRC001",
+        "module": "auth",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 41,
+                "endLine": 147,
+                "line": 147
+            },
+            {
+                "column": 24,
+                "endColumn": 41,
+                "endLine": 155,
+                "line": 155
+            },
+            {
+                "column": 24,
+                "endColumn": 41,
+                "endLine": 163,
+                "line": 163
+            },
+            {
+                "column": 24,
+                "endColumn": 41,
+                "endLine": 171,
+                "line": 171
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/auth.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "11f63002": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "11f63002",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "requests.sessions",
+        "obj": "Session.request",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 500,
+                "line": 500
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/sessions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "1271eb58": {
+        "additionalInfo": {
+            "callString": "requote_uri(url)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1271eb58",
+        "message": "Repeated function call detected (2/2). Consider caching the result: requote_uri(url)",
+        "messageId": "CRC001",
+        "module": "sessions",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 38,
+                "endLine": 217,
+                "line": 217
+            },
+            {
+                "column": 40,
+                "endColumn": 56,
+                "endLine": 215,
+                "line": 215
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/sessions.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "29944614": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "29944614",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "requests.models",
+        "obj": "Request.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 258,
+                "line": 258
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/models.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "34e8db2c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "34e8db2c",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "requests.models",
+        "obj": "PreparedRequest.prepare",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 351,
+                "line": 351
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/models.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "3fb04365": {
+        "additionalInfo": {
+            "callString": "self.get_redirect_target(resp)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3fb04365",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.get_redirect_target(resp)",
+        "messageId": "CRC001",
+        "module": "sessions",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 44,
+                "endLine": 175,
+                "line": 175
+            },
+            {
+                "column": 22,
+                "endColumn": 52,
+                "endLine": 279,
+                "line": 279
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/sessions.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "6848f46f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6848f46f",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "requests.cookies",
+        "obj": "MockRequest.is_unverifiable",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 69,
+                "line": 69
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/cookies.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "71990ee2": {
+        "additionalInfo": {
+            "callString": "requote_uri(url)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "71990ee2",
+        "message": "Repeated function call detected (2/2). Consider caching the result: requote_uri(url)",
+        "messageId": "CRC001",
+        "module": "sessions",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 38,
+                "endLine": 217,
+                "line": 217
+            },
+            {
+                "column": 40,
+                "endColumn": 56,
+                "endLine": 215,
+                "line": 215
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/sessions.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "9076eea7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9076eea7",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "requests.sessions",
+        "obj": "SessionRedirectMixin.rebuild_method",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 333,
+                "line": 333
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "9213c3e0": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9213c3e0",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "requests.sessions",
+        "obj": "SessionRedirectMixin.resolve_redirects",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 159,
+                "line": 159
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/sessions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "9399f111": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9399f111",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "requests.adapters",
+        "obj": "HTTPAdapter.send",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 613,
+                "line": 613
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/adapters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "93c79cd0": {
+        "additionalInfo": {
+            "callString": "platform.python_version()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "93c79cd0",
+        "message": "Repeated function call detected (3/2). Consider caching the result: platform.python_version()",
+        "messageId": "CRC001",
+        "module": "help",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 33,
+                "endColumn": 58,
+                "endLine": 48,
+                "line": 48
+            },
+            {
+                "column": 33,
+                "endColumn": 58,
+                "endLine": 60,
+                "line": 60
+            },
+            {
+                "column": 33,
+                "endColumn": 58,
+                "endLine": 62,
+                "line": 62
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/help.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "9b700326": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9b700326",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "requests.adapters",
+        "obj": "HTTPAdapter.proxy_headers",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 592,
+                "line": 592
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/adapters.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "9babfebe": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9babfebe",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "requests.adapters",
+        "obj": "HTTPAdapter.cert_verify",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 304,
+                "line": 304
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/adapters.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "a2e53e6f": {
+        "additionalInfo": {
+            "callString": "value.strip(replace_chars)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a2e53e6f",
+        "message": "Repeated function call detected (2/2). Consider caching the result: value.strip(replace_chars)",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 38,
+                "endLine": 916,
+                "line": 916
+            },
+            {
+                "column": 45,
+                "endColumn": 71,
+                "endLine": 934,
+                "line": 934
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "b2ee2a98": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b2ee2a98",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "requests.sessions",
+        "obj": "SessionRedirectMixin.should_strip_auth",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 127,
+                "line": 127
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "b7b29249": {
+        "additionalInfo": {
+            "callString": "o.tell()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b7b29249",
+        "message": "Repeated function call detected (2/2). Consider caching the result: o.tell()",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 31,
+                "endColumn": 39,
+                "endLine": 179,
+                "line": 179
+            },
+            {
+                "column": 35,
+                "endColumn": 43,
+                "endLine": 193,
+                "line": 193
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "bcfaad26": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bcfaad26",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "requests.adapters",
+        "obj": "HTTPAdapter.request_url",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 546,
+                "line": 546
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/adapters.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "bf2bb2a2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bf2bb2a2",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "requests.adapters",
+        "obj": "BaseAdapter.send",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 143,
+                "line": 143
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/adapters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d0b4800f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d0b4800f",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "requests.sessions",
+        "obj": "SessionRedirectMixin.get_redirect_target",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 107,
+                "line": 107
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/requests/src/requests/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    }
+}

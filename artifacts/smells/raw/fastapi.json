@@ -1,0 +1,2015 @@
+{
+    "06e648d4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "message",
+            "innerLoopLine": 174,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 175,
+            "isFunc": false,
+            "start": 174,
+            "useOccurences": false
+        },
+        "id": "06e648d4",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "exceptions.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 44,
+                "endLine": 175,
+                "line": 175
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/exceptions.py",
+        "symbol": "string-concat-loop",
+        "type": "performance"
+    },
+    "11eddc16": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "11eddc16",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "fastapi.security.oauth2",
+        "obj": "OAuth2PasswordRequestForm.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 61,
+                "line": 61
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/security/oauth2.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "17c82402": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "17c82402",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.get",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 1366,
+                "line": 1366
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "1df1e6ce": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1df1e6ce",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "fastapi.openapi.docs",
+        "obj": "get_swagger_ui_html",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 23,
+                "endLine": 26,
+                "line": 26
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/docs.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "260a9b81": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "260a9b81",
+        "message": "Too many arguments (29/6)",
+        "messageId": "R0913",
+        "module": "fastapi.param_functions",
+        "obj": "Header",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 10,
+                "endLine": 643,
+                "line": 643
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/param_functions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "26d4aa84": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "26d4aa84",
+        "message": "Too many arguments (25/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.add_api_route",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 1056,
+                "line": 1056
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "2f89d314": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2f89d314",
+        "message": "Too many arguments (25/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.api_route",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 963,
+                "line": 963
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "321391cc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "321391cc",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.patch",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 3708,
+                "line": 3708
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "358f06ca": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "358f06ca",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "fastapi.security.oauth2",
+        "obj": "OAuth2PasswordRequestFormStrict.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/security/oauth2.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "4aea1620": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4aea1620",
+        "message": "Too many arguments (27/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRoute.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 429,
+                "line": 429
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "4f90edb4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4f90edb4",
+        "message": "Method chain too long (4/3)",
+        "messageId": "LMC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 85,
+                "endLine": 371,
+                "line": 369
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/utils.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    "5075c923": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5075c923",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.patch",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 3643,
+                "line": 3643
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "581be19d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "581be19d",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "fastapi.utils",
+        "obj": "create_model_field",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 22,
+                "endLine": 63,
+                "line": 63
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/utils.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "58f3c443": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "58f3c443",
+        "message": "Too many arguments (32/6)",
+        "messageId": "R0913",
+        "module": "fastapi.params",
+        "obj": "Body.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 480,
+                "line": 480
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/params.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "5c8aca1d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5c8aca1d",
+        "message": "Too many arguments (30/6)",
+        "messageId": "R0913",
+        "module": "fastapi.param_functions",
+        "obj": "Body",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 1263,
+                "line": 1263
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/param_functions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "5cb9d840": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5cb9d840",
+        "message": "Too many arguments (30/6)",
+        "messageId": "R0913",
+        "module": "fastapi.params",
+        "obj": "Query.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 228,
+                "line": 228
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/params.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "615d2438": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "615d2438",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.head",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 3335,
+                "line": 3335
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "671e9cb5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "html",
+            "innerLoopLine": 135,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 136,
+            "isFunc": false,
+            "start": 135,
+            "useOccurences": false
+        },
+        "id": "671e9cb5",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "docs.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 84,
+                "endLine": 136,
+                "line": 136
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/docs.py",
+        "symbol": "string-concat-loop",
+        "type": "performance"
+    },
+    "679c2fd7": {
+        "additionalInfo": {
+            "callString": "str(additional_status_code).upper()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "679c2fd7",
+        "message": "Repeated function call detected (2/2). Consider caching the result: str(additional_status_code).upper()",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 38,
+                "endColumn": 73,
+                "endLine": 382,
+                "line": 382
+            },
+            {
+                "column": 24,
+                "endColumn": 59,
+                "endLine": 409,
+                "line": 409
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "6a0279dc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6a0279dc",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.delete",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 2589,
+                "line": 2589
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "6a22506f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6a22506f",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.trace",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 4025,
+                "line": 4025
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "6be477f4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6be477f4",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.put",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 1833,
+                "line": 1833
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "6eb31ee4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6eb31ee4",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "fastapi.security.oauth2",
+        "obj": "OAuth2AuthorizationCodeBearer.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 509,
+                "line": 509
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/security/oauth2.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "766f17cc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "766f17cc",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "fastapi.security.oauth2",
+        "obj": "OAuth2PasswordBearer.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 400,
+                "line": 400
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/security/oauth2.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "79ae150c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "79ae150c",
+        "message": "Too many arguments (29/6)",
+        "messageId": "R0913",
+        "module": "fastapi.param_functions",
+        "obj": "File",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 1906,
+                "line": 1906
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/param_functions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "7d3e03d7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7d3e03d7",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.options",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 2962,
+                "line": 2962
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "86fe6831": {
+        "additionalInfo": {
+            "callString": "get_origin(annotation)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "86fe6831",
+        "message": "Repeated function call detected (2/2). Consider caching the result: get_origin(annotation)",
+        "messageId": "CRC001",
+        "module": "_compat",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 13,
+                "endColumn": 35,
+                "endLine": 552,
+                "line": 552
+            },
+            {
+                "column": 8,
+                "endColumn": 30,
+                "endLine": 559,
+                "line": 559
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/_compat.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "88752547": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "88752547",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.include_router",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 1255,
+                "line": 1255
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "8d5bae56": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8d5bae56",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.post",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 2125,
+                "line": 2125
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "8e1c3e28": {
+        "additionalInfo": {
+            "callString": "operation.setdefault(\"responses\", {})",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8e1c3e28",
+        "message": "Repeated function call detected (3/2). Consider caching the result: operation.setdefault(\"responses\", {})",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 38,
+                "endColumn": 75,
+                "endLine": 375,
+                "line": 375
+            },
+            {
+                "column": 12,
+                "endColumn": 49,
+                "endLine": 351,
+                "line": 351
+            },
+            {
+                "column": 16,
+                "endColumn": 53,
+                "endLine": 369,
+                "line": 369
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "9115d562": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9115d562",
+        "message": "Too many arguments (36/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 64,
+                "line": 64
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "95de7a4d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "95de7a4d",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "fastapi.openapi.utils",
+        "obj": "get_openapi",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 15,
+                "endLine": 477,
+                "line": 477
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/utils.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "9807abca": {
+        "additionalInfo": {
+            "callString": "str(additional_status_code).upper()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9807abca",
+        "message": "Repeated function call detected (2/2). Consider caching the result: str(additional_status_code).upper()",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 38,
+                "endColumn": 73,
+                "endLine": 382,
+                "line": 382
+            },
+            {
+                "column": 24,
+                "endColumn": 59,
+                "endLine": 409,
+                "line": 409
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "9de3c21e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9de3c21e",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.trace",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 4086,
+                "line": 4086
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "9e9f4c6f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9e9f4c6f",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.options",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 2884,
+                "line": 2884
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "9eecfda7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9eecfda7",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "get_request_handler",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 23,
+                "endLine": 217,
+                "line": 217
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "9fdfdb57": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9fdfdb57",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "fastapi.encoders",
+        "obj": "jsonable_encoder",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 20,
+                "endLine": 102,
+                "line": 102
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/encoders.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "a20557e6": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a20557e6",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.post",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 2211,
+                "line": 2211
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "a9123cf4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a9123cf4",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "fastapi.dependencies.utils",
+        "obj": "solve_dependencies",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 28,
+                "endLine": 572,
+                "line": 572
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/dependencies/utils.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "adc80a05": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "adc80a05",
+        "message": "Too many arguments (30/6)",
+        "messageId": "R0913",
+        "module": "fastapi.params",
+        "obj": "Path.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 142,
+                "line": 142
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/params.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "ae638c20": {
+        "additionalInfo": {
+            "callString": "str(additional_status_code).upper()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ae638c20",
+        "message": "Repeated function call detected (2/2). Consider caching the result: str(additional_status_code).upper()",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 38,
+                "endColumn": 73,
+                "endLine": 382,
+                "line": 382
+            },
+            {
+                "column": 24,
+                "endColumn": 59,
+                "endLine": 409,
+                "line": 409
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "b155450c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b155450c",
+        "message": "Too many arguments (28/6)",
+        "messageId": "R0913",
+        "module": "fastapi.param_functions",
+        "obj": "Path",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 11,
+                "line": 11
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/param_functions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "b1563893": {
+        "additionalInfo": {
+            "callString": "operation.setdefault(\"responses\", {})",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b1563893",
+        "message": "Repeated function call detected (3/2). Consider caching the result: operation.setdefault(\"responses\", {})",
+        "messageId": "CRC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 38,
+                "endColumn": 75,
+                "endLine": 375,
+                "line": 375
+            },
+            {
+                "column": 12,
+                "endColumn": 49,
+                "endLine": 351,
+                "line": 351
+            },
+            {
+                "column": 16,
+                "endColumn": 53,
+                "endLine": 369,
+                "line": 369
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/utils.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "b3db4a6d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b3db4a6d",
+        "message": "Too many arguments (28/6)",
+        "messageId": "R0913",
+        "module": "fastapi.param_functions",
+        "obj": "Query",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 9,
+                "endLine": 339,
+                "line": 339
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/param_functions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "b4874dcc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b4874dcc",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "serialize_response",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 28,
+                "endLine": 143,
+                "line": 143
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "b9374e6e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b9374e6e",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.put",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 1743,
+                "line": 1743
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "bc3d9032": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bc3d9032",
+        "message": "Too many arguments (29/6)",
+        "messageId": "R0913",
+        "module": "fastapi.param_functions",
+        "obj": "Form",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 1592,
+                "line": 1592
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/param_functions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "be6ebcf6": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "be6ebcf6",
+        "message": "Too many arguments (30/6)",
+        "messageId": "R0913",
+        "module": "fastapi.params",
+        "obj": "Param.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 28,
+                "line": 28
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/params.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "c0eb94d5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c0eb94d5",
+        "message": "Too many arguments (18/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 622,
+                "line": 622
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "ca1e025d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ca1e025d",
+        "message": "Too many arguments (28/6)",
+        "messageId": "R0913",
+        "module": "fastapi.param_functions",
+        "obj": "Cookie",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 10,
+                "endLine": 959,
+                "line": 959
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/param_functions.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "cdb30d73": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cdb30d73",
+        "message": "Too many arguments (30/6)",
+        "messageId": "R0913",
+        "module": "fastapi.params",
+        "obj": "Cookie.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 398,
+                "line": 398
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/params.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d17d3eef": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d17d3eef",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.include_router",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 1122,
+                "line": 1122
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d4671d24": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d4671d24",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.get",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 1460,
+                "line": 1460
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d4ea05dd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d4ea05dd",
+        "message": "Too many arguments (31/6)",
+        "messageId": "R0913",
+        "module": "fastapi.params",
+        "obj": "File.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 681,
+                "line": 681
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/params.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d66d2466": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d66d2466",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.delete",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 2507,
+                "line": 2507
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d9f5e8b0": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d9f5e8b0",
+        "message": "Too many arguments (31/6)",
+        "messageId": "R0913",
+        "module": "fastapi.params",
+        "obj": "Header.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 312,
+                "line": 312
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/params.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "e228fb47": {
+        "additionalInfo": {
+            "callString": "req.scope.get(\"root_path\", \"\").rstrip(\"/\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e228fb47",
+        "message": "Repeated function call detected (3/2). Consider caching the result: req.scope.get(\"root_path\", \"\").rstrip(\"/\")",
+        "messageId": "CRC001",
+        "module": "applications",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 70,
+                "endLine": 1004,
+                "line": 1004
+            },
+            {
+                "column": 28,
+                "endColumn": 70,
+                "endLine": 1015,
+                "line": 1015
+            },
+            {
+                "column": 28,
+                "endColumn": 70,
+                "endLine": 1043,
+                "line": 1043
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "e7d3f1b9": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e7d3f1b9",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "utils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 53,
+                "endLine": 405,
+                "line": 403
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/openapi/utils.py",
+        "symbol": "long-message-chain",
+        "type": "convention"
+    },
+    "f327bcff": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f327bcff",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.head",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 3261,
+                "line": 3261
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "f4f39b35": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f4f39b35",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "fastapi._compat",
+        "obj": "ModelField.serialize",
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 21,
+                "endLine": 138,
+                "line": 138
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/_compat.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "f86fe640": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f86fe640",
+        "message": "Too many arguments (31/6)",
+        "messageId": "R0913",
+        "module": "fastapi.params",
+        "obj": "Form.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 597,
+                "line": 597
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/params.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "faf8d58f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "faf8d58f",
+        "message": "Too many arguments (27/6)",
+        "messageId": "R0913",
+        "module": "fastapi.routing",
+        "obj": "APIRouter.add_api_route",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 881,
+                "line": 881
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/routing.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "fddd510b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "fddd510b",
+        "message": "Too many arguments (24/6)",
+        "messageId": "R0913",
+        "module": "fastapi.applications",
+        "obj": "FastAPI.api_route",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 1115,
+                "line": 1115
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/fastapi/fastapi/applications.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    }
+}

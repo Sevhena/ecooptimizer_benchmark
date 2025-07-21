@@ -1,9 +1,18 @@
 import json
-import subprocess
-import time
-from datetime import datetime, timezone
-from pathlib import Path
 import logging
+import argparse
+from pathlib import Path
+import sys
+import time
+from typing import Any
+
+BENCHMARK_ROOT = Path().resolve()
+ARTIFACTS_DIR = BENCHMARK_ROOT / "artifacts"
+SMELLS_DIR = ARTIFACTS_DIR / "smells"
+RAW_SMELLS_DIR = SMELLS_DIR / "raw"
+COVERAGE_DIR = ARTIFACTS_DIR / "coverage"
+OUTPUT_DIR = SMELLS_DIR / "covered"
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
 class UTCFormatter(logging.Formatter):
@@ -13,16 +22,12 @@ class UTCFormatter(logging.Formatter):
         return super().formatTime(record, datefmt)
 
 
-def setup_logging(repo_name: str):
+# --- Setup logging ---
+def setup_logging():
     """Configure logging to file and console."""
     log_dir = Path("logs")
     log_dir.mkdir(exist_ok=True)
-    ann_log_dir = log_dir / "covered_smells"
-    ann_log_dir.mkdir(exist_ok=True)
-    log_file = (
-        ann_log_dir
-        / f"covered_smells_{repo_name}_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}.log"
-    )
+    log_file = log_dir / "smell_coverage_filtering.log"
 
     file_handler = logging.FileHandler(log_file)
     file_handler.setLevel(logging.DEBUG)
@@ -37,189 +42,94 @@ def setup_logging(repo_name: str):
     logging.basicConfig(level=logging.DEBUG, handlers=[file_handler, console_handler])
 
 
-def load_coverage_data(coverage_path: Path) -> dict[str, set[int]]:
-    """Load coverage data and return {file_path: set_of_covered_lines}"""
-    coverage_data = {}
-    try:
-        with coverage_path.open() as f:
-            data = json.load(f)
-
-        for file_path, file_data in data["files"].items():
-            covered_lines = set()
-            # Handle different coverage report formats
-            if "executed_lines" in file_data:  # coverage.py format
-                covered_lines.update(
-                    line_num for line_num, hits in file_data["executed_lines"].items() if hits > 0
-                )
-            elif "lines" in file_data:  # alternative format
-                covered_lines.update(
-                    line_num for line_num, hits in file_data["lines"].items() if hits > 0
-                )
-
-            coverage_data[file_path] = covered_lines
-
-        logging.info(f"Loaded coverage data for {len(coverage_data)} files")
-        return coverage_data
-
-    except Exception as e:
-        logging.error(f"Failed to load coverage data: {e}")
-        raise
+def load_json(file_path: Path) -> dict[str, Any]:
+    logging.debug(f"Loading JSON file: {file_path}")
+    with file_path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+    logging.debug(f"Loaded {len(data)} items from {file_path}")
+    return data
 
 
-def filter_analysis_results(
-    analysis_path: Path, coverage_data: dict[str, set[int]], repo_root: Path
-) -> list[dict]:
-    """
-    Filter analysis results to only include smells in covered code.
-    Returns: Filtered analysis results in original format
-    """
-    filtered_results = []
-    try:
-        with analysis_path.open() as f:
-            analysis_results = json.load(f)
+def is_line_covered(coverage: dict[str, Any], path: Path, line: int) -> bool:
+    str_path = str(path)
+    if str_path not in coverage["files"]:
+        logging.debug(f"Path not found in coverage: {str_path}")
+        return False
+    covered = line in coverage["files"][str_path]["executed_lines"]
+    logging.debug(
+        f"Checking coverage for {str_path} line {line}: {'covered' if covered else 'not covered'}"
+    )
+    return covered
 
-        for smell in analysis_results:
-            file_path = str(Path(smell["path"]).relative_to(repo_root))
-            logging.debug(f"Processing smell in file: {file_path}")
 
-            # Skip if file wasn't covered at all
-            if file_path not in coverage_data:
-                logging.debug(f"Skipping smell in uncovered file: {file_path}")
-                continue
-
-            covered_lines = coverage_data[file_path]
-            covered_occurrences = []
-
-            for occ in smell["occurences"]:
-                if occ["line"] in covered_lines:
-                    covered_occurrences.append(occ)
-
-            # Only keep smells with at least one covered occurrence
-            if covered_occurrences:
-                filtered_smell = smell.copy()
-                filtered_smell["occurences"] = covered_occurrences
-                filtered_results.append(filtered_smell)
-
-        logging.info(
-            f"Filtered {len(analysis_results)} smells down to {len(filtered_results)} "
-            f"({len(filtered_results) / len(analysis_results):.1%} coverage)"
+def filter_smells(
+    repo_name: str, smells: dict[str, Any], coverage: dict[str, Any]
+) -> dict[str, Any]:
+    logging.debug(f"Filtering smells for repo: {repo_name}")
+    filtered = {}
+    for smell_id, smell_data in smells.items():
+        original_occs = smell_data["occurences"]
+        relative_path = (
+            Path(smell_data["path"])
+            .resolve()
+            .relative_to(BENCHMARK_ROOT / "repositories" / repo_name)
         )
-        return filtered_results
-
-    except Exception as e:
-        logging.error(f"Failed to filter analysis results: {e}")
-        raise
-
-
-def run_data_collector() -> None:
-    """Run the data collection script"""
-    DATA_COLLECTOR = Path("scripts/data_csv_collect.py")
-    ANALYSIS_RESULTS_DIR = Path("artifacts/covered_smells")
-    try:
-        if DATA_COLLECTOR.exists():
-            logging.info("Starting data collection...")
-            print("Running data collection...")
-            result = subprocess.run(
-                ["python", str(DATA_COLLECTOR), str(ANALYSIS_RESULTS_DIR)],
-                check=True,
-                capture_output=True,
-                text=True,
-            )
-            logging.debug(f"Data collector output:\n{result.stdout}")
-            if result.stderr:
-                logging.warning(f"Data collector errors:\n{result.stderr}")
-            logging.info("Data collection completed")
-            print("Data collection completed")
-        else:
-            logging.warning(f"Data collector script not found at {DATA_COLLECTOR}")
-            print(f"Warning: Data collector script not found at {DATA_COLLECTOR}")
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Data collection failed: {e!s}\n{e.stderr}")
-        raise
-    except Exception as e:
-        logging.error(f"Error running data collector: {e!s}")
-        raise
+        new_occs = [
+            occ for occ in original_occs if is_line_covered(coverage, relative_path, occ["line"])
+        ]
+        logging.debug(
+            f"Smell {smell_id}: {len(new_occs)} / {len(original_occs)} occurrences covered"
+        )
+        if new_occs:
+            smell_data["occurences"] = new_occs
+            filtered[smell_id] = smell_data
+    logging.debug(f"Total smells after filtering: {len(filtered)}")
+    return filtered
 
 
-def save_filtered_results(results: list[dict], output_path: Path):
-    """Save filtered results maintaining original format"""
-    try:
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        with output_path.open("w") as f:
-            json.dump(results, f, indent=2)
-        logging.info(f"Saved filtered results to {output_path}")
-    except Exception as e:
-        logging.error(f"Failed to save filtered results: {e}")
-        raise
+def process_repo(smells_file: Path):
+    repo_name = smells_file.stem
+    coverage_file = COVERAGE_DIR / f"{repo_name}.json"
+    output_file = OUTPUT_DIR / f"{repo_name}.json"
+
+    logging.debug(f"Processing smells file: {smells_file}")
+    logging.debug(f"Expected coverage file: {coverage_file}")
+    logging.debug(f"Output file will be: {output_file}")
+
+    if not coverage_file.exists():
+        logging.debug(f"Coverage file not found for {repo_name}: {coverage_file}")
+        return
+
+    logging.info(f"Processing repository: {repo_name}")
+    smells = load_json(smells_file)
+    coverage = load_json(coverage_file)
+
+    filtered = filter_smells(repo_name, smells, coverage)
+    with output_file.open("w", encoding="utf-8") as f:
+        json.dump(filtered, f, indent=2)
+
+    logging.info(
+        f"Filtered smells written to {output_file} ({len(filtered)}/{len(smells)} smells retained)"
+    )
 
 
 def main():
-    """Main function with configurable command-line arguments"""
-    import argparse
-
-    # Set up argument parser
-    parser = argparse.ArgumentParser(
-        description="Filter code analysis results to only include smells covered by tests",
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-    )
-
-    # Required arguments
-    parser.add_argument("analysis_file", type=Path, help="Path to the analysis results JSON file")
-    parser.add_argument("coverage_file", type=Path, help="Path to the coverage JSON report")
+    parser = argparse.ArgumentParser(description="Filter uncovered smells based on coverage data.")
     parser.add_argument(
-        "repo_root", type=Path, help="Root directory of the repository being analyzed"
-    )
-
-    # Optional arguments
-    parser.add_argument(
-        "-o",
-        "--output",
-        type=Path,
-        default=Path("artifacts/covered_smells"),
-        help="Output directory for filtered results (default: artifacts/covered_smells/)",
+        "--repo", type=str, help="Optional: name of a specific repository to process."
     )
     args = parser.parse_args()
 
-    setup_logging("collect_covered_smells")
+    setup_logging()
 
-    try:
-        logging.info("Starting analysis results filtering")
-        logging.debug(f"Command-line arguments: {vars(args)}")
-
-        # Set default output path if not specified
-        output_path = args.output
-        if output_path is None:
-            output_path = args.analysis_file.parent / f"covered_{args.analysis_file.name}"
-            logging.debug(f"Using default output path: {output_path}")
-
-        # Validate inputs
-        if not args.analysis_file.exists():
-            raise FileNotFoundError(f"Analysis file not found: {args.analysis_file}")
-        if not args.coverage_file.exists():
-            raise FileNotFoundError(f"Coverage file not found: {args.coverage_file}")
-        if not args.repo_root.exists():
-            raise FileNotFoundError(f"Repository root not found: {args.repo_root}")
-
-        # Load coverage data
-        coverage_data = load_coverage_data(args.coverage_file)
-
-        # Filter analysis results
-        filtered_results = filter_analysis_results(
-            args.analysis_file, coverage_data, args.repo_root
-        )
-
-        # Save filtered results
-        save_filtered_results(filtered_results, output_path)
-
-        logging.info(f"Filtering completed. Results saved to {output_path}")
-        return 0
-
-    except Exception as e:
-        logging.critical(f"Filtering failed: {e}", exc_info=True)
-        return 1
+    if args.repo:
+        logging.debug(f"Processing single repository: {args.repo}")
+        process_repo(args.repo)
+    else:
+        logging.debug(f"Processing all repositories in {RAW_SMELLS_DIR}")
+        for smells_file in RAW_SMELLS_DIR.iterdir():
+            process_repo(smells_file)
 
 
 if __name__ == "__main__":
-    import sys
-
-    sys.exit(main())
+    main()

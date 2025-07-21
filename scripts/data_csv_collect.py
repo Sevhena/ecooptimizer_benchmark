@@ -95,7 +95,7 @@ def write_csv_statistics(
     # Process each file and write individual repo CSV
     for file_path, smells in file_stats.items():
         repo_name = file_path.name.split("_", 3)[2].replace(".json", "")
-        csv_path = output_dir / f"{repo_name}_smell_stats.csv"
+        csv_path = output_dir / f"{repo_name}.csv"
 
         # Prepare data for CSV
         rows = []
@@ -157,7 +157,7 @@ def write_csv_statistics(
             # print(repo_stats[repo_name]["smell_types_under_threshold"])
 
     # Write summary CSV
-    summary_path = output_dir / "summary_stats.csv"
+    summary_path = output_dir / "all.csv"
     with summary_path.open("w", newline="") as csvfile:
         # Write smell type summary
         writer = csv.writer(csvfile)
@@ -224,12 +224,6 @@ def main() -> None:
         "  python analyzer.py file1.json dir1/ dir2/file2.json",
     )
     parser.add_argument(
-        "-o",
-        "--output",
-        default="artifacts/smell_stats",
-        help="Output directory for CSV files (default: analysis_data/smell_stats)",
-    )
-    parser.add_argument(
         "-r",
         "--recursive",
         action="store_true",
@@ -249,8 +243,10 @@ def main() -> None:
 
     # Analyze and write statistics
     file_stats = analyze_smells(json_files)
-    output_dir = Path(args.output)
-    write_csv_statistics(output_dir, file_stats)
+    output_dir = Path("artifacts/stats").resolve()
+    smell_state = json_files[0].parent.name
+
+    write_csv_statistics(output_dir / smell_state, file_stats)
     print(f"Statistics written to CSV files in {output_dir}")
 
     # make_sound()

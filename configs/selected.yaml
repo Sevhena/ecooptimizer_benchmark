@@ -1,11 +1,141 @@
 repos:
-  - tensorflow
-  - numpy
-  - scipy
-  - dask
-  - airflow
-  - gpiozero
-  - paho.mqtt.python
-  - scikit-learn
-  - streamlit
-  - django
+- tensorflow
+- numpy
+- scipy
+- scikit-learn
+- django
+- airflow
+- streamlit
+- gpiozero
+- dask
+- paho.mqtt.python
+smells:
+  gpiozero:
+    cached-repeated-calls:
+    - 08eeb6ae
+    - 69612c60
+    - b5c6f286
+    - dced41ea
+    long-lambda-expr:
+    - 0b83a5ab
+    long-message-chain:
+    - 9a05b759
+    - fdc627d5
+    no-self-use:
+    - 1670dd3a
+    - 51c9fc52
+    - f22c3019
+    - af2936f9
+    - 0d39d185
+    - 0b73492a
+    too-many-arguments:
+    - 20ce3f3a
+    - d7382444
+    - 113b016d
+    - ee9056c0
+    - ddaf68bd
+    - b4075d76
+  numpy:
+    cached-repeated-calls:
+    - 669aad71
+    - a9e0ed0d
+    - bd9516b9
+    - cead2462
+    - 7bdaaf49
+    - 4c116ecf
+    long-element-chain:
+    - 0bf02cf1
+    - 4d709b8d
+    - 77f26c8b
+    - 3032a27c
+    - dadc6b17
+    - 1b5d9d4d
+    long-lambda-expr:
+    - 53faf437
+    - 81f0244d
+    - a71c863e
+    - de374648
+    - ec5148f5
+    long-message-chain:
+    - 3250f205
+    - 677b3046
+    - a92eae9f
+    - 04897f8b
+    - 50dbdfb1
+    - 26feb8ae
+    no-self-use:
+    - 25144cdc
+    - ae5de824
+    - 1541c995
+    - 568273c1
+    - 7ba4ec97
+    - dc29e77a
+    string-concat-loop:
+    - 6f767f37
+    - 73c742dd
+    - a674bf37
+    - b1b603c6
+    - b4aeb41d
+    too-many-arguments:
+    - 71ce3e2d
+    - 491794f9
+    - 50a14b6d
+    - e1e7ac9e
+    - fd92fb7a
+    - 7e9c9349
+    use-a-generator:
+    - 2f7ffaa9
+    - 47fbdfe9
+  scipy:
+    cached-repeated-calls:
+    - 0cc96962
+    - b39fb4d8
+    - 0c8996ed
+    - ae74f816
+    - dda0a4a5
+    - 5ec7af88
+    long-element-chain:
+    - 9d456fea
+    - f82a5d45
+    - d62ac552
+    - de085e32
+    - e2330b99
+    - f2215bd9
+    long-lambda-expr:
+    - 11f1ed15
+    - 77dfc13c
+    - b793b9db
+    - f0104f8a
+    - f8995d5a
+    long-message-chain:
+    - e7854df0
+    - 1f9aee51
+    - 91cee5d5
+    - 6f6a5820
+    - aed47396
+    - e0a29d3d
+    no-self-use:
+    - 432f1a24
+    - 877e31c1
+    - 59027e7b
+    - 7f19a091
+    - 90903fe7
+    - 186573a3
+    string-concat-loop:
+    - '73658814'
+    - 7687325e
+    - 79d7eb8a
+    too-many-arguments:
+    - dfc03a62
+    - 05a5bd34
+    - 13d64c84
+    - 45475a9f
+    - dad33bce
+    - 38b31690
+    use-a-generator:
+    - e8e1558a
+    - 7fa572fb
+    - '58823854'
+    - afb64959
+    - e4407879
+    - 2c1be9ee

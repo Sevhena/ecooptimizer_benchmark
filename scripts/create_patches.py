@@ -10,9 +10,12 @@ from typing import Optional
 
 import yaml
 
-WORKTREE_DIR = Path("worktrees").resolve()
-PATCHES_DIR = Path("artifacts/patches").resolve()
-SELECTED_REPOS_CONFIG = Path("configs/selected.yaml").resolve()
+ROOT_DIR = Path().resolve()
+ARTIFACTS_DIR = ROOT_DIR / "artifacts"
+WORKTREE_DIR = ROOT_DIR / "worktrees"
+PATCHES_DIR = ARTIFACTS_DIR / "patches"
+SELECTED_SMELLS_DIR = ARTIFACTS_DIR / "smells" / "selected"
+SELECTED_REPOS_CONFIG = ROOT_DIR / "configs" / "selected.yaml"
 
 
 class UTCFormatter(logging.Formatter):
@@ -22,30 +25,23 @@ class UTCFormatter(logging.Formatter):
         return super().formatTime(record, datefmt)
 
 
-# --- Setup logging ---
-def setup_logging(log_file: Path) -> logging.Logger:
-    log_file.parent.mkdir(parents=True, exist_ok=True)
+def setup_logging():
+    """Configure logging to file and console."""
+    log_dir = Path("logs")
+    log_dir.mkdir(exist_ok=True)
+    log_file = log_dir / "patch_creation.log"
 
-    logger = logging.getLogger("create_patches")
-    logger.setLevel(logging.DEBUG)
-    logger.handlers.clear()
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setLevel(logging.DEBUG)
+    file_formatter = UTCFormatter("%(asctime)s - %(levelname)s - %(message)s")
+    file_handler.setFormatter(file_formatter)
 
-    # File handler logs everything
-    fh = logging.FileHandler(log_file)
-    fh.setLevel(logging.DEBUG)
-    fh_formatter = UTCFormatter("%(asctime)s - %(levelname)s - %(message)s")
-    fh.setFormatter(fh_formatter)
+    console_handler = logging.StreamHandler(sys.stdout)
+    console_handler.setLevel(logging.INFO)
+    console_formatter = logging.Formatter("%(message)s")
+    console_handler.setFormatter(console_formatter)
 
-    # Stream handler logs only progress
-    # ch = logging.StreamHandler(sys.stdout)
-    # ch.setLevel(logging.INFO)
-    # ch_formatter = logging.Formatter("%(message)s")
-    # ch.setFormatter(ch_formatter)
-
-    logger.addHandler(fh)
-    # logger.addHandler(ch)
-
-    return logger
+    logging.basicConfig(level=logging.DEBUG, handlers=[file_handler, console_handler])
 
 
 def load_yaml(path: Path):
@@ -53,51 +49,8 @@ def load_yaml(path: Path):
         return yaml.safe_load(f)
 
 
-class ProgressUpdater:
-    """Helper class to manage two-line progress updates."""
-
-    def __init__(self, total: int):
-        self.total = total
-        self.last_message_length = [0, 0]  # Track lengths of both lines
-        # Reserve two lines and leave cursor at the second line
-        sys.stdout.write("\n\n")
-        sys.stdout.flush()
-
-    def update(self, line1: str, line2: str):
-        """Update the two progress lines in-place."""
-        # Move cursor up 2 lines
-        sys.stdout.write("\033[2A")
-
-        # Clear and write line 1
-        sys.stdout.write("\r\033[K]")
-        sys.stdout.write("\r" + line1)
-
-        # Move to line 2
-        sys.stdout.write("\033[1B")
-
-        # Clear and write line 2
-        sys.stdout.write("\r\033[K]")
-        sys.stdout.write("\r" + line2 + "\n")
-
-        sys.stdout.flush()
-
-        # Update stored lengths
-        self.last_message_length = [len(line1), len(line2)]
-
-    def complete(self):
-        """Clear progress lines and move cursor below them."""
-        # Move cursor up 2 lines
-        sys.stdout.write("\033[2A")
-
-        # Clear both lines
-        sys.stdout.write("\r" + " " * self.last_message_length[0] + "\033[1B]")
-        sys.stdout.write("\r" + " " * self.last_message_length[1] + "\n")
-
-        sys.stdout.flush()
-
-
 # --- Git worktree creation ---
-def create_worktree(base_repo: Path, worktree_dir: Path, logger: logging.Logger) -> bool:
+def create_worktree(base_repo: Path, worktree_dir: Path) -> bool:
     try:
         subprocess.run(
             ["git", "worktree", "add", str(worktree_dir), "--force"],
@@ -106,88 +59,89 @@ def create_worktree(base_repo: Path, worktree_dir: Path, logger: logging.Logger)
             capture_output=True,
             text=True,
         )
-        logger.debug(f"Created worktree at {worktree_dir}")
+        logging.debug(f"Created worktree at {worktree_dir}")
         return True
     except subprocess.CalledProcessError as e:
-        logger.error(f"Failed to create worktree: {e.stderr}")
+        logging.error(f"Failed to create worktree: {e.stderr}")
         return False
 
 
 # --- Run add_annotations.py ---
-def add_codecarbon_annotations(repo_name: str, smell_id: str, logger: logging.Logger) -> bool:
+def add_codecarbon_annotations(repo_name: str, smell_id: str) -> bool:
     try:
-        logger.debug("Adding CodeCarbon annotations")
+        logging.debug("Adding CodeCarbon annotations")
         subprocess.run(
             ["python", "scripts/add_codecarbon_annotations.py", repo_name, smell_id],
             cwd=Path(),
             check=True,
             stdout=subprocess.DEVNULL,
         )
-        logger.debug(f"[{smell_id}] Annotation added.")
+        logging.debug(f"[{smell_id}] Annotation added.")
         return True
     except subprocess.CalledProcessError as e:
-        logger.error(f"[{smell_id}] Annotation failed: {e.stderr}")
+        logging.error(f"[{smell_id}] Annotation failed: {e.stderr}")
         raise Exception(f"Annotation failed for {smell_id}") from e
 
 
 # --- Run apply_refactor.py ---
-def refactor_smell(repo_name: str, smell_id: str, logger: logging.Logger) -> bool:
+def refactor_smell(repo_name: str, smell_id: str) -> bool:
     try:
-        logger.debug(f"Refactoring smell {smell_id} in {repo_name}")
+        logging.debug(f"Refactoring smell {smell_id} in {repo_name}")
         subprocess.run(
             [
                 "ecooptimizer",
-                "--root",
-                f"repositories/{repo_name}",
                 "--refactor-only",
                 "--save-to-original",
                 "--smells-file",
-                f"artifacts/smells_annotated/{repo_name}/report_{smell_id}.json",
+                f"{SELECTED_SMELLS_DIR}/{repo_name}.json",
                 "--smell-id",
                 smell_id,
             ],
-            cwd=Path(),
+            cwd=(WORKTREE_DIR / repo_name),
             check=True,
             stderr=subprocess.DEVNULL,
-            stdout=subprocess.DEVNULL,
         )
         return True
     except subprocess.CalledProcessError as e:
-        logger.error(f"[{smell_id}] Refactoring failed: {e.stderr}")
-        raise Exception(f"Refactoring failed for {smell_id}") from e
+        logging.error(f"[{smell_id}] Refactoring failed: {e!s}")
+        raise
 
 
-def fix_refactored_patch_path(patch_path_refactored: Path, smell_id: str, symbol: str) -> None:
+def fix_refactored_patch_path(patch_path_refactored: Path, smell_id: str, symbol: str):
     """Add a refactored tag to the ouput file in the Emissions tracker object in the .patch file."""
-    patch_content = patch_path_refactored.read_text()
-    fixed_patch_content = patch_content.replace(
-        f"{symbol}/{smell_id}.csv", f"{symbol}/{smell_id}_refactored.csv"
-    )
-    patch_path_refactored.write_text(fixed_patch_content)
+    try:
+        patch_content = patch_path_refactored.read_text()
+        fixed_patch_content = patch_content.replace(
+            f"{symbol}/{smell_id}.csv", f"{symbol}/{smell_id}_refactored.csv"
+        )
+        patch_path_refactored.write_text(fixed_patch_content)
+    except Exception:
+        logging.error(f"[{smell_id}] Unable to update refactored .patch file")
+        return False
+
+    return True
 
 
-def create_patch(
-    patch_path: Path, smell_id: str, worktree_path: Path, logger: logging.Logger
-) -> None:
+def create_patch(patch_path: Path, smell_id: str, worktree_path: Path):
     """Create a patch file from the worktree changes."""
     try:
         result = subprocess.run(
             ["git", "diff"], cwd=worktree_path, capture_output=True, text=True, check=True
         )
         if not result.stdout.strip():
-            logger.warning(f"[{smell_id}] No changes detected; skipping patch creation.")
+            logging.warning(f"[{smell_id}] No changes detected; skipping patch creation.")
+            return False
         else:
             patch_path.write_text(result.stdout)
-            logger.debug(f"Patch saved to {patch_path}\n")
+            logging.debug(f"Patch saved to {patch_path}\n")
+            return True
     except subprocess.CalledProcessError as e:
-        logger.error(f"Failed to create patch: {e.stderr}")
-        raise Exception(f"Patch creation failed for {smell_id}") from e
+        logging.error(f"Failed to create patch: {e.stderr}")
+        raise
 
 
 # --- Create patch for a smell ---
-def create_patches(
-    smell: tuple[str, str], repo_name: str, base_repo: Path, logger: logging.Logger
-) -> None:
+def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> None:
     symbol = smell[0]
     smell_id = smell[1]
 
@@ -196,34 +150,42 @@ def create_patches(
     patch_path_refactored = PATCHES_DIR / repo_name / symbol / smell_id / "refactored.patch"
     try:
         if not worktree_path.exists():
-            create_worktree(base_repo, worktree_path, logger)
+            create_worktree(base_repo, worktree_path)
 
-        if not add_codecarbon_annotations(repo_name, smell_id, logger):
-            subprocess.run(["git", "restore", "."], cwd=worktree_path, check=True)
+        if not add_codecarbon_annotations(repo_name, smell_id):
             raise Exception(f"Failed to add annotations for {smell_id} in {repo_name}")
 
         patch_path_original.parent.mkdir(parents=True, exist_ok=True)
-        create_patch(patch_path_original, smell_id, worktree_path, logger)
-        logger.debug(f"[{smell_id}] Original patch created at {patch_path_original}")
+        if not create_patch(patch_path_original, smell_id, worktree_path):
+            raise Exception(f"Original patch creation failed for smell {smell_id}")
+        logging.debug(f"[{smell_id}] Original patch created at {patch_path_original}")
 
-        refactor_smell(repo_name, smell_id, logger)
-        create_patch(patch_path_refactored, smell_id, worktree_path, logger)
-        fix_refactored_patch_path(patch_path_refactored, smell_id, symbol)
+        refactor_smell(repo_name, smell_id)
+        if not create_patch(patch_path_refactored, smell_id, worktree_path):
+            raise Exception(f"Refactored patch creation failed for smell {smell_id}")
+        if not fix_refactored_patch_path(patch_path_refactored, smell_id, symbol):
+            raise Exception("Path update in refactored .patch failed")
     except Exception as e:
-        logger.error(f"[{smell_id}] Patch creation failed: {e}")
+        logging.error(f"[{smell_id}] Patches creation failed: {e}")
+
         subprocess.run(["git", "restore", "."], cwd=worktree_path, check=True)
+
+        # Remove any created patches due to possible errors/corruption
+        patch_path_original.unlink()
+        patch_path_refactored.unlink()
+
         raise Exception(f"Patch creation failed for {smell_id}") from e
     finally:
         # Clean up the worktree
         subprocess.run(["git", "restore", "."], cwd=worktree_path, check=True)
-        logger.debug(f"[{smell_id}] Worktree cleaned.")
+        logging.debug(f"[{smell_id}] Worktree cleaned.")
 
 
 # --- Load smells from analysis results ---
-def load_smells(repo_name: str, artifacts_dir: Path, logger: logging.Logger) -> dict[str, dict]:
-    path = artifacts_dir / f"analysis_results_{repo_name}.json"
+def load_smells(repo_name: str) -> dict[str, dict]:
+    path = SELECTED_SMELLS_DIR / f"{repo_name}.json"
     if not path.exists():
-        logger.error(f"Analysis results not found for repo: {repo_name}")
+        logging.error(f"Analysis results not found for repo: {repo_name}")
         return {}
     with path.open() as f:
         smells = json.load(f)
@@ -249,22 +211,20 @@ def main():
     parser.add_argument("--smell", type=str, help="Generate patch for a specific smell (id)")
     args = parser.parse_args()
 
-    log_file = Path("logs/create_patches.log")
-    logger = setup_logging(log_file)
+    setup_logging()
 
     if args.smell and not args.repo:
-        logger.error("Please specify a repository with --repo when using --smell")
+        logging.error("Please specify a repository with --repo when using --smell")
         sys.exit(1)
 
-    artifacts_dir = Path("artifacts/smells")
     repos_dir = Path("repositories")
 
     if args.repo:
         if not args.smell:
-            logger.info(f"Generating patches for repo: {args.repo}")
+            logging.info(f"Generating patches for repo: {args.repo}")
         repo_list = [args.repo]
     else:
-        logger.info("Generating patches for all selected repositories")
+        logging.info("Generating patches for all selected repositories")
 
         repo_list = load_yaml(SELECTED_REPOS_CONFIG).get("repos", [])
 
@@ -273,51 +233,52 @@ def main():
     for repo_name in repo_list:
         base_repo = repos_dir / repo_name
         if not base_repo.exists():
-            logger.error(f"Repository folder not found: {base_repo}")
+            logging.error(f"Repository folder not found: {base_repo}")
             continue
 
         failed_patches[repo_name] = []
-        smells = load_smells(repo_name, artifacts_dir, logger)
+        smells = load_smells(repo_name)
+
+        if not smells:
+            continue
 
         if args.smell:
-            logger.info(f"Generating patches for smell {args.smell} in repo {repo_name}\n")
+            logging.info(f"Generating patches for smell {args.smell} in repo {repo_name}\n")
             smell_meta = [(smells[args.smell]["symbol"], args.smell)]
             clear_patches(repo_name, args.smell)
         else:
-            logger.info(f"Generating patches for all smells in {repo_name}\n")
+            logging.info(f"Generating patches for all smells in {repo_name}\n")
             smell_meta = [(smell["symbol"], smell_id) for smell_id, smell in smells.items()]
             clear_patches(repo_name)
 
         total_smells = len(smell_meta)
 
         if not args.smell:
-            logger.info(f"Patching {total_smells} smells in {repo_name}")
+            logging.info(f"Patching {total_smells} smells in {repo_name}")
 
-        progress = ProgressUpdater(total=total_smells)
         smells_processed = 0
 
         for smell in smell_meta:
             try:
                 if not args.smell:
-                    progress.update(
-                        f"Processing smell ({smells_processed + 1}/{total_smells}) : ({smell})",
-                        f"Patches failed: {len(failed_patches[repo_name])}",
+                    logging.info(
+                        f"[{repo_name}] [{smells_processed + 1}/{len(smell_meta)}] Patching {smell}..."
                     )
-                create_patches(smell, repo_name, base_repo, logger)
+                create_patches(smell, repo_name, base_repo)
             except Exception as e:
-                logger.error(f"Failed to create patch for {smell[1]} in {repo_name}")
+                logging.error(f"Failed to create patch for {smell[1]} in {repo_name}")
                 sys.stdout.write("\033[1A")
-                logger.debug(f"Exception details: {e}", exc_info=True)
+                logging.debug(f"Exception details: {e}", exc_info=True)
                 failed_patches[repo_name].append(smell[1])
             finally:
                 smells_processed += 1
 
     if any(failed_patch for failed_patch in failed_patches.values()):
-        logger.warning("Some patches failed to create:")
+        logging.warning("Some patches failed to create:")
         for repo, smell_ids in failed_patches.items():
-            logger.warning(f"Repo: {repo}, Smells: {', '.join(smell_ids)}")
+            logging.warning(f"Repo: {repo}, Smells: {', '.join(smell_ids)}")
     else:
-        logger.info("All patches created successfully.")
+        logging.info("All patches created successfully.")
 
 
 if __name__ == "__main__":

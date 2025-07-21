@@ -8,3 +8,4 @@ extracted_snippets
 output
 .python-version
 other_repos/
+rename_files.sh

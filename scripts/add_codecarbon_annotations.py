@@ -4,10 +4,13 @@ import logging
 from pathlib import Path
 import sys
 import argparse
-from datetime import datetime, timezone
-from typing import Optional
 
-# TODO: Update analysis ouput structure to include energy metadata
+BENCHMARK_ROOT = Path().resolve()
+ARTIFACTS_DIR = BENCHMARK_ROOT / "artifacts"
+WORKTREE_DIR = BENCHMARK_ROOT / "worktrees"
+SMELLS_DIR = ARTIFACTS_DIR / "smells"
+SELECTED_SMELLS_DIR = SMELLS_DIR / "selected"
+ANNOTATED_SMELLS_DIR = SMELLS_DIR / "annotated"
 
 
 class UTCFormatter(logging.Formatter):
@@ -67,7 +70,7 @@ def add_decorator_to_function(file_path: Path, cc_args: str, line_num: int, col_
 
 
 def wrap_with_context_manager(
-    file_path: Path, cc_args: str, start_line: int, end_line: int, col_num: int
+    file_path: Path, cc_args: str, start_line: int, end_line: int, tab_size: int = 4
 ):
     """Wrap code block with CodeCarbon context manager."""
     lines = get_code_lines(file_path)
@@ -83,7 +86,7 @@ def wrap_with_context_manager(
 
     # Add proper indentation to the block
     for i in range(start_line, end_line + 1):
-        lines[i] = f"    {lines[i]}"
+        lines[i] = " " * tab_size + lines[i]
 
     # Add import if not present
     if not any(
@@ -97,7 +100,9 @@ def wrap_with_context_manager(
 
 def process_smell(smell_data: dict, repo_name: str):
     """Process a single smell and annotate the code accordingly."""
-    file_path = Path(smell_data["path"])
+    file_path = WORKTREE_DIR / repo_name / smell_data["path"]
+    logging.debug(f"File path: {file_path}")
+    print(f"file path: {file_path}")
     energy_meta = smell_data.get("energyMetadata", {})
 
     if not file_path.exists():
@@ -107,7 +112,7 @@ def process_smell(smell_data: dict, repo_name: str):
     # Prepare the context manager lines
     file_tag = f"{smell_data['messageId']}_{smell_data['id']}"
     ccarbon_output_file = Path(
-        f"results/{repo_name}/{smell_data['symbol']}/{smell_data['id']}.csv"
+        f"emissions/{repo_name}/{smell_data['symbol']}/{smell_data['id']}.csv"
     ).resolve()
     ccarbon_output_file.parent.mkdir(parents=True, exist_ok=True)
 
@@ -127,6 +132,7 @@ def process_smell(smell_data: dict, repo_name: str):
         smell_data["occurences"][0]["endLine"] += 2
     else:
         # Non-function case - use context manager
+        tab_size = 4
 
         if energy_meta.get("useOccurences", False):
             occurences = smell_data["occurences"]
@@ -136,10 +142,12 @@ def process_smell(smell_data: dict, repo_name: str):
                     cc_args,
                     occurences[i]["line"],
                     occurences[i]["endLine"],
-                    occurences[i].get("column", 0),
+                    tab_size,
                 )
                 smell_data["occurences"][i]["line"] += 2 + i
                 smell_data["occurences"][i]["endLine"] += 2 + i
+                smell_data["occurences"][i]["column"] += tab_size
+                smell_data["occurences"][i]["endColumn"] += tab_size
         else:
             logging.info("Wrapping code block with context manager")
             wrap_with_context_manager(
@@ -147,32 +155,42 @@ def process_smell(smell_data: dict, repo_name: str):
                 cc_args,
                 energy_meta["start"],
                 energy_meta["end"],
-                energy_meta.get("col", 0),
+                tab_size,
             )
             smell_data["occurences"][0]["line"] += 2
             smell_data["occurences"][0]["endLine"] += 2
+            smell_data["occurences"][0]["column"] += tab_size
+            smell_data["occurences"][0]["endColumn"] += tab_size
             smell_data["additionalInfo"]["innerLoopLine"] += 2
 
     return smell_data
 
 
-def get_analysis_file_path(repo_name: str, manual_path: Optional[str]):
+def get_analysis_file_path(repo_name: str):
     """Determine the analysis file path based on inputs."""
-    if manual_path:
-        return Path(manual_path)
-    return Path(f"artifacts/smells/analysis_results_{repo_name}.json")
+    file_name = f"{repo_name}.json"
+    annotated_path = ANNOTATED_SMELLS_DIR / file_name
+
+    if not annotated_path.exists():
+        logging.debug(f"No annotated smells found for {repo_name}, creating new analysis file.")
+        return SELECTED_SMELLS_DIR / file_name
+
+    logging.debug(f'Existing annotions for "{repo_name}" found. Loading existing file.')
+    return annotated_path
 
 
-def main(repo_name: str, smell_id: str, analysis_file: Optional[str]):
+def main(repo_name: str, smell_id: str):
     """Main function to process a specific smell."""
     setup_logging(repo_name)
     logging.info(f"Starting annotation for smell {smell_id} in repo {repo_name}")
 
     # Resolve analysis file path
-    analysis_path = get_analysis_file_path(repo_name, analysis_file)
+    analysis_path = get_analysis_file_path(repo_name)
     if not analysis_path.exists():
         logging.error(f"Analysis file not found: {analysis_path}")
         return
+
+    logging.debug(f"Analysis file path: {analysis_path}")
 
     # Load and find specific smell
     try:
@@ -194,7 +212,7 @@ def main(repo_name: str, smell_id: str, analysis_file: Optional[str]):
 
         smells[smell_id] = updated_smell_data
         # Save the updated analysis file
-        ann_path = Path("artifacts/smells_annotated") / repo_name / f"report_{smell_id}.json"
+        ann_path = ANNOTATED_SMELLS_DIR / f"{repo_name}.json"
         ann_path.parent.mkdir(parents=True, exist_ok=True)
         with ann_path.open("w", encoding="utf-8") as f:
             json.dump(smells, f, indent=4)
@@ -213,12 +231,7 @@ if __name__ == "__main__":
         "repo_name", help="Repository name to analyze (used for automatic file path resolution)"
     )
     parser.add_argument("smell_id", help="ID of the smell to annotate")
-    parser.add_argument(
-        "--analysis-file",
-        help="Manual path to analysis JSON file (overrides automatic resolution)",
-        default=None,
-    )
 
     args = parser.parse_args()
 
-    main(repo_name=args.repo_name, smell_id=args.smell_id, analysis_file=args.analysis_file)
+    main(repo_name=args.repo_name, smell_id=args.smell_id)
