@@ -1,10 +1,10 @@
 Smell Type,Total Count,Thresholds
-TOTAL,5222,N/A
-no-self-use,4456,N/A
-cached-repeated-calls,364,"3/2:215, 5/2:20, 4/2:76, 8/2:10, 7/2:10, 14/2:1, 6/2:16, 9/2:9, 12/2:4, 15/2:2, 11/2:1"
-too-many-arguments,153,"9/6:30, 8/6:26, 7/6:76, 13/6:2, 17/6:1, 12/6:6, 14/6:4, 25/6:1, 22/6:1, 11/6:3, 10/6:2, 16/6:1"
-long-element-chain,117,"3/3:94, 4/3:23"
-long-message-chain,95,"3/3:93, 4/3:2"
-string-concat-loop,23,N/A
-long-lambda-expr,8,N/A
-use-a-generator,6,N/A
+TOTAL,352,N/A
+too-many-arguments,129,"8/6:22, 7/6:56, 9/6:30, 14/6:4, 17/6:1, 22/6:1, 11/6:3, 16/6:1, 10/6:2, 12/6:6, 13/6:2, 25/6:1"
+cached-repeated-calls,70,"4/2:21, 3/2:31, 5/2:3, 12/2:3, 8/2:5, 9/2:3, 15/2:1, 6/2:3"
+no-self-use,65,N/A
+long-element-chain,44,"3/3:37, 4/3:7"
+string-concat-loop,21,N/A
+long-message-chain,15,"3/3:13, 4/3:2"
+long-lambda-expr,4,N/A
+use-a-generator,4,N/A

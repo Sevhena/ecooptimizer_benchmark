@@ -1,7 +1,7 @@
 Smell Type,Total Count,Thresholds
 TOTAL,17,N/A
-too-many-arguments,4,"7/6:1, 29/6:1, 10/6:2"
-cached-repeated-calls,3,"3/2:2, 5/2:1"
+too-many-arguments,4,"10/6:2, 29/6:1, 7/6:1"
+cached-repeated-calls,3,"5/2:1, 3/2:2"
 no-self-use,3,N/A
 string-concat-loop,3,N/A
 long-element-chain,2,3/3:2

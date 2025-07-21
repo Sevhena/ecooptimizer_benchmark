@@ -1,5 +1,36 @@
 {
-    "0f5b5941": {
+    "01b777df": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "01b777df",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "flask.helpers",
+        "obj": "send_file",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 13,
+                "endLine": 400,
+                "line": 400
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/helpers.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "12eb50dd": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -13,24 +44,148 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "0f5b5941",
+        "id": "12eb50dd",
         "message": "Method could be a function",
         "messageId": "R6301",
-        "module": "flask.app",
-        "obj": "Flask.get_send_file_max_age",
+        "module": "flask.json.provider",
+        "obj": "JSONProvider._prepare_response_obj",
         "occurences": [
             {
                 "column": 4,
                 "endColumn": 29,
-                "endLine": 281,
-                "line": 281
+                "endLine": 75,
+                "line": 75
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/app.py",
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/json/provider.py",
         "symbol": "no-self-use",
         "type": "refactor"
     },
-    "12af3759": {
+    "274c81e3": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "274c81e3",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.sessions",
+        "obj": "SessionInterface.get_cookie_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 185,
+                "line": 185
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "2796a124": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2796a124",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.sessions",
+        "obj": "SessionInterface.get_cookie_path",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 201,
+                "line": 201
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "43bbaa83": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "43bbaa83",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.sessions",
+        "obj": "SessionInterface.get_expiration_time",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 237,
+                "line": 237
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "628d9020": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "628d9020",
+        "message": "Lambda function too long (115 characters, max 100)",
+        "messageId": "LLE001",
+        "module": "blueprints",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 13,
+                "endLine": 440,
+                "line": 434
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/blueprints.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention"
+    },
+    "7896805f": {
         "additionalInfo": {
             "callString": "copy(args[0])",
             "concatTarget": null,
@@ -44,7 +199,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "12af3759",
+        "id": "7896805f",
         "message": "Repeated function call detected (2/2). Consider caching the result: copy(args[0])",
         "messageId": "CRC001",
         "module": "testing",
@@ -67,391 +222,7 @@
         "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "29e90936": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "29e90936",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "app",
-        "obj": "App.should_ignore_error",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 27,
-                "endLine": 883,
-                "line": 883
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/app.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "3a28e29f": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3a28e29f",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "app",
-        "obj": "App.select_jinja_autoescape",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 31,
-                "endLine": 536,
-                "line": 536
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/app.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "3a782cd6": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3a782cd6",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.sessions",
-        "obj": "SessionInterface.get_expiration_time",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 27,
-                "endLine": 237,
-                "line": 237
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "3e31b3a2": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3e31b3a2",
-        "message": "Too many arguments (11/6)",
-        "messageId": "R0913",
-        "module": "app",
-        "obj": "App.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 282,
-                "line": 282
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/app.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "4109cce8": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4109cce8",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "flask.cli",
-        "obj": "run_command",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 15,
-                "endLine": 935,
-                "line": 935
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/cli.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "41873953": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "41873953",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.blueprints",
-        "obj": "Blueprint.get_send_file_max_age",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 29,
-                "endLine": 55,
-                "line": 55
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/blueprints.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "41fb862e": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "41fb862e",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.sessions",
-        "obj": "SessionInterface.get_cookie_secure",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 25,
-                "endLine": 216,
-                "line": 216
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "50f857de": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "50f857de",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.sessions",
-        "obj": "SessionInterface.get_cookie_domain",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 25,
-                "endLine": 189,
-                "line": 189
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "58803e10": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "58803e10",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.app",
-        "obj": "Flask.async_to_sync",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 980,
-                "line": 980
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/app.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "6b220e4d": {
-        "additionalInfo": {
-            "callString": "self.ensure_sync(func)(response)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6b220e4d",
-        "message": "Repeated function call detected (2/2). Consider caching the result: self.ensure_sync(func)(response)",
-        "messageId": "CRC001",
-        "module": "app",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 23,
-                "endColumn": 55,
-                "endLine": 1314,
-                "line": 1314
-            },
-            {
-                "column": 31,
-                "endColumn": 63,
-                "endLine": 1319,
-                "line": 1319
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/app.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "812e3685": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "812e3685",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.sessions",
-        "obj": "SessionInterface.get_cookie_samesite",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 27,
-                "endLine": 222,
-                "line": 222
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "83cae861": {
-        "additionalInfo": {
-            "callString": "prepare_import(path)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "83cae861",
-        "message": "Repeated function call detected (2/2). Consider caching the result: prepare_import(path)",
-        "messageId": "CRC001",
-        "module": "cli",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 30,
-                "endColumn": 50,
-                "endLine": 348,
-                "line": 348
-            },
-            {
-                "column": 34,
-                "endColumn": 54,
-                "endLine": 352,
-                "line": 352
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/cli.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "8d11d513": {
+    "78fd16f3": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -465,348 +236,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "8d11d513",
-        "message": "Lambda function too long (115 characters, max 100)",
-        "messageId": "LLE001",
-        "module": "blueprints",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 12,
-                "endColumn": 13,
-                "endLine": 440,
-                "line": 434
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/blueprints.py",
-        "symbol": "long-lambda-expr",
-        "type": "convention"
-    },
-    "92dab74d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "92dab74d",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "flask.helpers",
-        "obj": "send_file",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 13,
-                "endLine": 400,
-                "line": 400
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/helpers.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "9399fe38": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "9399fe38",
-        "message": "Too many arguments (11/6)",
-        "messageId": "R0913",
-        "module": "flask.blueprints",
-        "obj": "Blueprint.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 19,
-                "line": 19
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/blueprints.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "ae0bc5d9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ae0bc5d9",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.sessions",
-        "obj": "SessionInterface.get_cookie_name",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 185,
-                "line": 185
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "b4acf343": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b4acf343",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.json.provider",
-        "obj": "JSONProvider._prepare_response_obj",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 29,
-                "endLine": 75,
-                "line": 75
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/json/provider.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "b501385f": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b501385f",
-        "message": "Too many arguments (11/6)",
-        "messageId": "R0913",
-        "module": "flask.app",
-        "obj": "Flask.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 226,
-                "line": 226
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/app.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "b6f3ca6f": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b6f3ca6f",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.sessions",
-        "obj": "SessionInterface.get_cookie_httponly",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 27,
-                "endLine": 209,
-                "line": 209
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "bc7ae687": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "bc7ae687",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.sessions",
-        "obj": "NullSession._fail",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 13,
-                "endLine": 103,
-                "line": 103
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "c0ef5307": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c0ef5307",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.sessions",
-        "obj": "SessionInterface.should_set_cookie",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 25,
-                "endLine": 247,
-                "line": 247
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "cadb47af": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "cadb47af",
-        "message": "Too many arguments (11/6)",
-        "messageId": "R0913",
-        "module": "blueprints",
-        "obj": "Blueprint.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 174,
-                "line": 174
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/blueprints.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "d3b93e39": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d3b93e39",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "flask.sessions",
-        "obj": "SessionInterface.get_cookie_path",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 201,
-                "line": 201
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "f4168dfc": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f4168dfc",
+        "id": "78fd16f3",
         "message": "Dictionary chain too long (3/3)",
         "messageId": "LEC001",
         "module": "scaffold",
@@ -823,7 +253,38 @@
         "symbol": "long-element-chain",
         "type": "convention"
     },
-    "f9aa926a": {
+    "7a9d0452": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7a9d0452",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.app",
+        "obj": "Flask.async_to_sync",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 980,
+                "line": 980
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/app.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "7d5fd0b8": {
         "additionalInfo": {
             "callString": "getattr(module, attr_name, None)",
             "concatTarget": null,
@@ -837,7 +298,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "f9aa926a",
+        "id": "7d5fd0b8",
         "message": "Repeated function call detected (2/2). Consider caching the result: getattr(module, attr_name, None)",
         "messageId": "CRC001",
         "module": "cli",
@@ -860,7 +321,7 @@
         "symbol": "cached-repeated-calls",
         "type": "performance"
     },
-    "fa829789": {
+    "7eadcd7a": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -874,7 +335,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "fa829789",
+        "id": "7eadcd7a",
         "message": "Method could be a function",
         "messageId": "R6301",
         "module": "flask.sessions",
@@ -890,5 +351,544 @@
         "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
         "symbol": "no-self-use",
         "type": "refactor"
+    },
+    "87ff4cca": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "87ff4cca",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "app",
+        "obj": "App.should_ignore_error",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 883,
+                "line": 883
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/app.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "8d87380c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8d87380c",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.sessions",
+        "obj": "SessionInterface.should_set_cookie",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 247,
+                "line": 247
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "9d06bb7f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9d06bb7f",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "flask.app",
+        "obj": "Flask.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 226,
+                "line": 226
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "9d692162": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9d692162",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "flask.cli",
+        "obj": "run_command",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 15,
+                "endLine": 935,
+                "line": 935
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/cli.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "9f24415e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9f24415e",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "app",
+        "obj": "App.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 282,
+                "line": 282
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/app.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "a03449a1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a03449a1",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.sessions",
+        "obj": "SessionInterface.get_cookie_domain",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 189,
+                "line": 189
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "a6d3e0ab": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a6d3e0ab",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.blueprints",
+        "obj": "Blueprint.get_send_file_max_age",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 55,
+                "line": 55
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/blueprints.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "a9ad3317": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a9ad3317",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.sessions",
+        "obj": "SessionInterface.get_cookie_samesite",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 222,
+                "line": 222
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "b3dedc3c": {
+        "additionalInfo": {
+            "callString": "self.ensure_sync(func)(response)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b3dedc3c",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.ensure_sync(func)(response)",
+        "messageId": "CRC001",
+        "module": "app",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 55,
+                "endLine": 1314,
+                "line": 1314
+            },
+            {
+                "column": 31,
+                "endColumn": 63,
+                "endLine": 1319,
+                "line": 1319
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/app.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "c2beb64f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c2beb64f",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "app",
+        "obj": "App.select_jinja_autoescape",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 31,
+                "endLine": 536,
+                "line": 536
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/app.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "c2ed63ff": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c2ed63ff",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "blueprints",
+        "obj": "Blueprint.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 174,
+                "line": 174
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sansio/blueprints.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "c3025f60": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c3025f60",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "flask.blueprints",
+        "obj": "Blueprint.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 19,
+                "line": 19
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/blueprints.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "cb3b6115": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cb3b6115",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.sessions",
+        "obj": "SessionInterface.get_cookie_secure",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "ddfa8a01": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ddfa8a01",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.app",
+        "obj": "Flask.get_send_file_max_age",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 281,
+                "line": 281
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/app.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "e638f244": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e638f244",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.sessions",
+        "obj": "SessionInterface.get_cookie_httponly",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 209,
+                "line": 209
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "e96701fd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e96701fd",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "flask.sessions",
+        "obj": "NullSession._fail",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 103,
+                "line": 103
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/sessions.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "eb5da1d8": {
+        "additionalInfo": {
+            "callString": "prepare_import(path)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "eb5da1d8",
+        "message": "Repeated function call detected (2/2). Consider caching the result: prepare_import(path)",
+        "messageId": "CRC001",
+        "module": "cli",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 50,
+                "endLine": 348,
+                "line": 348
+            },
+            {
+                "column": 34,
+                "endColumn": 54,
+                "endLine": 352,
+                "line": 352
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/flask/src/flask/cli.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
     }
 }
