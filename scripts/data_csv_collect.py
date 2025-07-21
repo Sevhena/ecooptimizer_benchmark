@@ -94,7 +94,7 @@ def write_csv_statistics(
 
     # Process each file and write individual repo CSV
     for file_path, smells in file_stats.items():
-        repo_name = file_path.name.split("_", 3)[2].replace(".json", "")
+        repo_name = file_path.stem
         csv_path = output_dir / f"{repo_name}.csv"
 
         # Prepare data for CSV
