@@ -17,6 +17,9 @@ PATCHES_DIR = ARTIFACTS_DIR / "patches"
 SELECTED_SMELLS_DIR = ARTIFACTS_DIR / "smells" / "selected"
 SELECTED_REPOS_CONFIG = ROOT_DIR / "configs" / "selected.yaml"
 
+LOG_DIR = Path("logs").resolve()
+LOG_DIR.mkdir(exist_ok=True)
+
 
 class UTCFormatter(logging.Formatter):
     converter = time.gmtime  # Use UTC instead of local time
@@ -27,9 +30,7 @@ class UTCFormatter(logging.Formatter):
 
 def setup_logging():
     """Configure logging to file and console."""
-    log_dir = Path("logs")
-    log_dir.mkdir(exist_ok=True)
-    log_file = log_dir / "patch_creation.log"
+    log_file = LOG_DIR / "patch_creation.log"
 
     file_handler = logging.FileHandler(log_file)
     file_handler.setLevel(logging.DEBUG)
@@ -90,12 +91,13 @@ def refactor_smell(repo_name: str, smell_id: str) -> bool:
         subprocess.run(
             [
                 "ecooptimizer",
-                "--refactor-only",
-                "--save-to-original",
-                "--smells-file",
+                "refactor",
                 f"{SELECTED_SMELLS_DIR}/{repo_name}.json",
                 "--smell-id",
                 smell_id,
+                "--save-to-original",
+                "--log-dir",
+                f"{LOG_DIR / 'ecooptimizer' / repo_name}",
             ],
             cwd=(WORKTREE_DIR / repo_name),
             check=True,
@@ -171,8 +173,8 @@ def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> N
         subprocess.run(["git", "restore", "."], cwd=worktree_path, check=True)
 
         # Remove any created patches due to possible errors/corruption
-        patch_path_original.unlink()
-        patch_path_refactored.unlink()
+        patch_path_original.unlink(missing_ok=True)
+        patch_path_refactored.unlink(missing_ok=True)
 
         raise Exception(f"Patch creation failed for {smell_id}") from e
     finally:
@@ -218,6 +220,7 @@ def main():
         sys.exit(1)
 
     repos_dir = Path("repositories")
+    select_repos_config = load_yaml(SELECTED_REPOS_CONFIG)
 
     if args.repo:
         if not args.smell:
@@ -226,7 +229,7 @@ def main():
     else:
         logging.info("Generating patches for all selected repositories")
 
-        repo_list = load_yaml(SELECTED_REPOS_CONFIG).get("repos", [])
+        repo_list = select_repos_config.get("repos", [])
 
     failed_patches: dict[str, list[str]] = dict()
 
@@ -247,8 +250,23 @@ def main():
             smell_meta = [(smells[args.smell]["symbol"], args.smell)]
             clear_patches(repo_name, args.smell)
         else:
+            smell_map = select_repos_config.get("smells", {}).get(repo_name, {})
+            logging.debug(f"Selected smells for {repo_name}: {smell_map}")
+
+            smell_id_list = []
+            for _, smell_ids in smell_map.items():
+                smell_id_list.extend(smell_ids)
+            logging.debug(f"Smell IDs selected for {repo_name}: {smell_id_list}")
+            if not smell_id_list:
+                logging.warning(f"No smells selected for {repo_name}. Skipping patch generation.")
+                continue
+
             logging.info(f"Generating patches for all smells in {repo_name}\n")
-            smell_meta = [(smell["symbol"], smell_id) for smell_id, smell in smells.items()]
+            smell_meta = [
+                (smell["symbol"], smell_id)
+                for smell_id, smell in smells.items()
+                if smell_id in smell_id_list
+            ]
             clear_patches(repo_name)
 
         total_smells = len(smell_meta)

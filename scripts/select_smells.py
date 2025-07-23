@@ -221,6 +221,15 @@ def write_selected_smells(repo_smells: dict[str, dict[str, Smell]]):
     logging.info(f"Wrote selected smells to {SELECTED_SMELLS_DIR}")
 
 
+def get_covered_smells_file(repo: str):
+    covered_smells_file = COVERED_SMELLS_DIR / f"{repo}.json"
+
+    if not covered_smells_file.exists():
+        return None
+
+    return covered_smells_file
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo", type=str, help="Filter smells for a specific repo only")
@@ -230,20 +239,58 @@ def main():
     logging.info("Starting smell selection process")
 
     smells_by_repo: dict[str, list[Smell]] = {}
-    for file in COVERED_SMELLS_DIR.glob("*.json"):
-        repo = file.stem
-        if args.repo and repo != args.repo:
-            continue
-        smells_by_repo[repo] = load_smells(file)
-        logging.debug(f"Loaded {len(smells_by_repo[repo])} smells for {repo}")
 
-    selected_config: dict[str, dict[str, list[str]]] = defaultdict(lambda: defaultdict(list[str]))
+    with SELECTED_CONFIG_PATH.open() as f:
+        selected_config: dict = yaml.safe_load(f)
+
+    selected_repos: list[str] | None = selected_config.get("repos")
+    if not args.repo and not selected_repos:
+        logging.warning(
+            f"No selected repos found in {SELECTED_CONFIG_PATH.relative_to(Path())}."
+            + "Please update the configuration file or choose a specific repository using --repo."
+        )
+        sys.exit(0)
+
+    if args.repo:
+        covered_smells_file = get_covered_smells_file(args.repo)
+
+        if not covered_smells_file:
+            logging.warning(
+                f"Missing a {args.repo}.json in {COVERED_SMELLS_DIR.relative_to(Path().resolve())}."
+            )
+            sys.exit(0)
+
+        smells_by_repo[args.repo] = load_smells(covered_smells_file)
+
+    else:
+        uncovered_repos = []
+        for repo in selected_repos:
+            covered_smells_file = get_covered_smells_file(repo)
+
+            if not covered_smells_file:
+                logging.debug(
+                    f"Missing a {repo}.json in {COVERED_SMELLS_DIR.relative_to(Path().resolve())}."
+                )
+                uncovered_repos.append(repo)
+                continue
+
+            smells_by_repo[repo] = load_smells(covered_smells_file)
+            logging.debug(f"Loaded {len(smells_by_repo[repo])} smells for {repo}")
+
+        if uncovered_repos:
+            logging.warning(
+                f"The following repos had no associated covered smells reports and were skipped:\n\t- {', '.join(uncovered_repos)}\n"
+            )
+
+    selected_smells_config: dict[str, dict[str, list[str]]] = defaultdict(
+        lambda: defaultdict(list[str])
+    )
     selected_smells: dict[str, dict[str, Smell]] = defaultdict(dict)
 
     for repo in smells_by_repo:
-        process_repo(repo, smells_by_repo, selected_config, selected_smells)
+        process_repo(repo, smells_by_repo, selected_smells_config, selected_smells)
 
-    update_selected_config(selected_config)
+    update_selected_config(selected_smells_config)
     write_selected_smells(selected_smells)
     logging.info("Smell selection completed")
 

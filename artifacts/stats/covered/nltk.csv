@@ -1,0 +1,10 @@
+Smell Type,Total Count,Thresholds
+cached-repeated-calls,0,N/A
+long-element-chain,0,N/A
+long-lambda-expr,0,N/A
+long-message-chain,0,N/A
+no-self-use,0,N/A
+string-concat-loop,0,N/A
+too-many-arguments,0,N/A
+use-a-generator,0,N/A
+TOTAL,0,N/A

@@ -1,6 +1,8 @@
+from doctest import run_docstring_examples
 import json
 import logging
 import argparse
+import subprocess
 from pathlib import Path
 import sys
 import time
@@ -8,6 +10,7 @@ from typing import Any
 
 BENCHMARK_ROOT = Path().resolve()
 ARTIFACTS_DIR = BENCHMARK_ROOT / "artifacts"
+DATA_COLLECTOR = BENCHMARK_ROOT / "scripts" / "data_csv_collect.py"
 SMELLS_DIR = ARTIFACTS_DIR / "smells"
 RAW_SMELLS_DIR = SMELLS_DIR / "raw"
 COVERAGE_DIR = ARTIFACTS_DIR / "coverage"
@@ -87,6 +90,30 @@ def filter_smells(
     return filtered
 
 
+def run_data_collector() -> None:
+    """Run the data collection script"""
+    try:
+        if DATA_COLLECTOR.exists():
+            logging.info("Starting data collection...")
+            result = subprocess.run(
+                ["python", str(DATA_COLLECTOR), str(OUTPUT_DIR)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            logging.debug(f"Data collector output:\n{result.stdout}")
+            if result.stderr:
+                logging.warning(f"Data collector errors:\n{result.stderr}")
+            logging.info("Data collection completed")
+        else:
+            logging.warning(f"Data collector script not found at {DATA_COLLECTOR}")
+            print(f"Warning: Data collector script not found at {DATA_COLLECTOR}")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Data collection failed: {e!s}\n{e.stderr}")
+    except Exception as e:
+        logging.error(f"Error running data collector: {e!s}")
+
+
 def process_repo(smells_file: Path):
     repo_name = smells_file.stem
     coverage_file = COVERAGE_DIR / f"{repo_name}.json"
@@ -124,11 +151,13 @@ def main():
 
     if args.repo:
         logging.debug(f"Processing single repository: {args.repo}")
-        process_repo(args.repo)
+        process_repo(RAW_SMELLS_DIR / f"{args.repo}.json")
     else:
         logging.debug(f"Processing all repositories in {RAW_SMELLS_DIR}")
         for smells_file in RAW_SMELLS_DIR.iterdir():
             process_repo(smells_file)
+
+    run_data_collector()
 
 
 if __name__ == "__main__":

@@ -9,3 +9,4 @@ output
 .python-version
 other_repos/
 rename_files.sh
+artifacts/smells/copy

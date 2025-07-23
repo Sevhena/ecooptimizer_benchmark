@@ -1,0 +1,1304 @@
+{
+    "23fab16c": {
+        "additionalInfo": {
+            "callString": "np.zeros(cursor.header.nnz, dtype=index_dtype)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "23fab16c",
+        "message": "Repeated function call detected (2/2). Consider caching the result: np.zeros(cursor.header.nnz, dtype=index_dtype)",
+        "messageId": "CRC001",
+        "module": "__init__",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 58,
+                "endLine": 147,
+                "line": 147
+            },
+            {
+                "column": 12,
+                "endColumn": 58,
+                "endLine": 149,
+                "line": 149
+            }
+        ],
+        "path": "scipy/io/_fast_matrix_market/__init__.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/io/_fast_matrix_market/__init__.py"
+    },
+    "a78c5e95": {
+        "additionalInfo": {
+            "callString": "math.sqrt(9 / 10)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a78c5e95",
+        "message": "Repeated function call detected (2/2). Consider caching the result: math.sqrt(9 / 10)",
+        "messageId": "CRC001",
+        "module": "_genz_malik",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 142,
+                "line": 142
+            },
+            {
+                "column": 18,
+                "endColumn": 33,
+                "endLine": 144,
+                "line": 144
+            }
+        ],
+        "path": "scipy/integrate/_rules/_genz_malik.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/integrate/_rules/_genz_malik.py"
+    },
+    "4f12a00c": {
+        "additionalInfo": {
+            "callString": "xpx.atleast_nd(self.xp.asarray(x), ndim=1, xp=self.xp)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4f12a00c",
+        "message": "Repeated function call detected (2/2). Consider caching the result: xpx.atleast_nd(self.xp.asarray(x), ndim=1, xp=self.xp)",
+        "messageId": "CRC001",
+        "module": "_differentiable_functions",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 79,
+                "endLine": 685,
+                "line": 685
+            },
+            {
+                "column": 25,
+                "endColumn": 79,
+                "endLine": 693,
+                "line": 693
+            }
+        ],
+        "path": "scipy/optimize/_differentiable_functions.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_differentiable_functions.py"
+    },
+    "c92f1d1b": {
+        "additionalInfo": {
+            "callString": "_get_message(status)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c92f1d1b",
+        "message": "Repeated function call detected (3/2). Consider caching the result: _get_message(status)",
+        "messageId": "CRC001",
+        "module": "_linprog_ip",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 46,
+                "endLine": 826,
+                "line": 826
+            },
+            {
+                "column": 26,
+                "endColumn": 46,
+                "endLine": 831,
+                "line": 831
+            }
+        ],
+        "path": "scipy/optimize/_linprog_ip.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_linprog_ip.py"
+    },
+    "9f008069": {
+        "additionalInfo": {
+            "callString": "bc_wrapped(y[:, 0], y[:, -1], p)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9f008069",
+        "message": "Repeated function call detected (2/2). Consider caching the result: bc_wrapped(y[:, 0], y[:, -1], p)",
+        "messageId": "CRC001",
+        "module": "_bvp",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 49,
+                "endLine": 1075,
+                "line": 1075
+            },
+            {
+                "column": 21,
+                "endColumn": 53,
+                "endLine": 1097,
+                "line": 1097
+            }
+        ],
+        "path": "scipy/integrate/_bvp.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/integrate/_bvp.py"
+    },
+    "2cc9de7c": {
+        "additionalInfo": {
+            "callString": "rng.uniform(size=m)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2cc9de7c",
+        "message": "Repeated function call detected (2/2). Consider caching the result: rng.uniform(size=m)",
+        "messageId": "CRC001",
+        "module": "_svdp",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 41,
+                "endLine": 224,
+                "line": 224
+            },
+            {
+                "column": 32,
+                "endColumn": 51,
+                "endLine": 227,
+                "line": 227
+            }
+        ],
+        "path": "scipy/sparse/linalg/_svdp.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/linalg/_svdp.py"
+    },
+    "0b90d2dd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0b90d2dd",
+        "message": "Too many arguments (19/6)",
+        "messageId": "R0913",
+        "module": "scipy.interpolate._fitpack_impl",
+        "obj": "bisplrep",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 12,
+                "endLine": 420,
+                "line": 420
+            }
+        ],
+        "path": "scipy/interpolate/_fitpack_impl.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/interpolate/_fitpack_impl.py"
+    },
+    "3d8698fe": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3d8698fe",
+        "message": "Too many arguments (18/6)",
+        "messageId": "R0913",
+        "module": "scipy.optimize._slsqp_py",
+        "obj": "fmin_slsqp",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 71,
+                "line": 71
+            }
+        ],
+        "path": "scipy/optimize/_slsqp_py.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_slsqp_py.py"
+    },
+    "bd7a0cd7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bd7a0cd7",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "scipy.optimize._nonlin",
+        "obj": "nonlin_solve",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 16,
+                "endLine": 126,
+                "line": 126
+            }
+        ],
+        "path": "scipy/optimize/_nonlin.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_nonlin.py"
+    },
+    "55f62147": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "55f62147",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "scipy.optimize._linesearch",
+        "obj": "_zoom",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 9,
+                "endLine": 534,
+                "line": 534
+            }
+        ],
+        "path": "scipy/optimize/_linesearch.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_linesearch.py"
+    },
+    "053ced1a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "053ced1a",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "scipy.sparse.linalg._isolve.lgmres",
+        "obj": "lgmres",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 10,
+                "endLine": 17,
+                "line": 17
+            }
+        ],
+        "path": "scipy/sparse/linalg/_isolve/lgmres.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/linalg/_isolve/lgmres.py"
+    },
+    "841f0ba7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "841f0ba7",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "scipy.fft._realtransforms",
+        "obj": "dctn",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 11,
+                "line": 11
+            }
+        ],
+        "path": "scipy/fft/_realtransforms.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/fft/_realtransforms.py"
+    },
+    "8a894bd5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8a894bd5",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "scipy.stats._distn_infrastructure",
+        "obj": "rv_generic._argcheck",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 996,
+                "line": 996
+            }
+        ],
+        "path": "scipy/stats/_distn_infrastructure.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_distn_infrastructure.py"
+    },
+    "5c9aee75": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5c9aee75",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "scipy.optimize._shgo_lib._complex",
+        "obj": "Complex.deg_simplex",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 1202,
+                "line": 1202
+            }
+        ],
+        "path": "scipy/optimize/_shgo_lib/_complex.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_shgo_lib/_complex.py"
+    },
+    "80e93795": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "80e93795",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "scipy.special._mptestutils",
+        "obj": "Arg._positive_values",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 41,
+                "line": 41
+            }
+        ],
+        "path": "scipy/special/_mptestutils.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/special/_mptestutils.py"
+    },
+    "2125be72": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2125be72",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "scipy._lib._docscrape",
+        "obj": "NumpyDocString._parse_index",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 348,
+                "line": 348
+            }
+        ],
+        "path": "scipy/_lib/_docscrape.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/_lib/_docscrape.py"
+    },
+    "42e96228": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "42e96228",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "scipy.optimize._differentialevolution",
+        "obj": "DifferentialEvolutionSolver._accept_trial",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 1501,
+                "line": 1501
+            }
+        ],
+        "path": "scipy/optimize/_differentialevolution.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_differentialevolution.py"
+    },
+    "80ee36aa": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "80ee36aa",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "scipy.io.matlab._miobase",
+        "obj": "MatFileReader.guess_byte_order",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 407,
+                "line": 407
+            }
+        ],
+        "path": "scipy/io/matlab/_miobase.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/io/matlab/_miobase.py"
+    },
+    "671eb1fa": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "671eb1fa",
+        "message": "Use a generator instead 'all(bcdim == 1 or bcdim == szdim for (bcdim, szdim) in zip(bcast_shape, size_))'",
+        "messageId": "R1729",
+        "module": "scipy.stats._distn_infrastructure",
+        "obj": "rv_generic._argcheck_rvs",
+        "occurences": [
+            {
+                "column": 13,
+                "endColumn": 65,
+                "endLine": 980,
+                "line": 979
+            }
+        ],
+        "path": "scipy/stats/_distn_infrastructure.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_distn_infrastructure.py"
+    },
+    "c0a0307d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c0a0307d",
+        "message": "Use a generator instead 'any(isinstance(arg, ComplexArg) for arg in self.arg_spec)'",
+        "messageId": "R1729",
+        "module": "scipy.special._mptestutils",
+        "obj": "MpmathData.__init__",
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 13,
+                "endLine": 214,
+                "line": 212
+            }
+        ],
+        "path": "scipy/special/_mptestutils.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/special/_mptestutils.py"
+    },
+    "2bbdf916": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2bbdf916",
+        "message": "Use a generator instead 'all(float(ax).is_integer() for ax in axes)'",
+        "messageId": "R1729",
+        "module": "scipy.ndimage._interpolation",
+        "obj": "rotate",
+        "occurences": [
+            {
+                "column": 11,
+                "endColumn": 55,
+                "endLine": 974,
+                "line": 974
+            }
+        ],
+        "path": "scipy/ndimage/_interpolation.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/ndimage/_interpolation.py"
+    },
+    "cfd9184e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cfd9184e",
+        "message": "Use a generator instead 'any(np.iscomplexobj(x) for x in [x11, x12, x21, x22])'",
+        "messageId": "R1729",
+        "module": "scipy.linalg._decomp_cossin",
+        "obj": "_cossin",
+        "occurences": [
+            {
+                "column": 11,
+                "endColumn": 66,
+                "endLine": 171,
+                "line": 171
+            }
+        ],
+        "path": "scipy/linalg/_decomp_cossin.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/linalg/_decomp_cossin.py"
+    },
+    "06fcdecd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "06fcdecd",
+        "message": "Use a generator instead 'any(_numeric_arrays([x], kinds='ui', xp=xp) for x in [volume, kernel])'",
+        "messageId": "R1729",
+        "module": "scipy.signal._signaltools",
+        "obj": "choose_conv_method",
+        "occurences": [
+            {
+                "column": 7,
+                "endColumn": 79,
+                "endLine": 1400,
+                "line": 1400
+            }
+        ],
+        "path": "scipy/signal/_signaltools.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/signal/_signaltools.py"
+    },
+    "002c736b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "002c736b",
+        "message": "Use a generator instead 'all(x.size == self.di.shape[0] for x in self.xi)'",
+        "messageId": "R1729",
+        "module": "scipy.interpolate._rbf",
+        "obj": "Rbf.__init__",
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 65,
+                "endLine": 238,
+                "line": 238
+            }
+        ],
+        "path": "scipy/interpolate/_rbf.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/interpolate/_rbf.py"
+    },
+    "ff234213": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ff234213",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "_mstats_basic",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 48,
+                "endLine": 1667,
+                "line": 1667
+            }
+        ],
+        "path": "scipy/stats/_mstats_basic.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_mstats_basic.py"
+    },
+    "56f8cd5d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "56f8cd5d",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "_base",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 72,
+                "endLine": 248,
+                "line": 247
+            }
+        ],
+        "path": "scipy/sparse/_base.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/_base.py"
+    },
+    "f15881ec": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f15881ec",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "_discrete_distns",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 13,
+                "endColumn": 37,
+                "endLine": 2095,
+                "line": 2095
+            }
+        ],
+        "path": "scipy/stats/_discrete_distns.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_discrete_distns.py"
+    },
+    "f7d9627c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f7d9627c",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "_lil",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 87,
+                "endLine": 390,
+                "line": 390
+            }
+        ],
+        "path": "scipy/sparse/_lil.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/_lil.py"
+    },
+    "adc91a18": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "adc91a18",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "_solvers",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 52,
+                "endLine": 530,
+                "line": 525
+            }
+        ],
+        "path": "scipy/linalg/_solvers.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/linalg/_solvers.py"
+    },
+    "757214c4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "757214c4",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "_continuous_distns",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 13,
+                "endColumn": 37,
+                "endLine": 12480,
+                "line": 12480
+            }
+        ],
+        "path": "scipy/stats/_continuous_distns.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_continuous_distns.py"
+    },
+    "d99bd01f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d99bd01f",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "_linprog_rs",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 38,
+                "endLine": 287,
+                "line": 287
+            }
+        ],
+        "path": "scipy/optimize/_linprog_rs.py",
+        "symbol": "long-element-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_linprog_rs.py"
+    },
+    "9c8a87c1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9c8a87c1",
+        "message": "Dictionary chain too long (4/3)",
+        "messageId": "LEC001",
+        "module": "_testutils",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 68,
+                "endLine": 199,
+                "line": 199
+            }
+        ],
+        "path": "scipy/_lib/_testutils.py",
+        "symbol": "long-element-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/_lib/_testutils.py"
+    },
+    "cee241b6": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cee241b6",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "_page_trend_test",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 35,
+                "endLine": 479,
+                "line": 479
+            }
+        ],
+        "path": "scipy/stats/_page_trend_test.py",
+        "symbol": "long-element-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_page_trend_test.py"
+    },
+    "4cdb3f2f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4cdb3f2f",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "_compressed",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 37,
+                "endColumn": 62,
+                "endLine": 945,
+                "line": 945
+            }
+        ],
+        "path": "scipy/sparse/_compressed.py",
+        "symbol": "long-element-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/_compressed.py"
+    },
+    "bb252a3b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bb252a3b",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "_mio5",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 60,
+                "endLine": 510,
+                "line": 510
+            }
+        ],
+        "path": "scipy/io/matlab/_mio5.py",
+        "symbol": "long-element-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/io/matlab/_mio5.py"
+    },
+    "304ee0bf": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "result",
+            "innerLoopLine": 5363,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 5364,
+            "isFunc": false,
+            "start": 5363,
+            "useOccurences": false
+        },
+        "id": "304ee0bf",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "_distribution_infrastructure.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 65,
+                "endLine": 5364,
+                "line": 5364
+            }
+        ],
+        "path": "scipy/stats/_distribution_infrastructure.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_distribution_infrastructure.py"
+    },
+    "cfbd3f39": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "msg",
+            "innerLoopLine": 691,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 695,
+            "isFunc": false,
+            "start": 691,
+            "useOccurences": false
+        },
+        "id": "cfbd3f39",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "_arffread.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 74,
+                "endLine": 692,
+                "line": 692
+            },
+            {
+                "column": 16,
+                "endColumn": 74,
+                "endLine": 694,
+                "line": 694
+            },
+            {
+                "column": 12,
+                "endColumn": 28,
+                "endLine": 695,
+                "line": 695
+            }
+        ],
+        "path": "scipy/io/arff/_arffread.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/io/arff/_arffread.py"
+    },
+    "fa242649": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "signature",
+            "innerLoopLine": 197,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 201,
+            "isFunc": false,
+            "start": 197,
+            "useOccurences": false
+        },
+        "id": "fa242649",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "_ccallback.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 66,
+                "endLine": 199,
+                "line": 199
+            },
+            {
+                "column": 16,
+                "endColumn": 73,
+                "endLine": 201,
+                "line": 201
+            }
+        ],
+        "path": "scipy/_lib/_ccallback.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/_lib/_ccallback.py"
+    },
+    "e0748c3e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e0748c3e",
+        "message": "Lambda function too long (5/5 expressions)",
+        "messageId": "LLE001",
+        "module": "arpack",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 70,
+                "endLine": 510,
+                "line": 509
+            }
+        ],
+        "path": "scipy/sparse/linalg/_eigen/arpack/arpack.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/linalg/_eigen/arpack/arpack.py"
+    }
+}

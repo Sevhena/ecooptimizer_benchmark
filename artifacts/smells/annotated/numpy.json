@@ -1,443 +1,5 @@
 {
-    "25144cdc": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "25144cdc",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "numpy.lib.tests.test_ufunclike",
-        "obj": "TestUfunclike.test_isposinf",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 10,
-                "line": 10
-            }
-        ],
-        "path": "numpy/lib/tests/test_ufunclike.py",
-        "symbol": "no-self-use",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/tests/test_ufunclike.py"
-    },
-    "ae5de824": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ae5de824",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "test_print",
-        "obj": "TestCommaDecimalPointLocale.test_locale_single",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 193,
-                "line": 193
-            }
-        ],
-        "path": "numpy/_core/tests/test_print.py",
-        "symbol": "no-self-use",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_print.py"
-    },
-    "1541c995": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "1541c995",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "test_function_base",
-        "obj": "TestGeomspace.test_subclass",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 307,
-                "line": 307
-            }
-        ],
-        "path": "numpy/_core/tests/test_function_base.py",
-        "symbol": "no-self-use",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_function_base.py"
-    },
-    "568273c1": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "568273c1",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "numpy.lib.tests.test_function_base",
-        "obj": "TestSelect._select",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 15,
-                "endLine": 537,
-                "line": 537
-            }
-        ],
-        "path": "numpy/lib/tests/test_function_base.py",
-        "symbol": "no-self-use",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/tests/test_function_base.py"
-    },
-    "7ba4ec97": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7ba4ec97",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "numpy.distutils.fcompiler.gnu",
-        "obj": "Gnu95FCompiler._hash_files",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 19,
-                "endLine": 401,
-                "line": 401
-            }
-        ],
-        "path": "numpy/distutils/fcompiler/gnu.py",
-        "symbol": "no-self-use",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/gnu.py"
-    },
-    "dc29e77a": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "dc29e77a",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "test_custom_dtypes",
-        "obj": "TestSFloat.test_dtype_str",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 22,
-                "endLine": 51,
-                "line": 51
-            }
-        ],
-        "path": "numpy/_core/tests/test_custom_dtypes.py",
-        "symbol": "no-self-use",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_custom_dtypes.py"
-    },
-    "669aad71": {
-        "additionalInfo": {
-            "callString": "self._run()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "669aad71",
-        "message": "Repeated function call detected (3/2). Consider caching the result: self._run()",
-        "messageId": "CRC001",
-        "module": "test_cpu_features",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 14,
-                "endColumn": 25,
-                "endLine": 200,
-                "line": 200
-            },
-            {
-                "column": 14,
-                "endColumn": 25,
-                "endLine": 212,
-                "line": 212
-            },
-            {
-                "column": 14,
-                "endColumn": 25,
-                "endLine": 224,
-                "line": 224
-            }
-        ],
-        "path": "numpy/_core/tests/test_cpu_features.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_cpu_features.py"
-    },
-    "a9e0ed0d": {
-        "additionalInfo": {
-            "callString": "np.rec.array(a)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a9e0ed0d",
-        "message": "Repeated function call detected (2/2). Consider caching the result: np.rec.array(a)",
-        "messageId": "CRC001",
-        "module": "test_records",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 12,
-                "endColumn": 27,
-                "endLine": 128,
-                "line": 128
-            },
-            {
-                "column": 21,
-                "endColumn": 36,
-                "endLine": 138,
-                "line": 138
-            }
-        ],
-        "path": "numpy/_core/tests/test_records.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_records.py"
-    },
-    "bd9516b9": {
-        "additionalInfo": {
-            "callString": "finfo(half)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "bd9516b9",
-        "message": "Repeated function call detected (2/2). Consider caching the result: finfo(half)",
-        "messageId": "CRC001",
-        "module": "test_getlimits",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 16,
-                "endColumn": 27,
-                "endLine": 25,
-                "line": 25
-            },
-            {
-                "column": 17,
-                "endColumn": 28,
-                "endLine": 26,
-                "line": 26
-            }
-        ],
-        "path": "numpy/_core/tests/test_getlimits.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_getlimits.py"
-    },
-    "cead2462": {
-        "additionalInfo": {
-            "callString": "np.char.join([',', '#'], A0)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "cead2462",
-        "message": "Repeated function call detected (2/2). Consider caching the result: np.char.join([',', '#'], A0)",
-        "messageId": "CRC001",
-        "module": "test_defchararray",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 12,
-                "endColumn": 40,
-                "endLine": 396,
-                "line": 396
-            },
-            {
-                "column": 27,
-                "endColumn": 55,
-                "endLine": 401,
-                "line": 401
-            }
-        ],
-        "path": "numpy/_core/tests/test_defchararray.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_defchararray.py"
-    },
-    "7bdaaf49": {
-        "additionalInfo": {
-            "callString": "np.fromfile(fname, like=ref)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7bdaaf49",
-        "message": "Repeated function call detected (2/2). Consider caching the result: np.fromfile(fname, like=ref)",
-        "messageId": "CRC001",
-        "module": "test_overrides",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 53,
-                "endLine": 724,
-                "line": 724
-            },
-            {
-                "column": 25,
-                "endColumn": 53,
-                "endLine": 727,
-                "line": 727
-            }
-        ],
-        "path": "numpy/_core/tests/test_overrides.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_overrides.py"
-    },
-    "4c116ecf": {
-        "additionalInfo": {
-            "callString": "len(c)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 4
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4c116ecf",
-        "message": "Repeated function call detected (4/2). Consider caching the result: len(c)",
-        "messageId": "CRC001",
-        "module": "legendre",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 7,
-                "endColumn": 13,
-                "endLine": 895,
-                "line": 895
-            },
-            {
-                "column": 9,
-                "endColumn": 15,
-                "endLine": 898,
-                "line": 898
-            },
-            {
-                "column": 13,
-                "endColumn": 19,
-                "endLine": 902,
-                "line": 902
-            },
-            {
-                "column": 26,
-                "endColumn": 32,
-                "endLine": 905,
-                "line": 905
-            }
-        ],
-        "path": "numpy/polynomial/legendre.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/legendre.py"
-    },
-    "71ce3e2d": {
+    "ec36975b": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -451,71 +13,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "71ce3e2d",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "numpy.distutils.command.config",
-        "obj": "config._link",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 13,
-                "endLine": 112,
-                "line": 112
-            }
-        ],
-        "path": "numpy/distutils/command/config.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/config.py"
-    },
-    "491794f9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "491794f9",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "numpy.testing._private.utils",
-        "obj": "assert_allclose",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 19,
-                "endLine": 1604,
-                "line": 1604
-            }
-        ],
-        "path": "numpy/testing/_private/utils.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
-    },
-    "50a14b6d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "50a14b6d",
+        "id": "ec36975b",
         "message": "Too many arguments (25/6)",
         "messageId": "R0913",
         "module": "numpy.lib._npyio_impl",
@@ -524,8 +22,8 @@
             {
                 "column": 0,
                 "endColumn": 14,
-                "endLine": 1750,
-                "line": 1750
+                "endLine": 1756,
+                "line": 1756
             }
         ],
         "path": "numpy/lib/_npyio_impl.py",
@@ -533,7 +31,7 @@
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
     },
-    "e1e7ac9e": {
+    "06db73ba": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -547,17 +45,81 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "e1e7ac9e",
-        "message": "Too many arguments (16/6)",
+        "id": "06db73ba",
+        "message": "Too many arguments (9/6)",
         "messageId": "R0913",
-        "module": "numpy.ma.mrecords",
-        "obj": "MaskedRecords.__new__",
+        "module": "numpy._core.fromnumeric",
+        "obj": "var",
         "occurences": [
             {
-                "column": 4,
+                "column": 0,
+                "endColumn": 7,
+                "endLine": 4079,
+                "line": 4079
+            }
+        ],
+        "path": "numpy/_core/fromnumeric.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py"
+    },
+    "a1c90839": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a1c90839",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "numpy.lib._nanfunctions_impl",
+        "obj": "nansum",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 10,
+                "endLine": 641,
+                "line": 641
+            }
+        ],
+        "path": "numpy/lib/_nanfunctions_impl.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
+    },
+    "8dc6a368": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8dc6a368",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "numpy.ma.mrecords",
+        "obj": "fromrecords",
+        "occurences": [
+            {
+                "column": 0,
                 "endColumn": 15,
-                "endLine": 94,
-                "line": 94
+                "endLine": 543,
+                "line": 543
             }
         ],
         "path": "numpy/ma/mrecords.py",
@@ -565,7 +127,7 @@
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py"
     },
-    "fd92fb7a": {
+    "f24b92be": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -579,7 +141,7 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "fd92fb7a",
+        "id": "f24b92be",
         "message": "Too many arguments (11/6)",
         "messageId": "R0913",
         "module": "numpy._core.records",
@@ -588,8 +150,8 @@
             {
                 "column": 0,
                 "endColumn": 9,
-                "endLine": 943,
-                "line": 943
+                "endLine": 949,
+                "line": 949
             }
         ],
         "path": "numpy/_core/records.py",
@@ -597,7 +159,7 @@
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
     },
-    "7e9c9349": {
+    "53941361": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -611,637 +173,449 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "7e9c9349",
-        "message": "Too many arguments (14/6)",
+        "id": "53941361",
+        "message": "Too many arguments (16/6)",
         "messageId": "R0913",
-        "module": "numpy.distutils.mingw32ccompiler",
-        "obj": "Mingw32CCompiler.link",
+        "module": "numpy.ma.mrecords",
+        "obj": "MaskedRecords.__new__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 100,
+                "line": 100
+            }
+        ],
+        "path": "numpy/ma/mrecords.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py"
+    },
+    "a42b67b1": {
+        "additionalInfo": {
+            "callString": "recurser(index + (-i,), next_hanging_indent, next_width)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a42b67b1",
+        "message": "Repeated function call detected (2/2). Consider caching the result: recurser(index + (-i,), next_hanging_indent, next_width)",
+        "messageId": "CRC001",
+        "module": "arrayprint",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 35,
+                "endColumn": 91,
+                "endLine": 916,
+                "line": 916
+            },
+            {
+                "column": 37,
+                "endColumn": 57,
+                "endLine": 954,
+                "line": 953
+            }
+        ],
+        "path": "numpy/_core/arrayprint.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
+    },
+    "eaba9c73": {
+        "additionalInfo": {
+            "callString": "result.reshape(1)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "eaba9c73",
+        "message": "Repeated function call detected (2/2). Consider caching the result: result.reshape(1)",
+        "messageId": "CRC001",
+        "module": "shape_base",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 33,
+                "endColumn": 50,
+                "endLine": 71,
+                "line": 71
+            },
+            {
+                "column": 33,
+                "endColumn": 50,
+                "endLine": 80,
+                "line": 80
+            }
+        ],
+        "path": "numpy/_core/shape_base.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/shape_base.py"
+    },
+    "8f74fb82": {
+        "additionalInfo": {
+            "callString": "exp2(ld(-16382))",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8f74fb82",
+        "message": "Repeated function call detected (2/2). Consider caching the result: exp2(ld(-16382))",
+        "messageId": "CRC001",
+        "module": "getlimits",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 44,
+                "endLine": 238,
+                "line": 238
+            },
+            {
+                "column": 27,
+                "endColumn": 43,
+                "endLine": 266,
+                "line": 266
+            }
+        ],
+        "path": "numpy/_core/getlimits.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/getlimits.py"
+    },
+    "f01cf97b": {
+        "additionalInfo": {
+            "callString": "self._possible_names(path)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f01cf97b",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._possible_names(path)",
+        "messageId": "CRC001",
+        "module": "_datasource",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 35,
+                "endColumn": 61,
+                "endLine": 361,
+                "line": 361
+            },
+            {
+                "column": 46,
+                "endColumn": 72,
+                "endLine": 371,
+                "line": 371
+            }
+        ],
+        "path": "numpy/lib/_datasource.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py"
+    },
+    "12dd0cbf": {
+        "additionalInfo": {
+            "callString": "fp.tell()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "12dd0cbf",
+        "message": "Repeated function call detected (2/2). Consider caching the result: fp.tell()",
+        "messageId": "CRC001",
+        "module": "_format_impl",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 33,
+                "endColumn": 42,
+                "endLine": 974,
+                "line": 974
+            },
+            {
+                "column": 33,
+                "endColumn": 42,
+                "endLine": 989,
+                "line": 989
+            }
+        ],
+        "path": "numpy/lib/_format_impl.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py"
+    },
+    "8666ebf0": {
+        "additionalInfo": {
+            "callString": "names.split(\",\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8666ebf0",
+        "message": "Repeated function call detected (2/2). Consider caching the result: names.split(\",\")",
+        "messageId": "CRC001",
+        "module": "_iotools",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 36,
+                "endColumn": 52,
+                "endLine": 885,
+                "line": 885
+            },
+            {
+                "column": 32,
+                "endColumn": 48,
+                "endLine": 880,
+                "line": 880
+            }
+        ],
+        "path": "numpy/lib/_iotools.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_iotools.py"
+    },
+    "29620294": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "29620294",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "numpy._core._internal",
+        "obj": "_missing_ctypes.cast",
         "occurences": [
             {
                 "column": 4,
                 "endColumn": 12,
-                "endLine": 114,
-                "line": 114
+                "endLine": 264,
+                "line": 264
             }
         ],
-        "path": "numpy/distutils/mingw32ccompiler.py",
-        "symbol": "too-many-arguments",
+        "path": "numpy/_core/_internal.py",
+        "symbol": "no-self-use",
         "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/mingw32ccompiler.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py"
     },
-    "3250f205": {
+    "bf269a73": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": null
         },
-        "confidence": "UNDEFINED",
+        "confidence": "INFERENCE",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "3250f205",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "test_einsum",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 12,
-                "endColumn": 61,
-                "endLine": 858,
-                "line": 858
-            }
-        ],
-        "path": "numpy/_core/tests/test_einsum.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_einsum.py"
-    },
-    "677b3046": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "677b3046",
-        "message": "Method chain too long (4/3)",
-        "messageId": "LMC001",
-        "module": "matlib",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 78,
-                "endLine": 379,
-                "line": 379
-            }
-        ],
-        "path": "numpy/matlib.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/matlib.py"
-    },
-    "a92eae9f": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a92eae9f",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "test_arrayprint",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 13,
-                "endColumn": 58,
-                "endLine": 415,
-                "line": 414
-            }
-        ],
-        "path": "numpy/_core/tests/test_arrayprint.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_arrayprint.py"
-    },
-    "04897f8b": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "04897f8b",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "test_nditer",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 62,
-                "endLine": 1542,
-                "line": 1542
-            }
-        ],
-        "path": "numpy/_core/tests/test_nditer.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_nditer.py"
-    },
-    "50dbdfb1": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "50dbdfb1",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "test_generator_mt19937",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 12,
-                "endColumn": 53,
-                "endLine": 1108,
-                "line": 1108
-            }
-        ],
-        "path": "numpy/random/tests/test_generator_mt19937.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/random/tests/test_generator_mt19937.py"
-    },
-    "26feb8ae": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "26feb8ae",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "test_umath",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 23,
-                "endColumn": 53,
-                "endLine": 3169,
-                "line": 3169
-            }
-        ],
-        "path": "numpy/_core/tests/test_umath.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_umath.py"
-    },
-    "0bf02cf1": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "0bf02cf1",
-        "message": "Dictionary chain too long (4/3)",
-        "messageId": "LEC001",
-        "module": "test_regression",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 21,
-                "endColumn": 42,
-                "endLine": 1874,
-                "line": 1874
-            }
-        ],
-        "path": "numpy/_core/tests/test_regression.py",
-        "symbol": "long-element-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_regression.py"
-    },
-    "4d709b8d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4d709b8d",
-        "message": "Dictionary chain too long (3/3)",
-        "messageId": "LEC001",
-        "module": "test_numerictypes",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 52,
-                "endLine": 305,
-                "line": 305
-            }
-        ],
-        "path": "numpy/_core/tests/test_numerictypes.py",
-        "symbol": "long-element-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_numerictypes.py"
-    },
-    "77f26c8b": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "77f26c8b",
-        "message": "Dictionary chain too long (3/3)",
-        "messageId": "LEC001",
-        "module": "test_core",
-        "obj": null,
+        "id": "bf269a73",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "numpy.distutils.fcompiler.arm",
+        "obj": "ArmFlangCompiler.get_flags",
         "occurences": [
             {
                 "column": 4,
-                "endColumn": 16,
-                "endLine": 5735,
-                "line": 5735
+                "endColumn": 17,
+                "endLine": 57,
+                "line": 57
             }
         ],
-        "path": "numpy/ma/tests/test_core.py",
-        "symbol": "long-element-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/tests/test_core.py"
-    },
-    "3032a27c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3032a27c",
-        "message": "Dictionary chain too long (3/3)",
-        "messageId": "LEC001",
-        "module": "test_nditer",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 27,
-                "endColumn": 44,
-                "endLine": 1498,
-                "line": 1498
-            }
-        ],
-        "path": "numpy/_core/tests/test_nditer.py",
-        "symbol": "long-element-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_nditer.py"
-    },
-    "dadc6b17": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "dadc6b17",
-        "message": "Dictionary chain too long (3/3)",
-        "messageId": "LEC001",
-        "module": "test_regression",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 25,
-                "endLine": 201,
-                "line": 201
-            }
-        ],
-        "path": "numpy/_core/tests/test_regression.py",
-        "symbol": "long-element-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_regression.py"
-    },
-    "1b5d9d4d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "1b5d9d4d",
-        "message": "Dictionary chain too long (3/3)",
-        "messageId": "LEC001",
-        "module": "test_records",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 21,
-                "endColumn": 37,
-                "endLine": 328,
-                "line": 328
-            }
-        ],
-        "path": "numpy/_core/tests/test_records.py",
-        "symbol": "long-element-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_records.py"
-    },
-    "2f7ffaa9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "2f7ffaa9",
-        "message": "Use a generator instead 'all(x == y for (x, y) in i)'",
-        "messageId": "R1729",
-        "module": "test_nditer",
-        "obj": "test_iter_op_axes",
-        "occurences": [
-            {
-                "column": 12,
-                "endColumn": 41,
-                "endLine": 1301,
-                "line": 1301
-            }
-        ],
-        "path": "numpy/_core/tests/test_nditer.py",
-        "symbol": "use-a-generator",
+        "path": "numpy/distutils/fcompiler/arm.py",
+        "symbol": "no-self-use",
         "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_nditer.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py"
     },
-    "47fbdfe9": {
+    "d548bfe8": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": null
         },
-        "confidence": "UNDEFINED",
+        "confidence": "INFERENCE",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "47fbdfe9",
-        "message": "Use a generator instead 'all(x == y for (x, y) in i)'",
-        "messageId": "R1729",
-        "module": "test_nditer",
-        "obj": "test_iter_op_axes",
+        "id": "d548bfe8",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "numpy.distutils.ccompiler_opt",
+        "obj": "_Cache.cache_hash",
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 41,
-                "endLine": 1298,
-                "line": 1298
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 889,
+                "line": 889
             }
         ],
-        "path": "numpy/_core/tests/test_nditer.py",
-        "symbol": "use-a-generator",
+        "path": "numpy/distutils/ccompiler_opt.py",
+        "symbol": "no-self-use",
         "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_nditer.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/ccompiler_opt.py"
     },
-    "53faf437": {
+    "1b16b69b": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": null
         },
-        "confidence": "UNDEFINED",
+        "confidence": "INFERENCE",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "53faf437",
-        "message": "Lambda function too long (7/5 expressions)",
-        "messageId": "LLE001",
-        "module": "test_umath",
-        "obj": null,
+        "id": "1b16b69b",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "numpy.distutils.command.build_src",
+        "obj": "build_src.filter_files",
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 9,
-                "endLine": 581,
-                "line": 579
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 398,
+                "line": 398
             }
         ],
-        "path": "numpy/_core/tests/test_umath.py",
-        "symbol": "long-lambda-expr",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_umath.py"
+        "path": "numpy/distutils/command/build_src.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/build_src.py"
     },
-    "81f0244d": {
+    "a662500a": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": null
         },
-        "confidence": "UNDEFINED",
+        "confidence": "INFERENCE",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "81f0244d",
-        "message": "Lambda function too long (7/5 expressions)",
-        "messageId": "LLE001",
-        "module": "test_umath",
-        "obj": null,
+        "id": "a662500a",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "numpy.distutils.fcompiler.mips",
+        "obj": "MIPSFCompiler.get_flags_arch_f77",
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 9,
-                "endLine": 520,
-                "line": 516
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 38,
+                "line": 38
             }
         ],
-        "path": "numpy/_core/tests/test_umath.py",
-        "symbol": "long-lambda-expr",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/tests/test_umath.py"
+        "path": "numpy/distutils/fcompiler/mips.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/mips.py"
     },
-    "a71c863e": {
+    "2b7b9645": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": null
         },
-        "confidence": "UNDEFINED",
+        "confidence": "INFERENCE",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "a71c863e",
-        "message": "Lambda function too long (5/5 expressions)",
-        "messageId": "LLE001",
-        "module": "_function_base_impl",
-        "obj": null,
+        "id": "2b7b9645",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "numpy.distutils.fcompiler.sun",
+        "obj": "SunFCompiler.runtime_library_dir_option",
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 78,
-                "endLine": 4702,
-                "line": 4702
+                "column": 4,
+                "endColumn": 34,
+                "endLine": 46,
+                "line": 46
             }
         ],
-        "path": "numpy/lib/_function_base_impl.py",
-        "symbol": "long-lambda-expr",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
+        "path": "numpy/distutils/fcompiler/sun.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/sun.py"
     },
-    "de374648": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "de374648",
-        "message": "Lambda function too long (11/5 expressions)",
-        "messageId": "LLE001",
-        "module": "test_io",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 20,
-                "endColumn": 83,
-                "endLine": 1639,
-                "line": 1638
-            }
-        ],
-        "path": "numpy/lib/tests/test_io.py",
-        "symbol": "long-lambda-expr",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/tests/test_io.py"
-    },
-    "ec5148f5": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ec5148f5",
-        "message": "Lambda function too long (11/5 expressions)",
-        "messageId": "LLE001",
-        "module": "test_io",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 21,
-                "endColumn": 84,
-                "endLine": 1637,
-                "line": 1636
-            }
-        ],
-        "path": "numpy/lib/tests/test_io.py",
-        "symbol": "long-lambda-expr",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/tests/test_io.py"
-    },
-    "6f767f37": {
+    "050c312a": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": "path_print",
-            "innerLoopLine": 1039,
+            "innerLoopLine": 1041,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -1251,17 +625,17 @@
             "start": 1039,
             "useOccurences": false
         },
-        "id": "6f767f37",
+        "id": "050c312a",
         "message": "String concatenation inside loop detected",
         "messageId": "SCL001",
         "module": "einsumfunc.py",
         "obj": null,
         "occurences": [
             {
-                "column": 8,
-                "endColumn": 65,
-                "endLine": 1043,
-                "line": 1043
+                "column": 12,
+                "endColumn": 69,
+                "endLine": 1045,
+                "line": 1045
             }
         ],
         "path": "numpy/_core/einsumfunc.py",
@@ -1269,11 +643,43 @@
         "type": "performance",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
     },
-    "73c742dd": {
+    "2a61e075": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "output_subscript",
+            "innerLoopLine": 694,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 696,
+            "isFunc": false,
+            "start": 692,
+            "useOccurences": false
+        },
+        "id": "2a61e075",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "einsumfunc.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 63,
+                "endLine": 698,
+                "line": 698
+            }
+        ],
+        "path": "numpy/_core/einsumfunc.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
+    },
+    "58bf0058": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": "subscripts",
-            "innerLoopLine": 606,
+            "innerLoopLine": 608,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -1283,17 +689,17 @@
             "start": 606,
             "useOccurences": false
         },
-        "id": "73c742dd",
+        "id": "58bf0058",
         "message": "String concatenation inside loop detected",
         "messageId": "SCL001",
         "module": "einsumfunc.py",
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 45,
-                "endLine": 620,
-                "line": 620
+                "column": 20,
+                "endColumn": 49,
+                "endLine": 622,
+                "line": 622
             }
         ],
         "path": "numpy/_core/einsumfunc.py",
@@ -1301,11 +707,11 @@
         "type": "performance",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
     },
-    "a674bf37": {
+    "c432c236": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": "subscripts",
-            "innerLoopLine": 624,
+            "innerLoopLine": 626,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -1315,17 +721,17 @@
             "start": 624,
             "useOccurences": false
         },
-        "id": "a674bf37",
+        "id": "c432c236",
         "message": "String concatenation inside loop detected",
         "messageId": "SCL001",
         "module": "einsumfunc.py",
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 51,
-                "endLine": 626,
-                "line": 626
+                "column": 24,
+                "endColumn": 55,
+                "endLine": 628,
+                "line": 628
             },
             {
                 "column": 20,
@@ -1339,11 +745,11 @@
         "type": "performance",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
     },
-    "b1b603c6": {
+    "db50d3b0": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": "subscripts",
-            "innerLoopLine": 607,
+            "innerLoopLine": 609,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -1353,17 +759,17 @@
             "start": 606,
             "useOccurences": false
         },
-        "id": "b1b603c6",
+        "id": "db50d3b0",
         "message": "String concatenation inside loop detected",
         "messageId": "SCL001",
         "module": "einsumfunc.py",
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 51,
-                "endLine": 609,
-                "line": 609
+                "column": 24,
+                "endColumn": 55,
+                "endLine": 611,
+                "line": 611
             },
             {
                 "column": 20,
@@ -1377,36 +783,132 @@
         "type": "performance",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
     },
-    "b4aeb41d": {
+    "3d27f9c5": {
         "additionalInfo": {
             "callString": null,
-            "concatTarget": "output_subscript",
-            "innerLoopLine": 692,
+            "concatTarget": null,
+            "innerLoopLine": null,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": 696,
+            "end": null,
             "isFunc": false,
-            "start": 692,
-            "useOccurences": false
+            "start": null,
+            "useOccurences": true
         },
-        "id": "b4aeb41d",
-        "message": "String concatenation inside loop detected",
-        "messageId": "SCL001",
-        "module": "einsumfunc.py",
+        "id": "3d27f9c5",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "einsumfunc",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 81,
+                "endLine": 646,
+                "line": 646
+            }
+        ],
+        "path": "numpy/_core/einsumfunc.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
+    },
+    "64cee6dc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "64cee6dc",
+        "message": "Method chain too long (4/3)",
+        "messageId": "LMC001",
+        "module": "matlib",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 82,
+                "endLine": 381,
+                "line": 381
+            }
+        ],
+        "path": "numpy/matlib.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/matlib.py"
+    },
+    "1a72f208": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1a72f208",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "core",
         "obj": null,
         "occurences": [
             {
                 "column": 20,
-                "endColumn": 59,
-                "endLine": 696,
-                "line": 696
+                "endColumn": 79,
+                "endLine": 5019,
+                "line": 5019
             }
         ],
-        "path": "numpy/_core/einsumfunc.py",
-        "symbol": "string-concat-loop",
-        "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
+        "path": "numpy/ma/core.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
+    },
+    "b89c2eb1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b89c2eb1",
+        "message": "Lambda function too long (5/5 expressions)",
+        "messageId": "LLE001",
+        "module": "_function_base_impl",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 82,
+                "endLine": 4704,
+                "line": 4704
+            }
+        ],
+        "path": "numpy/lib/_function_base_impl.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
     }
 }

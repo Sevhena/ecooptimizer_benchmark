@@ -1,0 +1,17 @@
+diff --git a/numpy/distutils/fcompiler/arm.py b/numpy/distutils/fcompiler/arm.py
+index 3eb7e9af9c..f3b92bcad8 100644
+--- a/numpy/distutils/fcompiler/arm.py
++++ b/numpy/distutils/fcompiler/arm.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ import sys                                                                     
+                                                                                
+ from numpy.distutils.fcompiler import FCompiler, dummy_fortran_file
+@@ -52,6 +53,7 @@ def get_flags_free(self):
+ 
+     def get_flags_debug(self):
+         return ['-g']
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_bf269a73', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/bf269a73.csv')
+ 
+     def get_flags_opt(self):
+         return ['-O3']

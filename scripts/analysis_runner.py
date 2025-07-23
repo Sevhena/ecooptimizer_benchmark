@@ -126,7 +126,7 @@ def run_analysis(repo_name: str) -> None:
             process = subprocess.Popen(
                 [
                     "ecooptimizer",
-                    "-a",
+                    "analyze",
                     "--root",
                     f"repositories/{repo_name}",
                     "--target",
@@ -135,6 +135,8 @@ def run_analysis(repo_name: str) -> None:
                     ",".join(exclusions),
                     "--analysis-results-file",
                     f"{RAW_SMELLS_DIR.relative_to(CURRENT_DIR)}/{repo_name}.json",
+                    "--log_dir",
+                    f"{LOG_DIR / 'ecooptimizer' / repo_name}",
                 ],
                 stdout=log_file,
                 stderr=subprocess.STDOUT,
@@ -308,7 +310,13 @@ def analyze_new_repos(new_repos: list[str]):
     failed_analyses = []
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        results = executor.map(process_repository, new_repos)
+        try:
+            results = executor.map(process_repository, new_repos)
+        except KeyboardInterrupt:
+            executor.shutdown(wait=False)
+            raise
+        finally:
+            executor.shutdown(wait=True)
 
     for repo_name, success in results:
         if not success:

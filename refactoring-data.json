@@ -1,0 +1,9 @@
+{
+    "affectedFiles": [],
+    "energySaved": 0.0,
+    "targetFile": {
+        "original": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/devices.py",
+        "refactored": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/devices.py"
+    },
+    "tempDir": ""
+}

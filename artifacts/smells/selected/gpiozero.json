@@ -1,104 +1,197 @@
 {
-  "20ce3f3a": {
+  "c8dd9144": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
       "innerLoopLine": null,
       "repetitions": null
     },
-    "confidence": "UNDEFINED",
+    "confidence": "INFERENCE",
     "energyMetadata": {
       "end": null,
       "isFunc": true,
       "start": null,
       "useOccurences": true
     },
-    "id": "20ce3f3a",
-    "message": "Too many arguments (9/6)",
-    "messageId": "R0913",
-    "module": "gpiozero.input_devices",
-    "obj": "LineSensor.__init__",
+    "id": "c8dd9144",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "gpiozero.mixins",
+    "obj": "event._wrap_callback",
     "occurences": [
       {
         "column": 4,
-        "endColumn": 16,
-        "endLine": 496,
-        "line": 496
+        "endColumn": 22,
+        "endLine": 165,
+        "line": 165
       }
     ],
-    "path": "gpiozero/input_devices.py",
-    "symbol": "too-many-arguments",
+    "path": "gpiozero/mixins.py",
+    "symbol": "no-self-use",
     "type": "refactor",
-    "relPath": "gpiozero/input_devices.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/input_devices.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/mixins.py"
   },
-  "d7382444": {
+  "ff83f704": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
       "innerLoopLine": null,
       "repetitions": null
     },
-    "confidence": "UNDEFINED",
+    "confidence": "INFERENCE",
     "energyMetadata": {
       "end": null,
       "isFunc": true,
       "start": null,
       "useOccurences": true
     },
-    "id": "d7382444",
-    "message": "Too many arguments (11/6)",
-    "messageId": "R0913",
-    "module": "gpiozero.pins.mock",
-    "obj": "MockSPIDevice.__init__",
+    "id": "ff83f704",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "gpiozero.pins",
+    "obj": "Pin._get_when_changed",
     "occurences": [
       {
         "column": 4,
-        "endColumn": 16,
-        "endLine": 337,
-        "line": 337
+        "endColumn": 25,
+        "endLine": 462,
+        "line": 462
       }
     ],
-    "path": "gpiozero/pins/mock.py",
-    "symbol": "too-many-arguments",
+    "path": "gpiozero/pins/__init__.py",
+    "symbol": "no-self-use",
     "type": "refactor",
-    "relPath": "gpiozero/pins/mock.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/mock.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
   },
-  "113b016d": {
+  "c5aae0e5": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
       "innerLoopLine": null,
       "repetitions": null
     },
-    "confidence": "UNDEFINED",
+    "confidence": "INFERENCE",
     "energyMetadata": {
       "end": null,
       "isFunc": true,
       "start": null,
       "useOccurences": true
     },
-    "id": "113b016d",
-    "message": "Too many arguments (8/6)",
-    "messageId": "R0913",
-    "module": "gpiozero.boards",
-    "obj": "ButtonBoard.__init__",
+    "id": "c5aae0e5",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "gpiozero.pins",
+    "obj": "SPI._get_select_high",
     "occurences": [
       {
         "column": 4,
-        "endColumn": 16,
-        "endLine": 215,
-        "line": 215
+        "endColumn": 24,
+        "endLine": 733,
+        "line": 733
       }
     ],
-    "path": "gpiozero/boards.py",
-    "symbol": "too-many-arguments",
+    "path": "gpiozero/pins/__init__.py",
+    "symbol": "no-self-use",
     "type": "refactor",
-    "relPath": "gpiozero/boards.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/boards.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
   },
-  "ee9056c0": {
+  "d948ded5": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d948ded5",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "gpiozero.pins",
+    "obj": "SPI._get_bits_per_word",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 26,
+        "endLine": 779,
+        "line": 779
+      }
+    ],
+    "path": "gpiozero/pins/__init__.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
+  },
+  "a40bd959": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a40bd959",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "gpiozero.internal_devices",
+    "obj": "TimeOfDay._validate_time",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 22,
+        "endLine": 556,
+        "line": 556
+      }
+    ],
+    "path": "gpiozero/internal_devices.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/internal_devices.py"
+  },
+  "02f79a90": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "02f79a90",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "gpiozero.pins",
+    "obj": "Factory.pin",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 11,
+        "endLine": 134,
+        "line": 134
+      }
+    ],
+    "path": "gpiozero/pins/__init__.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
+  },
+  "46fdee03": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -112,26 +205,25 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "ee9056c0",
+    "id": "46fdee03",
     "message": "Too many arguments (7/6)",
     "messageId": "R0913",
-    "module": "gpiozero.boards",
-    "obj": "LEDCharDisplay.__init__",
+    "module": "gpiozero.mixins",
+    "obj": "GPIOQueue.__init__",
     "occurences": [
       {
         "column": 4,
         "endColumn": 16,
-        "endLine": 945,
-        "line": 945
+        "endLine": 547,
+        "line": 547
       }
     ],
-    "path": "gpiozero/boards.py",
+    "path": "gpiozero/mixins.py",
     "symbol": "too-many-arguments",
     "type": "refactor",
-    "relPath": "gpiozero/boards.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/boards.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/mixins.py"
   },
-  "ddaf68bd": {
+  "d091a9bd": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -145,7 +237,7 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "ddaf68bd",
+    "id": "d091a9bd",
     "message": "Too many arguments (11/6)",
     "messageId": "R0913",
     "module": "gpiozero.input_devices",
@@ -161,10 +253,9 @@
     "path": "gpiozero/input_devices.py",
     "symbol": "too-many-arguments",
     "type": "refactor",
-    "relPath": "gpiozero/input_devices.py",
     "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/input_devices.py"
   },
-  "b4075d76": {
+  "e50ab4c5": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -178,26 +269,121 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "b4075d76",
-    "message": "Too many arguments (7/6)",
+    "id": "e50ab4c5",
+    "message": "Too many arguments (9/6)",
     "messageId": "R0913",
     "module": "gpiozero.input_devices",
-    "obj": "LightSensor.__init__",
+    "obj": "LineSensor.__init__",
     "occurences": [
       {
         "column": 4,
         "endColumn": 16,
-        "endLine": 665,
-        "line": 665
+        "endLine": 496,
+        "line": 496
       }
     ],
     "path": "gpiozero/input_devices.py",
     "symbol": "too-many-arguments",
     "type": "refactor",
-    "relPath": "gpiozero/input_devices.py",
     "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/input_devices.py"
   },
-  "08eeb6ae": {
+  "d69d8cb0": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d69d8cb0",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "gpiozero.input_devices",
+    "obj": "DistanceSensor.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 823,
+        "line": 823
+      }
+    ],
+    "path": "gpiozero/input_devices.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/input_devices.py"
+  },
+  "335ba7b0": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "335ba7b0",
+    "message": "Too many arguments (11/6)",
+    "messageId": "R0913",
+    "module": "gpiozero.pins.mock",
+    "obj": "MockSPIDevice.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 337,
+        "line": 337
+      }
+    ],
+    "path": "gpiozero/pins/mock.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/mock.py"
+  },
+  "ffa3106a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ffa3106a",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "gpiozero.input_devices",
+    "obj": "RotaryEncoder.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 1129,
+        "line": 1129
+      }
+    ],
+    "path": "gpiozero/input_devices.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/input_devices.py"
+  },
+  "4851eebf": {
     "additionalInfo": {
       "callString": "next(it)",
       "concatTarget": null,
@@ -211,124 +397,7 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "08eeb6ae",
-    "message": "Repeated function call detected (2/2). Consider caching the result: next(it)",
-    "messageId": "CRC001",
-    "module": "tools",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 19,
-        "endColumn": 27,
-        "endLine": 479,
-        "line": 479
-      },
-      {
-        "column": 21,
-        "endColumn": 29,
-        "endLine": 476,
-        "line": 476
-      }
-    ],
-    "path": "gpiozero/tools.py",
-    "symbol": "cached-repeated-calls",
-    "type": "performance",
-    "relPath": "gpiozero/tools.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/tools.py"
-  },
-  "69612c60": {
-    "additionalInfo": {
-      "callString": "len(self._named)",
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": 2
-    },
-    "confidence": "MEDIUM",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "69612c60",
-    "message": "Repeated function call detected (2/2). Consider caching the result: len(self._named)",
-    "messageId": "CRC001",
-    "module": "devices",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 20,
-        "endColumn": 36,
-        "endLine": 459,
-        "line": 459
-      },
-      {
-        "column": 34,
-        "endColumn": 50,
-        "endLine": 461,
-        "line": 461
-      }
-    ],
-    "path": "gpiozero/devices.py",
-    "symbol": "cached-repeated-calls",
-    "type": "performance",
-    "relPath": "gpiozero/devices.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/devices.py"
-  },
-  "b5c6f286": {
-    "additionalInfo": {
-      "callString": "super().__call__(*args, **kwargs)",
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": 2
-    },
-    "confidence": "MEDIUM",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "b5c6f286",
-    "message": "Repeated function call detected (2/2). Consider caching the result: super().__call__(*args, **kwargs)",
-    "messageId": "CRC001",
-    "module": "devices",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 19,
-        "endColumn": 52,
-        "endLine": 108,
-        "line": 108
-      },
-      {
-        "column": 23,
-        "endColumn": 56,
-        "endLine": 83,
-        "line": 83
-      }
-    ],
-    "path": "gpiozero/devices.py",
-    "symbol": "cached-repeated-calls",
-    "type": "performance",
-    "relPath": "gpiozero/devices.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/devices.py"
-  },
-  "dced41ea": {
-    "additionalInfo": {
-      "callString": "next(it)",
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": 2
-    },
-    "confidence": "MEDIUM",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "dced41ea",
+    "id": "4851eebf",
     "message": "Repeated function call detected (2/2). Consider caching the result: next(it)",
     "messageId": "CRC001",
     "module": "tools",
@@ -350,274 +419,123 @@
     "path": "gpiozero/tools.py",
     "symbol": "cached-repeated-calls",
     "type": "performance",
-    "relPath": "gpiozero/tools.py",
     "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/tools.py"
   },
-  "1670dd3a": {
+  "60d9e393": {
     "additionalInfo": {
-      "callString": null,
+      "callString": "next(it)",
       "concatTarget": null,
       "innerLoopLine": null,
-      "repetitions": null
+      "repetitions": 2
     },
-    "confidence": "INFERENCE",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "1670dd3a",
-    "message": "Method could be a function",
-    "messageId": "R6301",
-    "module": "gpiozero.internal_devices",
-    "obj": "TimeOfDay._validate_time",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 22,
-        "endLine": 556,
-        "line": 556
-      }
-    ],
-    "path": "gpiozero/internal_devices.py",
-    "symbol": "no-self-use",
-    "type": "refactor",
-    "relPath": "gpiozero/internal_devices.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/internal_devices.py"
-  },
-  "51c9fc52": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "INFERENCE",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "51c9fc52",
-    "message": "Method could be a function",
-    "messageId": "R6301",
-    "module": "gpiozero.pins",
-    "obj": "SPI._get_select_high",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 24,
-        "endLine": 733,
-        "line": 733
-      }
-    ],
-    "path": "gpiozero/pins/__init__.py",
-    "symbol": "no-self-use",
-    "type": "refactor",
-    "relPath": "gpiozero/pins/__init__.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
-  },
-  "f22c3019": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "INFERENCE",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "f22c3019",
-    "message": "Method could be a function",
-    "messageId": "R6301",
-    "module": "gpiozero.pins",
-    "obj": "Pin._get_bounce",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 19,
-        "endLine": 390,
-        "line": 390
-      }
-    ],
-    "path": "gpiozero/pins/__init__.py",
-    "symbol": "no-self-use",
-    "type": "refactor",
-    "relPath": "gpiozero/pins/__init__.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
-  },
-  "af2936f9": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "INFERENCE",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "af2936f9",
-    "message": "Method could be a function",
-    "messageId": "R6301",
-    "module": "gpiozero.pins",
-    "obj": "SPI._get_bits_per_word",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 26,
-        "endLine": 779,
-        "line": 779
-      }
-    ],
-    "path": "gpiozero/pins/__init__.py",
-    "symbol": "no-self-use",
-    "type": "refactor",
-    "relPath": "gpiozero/pins/__init__.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
-  },
-  "0d39d185": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "INFERENCE",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "0d39d185",
-    "message": "Method could be a function",
-    "messageId": "R6301",
-    "module": "gpiozero.mixins",
-    "obj": "event._wrap_callback",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 22,
-        "endLine": 165,
-        "line": 165
-      }
-    ],
-    "path": "gpiozero/mixins.py",
-    "symbol": "no-self-use",
-    "type": "refactor",
-    "relPath": "gpiozero/mixins.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/mixins.py"
-  },
-  "0b73492a": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "INFERENCE",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "0b73492a",
-    "message": "Method could be a function",
-    "messageId": "R6301",
-    "module": "gpiozero.pins",
-    "obj": "SPI._get_rate",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 17,
-        "endLine": 797,
-        "line": 797
-      }
-    ],
-    "path": "gpiozero/pins/__init__.py",
-    "symbol": "no-self-use",
-    "type": "refactor",
-    "relPath": "gpiozero/pins/__init__.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
-  },
-  "0b83a5ab": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
+    "confidence": "MEDIUM",
     "energyMetadata": {
       "end": null,
       "isFunc": false,
       "start": null,
       "useOccurences": true
     },
-    "id": "0b83a5ab",
-    "message": "Lambda function too long (10/5 expressions)",
-    "messageId": "LLE001",
-    "module": "output_devices",
+    "id": "60d9e393",
+    "message": "Repeated function call detected (2/2). Consider caching the result: next(it)",
+    "messageId": "CRC001",
+    "module": "tools",
     "obj": null,
     "occurences": [
       {
-        "column": 15,
-        "endColumn": 13,
-        "endLine": 1118,
-        "line": 1113
+        "column": 19,
+        "endColumn": 27,
+        "endLine": 479,
+        "line": 479
+      },
+      {
+        "column": 21,
+        "endColumn": 29,
+        "endLine": 476,
+        "line": 476
       }
     ],
-    "path": "gpiozero/output_devices.py",
-    "symbol": "long-lambda-expr",
-    "type": "convention",
-    "relPath": "gpiozero/output_devices.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/output_devices.py"
+    "path": "gpiozero/tools.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/tools.py"
   },
-  "9a05b759": {
+  "d348988a": {
     "additionalInfo": {
-      "callString": null,
+      "callString": "len(self._named)",
       "concatTarget": null,
       "innerLoopLine": null,
-      "repetitions": null
+      "repetitions": 2
     },
-    "confidence": "UNDEFINED",
+    "confidence": "MEDIUM",
     "energyMetadata": {
       "end": null,
       "isFunc": false,
       "start": null,
       "useOccurences": true
     },
-    "id": "9a05b759",
-    "message": "Method chain too long (3/3)",
-    "messageId": "LMC001",
-    "module": "internal_devices",
+    "id": "d348988a",
+    "message": "Repeated function call detected (2/2). Consider caching the result: len(self._named)",
+    "messageId": "CRC001",
+    "module": "devices",
     "obj": null,
     "occurences": [
       {
-        "column": 27,
-        "endColumn": 51,
-        "endLine": 435,
-        "line": 435
+        "column": 20,
+        "endColumn": 36,
+        "endLine": 459,
+        "line": 459
+      },
+      {
+        "column": 34,
+        "endColumn": 50,
+        "endLine": 461,
+        "line": 461
       }
     ],
-    "path": "gpiozero/internal_devices.py",
-    "symbol": "long-message-chain",
-    "type": "convention",
-    "relPath": "gpiozero/internal_devices.py",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/internal_devices.py"
+    "path": "gpiozero/devices.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/devices.py"
   },
-  "fdc627d5": {
+  "fe9bd842": {
+    "additionalInfo": {
+      "callString": "super().__call__(*args, **kwargs)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "fe9bd842",
+    "message": "Repeated function call detected (2/2). Consider caching the result: super().__call__(*args, **kwargs)",
+    "messageId": "CRC001",
+    "module": "devices",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 19,
+        "endColumn": 52,
+        "endLine": 108,
+        "line": 108
+      },
+      {
+        "column": 23,
+        "endColumn": 56,
+        "endLine": 83,
+        "line": 83
+      }
+    ],
+    "path": "gpiozero/devices.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/devices.py"
+  },
+  "7f920cd3": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -631,7 +549,7 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "fdc627d5",
+    "id": "7f920cd3",
     "message": "Method chain too long (3/3)",
     "messageId": "LMC001",
     "module": "boards",
@@ -647,7 +565,70 @@
     "path": "gpiozero/boards.py",
     "symbol": "long-message-chain",
     "type": "convention",
-    "relPath": "gpiozero/boards.py",
     "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/boards.py"
+  },
+  "ddfcea54": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ddfcea54",
+    "message": "Method chain too long (3/3)",
+    "messageId": "LMC001",
+    "module": "internal_devices",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 27,
+        "endColumn": 51,
+        "endLine": 435,
+        "line": 435
+      }
+    ],
+    "path": "gpiozero/internal_devices.py",
+    "symbol": "long-message-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/internal_devices.py"
+  },
+  "e04be5d7": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e04be5d7",
+    "message": "Lambda function too long (10/5 expressions)",
+    "messageId": "LLE001",
+    "module": "output_devices",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 15,
+        "endColumn": 13,
+        "endLine": 1118,
+        "line": 1113
+      }
+    ],
+    "path": "gpiozero/output_devices.py",
+    "symbol": "long-lambda-expr",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/output_devices.py"
   }
 }
