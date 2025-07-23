@@ -14,6 +14,7 @@ ROOT_DIR = Path().resolve()
 ARTIFACTS_DIR = ROOT_DIR / "artifacts"
 WORKTREE_DIR = ROOT_DIR / "worktrees"
 PATCHES_DIR = ARTIFACTS_DIR / "patches"
+ANNOTATED_SMELLS_DIR = ARTIFACTS_DIR / "smells" / "annotated"
 SELECTED_SMELLS_DIR = ARTIFACTS_DIR / "smells" / "selected"
 SELECTED_REPOS_CONFIG = ROOT_DIR / "configs" / "selected.yaml"
 
@@ -173,6 +174,7 @@ def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> N
         subprocess.run(["git", "restore", "."], cwd=worktree_path, check=True)
 
         # Remove any created patches due to possible errors/corruption
+        logging.debug(f"[{smell_id}] Cleaning up created patches.")
         patch_path_original.unlink(missing_ok=True)
         patch_path_refactored.unlink(missing_ok=True)
 
@@ -194,16 +196,55 @@ def load_smells(repo_name: str) -> dict[str, dict]:
     return smells
 
 
-def clear_patches(repo_name: str, smell_id: Optional[str] = None) -> None:
+def clear_patches(
+    repo_name: str, smell_id: Optional[str] = None, smells: Optional[dict] = None
+) -> None:
     """Clear existing patches for a specific smell or all smells in a repo."""
+    annotated_smells_file = ANNOTATED_SMELLS_DIR / f"{repo_name}.json"
+
     if smell_id:
         patch_path = PATCHES_DIR / repo_name / smell_id
         if patch_path.exists():
+            logging.info(f"Removing patches for smell {smell_id} in repo {repo_name}: {patch_path}")
             shutil.rmtree(patch_path)
+        else:
+            logging.debug(f"No patches found for smell {smell_id} in repo {repo_name}")
+
+        if annotated_smells_file.exists():
+            logging.debug(f"Annotated smells file exists: {annotated_smells_file}")
+            with annotated_smells_file.open() as f:
+                annotated_smells = load_smells(repo_name)
+            if smell_id not in annotated_smells:
+                logging.warning(
+                    f"Smell {smell_id} not found in annotated smells for repo {repo_name}. Deleting file."
+                )
+                annotated_smells_file.unlink(missing_ok=True)
+            else:
+                logging.info(
+                    f"Updating annotated smells file for smell {smell_id} in repo {repo_name}"
+                )
+                annotated_smells[smell_id] = smells[smell_id]
+                with annotated_smells_file.open("w") as f:
+                    json.dump(annotated_smells, f, indent=4)
+        else:
+            logging.debug(f"No annotated smells file found for repo {repo_name}")
     else:
         repo_patches_dir = PATCHES_DIR / repo_name
         if repo_patches_dir.exists():
+            logging.info(f"Removing all patches for repo {repo_name}: {repo_patches_dir}")
             shutil.rmtree(repo_patches_dir)
+        else:
+            logging.debug(f"No patches found for repo {repo_name}")
+
+        # Remove the annotated smells file if it exists
+        logging.debug(f"Checking for annotated smells file: {annotated_smells_file}")
+        if annotated_smells_file.exists():
+            logging.info(
+                f"Deleting annotated smells file for repo {repo_name}: {annotated_smells_file}"
+            )
+            annotated_smells_file.unlink(missing_ok=True)
+        else:
+            logging.debug(f"No annotated smells file to delete for repo {repo_name}")
 
 
 # --- Entrypoint ---

@@ -62,8 +62,12 @@ def add_decorator_to_function(file_path: Path, cc_args: str, line_num: int, col_
     lines.insert(line_num - 1, decorator_line)
 
     # Add import if not present
+    first_import_id = next(
+        (i for i, line in enumerate(lines) if "import" in line or "from" in line), 0
+    )
+
     if not any(line.strip().startswith("from codecarbon import track_emissions") for line in lines):
-        lines.insert(0, "from codecarbon import track_emissions\n")
+        lines.insert(first_import_id, "from codecarbon import track_emissions\n")
 
     write_code_lines(file_path, lines)
     logging.info(f"Added decorator to function in {file_path} at line {line_num}")
@@ -89,10 +93,14 @@ def wrap_with_context_manager(
         lines[i] = " " * tab_size + lines[i]
 
     # Add import if not present
+    first_import_id = next(
+        (i for i, line in enumerate(lines) if "import" in line or "from" in line), 0
+    )
+
     if not any(
         line.strip().startswith("from codecarbon import EmissionsTracker") for line in lines
     ):
-        lines.insert(0, "from codecarbon import EmissionsTracker\n")
+        lines.insert(first_import_id, "from codecarbon import EmissionsTracker\n")
 
     write_code_lines(file_path, lines)
     logging.info(f"Wrapped lines {start_line}-{end_line} in {file_path} with context manager")

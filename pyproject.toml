@@ -55,6 +55,7 @@ exclude = [
   ".venv",
   "extracted_snippets",
   "other_repos",
+  "worktrees",
   "repositories",
 ]
 
