@@ -165,10 +165,12 @@ def process_smell(smell_data: dict, repo_name: str):
                 energy_meta["end"],
                 tab_size,
             )
-            smell_data["occurences"][0]["line"] += 2
-            smell_data["occurences"][0]["endLine"] += 2
-            smell_data["occurences"][0]["column"] += tab_size
-            smell_data["occurences"][0]["endColumn"] += tab_size
+            for i in range(len(smell_data["occurences"])):
+                smell_data["occurences"][i]["line"] += 2
+                smell_data["occurences"][i]["endLine"] += 2
+                smell_data["occurences"][i]["column"] += tab_size
+                smell_data["occurences"][i]["endColumn"] += tab_size
+
             smell_data["additionalInfo"]["innerLoopLine"] += 2
 
     return smell_data

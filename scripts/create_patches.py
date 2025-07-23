@@ -93,7 +93,7 @@ def refactor_smell(repo_name: str, smell_id: str) -> bool:
             [
                 "ecooptimizer",
                 "refactor",
-                f"{SELECTED_SMELLS_DIR}/{repo_name}.json",
+                f"{ANNOTATED_SMELLS_DIR}/{repo_name}.json",
                 "--smell-id",
                 smell_id,
                 "--save-to-original",
@@ -247,24 +247,58 @@ def clear_patches(
             logging.debug(f"No annotated smells file to delete for repo {repo_name}")
 
 
+ALL_SMELL_TYPES = {
+    "crc": "cached-repeated-calls",
+    "lec": "long-element-chain",
+    "lle": "long-lambda-expr",
+    "lmc": "long-message-chain",
+    "nsu": "no-self-use",
+    "scl": "string-concat-loop",
+    "tma": "too-many-arguments",
+    "ugen": "use-a-generator",
+}
+
+
 # --- Entrypoint ---
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo", type=str, help="Generate patches for a specific repo")
-    parser.add_argument("--smell", type=str, help="Generate patch for a specific smell (id)")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument(
+        "--type",
+        choices=ALL_SMELL_TYPES.keys(),
+        help="Generate patches for a specific smell type:\n"
+        + "\n- ".join([str(item) for item in ALL_SMELL_TYPES.items()]),
+    )
+    group.add_argument("--smells", type=list[str], help="Generate patch for a specific smell (id)")
     args = parser.parse_args()
 
     setup_logging()
 
-    if args.smell and not args.repo:
-        logging.error("Please specify a repository with --repo when using --smell")
+    if args.smells and not args.repo:
+        logging.error("Please specify a repository with --repo when using --smells")
         sys.exit(1)
 
     repos_dir = Path("repositories")
     select_repos_config = load_yaml(SELECTED_REPOS_CONFIG)
 
+    if args.type:
+        # Filter selected smells to only include the specified type for each repo
+        smell_type = ALL_SMELL_TYPES[args.type]
+        select_repos_config["smells"] = {
+            repo: {
+                symbol: smell_ids
+                for symbol, smell_ids in repo_items.items()
+                if symbol == smell_type
+            }
+            for repo, repo_items in select_repos_config["smells"].items()
+        }
+
+        logging.info(f"Generating patches for smell type: {smell_type}")
+        logging.debug(f"Selected smells for type {smell_type}: {select_repos_config['smells']}")
+
     if args.repo:
-        if not args.smell:
+        if not args.smells:
             logging.info(f"Generating patches for repo: {args.repo}")
         repo_list = [args.repo]
     else:
@@ -286,10 +320,12 @@ def main():
         if not smells:
             continue
 
-        if args.smell:
-            logging.info(f"Generating patches for smell {args.smell} in repo {repo_name}\n")
-            smell_meta = [(smells[args.smell]["symbol"], args.smell)]
-            clear_patches(repo_name, args.smell)
+        smell_meta = []
+        if args.smells:
+            logging.info(f"Generating patches for smells {args.smells} in repo {repo_name}\n")
+            for smell in args.smells:
+                smell_meta.append((smells[smell]["symbol"], smell))
+                clear_patches(repo_name, smell)
         else:
             smell_map = select_repos_config.get("smells", {}).get(repo_name, {})
             logging.debug(f"Selected smells for {repo_name}: {smell_map}")
@@ -312,17 +348,15 @@ def main():
 
         total_smells = len(smell_meta)
 
-        if not args.smell:
-            logging.info(f"Patching {total_smells} smells in {repo_name}")
+        logging.info(f"Patching {total_smells} smells in {repo_name}")
 
         smells_processed = 0
 
         for smell in smell_meta:
             try:
-                if not args.smell:
-                    logging.info(
-                        f"[{repo_name}] [{smells_processed + 1}/{len(smell_meta)}] Patching {smell}..."
-                    )
+                logging.info(
+                    f"[{repo_name}] [{smells_processed + 1}/{len(smell_meta)}] Patching {smell}..."
+                )
                 create_patches(smell, repo_name, base_repo)
             except Exception as e:
                 logging.error(f"Failed to create patch for {smell[1]} in {repo_name}")
