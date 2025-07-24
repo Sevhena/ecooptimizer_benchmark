@@ -25,14 +25,14 @@ tensorflow:
     - "**/*_test.py"
 numpy:
   venv: ".numpy_venv"
-  test_command: ["python", "-c", "import numpy as np; np.test()"]
+  test_command: ["-c", "import numpy as np; np.test()"]
   target: "numpy/numpy"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 scipy:
   venv: ".scipy_venv"
-  test_command: ["pytest", "scipy"]
+  test_command: ["-m", "scipy"]
   target: "scipy/scipy"
   patterns_to_exclude:
     - "**/tests/**"
@@ -62,7 +62,7 @@ airflow:
     - "**/test_*.py"
 gpiozero:
   venv: ".gpiozero_venv"
-  test_command: ["make", "test"]
+  test_command: ["pytest"]
   target: "gpiozero/gpiozero"
   patterns_to_exclude:
     - "**/tests/**"

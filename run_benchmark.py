@@ -98,133 +98,101 @@ def load_analysis_results(repo_name: str) -> dict[str, dict] | None:
 
 
 # --- Energy Run + Measurement ---
-def run_test_suite(
-    repo: str,
-    smell_type: str,
-    smell_id: str,
-    run_type: str,
-    test_command: str,
-    venv_name: str,
-    iters: int,
-):
-    """Run the benchmark for a smell version: original or refactored."""
-    process = psutil.Process()
-
-    start_time = time.time()
-    cpu_percentages = []
-    peak_memory = 0
-
-    venv_python = WORKTREES_DIR / repo / ".venv/bin/python"
-    try:
-        results = subprocess.run(
-    	    [str(venv_python), "-m", "pytest"],
-    	    cwd=(WORKTREES_DIR / repo),
-	    stdout=subprocess.DEVNULL,
-	)
-        cpu = process.cpu_percent(interval=0.1)
-        mem = process.memory_info().rss / (1024**2)
-        peak_memory = max(peak_memory, mem)
-        cpu_percentages.append(cpu)
-        print("     ", end="", flush=True)
-        print(".", end="", flush=True)
-    except Exception as e:
-        logging.error(f"Test run failed: {e}")
-        return False
-
-    elapsed = time.time() - start_time
-    avg_cpu = sum(cpu_percentages) / len(cpu_percentages) if cpu_percentages else 0
-
-    # Rename CodeCarbon file
-    original_csv = EMISSIONS_DIR / repo / smell_type / f"{smell_id}.csv"
-    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
-    if original_csv.exists():
-        renamed = Path(str(original_csv).replace(".csv", f"_{timestamp}.csv"))
-        shutil.move(original_csv, renamed)
-    else:
-        logging.warning(
-            f"No emissions data found in {EMISSIONS_DIR / repo / smell_type} for {smell_id}"
-        )
-
-    # Write stats to CSV
-    stats_dir = EMISSIONS_DIR / repo / smell_type
-    stats_dir.mkdir(parents=True, exist_ok=True)
-    stats_csv = stats_dir / f"{smell_id}_stats.csv"
-    header = [
-        "timestamp",
-        "repo",
-        "smell_type",
-        "smell_id",
-        "run_type",
-        "iters",
-        "elapsed_sec",
-        "avg_cpu_percent",
-        "peak_memory_mb",
-    ]
-    row = [
-        timestamp,
-        repo,
-        smell_type,
-        smell_id,
-        run_type,
-        iters,
-        f"{elapsed:.2f}",
-        f"{avg_cpu:.1f}",
-        f"{peak_memory:.1f}",
-    ]
-    write_header = not stats_csv.exists()
-    with stats_csv.open("a", newline="") as f:
-        writer = csv.writer(f)
-        if write_header:
-            writer.writerow(header)
-        writer.writerow(row)
-
-    #logging.info(
-    #    f"[{run_type}] Time: {elapsed:.2f}s | CPU: {avg_cpu:.1f}% | RAM: {peak_memory:.1f}MB"
-    #)
-
-    return True
-
-
 def run_benchmark(
     repo: str,
     smell_type: str,
     smell_id: str,
-    smell_dir: Path,
     version: str,
-    test_cmd: str,
-    venv_cmd: str,
-    iters: int,
+    test_cmd: list[str],
+    iters: int = DEFAULT_ITERS,
+    warmup: bool = True,
 ):
+    """Run benchmark test suite for a given repo smell version."""
+    venv_python = WORKTREES_DIR / repo / ".venv/bin/python"
     datapoints = 0
 
-    # Warm up
-    success = run_test_suite(repo, smell_type, smell_id, version, test_cmd, venv_cmd, iters)
-    
-    if not success:
-        return
+    emissions_csv = EMISSIONS_DIR / repo / smell_type / f"{smell_id}.csv"
+    stats_csv = EMISSIONS_DIR / repo / smell_type / f"{smell_id}_stats.csv"
+    stats_csv.parent.mkdir(parents=True, exist_ok=True)
 
-    print("     ", end="", flush=True)
+    if warmup:
+        print("     [warmup]", end="", flush=True)
+        _run_single_test(venv_python, test_cmd, repo)
+
+    print("\n     [bench]", end="", flush=True)
+    header_written = stats_csv.exists()
+
     while datapoints < iters:
-        run_test_suite(repo, smell_type, smell_id, version, test_cmd, venv_cmd, iters)
+        elapsed, avg_cpu, peak_mem = _run_single_test(venv_python, test_cmd, repo)
+
+        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
+        row = [
+            timestamp,
+            repo,
+            smell_type,
+            smell_id,
+            version,
+            iters,
+            f"{elapsed:.2f}",
+            f"{avg_cpu:.1f}",
+            f"{peak_mem:.1f}",
+        ]
+
+        with stats_csv.open("a", newline="") as f:
+            writer = csv.writer(f)
+            if not header_written:
+                writer.writerow(
+                    [
+                        "timestamp",
+                        "repo",
+                        "smell_type",
+                        "smell_id",
+                        "run_type",
+                        "iters",
+                        "elapsed_sec",
+                        "avg_cpu_percent",
+                        "peak_memory_mb",
+                    ]
+                )
+                header_written = True
+            writer.writerow(row)
+
         print(".", end="", flush=True)
 
-        # --- Check Emissions Count ---
-        orig_csv = list(smell_dir.glob(f"emissions_{version}_*.csv"))
-        if not orig_csv:
-            logging.warning(f"No emissions data for {repo} | {smell_id}")
-            continue
-
-        with orig_csv[0].open() as f:
-            datapoints = sum(1 for _ in f) - 1
+        # Check how many lines CodeCarbon recorded (excluding header)
+        if emissions_csv.exists():
+            with emissions_csv.open() as f:
+                datapoints = sum(1 for _ in f) - 1
+        else:
+            logging.warning(f"No emissions file found: {emissions_csv}")
 
         if datapoints < iters:
-            logging.debug(f"Only {datapoints} datapoints collected. Rerunning test suite...")
+            logging.debug(f"Only {datapoints} datapoints for {repo} | {smell_id} | rerunning...")
 
-        logging.debug(
-            f"Collected {datapoints} datapoints for {repo} | {smell_type} | {smell_id} | {version}"
+    print(f" [{datapoints} collected]\n", flush=True)
+    return stats_csv
+
+
+def _run_single_test(python_bin: Path, test_cmd: list[str], repo: str):
+    """Run a single test iteration and collect system metrics."""
+    process = psutil.Process()
+    start_time = time.time()
+
+    try:
+        subprocess.run(
+            [str(python_bin), *test_cmd],
+            cwd=(WORKTREES_DIR / repo),
+            stdout=subprocess.DEVNULL,
         )
+    except Exception as e:
+        logging.error(f"Test run failed for {repo}: {e}")
+        return 0.0, 0.0, 0.0
 
-        print(f"[{datapoints} collected]\n", flush=True)
+    elapsed = time.time() - start_time
+    avg_cpu = process.cpu_percent(interval=0.1)
+    mem_mb = process.memory_info().rss / (1024**2)
+
+    return elapsed, avg_cpu, mem_mb
 
 
 # --- Entry Point ---
@@ -348,10 +316,8 @@ def main():
                             repo,
                             smell_type,
                             smell_id,
-                            smell_dir,
                             version,
                             test_cmd,
-                            venv_name,
                             args.iters,
                         )
                     except Exception as e:
