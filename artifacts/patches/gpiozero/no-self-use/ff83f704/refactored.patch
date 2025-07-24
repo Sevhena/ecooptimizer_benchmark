@@ -1,0 +1,32 @@
+diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
+index 0fbc407..f7f00ed 100644
+--- a/gpiozero/pins/__init__.py
++++ b/gpiozero/pins/__init__.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import warnings
+ from weakref import ref
+ from threading import Lock
+@@ -459,7 +460,9 @@ class Pin:
+         property will raise :exc:`PinEdgeDetectUnsupported`.
+         """)
+ 
+-    def _get_when_changed(self):
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_ff83f704', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/ff83f704_refactored.csv')
++    @staticmethod
++    def _get_when_changed():
+         return None  # pragma: no cover
+ 
+     def _set_when_changed(self, value):
+@@ -467,7 +470,7 @@ class Pin:
+             f"Edge detection is not supported on pin {self!r}")
+ 
+     when_changed = property(
+-        lambda self: self._get_when_changed(),
++        lambda self: Pin._get_when_changed(),
+         lambda self, value: self._set_when_changed(value),
+         doc="""\
+         A function or bound method to be called when the pin's state changes

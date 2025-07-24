@@ -1,0 +1,50 @@
+diff --git a/scipy/optimize/_differentialevolution.py b/scipy/optimize/_differentialevolution.py
+index f9cf1229e..47d3359a9 100644
+--- a/scipy/optimize/_differentialevolution.py
++++ b/scipy/optimize/_differentialevolution.py
+@@ -2,6 +2,7 @@
+ differential_evolution: The differential evolution global optimization algorithm
+ Added by Andrew Nelson 2014
+ """
++from codecarbon import track_emissions
+ import warnings
+ 
+ import numpy as np
+@@ -1496,7 +1497,9 @@ class DifferentialEvolutionSolver:
+     def __exit__(self, *args):
+         return self._mapwrapper.__exit__(*args)
+ 
+-    def _accept_trial(self, energy_trial, feasible_trial, cv_trial,
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R6301_42e96228', output_file='/root/ecooptimizer_benchmark/emissions/scipy/no-self-use/42e96228_refactored.csv')
++    @staticmethod
++    def _accept_trial(energy_trial, feasible_trial, cv_trial,
+                       energy_orig, feasible_orig, cv_orig):
+         """
+         Trial is accepted if:
+@@ -1602,7 +1605,7 @@ class DifferentialEvolutionSolver:
+                     self._nfev += 1
+ 
+                 # compare trial and population member
+-                if self._accept_trial(energy, feasible, cv,
++                if DifferentialEvolutionSolver._accept_trial(energy, feasible, cv,
+                                       self.population_energies[candidate],
+                                       self.feasible[candidate],
+                                       self.constraint_violation[candidate]):
+@@ -1613,7 +1616,7 @@ class DifferentialEvolutionSolver:
+ 
+                     # if the trial candidate is also better than the best
+                     # solution then promote it.
+-                    if self._accept_trial(energy, feasible, cv,
++                    if DifferentialEvolutionSolver._accept_trial(energy, feasible, cv,
+                                           self.population_energies[0],
+                                           self.feasible[0],
+                                           self.constraint_violation[0]):
+@@ -1643,7 +1646,7 @@ class DifferentialEvolutionSolver:
+                 trial_pop[feasible])
+ 
+             # which solutions are 'improved'?
+-            loc = [self._accept_trial(*val) for val in
++            loc = [DifferentialEvolutionSolver._accept_trial(*val) for val in
+                    zip(trial_energies, feasible, cv, self.population_energies,
+                        self.feasible, self.constraint_violation)]
+             loc = np.array(loc)

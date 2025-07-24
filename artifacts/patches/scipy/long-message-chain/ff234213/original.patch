@@ -1,0 +1,22 @@
+diff --git a/scipy/stats/_mstats_basic.py b/scipy/stats/_mstats_basic.py
+index e8ff421b0..b9e9d5d6f 100644
+--- a/scipy/stats/_mstats_basic.py
++++ b/scipy/stats/_mstats_basic.py
+@@ -30,6 +30,7 @@ __all__ = ['argstoarray',
+            'brunnermunzel',
+            ]
+ 
++from codecarbon import EmissionsTracker
+ import numpy as np
+ from numpy import ndarray
+ import numpy.ma as ma
+@@ -1664,7 +1665,8 @@ def mannwhitneyu(x,y, use_continuity=True):
+         Approximate two-sided p-value assuming a normal distribution.
+ 
+     """
+-    x = ma.asarray(x).compressed().view(ndarray)
++    with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LMC001_ff234213', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-message-chain/ff234213.csv') as tracker:
++        x = ma.asarray(x).compressed().view(ndarray)
+     y = ma.asarray(y).compressed().view(ndarray)
+     ranks = rankdata(np.concatenate([x,y]))
+     (nx, ny) = (len(x), len(y))

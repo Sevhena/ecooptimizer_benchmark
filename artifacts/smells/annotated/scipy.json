@@ -20,16 +20,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 58,
-                "endLine": 147,
-                "line": 147
+                "column": 8,
+                "endColumn": 54,
+                "endLine": 145,
+                "line": 145
             },
             {
-                "column": 12,
-                "endColumn": 58,
-                "endLine": 149,
-                "line": 149
+                "column": 8,
+                "endColumn": 54,
+                "endLine": 146,
+                "line": 146
             }
         ],
         "path": "scipy/io/_fast_matrix_market/__init__.py",
@@ -58,16 +58,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 18,
-                "endColumn": 33,
-                "endLine": 142,
-                "line": 142
+                "column": 14,
+                "endColumn": 29,
+                "endLine": 140,
+                "line": 140
             },
             {
-                "column": 18,
-                "endColumn": 33,
-                "endLine": 144,
-                "line": 144
+                "column": 14,
+                "endColumn": 29,
+                "endLine": 141,
+                "line": 141
             }
         ],
         "path": "scipy/integrate/_rules/_genz_malik.py",
@@ -96,16 +96,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 25,
-                "endColumn": 79,
-                "endLine": 685,
-                "line": 685
+                "column": 21,
+                "endColumn": 75,
+                "endLine": 683,
+                "line": 683
             },
             {
-                "column": 25,
-                "endColumn": 79,
-                "endLine": 693,
-                "line": 693
+                "column": 21,
+                "endColumn": 75,
+                "endLine": 690,
+                "line": 690
             }
         ],
         "path": "scipy/optimize/_differentiable_functions.py",
@@ -134,16 +134,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 26,
-                "endColumn": 46,
-                "endLine": 826,
-                "line": 826
+                "column": 22,
+                "endColumn": 42,
+                "endLine": 824,
+                "line": 824
             },
             {
-                "column": 26,
-                "endColumn": 46,
-                "endLine": 831,
-                "line": 831
+                "column": 22,
+                "endColumn": 42,
+                "endLine": 828,
+                "line": 828
             }
         ],
         "path": "scipy/optimize/_linprog_ip.py",
@@ -172,16 +172,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 17,
-                "endColumn": 49,
-                "endLine": 1075,
-                "line": 1075
+                "column": 13,
+                "endColumn": 45,
+                "endLine": 1073,
+                "line": 1073
             },
             {
-                "column": 21,
-                "endColumn": 53,
-                "endLine": 1097,
-                "line": 1097
+                "column": 17,
+                "endColumn": 49,
+                "endLine": 1094,
+                "line": 1094
             }
         ],
         "path": "scipy/integrate/_bvp.py",
@@ -210,16 +210,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 22,
-                "endColumn": 41,
-                "endLine": 224,
-                "line": 224
+                "column": 18,
+                "endColumn": 37,
+                "endLine": 222,
+                "line": 222
             },
             {
-                "column": 32,
-                "endColumn": 51,
-                "endLine": 227,
-                "line": 227
+                "column": 28,
+                "endColumn": 47,
+                "endLine": 224,
+                "line": 224
             }
         ],
         "path": "scipy/sparse/linalg/_svdp.py",
@@ -250,8 +250,8 @@
             {
                 "column": 0,
                 "endColumn": 12,
-                "endLine": 420,
-                "line": 420
+                "endLine": 418,
+                "line": 418
             }
         ],
         "path": "scipy/interpolate/_fitpack_impl.py",
@@ -282,8 +282,8 @@
             {
                 "column": 0,
                 "endColumn": 14,
-                "endLine": 71,
-                "line": 71
+                "endLine": 69,
+                "line": 69
             }
         ],
         "path": "scipy/optimize/_slsqp_py.py",
@@ -314,8 +314,8 @@
             {
                 "column": 0,
                 "endColumn": 16,
-                "endLine": 126,
-                "line": 126
+                "endLine": 124,
+                "line": 124
             }
         ],
         "path": "scipy/optimize/_nonlin.py",
@@ -346,8 +346,8 @@
             {
                 "column": 0,
                 "endColumn": 9,
-                "endLine": 534,
-                "line": 534
+                "endLine": 532,
+                "line": 532
             }
         ],
         "path": "scipy/optimize/_linesearch.py",
@@ -378,8 +378,8 @@
             {
                 "column": 0,
                 "endColumn": 10,
-                "endLine": 17,
-                "line": 17
+                "endLine": 15,
+                "line": 15
             }
         ],
         "path": "scipy/sparse/linalg/_isolve/lgmres.py",
@@ -410,8 +410,8 @@
             {
                 "column": 0,
                 "endColumn": 8,
-                "endLine": 11,
-                "line": 11
+                "endLine": 9,
+                "line": 9
             }
         ],
         "path": "scipy/fft/_realtransforms.py",
@@ -442,8 +442,8 @@
             {
                 "column": 4,
                 "endColumn": 17,
-                "endLine": 996,
-                "line": 996
+                "endLine": 994,
+                "line": 994
             }
         ],
         "path": "scipy/stats/_distn_infrastructure.py",
@@ -474,8 +474,8 @@
             {
                 "column": 4,
                 "endColumn": 19,
-                "endLine": 1202,
-                "line": 1202
+                "endLine": 1200,
+                "line": 1200
             }
         ],
         "path": "scipy/optimize/_shgo_lib/_complex.py",
@@ -506,8 +506,8 @@
             {
                 "column": 4,
                 "endColumn": 24,
-                "endLine": 41,
-                "line": 41
+                "endLine": 39,
+                "line": 39
             }
         ],
         "path": "scipy/special/_mptestutils.py",
@@ -538,8 +538,8 @@
             {
                 "column": 4,
                 "endColumn": 20,
-                "endLine": 348,
-                "line": 348
+                "endLine": 346,
+                "line": 346
             }
         ],
         "path": "scipy/_lib/_docscrape.py",
@@ -570,8 +570,8 @@
             {
                 "column": 4,
                 "endColumn": 21,
-                "endLine": 1501,
-                "line": 1501
+                "endLine": 1499,
+                "line": 1499
             }
         ],
         "path": "scipy/optimize/_differentialevolution.py",
@@ -602,8 +602,8 @@
             {
                 "column": 4,
                 "endColumn": 24,
-                "endLine": 407,
-                "line": 407
+                "endLine": 405,
+                "line": 405
             }
         ],
         "path": "scipy/io/matlab/_miobase.py",
@@ -632,10 +632,10 @@
         "obj": "rv_generic._argcheck_rvs",
         "occurences": [
             {
-                "column": 13,
-                "endColumn": 65,
-                "endLine": 980,
-                "line": 979
+                "column": 17,
+                "endColumn": 69,
+                "endLine": 982,
+                "line": 981
             }
         ],
         "path": "scipy/stats/_distn_infrastructure.py",
@@ -664,10 +664,10 @@
         "obj": "MpmathData.__init__",
         "occurences": [
             {
-                "column": 30,
-                "endColumn": 13,
-                "endLine": 214,
-                "line": 212
+                "column": 34,
+                "endColumn": 17,
+                "endLine": 216,
+                "line": 214
             }
         ],
         "path": "scipy/special/_mptestutils.py",
@@ -696,10 +696,10 @@
         "obj": "rotate",
         "occurences": [
             {
-                "column": 11,
-                "endColumn": 55,
-                "endLine": 974,
-                "line": 974
+                "column": 35,
+                "endColumn": 79,
+                "endLine": 976,
+                "line": 976
             }
         ],
         "path": "scipy/ndimage/_interpolation.py",
@@ -728,10 +728,10 @@
         "obj": "_cossin",
         "occurences": [
             {
-                "column": 11,
-                "endColumn": 66,
-                "endLine": 171,
-                "line": 171
+                "column": 15,
+                "endColumn": 70,
+                "endLine": 173,
+                "line": 173
             }
         ],
         "path": "scipy/linalg/_decomp_cossin.py",
@@ -760,10 +760,10 @@
         "obj": "choose_conv_method",
         "occurences": [
             {
-                "column": 7,
-                "endColumn": 79,
-                "endLine": 1400,
-                "line": 1400
+                "column": 35,
+                "endColumn": 107,
+                "endLine": 1402,
+                "line": 1402
             }
         ],
         "path": "scipy/signal/_signaltools.py",
@@ -792,10 +792,10 @@
         "obj": "Rbf.__init__",
         "occurences": [
             {
-                "column": 15,
-                "endColumn": 65,
-                "endLine": 238,
-                "line": 238
+                "column": 39,
+                "endColumn": 89,
+                "endLine": 240,
+                "line": 240
             }
         ],
         "path": "scipy/interpolate/_rbf.py",

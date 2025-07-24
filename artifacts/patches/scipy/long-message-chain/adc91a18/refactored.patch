@@ -1,0 +1,33 @@
+diff --git a/scipy/linalg/_solvers.py b/scipy/linalg/_solvers.py
+index ea68e1180..cb260e7d5 100644
+--- a/scipy/linalg/_solvers.py
++++ b/scipy/linalg/_solvers.py
+@@ -8,6 +8,7 @@
+ # Modified: Ilhan Polat <ilhanpolat@gmail.com>
+ # September 13, 2016
+ 
++from codecarbon import EmissionsTracker
+ import warnings
+ import numpy as np
+ from numpy.linalg import inv, LinAlgError, norm, cond, svd
+@@ -522,12 +523,14 @@ def solve_continuous_are(a, b, q, r, e=None, s=None, balanced=True):
+         raise LinAlgError('Failed to find a finite solution.')
+ 
+     # Exploit the triangular structure
+-    x = solve_triangular(ul.conj().T,
+-                         solve_triangular(uu.conj().T,
+-                                          u10.conj().T,
+-                                          lower=True),
+-                         unit_diagonal=True,
+-                         ).conj().T.dot(up.conj().T)
++    with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LMC001_adc91a18', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-message-chain/adc91a18_refactored.csv') as tracker:
++        intermediate_0 = solve_triangular(ul.conj()
++        x = intermediate_0.T,
++                             solve_triangular(uu.conj().T,
++                                              u10.conj().T,
++                                              lower=True),
++                             unit_diagonal=True,
++                             ).conj().T.dot(up.conj().T)
+     if balanced:
+         x *= sca[:m, None] * sca[:m]
+ 

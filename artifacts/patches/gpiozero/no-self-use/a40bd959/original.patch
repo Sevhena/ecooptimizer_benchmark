@@ -1,0 +1,20 @@
+diff --git a/gpiozero/internal_devices.py b/gpiozero/internal_devices.py
+index 370bc39..8f3acd7 100644
+--- a/gpiozero/internal_devices.py
++++ b/gpiozero/internal_devices.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import os
+ import io
+ import warnings
+@@ -553,6 +554,7 @@ class TimeOfDay(PolledInternalDevice):
+         except DeviceClosed:
+             return super().__repr__()
+ 
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_a40bd959', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/a40bd959.csv')
+     def _validate_time(self, value):
+         if isinstance(value, datetime):
+             value = value.time()

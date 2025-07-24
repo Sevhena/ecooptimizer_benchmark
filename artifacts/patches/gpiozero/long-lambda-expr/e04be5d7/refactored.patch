@@ -1,0 +1,36 @@
+diff --git a/gpiozero/output_devices.py b/gpiozero/output_devices.py
+index 9680f15..47af16a 100644
+--- a/gpiozero/output_devices.py
++++ b/gpiozero/output_devices.py
+@@ -15,6 +15,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import warnings
+ from threading import Lock
+ from itertools import repeat, cycle, chain
+@@ -1110,12 +1111,17 @@ class RGBLED(SourceMixin, Device):
+             off_color, n, fps=25):
+         # Define a simple lambda to perform linear interpolation between
+         # off_color and on_color
+-        lerp = lambda t, fade_in: tuple(
+-            (1 - t) * off + t * on
+-            if fade_in else
+-            (1 - t) * on + t * off
+-            for off, on in zip(off_color, on_color)
+-            )
++        with EmissionsTracker(project_name='gpiozero-benchmark', experiment_id='gpiozero_LLE001_e04be5d7', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/long-lambda-expr/e04be5d7_refactored.csv') as tracker:
++            def converted_lambda_1115(t, fade_in):
++                result = tuple(
++                return result
++
++            lerp = converted_lambda_1115
++                (1 - t) * off + t * on
++                if fade_in else
++                (1 - t) * on + t * off
++                for off, on in zip(off_color, on_color)
++                )
+         sequence = []
+         if fade_in_time > 0:
+             sequence += [

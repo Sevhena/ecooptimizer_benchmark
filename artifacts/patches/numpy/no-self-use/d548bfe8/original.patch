@@ -1,0 +1,18 @@
+diff --git a/numpy/distutils/ccompiler_opt.py b/numpy/distutils/ccompiler_opt.py
+index 4dea2f9b1d..e169b11c96 100644
+--- a/numpy/distutils/ccompiler_opt.py
++++ b/numpy/distutils/ccompiler_opt.py
+@@ -1,4 +1,5 @@
+ """Provides the `CCompilerOpt` class, used for handling the CPU/hardware
++from codecarbon import track_emissions
+ optimization, starting from parsing the command arguments, to managing the
+ relation between the CPU baseline and dispatch-able features,
+ also generating the required C headers and ending with compiling
+@@ -882,6 +883,7 @@ def cache_flush(self):
+             """).format(self._cache_hash))
+             f.write(repr_dict)
+ 
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_d548bfe8', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/d548bfe8.csv')
+     def cache_hash(self, *factors):
+         # is there a built-in non-crypto hash?
+         # sdbm

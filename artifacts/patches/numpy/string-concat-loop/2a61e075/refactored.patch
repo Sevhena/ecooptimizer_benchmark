@@ -1,0 +1,41 @@
+diff --git a/numpy/_core/einsumfunc.py b/numpy/_core/einsumfunc.py
+index 8e71e6d4b1..3e8c06635e 100644
+--- a/numpy/_core/einsumfunc.py
++++ b/numpy/_core/einsumfunc.py
+@@ -2,6 +2,7 @@
+ Implementation of optimized einsum.
+ 
+ """
++from codecarbon import EmissionsTracker
+ import itertools
+ import operator
+ 
+@@ -687,13 +688,15 @@ def _parse_einsum_input(operands):
+             subscripts += "->" + output_sub.replace("...", out_ellipse)
+         else:
+             # Special care for outputless ellipses
+-            output_subscript = ""
++            output_subscript = []
+             tmp_subscripts = subscripts.replace(",", "")
+-            for s in sorted(set(tmp_subscripts)):
+-                if s not in (einsum_symbols):
+-                    raise ValueError(f"Character {s} is not a valid symbol.")
+-                if tmp_subscripts.count(s) == 1:
+-                    output_subscript += s
++            with EmissionsTracker(project_name='numpy-benchmark', experiment_id='numpy_SCL001_2a61e075', output_file='/root/ecooptimizer_benchmark/emissions/numpy/string-concat-loop/2a61e075_refactored.csv') as tracker:
++                for s in sorted(set(tmp_subscripts)):
++                    if s not in (einsum_symbols):
++                        raise ValueError(f"Character {s} is not a valid symbol.")
++                    if tmp_subscripts.count(s) == 1:
++                        output_subscript.append(s)
++                output_subscript = ''.join(output_subscript)
+             normal_inds = ''.join(sorted(set(output_subscript) -
+                                          set(out_ellipse)))
+ 
+@@ -1495,4 +1498,4 @@ def einsum(*operands, out=None, optimize=False, **kwargs):
+     if specified_out:
+         return out
+     else:
+-        return asanyarray(operands[0], order=output_order)
++        return asanyarray(operands[0], order=output_order)
+\ No newline at end of file

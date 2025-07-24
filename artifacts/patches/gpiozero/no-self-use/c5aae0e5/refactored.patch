@@ -1,0 +1,32 @@
+diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
+index 0fbc407..eefbfc3 100644
+--- a/gpiozero/pins/__init__.py
++++ b/gpiozero/pins/__init__.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import warnings
+ from weakref import ref
+ from threading import Lock
+@@ -730,7 +731,9 @@ class SPI(Device):
+         .. _Bit endianness: https://en.wikipedia.org/wiki/Endianness#Bit_endianness
+         """)
+ 
+-    def _get_select_high(self):
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_c5aae0e5', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/c5aae0e5_refactored.csv')
++    @staticmethod
++    def _get_select_high():
+         return False  # pragma: no cover
+ 
+     def _set_select_high(self, value):
+@@ -738,7 +741,7 @@ class SPI(Device):
+             f"select_high cannot be changed on {self!r}")
+ 
+     select_high = property(
+-        lambda self: self._get_select_high(),
++        lambda self: SPI._get_select_high(),
+         lambda self, value: self._set_select_high(value),
+         doc="""\
+         If :data:`False` (the default), the chip select line is considered

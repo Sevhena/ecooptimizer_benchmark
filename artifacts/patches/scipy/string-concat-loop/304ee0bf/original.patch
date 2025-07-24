@@ -1,0 +1,21 @@
+diff --git a/scipy/stats/_distribution_infrastructure.py b/scipy/stats/_distribution_infrastructure.py
+index fca270f8f..6d724a69f 100644
+--- a/scipy/stats/_distribution_infrastructure.py
++++ b/scipy/stats/_distribution_infrastructure.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ import functools
+ from abc import ABC, abstractmethod
+ from functools import cached_property
+@@ -5360,8 +5361,9 @@ class Mixture(_ProbabilityDistribution):
+         result = "Mixture(\n"
+         result += "    [\n"
+         with np.printoptions(threshold=10):
+-            for component in self.components:
+-                result += f"        {repr(component)},\n"
++            with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_SCL001_304ee0bf', output_file='/root/ecooptimizer_benchmark/emissions/scipy/string-concat-loop/304ee0bf.csv') as tracker:
++                for component in self.components:
++                    result += f"        {repr(component)},\n"
+             result += "    ],\n"
+             result += f"    weights={repr(self.weights)},\n"
+         result += ")"

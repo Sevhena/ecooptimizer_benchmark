@@ -1,0 +1,22 @@
+diff --git a/gpiozero/internal_devices.py b/gpiozero/internal_devices.py
+index 370bc39..a0a3424 100644
+--- a/gpiozero/internal_devices.py
++++ b/gpiozero/internal_devices.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import os
+ import io
+ import warnings
+@@ -432,7 +433,8 @@ class LoadAverage(PolledInternalDevice):
+         Returns the current load average.
+         """
+         with io.open(self.load_average_file, 'r') as f:
+-            file_columns = f.read().strip().split()
++            with EmissionsTracker(project_name='gpiozero-benchmark', experiment_id='gpiozero_LMC001_ddfcea54', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/long-message-chain/ddfcea54.csv') as tracker:
++                file_columns = f.read().strip().split()
+             return float(file_columns[self._load_average_file_column])
+ 
+     @property

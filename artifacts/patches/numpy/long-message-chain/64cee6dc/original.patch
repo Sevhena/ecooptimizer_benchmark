@@ -1,0 +1,17 @@
+diff --git a/numpy/matlib.py b/numpy/matlib.py
+index f27d503cdb..c6b6ecf6c0 100644
+--- a/numpy/matlib.py
++++ b/numpy/matlib.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ import warnings
+ 
+ # 2018-05-29, PendingDeprecationWarning added to matrix.__new__
+@@ -376,5 +377,6 @@ def repmat(a, m, n):
+         origrows, origcols = a.shape
+     rows = origrows * m
+     cols = origcols * n
+-    c = a.reshape(1, a.size).repeat(m, 0).reshape(rows, origcols).repeat(n, 0)
++    with EmissionsTracker(project_name='numpy-benchmark', experiment_id='numpy_LMC001_64cee6dc', output_file='/root/ecooptimizer_benchmark/emissions/numpy/long-message-chain/64cee6dc.csv') as tracker:
++        c = a.reshape(1, a.size).repeat(m, 0).reshape(rows, origcols).repeat(n, 0)
+     return c.reshape(rows, cols)

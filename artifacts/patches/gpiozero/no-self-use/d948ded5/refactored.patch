@@ -1,0 +1,32 @@
+diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
+index 0fbc407..8459695 100644
+--- a/gpiozero/pins/__init__.py
++++ b/gpiozero/pins/__init__.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import warnings
+ from weakref import ref
+ from threading import Lock
+@@ -776,7 +777,9 @@ class SPI(Device):
+             ----'   `---'   `---'   `---'   `---'   `---'   `---'   `-------
+         """)
+ 
+-    def _get_bits_per_word(self):
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_d948ded5', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/d948ded5_refactored.csv')
++    @staticmethod
++    def _get_bits_per_word():
+         return 8  # pragma: no cover
+ 
+     def _set_bits_per_word(self, value):
+@@ -784,7 +787,7 @@ class SPI(Device):
+             f"bits_per_word cannot be changed on {self!r}")
+ 
+     bits_per_word = property(
+-        lambda self: self._get_bits_per_word(),
++        lambda self: SPI._get_bits_per_word(),
+         lambda self, value: self._set_bits_per_word(value),
+         doc="""\
+         Controls the number of bits that make up a word, and thus where the

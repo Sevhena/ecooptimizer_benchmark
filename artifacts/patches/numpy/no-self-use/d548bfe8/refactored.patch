@@ -1,0 +1,39 @@
+diff --git a/numpy/distutils/ccompiler_opt.py b/numpy/distutils/ccompiler_opt.py
+index 4dea2f9b1d..62077c697b 100644
+--- a/numpy/distutils/ccompiler_opt.py
++++ b/numpy/distutils/ccompiler_opt.py
+@@ -1,4 +1,5 @@
+ """Provides the `CCompilerOpt` class, used for handling the CPU/hardware
++from codecarbon import track_emissions
+ optimization, starting from parsing the command arguments, to managing the
+ relation between the CPU baseline and dispatch-able features,
+ also generating the required C headers and ending with compiling
+@@ -813,7 +814,7 @@ def __init__(self, cache_path=None, *factors):
+             self.dist_log("cache is disabled by `Config`")
+             return
+ 
+-        self._cache_hash = self.cache_hash(*factors, *self.conf_cache_factors)
++        self._cache_hash = _Cache.cache_hash(*factors, *self.conf_cache_factors)
+         self._cache_path = cache_path
+         if cache_path:
+             if os.path.exists(cache_path):
+@@ -882,7 +883,9 @@ def cache_flush(self):
+             """).format(self._cache_hash))
+             f.write(repr_dict)
+ 
+-    def cache_hash(self, *factors):
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_d548bfe8', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/d548bfe8_refactored.csv')
++    @staticmethod
++    def cache_hash(*factors):
+         # is there a built-in non-crypto hash?
+         # sdbm
+         chash = 0
+@@ -2588,7 +2591,7 @@ def _generate_config(self, output_dir, dispatch_src, targets, has_baseline=False
+         config_path = os.path.splitext(config_path)[0] + '.h'
+         config_path = os.path.join(output_dir, config_path)
+         # check if targets didn't change to avoid recompiling
+-        cache_hash = self.cache_hash(targets, has_baseline)
++        cache_hash = CCompilerOpt.cache_hash(targets, has_baseline)
+         try:
+             with open(config_path) as f:
+                 last_hash = f.readline().split("cache_hash:")

@@ -1,0 +1,20 @@
+diff --git a/scipy/stats/_discrete_distns.py b/scipy/stats/_discrete_distns.py
+index ac12ef17a..fc03a139d 100644
+--- a/scipy/stats/_discrete_distns.py
++++ b/scipy/stats/_discrete_distns.py
+@@ -1,4 +1,5 @@
+ #
++from codecarbon import EmissionsTracker
+ # Author:  Travis Oliphant  2002-2011 with contributions from
+ #          SciPy Developers 2004-2011
+ #
+@@ -2092,7 +2093,8 @@ nchypergeom_wallenius = nchypergeom_wallenius_gen(
+ 
+ 
+ # Collect names of classes and objects in this module.
+-pairs = list(globals().copy().items())
++with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LMC001_f15881ec', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-message-chain/f15881ec.csv') as tracker:
++    pairs = list(globals().copy().items())
+ _distn_names, _distn_gen_names = get_distribution_names(pairs, rv_discrete)
+ 
+ __all__ = _distn_names + _distn_gen_names

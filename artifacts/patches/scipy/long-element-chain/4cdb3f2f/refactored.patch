@@ -1,0 +1,22 @@
+diff --git a/scipy/sparse/_compressed.py b/scipy/sparse/_compressed.py
+index 37ae345f8..3202bd904 100644
+--- a/scipy/sparse/_compressed.py
++++ b/scipy/sparse/_compressed.py
+@@ -1,6 +1,7 @@
+ """Base class for sparse matrix formats using compressed storage."""
+ __all__ = []
+ 
++from codecarbon import EmissionsTracker
+ from warnings import warn
+ import itertools
+ 
+@@ -942,7 +943,8 @@ class _cs_matrix(_data_matrix, _minmax_mixin, IndexMixin):
+                 indices_parts.append(j[js:je])
+                 data_parts.append(x[js:je])
+             else:
+-                indices_parts.append(j[js:je][::-1][uj_indptr])
++                with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LEC001_4cdb3f2f', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-element-chain/4cdb3f2f_refactored.csv') as tracker:
++                    indices_parts.append(j[js:je][::-1][uj_indptr])
+                 data_parts.append(x[js:je][::-1][uj_indptr])
+                 new_nnzs[c] = len(uj)
+ 

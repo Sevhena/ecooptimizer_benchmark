@@ -1,0 +1,50 @@
+diff --git a/numpy/_core/einsumfunc.py b/numpy/_core/einsumfunc.py
+index 8e71e6d4b1..1f3b00bb37 100644
+--- a/numpy/_core/einsumfunc.py
++++ b/numpy/_core/einsumfunc.py
+@@ -2,6 +2,7 @@
+ Implementation of optimized einsum.
+ 
+ """
++from codecarbon import EmissionsTracker
+ import itertools
+ import operator
+ 
+@@ -603,21 +604,22 @@ def _parse_einsum_input(operands):
+         operands = [asanyarray(v) for v in operand_list]
+         subscripts = ""
+         last = len(subscript_list) - 1
+-        for num, sub in enumerate(subscript_list):
+-            for s in sub:
+-                if s is Ellipsis:
+-                    subscripts += "..."
+-                else:
+-                    try:
+-                        s = operator.index(s)
+-                    except TypeError as e:
+-                        raise TypeError(
+-                            "For this input type lists must contain "
+-                            "either int or Ellipsis"
+-                        ) from e
+-                    subscripts += einsum_symbols[s]
+-            if num != last:
+-                subscripts += ","
++        with EmissionsTracker(project_name='numpy-benchmark', experiment_id='numpy_SCL001_db50d3b0', output_file='/root/ecooptimizer_benchmark/emissions/numpy/string-concat-loop/db50d3b0.csv') as tracker:
++            for num, sub in enumerate(subscript_list):
++                for s in sub:
++                    if s is Ellipsis:
++                        subscripts += "..."
++                    else:
++                        try:
++                            s = operator.index(s)
++                        except TypeError as e:
++                            raise TypeError(
++                                "For this input type lists must contain "
++                                "either int or Ellipsis"
++                            ) from e
++                        subscripts += einsum_symbols[s]
++                if num != last:
++                    subscripts += ","
+ 
+         if output_list is not None:
+             subscripts += "->"

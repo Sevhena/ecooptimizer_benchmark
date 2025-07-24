@@ -1,0 +1,19 @@
+diff --git a/scipy/linalg/_decomp_cossin.py b/scipy/linalg/_decomp_cossin.py
+index 4cc413b6c..c5b1225b5 100644
+--- a/scipy/linalg/_decomp_cossin.py
++++ b/scipy/linalg/_decomp_cossin.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ from collections.abc import Iterable
+ import numpy as np
+ 
+@@ -168,7 +169,8 @@ def _cossin(x11, x12, x21, x22, separate, swap_sign, compute_u, compute_vh):
+ 
+     m = p + mmp
+ 
+-    cplx = any([np.iscomplexobj(x) for x in [x11, x12, x21, x22]])
++    with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_R1729_cfd9184e', output_file='/root/ecooptimizer_benchmark/emissions/scipy/use-a-generator/cfd9184e_refactored.csv') as tracker:
++        cplx = any(np.iscomplexobj(x) for x in [x11, x12, x21, x22])
+     driver = "uncsd" if cplx else "orcsd"
+     csd, csd_lwork = get_lapack_funcs([driver, driver + "_lwork"],
+                                       [x11, x12, x21, x22])

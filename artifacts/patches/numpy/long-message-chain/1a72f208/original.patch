@@ -1,0 +1,22 @@
+diff --git a/numpy/ma/core.py b/numpy/ma/core.py
+index 05ea373a6a..c5d13e11c3 100644
+--- a/numpy/ma/core.py
++++ b/numpy/ma/core.py
+@@ -19,6 +19,7 @@
+ .. moduleauthor:: Pierre Gerard-Marchant
+ 
+ """
++from codecarbon import EmissionsTracker
+ import builtins
+ import functools
+ import inspect
+@@ -5014,7 +5015,8 @@ def all(self, axis=None, out=None, keepdims=np._NoValue):
+ 
+         mask = _check_mask_axis(self._mask, axis, **kwargs)
+         if out is None:
+-            d = self.filled(True).all(axis=axis, **kwargs).view(type(self))
++            with EmissionsTracker(project_name='numpy-benchmark', experiment_id='numpy_LMC001_1a72f208', output_file='/root/ecooptimizer_benchmark/emissions/numpy/long-message-chain/1a72f208.csv') as tracker:
++                d = self.filled(True).all(axis=axis, **kwargs).view(type(self))
+             if d.ndim:
+                 d.__setmask__(mask)
+             elif mask:

@@ -1,0 +1,30 @@
+diff --git a/scipy/stats/_distribution_infrastructure.py b/scipy/stats/_distribution_infrastructure.py
+index fca270f8f..774b29755 100644
+--- a/scipy/stats/_distribution_infrastructure.py
++++ b/scipy/stats/_distribution_infrastructure.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ import functools
+ from abc import ABC, abstractmethod
+ from functools import cached_property
+@@ -5360,8 +5361,11 @@ class Mixture(_ProbabilityDistribution):
+         result = "Mixture(\n"
+         result += "    [\n"
+         with np.printoptions(threshold=10):
+-            for component in self.components:
+-                result += f"        {repr(component)},\n"
++            with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_SCL001_304ee0bf', output_file='/root/ecooptimizer_benchmark/emissions/scipy/string-concat-loop/304ee0bf_refactored.csv') as tracker:
++                result = [result]
++                for component in self.components:
++                    result.append(f'        {repr(component)},\n')
++                result = ''.join(result)
+             result += "    ],\n"
+             result += f"    weights={repr(self.weights)},\n"
+         result += ")"
+@@ -5747,4 +5751,4 @@ def log(X, /):
+                    "support is non-negative.")
+         raise NotImplementedError(message)
+     return MonotonicTransformedDistribution(X, g=np.log, h=np.exp, dh=np.exp,
+-                                            logdh=lambda u: u)
++                                            logdh=lambda u: u)
+\ No newline at end of file

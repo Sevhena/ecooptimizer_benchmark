@@ -1,5 +1,5 @@
 diff --git a/numpy/distutils/fcompiler/arm.py b/numpy/distutils/fcompiler/arm.py
-index 3eb7e9af9c..6c3d4376d6 100644
+index 3eb7e9af9c..6b42595aae 100644
 --- a/numpy/distutils/fcompiler/arm.py
 +++ b/numpy/distutils/fcompiler/arm.py
 @@ -1,3 +1,4 @@
@@ -7,11 +7,14 @@ index 3eb7e9af9c..6c3d4376d6 100644
  import sys                                                                     
                                                                                 
  from numpy.distutils.fcompiler import FCompiler, dummy_fortran_file
-@@ -44,6 +45,7 @@ def get_library_dirs(self):
+@@ -44,7 +45,9 @@ def get_library_dirs(self):
  
          return opt
  
-+    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_bf269a73', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/bf269a73.csv')
-     def get_flags(self):
+-    def get_flags(self):
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_bf269a73', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/bf269a73_refactored.csv')
++    @staticmethod
++    def get_flags():
          return []
  
+     def get_flags_free(self):

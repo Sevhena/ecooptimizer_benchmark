@@ -1,0 +1,20 @@
+diff --git a/scipy/io/matlab/_miobase.py b/scipy/io/matlab/_miobase.py
+index 0cf6bf526..fcbbdff23 100644
+--- a/scipy/io/matlab/_miobase.py
++++ b/scipy/io/matlab/_miobase.py
+@@ -6,6 +6,7 @@ Base classes for MATLAB file stream reading.
+ MATLAB is a registered trademark of the Mathworks inc.
+ """
+ 
++from codecarbon import track_emissions
+ from typing import Final
+ 
+ import numpy as np
+@@ -402,6 +403,7 @@ class MatFileReader:
+         self.squeeze_me = False
+         self.chars_as_strings = False
+ 
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R6301_80ee36aa', output_file='/root/ecooptimizer_benchmark/emissions/scipy/no-self-use/80ee36aa.csv')
+     def guess_byte_order(self):
+         ''' As we do not know what file type we have, assume native '''
+         return boc.native_code

@@ -1,0 +1,22 @@
+diff --git a/scipy/io/matlab/_mio5.py b/scipy/io/matlab/_mio5.py
+index 7200b75b3..cb7114ee7 100644
+--- a/scipy/io/matlab/_mio5.py
++++ b/scipy/io/matlab/_mio5.py
+@@ -64,6 +64,7 @@ The mat files I was playing with are in ``tests/data``:
+ See ``tests/test_mio.py:test_mio_funcs.py`` for the debugging
+ script I was working with.
+ 
++from codecarbon import EmissionsTracker
+ Small fragments of current code adapted from matfile.py by Heiko
+ Henkelmann; parts of the code for simplify_cells=True adapted from
+ http://blog.nephics.com/2019/08/28/better-loadmat-for-scipy/.
+@@ -507,7 +508,8 @@ def to_writeable(source):
+ 
+ 
+ # Native byte ordered dtypes for convenience for writers
+-NDT_FILE_HDR = MDTYPES[native_code]['dtypes']['file_header']
++with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LEC001_bb252a3b', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-element-chain/bb252a3b_refactored.csv') as tracker:
++    NDT_FILE_HDR = MDTYPES[native_code]['dtypes']['file_header']
+ NDT_TAG_FULL = MDTYPES[native_code]['dtypes']['tag_full']
+ NDT_TAG_SMALL = MDTYPES[native_code]['dtypes']['tag_smalldata']
+ NDT_ARRAY_FLAGS = MDTYPES[native_code]['dtypes']['array_flags']

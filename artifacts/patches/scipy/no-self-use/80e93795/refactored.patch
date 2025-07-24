@@ -1,0 +1,39 @@
+diff --git a/scipy/special/_mptestutils.py b/scipy/special/_mptestutils.py
+index 9e519093d..9ff149c56 100644
+--- a/scipy/special/_mptestutils.py
++++ b/scipy/special/_mptestutils.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ import os
+ import sys
+ import time
+@@ -36,7 +37,9 @@ class Arg:
+ 
+         self.inclusive_a, self.inclusive_b = inclusive_a, inclusive_b
+ 
+-    def _positive_values(self, a, b, n):
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R6301_80e93795', output_file='/root/ecooptimizer_benchmark/emissions/scipy/no-self-use/80e93795_refactored.csv')
++    @staticmethod
++    def _positive_values(a, b, n):
+         if a < 0:
+             raise ValueError("a should be positive")
+ 
+@@ -111,14 +114,14 @@ class Arg:
+             n2 = n1 + 1
+ 
+         if a >= 0:
+-            pospts = self._positive_values(a, b, n)
++            pospts = Arg._positive_values(a, b, n)
+             negpts = []
+         elif b <= 0:
+             pospts = []
+-            negpts = -self._positive_values(-b, -a, n)
++            negpts = -Arg._positive_values(-b, -a, n)
+         else:
+-            pospts = self._positive_values(0, b, n1)
+-            negpts = -self._positive_values(0, -a, n2 + 1)
++            pospts = Arg._positive_values(0, b, n1)
++            negpts = -Arg._positive_values(0, -a, n2 + 1)
+             # Don't want to get zero twice
+             negpts = negpts[1:]
+         pts = np.hstack((negpts[::-1], pospts))

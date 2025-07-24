@@ -1,0 +1,34 @@
+diff --git a/gpiozero/internal_devices.py b/gpiozero/internal_devices.py
+index 370bc39..3afba1d 100644
+--- a/gpiozero/internal_devices.py
++++ b/gpiozero/internal_devices.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import os
+ import io
+ import warnings
+@@ -533,8 +534,8 @@ class TimeOfDay(PolledInternalDevice):
+         self._utc = True
+         super().__init__(event_delay=event_delay, pin_factory=pin_factory)
+         try:
+-            self._start_time = self._validate_time(start_time)
+-            self._end_time = self._validate_time(end_time)
++            self._start_time = TimeOfDay._validate_time(start_time)
++            self._end_time = TimeOfDay._validate_time(end_time)
+             if self.start_time == self.end_time:
+                 raise ValueError('end_time cannot equal start_time')
+             self._utc = utc
+@@ -553,7 +554,9 @@ class TimeOfDay(PolledInternalDevice):
+         except DeviceClosed:
+             return super().__repr__()
+ 
+-    def _validate_time(self, value):
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_a40bd959', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/a40bd959_refactored.csv')
++    @staticmethod
++    def _validate_time(value):
+         if isinstance(value, datetime):
+             value = value.time()
+         if not isinstance(value, time):

@@ -1,0 +1,32 @@
+diff --git a/numpy/_core/_internal.py b/numpy/_core/_internal.py
+index e00e1b2c1f..b45b0dee44 100644
+--- a/numpy/_core/_internal.py
++++ b/numpy/_core/_internal.py
+@@ -4,6 +4,7 @@
+ Some things are more easily handled Python.
+ 
+ """
++from codecarbon import track_emissions
+ import ast
+ import math
+ import re
+@@ -251,7 +252,9 @@ def _getintp_ctype():
+ # Used for .ctypes attribute of ndarray
+ 
+ class _missing_ctypes:
+-    def cast(self, num, obj):
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_29620294', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/29620294_refactored.csv')
++    @staticmethod
++    def cast(num, obj):
+         return num.value
+ 
+     class c_void_p:
+@@ -292,7 +295,7 @@ def data_as(self, obj):
+         # until gc.collect is called. Make a copy of the pointer first then
+         # let it hold the array reference. This is a workaround to circumvent
+         # the CPython bug https://bugs.python.org/issue12836.
+-        ptr = self._ctypes.cast(self._data, obj)
++        ptr = _missing_ctypes.cast(self._data, obj)
+         ptr._arr = self._arr
+         return ptr
+ 

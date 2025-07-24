@@ -1,0 +1,29 @@
+diff --git a/scipy/_lib/_docscrape.py b/scipy/_lib/_docscrape.py
+index c74d2c200..7df2a013b 100644
+--- a/scipy/_lib/_docscrape.py
++++ b/scipy/_lib/_docscrape.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # copied from numpydoc/docscrape.py, commit 97a6026508e0dd5382865672e9563a72cc113bd2
+ """Extract reference documentation from the NumPy source tree."""
+ 
+@@ -343,7 +344,9 @@ class NumpyDocString(Mapping):
+                 self._error_location(f"Error parsing See Also entry {line!r}")
+         return items
+ 
+-    def _parse_index(self, section, content):
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R6301_2125be72', output_file='/root/ecooptimizer_benchmark/emissions/scipy/no-self-use/2125be72_refactored.csv')
++    @staticmethod
++    def _parse_index(section, content):
+         """
+         .. index:: default
+            :refguide: something, else, and more
+@@ -415,7 +418,7 @@ class NumpyDocString(Mapping):
+                     content, single_element_is_type=True
+                 )
+             elif section.startswith(".. index::"):
+-                self["index"] = self._parse_index(section, content)
++                self["index"] = NumpyDocString._parse_index(section, content)
+             elif section == "See Also":
+                 self["See Also"] = self._parse_see_also(content)
+             else:

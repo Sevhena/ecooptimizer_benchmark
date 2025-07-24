@@ -1,0 +1,20 @@
+diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
+index 0fbc407..42eb8ce 100644
+--- a/gpiozero/pins/__init__.py
++++ b/gpiozero/pins/__init__.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import warnings
+ from weakref import ref
+ from threading import Lock
+@@ -730,6 +731,7 @@ class SPI(Device):
+         .. _Bit endianness: https://en.wikipedia.org/wiki/Endianness#Bit_endianness
+         """)
+ 
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_c5aae0e5', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/c5aae0e5.csv')
+     def _get_select_high(self):
+         return False  # pragma: no cover
+ 

@@ -1,0 +1,24 @@
+diff --git a/scipy/sparse/_base.py b/scipy/sparse/_base.py
+index 7441fdbd3..2fb94e5e6 100644
+--- a/scipy/sparse/_base.py
++++ b/scipy/sparse/_base.py
+@@ -1,5 +1,6 @@
+ """Base class for sparse matrices"""
+ 
++from codecarbon import EmissionsTracker
+ from warnings import warn
+ import math
+ import numpy as np
+@@ -244,8 +245,10 @@ class _spbase(SparseABC):
+ 
+         dtype = getdtype(dtype)
+         if self.dtype != dtype:
+-            return self.tocsr().astype(
+-                dtype, casting=casting, copy=copy).asformat(self.format)
++            with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LMC001_56f8cd5d', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-message-chain/56f8cd5d_refactored.csv') as tracker:
++                intermediate_0 = return self.tocsr()
++                return self.tocsr().astype( = intermediate_0.astype(
++                    dtype, casting=casting, copy=copy).asformat(self.format)
+         elif copy:
+             return self.copy()
+         else:

@@ -1,0 +1,22 @@
+diff --git a/numpy/_core/einsumfunc.py b/numpy/_core/einsumfunc.py
+index 8e71e6d4b1..396cc0bf8f 100644
+--- a/numpy/_core/einsumfunc.py
++++ b/numpy/_core/einsumfunc.py
+@@ -2,6 +2,7 @@
+ Implementation of optimized einsum.
+ 
+ """
++from codecarbon import EmissionsTracker
+ import itertools
+ import operator
+ 
+@@ -641,7 +642,8 @@ def _parse_einsum_input(operands):
+ 
+     # Parse ellipses
+     if "." in subscripts:
+-        used = subscripts.replace(".", "").replace(",", "").replace("->", "")
++        with EmissionsTracker(project_name='numpy-benchmark', experiment_id='numpy_LMC001_3d27f9c5', output_file='/root/ecooptimizer_benchmark/emissions/numpy/long-message-chain/3d27f9c5.csv') as tracker:
++            used = subscripts.replace(".", "").replace(",", "").replace("->", "")
+         unused = list(einsum_symbols_set - set(used))
+         ellipse_inds = "".join(unused)
+         longest = 0

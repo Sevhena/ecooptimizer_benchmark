@@ -1,0 +1,20 @@
+diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
+index 0fbc407..f5e23aa 100644
+--- a/gpiozero/pins/__init__.py
++++ b/gpiozero/pins/__init__.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import warnings
+ from weakref import ref
+ from threading import Lock
+@@ -131,6 +132,7 @@ class Factory:
+         """
+         pass
+ 
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_02f79a90', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/02f79a90.csv')
+     def pin(self, name):
+         """
+         Creates an instance of a :class:`Pin` descendent representing the

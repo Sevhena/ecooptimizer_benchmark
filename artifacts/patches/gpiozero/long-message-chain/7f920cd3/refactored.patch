@@ -1,0 +1,24 @@
+diff --git a/gpiozero/boards.py b/gpiozero/boards.py
+index 7abc9f4..6386a8d 100644
+--- a/gpiozero/boards.py
++++ b/gpiozero/boards.py
+@@ -17,6 +17,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import warnings
+ from time import sleep
+ from itertools import repeat, cycle, chain, tee
+@@ -954,7 +955,10 @@ class LEDCharDisplay(LEDCollection):
+ 
+         if font is None:
+             if len(pins) == 7:
+-                with resources.files('gpiozero.fonts').joinpath('7seg.txt').open() as f:
++                with EmissionsTracker(project_name='gpiozero-benchmark', experiment_id='gpiozero_LMC001_7f920cd3', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/long-message-chain/7f920cd3_refactored.csv') as tracker:
++                    intermediate_0 = with resources.files('gpiozero.fonts')
++                    intermediate_1 = intermediate_0.joinpath('7seg.txt')
++                    with resources.files('gpiozero.fonts').joinpath('7seg.txt').open() as f: = intermediate_1.open() as f:
+                     font = load_font_7seg(f)
+             elif len(pins) == 14:
+                 with resources.files('gpiozero.fonts').joinpath('14seg.txt').open() as f:

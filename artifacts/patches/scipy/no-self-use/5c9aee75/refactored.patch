@@ -1,0 +1,30 @@
+diff --git a/scipy/optimize/_shgo_lib/_complex.py b/scipy/optimize/_shgo_lib/_complex.py
+index ddc364075..64042afb0 100644
+--- a/scipy/optimize/_shgo_lib/_complex.py
++++ b/scipy/optimize/_shgo_lib/_complex.py
+@@ -1,4 +1,5 @@
+ """Base classes for low memory simplicial complex structures."""
++from codecarbon import track_emissions
+ import copy
+ import logging
+ import itertools
+@@ -1128,7 +1129,7 @@ class Complex:
+ 
+             S = S_rows[tuple([s_i])]
+             if valid_simplex:
+-                if self.deg_simplex(S, proj=None):
++                if Complex.deg_simplex(S, proj=None):
+                     valid_simplex = False
+ 
+             # If s_i is a valid simplex we can test if v_x is inside si
+@@ -1197,7 +1198,9 @@ class Complex:
+ 
+         return True
+ 
+-    def deg_simplex(self, S, proj=None):
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R6301_5c9aee75', output_file='/root/ecooptimizer_benchmark/emissions/scipy/no-self-use/5c9aee75_refactored.csv')
++    @staticmethod
++    def deg_simplex(S, proj=None):
+         """Test a simplex S for degeneracy (linear dependence in R^dim).
+ 
+         Parameters

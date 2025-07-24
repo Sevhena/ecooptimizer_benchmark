@@ -1,0 +1,23 @@
+diff --git a/scipy/signal/_signaltools.py b/scipy/signal/_signaltools.py
+index e35c04d1f..9b040f5ac 100644
+--- a/scipy/signal/_signaltools.py
++++ b/scipy/signal/_signaltools.py
+@@ -1,6 +1,7 @@
+ # Author: Travis Oliphant
+ # 1999 -- 2002
+ 
++from codecarbon import EmissionsTracker
+ from __future__ import annotations  # Provides typing union operator `|` in Python 3.9
+ import operator
+ import math
+@@ -1397,7 +1398,9 @@ def choose_conv_method(in1, in2, mode='full', measure=False):
+     # for integer input,
+     # catch when more precision required than float provides (representing an
+     # integer as float can lose precision in fftconvolve if larger than 2**52)
+-    if any([_numeric_arrays([x], kinds='ui', xp=xp) for x in [volume, kernel]]):
++    with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_R1729_06fcdecd', output_file='/root/ecooptimizer_benchmark/emissions/scipy/use-a-generator/06fcdecd.csv') as tracker:
++        _carbon_wrapped_d7ca788c = any([_numeric_arrays([x], kinds='ui', xp=xp) for x in [volume, kernel]])
++    if _carbon_wrapped_d7ca788c:
+         max_value = int(xp.max(xp.abs(volume))) * int(xp.max(xp.abs(kernel)))
+         max_value *= int(min(xp_size(volume), xp_size(kernel)))
+         if max_value > 2**np.finfo('float').nmant - 1:

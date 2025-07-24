@@ -1,0 +1,32 @@
+diff --git a/scipy/io/matlab/_miobase.py b/scipy/io/matlab/_miobase.py
+index 0cf6bf526..29de4ec2e 100644
+--- a/scipy/io/matlab/_miobase.py
++++ b/scipy/io/matlab/_miobase.py
+@@ -6,6 +6,7 @@ Base classes for MATLAB file stream reading.
+ MATLAB is a registered trademark of the Mathworks inc.
+ """
+ 
++from codecarbon import track_emissions
+ from typing import Final
+ 
+ import numpy as np
+@@ -379,7 +380,7 @@ class MatFileReader:
+         self.mat_stream = mat_stream
+         self.dtypes = {}
+         if not byte_order:
+-            byte_order = self.guess_byte_order()
++            byte_order = MatFileReader.guess_byte_order()
+         else:
+             byte_order = boc.to_numpy_code(byte_order)
+         self.byte_order = byte_order
+@@ -402,7 +403,9 @@ class MatFileReader:
+         self.squeeze_me = False
+         self.chars_as_strings = False
+ 
+-    def guess_byte_order(self):
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R6301_80ee36aa', output_file='/root/ecooptimizer_benchmark/emissions/scipy/no-self-use/80ee36aa_refactored.csv')
++    @staticmethod
++    def guess_byte_order():
+         ''' As we do not know what file type we have, assume native '''
+         return boc.native_code
+ 

@@ -1,0 +1,35 @@
+diff --git a/scipy/io/arff/_arffread.py b/scipy/io/arff/_arffread.py
+index 65495b8d9..87b81dec6 100644
+--- a/scipy/io/arff/_arffread.py
++++ b/scipy/io/arff/_arffread.py
+@@ -1,4 +1,5 @@
+ # Last Change: Mon Aug 20 08:00 PM 2007 J
++from codecarbon import EmissionsTracker
+ import re
+ import datetime
+ 
+@@ -688,11 +689,14 @@ class MetaData:
+     def __repr__(self):
+         msg = ""
+         msg += f"Dataset: {self.name}\n"
+-        for i in self._attributes:
+-            msg += f"\t{i}'s type is {self._attributes[i].type_name}"
+-            if self._attributes[i].range:
+-                msg += f", range is {str(self._attributes[i].range)}"
+-            msg += '\n'
++        with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_SCL001_cfbd3f39', output_file='/root/ecooptimizer_benchmark/emissions/scipy/string-concat-loop/cfbd3f39_refactored.csv') as tracker:
++            msg = [msg]
++            for i in self._attributes:
++                msg.append(f"\t{i}'s type is {self._attributes[i].type_name}")
++                if self._attributes[i].range:
++                    msg.append(f', range is {str(self._attributes[i].range)}')
++                msg.append('\n')
++            msg = ''.join(msg)
+         return msg
+ 
+     def __iter__(self):
+@@ -870,4 +874,3 @@ def _loadarff(ofile):
+     # No error should happen here: it is a bug otherwise
+     data = np.array(a, [(a.name, a.dtype) for a in attr])
+     return data, meta
+-

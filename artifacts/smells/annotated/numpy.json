@@ -22,8 +22,8 @@
             {
                 "column": 0,
                 "endColumn": 14,
-                "endLine": 1756,
-                "line": 1756
+                "endLine": 1750,
+                "line": 1750
             }
         ],
         "path": "numpy/lib/_npyio_impl.py",
@@ -54,8 +54,8 @@
             {
                 "column": 0,
                 "endColumn": 7,
-                "endLine": 4079,
-                "line": 4079
+                "endLine": 4073,
+                "line": 4073
             }
         ],
         "path": "numpy/_core/fromnumeric.py",
@@ -86,8 +86,8 @@
             {
                 "column": 0,
                 "endColumn": 10,
-                "endLine": 641,
-                "line": 641
+                "endLine": 635,
+                "line": 635
             }
         ],
         "path": "numpy/lib/_nanfunctions_impl.py",
@@ -118,8 +118,8 @@
             {
                 "column": 0,
                 "endColumn": 15,
-                "endLine": 543,
-                "line": 543
+                "endLine": 537,
+                "line": 537
             }
         ],
         "path": "numpy/ma/mrecords.py",
@@ -150,8 +150,8 @@
             {
                 "column": 0,
                 "endColumn": 9,
-                "endLine": 949,
-                "line": 949
+                "endLine": 943,
+                "line": 943
             }
         ],
         "path": "numpy/_core/records.py",
@@ -182,8 +182,8 @@
             {
                 "column": 4,
                 "endColumn": 15,
-                "endLine": 100,
-                "line": 100
+                "endLine": 94,
+                "line": 94
             }
         ],
         "path": "numpy/ma/mrecords.py",
@@ -212,16 +212,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 35,
-                "endColumn": 91,
-                "endLine": 916,
-                "line": 916
+                "column": 23,
+                "endColumn": 79,
+                "endLine": 910,
+                "line": 910
             },
             {
-                "column": 37,
-                "endColumn": 57,
-                "endLine": 954,
-                "line": 953
+                "column": 25,
+                "endColumn": 45,
+                "endLine": 945,
+                "line": 944
             }
         ],
         "path": "numpy/_core/arrayprint.py",
@@ -250,16 +250,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 33,
-                "endColumn": 50,
-                "endLine": 71,
-                "line": 71
+                "column": 21,
+                "endColumn": 38,
+                "endLine": 65,
+                "line": 65
             },
             {
-                "column": 33,
-                "endColumn": 50,
-                "endLine": 80,
-                "line": 80
+                "column": 21,
+                "endColumn": 38,
+                "endLine": 71,
+                "line": 71
             }
         ],
         "path": "numpy/_core/shape_base.py",
@@ -288,16 +288,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 28,
-                "endColumn": 44,
-                "endLine": 238,
-                "line": 238
+                "column": 16,
+                "endColumn": 32,
+                "endLine": 232,
+                "line": 232
             },
             {
-                "column": 27,
-                "endColumn": 43,
-                "endLine": 266,
-                "line": 266
+                "column": 15,
+                "endColumn": 31,
+                "endLine": 257,
+                "line": 257
             }
         ],
         "path": "numpy/_core/getlimits.py",
@@ -326,16 +326,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 35,
-                "endColumn": 61,
-                "endLine": 361,
-                "line": 361
+                "column": 23,
+                "endColumn": 49,
+                "endLine": 355,
+                "line": 355
             },
             {
-                "column": 46,
-                "endColumn": 72,
-                "endLine": 371,
-                "line": 371
+                "column": 34,
+                "endColumn": 60,
+                "endLine": 362,
+                "line": 362
             }
         ],
         "path": "numpy/lib/_datasource.py",
@@ -364,16 +364,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 33,
-                "endColumn": 42,
-                "endLine": 974,
-                "line": 974
+                "column": 21,
+                "endColumn": 30,
+                "endLine": 968,
+                "line": 968
             },
             {
-                "column": 33,
-                "endColumn": 42,
-                "endLine": 989,
-                "line": 989
+                "column": 21,
+                "endColumn": 30,
+                "endLine": 980,
+                "line": 980
             }
         ],
         "path": "numpy/lib/_format_impl.py",
@@ -402,16 +402,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 36,
-                "endColumn": 52,
-                "endLine": 885,
-                "line": 885
+                "column": 24,
+                "endColumn": 40,
+                "endLine": 879,
+                "line": 879
             },
             {
-                "column": 32,
-                "endColumn": 48,
-                "endLine": 880,
-                "line": 880
+                "column": 20,
+                "endColumn": 36,
+                "endLine": 871,
+                "line": 871
             }
         ],
         "path": "numpy/lib/_iotools.py",
@@ -442,8 +442,8 @@
             {
                 "column": 4,
                 "endColumn": 12,
-                "endLine": 264,
-                "line": 264
+                "endLine": 254,
+                "line": 254
             }
         ],
         "path": "numpy/_core/_internal.py",
@@ -474,8 +474,8 @@
             {
                 "column": 4,
                 "endColumn": 17,
-                "endLine": 57,
-                "line": 57
+                "endLine": 47,
+                "line": 47
             }
         ],
         "path": "numpy/distutils/fcompiler/arm.py",
@@ -506,8 +506,8 @@
             {
                 "column": 4,
                 "endColumn": 18,
-                "endLine": 889,
-                "line": 889
+                "endLine": 885,
+                "line": 885
             }
         ],
         "path": "numpy/distutils/ccompiler_opt.py",
@@ -538,8 +538,8 @@
             {
                 "column": 4,
                 "endColumn": 20,
-                "endLine": 398,
-                "line": 398
+                "endLine": 396,
+                "line": 396
             }
         ],
         "path": "numpy/distutils/command/build_src.py",
@@ -570,8 +570,8 @@
             {
                 "column": 4,
                 "endColumn": 26,
-                "endLine": 38,
-                "line": 38
+                "endLine": 36,
+                "line": 36
             }
         ],
         "path": "numpy/distutils/fcompiler/mips.py",
@@ -602,8 +602,8 @@
             {
                 "column": 4,
                 "endColumn": 34,
-                "endLine": 46,
-                "line": 46
+                "endLine": 44,
+                "line": 44
             }
         ],
         "path": "numpy/distutils/fcompiler/sun.py",
@@ -615,7 +615,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "path_print",
-            "innerLoopLine": 1041,
+            "innerLoopLine": 1039,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -632,10 +632,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 69,
-                "endLine": 1045,
-                "line": 1045
+                "column": 8,
+                "endColumn": 65,
+                "endLine": 1043,
+                "line": 1043
             }
         ],
         "path": "numpy/_core/einsumfunc.py",
@@ -647,7 +647,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "output_subscript",
-            "innerLoopLine": 694,
+            "innerLoopLine": 692,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -664,10 +664,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 24,
-                "endColumn": 63,
-                "endLine": 698,
-                "line": 698
+                "column": 20,
+                "endColumn": 59,
+                "endLine": 696,
+                "line": 696
             }
         ],
         "path": "numpy/_core/einsumfunc.py",
@@ -679,7 +679,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "subscripts",
-            "innerLoopLine": 608,
+            "innerLoopLine": 606,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -696,10 +696,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 49,
-                "endLine": 622,
-                "line": 622
+                "column": 16,
+                "endColumn": 45,
+                "endLine": 620,
+                "line": 620
             }
         ],
         "path": "numpy/_core/einsumfunc.py",
@@ -711,7 +711,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "subscripts",
-            "innerLoopLine": 626,
+            "innerLoopLine": 624,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -728,10 +728,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 24,
-                "endColumn": 55,
-                "endLine": 628,
-                "line": 628
+                "column": 20,
+                "endColumn": 51,
+                "endLine": 626,
+                "line": 626
             },
             {
                 "column": 20,
@@ -749,7 +749,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "subscripts",
-            "innerLoopLine": 609,
+            "innerLoopLine": 607,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -766,10 +766,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 24,
-                "endColumn": 55,
-                "endLine": 611,
-                "line": 611
+                "column": 20,
+                "endColumn": 51,
+                "endLine": 609,
+                "line": 609
             },
             {
                 "column": 20,
@@ -804,10 +804,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 19,
-                "endColumn": 81,
-                "endLine": 646,
-                "line": 646
+                "column": 15,
+                "endColumn": 77,
+                "endLine": 644,
+                "line": 644
             }
         ],
         "path": "numpy/_core/einsumfunc.py",
@@ -836,10 +836,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 82,
-                "endLine": 381,
-                "line": 381
+                "column": 8,
+                "endColumn": 78,
+                "endLine": 379,
+                "line": 379
             }
         ],
         "path": "numpy/matlib.py",
@@ -868,10 +868,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 79,
-                "endLine": 5019,
-                "line": 5019
+                "column": 16,
+                "endColumn": 75,
+                "endLine": 5017,
+                "line": 5017
             }
         ],
         "path": "numpy/ma/core.py",

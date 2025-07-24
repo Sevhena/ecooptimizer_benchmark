@@ -1,0 +1,28 @@
+diff --git a/scipy/sparse/linalg/_eigen/arpack/arpack.py b/scipy/sparse/linalg/_eigen/arpack/arpack.py
+index f678deabe..98d0bcbaf 100644
+--- a/scipy/sparse/linalg/_eigen/arpack/arpack.py
++++ b/scipy/sparse/linalg/_eigen/arpack/arpack.py
+@@ -35,6 +35,7 @@ Uses ARPACK: https://github.com/opencollab/arpack-ng
+ # ARPACK and handle shifted and shift-inverse computations
+ # for eigenvalues by providing a shift (sigma) and a solver.
+ 
++from codecarbon import EmissionsTracker
+ import numpy as np
+ import warnings
+ from scipy.sparse.linalg._interface import aslinearoperator, LinearOperator
+@@ -506,8 +507,13 @@ class _SymmetricArpackParams(_ArpackParams):
+                 self.B = lambda x: x
+                 self.bmat = 'I'
+             else:
+-                self.OP = lambda x: Minv_matvec(matvec(x)
+-                                                + sigma * M_matvec(x))
++                with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LLE001_e0748c3e', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-lambda-expr/e0748c3e_refactored.csv') as tracker:
++                    def converted_lambda_511(x):
++                        result = Minv_matvec(matvec(x)
++                        return result
++
++                    self.OP = converted_lambda_511
++                                                    + sigma * M_matvec(x))
+                 self.B = M_matvec
+                 self.bmat = 'G'
+         else:

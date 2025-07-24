@@ -1,4 +1,5 @@
 repositories
+worktrees
 .vscode
 .venv
 logs

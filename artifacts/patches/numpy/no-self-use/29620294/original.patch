@@ -1,0 +1,20 @@
+diff --git a/numpy/_core/_internal.py b/numpy/_core/_internal.py
+index e00e1b2c1f..7f45ef754a 100644
+--- a/numpy/_core/_internal.py
++++ b/numpy/_core/_internal.py
+@@ -4,6 +4,7 @@
+ Some things are more easily handled Python.
+ 
+ """
++from codecarbon import track_emissions
+ import ast
+ import math
+ import re
+@@ -251,6 +252,7 @@ def _getintp_ctype():
+ # Used for .ctypes attribute of ndarray
+ 
+ class _missing_ctypes:
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_29620294', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/29620294.csv')
+     def cast(self, num, obj):
+         return num.value
+ 

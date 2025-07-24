@@ -1,0 +1,18 @@
+diff --git a/scipy/stats/_distn_infrastructure.py b/scipy/stats/_distn_infrastructure.py
+index 82cb1e343..ce46c3e4b 100644
+--- a/scipy/stats/_distn_infrastructure.py
++++ b/scipy/stats/_distn_infrastructure.py
+@@ -1,4 +1,5 @@
+ #
++from codecarbon import track_emissions
+ # Author:  Travis Oliphant  2002-2011 with contributions from
+ #          SciPy Developers 2004-2011
+ #
+@@ -991,6 +992,7 @@ class rv_generic:
+     # These are the methods you must define (standard form functions)
+     # NB: generic _pdf, _logpdf, _cdf are different for
+     # rv_continuous and rv_discrete hence are defined in there
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R6301_8a894bd5', output_file='/root/ecooptimizer_benchmark/emissions/scipy/no-self-use/8a894bd5.csv')
+     def _argcheck(self, *args):
+         """Default check for correct values on args and keywords.
+ 

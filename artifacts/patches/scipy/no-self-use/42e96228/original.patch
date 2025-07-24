@@ -1,0 +1,20 @@
+diff --git a/scipy/optimize/_differentialevolution.py b/scipy/optimize/_differentialevolution.py
+index f9cf1229e..925551ddc 100644
+--- a/scipy/optimize/_differentialevolution.py
++++ b/scipy/optimize/_differentialevolution.py
+@@ -2,6 +2,7 @@
+ differential_evolution: The differential evolution global optimization algorithm
+ Added by Andrew Nelson 2014
+ """
++from codecarbon import track_emissions
+ import warnings
+ 
+ import numpy as np
+@@ -1496,6 +1497,7 @@ class DifferentialEvolutionSolver:
+     def __exit__(self, *args):
+         return self._mapwrapper.__exit__(*args)
+ 
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R6301_42e96228', output_file='/root/ecooptimizer_benchmark/emissions/scipy/no-self-use/42e96228.csv')
+     def _accept_trial(self, energy_trial, feasible_trial, cv_trial,
+                       energy_orig, feasible_orig, cv_orig):
+         """

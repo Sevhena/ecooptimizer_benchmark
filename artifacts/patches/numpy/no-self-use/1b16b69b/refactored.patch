@@ -1,0 +1,29 @@
+diff --git a/numpy/distutils/command/build_src.py b/numpy/distutils/command/build_src.py
+index cfcc80caec..6cf14e97f8 100644
+--- a/numpy/distutils/command/build_src.py
++++ b/numpy/distutils/command/build_src.py
+@@ -1,5 +1,6 @@
+ """ Build swig and f2py sources.
+ """
++from codecarbon import track_emissions
+ import os
+ import re
+ import sys
+@@ -388,12 +389,14 @@ def generate_sources(self, sources, extension):
+         return new_sources
+ 
+     def filter_py_files(self, sources):
+-        return self.filter_files(sources, ['.py'])
++        return build_src.filter_files(sources, ['.py'])
+ 
+     def filter_h_files(self, sources):
+-        return self.filter_files(sources, ['.h', '.hpp', '.inc'])
++        return build_src.filter_files(sources, ['.h', '.hpp', '.inc'])
+ 
+-    def filter_files(self, sources, exts = []):
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_1b16b69b', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/1b16b69b_refactored.csv')
++    @staticmethod
++    def filter_files(sources, exts = []):
+         new_sources = []
+         files = []
+         for source in sources:

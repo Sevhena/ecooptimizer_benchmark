@@ -1,0 +1,22 @@
+diff --git a/scipy/optimize/_linprog_rs.py b/scipy/optimize/_linprog_rs.py
+index 43fed5805..e631b7fc7 100644
+--- a/scipy/optimize/_linprog_rs.py
++++ b/scipy/optimize/_linprog_rs.py
+@@ -17,6 +17,7 @@ References
+ """
+ # Author: Matt Haberland
+ 
++from codecarbon import EmissionsTracker
+ import numpy as np
+ from numpy.linalg import LinAlgError
+ 
+@@ -284,7 +285,8 @@ def _select_enter_pivot(c_hat, bl, a, rule="bland", tol=1e-12):
+     if rule.lower() == "mrc":  # index with minimum reduced cost
+         return a[~bl][np.argmin(c_hat)]
+     else:  # smallest index w/ negative reduced cost
+-        return a[~bl][c_hat < -tol][0]
++        with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LEC001_d99bd01f', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-element-chain/d99bd01f_refactored.csv') as tracker:
++            return a[~bl][c_hat < -tol][0]
+ 
+ 
+ def _display_iter(phase, iteration, slack, con, fun):

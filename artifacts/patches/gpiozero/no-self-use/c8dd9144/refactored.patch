@@ -1,0 +1,32 @@
+diff --git a/gpiozero/mixins.py b/gpiozero/mixins.py
+index 1b3b34a..3ea22ef 100644
+--- a/gpiozero/mixins.py
++++ b/gpiozero/mixins.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import inspect
+ import weakref
+ import warnings
+@@ -162,7 +163,9 @@ class event:
+         self.handlers = {}
+         self.__doc__ = doc
+ 
+-    def _wrap_callback(self, instance, fn):
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_c8dd9144', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/c8dd9144_refactored.csv')
++    @staticmethod
++    def _wrap_callback(instance, fn):
+         if not callable(fn):
+             raise BadEventHandler('value must be None or a callable')
+         # If fn is wrapped with partial (i.e. partial, partialmethod, or wraps
+@@ -215,7 +218,7 @@ class event:
+             except KeyError:
+                 warnings.warn(CallbackSetToNone(callback_warning))
+         else:
+-            self.handlers[id(instance)] = self._wrap_callback(instance, value)
++            self.handlers[id(instance)] = event._wrap_callback(instance, value)
+         enabled = any(
+             obj.handlers.get(id(instance))
+             for name in dir(type(instance))

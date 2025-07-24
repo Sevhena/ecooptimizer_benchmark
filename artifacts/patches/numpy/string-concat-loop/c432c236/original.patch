@@ -1,0 +1,44 @@
+diff --git a/numpy/_core/einsumfunc.py b/numpy/_core/einsumfunc.py
+index 8e71e6d4b1..6dbd4140f8 100644
+--- a/numpy/_core/einsumfunc.py
++++ b/numpy/_core/einsumfunc.py
+@@ -2,6 +2,7 @@
+ Implementation of optimized einsum.
+ 
+ """
++from codecarbon import EmissionsTracker
+ import itertools
+ import operator
+ 
+@@ -621,18 +622,19 @@ def _parse_einsum_input(operands):
+ 
+         if output_list is not None:
+             subscripts += "->"
+-            for s in output_list:
+-                if s is Ellipsis:
+-                    subscripts += "..."
+-                else:
+-                    try:
+-                        s = operator.index(s)
+-                    except TypeError as e:
+-                        raise TypeError(
+-                            "For this input type lists must contain "
+-                            "either int or Ellipsis"
+-                        ) from e
+-                    subscripts += einsum_symbols[s]
++            with EmissionsTracker(project_name='numpy-benchmark', experiment_id='numpy_SCL001_c432c236', output_file='/root/ecooptimizer_benchmark/emissions/numpy/string-concat-loop/c432c236.csv') as tracker:
++                for s in output_list:
++                    if s is Ellipsis:
++                        subscripts += "..."
++                    else:
++                        try:
++                            s = operator.index(s)
++                        except TypeError as e:
++                            raise TypeError(
++                                "For this input type lists must contain "
++                                "either int or Ellipsis"
++                            ) from e
++                        subscripts += einsum_symbols[s]
+     # Check for proper "->"
+     if ("-" in subscripts) or (">" in subscripts):
+         invalid = (subscripts.count("-") > 1) or (subscripts.count(">") > 1)

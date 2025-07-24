@@ -1,0 +1,23 @@
+diff --git a/scipy/interpolate/_rbf.py b/scipy/interpolate/_rbf.py
+index f13bac41c..1b7683583 100644
+--- a/scipy/interpolate/_rbf.py
++++ b/scipy/interpolate/_rbf.py
+@@ -29,6 +29,7 @@ met:
+ 
+     * Neither the name of Robert Hetland nor the names of any
+        contributors may be used to endorse or promote products derived
++from codecarbon import EmissionsTracker
+        from this software without specific prior written permission.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+@@ -235,7 +236,9 @@ class Rbf:
+         else:
+             raise ValueError("Mode has to be 1-D or N-D.")
+ 
+-        if not all([x.size == self.di.shape[0] for x in self.xi]):
++        with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_R1729_002c736b', output_file='/root/ecooptimizer_benchmark/emissions/scipy/use-a-generator/002c736b_refactored.csv') as tracker:
++            _carbon_wrapped_17aa4f85 = all(x.size == self.di.shape[0] for x in self.xi)
++        if not _carbon_wrapped_17aa4f85:
+             raise ValueError("All arrays must be equal length.")
+ 
+         self.norm = kwargs.pop('norm', 'euclidean')

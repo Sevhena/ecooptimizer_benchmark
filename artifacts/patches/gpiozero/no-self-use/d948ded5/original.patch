@@ -1,0 +1,20 @@
+diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
+index 0fbc407..130e45d 100644
+--- a/gpiozero/pins/__init__.py
++++ b/gpiozero/pins/__init__.py
+@@ -9,6 +9,7 @@
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import warnings
+ from weakref import ref
+ from threading import Lock
+@@ -776,6 +777,7 @@ class SPI(Device):
+             ----'   `---'   `---'   `---'   `---'   `---'   `---'   `-------
+         """)
+ 
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_d948ded5', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/d948ded5.csv')
+     def _get_bits_per_word(self):
+         return 8  # pragma: no cover
+ 
