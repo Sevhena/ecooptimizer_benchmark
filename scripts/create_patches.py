@@ -220,7 +220,7 @@ def clear_patches(
                 )
                 annotated_smells_file.unlink(missing_ok=True)
             else:
-                logging.info(
+                logging.debug(
                     f"Updating annotated smells file for smell {smell_id} in repo {repo_name}"
                 )
                 annotated_smells[smell_id] = smells[smell_id]
@@ -325,7 +325,26 @@ def main():
             logging.info(f"Generating patches for smells {args.smells} in repo {repo_name}\n")
             for smell in args.smells:
                 smell_meta.append((smells[smell]["symbol"], smell))
-                clear_patches(repo_name, smell)
+                clear_patches(repo_name, smell, smells)
+        elif args.type:
+            logging.info(f"Generating patches for smell type {args.type} in repo {repo_name}\n")
+            smell_map = select_repos_config.get("smells", {}).get(repo_name, {})
+            if not smell_map:
+                logging.warning(
+                    f"No smells of type '{args.type}' selected for {repo_name}. Skipping patch generation."
+                )
+                continue
+            logging.debug(f"Selected smells for {repo_name}: {smell_map}")
+
+            for symbol, smell_ids in smell_map.items():
+                for smell_id in smell_ids:
+                    if smell_id in smells:
+                        smell_meta.append((symbol, smell_id))
+                        clear_patches(repo_name, smell_id, smells)
+                    else:
+                        logging.warning(
+                            f"Smell ID {smell_id} not found in analysis results for {repo_name}"
+                        )
         else:
             smell_map = select_repos_config.get("smells", {}).get(repo_name, {})
             logging.debug(f"Selected smells for {repo_name}: {smell_map}")

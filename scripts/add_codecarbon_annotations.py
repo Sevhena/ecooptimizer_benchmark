@@ -5,6 +5,11 @@ from pathlib import Path
 import sys
 import argparse
 
+import astroid
+from astroid import nodes
+
+from typing import Optional
+
 BENCHMARK_ROOT = Path().resolve()
 ARTIFACTS_DIR = BENCHMARK_ROOT / "artifacts"
 WORKTREE_DIR = BENCHMARK_ROOT / "worktrees"
@@ -73,37 +78,184 @@ def add_decorator_to_function(file_path: Path, cc_args: str, line_num: int, col_
     logging.info(f"Added decorator to function in {file_path} at line {line_num}")
 
 
-def wrap_with_context_manager(
-    file_path: Path, cc_args: str, start_line: int, end_line: int, tab_size: int = 4
-):
-    """Wrap code block with CodeCarbon context manager."""
-    lines = get_code_lines(file_path)
+def find_statement_insertion_point(
+    tree: nodes.Module,
+    target_lineno: int,
+    target_col_offset: int,
+) -> Optional[tuple[int, int]]:
+    """
+    Find where to insert a statement containing the target node.
 
-    # Add context manager around the specified lines
-    indent = lines[start_line - 1][
-        : len(lines[start_line - 1]) - len(lines[start_line - 1].lstrip())
+    Returns: (lineno, col_offset) where new statement should be inserted
+             or None if target is at module level
+    """
+    target_node = None
+    for node in tree.nodes_of_class(nodes.NodeNG):
+        if (
+            hasattr(node, "lineno")
+            and node.lineno == target_lineno
+            and hasattr(node, "col_offset")
+            and node.col_offset == target_col_offset
+        ):
+            target_node = node
+            break
+
+    if not target_node:
+        return None
+
+    current = target_node
+    while current.parent:
+        logging.debug(
+            f"Checking parent node {current.parent.__class__.__name__} of {current.__class__.__name__}"
+        )
+        if hasattr(current.parent, "body"):
+            if not isinstance(current.parent, nodes.Module):
+                parent_str = current.parent.as_string().splitlines()
+                header_stop = next(
+                    i for i, line in enumerate(parent_str) if line.strip()[-1] == ":"
+                )
+                if current.parent.lineno + header_stop >= target_lineno:
+                    return (current.parent.lineno, current.parent.col_offset)
+
+            return (current.lineno, current.col_offset)  # type: ignore
+        current = current.parent
+
+    return None
+
+
+def wrap_with_context_manager(
+    file_path: Path,
+    cc_args: str,
+    start_line: int,
+    end_line: int,
+    is_block: bool = True,
+    start_col: Optional[int] = None,
+    end_col: Optional[int] = None,
+    tab_size: int = 4,
+):
+    """Wrap code block with CodeCarbon context manager, handling multi-line expressions."""
+    lines = get_code_lines(file_path)
+    original_indent = lines[start_line - 1][:start_col]
+    insertion_line = start_line
+
+    source = file_path.read_text(encoding="utf-8")
+
+    try:
+        tree = astroid.parse(source)
+    except astroid.AstroidSyntaxError:
+        return None
+
+    if is_block:
+        is_in_expression = False
+    else:
+        # If not a block, we need to check if the start and end columns are within the same line
+        if start_col is None or end_col is None:
+            raise ValueError("start_col and end_col must be provided for non-block expressions")
+
+        # Check if we're in the middle of an expression
+        is_sole_assign = False
+        for node in tree.nodes_of_class((nodes.AnnAssign, nodes.Assign, nodes.AugAssign)):
+            is_sole_assign = (
+                node.lineno <= start_line and node.end_lineno >= end_line  # type: ignore
+            ) and not isinstance(node.value, nodes.BinOp)
+
+            if is_sole_assign:
+                break
+
+        logging.debug(
+            f"Checking if expression is sole assignment: {is_sole_assign} for lines {start_line}-{end_line}"
+        )
+
+        is_in_expression = (
+            not is_sole_assign and not lines[start_line - 1][:start_col].strip() == ""
+        )
+
+        logging.debug(
+            f"Expression spanning lines {start_line}-{end_line}, is_in_expression={is_in_expression}"
+        )
+
+    if is_in_expression:
+        # Generate unique variable name
+        import uuid
+
+        # Find start of the enclosing expression
+        insertion_point = find_statement_insertion_point(tree, start_line, start_col)
+        if not insertion_point:
+            logging.error(
+                f"Could not find enclosing expression for line {start_line}, column {start_col} in {file_path}"
+            )
+            return
+
+        insertion_line, insertion_col = insertion_point
+        var_name = f"_carbon_wrapped_{uuid.uuid4().hex[:8]}"
+
+        if start_line == end_line:
+            # Single line expression - extract it
+            code_line = lines[start_line - 1]
+            smell_statement = code_line[start_col:end_col].strip()
+            new_code_line = code_line[:start_col] + var_name + code_line[end_col:]
+            logging.debug(
+                f"Extracting single line expression: {code_line.strip()} at line {start_line}"
+            )
+            lines[start_line - 1] = new_code_line
+        else:
+            # Multi-line expression - extract the block
+            code_block = []
+            for i in range(start_line - 1, end_line):
+                if i == start_line - 1:
+                    code_block.append(lines[i][start_col:].strip())
+                elif i == end_line - 1:
+                    code_block.append(lines[i][:end_col].strip())
+                else:
+                    code_block.append(lines[i].strip())
+
+            logging.debug(
+                f"Extracting multi-line expression from lines {start_line} to {end_line}: {code_block}"
+            )
+
+            smell_statement = " ".join(code_block)
+
+            # Remove the original lines
+            for i in range(start_line - 1, end_line):
+                if i == start_line - 1:
+                    lines[i] = lines[i][:start_col] + var_name + lines[end_line - 1][end_col:]
+                else:
+                    lines[i] = ""
+
+        lines.insert(
+            insertion_line - 1,
+            f"{insertion_col * ' '}{var_name} = {smell_statement}\n",
+        )
+        end_column = insertion_col + len(var_name) + len(smell_statement) + 3  # +3 for " = "
+        start_column = end_column - len(smell_statement)
+
+    indent = lines[insertion_line - 1][
+        : len(lines[insertion_line - 1]) - len(lines[insertion_line - 1].lstrip())
     ]
 
-    # Insert start before the block
+    # Insert context manager
     start_context = f"{indent}with EmissionsTracker({cc_args}) as tracker:\n"
-    lines.insert(start_line - 1, start_context)
+    lines.insert(insertion_line - 1, start_context)
 
-    # Add proper indentation to the block
+    # Indent the block
     for i in range(start_line, end_line + 1):
         lines[i] = " " * tab_size + lines[i]
 
     # Add import if not present
-    first_import_id = next(
-        (i for i, line in enumerate(lines) if "import" in line or "from" in line), 0
-    )
-
     if not any(
-        line.strip().startswith("from codecarbon import EmissionsTracker") for line in lines
+        line.strip().startswith(("from codecarbon import EmissionsTracker", "import codecarbon"))
+        for line in lines
     ):
+        first_import_id = next(
+            (i for i, line in enumerate(lines) if "import" in line or "from" in line), 0
+        )
         lines.insert(first_import_id, "from codecarbon import EmissionsTracker\n")
 
     write_code_lines(file_path, lines)
-    logging.info(f"Wrapped lines {start_line}-{end_line} in {file_path} with context manager")
+    logging.info(f"Wrapped lines {start_line}-{end_line} in {file_path}")
+
+    if is_in_expression:
+        return insertion_line, start_column, end_column  # type: ignore
 
 
 def process_smell(smell_data: dict, repo_name: str):
@@ -145,13 +297,22 @@ def process_smell(smell_data: dict, repo_name: str):
         if energy_meta.get("useOccurences", False):
             occurences = smell_data["occurences"]
             for i in range(len(smell_data["occurences"])):
-                wrap_with_context_manager(
+                new_location = wrap_with_context_manager(
                     file_path,
                     cc_args,
                     occurences[i]["line"],
                     occurences[i]["endLine"],
+                    False,
+                    occurences[i]["column"],
+                    occurences[i]["endColumn"],
                     tab_size,
                 )
+                if new_location:
+                    smell_data["occurences"][i]["line"] = new_location[0]
+                    smell_data["occurences"][i]["endLine"] = new_location[0]
+                    smell_data["occurences"][i]["column"] = new_location[1]
+                    smell_data["occurences"][i]["endColumn"] = new_location[2]
+
                 smell_data["occurences"][i]["line"] += 2 + i
                 smell_data["occurences"][i]["endLine"] += 2 + i
                 smell_data["occurences"][i]["column"] += tab_size
@@ -163,7 +324,7 @@ def process_smell(smell_data: dict, repo_name: str):
                 cc_args,
                 energy_meta["start"],
                 energy_meta["end"],
-                tab_size,
+                tab_size=tab_size,
             )
             for i in range(len(smell_data["occurences"])):
                 smell_data["occurences"][i]["line"] += 2
