@@ -202,7 +202,7 @@ def main():
     parser.add_argument("--repo", type=str, help="Benchmark a specific repository")
     parser.add_argument(
         "--smell-types",
-        type=list[str],
+        nargs="+",
         default=ALL_SMELL_TYPES,
         help="Benchmark specific smell types",
     )

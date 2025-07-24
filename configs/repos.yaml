@@ -32,7 +32,7 @@ numpy:
     - "**/test_*.py"
 scipy:
   venv: ".scipy_venv"
-  test_command: ["-m", "scipy"]
+  test_command: ["-m", "pytest", "scipy"]
   target: "scipy/scipy"
   patterns_to_exclude:
     - "**/tests/**"
@@ -62,7 +62,7 @@ airflow:
     - "**/test_*.py"
 gpiozero:
   venv: ".gpiozero_venv"
-  test_command: ["pytest"]
+  test_command: ["-m", "pytest"]
   target: "gpiozero/gpiozero"
   patterns_to_exclude:
     - "**/tests/**"
