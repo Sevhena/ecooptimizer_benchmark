@@ -270,7 +270,7 @@ def main():
         help="Generate patches for a specific smell type:\n"
         + "\n- ".join([str(item) for item in ALL_SMELL_TYPES.items()]),
     )
-    group.add_argument("--smells", type=list[str], help="Generate patch for a specific smell (id)")
+    group.add_argument("--smells", nargs="+", help="Generate patch for a specific smell (id)")
     args = parser.parse_args()
 
     setup_logging()
