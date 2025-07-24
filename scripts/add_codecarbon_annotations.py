@@ -110,10 +110,12 @@ def find_statement_insertion_point(
         )
         if hasattr(current.parent, "body"):
             if not isinstance(current.parent, nodes.Module):
-                parent_str = current.parent.as_string().splitlines()
+                parent_str = current.parent.as_string().strip().splitlines()
+                logging.debug(f"Parent node body: {parent_str}")
                 header_stop = next(
                     i for i, line in enumerate(parent_str) if line.strip()[-1] == ":"
                 )
+                logging.debug(f"Header stop at line {header_stop} for parent node")
                 if current.parent.lineno + header_stop >= target_lineno:
                     return (current.parent.lineno, current.parent.col_offset)
 
@@ -180,6 +182,9 @@ def wrap_with_context_manager(
 
         # Find start of the enclosing expression
         insertion_point = find_statement_insertion_point(tree, start_line, start_col)
+        logging.debug(
+            f"Insertion point for expression at line {start_line}, column {start_col}: {insertion_point}"
+        )
         if not insertion_point:
             logging.error(
                 f"Could not find enclosing expression for line {start_line}, column {start_col} in {file_path}"

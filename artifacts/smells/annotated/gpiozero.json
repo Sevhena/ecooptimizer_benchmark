@@ -22,8 +22,8 @@
             {
                 "column": 4,
                 "endColumn": 22,
-                "endLine": 167,
-                "line": 167
+                "endLine": 165,
+                "line": 165
             }
         ],
         "path": "gpiozero/mixins.py",
@@ -54,8 +54,8 @@
             {
                 "column": 4,
                 "endColumn": 25,
-                "endLine": 464,
-                "line": 464
+                "endLine": 462,
+                "line": 462
             }
         ],
         "path": "gpiozero/pins/__init__.py",
@@ -86,8 +86,8 @@
             {
                 "column": 4,
                 "endColumn": 24,
-                "endLine": 735,
-                "line": 735
+                "endLine": 733,
+                "line": 733
             }
         ],
         "path": "gpiozero/pins/__init__.py",
@@ -118,8 +118,8 @@
             {
                 "column": 4,
                 "endColumn": 26,
-                "endLine": 781,
-                "line": 781
+                "endLine": 779,
+                "line": 779
             }
         ],
         "path": "gpiozero/pins/__init__.py",
@@ -150,8 +150,8 @@
             {
                 "column": 4,
                 "endColumn": 22,
-                "endLine": 558,
-                "line": 558
+                "endLine": 556,
+                "line": 556
             }
         ],
         "path": "gpiozero/internal_devices.py",
@@ -182,8 +182,8 @@
             {
                 "column": 4,
                 "endColumn": 11,
-                "endLine": 136,
-                "line": 136
+                "endLine": 134,
+                "line": 134
             }
         ],
         "path": "gpiozero/pins/__init__.py",
@@ -556,8 +556,8 @@
         "obj": null,
         "occurences": [
             {
-                "column": 25,
-                "endColumn": 86,
+                "column": 47,
+                "endColumn": 108,
                 "endLine": 959,
                 "line": 959
             }
@@ -620,10 +620,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 19,
-                "endColumn": 17,
-                "endLine": 1120,
-                "line": 1115
+                "column": 15,
+                "endColumn": 13,
+                "endLine": 1118,
+                "line": 1113
             }
         ],
         "path": "gpiozero/output_devices.py",

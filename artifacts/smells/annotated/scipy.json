@@ -632,10 +632,10 @@
         "obj": "rv_generic._argcheck_rvs",
         "occurences": [
             {
-                "column": 17,
-                "endColumn": 69,
-                "endLine": 982,
-                "line": 981
+                "column": 13,
+                "endColumn": 65,
+                "endLine": 980,
+                "line": 979
             }
         ],
         "path": "scipy/stats/_distn_infrastructure.py",
@@ -664,10 +664,10 @@
         "obj": "MpmathData.__init__",
         "occurences": [
             {
-                "column": 34,
-                "endColumn": 17,
-                "endLine": 216,
-                "line": 214
+                "column": 30,
+                "endColumn": 13,
+                "endLine": 214,
+                "line": 212
             }
         ],
         "path": "scipy/special/_mptestutils.py",
@@ -696,10 +696,10 @@
         "obj": "rotate",
         "occurences": [
             {
-                "column": 35,
-                "endColumn": 79,
-                "endLine": 976,
-                "line": 976
+                "column": 11,
+                "endColumn": 55,
+                "endLine": 974,
+                "line": 974
             }
         ],
         "path": "scipy/ndimage/_interpolation.py",
@@ -728,10 +728,10 @@
         "obj": "_cossin",
         "occurences": [
             {
-                "column": 15,
-                "endColumn": 70,
-                "endLine": 173,
-                "line": 173
+                "column": 11,
+                "endColumn": 66,
+                "endLine": 171,
+                "line": 171
             }
         ],
         "path": "scipy/linalg/_decomp_cossin.py",
@@ -760,10 +760,10 @@
         "obj": "choose_conv_method",
         "occurences": [
             {
-                "column": 35,
-                "endColumn": 107,
-                "endLine": 1402,
-                "line": 1402
+                "column": 7,
+                "endColumn": 79,
+                "endLine": 1400,
+                "line": 1400
             }
         ],
         "path": "scipy/signal/_signaltools.py",
@@ -792,10 +792,10 @@
         "obj": "Rbf.__init__",
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 89,
-                "endLine": 240,
-                "line": 240
+                "column": 15,
+                "endColumn": 65,
+                "endLine": 238,
+                "line": 238
             }
         ],
         "path": "scipy/interpolate/_rbf.py",
@@ -920,10 +920,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 15,
-                "endColumn": 87,
-                "endLine": 390,
-                "line": 390
+                "column": 39,
+                "endColumn": 111,
+                "endLine": 392,
+                "line": 392
             }
         ],
         "path": "scipy/sparse/_lil.py",

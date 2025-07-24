@@ -1,5 +1,5 @@
 diff --git a/scipy/sparse/_lil.py b/scipy/sparse/_lil.py
-index 479472445..ef3804c74 100644
+index 479472445..f31bde76b 100644
 --- a/scipy/sparse/_lil.py
 +++ b/scipy/sparse/_lil.py
 @@ -5,6 +5,7 @@ __docformat__ = "restructuredtext en"
@@ -10,15 +10,16 @@ index 479472445..ef3804c74 100644
  from bisect import bisect_left
  
  import numpy as np
-@@ -387,7 +388,10 @@ class _lil_base(_spbase, IndexMixin):
+@@ -387,7 +388,11 @@ class _lil_base(_spbase, IndexMixin):
      toarray.__doc__ = _spbase.toarray.__doc__
  
      def transpose(self, axes=None, copy=False):
 -        return self.tocsr(copy=copy).transpose(axes=axes, copy=False).tolil(copy=False)
 +        with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LMC001_f7d9627c', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-message-chain/f7d9627c_refactored.csv') as tracker:
-+            intermediate_0 = copy)
++            intermediate_0 = self.tocsr(copy=copy)
 +            intermediate_1 = intermediate_0.transpose(axes=axes, copy=False)
-+            return self.tocsr(copy = intermediate_1.tolil(copy=False)
++            _carbon_wrapped_4ad1c9a4 = intermediate_1.tolil(copy=False)
++        return _carbon_wrapped_4ad1c9a4
  
      transpose.__doc__ = _spbase.transpose.__doc__
  
