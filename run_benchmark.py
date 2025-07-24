@@ -104,7 +104,7 @@ def run_test_suite(
     smell_id: str,
     run_type: str,
     test_command: str,
-    venv_command: str,
+    venv_name: str,
     iters: int,
 ):
     """Run the benchmark for a smell version: original or refactored."""
@@ -114,14 +114,13 @@ def run_test_suite(
     cpu_percentages = []
     peak_memory = 0
 
+    venv_python = WORKTREES_DIR / repo / ".venv/bin/python"
     try:
-        result = subprocess.run(
-            test_command,
-            shell=True,
-            cwd=(WORKTREES_DIR / repo),
-            # stdout=subprocess.DEVNULL,
-            # stderr=subprocess.DEVNULL,
-        )
+        results = subprocess.run(
+    	    [str(venv_python), "-m", "pytest"],
+    	    cwd=(WORKTREES_DIR / repo),
+	    stdout=subprocess.DEVNULL,
+	)
         cpu = process.cpu_percent(interval=0.1)
         mem = process.memory_info().rss / (1024**2)
         peak_memory = max(peak_memory, mem)
@@ -130,7 +129,7 @@ def run_test_suite(
         print(".", end="", flush=True)
     except Exception as e:
         logging.error(f"Test run failed: {e}")
-        return
+        return False
 
     elapsed = time.time() - start_time
     avg_cpu = sum(cpu_percentages) / len(cpu_percentages) if cpu_percentages else 0
@@ -179,9 +178,11 @@ def run_test_suite(
             writer.writerow(header)
         writer.writerow(row)
 
-    logging.info(
-        f"[{run_type}] Time: {elapsed:.2f}s | CPU: {avg_cpu:.1f}% | RAM: {peak_memory:.1f}MB"
-    )
+    #logging.info(
+    #    f"[{run_type}] Time: {elapsed:.2f}s | CPU: {avg_cpu:.1f}% | RAM: {peak_memory:.1f}MB"
+    #)
+
+    return True
 
 
 def run_benchmark(
@@ -197,7 +198,12 @@ def run_benchmark(
     datapoints = 0
 
     # Warm up
-    run_test_suite(repo, smell_type, smell_id, version, test_cmd, venv_cmd, iters)
+    success = run_test_suite(repo, smell_type, smell_id, version, test_cmd, venv_cmd, iters)
+    
+    if not success:
+        return
+
+    print("     ", end="", flush=True)
     while datapoints < iters:
         run_test_suite(repo, smell_type, smell_id, version, test_cmd, venv_cmd, iters)
         print(".", end="", flush=True)
@@ -319,11 +325,11 @@ def main():
         for smell_type, smell_instances in smell_items.items():
             logging.info(f"\n  {smell_type}:")
             for repo, smell_type, smell_id, smell_dir in smell_instances:
-                venv_cmd = repos_config[repo].get("venv_command")
+                venv_name = repos_config[repo].get("venv")
                 test_cmd = repos_config[repo].get("test_command")
 
-                if not venv_cmd:
-                    logging.error(f"{repo} is missing a venv_command in repos.yaml.")
+                if not venv_name:
+                    logging.error(f"{repo} is missing a venv in repos.yaml.")
                     continue
 
                 repo_dir = WORKTREES_DIR / repo
@@ -345,7 +351,7 @@ def main():
                             smell_dir,
                             version,
                             test_cmd,
-                            venv_cmd,
+                            venv_name,
                             args.iters,
                         )
                     except Exception as e:
