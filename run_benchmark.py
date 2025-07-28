@@ -176,20 +176,19 @@ def run_benchmark(
                 header_written = True
             writer.writerow(row)
 
-        print(".", end="", flush=True)
-
         # Check how many lines CodeCarbon recorded (excluding header)
         if emissions_csv.exists():
             with emissions_csv.open() as f:
                 datapoints = sum(1 for _ in f) - 1
         else:
             logging.warning(f"No emissions file found: {emissions_csv}")
+            return False
 
         if datapoints < iters:
             logging.debug(f"Only {datapoints} datapoints for {repo} | {smell_id} | rerunning...")
 
     print(f" [{datapoints} collected]\n", flush=True)
-    return stats_csv
+    return True
 
 
 def _run_single_test(python_bin: Path, test_cmd: list[str], repo: str):
@@ -334,7 +333,7 @@ def main():
                     logging.info(f"    [{version}]")
                     apply_patch(smell_dir / f"{version}.patch", repo_dir)
                     try:
-                        run_benchmark(
+                        complete = run_benchmark(
                             repo,
                             smell_type,
                             smell_id,
@@ -343,12 +342,19 @@ def main():
                             args.iters,
                             args.verbose,
                         )
+
+                        if not complete:
+                            logging.error(
+                                f"Failed to run benchmark for {repo} | {smell_type} | {smell_id} | {version}"
+                            )
+                            break
                     except Exception as e:
                         logging.error(
                             f"Error running benchmark for {repo} | {smell_type} | {smell_id} | {version}: {e}"
                         )
                         continue
                     finally:
+                        logging.info(f"    Restoring {repo_dir} to original state...")
                         subprocess.run(["git", "restore", "."], cwd=repo_dir)
 
     logging.info("\n✅ Benchmarking complete.")
