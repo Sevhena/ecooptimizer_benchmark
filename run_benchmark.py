@@ -2,6 +2,7 @@ import argparse
 import json
 import subprocess
 import logging
+from threading import Thread
 import yaml
 import shutil
 import time
@@ -97,6 +98,23 @@ def load_analysis_results(repo_name: str) -> dict[str, dict] | None:
         return json.load(f)
 
 
+def monitor_emissions_file(emissions_csv: Path, interval: float = 0.1):
+    """Background process to monitor line count changes in emissions file."""
+    initial_lines = 0
+    if emissions_csv.exists():
+        with emissions_csv.open() as f:
+            initial_lines = sum(1 for _ in f)
+
+    while True:
+        time.sleep(interval)
+        if emissions_csv.exists():
+            with emissions_csv.open() as f:
+                current_lines = sum(1 for _ in f)
+            if current_lines > initial_lines:
+                print(".", end="", flush=True)
+                initial_lines = current_lines
+
+
 # --- Energy Run + Measurement ---
 def run_benchmark(
     repo: str,
@@ -105,7 +123,7 @@ def run_benchmark(
     version: str,
     test_cmd: list[str],
     iters: int = DEFAULT_ITERS,
-    warmup: bool = True,
+    verbose: bool = False,
 ):
     """Run benchmark test suite for a given repo smell version."""
     venv_python = WORKTREES_DIR / repo / ".venv/bin/python"
@@ -115,14 +133,15 @@ def run_benchmark(
     stats_csv = EMISSIONS_DIR / repo / smell_type / f"{smell_id}_stats.csv"
     stats_csv.parent.mkdir(parents=True, exist_ok=True)
 
-    if warmup:
-        print("     [warmup]", end="", flush=True)
-        _run_single_test(venv_python, test_cmd, repo)
-
     print("\n     [bench]", end="", flush=True)
     header_written = stats_csv.exists()
 
-    while datapoints < iters:
+    if verbose:
+        # Start background monitoring thread
+        monitor_thread = Thread(target=monitor_emissions_file, args=(emissions_csv,), daemon=True)
+        monitor_thread.start()
+
+    while datapoints < iters + 1:
         elapsed, avg_cpu, peak_mem = _run_single_test(venv_python, test_cmd, repo)
 
         timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
@@ -211,6 +230,9 @@ def main():
     )
     parser.add_argument(
         "--iters", type=int, default=DEFAULT_ITERS, help="Number of iterations to run (default: 30)"
+    )
+    parser.add_argument(
+        "--verbose", action="store_true", help="Enable verbose output with emissions monitoring"
     )
     args = parser.parse_args()
 
@@ -319,6 +341,7 @@ def main():
                             version,
                             test_cmd,
                             args.iters,
+                            args.verbose,
                         )
                     except Exception as e:
                         logging.error(
