@@ -2,7 +2,7 @@ import argparse
 import json
 import subprocess
 import logging
-from threading import Thread
+from threading import Thread, Event
 import yaml
 import shutil
 import time
@@ -98,20 +98,22 @@ def load_analysis_results(repo_name: str) -> dict[str, dict] | None:
         return json.load(f)
 
 
-def monitor_emissions_file(emissions_csv: Path, interval: float = 0.1):
+def monitor_emissions_file(
+    initial_lines: int, emissions_csv: Path, stop_event: Event, interval: float = 0.1
+):
     """Background process to monitor line count changes in emissions file."""
-    initial_lines = 0
-    if emissions_csv.exists():
-        with emissions_csv.open() as f:
-            initial_lines = sum(1 for _ in f)
 
-    while True:
+    dots_printed = 0
+    while not stop_event.is_set():  # Check if we should stop
         time.sleep(interval)
         if emissions_csv.exists():
             with emissions_csv.open() as f:
                 current_lines = sum(1 for _ in f)
             if current_lines > initial_lines:
-                print(".", end="", flush=True)
+                new_lines = current_lines - initial_lines
+                dots_to_print = new_lines - dots_printed
+                print("." * dots_to_print, end="", flush=True)
+                dots_printed += dots_to_print
                 initial_lines = current_lines
 
 
@@ -129,63 +131,82 @@ def run_benchmark(
     venv_python = WORKTREES_DIR / repo / ".venv/bin/python"
     datapoints = 0
 
-    emissions_csv = EMISSIONS_DIR / repo / smell_type / f"{smell_id}.csv"
+    emissions_csv = (
+        EMISSIONS_DIR
+        / repo
+        / smell_type
+        / f"{smell_id}{'_refactored' if version == 'refactored' else ''}.csv"
+    )
     stats_csv = EMISSIONS_DIR / repo / smell_type / f"{smell_id}_stats.csv"
     stats_csv.parent.mkdir(parents=True, exist_ok=True)
+
+    initial_lines = 0
+    if emissions_csv.exists():
+        with emissions_csv.open() as f:
+            initial_lines = sum(1 for _ in f)
 
     print("\n     [bench]", end="", flush=True)
     header_written = stats_csv.exists()
 
+    stop_event = Event()
+    monitor_thread = Thread(
+        target=monitor_emissions_file, args=(initial_lines, emissions_csv, stop_event), daemon=True
+    )
     if verbose:
-        # Start background monitoring thread
-        monitor_thread = Thread(target=monitor_emissions_file, args=(emissions_csv,), daemon=True)
         monitor_thread.start()
 
-    while datapoints < iters + 1:
-        elapsed, avg_cpu, peak_mem = _run_single_test(venv_python, test_cmd, repo)
+    try:
+        while datapoints < iters + 1:
+            elapsed, avg_cpu, peak_mem = _run_single_test(venv_python, test_cmd, repo)
 
-        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
-        row = [
-            timestamp,
-            repo,
-            smell_type,
-            smell_id,
-            version,
-            iters,
-            f"{elapsed:.2f}",
-            f"{avg_cpu:.1f}",
-            f"{peak_mem:.1f}",
-        ]
+            timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
+            row = [
+                timestamp,
+                repo,
+                smell_type,
+                smell_id,
+                version,
+                iters,
+                f"{elapsed:.2f}",
+                f"{avg_cpu:.1f}",
+                f"{peak_mem:.1f}",
+            ]
 
-        with stats_csv.open("a", newline="") as f:
-            writer = csv.writer(f)
-            if not header_written:
-                writer.writerow(
-                    [
-                        "timestamp",
-                        "repo",
-                        "smell_type",
-                        "smell_id",
-                        "run_type",
-                        "iters",
-                        "elapsed_sec",
-                        "avg_cpu_percent",
-                        "peak_memory_mb",
-                    ]
+            with stats_csv.open("a", newline="") as f:
+                writer = csv.writer(f)
+                if not header_written:
+                    writer.writerow(
+                        [
+                            "timestamp",
+                            "repo",
+                            "smell_type",
+                            "smell_id",
+                            "run_type",
+                            "iters",
+                            "elapsed_sec",
+                            "avg_cpu_percent",
+                            "peak_memory_mb",
+                        ]
+                    )
+                    header_written = True
+                writer.writerow(row)
+
+            # Check how many lines CodeCarbon recorded (excluding header)
+            if emissions_csv.exists():
+                with emissions_csv.open() as f:
+                    datapoints = sum(1 for _ in f) - initial_lines
+            else:
+                logging.warning(f"No emissions file found: {emissions_csv}")
+                return False
+
+            if datapoints < iters:
+                logging.debug(
+                    f"Only {datapoints} datapoints for {repo} | {smell_id} | rerunning..."
                 )
-                header_written = True
-            writer.writerow(row)
-
-        # Check how many lines CodeCarbon recorded (excluding header)
-        if emissions_csv.exists():
-            with emissions_csv.open() as f:
-                datapoints = sum(1 for _ in f) - 1
-        else:
-            logging.warning(f"No emissions file found: {emissions_csv}")
-            return False
-
-        if datapoints < iters:
-            logging.debug(f"Only {datapoints} datapoints for {repo} | {smell_id} | rerunning...")
+    finally:
+        if verbose:
+            stop_event.set()
+            monitor_thread.join(timeout=1.0)
 
     print(f" [{datapoints} collected]\n", flush=True)
     return True
