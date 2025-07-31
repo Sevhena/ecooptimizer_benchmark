@@ -80,10 +80,16 @@ def load_yaml(path: Path):
 # --- Patch Application ---
 def apply_patch(patch_path: Path, repo_path: Path):
     try:
+        if not patch_path.exists():
+            raise FileNotFoundError(f"Patch file not found: {patch_path}")
+
         subprocess.run(["git", "apply", str(patch_path)], cwd=repo_path, check=True)
         logging.debug(f"Applied patch: {patch_path.name}")
     except subprocess.CalledProcessError as e:
         logging.error(f"Failed to apply patch: {patch_path.name}")
+        raise e
+    except FileNotFoundError as e:
+        logging.error(f"Patch file not found: {patch_path}")
         raise e
 
 
@@ -352,7 +358,14 @@ def main():
                 # --- Apply and Run Original ---
                 for version in ["original", "refactored"]:
                     logging.info(f"    [{version}]")
-                    apply_patch(smell_dir / f"{version}.patch", repo_dir)
+                    try:
+                        apply_patch(smell_dir / f"{version}.patch", repo_dir)
+                    except FileNotFoundError as e:
+                        logging.debug(
+                            f"Patch file not found. Skipping for {repo} | {smell_type} | {smell_id}."
+                        )
+                        break
+
                     try:
                         complete = run_benchmark(
                             repo,
