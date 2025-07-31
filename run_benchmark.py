@@ -215,6 +215,7 @@ def run_benchmark(
 def _run_single_test(python_bin: Path, test_cmd: list[str], repo: str):
     """Run a single test iteration and collect system metrics."""
     process = psutil.Process()
+    logging.debug(f"Running test command: {test_cmd} in {repo}")
     start_time = time.time()
 
     try:
