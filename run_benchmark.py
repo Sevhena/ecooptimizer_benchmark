@@ -335,10 +335,9 @@ def main():
         for smell_type, smell_instances in smell_items.items():
             logging.info(f"\n  {smell_type}:")
             for repo, smell_type, smell_id, smell_dir in smell_instances:
-                venv_name = repos_config[repo].get("venv")
                 test_cmd = repos_config[repo].get("test_command")
 
-                if not venv_name:
+                if not test_cmd:
                     logging.error(f"{repo} is missing a venv in repos.yaml.")
                     continue
 
