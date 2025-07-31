@@ -1,16 +1,12 @@
 diff --git a/dask/array/_reductions_generic.py b/dask/array/_reductions_generic.py
-index 3dee26537..345c36065 100644
+index 3dee26537..3ee69f6ea 100644
 --- a/dask/array/_reductions_generic.py
 +++ b/dask/array/_reductions_generic.py
-@@ -1,3 +1,4 @@
-+from codecarbon import track_emissions
- from __future__ import annotations
- 
- import builtins
-@@ -20,24 +21,27 @@ from dask.base import tokenize
+@@ -20,24 +20,28 @@ from dask.base import tokenize
  from dask.blockwise import lol_tuples
  from dask.highlevelgraph import HighLevelGraph
  from dask.utils import funcname, getargspec, is_series_like
++from codecarbon import track_emissions
 +class DataParams_reduction_27:
 +    def __init__(self, x, chunk, aggregate, axis = None, keepdims = False, dtype = None, split_every = None, combine = None, name = None, out = None, concatenate = True, output_size = 1, meta = None, weights = None):
 +        self.x = x

@@ -82,18 +82,14 @@ index 789c12c52..b2f8c654a 100644
          assert_eq(
              result["value"].unique(), pd.Series(df["value"].unique(), name="value")
 diff --git a/dask/dataframe/io/sql.py b/dask/dataframe/io/sql.py
-index 2df3f6504..a49d4ab94 100644
+index 2df3f6504..1a095ee3e 100644
 --- a/dask/dataframe/io/sql.py
 +++ b/dask/dataframe/io/sql.py
-@@ -1,3 +1,4 @@
-+from codecarbon import track_emissions
- from __future__ import annotations
- 
- import warnings
-@@ -12,6 +13,21 @@ from dask.dataframe._compat import PANDAS_GE_300
+@@ -12,6 +12,22 @@ from dask.dataframe._compat import PANDAS_GE_300
  from dask.dataframe.utils import pyarrow_strings_enabled
  from dask.delayed import delayed, tokenize
  from dask.utils import parse_bytes
++from codecarbon import track_emissions
 +class DataParams_to_sql_427:
 +    def __init__(self, df, name, uri, schema = None, if_exists = "fail", index = True, index_label = None, chunksize = None, dtype = None, method = None, compute = True, parallel = False, engine_kwargs = None):
 +        self.df = df

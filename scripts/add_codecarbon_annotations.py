@@ -58,6 +58,20 @@ def write_code_lines(file_path: Path, lines: list):
         f.writelines(lines)
 
 
+def find_import_insertion_point(lines: list[str]) -> int:
+    last_import_line = -1
+    for i, line in enumerate(lines):
+        line = line.strip()
+        # Skip empty lines, comments, and docstrings before imports
+        if not line or line.startswith("#") or line.startswith('"""') or line.startswith("'''"):
+            continue
+        if line.startswith(("from __future__", "import ", "from ")):
+            last_import_line = i
+        else:
+            break
+    return last_import_line + 1  # Insert after the last import
+
+
 def add_decorator_to_function(file_path: Path, cc_args: str, line_num: int, col_num: int):
     """Add CodeCarbon decorator to a function."""
     lines = get_code_lines(file_path)
@@ -67,12 +81,10 @@ def add_decorator_to_function(file_path: Path, cc_args: str, line_num: int, col_
     lines.insert(line_num - 1, decorator_line)
 
     # Add import if not present
-    first_import_id = next(
-        (i for i, line in enumerate(lines) if "import" in line or "from" in line), 0
-    )
+    import_id = find_import_insertion_point(lines)
 
     if not any(line.strip().startswith("from codecarbon import track_emissions") for line in lines):
-        lines.insert(first_import_id, "from codecarbon import track_emissions\n")
+        lines.insert(import_id, "from codecarbon import track_emissions\n")
 
     write_code_lines(file_path, lines)
     logging.info(f"Added decorator to function in {file_path} at line {line_num}")
@@ -255,10 +267,9 @@ def wrap_with_context_manager(
         line.strip().startswith(("from codecarbon import EmissionsTracker", "import codecarbon"))
         for line in lines
     ):
-        first_import_id = next(
-            (i for i, line in enumerate(lines) if "import" in line or "from" in line), 0
-        )
-        lines.insert(first_import_id, "from codecarbon import EmissionsTracker\n")
+        import_id = find_import_insertion_point(lines)
+
+        lines.insert(import_id, "from codecarbon import EmissionsTracker\n")
 
     write_code_lines(file_path, lines)
     logging.info(f"Wrapped lines {start_line}-{end_line} in {file_path}")

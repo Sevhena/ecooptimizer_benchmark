@@ -8,7 +8,7 @@ from typing import Optional
 
 # Complete list of all known smell types
 ALL_SMELL_TYPES = [
-    "cached-repeated-calls",
+    # "cached-repeated-calls",
     "long-element-chain",
     "long-lambda-expr",
     "long-message-chain",
@@ -92,19 +92,31 @@ def write_csv_statistics(
     global_threshold_counts: defaultdict[tuple[str, str], int] = defaultdict(int)
     repo_stats = defaultdict(dict)
 
+    table_data = {
+        "repos": [],  # List of repo names
+        "smell_counts": {},  # smell_type -> list of counts per repo
+        "totals": [],  # List of total smells per repo
+    }
+
     # Process each file and write individual repo CSV
     for file_path, smells in file_stats.items():
         repo_name = file_path.stem
         csv_path = output_dir / f"{repo_name}.csv"
+        table_data["repos"].append(repo_name)
 
         # Prepare data for CSV
         rows = []
         total_smells = 0
 
         for smell_type in ALL_SMELL_TYPES:
+            if smell_type not in table_data["smell_counts"]:
+                table_data["smell_counts"][smell_type] = []
+
             thresholds = smells[smell_type]
             total = sum(thresholds.values())
             total_smells += total
+
+            table_data["smell_counts"][smell_type].append(total)
 
             # Add row for the smell type
             rows.append(
@@ -123,6 +135,8 @@ def write_csv_statistics(
             for threshold, count in thresholds.items():
                 if threshold is not None:
                     global_threshold_counts[(smell_type, threshold)] += count
+
+        table_data["totals"].append(total_smells)
 
         # Add total row
         rows.append({"Smell Type": "TOTAL", "Total Count": total_smells, "Thresholds": "N/A"})
@@ -201,6 +215,22 @@ def write_csv_statistics(
                     ", ".join(stats["smell_types_missing"]),
                 ]
             )
+
+    table_path = output_dir / "smell_summary_table.csv"
+    with table_path.open("w", newline="") as csvfile:
+        writer = csv.writer(csvfile)
+
+        # Write header
+        headers = ["Repository", *ALL_SMELL_TYPES, "Total Smells"]
+        writer.writerow(headers)
+
+        # Write rows
+        for i, repo in enumerate(table_data["repos"]):
+            row = [repo]
+            for smell_type in ALL_SMELL_TYPES:
+                row.append(table_data["smell_counts"][smell_type][i])
+            row.append(table_data["totals"][i])
+            writer.writerow(row)
 
 
 def make_sound() -> None:

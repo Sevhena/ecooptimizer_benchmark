@@ -1,12 +1,15 @@
 diff --git a/dask/system.py b/dask/system.py
-index 48f04c4b3..20c28bb23 100644
+index 48f04c4b3..8376aa98b 100644
 --- a/dask/system.py
 +++ b/dask/system.py
-@@ -1,3 +1,4 @@
-+from codecarbon import EmissionsTracker
- from __future__ import annotations
- 
+@@ -3,6 +3,7 @@ from __future__ import annotations
  import math
+ import os
+ import sys
++from codecarbon import EmissionsTracker
+ 
+ try:
+     import psutil
 @@ -28,7 +29,10 @@ def _try_extract_cgroup_cpu_quota():
      # cgroup v2
      try:

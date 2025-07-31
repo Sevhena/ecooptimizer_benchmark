@@ -1,11 +1,10 @@
 SUMMARY STATISTICS
 
-Total repos processed:,8
-Total smells detected:,2530
+Total repos processed:,7
+Total smells detected:,2217
 
 SMELL TYPE BREAKDOWN
 Smell Type,Total Count
-cached-repeated-calls,313
 long-element-chain,29
 long-lambda-expr,6
 long-message-chain,79
@@ -16,23 +15,6 @@ use-a-generator,14
 
 THRESHOLD BREAKDOWN
 Smell Type,Threshold,Count
-cached-repeated-calls,10/2,1
-cached-repeated-calls,11/2,1
-cached-repeated-calls,119/2,1
-cached-repeated-calls,12/2,3
-cached-repeated-calls,13/2,1
-cached-repeated-calls,16/2,1
-cached-repeated-calls,3/2,186
-cached-repeated-calls,31/2,1
-cached-repeated-calls,32/2,1
-cached-repeated-calls,366/2,1
-cached-repeated-calls,4/2,72
-cached-repeated-calls,5/2,10
-cached-repeated-calls,6/2,19
-cached-repeated-calls,7/2,4
-cached-repeated-calls,723/2,1
-cached-repeated-calls,8/2,5
-cached-repeated-calls,9/2,5
 long-element-chain,3/3,28
 long-element-chain,4/3,1
 long-message-chain,3/3,73
@@ -59,11 +41,10 @@ too-many-arguments,9/6,181
 
 REPO BREAKDOWN
 Repository,Total Smells,Smell Types Present,Smell Types Under Threshold,Smell Types Missing
-scipy,1026,8,"long-lambda-expr:1, string-concat-loop:3",
-django,628,7,"long-lambda-expr:0, use-a-generator:2",long-lambda-expr
-scikit-learn,284,7,"long-element-chain:4, long-lambda-expr:0, string-concat-loop:5, use-a-generator:1",long-lambda-expr
-numpy,215,6,"long-element-chain:0, long-lambda-expr:1, string-concat-loop:5, use-a-generator:0","long-element-chain, use-a-generator"
-dask,203,7,"long-element-chain:4, long-lambda-expr:0, string-concat-loop:4, use-a-generator:4",long-lambda-expr
-streamlit,132,6,"long-element-chain:1, long-lambda-expr:3, long-message-chain:4, string-concat-loop:0, use-a-generator:0","string-concat-loop, use-a-generator"
-gpiozero,42,4,"cached-repeated-calls:0, long-element-chain:0, long-lambda-expr:1, long-message-chain:2, string-concat-loop:0, use-a-generator:0","cached-repeated-calls, long-element-chain, string-concat-loop, use-a-generator"
-nltk,0,0,"cached-repeated-calls:0, long-element-chain:0, long-lambda-expr:0, long-message-chain:0, no-self-use:0, string-concat-loop:0, too-many-arguments:0, use-a-generator:0","cached-repeated-calls, long-element-chain, long-lambda-expr, long-message-chain, no-self-use, string-concat-loop, too-many-arguments, use-a-generator"
+scipy,868,7,"long-lambda-expr:1, string-concat-loop:3",
+django,587,6,"long-lambda-expr:0, use-a-generator:2",long-lambda-expr
+scikit-learn,245,6,"long-element-chain:4, long-lambda-expr:0, string-concat-loop:5, use-a-generator:1",long-lambda-expr
+numpy,179,5,"long-element-chain:0, long-lambda-expr:1, string-concat-loop:5, use-a-generator:0","long-element-chain, use-a-generator"
+dask,173,6,"long-element-chain:4, long-lambda-expr:0, string-concat-loop:4, use-a-generator:4",long-lambda-expr
+streamlit,123,5,"long-element-chain:1, long-lambda-expr:3, long-message-chain:4, string-concat-loop:0, use-a-generator:0","string-concat-loop, use-a-generator"
+gpiozero,42,4,"long-element-chain:0, long-lambda-expr:1, long-message-chain:2, string-concat-loop:0, use-a-generator:0, cached-repeated-calls:1","long-element-chain, string-concat-loop, use-a-generator"

@@ -10938,18 +10938,14 @@ index e3c0d6f36..d2ccaf45c 100644
 -    assert_eq(subset.data, subset2.data)
 +    assert_eq(DataParams_assert_eq_303(subset.data, subset2.data))
 diff --git a/dask/array/utils.py b/dask/array/utils.py
-index b1147f1b6..df66a78dc 100644
+index b1147f1b6..3b3bb4b7d 100644
 --- a/dask/array/utils.py
 +++ b/dask/array/utils.py
-@@ -1,3 +1,4 @@
-+from codecarbon import track_emissions
- from __future__ import annotations
- 
- import contextlib
-@@ -15,6 +16,19 @@ from dask.array.numpy_compat import AxisError
+@@ -15,6 +15,20 @@ from dask.array.numpy_compat import AxisError
  from dask.base import is_dask_collection, tokenize
  from dask.highlevelgraph import HighLevelGraph
  from dask.utils import has_keyword, is_arraylike, is_cupy_type, typename
++from codecarbon import track_emissions
 +class DataParams_assert_eq_303:
 +    def __init__(self, a, b, check_shape = True, check_graph = True, check_meta = True, check_chunks = True, check_ndim = True, check_type = True, check_dtype = True, equal_nan = True, scheduler = "sync"):
 +        self.a = a

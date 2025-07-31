@@ -1,14 +1,12 @@
 diff --git a/dask/array/_reductions_generic.py b/dask/array/_reductions_generic.py
-index 3dee26537..7e6cdc243 100644
+index 3dee26537..d171350ab 100644
 --- a/dask/array/_reductions_generic.py
 +++ b/dask/array/_reductions_generic.py
-@@ -1,3 +1,4 @@
-+from codecarbon import track_emissions
- from __future__ import annotations
- 
- import builtins
-@@ -22,6 +23,7 @@ from dask.highlevelgraph import HighLevelGraph
+@@ -20,8 +20,10 @@ from dask.base import tokenize
+ from dask.blockwise import lol_tuples
+ from dask.highlevelgraph import HighLevelGraph
  from dask.utils import funcname, getargspec, is_series_like
++from codecarbon import track_emissions
  
  
 +@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_b217bf24', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/b217bf24.csv')

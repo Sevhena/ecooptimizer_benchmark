@@ -1,12 +1,15 @@
 diff --git a/dask/dataframe/groupby.py b/dask/dataframe/groupby.py
-index 064b1e963..997bc07b7 100644
+index 064b1e963..fbbe9060c 100644
 --- a/dask/dataframe/groupby.py
 +++ b/dask/dataframe/groupby.py
-@@ -1,3 +1,4 @@
+@@ -12,6 +12,7 @@ import pandas as pd
+ from dask.base import tokenize
+ from dask.core import flatten
+ from dask.dataframe._compat import (
 +from codecarbon import EmissionsTracker
- from __future__ import annotations
- 
- import collections
+     PANDAS_GE_220,
+     PANDAS_GE_300,
+     check_groupby_axis_deprecation,
 @@ -514,9 +515,10 @@ def _cov_agg(_t, levels, ddof, std=False, sort=False):
      total_muls = concat(muls).groupby(level=levels, sort=sort).sum()
      total_counts = concat(counts).groupby(level=levels).sum()

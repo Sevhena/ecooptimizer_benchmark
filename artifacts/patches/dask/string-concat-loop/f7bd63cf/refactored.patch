@@ -1,12 +1,15 @@
 diff --git a/dask/array/einsumfuncs.py b/dask/array/einsumfuncs.py
-index 1d55f4e87..8544a3d2d 100644
+index 1d55f4e87..f2524eb08 100644
 --- a/dask/array/einsumfuncs.py
 +++ b/dask/array/einsumfuncs.py
-@@ -1,3 +1,4 @@
+@@ -7,6 +7,7 @@ import numpy as np
+ from dask.array._shuffle import _calculate_new_chunksizes
+ from dask.array.core import asarray, blockwise, einsum_lookup
+ from dask.utils import cached_max, derived_from
 +from codecarbon import EmissionsTracker
- from __future__ import annotations
  
- import math
+ einsum_symbols = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+ einsum_symbols_set = set(einsum_symbols)
 @@ -159,13 +160,15 @@ def parse_einsum_input(operands):
              subscripts += "->" + output_sub.replace("...", out_ellipse)
          else:

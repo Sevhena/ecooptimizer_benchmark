@@ -1,12 +1,15 @@
 diff --git a/dask/utils.py b/dask/utils.py
-index 6edfda8f8..bc1d10aea 100644
+index 6edfda8f8..fcbe97579 100644
 --- a/dask/utils.py
 +++ b/dask/utils.py
-@@ -1,3 +1,4 @@
-+from codecarbon import EmissionsTracker
- from __future__ import annotations
+@@ -28,6 +28,7 @@ import tlz as toolz
  
- import codecs
+ from dask import config
+ from dask.typing import no_default
++from codecarbon import EmissionsTracker
+ 
+ K = TypeVar("K")
+ V = TypeVar("V")
 @@ -1985,13 +1986,14 @@ def key_split(s):
              result = words[0].split(",")[0].strip("_'()\"")
          else:

@@ -1,12 +1,15 @@
 diff --git a/dask/dataframe/io/parquet/core.py b/dask/dataframe/io/parquet/core.py
-index 8847db555..11115e895 100644
+index 8847db555..67ffbc949 100644
 --- a/dask/dataframe/io/parquet/core.py
 +++ b/dask/dataframe/io/parquet/core.py
-@@ -1,3 +1,4 @@
+@@ -14,6 +14,7 @@ from dask.dataframe.methods import concat
+ from dask.delayed import Delayed
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.utils import import_required, parse_bytes
 +from codecarbon import EmissionsTracker
- from __future__ import annotations
  
- import math
+ NONE_LABEL = "__null_dask_index__"
+ 
 @@ -639,7 +640,8 @@ def aggregate_row_groups(
              # of row_group aggregation (all None, or all indices)
              multi_path_allowed = len(part["piece"]) == 1
