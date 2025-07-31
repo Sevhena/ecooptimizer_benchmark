@@ -1,0 +1,32 @@
+diff --git a/lib/streamlit/runtime/secrets.py b/lib/streamlit/runtime/secrets.py
+index a4ab9fb20..34dfcb539 100644
+--- a/lib/streamlit/runtime/secrets.py
++++ b/lib/streamlit/runtime/secrets.py
+@@ -12,6 +12,7 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
++from codecarbon import EmissionsTracker
+ from __future__ import annotations
+ 
+ import os
+@@ -51,12 +52,13 @@ class SecretErrorMessages:
+             "on Streamlit Cloud? More info: "
+             "https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management"
+         )
+-        self.missing_key_message: Callable[[str], str] = lambda key: (
+-            f'st.secrets has no key "{key}". '
+-            "Did you forget to add it to secrets.toml, mount it to secret directory, or the app settings "
+-            "on Streamlit Cloud? More info: "
+-            "https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management"
+-        )
++        with EmissionsTracker(project_name='streamlit-benchmark', experiment_id='streamlit_LLE001_2fc0f712', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-lambda-expr/2fc0f712.csv') as tracker:
++            self.missing_key_message: Callable[[str], str] = lambda key: (
++                f'st.secrets has no key "{key}". '
++                "Did you forget to add it to secrets.toml, mount it to secret directory, or the app settings "
++                "on Streamlit Cloud? More info: "
++                "https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management"
++            )
+         self.no_secrets_found: Callable[[list[str]], str] = lambda file_paths: (
+             f"No secrets found. Valid paths for a secrets.toml file or secret directories are: {', '.join(file_paths)}"
+         )

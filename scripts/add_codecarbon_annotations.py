@@ -231,6 +231,8 @@ def wrap_with_context_manager(
             insertion_line - 1,
             f"{insertion_col * ' '}{var_name} = {smell_statement}\n",
         )
+        start_line = insertion_line
+        end_line = start_line
         end_column = insertion_col + len(var_name) + len(smell_statement) + 3  # +3 for " = "
         start_column = end_column - len(smell_statement)
 
@@ -243,6 +245,8 @@ def wrap_with_context_manager(
     lines.insert(insertion_line - 1, start_context)
 
     # Indent the block
+    logging.debug(f"Indenting lines {start_line}-{end_line} with {tab_size} spaces")
+    logging.debug(f"Start line: {lines[start_line].strip()}")
     for i in range(start_line, end_line + 1):
         lines[i] = " " * tab_size + lines[i]
 

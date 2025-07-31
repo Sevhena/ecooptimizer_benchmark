@@ -1,0 +1,22 @@
+diff --git a/sklearn/pipeline.py b/sklearn/pipeline.py
+index b291d970b1..bd60384faf 100644
+--- a/sklearn/pipeline.py
++++ b/sklearn/pipeline.py
+@@ -3,6 +3,7 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import warnings
+ from collections import Counter, defaultdict
+ from contextlib import contextmanager
+@@ -467,7 +468,8 @@ class Pipeline(_BaseComposition):
+                 # without metadata routing, fit_transform and fit_predict
+                 # get all the same params and pass it to the last fit.
+                 fit_params_steps[step]["fit_transform"][param] = pval
+-                fit_params_steps[step]["fit_predict"][param] = pval
++                with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_LEC001_052d901c', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/long-element-chain/052d901c.csv') as tracker:
++                    fit_params_steps[step]["fit_predict"][param] = pval
+             return fit_params_steps
+ 
+     def _get_metadata_for_step(self, *, step_idx, step_params, all_params):

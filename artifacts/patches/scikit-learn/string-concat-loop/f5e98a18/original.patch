@@ -1,0 +1,32 @@
+diff --git a/sklearn/model_selection/_validation.py b/sklearn/model_selection/_validation.py
+index 8b70bf4260..ba7c44f43b 100644
+--- a/sklearn/model_selection/_validation.py
++++ b/sklearn/model_selection/_validation.py
+@@ -6,6 +6,7 @@ functions to validate the model.
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import numbers
+ import time
+ import warnings
+@@ -893,12 +894,13 @@ def _fit_and_score(
+         result_msg = params_msg + (";" if params_msg else "")
+         if verbose > 2:
+             if isinstance(test_scores, dict):
+-                for scorer_name in sorted(test_scores):
+-                    result_msg += f" {scorer_name}: ("
+-                    if return_train_score:
+-                        scorer_scores = train_scores[scorer_name]
+-                        result_msg += f"train={scorer_scores:.3f}, "
+-                    result_msg += f"test={test_scores[scorer_name]:.3f})"
++                with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_SCL001_f5e98a18', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/string-concat-loop/f5e98a18.csv') as tracker:
++                    for scorer_name in sorted(test_scores):
++                        result_msg += f" {scorer_name}: ("
++                        if return_train_score:
++                            scorer_scores = train_scores[scorer_name]
++                            result_msg += f"train={scorer_scores:.3f}, "
++                        result_msg += f"test={test_scores[scorer_name]:.3f})"
+             else:
+                 result_msg += ", score="
+                 if return_train_score:

@@ -1,0 +1,17 @@
+diff --git a/dask/dataframe/io/csv.py b/dask/dataframe/io/csv.py
+index 4dc9ad8a0..2c0dbf5cb 100644
+--- a/dask/dataframe/io/csv.py
++++ b/dask/dataframe/io/csv.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ from __future__ import annotations
+ 
+ import os
+@@ -715,6 +716,7 @@ at the cost of reduced parallelism.
+ 
+ 
+ def make_reader(reader, reader_name, file_type):
++    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_a82e6319', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/a82e6319.csv')
+     def read(
+         urlpath,
+         blocksize="default",

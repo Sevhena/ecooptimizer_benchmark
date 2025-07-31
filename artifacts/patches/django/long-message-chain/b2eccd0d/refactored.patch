@@ -1,0 +1,21 @@
+diff --git a/django/contrib/auth/hashers.py b/django/contrib/auth/hashers.py
+index 3c88692845..d65f9282b0 100644
+--- a/django/contrib/auth/hashers.py
++++ b/django/contrib/auth/hashers.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ import base64
+ import binascii
+ import functools
+@@ -593,7 +594,10 @@ class ScryptPasswordHasher(BasePasswordHasher):
+             maxmem=self.maxmem,
+             dklen=64,
+         )
+-        hash_ = base64.b64encode(hash_).decode("ascii").strip()
++        with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LMC001_b2eccd0d', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/b2eccd0d_refactored.csv') as tracker:
++            intermediate_0 = base64.b64encode(hash_)
++            intermediate_1 = intermediate_0.decode("ascii")
++            hash_ = intermediate_1.strip()
+         return "%s$%d$%s$%d$%d$%s" % (self.algorithm, n, salt, r, p, hash_)
+ 
+     def decode(self, encoded):

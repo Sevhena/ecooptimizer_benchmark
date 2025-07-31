@@ -1,2082 +1,2140 @@
 {
-    "04da219a": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "04da219a",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "geopandas.io.arrow",
-        "obj": "_to_parquet",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 15,
-                "endLine": 388,
-                "line": 388
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/arrow.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+  "04da219a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "12a4bcc1": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "12a4bcc1",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "geopandas.tools.sjoin",
-        "obj": "sjoin_nearest",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 17,
-                "endLine": 573,
-                "line": 573
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/sjoin.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "178cac25": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "178cac25",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "_version",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 21,
-                "endColumn": 74,
-                "endLine": 408,
-                "line": 408
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py",
-        "symbol": "long-message-chain",
-        "type": "convention"
+    "id": "04da219a",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "geopandas.io.arrow",
+    "obj": "_to_parquet",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 15,
+        "endLine": 388,
+        "line": 388
+      }
+    ],
+    "path": "geopandas/io/arrow.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/arrow.py"
+  },
+  "12a4bcc1": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "1a2f8849": {
-        "additionalInfo": {
-            "callString": "pa.ListArray.from_arrays(pa.array(ring_offsets), _parr)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "1a2f8849",
-        "message": "Repeated function call detected (3/2). Consider caching the result: pa.ListArray.from_arrays(pa.array(ring_offsets), _parr)",
-        "messageId": "CRC001",
-        "module": "_geoarrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 17,
-                "endColumn": 72,
-                "endLine": 361,
-                "line": 361
-            },
-            {
-                "column": 17,
-                "endColumn": 72,
-                "endLine": 393,
-                "line": 393
-            },
-            {
-                "column": 17,
-                "endColumn": 72,
-                "endLine": 409,
-                "line": 409
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "221d41c5": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "221d41c5",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "geopandas.geodataframe",
-        "obj": "GeoDataFrame.sjoin_nearest",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 2588,
-                "line": 2588
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "12a4bcc1",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "geopandas.tools.sjoin",
+    "obj": "sjoin_nearest",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 17,
+        "endLine": 573,
+        "line": 573
+      }
+    ],
+    "path": "geopandas/tools/sjoin.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/sjoin.py"
+  },
+  "178cac25": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "22685696": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "22685696",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "geopandas.io.file",
-        "obj": "_to_file",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 12,
-                "endLine": 617,
-                "line": 617
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "234646a3": {
-        "additionalInfo": {
-            "callString": "re.search(\"=\\\\s*\"(.*)\"\", line)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "234646a3",
-        "message": "Repeated function call detected (3/2). Consider caching the result: re.search(\"=\\\\s*\"(.*)\"\", line)",
-        "messageId": "CRC001",
-        "module": "_version",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 55,
-                "endLine": 179,
-                "line": 179
-            },
-            {
-                "column": 25,
-                "endColumn": 55,
-                "endLine": 183,
-                "line": 183
-            },
-            {
-                "column": 25,
-                "endColumn": 55,
-                "endLine": 187,
-                "line": 187
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "178cac25",
+    "message": "Method chain too long (3/3)",
+    "messageId": "LMC001",
+    "module": "_version",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 21,
+        "endColumn": 74,
+        "endLine": 408,
+        "line": 408
+      }
+    ],
+    "path": "geopandas/_version.py",
+    "symbol": "long-message-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py"
+  },
+  "1a2f8849": {
+    "additionalInfo": {
+      "callString": "pa.ListArray.from_arrays(pa.array(ring_offsets), _parr)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
     },
-    "2e956d9b": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "2e956d9b",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "geopandas.plotting",
-        "obj": "_plot_point_collection",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 26,
-                "endLine": 253,
-                "line": 253
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "33ced6dd": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "33ced6dd",
-        "message": "Dictionary chain too long (3/3)",
-        "messageId": "LEC001",
-        "module": "arrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 9,
-                "endColumn": 60,
-                "endLine": 876,
-                "line": 876
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/arrow.py",
-        "symbol": "long-element-chain",
-        "type": "convention"
+    "id": "1a2f8849",
+    "message": "Repeated function call detected (3/2). Consider caching the result: pa.ListArray.from_arrays(pa.array(ring_offsets), _parr)",
+    "messageId": "CRC001",
+    "module": "_geoarrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 17,
+        "endColumn": 72,
+        "endLine": 361,
+        "line": 361
+      },
+      {
+        "column": 17,
+        "endColumn": 72,
+        "endLine": 393,
+        "line": 393
+      },
+      {
+        "column": 17,
+        "endColumn": 72,
+        "endLine": 409,
+        "line": 409
+      }
+    ],
+    "path": "geopandas/io/_geoarrow.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py"
+  },
+  "221d41c5": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "3503625a": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3503625a",
-        "message": "Too many arguments (10/6)",
-        "messageId": "R0913",
-        "module": "geopandas.geodataframe",
-        "obj": "GeoDataFrame.from_postgis",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 20,
-                "endLine": 828,
-                "line": 828
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "3b190537": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3b190537",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "geopandas.io._pyarrow_hotfix",
-        "obj": "patch_pyarrow.ForbiddenExtensionType.__arrow_ext_serialize__",
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 35,
-                "endLine": 46,
-                "line": 46
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_pyarrow_hotfix.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "221d41c5",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "geopandas.geodataframe",
+    "obj": "GeoDataFrame.sjoin_nearest",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 21,
+        "endLine": 2588,
+        "line": 2588
+      }
+    ],
+    "path": "geopandas/geodataframe.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py"
+  },
+  "22685696": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "3f6f4edb": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3f6f4edb",
-        "message": "Dictionary chain too long (6/3)",
-        "messageId": "LEC001",
-        "module": "arrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 11,
-                "endColumn": 81,
-                "endLine": 911,
-                "line": 911
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/arrow.py",
-        "symbol": "long-element-chain",
-        "type": "convention"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "4013c0e5": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4013c0e5",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "geopandas.geodataframe",
-        "obj": "GeoDataFrame.to_postgis",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 18,
-                "endLine": 2412,
-                "line": 2412
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "22685696",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "geopandas.io.file",
+    "obj": "_to_file",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 12,
+        "endLine": 617,
+        "line": 617
+      }
+    ],
+    "path": "geopandas/io/file.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py"
+  },
+  "234646a3": {
+    "additionalInfo": {
+      "callString": "re.search(\"=\\\\s*\"(.*)\"\", line)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
     },
-    "40771051": {
-        "additionalInfo": {
-            "callString": "geometry.copy()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "40771051",
-        "message": "Repeated function call detected (2/2). Consider caching the result: geometry.copy()",
-        "messageId": "CRC001",
-        "module": "sindex",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 20,
-                "endColumn": 35,
-                "endLine": 30,
-                "line": 30
-            },
-            {
-                "column": 26,
-                "endColumn": 41,
-                "endLine": 35,
-                "line": 35
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/sindex.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "452a1c50": {
-        "additionalInfo": {
-            "callString": "np.asarray(arr.values.offsets)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "452a1c50",
-        "message": "Repeated function call detected (3/2). Consider caching the result: np.asarray(arr.values.offsets)",
-        "messageId": "CRC001",
-        "module": "_geoarrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 19,
-                "endColumn": 49,
-                "endLine": 587,
-                "line": 587
-            },
-            {
-                "column": 19,
-                "endColumn": 49,
-                "endLine": 600,
-                "line": 600
-            },
-            {
-                "column": 19,
-                "endColumn": 49,
-                "endLine": 609,
-                "line": 609
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "234646a3",
+    "message": "Repeated function call detected (3/2). Consider caching the result: re.search(\"=\\\\s*\"(.*)\"\", line)",
+    "messageId": "CRC001",
+    "module": "_version",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 25,
+        "endColumn": 55,
+        "endLine": 179,
+        "line": 179
+      },
+      {
+        "column": 25,
+        "endColumn": 55,
+        "endLine": 183,
+        "line": 183
+      },
+      {
+        "column": 25,
+        "endColumn": 55,
+        "endLine": 187,
+        "line": 187
+      }
+    ],
+    "path": "geopandas/_version.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py"
+  },
+  "2e956d9b": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "4e925ae9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4e925ae9",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "geopandas.io.sql",
-        "obj": "_read_postgis",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 17,
-                "endLine": 124,
-                "line": 124
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/sql.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "50b3ca41": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "50b3ca41",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "geopandas.io.file",
-        "obj": "_to_file_pyogrio",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 20,
-                "endLine": 779,
-                "line": 779
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "2e956d9b",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "geopandas.plotting",
+    "obj": "_plot_point_collection",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 26,
+        "endLine": 253,
+        "line": 253
+      }
+    ],
+    "path": "geopandas/plotting.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py"
+  },
+  "33ced6dd": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "565c4474": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": "body",
-            "innerLoopLine": 888,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": 890,
-            "isFunc": false,
-            "start": 888,
-            "useOccurences": false
-        },
-        "id": "565c4474",
-        "message": "String concatenation inside loop detected",
-        "messageId": "SCL001",
-        "module": "explore.py",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 75,
-                "endLine": 890,
-                "line": 889
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/explore.py",
-        "symbol": "string-concat-loop",
-        "type": "performance"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "57d96ac2": {
-        "additionalInfo": {
-            "callString": "C.copy()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "57d96ac2",
-        "message": "Repeated function call detected (3/2). Consider caching the result: C.copy()",
-        "messageId": "CRC001",
-        "module": "hilbert_curve",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 153,
-                "line": 153
-            },
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 163,
-                "line": 163
-            },
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 174,
-                "line": 174
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/hilbert_curve.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "33ced6dd",
+    "message": "Dictionary chain too long (3/3)",
+    "messageId": "LEC001",
+    "module": "arrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 9,
+        "endColumn": 60,
+        "endLine": 876,
+        "line": 876
+      }
+    ],
+    "path": "geopandas/io/arrow.py",
+    "symbol": "long-element-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/arrow.py"
+  },
+  "3503625a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "5c2c2db2": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "5c2c2db2",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "geopandas.tools.sjoin",
-        "obj": "sjoin",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 9,
-                "endLine": 12,
-                "line": 12
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/sjoin.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "5f4c2e25": {
-        "additionalInfo": {
-            "callString": "gdf_sub.copy()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "5f4c2e25",
-        "message": "Repeated function call detected (2/2). Consider caching the result: gdf_sub.copy()",
-        "messageId": "CRC001",
-        "module": "clip",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 18,
-                "endColumn": 32,
-                "endLine": 91,
-                "line": 91
-            },
-            {
-                "column": 18,
-                "endColumn": 32,
-                "endLine": 102,
-                "line": 102
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/clip.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "3503625a",
+    "message": "Too many arguments (10/6)",
+    "messageId": "R0913",
+    "module": "geopandas.geodataframe",
+    "obj": "GeoDataFrame.from_postgis",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 20,
+        "endLine": 828,
+        "line": 828
+      }
+    ],
+    "path": "geopandas/geodataframe.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py"
+  },
+  "3b190537": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "634d937a": {
-        "additionalInfo": {
-            "callString": "pyogrio.read_info(path_or_bytes, layer=kwargs.get(\"layer\")).get(\"crs\")",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "634d937a",
-        "message": "Repeated function call detected (2/2). Consider caching the result: pyogrio.read_info(path_or_bytes, layer=kwargs.get(\"layer\")).get(\"crs\")",
-        "messageId": "CRC001",
-        "module": "file",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 18,
-                "endColumn": 88,
-                "endLine": 509,
-                "line": 509
-            },
-            {
-                "column": 18,
-                "endColumn": 88,
-                "endLine": 522,
-                "line": 522
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "65707ff7": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "65707ff7",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "geopandas.plotting",
-        "obj": "plot_series",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 15,
-                "endLine": 316,
-                "line": 316
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "3b190537",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "geopandas.io._pyarrow_hotfix",
+    "obj": "patch_pyarrow.ForbiddenExtensionType.__arrow_ext_serialize__",
+    "occurences": [
+      {
+        "column": 8,
+        "endColumn": 35,
+        "endLine": 46,
+        "line": 46
+      }
+    ],
+    "path": "geopandas/io/_pyarrow_hotfix.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_pyarrow_hotfix.py"
+  },
+  "3f6f4edb": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "678012bd": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "678012bd",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "geopandas.geodataframe",
-        "obj": "GeoDataFrame.to_parquet",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 18,
-                "endLine": 1406,
-                "line": 1406
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "6945da0a": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6945da0a",
-        "message": "Too many arguments (30/6)",
-        "messageId": "R0913",
-        "module": "geopandas.explore",
-        "obj": "_explore",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 12,
-                "endLine": 34,
-                "line": 34
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/explore.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "3f6f4edb",
+    "message": "Dictionary chain too long (6/3)",
+    "messageId": "LEC001",
+    "module": "arrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 11,
+        "endColumn": 81,
+        "endLine": 911,
+        "line": 911
+      }
+    ],
+    "path": "geopandas/io/arrow.py",
+    "symbol": "long-element-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/arrow.py"
+  },
+  "4013c0e5": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "69637364": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "69637364",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "geopandas.tools.sjoin",
-        "obj": "_nearest_query",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 18,
-                "endLine": 502,
-                "line": 502
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/sjoin.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "6ac05a42": {
-        "additionalInfo": {
-            "callString": "mo.group(1)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6ac05a42",
-        "message": "Repeated function call detected (3/2). Consider caching the result: mo.group(1)",
-        "messageId": "CRC001",
-        "module": "_version",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 47,
-                "endColumn": 58,
-                "endLine": 181,
-                "line": 181
-            },
-            {
-                "column": 43,
-                "endColumn": 54,
-                "endLine": 185,
-                "line": 185
-            },
-            {
-                "column": 43,
-                "endColumn": 54,
-                "endLine": 189,
-                "line": 189
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "4013c0e5",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "geopandas.geodataframe",
+    "obj": "GeoDataFrame.to_postgis",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 18,
+        "endLine": 2412,
+        "line": 2412
+      }
+    ],
+    "path": "geopandas/geodataframe.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py"
+  },
+  "40771051": {
+    "additionalInfo": {
+      "callString": "geometry.copy()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
     },
-    "714b02cc": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "714b02cc",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "geopandas.io.file",
-        "obj": "_read_file_fiona",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 20,
-                "endLine": 343,
-                "line": 343
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "7cf58328": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7cf58328",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "geopandas.base",
-        "obj": "GeoPandasBase.buffer",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 14,
-                "endLine": 5412,
-                "line": 5412
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/base.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "40771051",
+    "message": "Repeated function call detected (2/2). Consider caching the result: geometry.copy()",
+    "messageId": "CRC001",
+    "module": "sindex",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 20,
+        "endColumn": 35,
+        "endLine": 30,
+        "line": 30
+      },
+      {
+        "column": 26,
+        "endColumn": 41,
+        "endLine": 35,
+        "line": 35
+      }
+    ],
+    "path": "geopandas/sindex.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/sindex.py"
+  },
+  "452a1c50": {
+    "additionalInfo": {
+      "callString": "np.asarray(arr.values.offsets)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
     },
-    "82b9621a": {
-        "additionalInfo": {
-            "callString": "np.mean([miny, maxy])",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "82b9621a",
-        "message": "Repeated function call detected (2/2). Consider caching the result: np.mean([miny, maxy])",
-        "messageId": "CRC001",
-        "module": "array",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 23,
-                "endColumn": 44,
-                "endLine": 1163,
-                "line": 1163
-            },
-            {
-                "column": 23,
-                "endColumn": 44,
-                "endLine": 1170,
-                "line": 1170
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/array.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "87393aee": {
-        "additionalInfo": {
-            "callString": "np.asarray(arr.offsets)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 5
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "87393aee",
-        "message": "Repeated function call detected (5/2). Consider caching the result: np.asarray(arr.offsets)",
-        "messageId": "CRC001",
-        "module": "_geoarrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 19,
-                "endColumn": 42,
-                "endLine": 580,
-                "line": 580
-            },
-            {
-                "column": 19,
-                "endColumn": 42,
-                "endLine": 586,
-                "line": 586
-            },
-            {
-                "column": 19,
-                "endColumn": 42,
-                "endLine": 593,
-                "line": 593
-            },
-            {
-                "column": 19,
-                "endColumn": 42,
-                "endLine": 599,
-                "line": 599
-            },
-            {
-                "column": 19,
-                "endColumn": 42,
-                "endLine": 608,
-                "line": 608
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "452a1c50",
+    "message": "Repeated function call detected (3/2). Consider caching the result: np.asarray(arr.values.offsets)",
+    "messageId": "CRC001",
+    "module": "_geoarrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 19,
+        "endColumn": 49,
+        "endLine": 587,
+        "line": 587
+      },
+      {
+        "column": 19,
+        "endColumn": 49,
+        "endLine": 600,
+        "line": 600
+      },
+      {
+        "column": 19,
+        "endColumn": 49,
+        "endLine": 609,
+        "line": 609
+      }
+    ],
+    "path": "geopandas/io/_geoarrow.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py"
+  },
+  "4e925ae9": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "8b243b1e": {
-        "additionalInfo": {
-            "callString": "re.search(\"=\\\\s*\"(.*)\"\", line)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8b243b1e",
-        "message": "Repeated function call detected (3/2). Consider caching the result: re.search(\"=\\\\s*\"(.*)\"\", line)",
-        "messageId": "CRC001",
-        "module": "_version",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 55,
-                "endLine": 179,
-                "line": 179
-            },
-            {
-                "column": 25,
-                "endColumn": 55,
-                "endLine": 183,
-                "line": 183
-            },
-            {
-                "column": 25,
-                "endColumn": 55,
-                "endLine": 187,
-                "line": 187
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "8d678a30": {
-        "additionalInfo": {
-            "callString": "D.copy()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8d678a30",
-        "message": "Repeated function call detected (3/2). Consider caching the result: D.copy()",
-        "messageId": "CRC001",
-        "module": "hilbert_curve",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 154,
-                "line": 154
-            },
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 164,
-                "line": 164
-            },
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 175,
-                "line": 175
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/hilbert_curve.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "4e925ae9",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "geopandas.io.sql",
+    "obj": "_read_postgis",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 17,
+        "endLine": 124,
+        "line": 124
+      }
+    ],
+    "path": "geopandas/io/sql.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/sql.py"
+  },
+  "50b3ca41": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "959b153c": {
-        "additionalInfo": {
-            "callString": "gdf.columns.drop(gdf.geometry.name).to_list()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "959b153c",
-        "message": "Repeated function call detected (2/2). Consider caching the result: gdf.columns.drop(gdf.geometry.name).to_list()",
-        "messageId": "CRC001",
-        "module": "explore",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 21,
-                "endColumn": 66,
-                "endLine": 769,
-                "line": 769
-            },
-            {
-                "column": 21,
-                "endColumn": 66,
-                "endLine": 771,
-                "line": 771
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/explore.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "95ceccb1": {
-        "additionalInfo": {
-            "callString": "pd.read_sql(sql, con, index_col=index_col, coerce_float=coerce_float,\n    parse_dates=parse_dates, params=params, chunksize=chunksize)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "95ceccb1",
-        "message": "Repeated function call detected (2/2). Consider caching the result: pd.read_sql(sql, con, index_col=index_col, coerce_float=coerce_float,\n    parse_dates=parse_dates, params=params, chunksize=chunksize)",
-        "messageId": "CRC001",
-        "module": "sql",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 13,
-                "endColumn": 9,
-                "endLine": 193,
-                "line": 185
-            },
-            {
-                "column": 23,
-                "endColumn": 9,
-                "endLine": 206,
-                "line": 198
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/sql.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "50b3ca41",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "geopandas.io.file",
+    "obj": "_to_file_pyogrio",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 20,
+        "endLine": 779,
+        "line": 779
+      }
+    ],
+    "path": "geopandas/io/file.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py"
+  },
+  "565c4474": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": "body",
+      "innerLoopLine": 888,
+      "repetitions": null
     },
-    "95e6f6a6": {
-        "additionalInfo": {
-            "callString": "pa.ListArray.from_arrays(pa.array(geom_offsets), _parr1, mask=mask)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "95e6f6a6",
-        "message": "Repeated function call detected (2/2). Consider caching the result: pa.ListArray.from_arrays(pa.array(geom_offsets), _parr1, mask=mask)",
-        "messageId": "CRC001",
-        "module": "_geoarrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 15,
-                "endColumn": 82,
-                "endLine": 362,
-                "line": 362
-            },
-            {
-                "column": 15,
-                "endColumn": 82,
-                "endLine": 394,
-                "line": 394
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": 890,
+      "isFunc": false,
+      "start": 888,
+      "useOccurences": false
     },
-    "96a95aa7": {
-        "additionalInfo": {
-            "callString": "_get_inner_coords(arr.values)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "96a95aa7",
-        "message": "Repeated function call detected (2/2). Consider caching the result: _get_inner_coords(arr.values)",
-        "messageId": "CRC001",
-        "module": "_geoarrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 17,
-                "endColumn": 46,
-                "endLine": 579,
-                "line": 579
-            },
-            {
-                "column": 17,
-                "endColumn": 46,
-                "endLine": 592,
-                "line": 592
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "565c4474",
+    "message": "String concatenation inside loop detected",
+    "messageId": "SCL001",
+    "module": "explore.py",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 8,
+        "endColumn": 75,
+        "endLine": 890,
+        "line": 889
+      }
+    ],
+    "path": "geopandas/explore.py",
+    "symbol": "string-concat-loop",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/explore.py"
+  },
+  "57d96ac2": {
+    "additionalInfo": {
+      "callString": "C.copy()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
     },
-    "9e8ed511": {
-        "additionalInfo": {
-            "callString": "B.copy()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "9e8ed511",
-        "message": "Repeated function call detected (3/2). Consider caching the result: B.copy()",
-        "messageId": "CRC001",
-        "module": "hilbert_curve",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 152,
-                "line": 152
-            },
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 162,
-                "line": 162
-            },
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 173,
-                "line": 173
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/hilbert_curve.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "a38ff844": {
-        "additionalInfo": {
-            "callString": "mo.group(1)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a38ff844",
-        "message": "Repeated function call detected (3/2). Consider caching the result: mo.group(1)",
-        "messageId": "CRC001",
-        "module": "_version",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 47,
-                "endColumn": 58,
-                "endLine": 181,
-                "line": 181
-            },
-            {
-                "column": 43,
-                "endColumn": 54,
-                "endLine": 185,
-                "line": 185
-            },
-            {
-                "column": 43,
-                "endColumn": 54,
-                "endLine": 189,
-                "line": 189
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "57d96ac2",
+    "message": "Repeated function call detected (3/2). Consider caching the result: C.copy()",
+    "messageId": "CRC001",
+    "module": "hilbert_curve",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 153,
+        "line": 153
+      },
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 163,
+        "line": 163
+      },
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 174,
+        "line": 174
+      }
+    ],
+    "path": "geopandas/tools/hilbert_curve.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/hilbert_curve.py"
+  },
+  "5c2c2db2": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "a7f964ca": {
-        "additionalInfo": {
-            "callString": "legend_kwds.pop(\"fmt\")",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a7f964ca",
-        "message": "Repeated function call detected (2/2). Consider caching the result: legend_kwds.pop(\"fmt\")",
-        "messageId": "CRC001",
-        "module": "plotting",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 12,
-                "endColumn": 34,
-                "endLine": 895,
-                "line": 895
-            },
-            {
-                "column": 22,
-                "endColumn": 44,
-                "endLine": 769,
-                "line": 769
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "aaba8348": {
-        "additionalInfo": {
-            "callString": "pa.field(field_name, parr.type, nullable=True, metadata=extension_metadata)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 6
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "aaba8348",
-        "message": "Repeated function call detected (6/2). Consider caching the result: pa.field(field_name, parr.type, nullable=True, metadata=extension_metadata)",
-        "messageId": "CRC001",
-        "module": "_geoarrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 16,
-                "endColumn": 9,
-                "endLine": 338,
-                "line": 333
-            },
-            {
-                "column": 16,
-                "endColumn": 9,
-                "endLine": 354,
-                "line": 349
-            },
-            {
-                "column": 16,
-                "endColumn": 9,
-                "endLine": 370,
-                "line": 365
-            },
-            {
-                "column": 16,
-                "endColumn": 9,
-                "endLine": 386,
-                "line": 381
-            },
-            {
-                "column": 16,
-                "endColumn": 9,
-                "endLine": 402,
-                "line": 397
-            },
-            {
-                "column": 16,
-                "endColumn": 9,
-                "endLine": 419,
-                "line": 414
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "5c2c2db2",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "geopandas.tools.sjoin",
+    "obj": "sjoin",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 9,
+        "endLine": 12,
+        "line": 12
+      }
+    ],
+    "path": "geopandas/tools/sjoin.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/sjoin.py"
+  },
+  "5f4c2e25": {
+    "additionalInfo": {
+      "callString": "gdf_sub.copy()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
     },
-    "b12d302a": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b12d302a",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "geopandas.io.file",
-        "obj": "_to_file_fiona",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 18,
-                "endLine": 742,
-                "line": 742
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "b7fad269": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b7fad269",
-        "message": "Too many arguments (20/6)",
-        "messageId": "R0913",
-        "module": "geopandas.plotting",
-        "obj": "plot_dataframe",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 18,
-                "endLine": 489,
-                "line": 489
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "5f4c2e25",
+    "message": "Repeated function call detected (2/2). Consider caching the result: gdf_sub.copy()",
+    "messageId": "CRC001",
+    "module": "clip",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 18,
+        "endColumn": 32,
+        "endLine": 91,
+        "line": 91
+      },
+      {
+        "column": 18,
+        "endColumn": 32,
+        "endLine": 102,
+        "line": 102
+      }
+    ],
+    "path": "geopandas/tools/clip.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/clip.py"
+  },
+  "634d937a": {
+    "additionalInfo": {
+      "callString": "pyogrio.read_info(path_or_bytes, layer=kwargs.get(\"layer\")).get(\"crs\")",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
     },
-    "bb463dc5": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "bb463dc5",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "geopandas.plotting",
-        "obj": "_plot_linestring_collection",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 31,
-                "endLine": 188,
-                "line": 188
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "bf3f1d3e": {
-        "additionalInfo": {
-            "callString": "_convert_inner_coords(coords, interleaved, dims)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 5
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "bf3f1d3e",
-        "message": "Repeated function call detected (5/2). Consider caching the result: _convert_inner_coords(coords, interleaved, dims)",
-        "messageId": "CRC001",
-        "module": "_geoarrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 16,
-                "endColumn": 64,
-                "endLine": 344,
-                "line": 344
-            },
-            {
-                "column": 16,
-                "endColumn": 64,
-                "endLine": 360,
-                "line": 360
-            },
-            {
-                "column": 16,
-                "endColumn": 64,
-                "endLine": 376,
-                "line": 376
-            },
-            {
-                "column": 16,
-                "endColumn": 64,
-                "endLine": 392,
-                "line": 392
-            },
-            {
-                "column": 16,
-                "endColumn": 64,
-                "endLine": 408,
-                "line": 408
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "634d937a",
+    "message": "Repeated function call detected (2/2). Consider caching the result: pyogrio.read_info(path_or_bytes, layer=kwargs.get(\"layer\")).get(\"crs\")",
+    "messageId": "CRC001",
+    "module": "file",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 18,
+        "endColumn": 88,
+        "endLine": 509,
+        "line": 509
+      },
+      {
+        "column": 18,
+        "endColumn": 88,
+        "endLine": 522,
+        "line": 522
+      }
+    ],
+    "path": "geopandas/io/file.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py"
+  },
+  "65707ff7": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "c39bcc9d": {
-        "additionalInfo": {
-            "callString": "np.mean([minx, maxx])",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c39bcc9d",
-        "message": "Repeated function call detected (3/2). Consider caching the result: np.mean([minx, maxx])",
-        "messageId": "CRC001",
-        "module": "array",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 23,
-                "endColumn": 44,
-                "endLine": 1162,
-                "line": 1162
-            },
-            {
-                "column": 27,
-                "endColumn": 48,
-                "endLine": 1177,
-                "line": 1177
-            },
-            {
-                "column": 27,
-                "endColumn": 48,
-                "endLine": 1181,
-                "line": 1181
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/array.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "c720a52d": {
-        "additionalInfo": {
-            "callString": "GeoSeries(polygons, crs=self.crs, name=\"polygons\").explode(ignore_index=True)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c720a52d",
-        "message": "Repeated function call detected (2/2). Consider caching the result: GeoSeries(polygons, crs=self.crs, name=\"polygons\").explode(ignore_index=True)",
-        "messageId": "CRC001",
-        "module": "base",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 15,
-                "endColumn": 9,
-                "endLine": 6656,
-                "line": 6654
-            },
-            {
-                "column": 23,
-                "endColumn": 13,
-                "endLine": 6649,
-                "line": 6647
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/base.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "65707ff7",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "geopandas.plotting",
+    "obj": "plot_series",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 15,
+        "endLine": 316,
+        "line": 316
+      }
+    ],
+    "path": "geopandas/plotting.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py"
+  },
+  "678012bd": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "c7c20159": {
-        "additionalInfo": {
-            "callString": "sorted(tags)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c7c20159",
-        "message": "Repeated function call detected (2/2). Consider caching the result: sorted(tags)",
-        "messageId": "CRC001",
-        "module": "_version",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 15,
-                "endColumn": 27,
-                "endLine": 240,
-                "line": 240
-            },
-            {
-                "column": 43,
-                "endColumn": 55,
-                "endLine": 239,
-                "line": 239
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "cf7ce176": {
-        "additionalInfo": {
-            "callString": "A.copy()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "cf7ce176",
-        "message": "Repeated function call detected (3/2). Consider caching the result: A.copy()",
-        "messageId": "CRC001",
-        "module": "hilbert_curve",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 151,
-                "line": 151
-            },
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 161,
-                "line": 161
-            },
-            {
-                "column": 8,
-                "endColumn": 16,
-                "endLine": 172,
-                "line": 172
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/hilbert_curve.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "678012bd",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "geopandas.geodataframe",
+    "obj": "GeoDataFrame.to_parquet",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 18,
+        "endLine": 1406,
+        "line": 1406
+      }
+    ],
+    "path": "geopandas/geodataframe.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py"
+  },
+  "6945da0a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "d2d53960": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d2d53960",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "_version",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 15,
-                "endColumn": 68,
-                "endLine": 216,
-                "line": 216
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py",
-        "symbol": "long-message-chain",
-        "type": "convention"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "d5a1a423": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d5a1a423",
-        "message": "Too many arguments (10/6)",
-        "messageId": "R0913",
-        "module": "geopandas.geodataframe",
-        "obj": "GeoDataFrame.dissolve",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 2143,
-                "line": 2143
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "6945da0a",
+    "message": "Too many arguments (30/6)",
+    "messageId": "R0913",
+    "module": "geopandas.explore",
+    "obj": "_explore",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 12,
+        "endLine": 34,
+        "line": 34
+      }
+    ],
+    "path": "geopandas/explore.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/explore.py"
+  },
+  "69637364": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "e7fce44e": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e7fce44e",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "geopandas.plotting",
-        "obj": "_plot_polygon_collection",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 28,
-                "endLine": 117,
-                "line": 117
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "ea8df351": {
-        "additionalInfo": {
-            "callString": "_get_inner_coords(arr.values.values)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ea8df351",
-        "message": "Repeated function call detected (2/2). Consider caching the result: _get_inner_coords(arr.values.values)",
-        "messageId": "CRC001",
-        "module": "_geoarrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 17,
-                "endColumn": 53,
-                "endLine": 585,
-                "line": 585
-            },
-            {
-                "column": 17,
-                "endColumn": 53,
-                "endLine": 598,
-                "line": 598
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "69637364",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "geopandas.tools.sjoin",
+    "obj": "_nearest_query",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 18,
+        "endLine": 502,
+        "line": 502
+      }
+    ],
+    "path": "geopandas/tools/sjoin.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/sjoin.py"
+  },
+  "6ac05a42": {
+    "additionalInfo": {
+      "callString": "mo.group(1)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
     },
-    "f2bf3718": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f2bf3718",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "geopandas.io.sql",
-        "obj": "_write_postgis",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 18,
-                "endLine": 344,
-                "line": 344
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/sql.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "f7642a93": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f7642a93",
-        "message": "Too many arguments (14/6)",
-        "messageId": "R0913",
-        "module": "geopandas.explore",
-        "obj": "_explore_geoseries",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 22,
-                "endLine": 903,
-                "line": 903
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/explore.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "6ac05a42",
+    "message": "Repeated function call detected (3/2). Consider caching the result: mo.group(1)",
+    "messageId": "CRC001",
+    "module": "_version",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 47,
+        "endColumn": 58,
+        "endLine": 181,
+        "line": 181
+      },
+      {
+        "column": 43,
+        "endColumn": 54,
+        "endLine": 185,
+        "line": 185
+      },
+      {
+        "column": 43,
+        "endColumn": 54,
+        "endLine": 189,
+        "line": 189
+      }
+    ],
+    "path": "geopandas/_version.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py"
+  },
+  "714b02cc": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "f8b80b78": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f8b80b78",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "arrow",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 21,
-                "endColumn": 65,
-                "endLine": 109,
-                "line": 109
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/arrow.py",
-        "symbol": "long-message-chain",
-        "type": "convention"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "fa30daf4": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "fa30daf4",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "geopandas.tools.sjoin",
-        "obj": "_frame_join",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 15,
-                "endLine": 407,
-                "line": 407
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/sjoin.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "714b02cc",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "geopandas.io.file",
+    "obj": "_read_file_fiona",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 20,
+        "endLine": 343,
+        "line": 343
+      }
+    ],
+    "path": "geopandas/io/file.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py"
+  },
+  "7cf58328": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "fec6fffa": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "fec6fffa",
-        "message": "Lambda function too long (8/5 expressions)",
-        "messageId": "LLE001",
-        "module": "base",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 16,
-                "endColumn": 17,
-                "endLine": 6505,
-                "line": 6499
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/base.py",
-        "symbol": "long-lambda-expr",
-        "type": "convention"
-    }
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "7cf58328",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "geopandas.base",
+    "obj": "GeoPandasBase.buffer",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 14,
+        "endLine": 5412,
+        "line": 5412
+      }
+    ],
+    "path": "geopandas/base.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/base.py"
+  },
+  "82b9621a": {
+    "additionalInfo": {
+      "callString": "np.mean([miny, maxy])",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "82b9621a",
+    "message": "Repeated function call detected (2/2). Consider caching the result: np.mean([miny, maxy])",
+    "messageId": "CRC001",
+    "module": "array",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 23,
+        "endColumn": 44,
+        "endLine": 1163,
+        "line": 1163
+      },
+      {
+        "column": 23,
+        "endColumn": 44,
+        "endLine": 1170,
+        "line": 1170
+      }
+    ],
+    "path": "geopandas/array.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/array.py"
+  },
+  "87393aee": {
+    "additionalInfo": {
+      "callString": "np.asarray(arr.offsets)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 5
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "87393aee",
+    "message": "Repeated function call detected (5/2). Consider caching the result: np.asarray(arr.offsets)",
+    "messageId": "CRC001",
+    "module": "_geoarrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 19,
+        "endColumn": 42,
+        "endLine": 580,
+        "line": 580
+      },
+      {
+        "column": 19,
+        "endColumn": 42,
+        "endLine": 586,
+        "line": 586
+      },
+      {
+        "column": 19,
+        "endColumn": 42,
+        "endLine": 593,
+        "line": 593
+      },
+      {
+        "column": 19,
+        "endColumn": 42,
+        "endLine": 599,
+        "line": 599
+      },
+      {
+        "column": 19,
+        "endColumn": 42,
+        "endLine": 608,
+        "line": 608
+      }
+    ],
+    "path": "geopandas/io/_geoarrow.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py"
+  },
+  "8b243b1e": {
+    "additionalInfo": {
+      "callString": "re.search(\"=\\\\s*\"(.*)\"\", line)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8b243b1e",
+    "message": "Repeated function call detected (3/2). Consider caching the result: re.search(\"=\\\\s*\"(.*)\"\", line)",
+    "messageId": "CRC001",
+    "module": "_version",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 25,
+        "endColumn": 55,
+        "endLine": 179,
+        "line": 179
+      },
+      {
+        "column": 25,
+        "endColumn": 55,
+        "endLine": 183,
+        "line": 183
+      },
+      {
+        "column": 25,
+        "endColumn": 55,
+        "endLine": 187,
+        "line": 187
+      }
+    ],
+    "path": "geopandas/_version.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py"
+  },
+  "8d678a30": {
+    "additionalInfo": {
+      "callString": "D.copy()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8d678a30",
+    "message": "Repeated function call detected (3/2). Consider caching the result: D.copy()",
+    "messageId": "CRC001",
+    "module": "hilbert_curve",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 154,
+        "line": 154
+      },
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 164,
+        "line": 164
+      },
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 175,
+        "line": 175
+      }
+    ],
+    "path": "geopandas/tools/hilbert_curve.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/hilbert_curve.py"
+  },
+  "959b153c": {
+    "additionalInfo": {
+      "callString": "gdf.columns.drop(gdf.geometry.name).to_list()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "959b153c",
+    "message": "Repeated function call detected (2/2). Consider caching the result: gdf.columns.drop(gdf.geometry.name).to_list()",
+    "messageId": "CRC001",
+    "module": "explore",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 21,
+        "endColumn": 66,
+        "endLine": 769,
+        "line": 769
+      },
+      {
+        "column": 21,
+        "endColumn": 66,
+        "endLine": 771,
+        "line": 771
+      }
+    ],
+    "path": "geopandas/explore.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/explore.py"
+  },
+  "95ceccb1": {
+    "additionalInfo": {
+      "callString": "pd.read_sql(sql, con, index_col=index_col, coerce_float=coerce_float,\n    parse_dates=parse_dates, params=params, chunksize=chunksize)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "95ceccb1",
+    "message": "Repeated function call detected (2/2). Consider caching the result: pd.read_sql(sql, con, index_col=index_col, coerce_float=coerce_float,\n    parse_dates=parse_dates, params=params, chunksize=chunksize)",
+    "messageId": "CRC001",
+    "module": "sql",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 13,
+        "endColumn": 9,
+        "endLine": 193,
+        "line": 185
+      },
+      {
+        "column": 23,
+        "endColumn": 9,
+        "endLine": 206,
+        "line": 198
+      }
+    ],
+    "path": "geopandas/io/sql.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/sql.py"
+  },
+  "95e6f6a6": {
+    "additionalInfo": {
+      "callString": "pa.ListArray.from_arrays(pa.array(geom_offsets), _parr1, mask=mask)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "95e6f6a6",
+    "message": "Repeated function call detected (2/2). Consider caching the result: pa.ListArray.from_arrays(pa.array(geom_offsets), _parr1, mask=mask)",
+    "messageId": "CRC001",
+    "module": "_geoarrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 15,
+        "endColumn": 82,
+        "endLine": 362,
+        "line": 362
+      },
+      {
+        "column": 15,
+        "endColumn": 82,
+        "endLine": 394,
+        "line": 394
+      }
+    ],
+    "path": "geopandas/io/_geoarrow.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py"
+  },
+  "96a95aa7": {
+    "additionalInfo": {
+      "callString": "_get_inner_coords(arr.values)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "96a95aa7",
+    "message": "Repeated function call detected (2/2). Consider caching the result: _get_inner_coords(arr.values)",
+    "messageId": "CRC001",
+    "module": "_geoarrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 17,
+        "endColumn": 46,
+        "endLine": 579,
+        "line": 579
+      },
+      {
+        "column": 17,
+        "endColumn": 46,
+        "endLine": 592,
+        "line": 592
+      }
+    ],
+    "path": "geopandas/io/_geoarrow.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py"
+  },
+  "9e8ed511": {
+    "additionalInfo": {
+      "callString": "B.copy()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "9e8ed511",
+    "message": "Repeated function call detected (3/2). Consider caching the result: B.copy()",
+    "messageId": "CRC001",
+    "module": "hilbert_curve",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 152,
+        "line": 152
+      },
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 162,
+        "line": 162
+      },
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 173,
+        "line": 173
+      }
+    ],
+    "path": "geopandas/tools/hilbert_curve.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/hilbert_curve.py"
+  },
+  "a38ff844": {
+    "additionalInfo": {
+      "callString": "mo.group(1)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a38ff844",
+    "message": "Repeated function call detected (3/2). Consider caching the result: mo.group(1)",
+    "messageId": "CRC001",
+    "module": "_version",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 47,
+        "endColumn": 58,
+        "endLine": 181,
+        "line": 181
+      },
+      {
+        "column": 43,
+        "endColumn": 54,
+        "endLine": 185,
+        "line": 185
+      },
+      {
+        "column": 43,
+        "endColumn": 54,
+        "endLine": 189,
+        "line": 189
+      }
+    ],
+    "path": "geopandas/_version.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py"
+  },
+  "a7f964ca": {
+    "additionalInfo": {
+      "callString": "legend_kwds.pop(\"fmt\")",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a7f964ca",
+    "message": "Repeated function call detected (2/2). Consider caching the result: legend_kwds.pop(\"fmt\")",
+    "messageId": "CRC001",
+    "module": "plotting",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 12,
+        "endColumn": 34,
+        "endLine": 895,
+        "line": 895
+      },
+      {
+        "column": 22,
+        "endColumn": 44,
+        "endLine": 769,
+        "line": 769
+      }
+    ],
+    "path": "geopandas/plotting.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py"
+  },
+  "aaba8348": {
+    "additionalInfo": {
+      "callString": "pa.field(field_name, parr.type, nullable=True, metadata=extension_metadata)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 6
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "aaba8348",
+    "message": "Repeated function call detected (6/2). Consider caching the result: pa.field(field_name, parr.type, nullable=True, metadata=extension_metadata)",
+    "messageId": "CRC001",
+    "module": "_geoarrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 16,
+        "endColumn": 9,
+        "endLine": 338,
+        "line": 333
+      },
+      {
+        "column": 16,
+        "endColumn": 9,
+        "endLine": 354,
+        "line": 349
+      },
+      {
+        "column": 16,
+        "endColumn": 9,
+        "endLine": 370,
+        "line": 365
+      },
+      {
+        "column": 16,
+        "endColumn": 9,
+        "endLine": 386,
+        "line": 381
+      },
+      {
+        "column": 16,
+        "endColumn": 9,
+        "endLine": 402,
+        "line": 397
+      },
+      {
+        "column": 16,
+        "endColumn": 9,
+        "endLine": 419,
+        "line": 414
+      }
+    ],
+    "path": "geopandas/io/_geoarrow.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py"
+  },
+  "b12d302a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b12d302a",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "geopandas.io.file",
+    "obj": "_to_file_fiona",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 18,
+        "endLine": 742,
+        "line": 742
+      }
+    ],
+    "path": "geopandas/io/file.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/file.py"
+  },
+  "b7fad269": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b7fad269",
+    "message": "Too many arguments (20/6)",
+    "messageId": "R0913",
+    "module": "geopandas.plotting",
+    "obj": "plot_dataframe",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 18,
+        "endLine": 489,
+        "line": 489
+      }
+    ],
+    "path": "geopandas/plotting.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py"
+  },
+  "bb463dc5": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "bb463dc5",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "geopandas.plotting",
+    "obj": "_plot_linestring_collection",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 31,
+        "endLine": 188,
+        "line": 188
+      }
+    ],
+    "path": "geopandas/plotting.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py"
+  },
+  "bf3f1d3e": {
+    "additionalInfo": {
+      "callString": "_convert_inner_coords(coords, interleaved, dims)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 5
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "bf3f1d3e",
+    "message": "Repeated function call detected (5/2). Consider caching the result: _convert_inner_coords(coords, interleaved, dims)",
+    "messageId": "CRC001",
+    "module": "_geoarrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 16,
+        "endColumn": 64,
+        "endLine": 344,
+        "line": 344
+      },
+      {
+        "column": 16,
+        "endColumn": 64,
+        "endLine": 360,
+        "line": 360
+      },
+      {
+        "column": 16,
+        "endColumn": 64,
+        "endLine": 376,
+        "line": 376
+      },
+      {
+        "column": 16,
+        "endColumn": 64,
+        "endLine": 392,
+        "line": 392
+      },
+      {
+        "column": 16,
+        "endColumn": 64,
+        "endLine": 408,
+        "line": 408
+      }
+    ],
+    "path": "geopandas/io/_geoarrow.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py"
+  },
+  "c39bcc9d": {
+    "additionalInfo": {
+      "callString": "np.mean([minx, maxx])",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c39bcc9d",
+    "message": "Repeated function call detected (3/2). Consider caching the result: np.mean([minx, maxx])",
+    "messageId": "CRC001",
+    "module": "array",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 23,
+        "endColumn": 44,
+        "endLine": 1162,
+        "line": 1162
+      },
+      {
+        "column": 27,
+        "endColumn": 48,
+        "endLine": 1177,
+        "line": 1177
+      },
+      {
+        "column": 27,
+        "endColumn": 48,
+        "endLine": 1181,
+        "line": 1181
+      }
+    ],
+    "path": "geopandas/array.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/array.py"
+  },
+  "c720a52d": {
+    "additionalInfo": {
+      "callString": "GeoSeries(polygons, crs=self.crs, name=\"polygons\").explode(ignore_index=True)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c720a52d",
+    "message": "Repeated function call detected (2/2). Consider caching the result: GeoSeries(polygons, crs=self.crs, name=\"polygons\").explode(ignore_index=True)",
+    "messageId": "CRC001",
+    "module": "base",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 15,
+        "endColumn": 9,
+        "endLine": 6656,
+        "line": 6654
+      },
+      {
+        "column": 23,
+        "endColumn": 13,
+        "endLine": 6649,
+        "line": 6647
+      }
+    ],
+    "path": "geopandas/base.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/base.py"
+  },
+  "c7c20159": {
+    "additionalInfo": {
+      "callString": "sorted(tags)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c7c20159",
+    "message": "Repeated function call detected (2/2). Consider caching the result: sorted(tags)",
+    "messageId": "CRC001",
+    "module": "_version",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 15,
+        "endColumn": 27,
+        "endLine": 240,
+        "line": 240
+      },
+      {
+        "column": 43,
+        "endColumn": 55,
+        "endLine": 239,
+        "line": 239
+      }
+    ],
+    "path": "geopandas/_version.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py"
+  },
+  "cf7ce176": {
+    "additionalInfo": {
+      "callString": "A.copy()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "cf7ce176",
+    "message": "Repeated function call detected (3/2). Consider caching the result: A.copy()",
+    "messageId": "CRC001",
+    "module": "hilbert_curve",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 151,
+        "line": 151
+      },
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 161,
+        "line": 161
+      },
+      {
+        "column": 8,
+        "endColumn": 16,
+        "endLine": 172,
+        "line": 172
+      }
+    ],
+    "path": "geopandas/tools/hilbert_curve.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/hilbert_curve.py"
+  },
+  "d2d53960": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d2d53960",
+    "message": "Method chain too long (3/3)",
+    "messageId": "LMC001",
+    "module": "_version",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 15,
+        "endColumn": 68,
+        "endLine": 216,
+        "line": 216
+      }
+    ],
+    "path": "geopandas/_version.py",
+    "symbol": "long-message-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/_version.py"
+  },
+  "d5a1a423": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d5a1a423",
+    "message": "Too many arguments (10/6)",
+    "messageId": "R0913",
+    "module": "geopandas.geodataframe",
+    "obj": "GeoDataFrame.dissolve",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 2143,
+        "line": 2143
+      }
+    ],
+    "path": "geopandas/geodataframe.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/geodataframe.py"
+  },
+  "e7fce44e": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e7fce44e",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "geopandas.plotting",
+    "obj": "_plot_polygon_collection",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 28,
+        "endLine": 117,
+        "line": 117
+      }
+    ],
+    "path": "geopandas/plotting.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/plotting.py"
+  },
+  "ea8df351": {
+    "additionalInfo": {
+      "callString": "_get_inner_coords(arr.values.values)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ea8df351",
+    "message": "Repeated function call detected (2/2). Consider caching the result: _get_inner_coords(arr.values.values)",
+    "messageId": "CRC001",
+    "module": "_geoarrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 17,
+        "endColumn": 53,
+        "endLine": 585,
+        "line": 585
+      },
+      {
+        "column": 17,
+        "endColumn": 53,
+        "endLine": 598,
+        "line": 598
+      }
+    ],
+    "path": "geopandas/io/_geoarrow.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/_geoarrow.py"
+  },
+  "f2bf3718": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f2bf3718",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "geopandas.io.sql",
+    "obj": "_write_postgis",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 18,
+        "endLine": 344,
+        "line": 344
+      }
+    ],
+    "path": "geopandas/io/sql.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/sql.py"
+  },
+  "f7642a93": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f7642a93",
+    "message": "Too many arguments (14/6)",
+    "messageId": "R0913",
+    "module": "geopandas.explore",
+    "obj": "_explore_geoseries",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 22,
+        "endLine": 903,
+        "line": 903
+      }
+    ],
+    "path": "geopandas/explore.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/explore.py"
+  },
+  "f8b80b78": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f8b80b78",
+    "message": "Method chain too long (3/3)",
+    "messageId": "LMC001",
+    "module": "arrow",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 21,
+        "endColumn": 65,
+        "endLine": 109,
+        "line": 109
+      }
+    ],
+    "path": "geopandas/io/arrow.py",
+    "symbol": "long-message-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/io/arrow.py"
+  },
+  "fa30daf4": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "fa30daf4",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "geopandas.tools.sjoin",
+    "obj": "_frame_join",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 15,
+        "endLine": 407,
+        "line": 407
+      }
+    ],
+    "path": "geopandas/tools/sjoin.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/tools/sjoin.py"
+  },
+  "fec6fffa": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "fec6fffa",
+    "message": "Lambda function too long (8/5 expressions)",
+    "messageId": "LLE001",
+    "module": "base",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 16,
+        "endColumn": 17,
+        "endLine": 6505,
+        "line": 6499
+      }
+    ],
+    "path": "geopandas/base.py",
+    "symbol": "long-lambda-expr",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/geopandas/geopandas/base.py"
+  }
 }

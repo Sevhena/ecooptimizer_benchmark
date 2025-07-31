@@ -1,0 +1,24 @@
+diff --git a/lib/streamlit/runtime/caching/hashing.py b/lib/streamlit/runtime/caching/hashing.py
+index 01e6aa9b7..968e47477 100644
+--- a/lib/streamlit/runtime/caching/hashing.py
++++ b/lib/streamlit/runtime/caching/hashing.py
+@@ -14,6 +14,7 @@
+ 
+ """Hashing for st.cache_data and st.cache_resource."""
+ 
++from codecarbon import EmissionsTracker
+ from __future__ import annotations
+ 
+ import collections
+@@ -425,8 +426,10 @@ class _CacheFuncHasher:
+                 series_obj = series_obj.sample(n=_PANDAS_SAMPLE_SIZE, random_state=0)
+ 
+             try:
++                with EmissionsTracker(project_name='streamlit-benchmark', experiment_id='streamlit_LMC001_4971d3a7', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-message-chain/4971d3a7.csv') as tracker:
++                    _carbon_wrapped_e5d56ba2 = pd.util.hash_pandas_object(series_obj).to_numpy().tobytes()
+                 self.update(
+-                    h, pd.util.hash_pandas_object(series_obj).to_numpy().tobytes()
++                    h, _carbon_wrapped_e5d56ba2
+                 )
+                 return h.digest()
+             except TypeError:

@@ -1,0 +1,26 @@
+diff --git a/django/core/signing.py b/django/core/signing.py
+index e3d7785910..5229522120 100644
+--- a/django/core/signing.py
++++ b/django/core/signing.py
+@@ -33,6 +33,7 @@ There are 65 url-safe characters: the 64 used by url-safe base64 and the ':'.
+ These functions make use of all of them.
+ """
+ 
++from codecarbon import EmissionsTracker
+ import base64
+ import datetime
+ import json
+@@ -67,9 +68,10 @@ def b62_encode(s):
+     sign = "-" if s < 0 else ""
+     s = abs(s)
+     encoded = ""
+-    while s > 0:
+-        s, remainder = divmod(s, 62)
+-        encoded = BASE62_ALPHABET[remainder] + encoded
++    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_SCL001_aded0240', output_file='/root/ecooptimizer_benchmark/emissions/django/string-concat-loop/aded0240.csv') as tracker:
++        while s > 0:
++            s, remainder = divmod(s, 62)
++            encoded = BASE62_ALPHABET[remainder] + encoded
+     return sign + encoded
+ 
+ 

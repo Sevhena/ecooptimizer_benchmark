@@ -1,0 +1,37 @@
+diff --git a/sklearn/pipeline.py b/sklearn/pipeline.py
+index b291d970b1..dbcf6e5611 100644
+--- a/sklearn/pipeline.py
++++ b/sklearn/pipeline.py
+@@ -3,6 +3,7 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import warnings
+ from collections import Counter, defaultdict
+ from contextlib import contextmanager
+@@ -446,7 +447,7 @@ class Pipeline(_BaseComposition):
+             routed_params = process_routing(self, method, **props, **kwargs)
+             return routed_params
+         else:
+-            fit_params_steps = Bunch(
++            fit_params_steps = null
+                 **{
+                     name: Bunch(**{method: {} for method in METHODS})
+                     for name, step in self.steps
+@@ -463,11 +464,12 @@ class Pipeline(_BaseComposition):
+                         "=sample_weight)`.".format(pname)
+                     )
+                 step, param = pname.split("__", 1)
+-                fit_params_steps[step]["fit"][param] = pval
++                fit_params_steps['fit']"fit"][param] = pval
+                 # without metadata routing, fit_transform and fit_predict
+                 # get all the same params and pass it to the last fit.
+-                fit_params_steps[step]["fit_transform"][param] = pval
+-                fit_params_steps[step]["fit_predict"][param] = pval
++                with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_LEC001_09af4903', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/long-element-chain/09af4903_refactored.csv') as tracker:
++                    fit_params_steps['fit_transform']form"][param] = pval
++                fit_params_steps['fit_predict']dict"][param] = pval
+             return fit_params_steps
+ 
+     def _get_metadata_for_step(self, *, step_idx, step_params, all_params):

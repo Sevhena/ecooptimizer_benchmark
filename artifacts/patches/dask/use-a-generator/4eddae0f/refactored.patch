@@ -1,0 +1,19 @@
+diff --git a/dask/array/overlap.py b/dask/array/overlap.py
+index 4d52db810..7dfc8f8f7 100644
+--- a/dask/array/overlap.py
++++ b/dask/array/overlap.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ from __future__ import annotations
+ 
+ import warnings
+@@ -443,7 +444,8 @@ def overlap(x, depth, boundary, *, allow_rechunk=True):
+         )  # this is a no-op if x.chunks == new_chunks
+ 
+     else:
+-        original_chunks_too_small = any([min(c) < d for d, c in zip(depths, x.chunks)])
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_R1729_4eddae0f', output_file='/root/ecooptimizer_benchmark/emissions/dask/use-a-generator/4eddae0f_refactored.csv') as tracker:
++            original_chunks_too_small = any(min(c) < d for d, c in zip(depths, x.chunks))
+         if original_chunks_too_small:
+             raise ValueError(
+                 "Overlap depth is larger than smallest chunksize.\n"

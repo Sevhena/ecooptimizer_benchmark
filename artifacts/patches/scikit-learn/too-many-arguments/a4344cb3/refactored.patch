@@ -1,0 +1,480 @@
+diff --git a/sklearn/_loss/loss.py b/sklearn/_loss/loss.py
+index b45ff33226..be45030b86 100644
+--- a/sklearn/_loss/loss.py
++++ b/sklearn/_loss/loss.py
+@@ -1,3 +1,14 @@
++class DataParams_gradient_hessian_419:
++    def __init__(self, coef, X, y, sample_weight = None, l2_reg_strength = 0.0, n_threads = 1, gradient_out = None, hessian_out = None, raw_prediction = None):
++        self.coef = coef
++        self.X = X
++        self.y = y
++        self.sample_weight = sample_weight
++        self.l2_reg_strength = l2_reg_strength
++        self.n_threads = n_threads
++        self.gradient_out = gradient_out
++        self.hessian_out = hessian_out
++        self.raw_prediction = raw_prediction
+ """
+ This module contains loss classes suitable for fitting.
+ 
+@@ -371,13 +382,7 @@ class BaseLoss:
+             hessian_out = hessian_out.squeeze(1)
+ 
+         self.closs.gradient_hessian(
+-            y_true=y_true,
+-            raw_prediction=raw_prediction,
+-            sample_weight=sample_weight,
+-            gradient_out=gradient_out,
+-            hessian_out=hessian_out,
+-            n_threads=n_threads,
+-        )
++            DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = sample_weight, gradient_out = gradient_out, hessian_out = hessian_out, n_threads = n_threads), y_true = y_true)
+         return gradient_out, hessian_out
+ 
+     def __call__(self, y_true, raw_prediction, sample_weight=None, n_threads=1):
+diff --git a/sklearn/_loss/tests/test_loss.py b/sklearn/_loss/tests/test_loss.py
+index 4fea325729..c0bf495939 100644
+--- a/sklearn/_loss/tests/test_loss.py
++++ b/sklearn/_loss/tests/test_loss.py
+@@ -47,6 +47,17 @@ LOSS_INSTANCES += [
+     HalfTweedieLossIdentity(power=2),
+     HalfTweedieLossIdentity(power=3.0),
+ ]
++class DataParams_gradient_hessian_419:
++    def __init__(self, coef, X, y, sample_weight = None, l2_reg_strength = 0.0, n_threads = 1, gradient_out = None, hessian_out = None, raw_prediction = None):
++        self.coef = coef
++        self.X = X
++        self.y = y
++        self.sample_weight = sample_weight
++        self.l2_reg_strength = l2_reg_strength
++        self.n_threads = n_threads
++        self.gradient_out = gradient_out
++        self.hessian_out = hessian_out
++        self.raw_prediction = raw_prediction
+ 
+ 
+ def loss_instance_name(param):
+@@ -358,8 +369,7 @@ def test_loss_on_specific_values(
+         y_true=np.array([y_true]), raw_prediction=np.array([raw_prediction])
+     )
+     grad3, hess = loss.gradient_hessian(
+-        y_true=np.array([y_true]), raw_prediction=np.array([raw_prediction])
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = np.array([raw_prediction])), y_true = np.array([y_true]))
+ 
+     assert loss1 == approx(loss_true, rel=1e-15, abs=1e-15)
+     assert loss2 == approx(loss_true, rel=1e-15, abs=1e-15)
+@@ -446,13 +456,7 @@ def test_loss_dtype(
+     if out1 is not None and loss.is_multiclass:
+         out1 = np.empty_like(raw_prediction, dtype=dtype_out)
+     g, h = loss.gradient_hessian(
+-        y_true=y_true,
+-        raw_prediction=raw_prediction,
+-        sample_weight=sample_weight,
+-        gradient_out=out1,
+-        hessian_out=out2,
+-        n_threads=n_threads,
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = sample_weight, gradient_out = out1, hessian_out = out2, n_threads = n_threads), y_true = y_true)
+     assert g is out1 if out1 is not None else True
+     assert h is out2 if out2 is not None else True
+     loss(y_true=y_true, raw_prediction=raw_prediction, sample_weight=sample_weight)
+@@ -536,19 +540,9 @@ def test_loss_same_as_C_functions(loss, sample_weight):
+     assert_allclose(out_l1, out_l2)
+     assert_allclose(out_g1, out_g2)
+     loss.gradient_hessian(
+-        y_true=y_true,
+-        raw_prediction=raw_prediction,
+-        sample_weight=sample_weight,
+-        gradient_out=out_g1,
+-        hessian_out=out_h1,
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = sample_weight, gradient_out = out_g1, hessian_out = out_h1), y_true = y_true)
+     loss.closs.gradient_hessian(
+-        y_true=y_true,
+-        raw_prediction=raw_prediction,
+-        sample_weight=sample_weight,
+-        gradient_out=out_g2,
+-        hessian_out=out_h2,
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = sample_weight, gradient_out = out_g2, hessian_out = out_h2), y_true = y_true)
+     assert_allclose(out_g1, out_g2)
+     assert_allclose(out_h1, out_h2)
+ 
+@@ -597,12 +591,7 @@ def test_loss_gradients_are_the_same(loss, sample_weight, global_random_seed):
+         gradient_out=out_g2,
+     )
+     g3, h3 = loss.gradient_hessian(
+-        y_true=y_true,
+-        raw_prediction=raw_prediction,
+-        sample_weight=sample_weight,
+-        gradient_out=out_g3,
+-        hessian_out=out_h3,
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = sample_weight, gradient_out = out_g3, hessian_out = out_h3), y_true = y_true)
+     assert_allclose(l1, l2)
+     assert_array_equal(l1, out_l1)
+     assert np.shares_memory(l1, out_l1)
+@@ -688,15 +677,9 @@ def test_sample_weight_multiplies(loss, sample_weight, global_random_seed):
+         assert_allclose(gradient * sample_weight[:, None], gradient_sw)
+ 
+     gradient, hessian = loss.gradient_hessian(
+-        y_true=y_true,
+-        raw_prediction=raw_prediction,
+-        sample_weight=None,
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = None), y_true = y_true)
+     gradient_sw, hessian_sw = loss.gradient_hessian(
+-        y_true=y_true,
+-        raw_prediction=raw_prediction,
+-        sample_weight=sample_weight,
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = sample_weight), y_true = y_true)
+     if not loss.is_multiclass:
+         assert_allclose(gradient * sample_weight, gradient_sw)
+         assert_allclose(hessian * sample_weight, hessian_sw)
+@@ -731,8 +714,8 @@ def test_graceful_squeezing(loss):
+             loss.gradient(y_true=y_true, raw_prediction=raw_prediction),
+         )
+         assert_allclose(
+-            loss.gradient_hessian(y_true=y_true, raw_prediction=raw_prediction_2d),
+-            loss.gradient_hessian(y_true=y_true, raw_prediction=raw_prediction),
++            loss.gradient_hessian(DataParams_gradient_hessian_419(raw_prediction = raw_prediction_2d), y_true = y_true),
++            loss.gradient_hessian(DataParams_gradient_hessian_419(raw_prediction = raw_prediction), y_true = y_true),
+         )
+ 
+ 
+@@ -807,10 +790,7 @@ def test_gradients_hessians_numerically(loss, sample_weight, global_random_seed)
+         sample_weight = np.linspace(1, y_true.shape[0], num=y_true.shape[0])
+ 
+     g, h = loss.gradient_hessian(
+-        y_true=y_true,
+-        raw_prediction=raw_prediction,
+-        sample_weight=sample_weight,
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = sample_weight), y_true = y_true)
+ 
+     assert g.shape == raw_prediction.shape
+     assert h.shape == raw_prediction.shape
+@@ -921,7 +901,7 @@ def test_derivatives(loss, x0, y_true):
+         return loss.gradient(y_true=y_true, raw_prediction=x)
+ 
+     def fprime2(x: np.ndarray) -> np.ndarray:
+-        return loss.gradient_hessian(y_true=y_true, raw_prediction=x)[1]
++        return loss.gradient_hessian(DataParams_gradient_hessian_419(raw_prediction = x), y_true = y_true)[1]
+ 
+     optimum = newton(
+         func,
+@@ -1347,11 +1327,9 @@ def test_tweedie_log_identity_consistency(p):
+     #     hessian_log(x) = exp(x) * gradient_identity(exp(x))
+     #                    + exp(x)**2 * hessian_identity(x)
+     gradient_log, hessian_log = half_tweedie_log.gradient_hessian(
+-        y_true=y_true, raw_prediction=raw_prediction
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = raw_prediction), y_true = y_true)
+     gradient_identity, hessian_identity = half_tweedie_identity.gradient_hessian(
+-        y_true=y_true, raw_prediction=y_pred
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = y_pred), y_true = y_true)
+     assert_allclose(gradient_log, y_pred * gradient_identity)
+     assert_allclose(
+         hessian_log, y_pred * gradient_identity + y_pred**2 * hessian_identity
+diff --git a/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py b/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py
+index 064391abab..f0ee3cca29 100644
+--- a/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py
++++ b/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py
+@@ -61,6 +61,17 @@ _LOSSES.update(
+         "quantile": PinballLoss,
+     }
+ )
++class DataParams_gradient_hessian_419:
++    def __init__(self, coef, X, y, sample_weight = None, l2_reg_strength = 0.0, n_threads = 1, gradient_out = None, hessian_out = None, raw_prediction = None):
++        self.coef = coef
++        self.X = X
++        self.y = y
++        self.sample_weight = sample_weight
++        self.l2_reg_strength = l2_reg_strength
++        self.n_threads = n_threads
++        self.gradient_out = gradient_out
++        self.hessian_out = hessian_out
++        self.raw_prediction = raw_prediction
+ 
+ 
+ def _update_leaves_values(loss, grower, y_true, raw_prediction, sample_weight):
+@@ -910,13 +921,7 @@ class BaseHistGradientBoosting(BaseEstimator, ABC):
+                 )
+             else:
+                 self._loss.gradient_hessian(
+-                    y_true=y_train,
+-                    raw_prediction=raw_predictions,
+-                    sample_weight=sample_weight_train,
+-                    gradient_out=gradient,
+-                    hessian_out=hessian,
+-                    n_threads=n_threads,
+-                )
++                    DataParams_gradient_hessian_419(raw_prediction = raw_predictions, sample_weight = sample_weight_train, gradient_out = gradient, hessian_out = hessian, n_threads = n_threads), y_true = y_train)
+ 
+             # Append a list since there may be more than 1 predictor per iter
+             predictors.append([])
+diff --git a/sklearn/ensemble/_hist_gradient_boosting/tests/test_gradient_boosting.py b/sklearn/ensemble/_hist_gradient_boosting/tests/test_gradient_boosting.py
+index 7dde25f3d2..f7b5f9d913 100644
+--- a/sklearn/ensemble/_hist_gradient_boosting/tests/test_gradient_boosting.py
++++ b/sklearn/ensemble/_hist_gradient_boosting/tests/test_gradient_boosting.py
+@@ -47,6 +47,17 @@ X_regression, y_regression = make_regression(random_state=0)
+ X_multi_classification, y_multi_classification = make_classification(
+     n_classes=3, n_informative=3, random_state=0
+ )
++class DataParams_gradient_hessian_419:
++    def __init__(self, coef, X, y, sample_weight = None, l2_reg_strength = 0.0, n_threads = 1, gradient_out = None, hessian_out = None, raw_prediction = None):
++        self.coef = coef
++        self.X = X
++        self.y = y
++        self.sample_weight = sample_weight
++        self.l2_reg_strength = l2_reg_strength
++        self.n_threads = n_threads
++        self.gradient_out = gradient_out
++        self.hessian_out = hessian_out
++        self.raw_prediction = raw_prediction
+ 
+ 
+ def _make_dumb_dataset(n_samples):
+@@ -793,13 +804,7 @@ def test_sum_hessians_are_sample_weight(Loss):
+     gradients, hessians = gradients.reshape((-1, 1)), hessians.reshape((-1, 1))
+     raw_predictions = rng.normal(size=(n_samples, 1))
+     loss.gradient_hessian(
+-        y_true=y,
+-        raw_prediction=raw_predictions,
+-        sample_weight=sample_weight,
+-        gradient_out=gradients,
+-        hessian_out=hessians,
+-        n_threads=n_threads,
+-    )
++        DataParams_gradient_hessian_419(raw_prediction = raw_predictions, sample_weight = sample_weight, gradient_out = gradients, hessian_out = hessians, n_threads = n_threads), y_true = y)
+ 
+     # build sum_sample_weight which contains the sum of the sample weights at
+     # each bin (for each feature). This must be equal to the sum_hessians
+diff --git a/sklearn/linear_model/_glm/_newton_solver.py b/sklearn/linear_model/_glm/_newton_solver.py
+index c5c940bed6..9aeb3c4261 100644
+--- a/sklearn/linear_model/_glm/_newton_solver.py
++++ b/sklearn/linear_model/_glm/_newton_solver.py
+@@ -1,6 +1,17 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++class DataParams_gradient_hessian_419:
++    def __init__(self, coef, X, y, sample_weight = None, l2_reg_strength = 0.0, n_threads = 1, gradient_out = None, hessian_out = None, raw_prediction = None):
++        self.coef = coef
++        self.X = X
++        self.y = y
++        self.sample_weight = sample_weight
++        self.l2_reg_strength = l2_reg_strength
++        self.n_threads = n_threads
++        self.gradient_out = gradient_out
++        self.hessian_out = hessian_out
++        self.raw_prediction = raw_prediction
+ """
+ Newton solver for Generalized Linear Models
+ """
+@@ -471,16 +482,7 @@ class NewtonCholeskySolver(NewtonSolver):
+ 
+     def update_gradient_hessian(self, X, y, sample_weight):
+         _, _, self.hessian_warning = self.linear_loss.gradient_hessian(
+-            coef=self.coef,
+-            X=X,
+-            y=y,
+-            sample_weight=sample_weight,
+-            l2_reg_strength=self.l2_reg_strength,
+-            n_threads=self.n_threads,
+-            gradient_out=self.gradient,
+-            hessian_out=self.hessian,
+-            raw_prediction=self.raw_prediction,  # this was updated in line_search
+-        )
++            DataParams_gradient_hessian_419(coef = self.coef, X = X, y = y, sample_weight = sample_weight, l2_reg_strength = self.l2_reg_strength, n_threads = self.n_threads, gradient_out = self.gradient, hessian_out = self.hessian, raw_prediction = self.raw_prediction))
+ 
+     def inner_solve(self, X, y, sample_weight):
+         if self.hessian_warning:
+diff --git a/sklearn/linear_model/_linear_loss.py b/sklearn/linear_model/_linear_loss.py
+index 9213008a19..72c63c1714 100644
+--- a/sklearn/linear_model/_linear_loss.py
++++ b/sklearn/linear_model/_linear_loss.py
+@@ -5,10 +5,22 @@ Loss functions for linear models with raw_prediction = X @ coef
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import numpy as np
+ from scipy import sparse
+ 
+ from ..utils.extmath import squared_norm
++class DataParams_gradient_hessian_419:
++    def __init__(self, coef, X, y, sample_weight = None, l2_reg_strength = 0.0, n_threads = 1, gradient_out = None, hessian_out = None, raw_prediction = None):
++        self.coef = coef
++        self.X = X
++        self.y = y
++        self.sample_weight = sample_weight
++        self.l2_reg_strength = l2_reg_strength
++        self.n_threads = n_threads
++        self.gradient_out = gradient_out
++        self.hessian_out = hessian_out
++        self.raw_prediction = raw_prediction
+ 
+ 
+ def sandwich_dot(X, W):
+@@ -414,6 +426,7 @@ class LinearModelLoss:
+             else:
+                 return grad
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_a4344cb3', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/a4344cb3_refactored.csv')
+     def gradient_hessian(
+         self,
+         coef,
+@@ -507,11 +520,7 @@ class LinearModelLoss:
+ 
+         if not self.base_loss.is_multiclass:
+             grad_pointwise, hess_pointwise = self.base_loss.gradient_hessian(
+-                y_true=y,
+-                raw_prediction=raw_prediction,
+-                sample_weight=sample_weight,
+-                n_threads=n_threads,
+-            )
++                DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = sample_weight, n_threads = n_threads), y_true = y)
+             grad_pointwise /= sw_sum
+             hess_pointwise /= sw_sum
+ 
+@@ -710,11 +719,7 @@ class LinearModelLoss:
+ 
+         if not self.base_loss.is_multiclass:
+             grad_pointwise, hess_pointwise = self.base_loss.gradient_hessian(
+-                y_true=y,
+-                raw_prediction=raw_prediction,
+-                sample_weight=sample_weight,
+-                n_threads=n_threads,
+-            )
++                DataParams_gradient_hessian_419(raw_prediction = raw_prediction, sample_weight = sample_weight, n_threads = n_threads), y_true = y)
+             grad_pointwise /= sw_sum
+             hess_pointwise /= sw_sum
+             grad = np.empty_like(coef, dtype=weights.dtype)
+diff --git a/sklearn/linear_model/tests/test_linear_loss.py b/sklearn/linear_model/tests/test_linear_loss.py
+index a273656b3d..67363623b7 100644
+--- a/sklearn/linear_model/tests/test_linear_loss.py
++++ b/sklearn/linear_model/tests/test_linear_loss.py
+@@ -23,6 +23,17 @@ from sklearn.utils.fixes import CSR_CONTAINERS
+ # We do not need to test all losses, just what LinearModelLoss does on top of the
+ # base losses.
+ LOSSES = [HalfBinomialLoss, HalfMultinomialLoss, HalfPoissonLoss]
++class DataParams_gradient_hessian_419:
++    def __init__(self, coef, X, y, sample_weight = None, l2_reg_strength = 0.0, n_threads = 1, gradient_out = None, hessian_out = None, raw_prediction = None):
++        self.coef = coef
++        self.X = X
++        self.y = y
++        self.sample_weight = sample_weight
++        self.l2_reg_strength = l2_reg_strength
++        self.n_threads = n_threads
++        self.gradient_out = gradient_out
++        self.hessian_out = hessian_out
++        self.raw_prediction = raw_prediction
+ 
+ 
+ def random_X_y_coef(
+@@ -140,8 +151,7 @@ def test_loss_grad_hess_are_the_same(
+         coef, X, y, sample_weight=sample_weight, l2_reg_strength=l2_reg_strength
+     )
+     g4, h4, _ = loss.gradient_hessian(
+-        coef, X, y, sample_weight=sample_weight, l2_reg_strength=l2_reg_strength
+-    )
++        DataParams_gradient_hessian_419(coef, X, y, sample_weight = sample_weight, l2_reg_strength = l2_reg_strength))
+     assert_allclose(l1, l2)
+     assert_allclose(g1, g2)
+     assert_allclose(g1, g3)
+@@ -152,14 +162,7 @@ def test_loss_grad_hess_are_the_same(
+     g_out = np.empty_like(coef)
+     h_out = np.empty_like(coef, shape=(coef.size, coef.size))
+     g5, h5, _ = loss.gradient_hessian(
+-        coef,
+-        X,
+-        y,
+-        sample_weight=sample_weight,
+-        l2_reg_strength=l2_reg_strength,
+-        gradient_out=g_out,
+-        hessian_out=h_out,
+-    )
++        DataParams_gradient_hessian_419(coef, X, y, sample_weight = sample_weight, l2_reg_strength = l2_reg_strength, gradient_out = g_out, hessian_out = h_out))
+     assert np.shares_memory(g5, g_out)
+     assert np.shares_memory(h5, h_out)
+     assert_allclose(g5, g_out)
+@@ -182,8 +185,7 @@ def test_loss_grad_hess_are_the_same(
+         coef, Xs, y, sample_weight=sample_weight, l2_reg_strength=l2_reg_strength
+     )
+     g4_sp, h4_sp, _ = loss.gradient_hessian(
+-        coef, Xs, y, sample_weight=sample_weight, l2_reg_strength=l2_reg_strength
+-    )
++        DataParams_gradient_hessian_419(coef, Xs, y, sample_weight = sample_weight, l2_reg_strength = l2_reg_strength))
+     assert_allclose(l1, l1_sp)
+     assert_allclose(l1, l2_sp)
+     assert_allclose(g1, g1_sp)
+@@ -368,7 +370,7 @@ def test_multinomial_coef_shape(fit_intercept, global_random_seed):
+     assert h.shape == coef.shape
+     assert_allclose(g, g1)
+     assert_allclose(g, g2)
+-    g3, hess, _ = loss.gradient_hessian(coef, X, y)
++    g3, hess, _ = loss.gradient_hessian(DataParams_gradient_hessian_419(coef, X, y))
+     assert g3.shape == coef.shape
+     # But full hessian is always 2d.
+     assert hess.shape == (coef.size, coef.size)
+@@ -418,12 +420,7 @@ def test_multinomial_hessian_3_classes(sample_weight, global_random_seed):
+         sample_weight = np.linspace(1, y.shape[0], num=y.shape[0])
+ 
+     grad, hess, _ = loss.gradient_hessian(
+-        coef,
+-        X,
+-        y,
+-        sample_weight=sample_weight,
+-        l2_reg_strength=0,
+-    )
++        DataParams_gradient_hessian_419(coef, X, y, sample_weight = sample_weight, l2_reg_strength = 0))
+     # Hessian must be a symmetrix matrix.
+     assert_allclose(hess, hess.T)
+ 
+@@ -473,38 +470,19 @@ def test_linear_loss_gradient_hessian_raises_wrong_out_parameters():
+         ValueError, match="gradient_out is required to have shape coef.shape"
+     ):
+         loss.gradient_hessian(
+-            coef=coef,
+-            X=X,
+-            y=y,
+-            gradient_out=gradient_out,
+-            hessian_out=None,
+-        )
++            DataParams_gradient_hessian_419(coef = coef, X = X, y = y, gradient_out = gradient_out, hessian_out = None))
+     hessian_out = np.zeros(1)
+     with pytest.raises(ValueError, match="hessian_out is required to have shape"):
+         loss.gradient_hessian(
+-            coef=coef,
+-            X=X,
+-            y=y,
+-            gradient_out=None,
+-            hessian_out=hessian_out,
+-        )
++            DataParams_gradient_hessian_419(coef = coef, X = X, y = y, gradient_out = None, hessian_out = hessian_out))
+ 
+     loss = LinearModelLoss(base_loss=HalfMultinomialLoss(), fit_intercept=False)
+     coef = loss.init_zero_coef(X)
+     gradient_out = np.zeros((2 * n_classes, n_features))[::2]
+     with pytest.raises(ValueError, match="gradient_out must be F-contiguous"):
+         loss.gradient_hessian(
+-            coef=coef,
+-            X=X,
+-            y=y,
+-            gradient_out=gradient_out,
+-        )
++            DataParams_gradient_hessian_419(coef = coef, X = X, y = y, gradient_out = gradient_out))
+     hessian_out = np.zeros((2 * n_classes * n_features, n_classes * n_features))[::2]
+     with pytest.raises(ValueError, match="hessian_out must be contiguous"):
+         loss.gradient_hessian(
+-            coef=coef,
+-            X=X,
+-            y=y,
+-            gradient_out=None,
+-            hessian_out=hessian_out,
+-        )
++            DataParams_gradient_hessian_419(coef = coef, X = X, y = y, gradient_out = None, hessian_out = hessian_out))

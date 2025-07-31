@@ -1,0 +1,21 @@
+diff --git a/django/views/generic/dates.py b/django/views/generic/dates.py
+index 12ec4104cd..3ed350b34d 100644
+--- a/django/views/generic/dates.py
++++ b/django/views/generic/dates.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ import datetime
+ 
+ from django.conf import settings
+@@ -796,7 +797,10 @@ def _get_next_prev(generic_view, date, is_previous, period):
+                 now = timezone_today()
+             lookup["%s__lte" % date_field] = now
+ 
+-        qs = generic_view.get_queryset().filter(**lookup).order_by(ordering)
++        with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LMC001_e055564c', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/e055564c_refactored.csv') as tracker:
++            intermediate_0 = generic_view.get_queryset()
++            intermediate_1 = intermediate_0.filter(**lookup)
++            qs = intermediate_1.order_by(ordering)
+ 
+         # Snag the first object from the queryset; if it doesn't exist that
+         # means there's no next/previous link available.

@@ -1,0 +1,17 @@
+diff --git a/django/forms/formsets.py b/django/forms/formsets.py
+index c2663154d4..282a7c2c5e 100644
+--- a/django/forms/formsets.py
++++ b/django/forms/formsets.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ from django.core.exceptions import ValidationError
+ from django.forms.fields import BooleanField, IntegerField
+ from django.forms.forms import Form
+@@ -581,4 +582,6 @@ def formset_factory(
+ def all_valid(formsets):
+     """Validate every formset and return True if all are valid."""
+     # List comprehension ensures is_valid() is called for all formsets.
+-    return all([formset.is_valid() for formset in formsets])
++    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_R1729_a1f57a8c', output_file='/root/ecooptimizer_benchmark/emissions/django/use-a-generator/a1f57a8c.csv') as tracker:
++        _carbon_wrapped_4800e713 = all([formset.is_valid() for formset in formsets])
++    return _carbon_wrapped_4800e713

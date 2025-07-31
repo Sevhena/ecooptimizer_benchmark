@@ -1,0 +1,63 @@
+diff --git a/dask/dataframe/dask_expr/_groupby.py b/dask/dataframe/dask_expr/_groupby.py
+index fa543c9e1..a1843c715 100644
+--- a/dask/dataframe/dask_expr/_groupby.py
++++ b/dask/dataframe/dask_expr/_groupby.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ from __future__ import annotations
+ 
+ import functools
+@@ -84,6 +85,16 @@ from dask.dataframe.groupby import (
+ from dask.dataframe.utils import insert_meta_param_description, is_scalar
+ from dask.typing import Key
+ from dask.utils import M, derived_from, is_index_like
++class DataParams_groupby_slice_transform_1266:
++    def __init__(self, df, grouper, key, func, args, group_keys = GROUP_KEYS_DEFAULT, dropna = None, observed = None):
++        self.df = df
++        self.grouper = grouper
++        self.key = key
++        self.func = func
++        self.args = args
++        self.group_keys = group_keys
++        self.dropna = dropna
++        self.observed = observed
+ 
+ 
+ def _as_dict(key, value):
+@@ -1261,26 +1272,19 @@ def groupby_slice_shift(
+     )
+ 
+ 
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_fa78ea44', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/fa78ea44_refactored.csv')
+ def groupby_slice_transform(
+-    df,
+-    grouper,
+-    key,
+-    func,
+-    args,
+-    group_keys=GROUP_KEYS_DEFAULT,
+-    dropna=None,
+-    observed=None,
+-    **kwargs,
++    data_params, **kwargs,
+ ):
+     return _groupby_slice_transform(
+-        df,
+-        grouper,
+-        key,
+-        func,
+-        *args,
+-        group_keys=group_keys,
+-        dropna=dropna,
+-        observed=observed,
++        data_params.df,
++        data_params.grouper,
++        data_params.key,
++        data_params.func,
++        *data_params.args,
++        data_params.group_keys=data_params.group_keys,
++        data_params.dropna=data_params.dropna,
++        data_params.observed=data_params.observed,
+         **kwargs,
+     )
+ 

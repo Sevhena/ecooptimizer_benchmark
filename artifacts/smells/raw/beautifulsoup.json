@@ -1,1387 +1,1428 @@
 {
-    "177caf3d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "177caf3d",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.element",
-        "obj": "PageElement._find_all",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 17,
-                "endLine": 1080,
-                "line": 1080
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+  "177caf3d": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "23f5cc04": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "23f5cc04",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.filter",
-        "obj": "SoupStrainer._attribute_match",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 24,
-                "endLine": 616,
-                "line": 616
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/filter.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "26d99bd4": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "26d99bd4",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.builder",
-        "obj": "TreeBuilder.prepare_markup",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 22,
-                "endLine": 317,
-                "line": 317
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/__init__.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "177caf3d",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.element",
+    "obj": "PageElement._find_all",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 17,
+        "endLine": 1080,
+        "line": 1080
+      }
+    ],
+    "path": "bs4/element.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py"
+  },
+  "23f5cc04": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "29568b77": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "29568b77",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "bs4",
-        "obj": "BeautifulSoup.new_tag",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 15,
-                "endLine": 682,
-                "line": 682
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "328bfc68": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "328bfc68",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "bs4.builder",
-        "obj": "TreeBuilder.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 204,
-                "line": 204
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/__init__.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "23f5cc04",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.filter",
+    "obj": "SoupStrainer._attribute_match",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 24,
+        "endLine": 616,
+        "line": 616
+      }
+    ],
+    "path": "bs4/filter.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/filter.py"
+  },
+  "26d99bd4": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "372f1108": {
-        "additionalInfo": {
-            "callString": "time.time()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "372f1108",
-        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
-        "messageId": "CRC001",
-        "module": "diagnose",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 16,
-                "endColumn": 27,
-                "endLine": 225,
-                "line": 225
-            },
-            {
-                "column": 16,
-                "endColumn": 27,
-                "endLine": 227,
-                "line": 227
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "3df242b3": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3df242b3",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "bs4.formatter",
-        "obj": "Formatter.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 79,
-                "line": 79
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/formatter.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "26d99bd4",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.builder",
+    "obj": "TreeBuilder.prepare_markup",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 22,
+        "endLine": 317,
+        "line": 317
+      }
+    ],
+    "path": "bs4/builder/__init__.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/__init__.py"
+  },
+  "29568b77": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "3f06b964": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3f06b964",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "bs4",
-        "obj": "BeautifulSoup.handle_starttag",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 987,
-                "line": 987
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "42a07e6c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "42a07e6c",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.dammit",
-        "obj": "UnicodeDammit._to_unicode",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 19,
-                "endLine": 969,
-                "line": 969
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "29568b77",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "bs4",
+    "obj": "BeautifulSoup.new_tag",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 15,
+        "endLine": 682,
+        "line": 682
+      }
+    ],
+    "path": "bs4/__init__.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py"
+  },
+  "328bfc68": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "4364f189": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4364f189",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.builder._htmlparser",
-        "obj": "BeautifulSoupHTMLParser.error",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 13,
-                "endLine": 111,
-                "line": 111
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_htmlparser.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "4595b486": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4595b486",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.element",
-        "obj": "PageElement._find_one",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 17,
-                "endLine": 1062,
-                "line": 1062
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "328bfc68",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "bs4.builder",
+    "obj": "TreeBuilder.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 204,
+        "line": 204
+      }
+    ],
+    "path": "bs4/builder/__init__.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/__init__.py"
+  },
+  "372f1108": {
+    "additionalInfo": {
+      "callString": "time.time()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
     },
-    "4a716050": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4a716050",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.builder._html5lib",
-        "obj": "Element.removeChild",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 19,
-                "endLine": 480,
-                "line": 480
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_html5lib.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "50035f05": {
-        "additionalInfo": {
-            "callString": "cast(Tag, element)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "50035f05",
-        "message": "Repeated function call detected (3/2). Consider caching the result: cast(Tag, element)",
-        "messageId": "CRC001",
-        "module": "element",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 26,
-                "endColumn": 44,
-                "endLine": 2389,
-                "line": 2389
-            },
-            {
-                "column": 26,
-                "endColumn": 44,
-                "endLine": 2392,
-                "line": 2392
-            },
-            {
-                "column": 24,
-                "endColumn": 42,
-                "endLine": 2420,
-                "line": 2420
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "372f1108",
+    "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+    "messageId": "CRC001",
+    "module": "diagnose",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 16,
+        "endColumn": 27,
+        "endLine": 225,
+        "line": 225
+      },
+      {
+        "column": 16,
+        "endColumn": 27,
+        "endLine": 227,
+        "line": 227
+      }
+    ],
+    "path": "bs4/diagnose.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py"
+  },
+  "3df242b3": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "592942eb": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "592942eb",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.filter",
-        "obj": "ElementFilter.allow_tag_creation",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 184,
-                "line": 184
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/filter.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "5d98233d": {
-        "additionalInfo": {
-            "callString": "attr_dict_class()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "5d98233d",
-        "message": "Repeated function call detected (2/2). Consider caching the result: attr_dict_class()",
-        "messageId": "CRC001",
-        "module": "element",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 42,
-                "endLine": 1684,
-                "line": 1684
-            },
-            {
-                "column": 29,
-                "endColumn": 46,
-                "endLine": 1691,
-                "line": 1691
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "3df242b3",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "bs4.formatter",
+    "obj": "Formatter.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 79,
+        "line": 79
+      }
+    ],
+    "path": "bs4/formatter.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/formatter.py"
+  },
+  "3f06b964": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "673228a1": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "673228a1",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.builder._lxml",
-        "obj": "LXMLTreeBuilderForXML._getNsTag",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 17,
-                "endLine": 194,
-                "line": 194
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_lxml.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "6cd20fec": {
-        "additionalInfo": {
-            "callString": "self._prefix_for_namespace(namespace)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6cd20fec",
-        "message": "Repeated function call detected (2/2). Consider caching the result: self._prefix_for_namespace(namespace)",
-        "messageId": "CRC001",
-        "module": "_lxml",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 19,
-                "endColumn": 56,
-                "endLine": 395,
-                "line": 395
-            },
-            {
-                "column": 27,
-                "endColumn": 64,
-                "endLine": 390,
-                "line": 390
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_lxml.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "3f06b964",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "bs4",
+    "obj": "BeautifulSoup.handle_starttag",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 23,
+        "endLine": 987,
+        "line": 987
+      }
+    ],
+    "path": "bs4/__init__.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py"
+  },
+  "42a07e6c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "6f4944d4": {
-        "additionalInfo": {
-            "callString": "random.choice(tag_names)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6f4944d4",
-        "message": "Repeated function call detected (2/2). Consider caching the result: random.choice(tag_names)",
-        "messageId": "CRC001",
-        "module": "diagnose",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 23,
-                "endColumn": 47,
-                "endLine": 205,
-                "line": 205
-            },
-            {
-                "column": 23,
-                "endColumn": 47,
-                "endLine": 211,
-                "line": 211
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "7098c51c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7098c51c",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4",
-        "obj": "BeautifulSoup._linkage_fixer",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 22,
-                "endLine": 906,
-                "line": 906
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "42a07e6c",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.dammit",
+    "obj": "UnicodeDammit._to_unicode",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 19,
+        "endLine": 969,
+        "line": 969
+      }
+    ],
+    "path": "bs4/dammit.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py"
+  },
+  "4364f189": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "70c9e6bd": {
-        "additionalInfo": {
-            "callString": "self.popTag()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "70c9e6bd",
-        "message": "Repeated function call detected (2/2). Consider caching the result: self.popTag()",
-        "messageId": "CRC001",
-        "module": "__init__",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 35,
-                "endColumn": 48,
-                "endLine": 983,
-                "line": 983
-            },
-            {
-                "column": 43,
-                "endColumn": 56,
-                "endLine": 981,
-                "line": 981
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "7c734b70": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7c734b70",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.diagnose",
-        "obj": "AnnouncingParser._p",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 10,
-                "endLine": 119,
-                "line": 119
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "4364f189",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.builder._htmlparser",
+    "obj": "BeautifulSoupHTMLParser.error",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 13,
+        "endLine": 111,
+        "line": 111
+      }
+    ],
+    "path": "bs4/builder/_htmlparser.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_htmlparser.py"
+  },
+  "4595b486": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "8f28c07f": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8f28c07f",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.filter",
-        "obj": "ElementFilter.allow_string_creation",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 29,
-                "endLine": 198,
-                "line": 198
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/filter.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "95ead993": {
-        "additionalInfo": {
-            "callString": "random.choice(tag_names)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "95ead993",
-        "message": "Repeated function call detected (2/2). Consider caching the result: random.choice(tag_names)",
-        "messageId": "CRC001",
-        "module": "diagnose",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 23,
-                "endColumn": 47,
-                "endLine": 205,
-                "line": 205
-            },
-            {
-                "column": 23,
-                "endColumn": 47,
-                "endLine": 211,
-                "line": 211
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "4595b486",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.element",
+    "obj": "PageElement._find_one",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 17,
+        "endLine": 1062,
+        "line": 1062
+      }
+    ],
+    "path": "bs4/element.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py"
+  },
+  "4a716050": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "99c26f08": {
-        "additionalInfo": {
-            "callString": "self.popTag()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "99c26f08",
-        "message": "Repeated function call detected (2/2). Consider caching the result: self.popTag()",
-        "messageId": "CRC001",
-        "module": "__init__",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 35,
-                "endColumn": 48,
-                "endLine": 983,
-                "line": 983
-            },
-            {
-                "column": 43,
-                "endColumn": 56,
-                "endLine": 981,
-                "line": 981
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "a1b7853a": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a1b7853a",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.builder._lxml",
-        "obj": "LXMLTreeBuilderForXML.test_fragment_to_document",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 33,
-                "endLine": 465,
-                "line": 465
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_lxml.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "4a716050",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.builder._html5lib",
+    "obj": "Element.removeChild",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 19,
+        "endLine": 480,
+        "line": 480
+      }
+    ],
+    "path": "bs4/builder/_html5lib.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_html5lib.py"
+  },
+  "50035f05": {
+    "additionalInfo": {
+      "callString": "cast(Tag, element)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
     },
-    "b208f3b8": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b208f3b8",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.css",
-        "obj": "CSS._rs",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 11,
-                "endLine": 91,
-                "line": 91
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/css.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "b7921e95": {
-        "additionalInfo": {
-            "callString": "len(markup)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b7921e95",
-        "message": "Repeated function call detected (2/2). Consider caching the result: len(markup)",
-        "messageId": "CRC001",
-        "module": "dammit",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 39,
-                "endColumn": 50,
-                "endLine": 709,
-                "line": 709
-            },
-            {
-                "column": 40,
-                "endColumn": 51,
-                "endLine": 712,
-                "line": 712
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "50035f05",
+    "message": "Repeated function call detected (3/2). Consider caching the result: cast(Tag, element)",
+    "messageId": "CRC001",
+    "module": "element",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 26,
+        "endColumn": 44,
+        "endLine": 2389,
+        "line": 2389
+      },
+      {
+        "column": 26,
+        "endColumn": 44,
+        "endLine": 2392,
+        "line": 2392
+      },
+      {
+        "column": 24,
+        "endColumn": 42,
+        "endLine": 2420,
+        "line": 2420
+      }
+    ],
+    "path": "bs4/element.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py"
+  },
+  "592942eb": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "bb1ca069": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "bb1ca069",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "bs4.dammit",
-        "obj": "EncodingDetector.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 540,
-                "line": 540
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "bc495153": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "bc495153",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.element",
-        "obj": "Tag._indent_string",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 22,
-                "endLine": 2509,
-                "line": 2509
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "592942eb",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.filter",
+    "obj": "ElementFilter.allow_tag_creation",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 26,
+        "endLine": 184,
+        "line": 184
+      }
+    ],
+    "path": "bs4/filter.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/filter.py"
+  },
+  "5d98233d": {
+    "additionalInfo": {
+      "callString": "attr_dict_class()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
     },
-    "c1b746bf": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c1b746bf",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "bs4.dammit",
-        "obj": "UnicodeDammit.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 775,
-                "line": 775
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "c4b1e31f": {
-        "additionalInfo": {
-            "callString": "time.time()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 6
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c4b1e31f",
-        "message": "Repeated function call detected (6/2). Consider caching the result: time.time()",
-        "messageId": "CRC001",
-        "module": "diagnose",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 8,
-                "endColumn": 19,
-                "endLine": 237,
-                "line": 237
-            },
-            {
-                "column": 8,
-                "endColumn": 19,
-                "endLine": 239,
-                "line": 239
-            },
-            {
-                "column": 8,
-                "endColumn": 19,
-                "endLine": 245,
-                "line": 245
-            },
-            {
-                "column": 8,
-                "endColumn": 19,
-                "endLine": 247,
-                "line": 247
-            },
-            {
-                "column": 16,
-                "endColumn": 27,
-                "endLine": 225,
-                "line": 225
-            },
-            {
-                "column": 16,
-                "endColumn": 27,
-                "endLine": 227,
-                "line": 227
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "5d98233d",
+    "message": "Repeated function call detected (2/2). Consider caching the result: attr_dict_class()",
+    "messageId": "CRC001",
+    "module": "element",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 25,
+        "endColumn": 42,
+        "endLine": 1684,
+        "line": 1684
+      },
+      {
+        "column": 29,
+        "endColumn": 46,
+        "endLine": 1691,
+        "line": 1691
+      }
+    ],
+    "path": "bs4/element.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py"
+  },
+  "673228a1": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "c594aa61": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c594aa61",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.builder",
-        "obj": "TreeBuilder.set_up_substitutions",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 28,
-                "endLine": 370,
-                "line": 370
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/__init__.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "c66e14d3": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c66e14d3",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.dammit",
-        "obj": "UnicodeDammit._codec",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 14,
-                "endLine": 1005,
-                "line": 1005
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "673228a1",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.builder._lxml",
+    "obj": "LXMLTreeBuilderForXML._getNsTag",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 17,
+        "endLine": 194,
+        "line": 194
+      }
+    ],
+    "path": "bs4/builder/_lxml.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_lxml.py"
+  },
+  "6cd20fec": {
+    "additionalInfo": {
+      "callString": "self._prefix_for_namespace(namespace)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
     },
-    "c6edb8cd": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c6edb8cd",
-        "message": "Too many arguments (17/6)",
-        "messageId": "R0913",
-        "module": "bs4.element",
-        "obj": "Tag.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 1627,
-                "line": 1627
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "d5790644": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d5790644",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.builder",
-        "obj": "TreeBuilder.test_fragment_to_document",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 33,
-                "endLine": 353,
-                "line": 353
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/__init__.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "6cd20fec",
+    "message": "Repeated function call detected (2/2). Consider caching the result: self._prefix_for_namespace(namespace)",
+    "messageId": "CRC001",
+    "module": "_lxml",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 19,
+        "endColumn": 56,
+        "endLine": 395,
+        "line": 395
+      },
+      {
+        "column": 27,
+        "endColumn": 64,
+        "endLine": 390,
+        "line": 390
+      }
+    ],
+    "path": "bs4/builder/_lxml.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_lxml.py"
+  },
+  "6f4944d4": {
+    "additionalInfo": {
+      "callString": "random.choice(tag_names)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
     },
-    "e453fb9f": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e453fb9f",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.builder._htmlparser",
-        "obj": "HTMLParserTreeBuilder.prepare_markup",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 22,
-                "endLine": 377,
-                "line": 377
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_htmlparser.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "e78882c1": {
-        "additionalInfo": {
-            "callString": "cast(Tag, element)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e78882c1",
-        "message": "Repeated function call detected (3/2). Consider caching the result: cast(Tag, element)",
-        "messageId": "CRC001",
-        "module": "element",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 26,
-                "endColumn": 44,
-                "endLine": 2389,
-                "line": 2389
-            },
-            {
-                "column": 26,
-                "endColumn": 44,
-                "endLine": 2392,
-                "line": 2392
-            },
-            {
-                "column": 24,
-                "endColumn": 42,
-                "endLine": 2420,
-                "line": 2420
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "6f4944d4",
+    "message": "Repeated function call detected (2/2). Consider caching the result: random.choice(tag_names)",
+    "messageId": "CRC001",
+    "module": "diagnose",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 23,
+        "endColumn": 47,
+        "endLine": 205,
+        "line": 205
+      },
+      {
+        "column": 23,
+        "endColumn": 47,
+        "endLine": 211,
+        "line": 211
+      }
+    ],
+    "path": "bs4/diagnose.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py"
+  },
+  "7098c51c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "e945cd54": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e945cd54",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "bs4",
-        "obj": "BeautifulSoup.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 209,
-                "line": 209
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "ee6f79a8": {
-        "additionalInfo": {
-            "callString": "tag_stack.pop()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ee6f79a8",
-        "message": "Repeated function call detected (2/2). Consider caching the result: tag_stack.pop()",
-        "messageId": "CRC001",
-        "module": "element",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 29,
-                "endColumn": 44,
-                "endLine": 2506,
-                "line": 2506
-            },
-            {
-                "column": 33,
-                "endColumn": 48,
-                "endLine": 2492,
-                "line": 2492
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "7098c51c",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4",
+    "obj": "BeautifulSoup._linkage_fixer",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 22,
+        "endLine": 906,
+        "line": 906
+      }
+    ],
+    "path": "bs4/__init__.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py"
+  },
+  "70c9e6bd": {
+    "additionalInfo": {
+      "callString": "self.popTag()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
     },
-    "f131a330": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f131a330",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "bs4.element",
-        "obj": "NavigableString.name",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 12,
-                "endLine": 1363,
-                "line": 1363
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "f35863a1": {
-        "additionalInfo": {
-            "callString": "io.read(self.CHUNK_SIZE)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f35863a1",
-        "message": "Repeated function call detected (2/2). Consider caching the result: io.read(self.CHUNK_SIZE)",
-        "messageId": "CRC001",
-        "module": "_lxml",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 15,
-                "endColumn": 39,
-                "endLine": 299,
-                "line": 299
-            },
-            {
-                "column": 23,
-                "endColumn": 47,
-                "endLine": 305,
-                "line": 305
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_lxml.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    }
+    "id": "70c9e6bd",
+    "message": "Repeated function call detected (2/2). Consider caching the result: self.popTag()",
+    "messageId": "CRC001",
+    "module": "__init__",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 35,
+        "endColumn": 48,
+        "endLine": 983,
+        "line": 983
+      },
+      {
+        "column": 43,
+        "endColumn": 56,
+        "endLine": 981,
+        "line": 981
+      }
+    ],
+    "path": "bs4/__init__.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py"
+  },
+  "7c734b70": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "7c734b70",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.diagnose",
+    "obj": "AnnouncingParser._p",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 10,
+        "endLine": 119,
+        "line": 119
+      }
+    ],
+    "path": "bs4/diagnose.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py"
+  },
+  "8f28c07f": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8f28c07f",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.filter",
+    "obj": "ElementFilter.allow_string_creation",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 29,
+        "endLine": 198,
+        "line": 198
+      }
+    ],
+    "path": "bs4/filter.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/filter.py"
+  },
+  "95ead993": {
+    "additionalInfo": {
+      "callString": "random.choice(tag_names)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "95ead993",
+    "message": "Repeated function call detected (2/2). Consider caching the result: random.choice(tag_names)",
+    "messageId": "CRC001",
+    "module": "diagnose",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 23,
+        "endColumn": 47,
+        "endLine": 205,
+        "line": 205
+      },
+      {
+        "column": 23,
+        "endColumn": 47,
+        "endLine": 211,
+        "line": 211
+      }
+    ],
+    "path": "bs4/diagnose.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py"
+  },
+  "99c26f08": {
+    "additionalInfo": {
+      "callString": "self.popTag()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "99c26f08",
+    "message": "Repeated function call detected (2/2). Consider caching the result: self.popTag()",
+    "messageId": "CRC001",
+    "module": "__init__",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 35,
+        "endColumn": 48,
+        "endLine": 983,
+        "line": 983
+      },
+      {
+        "column": 43,
+        "endColumn": 56,
+        "endLine": 981,
+        "line": 981
+      }
+    ],
+    "path": "bs4/__init__.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py"
+  },
+  "a1b7853a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a1b7853a",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.builder._lxml",
+    "obj": "LXMLTreeBuilderForXML.test_fragment_to_document",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 33,
+        "endLine": 465,
+        "line": 465
+      }
+    ],
+    "path": "bs4/builder/_lxml.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_lxml.py"
+  },
+  "b208f3b8": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b208f3b8",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.css",
+    "obj": "CSS._rs",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 11,
+        "endLine": 91,
+        "line": 91
+      }
+    ],
+    "path": "bs4/css.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/css.py"
+  },
+  "b7921e95": {
+    "additionalInfo": {
+      "callString": "len(markup)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b7921e95",
+    "message": "Repeated function call detected (2/2). Consider caching the result: len(markup)",
+    "messageId": "CRC001",
+    "module": "dammit",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 39,
+        "endColumn": 50,
+        "endLine": 709,
+        "line": 709
+      },
+      {
+        "column": 40,
+        "endColumn": 51,
+        "endLine": 712,
+        "line": 712
+      }
+    ],
+    "path": "bs4/dammit.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py"
+  },
+  "bb1ca069": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "bb1ca069",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "bs4.dammit",
+    "obj": "EncodingDetector.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 540,
+        "line": 540
+      }
+    ],
+    "path": "bs4/dammit.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py"
+  },
+  "bc495153": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "bc495153",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.element",
+    "obj": "Tag._indent_string",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 22,
+        "endLine": 2509,
+        "line": 2509
+      }
+    ],
+    "path": "bs4/element.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py"
+  },
+  "c1b746bf": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c1b746bf",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "bs4.dammit",
+    "obj": "UnicodeDammit.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 775,
+        "line": 775
+      }
+    ],
+    "path": "bs4/dammit.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py"
+  },
+  "c4b1e31f": {
+    "additionalInfo": {
+      "callString": "time.time()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 6
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c4b1e31f",
+    "message": "Repeated function call detected (6/2). Consider caching the result: time.time()",
+    "messageId": "CRC001",
+    "module": "diagnose",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 8,
+        "endColumn": 19,
+        "endLine": 237,
+        "line": 237
+      },
+      {
+        "column": 8,
+        "endColumn": 19,
+        "endLine": 239,
+        "line": 239
+      },
+      {
+        "column": 8,
+        "endColumn": 19,
+        "endLine": 245,
+        "line": 245
+      },
+      {
+        "column": 8,
+        "endColumn": 19,
+        "endLine": 247,
+        "line": 247
+      },
+      {
+        "column": 16,
+        "endColumn": 27,
+        "endLine": 225,
+        "line": 225
+      },
+      {
+        "column": 16,
+        "endColumn": 27,
+        "endLine": 227,
+        "line": 227
+      }
+    ],
+    "path": "bs4/diagnose.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/diagnose.py"
+  },
+  "c594aa61": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c594aa61",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.builder",
+    "obj": "TreeBuilder.set_up_substitutions",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 28,
+        "endLine": 370,
+        "line": 370
+      }
+    ],
+    "path": "bs4/builder/__init__.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/__init__.py"
+  },
+  "c66e14d3": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c66e14d3",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.dammit",
+    "obj": "UnicodeDammit._codec",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 14,
+        "endLine": 1005,
+        "line": 1005
+      }
+    ],
+    "path": "bs4/dammit.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/dammit.py"
+  },
+  "c6edb8cd": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c6edb8cd",
+    "message": "Too many arguments (17/6)",
+    "messageId": "R0913",
+    "module": "bs4.element",
+    "obj": "Tag.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 1627,
+        "line": 1627
+      }
+    ],
+    "path": "bs4/element.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py"
+  },
+  "d5790644": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d5790644",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.builder",
+    "obj": "TreeBuilder.test_fragment_to_document",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 33,
+        "endLine": 353,
+        "line": 353
+      }
+    ],
+    "path": "bs4/builder/__init__.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/__init__.py"
+  },
+  "e453fb9f": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e453fb9f",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.builder._htmlparser",
+    "obj": "HTMLParserTreeBuilder.prepare_markup",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 22,
+        "endLine": 377,
+        "line": 377
+      }
+    ],
+    "path": "bs4/builder/_htmlparser.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_htmlparser.py"
+  },
+  "e78882c1": {
+    "additionalInfo": {
+      "callString": "cast(Tag, element)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e78882c1",
+    "message": "Repeated function call detected (3/2). Consider caching the result: cast(Tag, element)",
+    "messageId": "CRC001",
+    "module": "element",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 26,
+        "endColumn": 44,
+        "endLine": 2389,
+        "line": 2389
+      },
+      {
+        "column": 26,
+        "endColumn": 44,
+        "endLine": 2392,
+        "line": 2392
+      },
+      {
+        "column": 24,
+        "endColumn": 42,
+        "endLine": 2420,
+        "line": 2420
+      }
+    ],
+    "path": "bs4/element.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py"
+  },
+  "e945cd54": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e945cd54",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "bs4",
+    "obj": "BeautifulSoup.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 209,
+        "line": 209
+      }
+    ],
+    "path": "bs4/__init__.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/__init__.py"
+  },
+  "ee6f79a8": {
+    "additionalInfo": {
+      "callString": "tag_stack.pop()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ee6f79a8",
+    "message": "Repeated function call detected (2/2). Consider caching the result: tag_stack.pop()",
+    "messageId": "CRC001",
+    "module": "element",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 29,
+        "endColumn": 44,
+        "endLine": 2506,
+        "line": 2506
+      },
+      {
+        "column": 33,
+        "endColumn": 48,
+        "endLine": 2492,
+        "line": 2492
+      }
+    ],
+    "path": "bs4/element.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py"
+  },
+  "f131a330": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f131a330",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "bs4.element",
+    "obj": "NavigableString.name",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 12,
+        "endLine": 1363,
+        "line": 1363
+      }
+    ],
+    "path": "bs4/element.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/element.py"
+  },
+  "f35863a1": {
+    "additionalInfo": {
+      "callString": "io.read(self.CHUNK_SIZE)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f35863a1",
+    "message": "Repeated function call detected (2/2). Consider caching the result: io.read(self.CHUNK_SIZE)",
+    "messageId": "CRC001",
+    "module": "_lxml",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 15,
+        "endColumn": 39,
+        "endLine": 299,
+        "line": 299
+      },
+      {
+        "column": 23,
+        "endColumn": 47,
+        "endLine": 305,
+        "line": 305
+      }
+    ],
+    "path": "bs4/builder/_lxml.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/beautifulsoup/bs4/builder/_lxml.py"
+  }
 }

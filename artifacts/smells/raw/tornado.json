@@ -1,3503 +1,3608 @@
 {
-    "03f260f3": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "03f260f3",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.auth",
-        "obj": "OAuthMixin.get_auth_http_client",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 28,
-                "endLine": 546,
-                "line": 546
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/auth.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "074852c8": {
-        "additionalInfo": {
-            "callString": "native_str(debug_msg)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "074852c8",
-        "message": "Repeated function call detected (2/2). Consider caching the result: native_str(debug_msg)",
-        "messageId": "CRC001",
-        "module": "curl_httpclient",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 24,
-                "endColumn": 45,
-                "endLine": 572,
-                "line": 572
-            },
-            {
-                "column": 24,
-                "endColumn": 45,
-                "endLine": 575,
-                "line": 575
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/curl_httpclient.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "07ec8d79": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "07ec8d79",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.routing",
-        "obj": "RuleRouter.get_target_delegate",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 27,
-                "endLine": 387,
-                "line": 387
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/routing.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "08f64399": {
-        "additionalInfo": {
-            "callString": "suffix.strip(\"\"\").strip(\"\"\")",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "08f64399",
-        "message": "Repeated function call detected (2/2). Consider caching the result: suffix.strip(\"\"\").strip(\"\"\")",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 53,
-                "endLine": 976,
-                "line": 976
-            },
-            {
-                "column": 25,
-                "endColumn": 53,
-                "endLine": 985,
-                "line": 985
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "099f0062": {
-        "additionalInfo": {
-            "callString": "suffix.strip(\"\"\").strip(\"\"\")",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "099f0062",
-        "message": "Repeated function call detected (2/2). Consider caching the result: suffix.strip(\"\"\").strip(\"\"\")",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 53,
-                "endLine": 976,
-                "line": 976
-            },
-            {
-                "column": 25,
-                "endColumn": 53,
-                "endLine": 985,
-                "line": 985
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "0a708ef3": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "0a708ef3",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "tornado.tcpserver",
-        "obj": "TCPServer.bind",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 12,
-                "endLine": 212,
-                "line": 212
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/tcpserver.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "0a719cea": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "0a719cea",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.websocket",
-        "obj": "WebSocketHandler.get_compression_options",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 31,
-                "endLine": 401,
-                "line": 401
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "0ac12ab7": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "0ac12ab7",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.simple_httpclient",
-        "obj": "SimpleAsyncHTTPClient._connection_class",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 25,
-                "endLine": 199,
-                "line": 199
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/simple_httpclient.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "0d89fb84": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "0d89fb84",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.ioloop",
-        "obj": "IOLoop.split_fd",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 784,
-                "line": 784
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/ioloop.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "0fe43642": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "0fe43642",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "RequestHandler._convert_header_value",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 29,
-                "endLine": 410,
-                "line": 410
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "1197843d": {
-        "additionalInfo": {
-            "callString": "os.pipe()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "1197843d",
-        "message": "Repeated function call detected (3/2). Consider caching the result: os.pipe()",
-        "messageId": "CRC001",
-        "module": "process",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 34,
-                "endLine": 220,
-                "line": 220
-            },
-            {
-                "column": 27,
-                "endColumn": 36,
-                "endLine": 226,
-                "line": 226
-            },
-            {
-                "column": 27,
-                "endColumn": 36,
-                "endLine": 232,
-                "line": 232
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/process.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "12c20fa7": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "12c20fa7",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "UIModule.embedded_css",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 20,
-                "endLine": 3417,
-                "line": 3417
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "1324ea79": {
-        "additionalInfo": {
-            "callString": "os.path.join(directory, path)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "1324ea79",
-        "message": "Repeated function call detected (2/2). Consider caching the result: os.path.join(directory, path)",
-        "messageId": "CRC001",
-        "module": "locale",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 20,
-                "endColumn": 49,
-                "endLine": 139,
-                "line": 139
-            },
-            {
-                "column": 16,
-                "endColumn": 45,
-                "endLine": 136,
-                "line": 136
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/locale.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "1667cc35": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "1667cc35",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "UIModule.html_body",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 17,
-                "endLine": 3436,
-                "line": 3436
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "16e0dd8a": {
-        "additionalInfo": {
-            "callString": "parse_qsl(parsed_url.query, keep_blank_values=True)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "16e0dd8a",
-        "message": "Repeated function call detected (2/2). Consider caching the result: parse_qsl(parsed_url.query, keep_blank_values=True)",
-        "messageId": "CRC001",
-        "module": "httputil",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 23,
-                "endColumn": 74,
-                "endLine": 783,
-                "line": 783
-            },
-            {
-                "column": 23,
-                "endColumn": 74,
-                "endLine": 786,
-                "line": 786
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httputil.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "1702c2a9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "1702c2a9",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.routing",
-        "obj": "Matcher.reverse",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 15,
-                "endLine": 516,
-                "line": 516
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/routing.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "1dac595f": {
-        "additionalInfo": {
-            "callString": "collections.deque([])",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "1dac595f",
-        "message": "Repeated function call detected (2/2). Consider caching the result: collections.deque([])",
-        "messageId": "CRC001",
-        "module": "queues",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 24,
-                "endColumn": 45,
-                "endLine": 162,
-                "line": 162
-            },
-            {
-                "column": 24,
-                "endColumn": 45,
-                "endLine": 163,
-                "line": 163
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/queues.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "233afd98": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "233afd98",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.auth",
-        "obj": "OpenIdMixin.get_auth_http_client",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 28,
-                "endLine": 278,
-                "line": 278
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/auth.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "26c7906d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "26c7906d",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.websocket",
-        "obj": "WebSocketProtocol13._get_compressor_options",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 31,
-                "endLine": 1008,
-                "line": 1008
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "2b5b93a3": {
-        "additionalInfo": {
-            "callString": "suffix.strip()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "2b5b93a3",
-        "message": "Repeated function call detected (3/2). Consider caching the result: suffix.strip()",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 17,
-                "endColumn": 31,
-                "endLine": 935,
-                "line": 935
-            },
-            {
-                "column": 21,
-                "endColumn": 35,
-                "endLine": 994,
-                "line": 994
-            },
-            {
-                "column": 23,
-                "endColumn": 37,
-                "endLine": 1000,
-                "line": 1000
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "2b84b6c5": {
-        "additionalInfo": {
-            "callString": "_consume_field(rest)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 4
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "2b84b6c5",
-        "message": "Repeated function call detected (4/2). Consider caching the result: _consume_field(rest)",
-        "messageId": "CRC001",
-        "module": "web",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 24,
-                "endColumn": 44,
-                "endLine": 3716,
-                "line": 3716
-            },
-            {
-                "column": 22,
-                "endColumn": 42,
-                "endLine": 3717,
-                "line": 3717
-            },
-            {
-                "column": 23,
-                "endColumn": 43,
-                "endLine": 3718,
-                "line": 3718
-            },
-            {
-                "column": 30,
-                "endColumn": 50,
-                "endLine": 3719,
-                "line": 3719
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "2c41e7d4": {
-        "additionalInfo": {
-            "callString": "IOLoop.current()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "2c41e7d4",
-        "message": "Repeated function call detected (2/2). Consider caching the result: IOLoop.current()",
-        "messageId": "CRC001",
-        "module": "simple_httpclient",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 23,
-                "endColumn": 39,
-                "endLine": 266,
-                "line": 266
-            },
-            {
-                "column": 8,
-                "endColumn": 24,
-                "endLine": 284,
-                "line": 284
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/simple_httpclient.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "302ae0c9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "302ae0c9",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "tornado.auth",
-        "obj": "OAuth2Mixin.authorize_redirect",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 567,
-                "line": 567
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/auth.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "30de9369": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "30de9369",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.platform.asyncio",
-        "obj": "SelectorThread._handle_event",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 650,
-                "line": 650
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/platform/asyncio.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "3630e30e": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3630e30e",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.testing",
-        "obj": "AsyncHTTPTestCase.get_protocol",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 20,
-                "endLine": 464,
-                "line": 464
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "3a2fec91": {
-        "additionalInfo": {
-            "callString": "html.rindex(b\"</body>\")",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3a2fec91",
-        "message": "Repeated function call detected (2/2). Consider caching the result: html.rindex(b\"</body>\")",
-        "messageId": "CRC001",
-        "module": "web",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 19,
-                "endColumn": 42,
-                "endLine": 1032,
-                "line": 1032
-            },
-            {
-                "column": 19,
-                "endColumn": 42,
-                "endLine": 1036,
-                "line": 1036
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "3e05e1b2": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3e05e1b2",
-        "message": "Too many arguments (11/6)",
-        "messageId": "R0913",
-        "module": "tornado.web",
-        "obj": "RequestHandler.set_cookie",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 18,
-                "endLine": 647,
-                "line": 647
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "4199e76b": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4199e76b",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.template",
-        "obj": "_CodeWriter.indent",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 14,
-                "endLine": 742,
-                "line": 742
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "42b39e48": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "42b39e48",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "StaticFileHandler.parse_url_path",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 22,
-                "endLine": 3156,
-                "line": 3156
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "47c027f5": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "47c027f5",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.options",
-        "obj": "_Option._parse_bool",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 19,
-                "endLine": 670,
-                "line": 670
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "4a730daf": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4a730daf",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.ioloop",
-        "obj": "IOLoop.close_fd",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 806,
-                "line": 806
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/ioloop.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "4fa44322": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4fa44322",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.iostream",
-        "obj": "BaseIOStream._is_connreset",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 1044,
-                "line": 1044
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/iostream.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "545b5be2": {
-        "additionalInfo": {
-            "callString": "utf8(cookie)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "545b5be2",
-        "message": "Repeated function call detected (3/2). Consider caching the result: utf8(cookie)",
-        "messageId": "CRC001",
-        "module": "web",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 47,
-                "endColumn": 59,
-                "endLine": 1597,
-                "line": 1597
-            },
-            {
-                "column": 45,
-                "endColumn": 57,
-                "endLine": 1614,
-                "line": 1614
-            },
-            {
-                "column": 28,
-                "endColumn": 40,
-                "endLine": 1616,
-                "line": 1616
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "63ba519e": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "63ba519e",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "UIModule.html_head",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 17,
-                "endLine": 3430,
-                "line": 3430
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "65f77743": {
-        "additionalInfo": {
-            "callString": "reader.consume(2)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 4
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "65f77743",
-        "message": "Repeated function call detected (4/2). Consider caching the result: reader.consume(2)",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 22,
-                "endColumn": 39,
-                "endLine": 891,
-                "line": 891
-            },
-            {
-                "column": 8,
-                "endColumn": 25,
-                "endLine": 930,
-                "line": 930
-            },
-            {
-                "column": 12,
-                "endColumn": 29,
-                "endLine": 909,
-                "line": 909
-            },
-            {
-                "column": 12,
-                "endColumn": 29,
-                "endLine": 918,
-                "line": 918
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "6669d827": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6669d827",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "tornado.tcpserver",
-        "obj": "TCPServer.listen",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 14,
-                "endLine": 159,
-                "line": 159
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/tcpserver.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "6ba58a59": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6ba58a59",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.template",
-        "obj": "_CodeWriter.include",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 15,
-                "endLine": 754,
-                "line": 754
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "6ef7fb3d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6ef7fb3d",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.curl_httpclient",
-        "obj": "CurlAsyncHTTPClient.handle_callback_exception",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 33,
-                "endLine": 314,
-                "line": 314
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/curl_httpclient.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "6fad62c0": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "6fad62c0",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.util",
-        "obj": "ArgReplacer._getargnames",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 20,
-                "endLine": 355,
-                "line": 355
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/util.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "73212312": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "73212312",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "RequestHandler._decode_xsrf_token",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 1589,
-                "line": 1589
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "73cd091c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "73cd091c",
-        "message": "Too many arguments (34/6)",
-        "messageId": "R0913",
-        "module": "tornado.httpclient",
-        "obj": "HTTPRequest.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 358,
-                "line": 358
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httpclient.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "743634da": {
-        "additionalInfo": {
-            "callString": "reader.consume(end).strip()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "743634da",
-        "message": "Repeated function call detected (3/2). Consider caching the result: reader.consume(end).strip()",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 19,
-                "endColumn": 46,
-                "endLine": 929,
-                "line": 929
-            },
-            {
-                "column": 23,
-                "endColumn": 50,
-                "endLine": 908,
-                "line": 908
-            },
-            {
-                "column": 23,
-                "endColumn": 50,
-                "endLine": 917,
-                "line": 917
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "7615e968": {
-        "additionalInfo": {
-            "callString": "html.index(b\"</head>\")",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7615e968",
-        "message": "Repeated function call detected (3/2). Consider caching the result: html.index(b\"</head>\")",
-        "messageId": "CRC001",
-        "module": "web",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 19,
-                "endColumn": 41,
-                "endLine": 1040,
-                "line": 1040
-            },
-            {
-                "column": 19,
-                "endColumn": 41,
-                "endLine": 1044,
-                "line": 1044
-            },
-            {
-                "column": 19,
-                "endColumn": 41,
-                "endLine": 1047,
-                "line": 1047
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "7d4e224f": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7d4e224f",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "tornado.web",
-        "obj": "Application.listen",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 14,
-                "endLine": 2236,
-                "line": 2236
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "823a223c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "823a223c",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.iostream",
-        "obj": "BaseIOStream.get_fd_error",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 20,
-                "endLine": 316,
-                "line": 316
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/iostream.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "833e3845": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "833e3845",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.options",
-        "obj": "_Option._parse_string",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 673,
-                "line": 673
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "8423b98f": {
-        "additionalInfo": {
-            "callString": "reader.consume(2)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 4
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8423b98f",
-        "message": "Repeated function call detected (4/2). Consider caching the result: reader.consume(2)",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 22,
-                "endColumn": 39,
-                "endLine": 891,
-                "line": 891
-            },
-            {
-                "column": 8,
-                "endColumn": 25,
-                "endLine": 930,
-                "line": 930
-            },
-            {
-                "column": 12,
-                "endColumn": 29,
-                "endLine": 909,
-                "line": 909
-            },
-            {
-                "column": 12,
-                "endColumn": 29,
-                "endLine": 918,
-                "line": 918
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "84e47922": {
-        "additionalInfo": {
-            "callString": "IOLoop.current().time()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "84e47922",
-        "message": "Repeated function call detected (2/2). Consider caching the result: IOLoop.current().time()",
-        "messageId": "CRC001",
-        "module": "websocket",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 24,
-                "endColumn": 47,
-                "endLine": 1366,
-                "line": 1366
-            },
-            {
-                "column": 32,
-                "endColumn": 55,
-                "endLine": 1378,
-                "line": 1378
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "8a26f340": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8a26f340",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "tornado.tcpclient",
-        "obj": "TCPClient.connect",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 220,
-                "line": 220
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/tcpclient.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "8a7ea777": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8a7ea777",
-        "message": "Too many arguments (10/6)",
-        "messageId": "R0913",
-        "module": "tornado.websocket",
-        "obj": "websocket_connect",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 21,
-                "endLine": 1625,
-                "line": 1625
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "8acdb1d9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8acdb1d9",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "tornado.web",
-        "obj": "_HandlerDelegate.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 2416,
-                "line": 2416
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "8c20234a": {
-        "additionalInfo": {
-            "callString": "reader.consume(end).strip()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8c20234a",
-        "message": "Repeated function call detected (3/2). Consider caching the result: reader.consume(end).strip()",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 19,
-                "endColumn": 46,
-                "endLine": 929,
-                "line": 929
-            },
-            {
-                "column": 23,
-                "endColumn": 50,
-                "endLine": 908,
-                "line": 908
-            },
-            {
-                "column": 23,
-                "endColumn": 50,
-                "endLine": 917,
-                "line": 917
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "8c9825e4": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8c9825e4",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.websocket",
-        "obj": "WebSocketProtocol13._parse_extensions_header",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 32,
-                "endLine": 979,
-                "line": 979
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "8ce571b9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8ce571b9",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.ioloop",
-        "obj": "IOLoop._discard_future_result",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 30,
-                "endLine": 780,
-                "line": 780
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/ioloop.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "8d70eac1": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8d70eac1",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "UIModule.css_files",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 17,
-                "endLine": 3422,
-                "line": 3422
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "8f9eb58f": {
-        "additionalInfo": {
-            "callString": "_value_from_stopiteration(e)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8f9eb58f",
-        "message": "Repeated function call detected (2/2). Consider caching the result: _value_from_stopiteration(e)",
-        "messageId": "CRC001",
-        "module": "gen",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 21,
-                "endColumn": 49,
-                "endLine": 223,
-                "line": 223
-            },
-            {
-                "column": 32,
-                "endColumn": 60,
-                "endLine": 242,
-                "line": 242
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/gen.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "90735310": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "90735310",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "UIModule.javascript_files",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 24,
-                "endLine": 3409,
-                "line": 3409
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "9153f03c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "9153f03c",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.testing",
-        "obj": "AsyncTestCase.get_new_ioloop",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 22,
-                "endLine": 208,
-                "line": 208
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "9c3fe663": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "9c3fe663",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.websocket",
-        "obj": "WebSocketProtocol13._challenge_response",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 27,
-                "endLine": 923,
-                "line": 923
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "9f804182": {
-        "additionalInfo": {
-            "callString": "os.path.join(directory, path)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "9f804182",
-        "message": "Repeated function call detected (2/2). Consider caching the result: os.path.join(directory, path)",
-        "messageId": "CRC001",
-        "module": "locale",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 20,
-                "endColumn": 49,
-                "endLine": 139,
-                "line": 139
-            },
-            {
-                "column": 16,
-                "endColumn": 45,
-                "endLine": 136,
-                "line": 136
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/locale.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "a0e32802": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a0e32802",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.options",
-        "obj": "OptionParser._normalize_name",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 151,
-                "line": 151
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "a3f2eee7": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a3f2eee7",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.testing",
-        "obj": "AsyncHTTPTestCase.get_httpserver_options",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 30,
-                "endLine": 451,
-                "line": 451
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "a545687c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a545687c",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.testing",
-        "obj": "AsyncHTTPTestCase.get_http_client",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 394,
-                "line": 394
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "a9df288f": {
-        "additionalInfo": {
-            "callString": "self._find_read_pos()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a9df288f",
-        "message": "Repeated function call detected (2/2). Consider caching the result: self._find_read_pos()",
-        "messageId": "CRC001",
-        "module": "iostream",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 15,
-                "endColumn": 36,
-                "endLine": 769,
-                "line": 769
-            },
-            {
-                "column": 22,
-                "endColumn": 43,
-                "endLine": 765,
-                "line": 765
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/iostream.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "acd81da8": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "acd81da8",
-        "message": "Too many arguments (14/6)",
-        "messageId": "R0913",
-        "module": "tornado.httpserver",
-        "obj": "HTTPServer.initialize",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 18,
-                "endLine": 164,
-                "line": 164
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httpserver.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "b03c3354": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b03c3354",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.auth",
-        "obj": "OAuth2Mixin.get_auth_http_client",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 28,
-                "endLine": 683,
-                "line": 683
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/auth.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "b1a599f9": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b1a599f9",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "tornado.simple_httpclient",
-        "obj": "_HTTPConnection.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 255,
-                "line": 255
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/simple_httpclient.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "b2413cd3": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b2413cd3",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.testing",
-        "obj": "AsyncHTTPSTestCase.get_ssl_options",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 494,
-                "line": 494
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "b46e2a98": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b46e2a98",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.gen",
-        "obj": "_NullFuture.result",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 14,
-                "endLine": 693,
-                "line": 693
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/gen.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "b76e02df": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b76e02df",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.ioloop",
-        "obj": "IOLoop.time",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 12,
-                "endLine": 549,
-                "line": 549
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/ioloop.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "b9504867": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b9504867",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "RequestHandler.render_embed_js",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 1077,
-                "line": 1077
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "bb24a3e0": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "bb24a3e0",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.websocket",
-        "obj": "WebSocketClientConnection.log_exception",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 1614,
-                "line": 1614
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "c7005946": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c7005946",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.websocket",
-        "obj": "WebSocketProtocol13._handle_websocket_headers",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 33,
-                "endLine": 903,
-                "line": 903
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "c731f3d5": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c731f3d5",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "OutputTransform.transform_first_chunk",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 29,
-                "endLine": 3241,
-                "line": 3241
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "c7ebba3c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c7ebba3c",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.tcpclient",
-        "obj": "TCPClient._create_stream",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 22,
-                "endLine": 296,
-                "line": 296
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/tcpclient.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "ca6abba6": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ca6abba6",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.websocket",
-        "obj": "WebSocketHandler.select_subprotocol",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 367,
-                "line": 367
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "d1414160": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d1414160",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "tornado.options",
-        "obj": "OptionParser.define",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 14,
-                "endLine": 223,
-                "line": 223
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "d17b6bcf": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d17b6bcf",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "RequestHandler.decode_argument",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 600,
-                "line": 600
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "d3e229d0": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d3e229d0",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "RequestHandler.get_current_user",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 24,
-                "endLine": 1481,
-                "line": 1481
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "d465dd61": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d465dd61",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.http1connection",
-        "obj": "HTTP1Connection._parse_headers",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 22,
-                "endLine": 578,
-                "line": 578
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/http1connection.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "d66e19a3": {
-        "additionalInfo": {
-            "callString": "_Statement(contents, line)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d66e19a3",
-        "message": "Repeated function call detected (2/2). Consider caching the result: _Statement(contents, line)",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 24,
-                "endColumn": 50,
-                "endLine": 983,
-                "line": 983
-            },
-            {
-                "column": 31,
-                "endColumn": 57,
-                "endLine": 1041,
-                "line": 1041
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "d838aa5d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d838aa5d",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "OutputTransform.transform_chunk",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 3250,
-                "line": 3250
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "d8843194": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d8843194",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.template",
-        "obj": "_Node.each_child",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 18,
-                "endLine": 504,
-                "line": 504
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "d8c7bab1": {
-        "additionalInfo": {
-            "callString": "m.group(1)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d8c7bab1",
-        "message": "Repeated function call detected (2/2). Consider caching the result: m.group(1)",
-        "messageId": "CRC001",
-        "module": "escape",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 14,
-                "endColumn": 24,
-                "endLine": 339,
-                "line": 339
-            },
-            {
-                "column": 15,
-                "endColumn": 25,
-                "endLine": 347,
-                "line": 347
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/escape.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "d8e79f02": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d8e79f02",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.gen",
-        "obj": "_NullFuture.done",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 12,
-                "endLine": 696,
-                "line": 696
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/gen.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "d94791bf": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d94791bf",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "tornado.websocket",
-        "obj": "WebSocketClientConnection.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 1390,
-                "line": 1390
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "d9ff61e1": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d9ff61e1",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "RequestHandler.get_user_locale",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 1404,
-                "line": 1404
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "dbc62242": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "dbc62242",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "tornado.options",
-        "obj": "define",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 10,
-                "endLine": 684,
-                "line": 684
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "dca68401": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "dca68401",
-        "message": "Too many arguments (10/6)",
-        "messageId": "R0913",
-        "module": "tornado.options",
-        "obj": "_Option.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 533,
-                "line": 533
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "e0e44a44": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e0e44a44",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "RequestHandler._unimplemented_method",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 29,
-                "endLine": 272,
-                "line": 272
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "e1f4ff0d": {
-        "additionalInfo": {
-            "callString": "suffix.strip()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e1f4ff0d",
-        "message": "Repeated function call detected (3/2). Consider caching the result: suffix.strip()",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 17,
-                "endColumn": 31,
-                "endLine": 935,
-                "line": 935
-            },
-            {
-                "column": 21,
-                "endColumn": 35,
-                "endLine": 994,
-                "line": 994
-            },
-            {
-                "column": 23,
-                "endColumn": 37,
-                "endLine": 1000,
-                "line": 1000
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "e5c88630": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e5c88630",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "tornado.template",
-        "obj": "Template.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 262,
-                "line": 262
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "e6d954ee": {
-        "additionalInfo": {
-            "callString": "m.group(1)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e6d954ee",
-        "message": "Repeated function call detected (2/2). Consider caching the result: m.group(1)",
-        "messageId": "CRC001",
-        "module": "escape",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 14,
-                "endColumn": 24,
-                "endLine": 339,
-                "line": 339
-            },
-            {
-                "column": 15,
-                "endColumn": 25,
-                "endLine": 347,
-                "line": 347
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/escape.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "e860f1b6": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e860f1b6",
-        "message": "Too many arguments (11/6)",
-        "messageId": "R0913",
-        "module": "tornado.httpclient",
-        "obj": "HTTPResponse.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 629,
-                "line": 629
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httpclient.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "eb6e37f3": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "eb6e37f3",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "UIModule.embedded_javascript",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 27,
-                "endLine": 3404,
-                "line": 3404
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "ed67afe6": {
-        "additionalInfo": {
-            "callString": "_Statement(contents, line)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ed67afe6",
-        "message": "Repeated function call detected (2/2). Consider caching the result: _Statement(contents, line)",
-        "messageId": "CRC001",
-        "module": "template",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 24,
-                "endColumn": 50,
-                "endLine": 983,
-                "line": 983
-            },
-            {
-                "column": 31,
-                "endColumn": 57,
-                "endLine": 1041,
-                "line": 1041
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "ee915d9a": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ee915d9a",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.web",
-        "obj": "RequestHandler.render_embed_css",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 24,
-                "endLine": 1111,
-                "line": 1111
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "efbaa0da": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "efbaa0da",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.curl_httpclient",
-        "obj": "CurlAsyncHTTPClient._curl_debug",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 19,
-                "endLine": 569,
-                "line": 569
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/curl_httpclient.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "f08e7e36": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f08e7e36",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "tornado.simple_httpclient",
-        "obj": "SimpleAsyncHTTPClient.initialize",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 18,
-                "endLine": 118,
-                "line": 118
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/simple_httpclient.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "f0bb93d0": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f0bb93d0",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.routing",
-        "obj": "RuleRouter.process_rule",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 20,
-                "endLine": 361,
-                "line": 361
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/routing.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "f228b575": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f228b575",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "tornado.http1connection",
-        "obj": "HTTP1ConnectionParameters.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 76,
-                "line": 76
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/http1connection.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "f5fea5e4": {
-        "additionalInfo": {
-            "callString": "str(value)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f5fea5e4",
-        "message": "Repeated function call detected (2/2). Consider caching the result: str(value)",
-        "messageId": "CRC001",
-        "module": "locale",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 12,
-                "endColumn": 22,
-                "endLine": 477,
-                "line": 477
-            },
-            {
-                "column": 19,
-                "endColumn": 29,
-                "endLine": 476,
-                "line": 476
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/locale.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    },
-    "f94d5296": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f94d5296",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "tornado.wsgi",
-        "obj": "WSGIContainer._log",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 12,
-                "endLine": 247,
-                "line": 247
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/wsgi.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    },
-    "fc9ec3f6": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "fc9ec3f6",
-        "message": "Too many arguments (10/6)",
-        "messageId": "R0913",
-        "module": "tornado.httputil",
-        "obj": "HTTPServerRequest.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 470,
-                "line": 470
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httputil.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
-    },
-    "ff7efe2f": {
-        "additionalInfo": {
-            "callString": "_value_from_stopiteration(e)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ff7efe2f",
-        "message": "Repeated function call detected (2/2). Consider caching the result: _value_from_stopiteration(e)",
-        "messageId": "CRC001",
-        "module": "gen",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 21,
-                "endColumn": 49,
-                "endLine": 223,
-                "line": 223
-            },
-            {
-                "column": 32,
-                "endColumn": 60,
-                "endLine": 242,
-                "line": 242
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/gen.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
-    }
+  "03f260f3": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "03f260f3",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.auth",
+    "obj": "OAuthMixin.get_auth_http_client",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 28,
+        "endLine": 546,
+        "line": 546
+      }
+    ],
+    "path": "tornado/auth.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/auth.py"
+  },
+  "074852c8": {
+    "additionalInfo": {
+      "callString": "native_str(debug_msg)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "074852c8",
+    "message": "Repeated function call detected (2/2). Consider caching the result: native_str(debug_msg)",
+    "messageId": "CRC001",
+    "module": "curl_httpclient",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 24,
+        "endColumn": 45,
+        "endLine": 572,
+        "line": 572
+      },
+      {
+        "column": 24,
+        "endColumn": 45,
+        "endLine": 575,
+        "line": 575
+      }
+    ],
+    "path": "tornado/curl_httpclient.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/curl_httpclient.py"
+  },
+  "07ec8d79": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "07ec8d79",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.routing",
+    "obj": "RuleRouter.get_target_delegate",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 27,
+        "endLine": 387,
+        "line": 387
+      }
+    ],
+    "path": "tornado/routing.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/routing.py"
+  },
+  "08f64399": {
+    "additionalInfo": {
+      "callString": "suffix.strip(\"\"\").strip(\"\"\")",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "08f64399",
+    "message": "Repeated function call detected (2/2). Consider caching the result: suffix.strip(\"\"\").strip(\"\"\")",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 25,
+        "endColumn": 53,
+        "endLine": 976,
+        "line": 976
+      },
+      {
+        "column": 25,
+        "endColumn": 53,
+        "endLine": 985,
+        "line": 985
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "099f0062": {
+    "additionalInfo": {
+      "callString": "suffix.strip(\"\"\").strip(\"\"\")",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "099f0062",
+    "message": "Repeated function call detected (2/2). Consider caching the result: suffix.strip(\"\"\").strip(\"\"\")",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 25,
+        "endColumn": 53,
+        "endLine": 976,
+        "line": 976
+      },
+      {
+        "column": 25,
+        "endColumn": 53,
+        "endLine": 985,
+        "line": 985
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "0a708ef3": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "0a708ef3",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "tornado.tcpserver",
+    "obj": "TCPServer.bind",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 12,
+        "endLine": 212,
+        "line": 212
+      }
+    ],
+    "path": "tornado/tcpserver.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/tcpserver.py"
+  },
+  "0a719cea": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "0a719cea",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.websocket",
+    "obj": "WebSocketHandler.get_compression_options",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 31,
+        "endLine": 401,
+        "line": 401
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "0ac12ab7": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "0ac12ab7",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.simple_httpclient",
+    "obj": "SimpleAsyncHTTPClient._connection_class",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 25,
+        "endLine": 199,
+        "line": 199
+      }
+    ],
+    "path": "tornado/simple_httpclient.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/simple_httpclient.py"
+  },
+  "0d89fb84": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "0d89fb84",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.ioloop",
+    "obj": "IOLoop.split_fd",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 784,
+        "line": 784
+      }
+    ],
+    "path": "tornado/ioloop.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/ioloop.py"
+  },
+  "0fe43642": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "0fe43642",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "RequestHandler._convert_header_value",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 29,
+        "endLine": 410,
+        "line": 410
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "1197843d": {
+    "additionalInfo": {
+      "callString": "os.pipe()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "1197843d",
+    "message": "Repeated function call detected (3/2). Consider caching the result: os.pipe()",
+    "messageId": "CRC001",
+    "module": "process",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 25,
+        "endColumn": 34,
+        "endLine": 220,
+        "line": 220
+      },
+      {
+        "column": 27,
+        "endColumn": 36,
+        "endLine": 226,
+        "line": 226
+      },
+      {
+        "column": 27,
+        "endColumn": 36,
+        "endLine": 232,
+        "line": 232
+      }
+    ],
+    "path": "tornado/process.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/process.py"
+  },
+  "12c20fa7": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "12c20fa7",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "UIModule.embedded_css",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 20,
+        "endLine": 3417,
+        "line": 3417
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "1324ea79": {
+    "additionalInfo": {
+      "callString": "os.path.join(directory, path)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "1324ea79",
+    "message": "Repeated function call detected (2/2). Consider caching the result: os.path.join(directory, path)",
+    "messageId": "CRC001",
+    "module": "locale",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 20,
+        "endColumn": 49,
+        "endLine": 139,
+        "line": 139
+      },
+      {
+        "column": 16,
+        "endColumn": 45,
+        "endLine": 136,
+        "line": 136
+      }
+    ],
+    "path": "tornado/locale.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/locale.py"
+  },
+  "1667cc35": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "1667cc35",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "UIModule.html_body",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 17,
+        "endLine": 3436,
+        "line": 3436
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "16e0dd8a": {
+    "additionalInfo": {
+      "callString": "parse_qsl(parsed_url.query, keep_blank_values=True)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "16e0dd8a",
+    "message": "Repeated function call detected (2/2). Consider caching the result: parse_qsl(parsed_url.query, keep_blank_values=True)",
+    "messageId": "CRC001",
+    "module": "httputil",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 23,
+        "endColumn": 74,
+        "endLine": 783,
+        "line": 783
+      },
+      {
+        "column": 23,
+        "endColumn": 74,
+        "endLine": 786,
+        "line": 786
+      }
+    ],
+    "path": "tornado/httputil.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httputil.py"
+  },
+  "1702c2a9": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "1702c2a9",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.routing",
+    "obj": "Matcher.reverse",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 15,
+        "endLine": 516,
+        "line": 516
+      }
+    ],
+    "path": "tornado/routing.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/routing.py"
+  },
+  "1dac595f": {
+    "additionalInfo": {
+      "callString": "collections.deque([])",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "1dac595f",
+    "message": "Repeated function call detected (2/2). Consider caching the result: collections.deque([])",
+    "messageId": "CRC001",
+    "module": "queues",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 24,
+        "endColumn": 45,
+        "endLine": 162,
+        "line": 162
+      },
+      {
+        "column": 24,
+        "endColumn": 45,
+        "endLine": 163,
+        "line": 163
+      }
+    ],
+    "path": "tornado/queues.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/queues.py"
+  },
+  "233afd98": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "233afd98",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.auth",
+    "obj": "OpenIdMixin.get_auth_http_client",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 28,
+        "endLine": 278,
+        "line": 278
+      }
+    ],
+    "path": "tornado/auth.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/auth.py"
+  },
+  "26c7906d": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "26c7906d",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.websocket",
+    "obj": "WebSocketProtocol13._get_compressor_options",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 31,
+        "endLine": 1008,
+        "line": 1008
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "2b5b93a3": {
+    "additionalInfo": {
+      "callString": "suffix.strip()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "2b5b93a3",
+    "message": "Repeated function call detected (3/2). Consider caching the result: suffix.strip()",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 17,
+        "endColumn": 31,
+        "endLine": 935,
+        "line": 935
+      },
+      {
+        "column": 21,
+        "endColumn": 35,
+        "endLine": 994,
+        "line": 994
+      },
+      {
+        "column": 23,
+        "endColumn": 37,
+        "endLine": 1000,
+        "line": 1000
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "2b84b6c5": {
+    "additionalInfo": {
+      "callString": "_consume_field(rest)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 4
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "2b84b6c5",
+    "message": "Repeated function call detected (4/2). Consider caching the result: _consume_field(rest)",
+    "messageId": "CRC001",
+    "module": "web",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 24,
+        "endColumn": 44,
+        "endLine": 3716,
+        "line": 3716
+      },
+      {
+        "column": 22,
+        "endColumn": 42,
+        "endLine": 3717,
+        "line": 3717
+      },
+      {
+        "column": 23,
+        "endColumn": 43,
+        "endLine": 3718,
+        "line": 3718
+      },
+      {
+        "column": 30,
+        "endColumn": 50,
+        "endLine": 3719,
+        "line": 3719
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "2c41e7d4": {
+    "additionalInfo": {
+      "callString": "IOLoop.current()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "2c41e7d4",
+    "message": "Repeated function call detected (2/2). Consider caching the result: IOLoop.current()",
+    "messageId": "CRC001",
+    "module": "simple_httpclient",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 23,
+        "endColumn": 39,
+        "endLine": 266,
+        "line": 266
+      },
+      {
+        "column": 8,
+        "endColumn": 24,
+        "endLine": 284,
+        "line": 284
+      }
+    ],
+    "path": "tornado/simple_httpclient.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/simple_httpclient.py"
+  },
+  "302ae0c9": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "302ae0c9",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "tornado.auth",
+    "obj": "OAuth2Mixin.authorize_redirect",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 26,
+        "endLine": 567,
+        "line": 567
+      }
+    ],
+    "path": "tornado/auth.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/auth.py"
+  },
+  "30de9369": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "30de9369",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.platform.asyncio",
+    "obj": "SelectorThread._handle_event",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 21,
+        "endLine": 650,
+        "line": 650
+      }
+    ],
+    "path": "tornado/platform/asyncio.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/platform/asyncio.py"
+  },
+  "3630e30e": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "3630e30e",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.testing",
+    "obj": "AsyncHTTPTestCase.get_protocol",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 20,
+        "endLine": 464,
+        "line": 464
+      }
+    ],
+    "path": "tornado/testing.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py"
+  },
+  "3a2fec91": {
+    "additionalInfo": {
+      "callString": "html.rindex(b\"</body>\")",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "3a2fec91",
+    "message": "Repeated function call detected (2/2). Consider caching the result: html.rindex(b\"</body>\")",
+    "messageId": "CRC001",
+    "module": "web",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 19,
+        "endColumn": 42,
+        "endLine": 1032,
+        "line": 1032
+      },
+      {
+        "column": 19,
+        "endColumn": 42,
+        "endLine": 1036,
+        "line": 1036
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "3e05e1b2": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "3e05e1b2",
+    "message": "Too many arguments (11/6)",
+    "messageId": "R0913",
+    "module": "tornado.web",
+    "obj": "RequestHandler.set_cookie",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 18,
+        "endLine": 647,
+        "line": 647
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "4199e76b": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "4199e76b",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.template",
+    "obj": "_CodeWriter.indent",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 14,
+        "endLine": 742,
+        "line": 742
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "42b39e48": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "42b39e48",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "StaticFileHandler.parse_url_path",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 22,
+        "endLine": 3156,
+        "line": 3156
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "47c027f5": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "47c027f5",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.options",
+    "obj": "_Option._parse_bool",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 19,
+        "endLine": 670,
+        "line": 670
+      }
+    ],
+    "path": "tornado/options.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py"
+  },
+  "4a730daf": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "4a730daf",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.ioloop",
+    "obj": "IOLoop.close_fd",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 806,
+        "line": 806
+      }
+    ],
+    "path": "tornado/ioloop.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/ioloop.py"
+  },
+  "4fa44322": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "4fa44322",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.iostream",
+    "obj": "BaseIOStream._is_connreset",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 21,
+        "endLine": 1044,
+        "line": 1044
+      }
+    ],
+    "path": "tornado/iostream.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/iostream.py"
+  },
+  "545b5be2": {
+    "additionalInfo": {
+      "callString": "utf8(cookie)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "545b5be2",
+    "message": "Repeated function call detected (3/2). Consider caching the result: utf8(cookie)",
+    "messageId": "CRC001",
+    "module": "web",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 47,
+        "endColumn": 59,
+        "endLine": 1597,
+        "line": 1597
+      },
+      {
+        "column": 45,
+        "endColumn": 57,
+        "endLine": 1614,
+        "line": 1614
+      },
+      {
+        "column": 28,
+        "endColumn": 40,
+        "endLine": 1616,
+        "line": 1616
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "63ba519e": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "63ba519e",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "UIModule.html_head",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 17,
+        "endLine": 3430,
+        "line": 3430
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "65f77743": {
+    "additionalInfo": {
+      "callString": "reader.consume(2)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 4
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "65f77743",
+    "message": "Repeated function call detected (4/2). Consider caching the result: reader.consume(2)",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 22,
+        "endColumn": 39,
+        "endLine": 891,
+        "line": 891
+      },
+      {
+        "column": 8,
+        "endColumn": 25,
+        "endLine": 930,
+        "line": 930
+      },
+      {
+        "column": 12,
+        "endColumn": 29,
+        "endLine": 909,
+        "line": 909
+      },
+      {
+        "column": 12,
+        "endColumn": 29,
+        "endLine": 918,
+        "line": 918
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "6669d827": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "6669d827",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "tornado.tcpserver",
+    "obj": "TCPServer.listen",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 14,
+        "endLine": 159,
+        "line": 159
+      }
+    ],
+    "path": "tornado/tcpserver.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/tcpserver.py"
+  },
+  "6ba58a59": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "6ba58a59",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.template",
+    "obj": "_CodeWriter.include",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 15,
+        "endLine": 754,
+        "line": 754
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "6ef7fb3d": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "6ef7fb3d",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.curl_httpclient",
+    "obj": "CurlAsyncHTTPClient.handle_callback_exception",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 33,
+        "endLine": 314,
+        "line": 314
+      }
+    ],
+    "path": "tornado/curl_httpclient.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/curl_httpclient.py"
+  },
+  "6fad62c0": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "6fad62c0",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.util",
+    "obj": "ArgReplacer._getargnames",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 20,
+        "endLine": 355,
+        "line": 355
+      }
+    ],
+    "path": "tornado/util.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/util.py"
+  },
+  "73212312": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "73212312",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "RequestHandler._decode_xsrf_token",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 26,
+        "endLine": 1589,
+        "line": 1589
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "73cd091c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "73cd091c",
+    "message": "Too many arguments (34/6)",
+    "messageId": "R0913",
+    "module": "tornado.httpclient",
+    "obj": "HTTPRequest.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 358,
+        "line": 358
+      }
+    ],
+    "path": "tornado/httpclient.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httpclient.py"
+  },
+  "743634da": {
+    "additionalInfo": {
+      "callString": "reader.consume(end).strip()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "743634da",
+    "message": "Repeated function call detected (3/2). Consider caching the result: reader.consume(end).strip()",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 19,
+        "endColumn": 46,
+        "endLine": 929,
+        "line": 929
+      },
+      {
+        "column": 23,
+        "endColumn": 50,
+        "endLine": 908,
+        "line": 908
+      },
+      {
+        "column": 23,
+        "endColumn": 50,
+        "endLine": 917,
+        "line": 917
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "7615e968": {
+    "additionalInfo": {
+      "callString": "html.index(b\"</head>\")",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "7615e968",
+    "message": "Repeated function call detected (3/2). Consider caching the result: html.index(b\"</head>\")",
+    "messageId": "CRC001",
+    "module": "web",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 19,
+        "endColumn": 41,
+        "endLine": 1040,
+        "line": 1040
+      },
+      {
+        "column": 19,
+        "endColumn": 41,
+        "endLine": 1044,
+        "line": 1044
+      },
+      {
+        "column": 19,
+        "endColumn": 41,
+        "endLine": 1047,
+        "line": 1047
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "7d4e224f": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "7d4e224f",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "tornado.web",
+    "obj": "Application.listen",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 14,
+        "endLine": 2236,
+        "line": 2236
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "823a223c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "823a223c",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.iostream",
+    "obj": "BaseIOStream.get_fd_error",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 20,
+        "endLine": 316,
+        "line": 316
+      }
+    ],
+    "path": "tornado/iostream.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/iostream.py"
+  },
+  "833e3845": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "833e3845",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.options",
+    "obj": "_Option._parse_string",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 21,
+        "endLine": 673,
+        "line": 673
+      }
+    ],
+    "path": "tornado/options.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py"
+  },
+  "8423b98f": {
+    "additionalInfo": {
+      "callString": "reader.consume(2)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 4
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8423b98f",
+    "message": "Repeated function call detected (4/2). Consider caching the result: reader.consume(2)",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 22,
+        "endColumn": 39,
+        "endLine": 891,
+        "line": 891
+      },
+      {
+        "column": 8,
+        "endColumn": 25,
+        "endLine": 930,
+        "line": 930
+      },
+      {
+        "column": 12,
+        "endColumn": 29,
+        "endLine": 909,
+        "line": 909
+      },
+      {
+        "column": 12,
+        "endColumn": 29,
+        "endLine": 918,
+        "line": 918
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "84e47922": {
+    "additionalInfo": {
+      "callString": "IOLoop.current().time()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "84e47922",
+    "message": "Repeated function call detected (2/2). Consider caching the result: IOLoop.current().time()",
+    "messageId": "CRC001",
+    "module": "websocket",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 24,
+        "endColumn": 47,
+        "endLine": 1366,
+        "line": 1366
+      },
+      {
+        "column": 32,
+        "endColumn": 55,
+        "endLine": 1378,
+        "line": 1378
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "8a26f340": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8a26f340",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "tornado.tcpclient",
+    "obj": "TCPClient.connect",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 21,
+        "endLine": 220,
+        "line": 220
+      }
+    ],
+    "path": "tornado/tcpclient.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/tcpclient.py"
+  },
+  "8a7ea777": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8a7ea777",
+    "message": "Too many arguments (10/6)",
+    "messageId": "R0913",
+    "module": "tornado.websocket",
+    "obj": "websocket_connect",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 21,
+        "endLine": 1625,
+        "line": 1625
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "8acdb1d9": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8acdb1d9",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "tornado.web",
+    "obj": "_HandlerDelegate.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 2416,
+        "line": 2416
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "8c20234a": {
+    "additionalInfo": {
+      "callString": "reader.consume(end).strip()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8c20234a",
+    "message": "Repeated function call detected (3/2). Consider caching the result: reader.consume(end).strip()",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 19,
+        "endColumn": 46,
+        "endLine": 929,
+        "line": 929
+      },
+      {
+        "column": 23,
+        "endColumn": 50,
+        "endLine": 908,
+        "line": 908
+      },
+      {
+        "column": 23,
+        "endColumn": 50,
+        "endLine": 917,
+        "line": 917
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "8c9825e4": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8c9825e4",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.websocket",
+    "obj": "WebSocketProtocol13._parse_extensions_header",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 32,
+        "endLine": 979,
+        "line": 979
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "8ce571b9": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8ce571b9",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.ioloop",
+    "obj": "IOLoop._discard_future_result",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 30,
+        "endLine": 780,
+        "line": 780
+      }
+    ],
+    "path": "tornado/ioloop.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/ioloop.py"
+  },
+  "8d70eac1": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8d70eac1",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "UIModule.css_files",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 17,
+        "endLine": 3422,
+        "line": 3422
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "8f9eb58f": {
+    "additionalInfo": {
+      "callString": "_value_from_stopiteration(e)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8f9eb58f",
+    "message": "Repeated function call detected (2/2). Consider caching the result: _value_from_stopiteration(e)",
+    "messageId": "CRC001",
+    "module": "gen",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 21,
+        "endColumn": 49,
+        "endLine": 223,
+        "line": 223
+      },
+      {
+        "column": 32,
+        "endColumn": 60,
+        "endLine": 242,
+        "line": 242
+      }
+    ],
+    "path": "tornado/gen.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/gen.py"
+  },
+  "90735310": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "90735310",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "UIModule.javascript_files",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 24,
+        "endLine": 3409,
+        "line": 3409
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "9153f03c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "9153f03c",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.testing",
+    "obj": "AsyncTestCase.get_new_ioloop",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 22,
+        "endLine": 208,
+        "line": 208
+      }
+    ],
+    "path": "tornado/testing.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py"
+  },
+  "9c3fe663": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "9c3fe663",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.websocket",
+    "obj": "WebSocketProtocol13._challenge_response",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 27,
+        "endLine": 923,
+        "line": 923
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "9f804182": {
+    "additionalInfo": {
+      "callString": "os.path.join(directory, path)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "9f804182",
+    "message": "Repeated function call detected (2/2). Consider caching the result: os.path.join(directory, path)",
+    "messageId": "CRC001",
+    "module": "locale",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 20,
+        "endColumn": 49,
+        "endLine": 139,
+        "line": 139
+      },
+      {
+        "column": 16,
+        "endColumn": 45,
+        "endLine": 136,
+        "line": 136
+      }
+    ],
+    "path": "tornado/locale.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/locale.py"
+  },
+  "a0e32802": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a0e32802",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.options",
+    "obj": "OptionParser._normalize_name",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 23,
+        "endLine": 151,
+        "line": 151
+      }
+    ],
+    "path": "tornado/options.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py"
+  },
+  "a3f2eee7": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a3f2eee7",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.testing",
+    "obj": "AsyncHTTPTestCase.get_httpserver_options",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 30,
+        "endLine": 451,
+        "line": 451
+      }
+    ],
+    "path": "tornado/testing.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py"
+  },
+  "a545687c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a545687c",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.testing",
+    "obj": "AsyncHTTPTestCase.get_http_client",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 23,
+        "endLine": 394,
+        "line": 394
+      }
+    ],
+    "path": "tornado/testing.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py"
+  },
+  "a9df288f": {
+    "additionalInfo": {
+      "callString": "self._find_read_pos()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a9df288f",
+    "message": "Repeated function call detected (2/2). Consider caching the result: self._find_read_pos()",
+    "messageId": "CRC001",
+    "module": "iostream",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 15,
+        "endColumn": 36,
+        "endLine": 769,
+        "line": 769
+      },
+      {
+        "column": 22,
+        "endColumn": 43,
+        "endLine": 765,
+        "line": 765
+      }
+    ],
+    "path": "tornado/iostream.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/iostream.py"
+  },
+  "acd81da8": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "acd81da8",
+    "message": "Too many arguments (14/6)",
+    "messageId": "R0913",
+    "module": "tornado.httpserver",
+    "obj": "HTTPServer.initialize",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 18,
+        "endLine": 164,
+        "line": 164
+      }
+    ],
+    "path": "tornado/httpserver.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httpserver.py"
+  },
+  "b03c3354": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b03c3354",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.auth",
+    "obj": "OAuth2Mixin.get_auth_http_client",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 28,
+        "endLine": 683,
+        "line": 683
+      }
+    ],
+    "path": "tornado/auth.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/auth.py"
+  },
+  "b1a599f9": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b1a599f9",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "tornado.simple_httpclient",
+    "obj": "_HTTPConnection.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 255,
+        "line": 255
+      }
+    ],
+    "path": "tornado/simple_httpclient.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/simple_httpclient.py"
+  },
+  "b2413cd3": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b2413cd3",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.testing",
+    "obj": "AsyncHTTPSTestCase.get_ssl_options",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 23,
+        "endLine": 494,
+        "line": 494
+      }
+    ],
+    "path": "tornado/testing.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/testing.py"
+  },
+  "b46e2a98": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b46e2a98",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.gen",
+    "obj": "_NullFuture.result",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 14,
+        "endLine": 693,
+        "line": 693
+      }
+    ],
+    "path": "tornado/gen.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/gen.py"
+  },
+  "b76e02df": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b76e02df",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.ioloop",
+    "obj": "IOLoop.time",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 12,
+        "endLine": 549,
+        "line": 549
+      }
+    ],
+    "path": "tornado/ioloop.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/ioloop.py"
+  },
+  "b9504867": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b9504867",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "RequestHandler.render_embed_js",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 23,
+        "endLine": 1077,
+        "line": 1077
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "bb24a3e0": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "bb24a3e0",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.websocket",
+    "obj": "WebSocketClientConnection.log_exception",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 21,
+        "endLine": 1614,
+        "line": 1614
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "c7005946": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c7005946",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.websocket",
+    "obj": "WebSocketProtocol13._handle_websocket_headers",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 33,
+        "endLine": 903,
+        "line": 903
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "c731f3d5": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c731f3d5",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "OutputTransform.transform_first_chunk",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 29,
+        "endLine": 3241,
+        "line": 3241
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "c7ebba3c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c7ebba3c",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.tcpclient",
+    "obj": "TCPClient._create_stream",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 22,
+        "endLine": 296,
+        "line": 296
+      }
+    ],
+    "path": "tornado/tcpclient.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/tcpclient.py"
+  },
+  "ca6abba6": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ca6abba6",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.websocket",
+    "obj": "WebSocketHandler.select_subprotocol",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 26,
+        "endLine": 367,
+        "line": 367
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "d1414160": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d1414160",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "tornado.options",
+    "obj": "OptionParser.define",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 14,
+        "endLine": 223,
+        "line": 223
+      }
+    ],
+    "path": "tornado/options.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py"
+  },
+  "d17b6bcf": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d17b6bcf",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "RequestHandler.decode_argument",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 23,
+        "endLine": 600,
+        "line": 600
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "d3e229d0": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d3e229d0",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "RequestHandler.get_current_user",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 24,
+        "endLine": 1481,
+        "line": 1481
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "d465dd61": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d465dd61",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.http1connection",
+    "obj": "HTTP1Connection._parse_headers",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 22,
+        "endLine": 578,
+        "line": 578
+      }
+    ],
+    "path": "tornado/http1connection.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/http1connection.py"
+  },
+  "d66e19a3": {
+    "additionalInfo": {
+      "callString": "_Statement(contents, line)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d66e19a3",
+    "message": "Repeated function call detected (2/2). Consider caching the result: _Statement(contents, line)",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 24,
+        "endColumn": 50,
+        "endLine": 983,
+        "line": 983
+      },
+      {
+        "column": 31,
+        "endColumn": 57,
+        "endLine": 1041,
+        "line": 1041
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "d838aa5d": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d838aa5d",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "OutputTransform.transform_chunk",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 23,
+        "endLine": 3250,
+        "line": 3250
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "d8843194": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d8843194",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.template",
+    "obj": "_Node.each_child",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 18,
+        "endLine": 504,
+        "line": 504
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "d8c7bab1": {
+    "additionalInfo": {
+      "callString": "m.group(1)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d8c7bab1",
+    "message": "Repeated function call detected (2/2). Consider caching the result: m.group(1)",
+    "messageId": "CRC001",
+    "module": "escape",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 14,
+        "endColumn": 24,
+        "endLine": 339,
+        "line": 339
+      },
+      {
+        "column": 15,
+        "endColumn": 25,
+        "endLine": 347,
+        "line": 347
+      }
+    ],
+    "path": "tornado/escape.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/escape.py"
+  },
+  "d8e79f02": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d8e79f02",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.gen",
+    "obj": "_NullFuture.done",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 12,
+        "endLine": 696,
+        "line": 696
+      }
+    ],
+    "path": "tornado/gen.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/gen.py"
+  },
+  "d94791bf": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d94791bf",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "tornado.websocket",
+    "obj": "WebSocketClientConnection.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 1390,
+        "line": 1390
+      }
+    ],
+    "path": "tornado/websocket.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/websocket.py"
+  },
+  "d9ff61e1": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d9ff61e1",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "RequestHandler.get_user_locale",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 23,
+        "endLine": 1404,
+        "line": 1404
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "dbc62242": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "dbc62242",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "tornado.options",
+    "obj": "define",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 10,
+        "endLine": 684,
+        "line": 684
+      }
+    ],
+    "path": "tornado/options.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py"
+  },
+  "dca68401": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "dca68401",
+    "message": "Too many arguments (10/6)",
+    "messageId": "R0913",
+    "module": "tornado.options",
+    "obj": "_Option.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 533,
+        "line": 533
+      }
+    ],
+    "path": "tornado/options.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/options.py"
+  },
+  "e0e44a44": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e0e44a44",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "RequestHandler._unimplemented_method",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 29,
+        "endLine": 272,
+        "line": 272
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "e1f4ff0d": {
+    "additionalInfo": {
+      "callString": "suffix.strip()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e1f4ff0d",
+    "message": "Repeated function call detected (3/2). Consider caching the result: suffix.strip()",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 17,
+        "endColumn": 31,
+        "endLine": 935,
+        "line": 935
+      },
+      {
+        "column": 21,
+        "endColumn": 35,
+        "endLine": 994,
+        "line": 994
+      },
+      {
+        "column": 23,
+        "endColumn": 37,
+        "endLine": 1000,
+        "line": 1000
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "e5c88630": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e5c88630",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "tornado.template",
+    "obj": "Template.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 262,
+        "line": 262
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "e6d954ee": {
+    "additionalInfo": {
+      "callString": "m.group(1)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e6d954ee",
+    "message": "Repeated function call detected (2/2). Consider caching the result: m.group(1)",
+    "messageId": "CRC001",
+    "module": "escape",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 14,
+        "endColumn": 24,
+        "endLine": 339,
+        "line": 339
+      },
+      {
+        "column": 15,
+        "endColumn": 25,
+        "endLine": 347,
+        "line": 347
+      }
+    ],
+    "path": "tornado/escape.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/escape.py"
+  },
+  "e860f1b6": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e860f1b6",
+    "message": "Too many arguments (11/6)",
+    "messageId": "R0913",
+    "module": "tornado.httpclient",
+    "obj": "HTTPResponse.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 629,
+        "line": 629
+      }
+    ],
+    "path": "tornado/httpclient.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httpclient.py"
+  },
+  "eb6e37f3": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "eb6e37f3",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "UIModule.embedded_javascript",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 27,
+        "endLine": 3404,
+        "line": 3404
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "ed67afe6": {
+    "additionalInfo": {
+      "callString": "_Statement(contents, line)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ed67afe6",
+    "message": "Repeated function call detected (2/2). Consider caching the result: _Statement(contents, line)",
+    "messageId": "CRC001",
+    "module": "template",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 24,
+        "endColumn": 50,
+        "endLine": 983,
+        "line": 983
+      },
+      {
+        "column": 31,
+        "endColumn": 57,
+        "endLine": 1041,
+        "line": 1041
+      }
+    ],
+    "path": "tornado/template.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/template.py"
+  },
+  "ee915d9a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ee915d9a",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.web",
+    "obj": "RequestHandler.render_embed_css",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 24,
+        "endLine": 1111,
+        "line": 1111
+      }
+    ],
+    "path": "tornado/web.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/web.py"
+  },
+  "efbaa0da": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "efbaa0da",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.curl_httpclient",
+    "obj": "CurlAsyncHTTPClient._curl_debug",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 19,
+        "endLine": 569,
+        "line": 569
+      }
+    ],
+    "path": "tornado/curl_httpclient.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/curl_httpclient.py"
+  },
+  "f08e7e36": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f08e7e36",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "tornado.simple_httpclient",
+    "obj": "SimpleAsyncHTTPClient.initialize",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 18,
+        "endLine": 118,
+        "line": 118
+      }
+    ],
+    "path": "tornado/simple_httpclient.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/simple_httpclient.py"
+  },
+  "f0bb93d0": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f0bb93d0",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.routing",
+    "obj": "RuleRouter.process_rule",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 20,
+        "endLine": 361,
+        "line": 361
+      }
+    ],
+    "path": "tornado/routing.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/routing.py"
+  },
+  "f228b575": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f228b575",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "tornado.http1connection",
+    "obj": "HTTP1ConnectionParameters.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 76,
+        "line": 76
+      }
+    ],
+    "path": "tornado/http1connection.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/http1connection.py"
+  },
+  "f5fea5e4": {
+    "additionalInfo": {
+      "callString": "str(value)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f5fea5e4",
+    "message": "Repeated function call detected (2/2). Consider caching the result: str(value)",
+    "messageId": "CRC001",
+    "module": "locale",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 12,
+        "endColumn": 22,
+        "endLine": 477,
+        "line": 477
+      },
+      {
+        "column": 19,
+        "endColumn": 29,
+        "endLine": 476,
+        "line": 476
+      }
+    ],
+    "path": "tornado/locale.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/locale.py"
+  },
+  "f94d5296": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f94d5296",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "tornado.wsgi",
+    "obj": "WSGIContainer._log",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 12,
+        "endLine": 247,
+        "line": 247
+      }
+    ],
+    "path": "tornado/wsgi.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/wsgi.py"
+  },
+  "fc9ec3f6": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "fc9ec3f6",
+    "message": "Too many arguments (10/6)",
+    "messageId": "R0913",
+    "module": "tornado.httputil",
+    "obj": "HTTPServerRequest.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 470,
+        "line": 470
+      }
+    ],
+    "path": "tornado/httputil.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/httputil.py"
+  },
+  "ff7efe2f": {
+    "additionalInfo": {
+      "callString": "_value_from_stopiteration(e)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ff7efe2f",
+    "message": "Repeated function call detected (2/2). Consider caching the result: _value_from_stopiteration(e)",
+    "messageId": "CRC001",
+    "module": "gen",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 21,
+        "endColumn": 49,
+        "endLine": 223,
+        "line": 223
+      },
+      {
+        "column": 32,
+        "endColumn": 60,
+        "endLine": 242,
+        "line": 242
+      }
+    ],
+    "path": "tornado/gen.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/tornado/tornado/gen.py"
+  }
 }

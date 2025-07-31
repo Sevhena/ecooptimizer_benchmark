@@ -1,0 +1,38 @@
+diff --git a/django/test/html.py b/django/test/html.py
+index 33d1d4dafb..d6387143f3 100644
+--- a/django/test/html.py
++++ b/django/test/html.py
+@@ -1,5 +1,6 @@
+ """Compare two HTML documents."""
+ 
++from codecarbon import EmissionsTracker
+ import html
+ from html.parser import HTMLParser
+ 
+@@ -165,11 +166,14 @@ class Element:
+ 
+     def __str__(self):
+         output = "<%s" % self.name
+-        for key, value in self.attributes:
+-            if value is not None:
+-                output += ' %s="%s"' % (key, value)
+-            else:
+-                output += " %s" % key
++        with EmissionsTracker(project_name='django-benchmark', experiment_id='django_SCL001_1942e397', output_file='/root/ecooptimizer_benchmark/emissions/django/string-concat-loop/1942e397_refactored.csv') as tracker:
++            output = [output]
++            for key, value in self.attributes:
++                if value is not None:
++                    output.append(' %s="%s"' % (key, value))
++                else:
++                    output.append(' %s' % key)
++            output = ''.join(output)
+         if self.children:
+             output += ">\n"
+             output += "".join(
+@@ -270,4 +274,4 @@ def parse_html(html):
+     # Removing ROOT element if it's not necessary
+     if len(document.children) == 1 and not isinstance(document.children[0], str):
+         document = document.children[0]
+-    return document
++    return document
+\ No newline at end of file

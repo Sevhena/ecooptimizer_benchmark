@@ -1,0 +1,17 @@
+diff --git a/dask/dataframe/dask_expr/io/io.py b/dask/dataframe/dask_expr/io/io.py
+index 5a167da8d..4c592e53f 100644
+--- a/dask/dataframe/dask_expr/io/io.py
++++ b/dask/dataframe/dask_expr/io/io.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ from __future__ import annotations
+ 
+ import functools
+@@ -121,6 +122,7 @@ class FusedIO(BlockwiseIO):
+     def _meta(self):
+         return self.operand("_expr")._meta
+ 
++    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R6301_f25132d5', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/f25132d5.csv')
+     def dependencies(self):
+         return []
+ 

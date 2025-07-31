@@ -1,0 +1,24 @@
+diff --git a/django/core/serializers/xml_serializer.py b/django/core/serializers/xml_serializer.py
+index 360d5309d8..06aec09841 100644
+--- a/django/core/serializers/xml_serializer.py
++++ b/django/core/serializers/xml_serializer.py
+@@ -2,6 +2,7 @@
+ XML serializer.
+ """
+ 
++from codecarbon import EmissionsTracker
+ import json
+ from xml.dom import pulldom
+ from xml.sax import handler
+@@ -160,7 +161,10 @@ class Serializer(base.Serializer):
+                     self.xml.addQuickElement("object", attrs={"pk": str(value.pk)})
+ 
+                 def queryset_iterator(obj, field):
+-                    query_set = getattr(obj, field.name).select_related(None).only("pk")
++                    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LMC001_e56e9460', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/e56e9460_refactored.csv') as tracker:
++                        intermediate_0 = getattr(obj, field.name)
++                        intermediate_1 = intermediate_0.select_related(None)
++                        query_set = intermediate_1.only("pk")
+                     chunk_size = 2000 if query_set._prefetch_related_lookups else None
+                     return query_set.iterator(chunk_size=chunk_size)
+ 

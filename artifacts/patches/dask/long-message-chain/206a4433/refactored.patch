@@ -1,0 +1,21 @@
+diff --git a/dask/system.py b/dask/system.py
+index 48f04c4b3..20c28bb23 100644
+--- a/dask/system.py
++++ b/dask/system.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ from __future__ import annotations
+ 
+ import math
+@@ -28,7 +29,10 @@ def _try_extract_cgroup_cpu_quota():
+     # cgroup v2
+     try:
+         with open("/proc/self/cgroup") as f:
+-            group_path = f.read().strip().split(":")[-1]
++            with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LMC001_206a4433', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/206a4433_refactored.csv') as tracker:
++                intermediate_0 = f.read()
++                intermediate_1 = intermediate_0.strip()
++                group_path = intermediate_1.split(":")[-1]
+         if not group_path.endswith("/"):
+             group_path = f"{group_path}/"
+         with open("/sys/fs/cgroup%scpu.max" % group_path) as f:

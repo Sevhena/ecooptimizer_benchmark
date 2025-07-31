@@ -1,4 +1,3 @@
-from doctest import run_docstring_examples
 import json
 import logging
 import argparse
@@ -72,13 +71,11 @@ def filter_smells(
     filtered = {}
     for smell_id, smell_data in smells.items():
         original_occs = smell_data["occurences"]
-        relative_path = (
-            Path(smell_data["path"])
-            .resolve()
-            .relative_to(BENCHMARK_ROOT / "repositories" / repo_name)
-        )
+        rel_path = Path(smell_data["path"])
+        if repo_name == "streamlit":
+            rel_path = Path("/".join(rel_path.parts[1:]))
         new_occs = [
-            occ for occ in original_occs if is_line_covered(coverage, relative_path, occ["line"])
+            occ for occ in original_occs if is_line_covered(coverage, rel_path, occ["line"])
         ]
         logging.debug(
             f"Smell {smell_id}: {len(new_occs)} / {len(original_occs)} occurrences covered"

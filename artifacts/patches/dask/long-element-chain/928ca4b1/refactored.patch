@@ -1,0 +1,19 @@
+diff --git a/dask/dataframe/io/parquet/core.py b/dask/dataframe/io/parquet/core.py
+index 8847db555..11115e895 100644
+--- a/dask/dataframe/io/parquet/core.py
++++ b/dask/dataframe/io/parquet/core.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ from __future__ import annotations
+ 
+ import math
+@@ -639,7 +640,8 @@ def aggregate_row_groups(
+             # of row_group aggregation (all None, or all indices)
+             multi_path_allowed = len(part["piece"]) == 1
+             if not (same_path or multi_path_allowed):
+-                rgs = set(list(part["piece"][1]) + list(next_part[-1]["piece"][1]))
++                with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LEC001_928ca4b1', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-element-chain/928ca4b1_refactored.csv') as tracker:
++                    rgs = set(list(part["piece"][1]) + list(next_part[-1]["piece"][1]))
+                 multi_path_allowed = (rgs == {None}) or (None not in rgs)
+ 
+             # Criteria #3 for aggregating parts: The parts share a

@@ -1,0 +1,21 @@
+diff --git a/dask/_version.py b/dask/_version.py
+index 09281d8ae..b1e2efe5a 100644
+--- a/dask/_version.py
++++ b/dask/_version.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ # This file helps to compute a version number in source trees obtained from
+ # git-archive tarball (such as those provided by githubs download-from-tag
+ # feature). Distribution tarballs (built by setup.py sdist) and build
+@@ -407,7 +408,10 @@ def git_pieces_from_vcs(
+     # Use only the last line.  Previous lines may contain GPG signature
+     # information.
+     date = date.splitlines()[-1]
+-    pieces["date"] = date.strip().replace(" ", "T", 1).replace(" ", "", 1)
++    with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LMC001_745bc2fb', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/745bc2fb_refactored.csv') as tracker:
++        intermediate_0 = date.strip()
++        intermediate_1 = intermediate_0.replace(" ", "T", 1)
++        pieces["date"] = intermediate_1.replace(" ", "", 1)
+ 
+     return pieces
+ 

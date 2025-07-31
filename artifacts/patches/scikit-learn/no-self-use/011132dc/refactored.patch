@@ -1,0 +1,23 @@
+diff --git a/sklearn/_loss/link.py b/sklearn/_loss/link.py
+index 53dff6c2e9..88bcc1e6ac 100644
+--- a/sklearn/_loss/link.py
++++ b/sklearn/_loss/link.py
+@@ -5,6 +5,7 @@ Module contains classes for invertible (and differentiable) link functions.
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ from abc import ABC, abstractmethod
+ from dataclasses import dataclass
+ 
+@@ -256,7 +257,9 @@ class MultinomialLogit(BaseLink):
+     is_multiclass = True
+     interval_y_pred = Interval(0, 1, False, False)
+ 
+-    def symmetrize_raw_prediction(self, raw_prediction):
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R6301_011132dc', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/no-self-use/011132dc_refactored.csv')
++    @staticmethod
++    def symmetrize_raw_prediction(raw_prediction):
+         return raw_prediction - np.mean(raw_prediction, axis=1)[:, np.newaxis]
+ 
+     def link(self, y_pred, out=None):

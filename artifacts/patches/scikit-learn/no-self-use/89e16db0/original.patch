@@ -1,0 +1,20 @@
+diff --git a/sklearn/utils/estimator_checks.py b/sklearn/utils/estimator_checks.py
+index 6347692842..477ee9d572 100644
+--- a/sklearn/utils/estimator_checks.py
++++ b/sklearn/utils/estimator_checks.py
+@@ -2,6 +2,7 @@
+ 
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
++from codecarbon import track_emissions
+ from __future__ import annotations
+ 
+ import pickle
+@@ -943,6 +944,7 @@ class _NotAnArray:
+     def __array__(self, dtype=None, copy=None):
+         return self.data
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R6301_89e16db0', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/no-self-use/89e16db0.csv')
+     def __array_function__(self, func, types, args, kwargs):
+         if func.__name__ == "may_share_memory":
+             return True

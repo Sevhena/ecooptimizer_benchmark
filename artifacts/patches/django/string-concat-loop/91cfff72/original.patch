@@ -1,0 +1,29 @@
+diff --git a/django/contrib/admindocs/utils.py b/django/contrib/admindocs/utils.py
+index 5b28a8d2c6..ac9787972f 100644
+--- a/django/contrib/admindocs/utils.py
++++ b/django/contrib/admindocs/utils.py
+@@ -1,5 +1,6 @@
+ "Misc. utility functions/classes for admin documentation generator."
+ 
++from codecarbon import EmissionsTracker
+ import re
+ from email.errors import HeaderParseError
+ from email.parser import HeaderParser
+@@ -237,11 +238,12 @@ def replace_unnamed_groups(pattern):
+     4. ^(?P<a>\w+)/b/((x|y)\w+) ==> ^(?P<a>\w+)/b/<var>
+     """
+     final_pattern, prev_end = "", None
+-    for start, end, _ in _find_groups(pattern, unnamed_group_matcher):
+-        if prev_end:
+-            final_pattern += pattern[prev_end:start]
+-        final_pattern += pattern[:start] + "<var>"
+-        prev_end = end
++    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_SCL001_91cfff72', output_file='/root/ecooptimizer_benchmark/emissions/django/string-concat-loop/91cfff72.csv') as tracker:
++        for start, end, _ in _find_groups(pattern, unnamed_group_matcher):
++            if prev_end:
++                final_pattern += pattern[prev_end:start]
++            final_pattern += pattern[:start] + "<var>"
++            prev_end = end
+     return final_pattern + pattern[prev_end:]
+ 
+ 

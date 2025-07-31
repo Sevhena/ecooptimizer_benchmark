@@ -1,1352 +1,1394 @@
 {
-    "00e87a1b": {
-        "additionalInfo": {
-            "callString": "self.__execute_callback(self._state_machine.current_state[0], life_cycle_state)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "00e87a1b",
-        "message": "Repeated function call detected (2/2). Consider caching the result: self.__execute_callback(self._state_machine.current_state[0], life_cycle_state)",
-        "messageId": "CRC001",
-        "module": "node",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 67,
-                "endLine": 402,
-                "line": 401
-            },
-            {
-                "column": 32,
-                "endColumn": 71,
-                "endLine": 414,
-                "line": 413
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/node.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+  "00e87a1b": {
+    "additionalInfo": {
+      "callString": "self.__execute_callback(self._state_machine.current_state[0], life_cycle_state)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
     },
-    "0a3325a4": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "0a3325a4",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "rclpy.publisher",
-        "obj": "Publisher.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 31,
-                "line": 31
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/publisher.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "0f33d506": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "0f33d506",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.action.client",
-        "obj": "ActionClient._generate_random_uuid",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 29,
-                "endLine": 246,
-                "line": 246
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/action/client.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "00e87a1b",
+    "message": "Repeated function call detected (2/2). Consider caching the result: self.__execute_callback(self._state_machine.current_state[0], life_cycle_state)",
+    "messageId": "CRC001",
+    "module": "node",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 25,
+        "endColumn": 67,
+        "endLine": 402,
+        "line": 401
+      },
+      {
+        "column": 32,
+        "endColumn": 71,
+        "endLine": 414,
+        "line": 413
+      }
+    ],
+    "path": "rclpy/rclpy/lifecycle/node.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/node.py"
+  },
+  "0a3325a4": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "197ea127": {
-        "additionalInfo": {
-            "callString": "policy.name.lower()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "197ea127",
-        "message": "Repeated function call detected (3/2). Consider caching the result: policy.name.lower()",
-        "messageId": "CRC001",
-        "module": "qos_overriding_options",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 18,
-                "endColumn": 37,
-                "endLine": 183,
-                "line": 183
-            },
-            {
-                "column": 17,
-                "endColumn": 36,
-                "endLine": 202,
-                "line": 202
-            },
-            {
-                "column": 55,
-                "endColumn": 74,
-                "endLine": 197,
-                "line": 197
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/qos_overriding_options.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "1e06ad43": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "1e06ad43",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "rclpy.service",
-        "obj": "Service.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 37,
-                "line": 37
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/service.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "0a3325a4",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "rclpy.publisher",
+    "obj": "Publisher.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 31,
+        "line": 31
+      }
+    ],
+    "path": "rclpy/rclpy/publisher.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/publisher.py"
+  },
+  "0f33d506": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "39e50c08": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "39e50c08",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.node",
-        "obj": "Node._apply_integer_range",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 28,
-                "endLine": 1323,
-                "line": 1323
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "3cda3885": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "3cda3885",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "rclpy.waitable",
-        "obj": "NumberOfEntities.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 38,
-                "line": 38
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/waitable.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "0f33d506",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.action.client",
+    "obj": "ActionClient._generate_random_uuid",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 29,
+        "endLine": 246,
+        "line": 246
+      }
+    ],
+    "path": "rclpy/rclpy/action/client.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/action/client.py"
+  },
+  "197ea127": {
+    "additionalInfo": {
+      "callString": "policy.name.lower()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
     },
-    "41eb0e7a": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "41eb0e7a",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.lifecycle.managed_entity",
-        "obj": "ManagedEntity.on_shutdown",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 19,
-                "endLine": 38,
-                "line": 38
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "43fc853c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "43fc853c",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.executors",
-        "obj": "Executor._take_guard_condition",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 29,
-                "endLine": 549,
-                "line": 549
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "197ea127",
+    "message": "Repeated function call detected (3/2). Consider caching the result: policy.name.lower()",
+    "messageId": "CRC001",
+    "module": "qos_overriding_options",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 18,
+        "endColumn": 37,
+        "endLine": 183,
+        "line": 183
+      },
+      {
+        "column": 17,
+        "endColumn": 36,
+        "endLine": 202,
+        "line": 202
+      },
+      {
+        "column": 55,
+        "endColumn": 74,
+        "endLine": 197,
+        "line": 197
+      }
+    ],
+    "path": "rclpy/rclpy/qos_overriding_options.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/qos_overriding_options.py"
+  },
+  "1e06ad43": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "44a4804d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "44a4804d",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.executors",
-        "obj": "Executor._take_service",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 526,
-                "line": 526
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "50ac80ed": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "50ac80ed",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "rclpy.event_handler",
-        "obj": "PublisherEventCallbacks.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 309,
-                "line": 309
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/event_handler.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "1e06ad43",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "rclpy.service",
+    "obj": "Service.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 37,
+        "line": 37
+      }
+    ],
+    "path": "rclpy/rclpy/service.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/service.py"
+  },
+  "39e50c08": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "56c24f1c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "56c24f1c",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "rclpy.client",
-        "obj": "Client.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 40,
-                "line": 40
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/client.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "60382769": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "60382769",
-        "message": "Too many arguments (10/6)",
-        "messageId": "R0913",
-        "module": "rclpy.action.client",
-        "obj": "ActionClient.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 169,
-                "line": 169
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/action/client.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "39e50c08",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.node",
+    "obj": "Node._apply_integer_range",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 28,
+        "endLine": 1323,
+        "line": 1323
+      }
+    ],
+    "path": "rclpy/rclpy/node.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py"
+  },
+  "3cda3885": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "612d5bf2": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "612d5bf2",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "rclpy.topic_endpoint_info",
-        "obj": "TopicEndpointInfo.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 48,
-                "line": 48
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/topic_endpoint_info.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "66e8ad69": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "66e8ad69",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.executors",
-        "obj": "Executor.can_execute",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 19,
-                "endLine": 623,
-                "line": 623
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "3cda3885",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "rclpy.waitable",
+    "obj": "NumberOfEntities.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 38,
+        "line": 38
+      }
+    ],
+    "path": "rclpy/rclpy/waitable.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/waitable.py"
+  },
+  "41eb0e7a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "67955093": {
-        "additionalInfo": {
-            "callString": "self.get_parameter(name)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 3
-        },
-        "confidence": "HIGH",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "67955093",
-        "message": "Repeated function call detected (3/2). Consider caching the result: self.get_parameter(name)",
-        "messageId": "CRC001",
-        "module": "node",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 28,
-                "endColumn": 52,
-                "endLine": 1484,
-                "line": 1484
-            },
-            {
-                "column": 15,
-                "endColumn": 39,
-                "endLine": 1505,
-                "line": 1505
-            },
-            {
-                "column": 23,
-                "endColumn": 47,
-                "endLine": 1479,
-                "line": 1479
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "70885f6c": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "70885f6c",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.lifecycle.managed_entity",
-        "obj": "ManagedEntity.on_cleanup",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 18,
-                "endLine": 34,
-                "line": 34
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "41eb0e7a",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.lifecycle.managed_entity",
+    "obj": "ManagedEntity.on_shutdown",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 19,
+        "endLine": 38,
+        "line": 38
+      }
+    ],
+    "path": "rclpy/rclpy/lifecycle/managed_entity.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py"
+  },
+  "43fc853c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "798c55cf": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "798c55cf",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.logging_service",
-        "obj": "LoggingService._set_logger_levels",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 61,
-                "line": 61
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/logging_service.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "7b9000bb": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7b9000bb",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "rclpy.parameter_client",
-        "obj": "AsyncParameterClient.on_parameter_event",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 355,
-                "line": 355
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/parameter_client.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "43fc853c",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.executors",
+    "obj": "Executor._take_guard_condition",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 29,
+        "endLine": 549,
+        "line": 549
+      }
+    ],
+    "path": "rclpy/rclpy/executors.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py"
+  },
+  "44a4804d": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "7d9c0ef3": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7d9c0ef3",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "rclpy.subscription",
-        "obj": "Subscription.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 46,
-                "line": 46
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/subscription.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "7e22f268": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "7e22f268",
-        "message": "Too many arguments (13/6)",
-        "messageId": "R0913",
-        "module": "rclpy.node",
-        "obj": "Node.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 135,
-                "line": 135
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "44a4804d",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.executors",
+    "obj": "Executor._take_service",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 21,
+        "endLine": 526,
+        "line": 526
+      }
+    ],
+    "path": "rclpy/rclpy/executors.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py"
+  },
+  "50ac80ed": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "842f80e3": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "842f80e3",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "rclpy.parameter_event_handler",
-        "obj": "ParameterEventHandler.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 183,
-                "line": 183
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/parameter_event_handler.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "8527f55e": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8527f55e",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.logging_service",
-        "obj": "LoggingService._get_logger_levels",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 48,
-                "line": 48
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/logging_service.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "50ac80ed",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "rclpy.event_handler",
+    "obj": "PublisherEventCallbacks.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 309,
+        "line": 309
+      }
+    ],
+    "path": "rclpy/rclpy/event_handler.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/event_handler.py"
+  },
+  "56c24f1c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "8560f21e": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8560f21e",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "rclpy.node",
-        "obj": "Node.create_subscription",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 27,
-                "endLine": 1646,
-                "line": 1646
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "8b0f857a": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "8b0f857a",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "rclpy.event_handler",
-        "obj": "SubscriptionEventCallbacks.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 188,
-                "line": 188
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/event_handler.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "56c24f1c",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "rclpy.client",
+    "obj": "Client.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 40,
+        "line": 40
+      }
+    ],
+    "path": "rclpy/rclpy/client.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/client.py"
+  },
+  "60382769": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "940b49b6": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "940b49b6",
-        "message": "Too many arguments (10/6)",
-        "messageId": "R0913",
-        "module": "rclpy.qos",
-        "obj": "QoSProfile.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 75,
-                "line": 75
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/qos.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "a6555b57": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a6555b57",
-        "message": "Too many arguments (15/6)",
-        "messageId": "R0913",
-        "module": "rclpy.action.server",
-        "obj": "ActionServer.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 231,
-                "line": 231
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/action/server.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "60382769",
+    "message": "Too many arguments (10/6)",
+    "messageId": "R0913",
+    "module": "rclpy.action.client",
+    "obj": "ActionClient.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 169,
+        "line": 169
+      }
+    ],
+    "path": "rclpy/rclpy/action/client.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/action/client.py"
+  },
+  "612d5bf2": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "b9d306ea": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b9d306ea",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.lifecycle.managed_entity",
-        "obj": "ManagedEntity.on_activate",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 19,
-                "endLine": 42,
-                "line": 42
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "bc8aed24": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "bc8aed24",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.lifecycle.managed_entity",
-        "obj": "ManagedEntity.on_deactivate",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 21,
-                "endLine": 46,
-                "line": 46
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "612d5bf2",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "rclpy.topic_endpoint_info",
+    "obj": "TopicEndpointInfo.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 48,
+        "line": 48
+      }
+    ],
+    "path": "rclpy/rclpy/topic_endpoint_info.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/topic_endpoint_info.py"
+  },
+  "66e8ad69": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "c299e819": {
-        "additionalInfo": {
-            "callString": "time.monotonic()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "c299e819",
-        "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
-        "messageId": "CRC001",
-        "module": "executors",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 20,
-                "endColumn": 36,
-                "endLine": 370,
-                "line": 370
-            },
-            {
-                "column": 22,
-                "endColumn": 38,
-                "endLine": 381,
-                "line": 381
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "cf07247e": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "cf07247e",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.executors",
-        "obj": "Executor._take_subscription",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 26,
-                "endLine": 470,
-                "line": 470
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "66e8ad69",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.executors",
+    "obj": "Executor.can_execute",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 19,
+        "endLine": 623,
+        "line": 623
+      }
+    ],
+    "path": "rclpy/rclpy/executors.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py"
+  },
+  "67955093": {
+    "additionalInfo": {
+      "callString": "self.get_parameter(name)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 3
     },
-    "d2451170": {
-        "additionalInfo": {
-            "callString": "os.path.realpath(inspect.getframeinfo(frame).filename)",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "d2451170",
-        "message": "Repeated function call detected (2/2). Consider caching the result: os.path.realpath(inspect.getframeinfo(frame).filename)",
-        "messageId": "CRC001",
-        "module": "rcutils_logger",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 16,
-                "endColumn": 70,
-                "endLine": 64,
-                "line": 64
-            },
-            {
-                "column": 20,
-                "endColumn": 74,
-                "endLine": 71,
-                "line": 71
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/impl/rcutils_logger.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
-    "dba327f8": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "dba327f8",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.lifecycle.managed_entity",
-        "obj": "ManagedEntity.on_error",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 50,
-                "line": 50
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "67955093",
+    "message": "Repeated function call detected (3/2). Consider caching the result: self.get_parameter(name)",
+    "messageId": "CRC001",
+    "module": "node",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 28,
+        "endColumn": 52,
+        "endLine": 1484,
+        "line": 1484
+      },
+      {
+        "column": 15,
+        "endColumn": 39,
+        "endLine": 1505,
+        "line": 1505
+      },
+      {
+        "column": 23,
+        "endColumn": 47,
+        "endLine": 1479,
+        "line": 1479
+      }
+    ],
+    "path": "rclpy/rclpy/node.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py"
+  },
+  "70885f6c": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "e1bcd7f4": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e1bcd7f4",
-        "message": "Too many arguments (7/6)",
-        "messageId": "R0913",
-        "module": "rclpy.timer",
-        "obj": "Timer.__init__",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 16,
-                "endLine": 68,
-                "line": 68
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/timer.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "e6d0ae6f": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e6d0ae6f",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.node",
-        "obj": "Node._validate_qos_or_depth_parameter",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 40,
-                "endLine": 1517,
-                "line": 1517
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "70885f6c",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.lifecycle.managed_entity",
+    "obj": "ManagedEntity.on_cleanup",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 18,
+        "endLine": 34,
+        "line": 34
+      }
+    ],
+    "path": "rclpy/rclpy/lifecycle/managed_entity.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py"
+  },
+  "798c55cf": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "e833e26b": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "e833e26b",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "server",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 30,
-                "endColumn": 67,
-                "endLine": 345,
-                "line": 345
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/action/server.py",
-        "symbol": "long-message-chain",
-        "type": "convention"
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "ea8ce0e5": {
-        "additionalInfo": {
-            "callString": "time.time()",
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": 2
-        },
-        "confidence": "MEDIUM",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ea8ce0e5",
-        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
-        "messageId": "CRC001",
-        "module": "node",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 16,
-                "endColumn": 27,
-                "endLine": 2368,
-                "line": 2368
-            },
-            {
-                "column": 14,
-                "endColumn": 25,
-                "endLine": 2372,
-                "line": 2372
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance"
+    "id": "798c55cf",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.logging_service",
+    "obj": "LoggingService._set_logger_levels",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 26,
+        "endLine": 61,
+        "line": 61
+      }
+    ],
+    "path": "rclpy/rclpy/logging_service.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/logging_service.py"
+  },
+  "7b9000bb": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "eafe146d": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "eafe146d",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.executors",
-        "obj": "Executor._take_timer",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 19,
-                "endLine": 425,
-                "line": 425
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "eccc10f7": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "eccc10f7",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.lifecycle.managed_entity",
-        "obj": "ManagedEntity.on_configure",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 20,
-                "endLine": 30,
-                "line": 30
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
+    "id": "7b9000bb",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "rclpy.parameter_client",
+    "obj": "AsyncParameterClient.on_parameter_event",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 26,
+        "endLine": 355,
+        "line": 355
+      }
+    ],
+    "path": "rclpy/rclpy/parameter_client.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/parameter_client.py"
+  },
+  "7d9c0ef3": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "ef9b93ad": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "ef9b93ad",
-        "message": "Too many arguments (12/6)",
-        "messageId": "R0913",
-        "module": "rclpy",
-        "obj": "create_node",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 15,
-                "endLine": 214,
-                "line": 214
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/__init__.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
     },
-    "f37b5895": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f37b5895",
-        "message": "Too many arguments (8/6)",
-        "messageId": "R0913",
-        "module": "rclpy.node",
-        "obj": "Node.create_publisher",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 24,
-                "endLine": 1572,
-                "line": 1572
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor"
+    "id": "7d9c0ef3",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "rclpy.subscription",
+    "obj": "Subscription.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 46,
+        "line": 46
+      }
+    ],
+    "path": "rclpy/rclpy/subscription.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/subscription.py"
+  },
+  "7e22f268": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
     },
-    "f8e5eafb": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "INFERENCE",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "f8e5eafb",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "rclpy.node",
-        "obj": "Node.handle",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 14,
-                "endLine": 362,
-                "line": 362
-            }
-        ],
-        "path": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py",
-        "symbol": "no-self-use",
-        "type": "refactor"
-    }
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "7e22f268",
+    "message": "Too many arguments (13/6)",
+    "messageId": "R0913",
+    "module": "rclpy.node",
+    "obj": "Node.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 135,
+        "line": 135
+      }
+    ],
+    "path": "rclpy/rclpy/node.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py"
+  },
+  "842f80e3": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "842f80e3",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "rclpy.parameter_event_handler",
+    "obj": "ParameterEventHandler.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 183,
+        "line": 183
+      }
+    ],
+    "path": "rclpy/rclpy/parameter_event_handler.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/parameter_event_handler.py"
+  },
+  "8527f55e": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8527f55e",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.logging_service",
+    "obj": "LoggingService._get_logger_levels",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 26,
+        "endLine": 48,
+        "line": 48
+      }
+    ],
+    "path": "rclpy/rclpy/logging_service.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/logging_service.py"
+  },
+  "8560f21e": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8560f21e",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "rclpy.node",
+    "obj": "Node.create_subscription",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 27,
+        "endLine": 1646,
+        "line": 1646
+      }
+    ],
+    "path": "rclpy/rclpy/node.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py"
+  },
+  "8b0f857a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8b0f857a",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "rclpy.event_handler",
+    "obj": "SubscriptionEventCallbacks.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 188,
+        "line": 188
+      }
+    ],
+    "path": "rclpy/rclpy/event_handler.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/event_handler.py"
+  },
+  "940b49b6": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "940b49b6",
+    "message": "Too many arguments (10/6)",
+    "messageId": "R0913",
+    "module": "rclpy.qos",
+    "obj": "QoSProfile.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 75,
+        "line": 75
+      }
+    ],
+    "path": "rclpy/rclpy/qos.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/qos.py"
+  },
+  "a6555b57": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a6555b57",
+    "message": "Too many arguments (15/6)",
+    "messageId": "R0913",
+    "module": "rclpy.action.server",
+    "obj": "ActionServer.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 231,
+        "line": 231
+      }
+    ],
+    "path": "rclpy/rclpy/action/server.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/action/server.py"
+  },
+  "b9d306ea": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b9d306ea",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.lifecycle.managed_entity",
+    "obj": "ManagedEntity.on_activate",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 19,
+        "endLine": 42,
+        "line": 42
+      }
+    ],
+    "path": "rclpy/rclpy/lifecycle/managed_entity.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py"
+  },
+  "bc8aed24": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "bc8aed24",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.lifecycle.managed_entity",
+    "obj": "ManagedEntity.on_deactivate",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 21,
+        "endLine": 46,
+        "line": 46
+      }
+    ],
+    "path": "rclpy/rclpy/lifecycle/managed_entity.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py"
+  },
+  "c299e819": {
+    "additionalInfo": {
+      "callString": "time.monotonic()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "c299e819",
+    "message": "Repeated function call detected (2/2). Consider caching the result: time.monotonic()",
+    "messageId": "CRC001",
+    "module": "executors",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 20,
+        "endColumn": 36,
+        "endLine": 370,
+        "line": 370
+      },
+      {
+        "column": 22,
+        "endColumn": 38,
+        "endLine": 381,
+        "line": 381
+      }
+    ],
+    "path": "rclpy/rclpy/executors.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py"
+  },
+  "cf07247e": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "cf07247e",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.executors",
+    "obj": "Executor._take_subscription",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 26,
+        "endLine": 470,
+        "line": 470
+      }
+    ],
+    "path": "rclpy/rclpy/executors.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py"
+  },
+  "d2451170": {
+    "additionalInfo": {
+      "callString": "os.path.realpath(inspect.getframeinfo(frame).filename)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d2451170",
+    "message": "Repeated function call detected (2/2). Consider caching the result: os.path.realpath(inspect.getframeinfo(frame).filename)",
+    "messageId": "CRC001",
+    "module": "rcutils_logger",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 16,
+        "endColumn": 70,
+        "endLine": 64,
+        "line": 64
+      },
+      {
+        "column": 20,
+        "endColumn": 74,
+        "endLine": 71,
+        "line": 71
+      }
+    ],
+    "path": "rclpy/rclpy/impl/rcutils_logger.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/impl/rcutils_logger.py"
+  },
+  "dba327f8": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "dba327f8",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.lifecycle.managed_entity",
+    "obj": "ManagedEntity.on_error",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 50,
+        "line": 50
+      }
+    ],
+    "path": "rclpy/rclpy/lifecycle/managed_entity.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py"
+  },
+  "e1bcd7f4": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e1bcd7f4",
+    "message": "Too many arguments (7/6)",
+    "messageId": "R0913",
+    "module": "rclpy.timer",
+    "obj": "Timer.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 68,
+        "line": 68
+      }
+    ],
+    "path": "rclpy/rclpy/timer.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/timer.py"
+  },
+  "e6d0ae6f": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e6d0ae6f",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.node",
+    "obj": "Node._validate_qos_or_depth_parameter",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 40,
+        "endLine": 1517,
+        "line": 1517
+      }
+    ],
+    "path": "rclpy/rclpy/node.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py"
+  },
+  "e833e26b": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e833e26b",
+    "message": "Method chain too long (3/3)",
+    "messageId": "LMC001",
+    "module": "server",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 30,
+        "endColumn": 67,
+        "endLine": 345,
+        "line": 345
+      }
+    ],
+    "path": "rclpy/rclpy/action/server.py",
+    "symbol": "long-message-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/action/server.py"
+  },
+  "ea8ce0e5": {
+    "additionalInfo": {
+      "callString": "time.time()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ea8ce0e5",
+    "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+    "messageId": "CRC001",
+    "module": "node",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 16,
+        "endColumn": 27,
+        "endLine": 2368,
+        "line": 2368
+      },
+      {
+        "column": 14,
+        "endColumn": 25,
+        "endLine": 2372,
+        "line": 2372
+      }
+    ],
+    "path": "rclpy/rclpy/node.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py"
+  },
+  "eafe146d": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "eafe146d",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.executors",
+    "obj": "Executor._take_timer",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 19,
+        "endLine": 425,
+        "line": 425
+      }
+    ],
+    "path": "rclpy/rclpy/executors.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/executors.py"
+  },
+  "eccc10f7": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "eccc10f7",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.lifecycle.managed_entity",
+    "obj": "ManagedEntity.on_configure",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 20,
+        "endLine": 30,
+        "line": 30
+      }
+    ],
+    "path": "rclpy/rclpy/lifecycle/managed_entity.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/lifecycle/managed_entity.py"
+  },
+  "ef9b93ad": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "ef9b93ad",
+    "message": "Too many arguments (12/6)",
+    "messageId": "R0913",
+    "module": "rclpy",
+    "obj": "create_node",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 15,
+        "endLine": 214,
+        "line": 214
+      }
+    ],
+    "path": "rclpy/rclpy/__init__.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/__init__.py"
+  },
+  "f37b5895": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f37b5895",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "rclpy.node",
+    "obj": "Node.create_publisher",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 24,
+        "endLine": 1572,
+        "line": 1572
+      }
+    ],
+    "path": "rclpy/rclpy/node.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py"
+  },
+  "f8e5eafb": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f8e5eafb",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "rclpy.node",
+    "obj": "Node.handle",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 14,
+        "endLine": 362,
+        "line": 362
+      }
+    ],
+    "path": "rclpy/rclpy/node.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/rclpy/rclpy/rclpy/node.py"
+  }
 }

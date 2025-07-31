@@ -1,0 +1,20 @@
+diff --git a/sklearn/linear_model/_linear_loss.py b/sklearn/linear_model/_linear_loss.py
+index 9213008a19..45b009968d 100644
+--- a/sklearn/linear_model/_linear_loss.py
++++ b/sklearn/linear_model/_linear_loss.py
+@@ -5,6 +5,7 @@ Loss functions for linear models with raw_prediction = X @ coef
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import numpy as np
+ from scipy import sparse
+ 
+@@ -414,6 +415,7 @@ class LinearModelLoss:
+             else:
+                 return grad
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_a4344cb3', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/a4344cb3.csv')
+     def gradient_hessian(
+         self,
+         coef,

@@ -205,7 +205,13 @@ def update_selected_config(output: dict[str, dict[str, list[str]]]):
     else:
         config: dict[Any, Any] = {"repos": [repo for repo in output.keys()]}
 
-    config["smells"] = defaultdict_to_dict(output)
+    if not config.get("smells"):
+        config["smells"] = defaultdict_to_dict(output)
+    else:
+        # Merge output into existing smells, overwriting same keys
+        existing_smells = config["smells"] or {}
+        merged_smells = {**existing_smells, **defaultdict_to_dict(output)}
+        config["smells"] = merged_smells
 
     with SELECTED_CONFIG_PATH.open("w") as f:
         yaml.dump(config, f)

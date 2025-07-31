@@ -1,0 +1,77 @@
+diff --git a/sklearn/utils/_testing.py b/sklearn/utils/_testing.py
+index 6582bb7636..94e3560d76 100644
+--- a/sklearn/utils/_testing.py
++++ b/sklearn/utils/_testing.py
+@@ -3,6 +3,7 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import atexit
+ import contextlib
+ import functools
+@@ -656,32 +657,34 @@ def _get_diff_msg(docstrings_grouped):
+     of objects with that docstring. Objects with the same type/desc docstring are
+     thus grouped together.
+     """
+-    msg_diff = ""
++    msg_diff = []
+     ref_str = ""
+     ref_group = []
+-    for docstring, group in docstrings_grouped.items():
+-        if not ref_str and not ref_group:
+-            ref_str += docstring
+-            ref_group.extend(group)
+-        diff = list(
+-            context_diff(
+-                ref_str.split(),
+-                docstring.split(),
+-                fromfile=str(ref_group),
+-                tofile=str(group),
+-                n=8,
++    with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_SCL001_b63a56a5', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/string-concat-loop/b63a56a5_refactored.csv') as tracker:
++        for docstring, group in docstrings_grouped.items():
++            if not ref_str and not ref_group:
++                ref_str += docstring
++                ref_group.extend(group)
++            diff = list(
++                context_diff(
++                    ref_str.split(),
++                    docstring.split(),
++                    fromfile=str(ref_group),
++                    tofile=str(group),
++                    n=8,
++                )
+             )
+-        )
+-        # Add header
+-        msg_diff += "".join((diff[:3]))
+-        # Group consecutive 'diff' words to shorten error message
+-        for start, group in groupby(diff[3:], key=_diff_key):
+-            if start is None:
+-                msg_diff += "\n" + "\n".join(group)
+-            else:
+-                msg_diff += "\n" + start + " ".join(word[2:] for word in group)
+-        # Add new lines at end of diff, to separate comparisons
+-        msg_diff += "\n\n"
++            # Add header
++            msg_diff.append(''.join(diff[:3]))
++            # Group consecutive 'diff' words to shorten error message
++            for start, group in groupby(diff[3:], key=_diff_key):
++                if start is None:
++                    msg_diff.append('\n' + '\n'.join(group))
++                else:
++                    msg_diff += "\n" + start + " ".join(word[2:] for word in group)
++            # Add new lines at end of diff, to separate comparisons
++            msg_diff.append('\n\n')
++        msg_diff = ''.join(msg_diff)
+     return msg_diff
+ 
+ 
+@@ -1451,4 +1454,4 @@ def turn_warnings_into_errors():
+             warning_info.action,
+             message=warning_info.message,
+             category=warning_info.category,
+-        )
++        )
+\ No newline at end of file

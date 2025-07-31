@@ -1,0 +1,30 @@
+diff --git a/sklearn/utils/validation.py b/sklearn/utils/validation.py
+index d766ad1654..4bd5aacc82 100644
+--- a/sklearn/utils/validation.py
++++ b/sklearn/utils/validation.py
+@@ -3,6 +3,7 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import numbers
+ import operator
+ import sys
+@@ -2777,11 +2778,12 @@ def _check_feature_names(estimator, X, *, reset):
+         def add_names(names):
+             output = ""
+             max_n_names = 5
+-            for i, name in enumerate(names):
+-                if i >= max_n_names:
+-                    output += "- ...\n"
+-                    break
+-                output += f"- {name}\n"
++            with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_SCL001_d880725b', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/string-concat-loop/d880725b.csv') as tracker:
++                for i, name in enumerate(names):
++                    if i >= max_n_names:
++                        output += "- ...\n"
++                        break
++                    output += f"- {name}\n"
+             return output
+ 
+         if unexpected_names:

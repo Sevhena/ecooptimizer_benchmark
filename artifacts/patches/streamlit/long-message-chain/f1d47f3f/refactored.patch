@@ -1,0 +1,25 @@
+diff --git a/lib/streamlit/dataframe_util.py b/lib/streamlit/dataframe_util.py
+index 4538e8290..c9744dfb3 100644
+--- a/lib/streamlit/dataframe_util.py
++++ b/lib/streamlit/dataframe_util.py
+@@ -14,6 +14,7 @@
+ 
+ """A bunch of useful utilities for dealing with dataframes."""
+ 
++from codecarbon import EmissionsTracker
+ from __future__ import annotations
+ 
+ import contextlib
+@@ -1381,7 +1382,11 @@ def convert_pandas_df_to_data_format(
+         return _unify_missing_values(df).to_dict(orient="records")
+     if data_format == DataFormat.LIST_OF_ROWS:
+         # to_numpy converts the dataframe to a list of rows
+-        return _unify_missing_values(df).to_numpy().tolist()
++        with EmissionsTracker(project_name='streamlit-benchmark', experiment_id='streamlit_LMC001_f1d47f3f', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-message-chain/f1d47f3f_refactored.csv') as tracker:
++            intermediate_0 = _unify_missing_values(df)
++            intermediate_1 = intermediate_0.to_numpy()
++            _carbon_wrapped_30631138 = intermediate_1.tolist()
++        return _carbon_wrapped_30631138
+     if data_format == DataFormat.COLUMN_INDEX_MAPPING:
+         return _unify_missing_values(df).to_dict(orient="dict")
+     if data_format == DataFormat.COLUMN_VALUE_MAPPING:

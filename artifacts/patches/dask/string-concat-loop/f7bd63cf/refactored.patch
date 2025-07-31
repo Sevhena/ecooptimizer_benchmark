@@ -1,0 +1,38 @@
+diff --git a/dask/array/einsumfuncs.py b/dask/array/einsumfuncs.py
+index 1d55f4e87..8544a3d2d 100644
+--- a/dask/array/einsumfuncs.py
++++ b/dask/array/einsumfuncs.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ from __future__ import annotations
+ 
+ import math
+@@ -159,13 +160,15 @@ def parse_einsum_input(operands):
+             subscripts += "->" + output_sub.replace("...", out_ellipse)
+         else:
+             # Special care for outputless ellipses
+-            output_subscript = ""
++            output_subscript = []
+             tmp_subscripts = subscripts.replace(",", "")
+-            for s in sorted(set(tmp_subscripts)):
+-                if s not in einsum_symbols_set:
+-                    raise ValueError("Character %s is not a valid symbol." % s)
+-                if tmp_subscripts.count(s) == 1:
+-                    output_subscript += s
++            with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_SCL001_f7bd63cf', output_file='/root/ecooptimizer_benchmark/emissions/dask/string-concat-loop/f7bd63cf_refactored.csv') as tracker:
++                for s in sorted(set(tmp_subscripts)):
++                    if s not in einsum_symbols_set:
++                        raise ValueError("Character %s is not a valid symbol." % s)
++                    if tmp_subscripts.count(s) == 1:
++                        output_subscript.append(s)
++                output_subscript = ''.join(output_subscript)
+             normal_inds = "".join(sorted(set(output_subscript) - set(out_ellipse)))
+ 
+             subscripts += "->" + out_ellipse + normal_inds
+@@ -292,4 +295,4 @@ def einsum(*operands, dtype=None, optimize=False, split_every=None, **kwargs):
+             axis=list(range(size, size + ncontract_inds)), split_every=split_every
+         )
+ 
+-    return result
++    return result
+\ No newline at end of file

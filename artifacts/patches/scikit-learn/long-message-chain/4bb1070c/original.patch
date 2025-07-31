@@ -1,0 +1,54 @@
+diff --git a/sklearn/model_selection/_validation.py b/sklearn/model_selection/_validation.py
+index 8b70bf4260..24aec31f44 100644
+--- a/sklearn/model_selection/_validation.py
++++ b/sklearn/model_selection/_validation.py
+@@ -6,6 +6,7 @@ functions to validate the model.
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import numbers
+ import time
+ import warnings
+@@ -1976,23 +1977,24 @@ def learning_curve(
+ 
+     if _routing_enabled():
+         router = (
+-            MetadataRouter(owner="learning_curve")
+-            .add(
+-                estimator=estimator,
+-                # TODO(SLEP6): also pass metadata to the predict method for
+-                # scoring?
+-                method_mapping=MethodMapping()
+-                .add(caller="fit", callee="fit")
+-                .add(caller="fit", callee="partial_fit"),
+-            )
+-            .add(
+-                splitter=cv,
+-                method_mapping=MethodMapping().add(caller="fit", callee="split"),
+-            )
+-            .add(
+-                scorer=scorer,
+-                method_mapping=MethodMapping().add(caller="fit", callee="score"),
+-            )
++            with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_LMC001_4bb1070c', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/long-message-chain/4bb1070c.csv') as tracker:
++                MetadataRouter(owner="learning_curve")
++                .add(
++                    estimator=estimator,
++                    # TODO(SLEP6): also pass metadata to the predict method for
++                    # scoring?
++                    method_mapping=MethodMapping()
++                    .add(caller="fit", callee="fit")
++                    .add(caller="fit", callee="partial_fit"),
++                )
++                .add(
++                    splitter=cv,
++                    method_mapping=MethodMapping().add(caller="fit", callee="split"),
++                )
++                .add(
++                    scorer=scorer,
++                    method_mapping=MethodMapping().add(caller="fit", callee="score"),
++                )
+         )
+ 
+         try:

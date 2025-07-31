@@ -1,0 +1,54 @@
+diff --git a/django/core/management/base.py b/django/core/management/base.py
+index 12b4b42f61..129c599abd 100644
+--- a/django/core/management/base.py
++++ b/django/core/management/base.py
+@@ -3,6 +3,7 @@ Base classes for writing management commands (named commands which can
+ be executed through ``django-admin`` or ``manage.py``).
+ """
+ 
++from codecarbon import EmissionsTracker
+ import argparse
+ import os
+ import sys
+@@ -531,19 +532,22 @@ class BaseCommand:
+                 (debugs, "DEBUGS"),
+             ]
+ 
+-            for issues, group_name in sorted_issues:
+-                if issues:
+-                    visible_issue_count += len(issues)
+-                    formatted = (
+-                        (
+-                            self.style.ERROR(str(e))
+-                            if e.is_serious()
+-                            else self.style.WARNING(str(e))
++            with EmissionsTracker(project_name='django-benchmark', experiment_id='django_SCL001_4ff23e74', output_file='/root/ecooptimizer_benchmark/emissions/django/string-concat-loop/4ff23e74_refactored.csv') as tracker:
++                body = [body]
++                for issues, group_name in sorted_issues:
++                    if issues:
++                        visible_issue_count += len(issues)
++                        formatted = (
++                            (
++                                self.style.ERROR(str(e))
++                                if e.is_serious()
++                                else self.style.WARNING(str(e))
++                            )
++                            for e in issues
+                         )
+-                        for e in issues
+-                    )
+-                    formatted = "\n".join(sorted(formatted))
+-                    body += "\n%s:\n%s\n" % (group_name, formatted)
++                        formatted = "\n".join(sorted(formatted))
++                        body.append('\n%s:\n%s\n' % (group_name, formatted))
++                body = ''.join(body)
+ 
+         if visible_issue_count:
+             header = "System check identified some issues:\n"
+@@ -704,4 +708,4 @@ class LabelCommand(BaseCommand):
+         """
+         raise NotImplementedError(
+             "subclasses of LabelCommand must provide a handle_label() method"
+-        )
++        )
+\ No newline at end of file

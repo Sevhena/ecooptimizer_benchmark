@@ -10,6 +10,7 @@ streamlit:
   target: "streamlit/lib"
   patterns_to_exclude:
     - "**/testing/**"
+    - "**/tests/**"
 scikit-learn:
   venv_command: ""
   test_command: ""

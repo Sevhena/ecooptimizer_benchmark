@@ -1,0 +1,19 @@
+diff --git a/dask/array/einsumfuncs.py b/dask/array/einsumfuncs.py
+index 1d55f4e87..e39b82e78 100644
+--- a/dask/array/einsumfuncs.py
++++ b/dask/array/einsumfuncs.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ from __future__ import annotations
+ 
+ import math
+@@ -113,7 +114,8 @@ def parse_einsum_input(operands):
+ 
+     # Parse ellipses
+     if "." in subscripts:
+-        used = subscripts.replace(".", "").replace(",", "").replace("->", "")
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LMC001_6fb2eba3', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/6fb2eba3.csv') as tracker:
++            used = subscripts.replace(".", "").replace(",", "").replace("->", "")
+         unused = list(einsum_symbols_set - set(used))
+         ellipse_inds = "".join(unused)
+         longest = 0

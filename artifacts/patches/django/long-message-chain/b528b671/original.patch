@@ -1,0 +1,25 @@
+diff --git a/django/contrib/auth/migrations/0011_update_proxy_permissions.py b/django/contrib/auth/migrations/0011_update_proxy_permissions.py
+index aa6ddd50c5..76a51f2de6 100644
+--- a/django/contrib/auth/migrations/0011_update_proxy_permissions.py
++++ b/django/contrib/auth/migrations/0011_update_proxy_permissions.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ import sys
+ 
+ from django.core.management.color import color_style
+@@ -44,10 +45,11 @@ def update_proxy_model_permissions(apps, schema_editor, reverse=False):
+         new_content_type = concrete_content_type if reverse else proxy_content_type
+         try:
+             with transaction.atomic(using=alias):
+-                Permission.objects.using(alias).filter(
+-                    permissions_query,
+-                    content_type=old_content_type,
+-                ).update(content_type=new_content_type)
++                with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LMC001_b528b671', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/b528b671.csv') as tracker:
++                    Permission.objects.using(alias).filter(
++                        permissions_query,
++                        content_type=old_content_type,
++                    ).update(content_type=new_content_type)
+         except IntegrityError:
+             old = "{}_{}".format(old_content_type.app_label, old_content_type.model)
+             new = "{}_{}".format(new_content_type.app_label, new_content_type.model)

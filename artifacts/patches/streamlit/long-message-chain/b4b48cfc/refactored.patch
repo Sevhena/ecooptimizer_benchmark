@@ -1,0 +1,25 @@
+diff --git a/lib/streamlit/commands/page_config.py b/lib/streamlit/commands/page_config.py
+index a18e80e3c..ac38ead93 100644
+--- a/lib/streamlit/commands/page_config.py
++++ b/lib/streamlit/commands/page_config.py
+@@ -12,6 +12,7 @@
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+ 
++from codecarbon import EmissionsTracker
+ from __future__ import annotations
+ 
+ import random
+@@ -58,7 +59,11 @@ RANDOM_EMOJIS: Final = list(
+ 
+ 
+ def _lower_clean_dict_keys(dict: MenuItems) -> dict[str, Any]:
+-    return {str(k).lower().strip(): v for k, v in dict.items()}
++    with EmissionsTracker(project_name='streamlit-benchmark', experiment_id='streamlit_LMC001_b4b48cfc', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-message-chain/b4b48cfc_refactored.csv') as tracker:
++        intermediate_0 = str(k)
++        intermediate_1 = intermediate_0.lower()
++        _carbon_wrapped_9b1ba88d = intermediate_1.strip()
++    return {_carbon_wrapped_9b1ba88d: v for k, v in dict.items()}
+ 
+ 
+ def _get_favicon_string(page_icon: PageIcon) -> str:

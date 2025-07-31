@@ -1,0 +1,20 @@
+diff --git a/dask/array/core.py b/dask/array/core.py
+index 3f0215ed0..ba7ce1252 100644
+--- a/dask/array/core.py
++++ b/dask/array/core.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ from __future__ import annotations
+ 
+ import contextlib
+@@ -1432,7 +1433,9 @@ class Array(DaskMethodsMixin):
+     )
+     __dask_scheduler__ = staticmethod(DEFAULT_GET)
+ 
+-    def __dask_postcompute__(self):
++    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R6301_70eba4d1', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/70eba4d1_refactored.csv')
++    @staticmethod
++    def __dask_postcompute__():
+         return finalize, ()
+ 
+     def __dask_postpersist__(self):

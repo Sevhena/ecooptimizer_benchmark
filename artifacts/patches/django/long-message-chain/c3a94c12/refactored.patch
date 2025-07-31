@@ -1,0 +1,25 @@
+diff --git a/django/urls/resolvers.py b/django/urls/resolvers.py
+index 13043835dd..2bf09bcf86 100644
+--- a/django/urls/resolvers.py
++++ b/django/urls/resolvers.py
+@@ -6,6 +6,7 @@ a string) and returns a ResolverMatch object which provides access to all
+ attributes of the resolved URL match.
+ """
+ 
++from codecarbon import EmissionsTracker
+ import functools
+ import inspect
+ import re
+@@ -765,7 +766,11 @@ class URLResolver:
+                         continue
+                     candidate_subs = dict(zip(params, args))
+                 else:
+-                    if set(kwargs).symmetric_difference(params).difference(defaults):
++                    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LMC001_c3a94c12', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/c3a94c12_refactored.csv') as tracker:
++                        intermediate_0 = set(kwargs)
++                        intermediate_1 = intermediate_0.symmetric_difference(params)
++                        _carbon_wrapped_8d122a4e = intermediate_1.difference(defaults)
++                    if _carbon_wrapped_8d122a4e:
+                         continue
+                     matches = True
+                     for k, v in defaults.items():

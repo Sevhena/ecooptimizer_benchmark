@@ -1,0 +1,17 @@
+diff --git a/dask/dataframe/io/sql.py b/dask/dataframe/io/sql.py
+index 2df3f6504..8f76faae1 100644
+--- a/dask/dataframe/io/sql.py
++++ b/dask/dataframe/io/sql.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ from __future__ import annotations
+ 
+ import warnings
+@@ -422,6 +423,7 @@ def _to_sql_chunk(d, uri, engine_kwargs=None, **kwargs):
+     return q
+ 
+ 
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_4e24e944', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/4e24e944.csv')
+ def to_sql(
+     df,
+     name: str,

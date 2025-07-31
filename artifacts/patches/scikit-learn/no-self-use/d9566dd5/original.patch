@@ -1,0 +1,20 @@
+diff --git a/sklearn/gaussian_process/kernels.py b/sklearn/gaussian_process/kernels.py
+index 4a0a6ec667..83325bb4ea 100644
+--- a/sklearn/gaussian_process/kernels.py
++++ b/sklearn/gaussian_process/kernels.py
+@@ -11,6 +11,7 @@
+ # The space of hyperparameters can be specified by giving lower und upper
+ # boundaries for the value of each hyperparameter (the search space is thus
+ # rectangular). Instead of specifying bounds, hyperparameters can also be
++from codecarbon import track_emissions
+ # declared to be "fixed", which causes these hyperparameters to be excluded from
+ # optimization.
+ 
+@@ -491,6 +492,7 @@ class StationaryKernelMixin:
+     .. versionadded:: 0.18
+     """
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R6301_d9566dd5', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/no-self-use/d9566dd5.csv')
+     def is_stationary(self):
+         """Returns whether the kernel is stationary."""
+         return True

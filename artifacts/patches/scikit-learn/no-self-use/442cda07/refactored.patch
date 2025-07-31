@@ -1,0 +1,32 @@
+diff --git a/sklearn/ensemble/_forest.py b/sklearn/ensemble/_forest.py
+index 5def6ac608..de0e8f3ce0 100644
+--- a/sklearn/ensemble/_forest.py
++++ b/sklearn/ensemble/_forest.py
+@@ -35,6 +35,7 @@ Single and multi-output problems are both handled.
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import threading
+ from abc import ABCMeta, abstractmethod
+ from numbers import Integral, Real
+@@ -415,7 +416,7 @@ class BaseForest(MultiOutputMixin, BaseEnsemble, metaclass=ABCMeta):
+ 
+         self._n_samples, self.n_outputs_ = y.shape
+ 
+-        y, expanded_class_weight = self._validate_y_class_weight(y)
++        y, expanded_class_weight = BaseForest._validate_y_class_weight(y)
+ 
+         if getattr(y, "dtype", None) != DOUBLE or not y.flags.contiguous:
+             y = np.ascontiguousarray(y, dtype=DOUBLE)
+@@ -621,7 +622,9 @@ class BaseForest(MultiOutputMixin, BaseEnsemble, metaclass=ABCMeta):
+ 
+         return oob_pred
+ 
+-    def _validate_y_class_weight(self, y):
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R6301_442cda07', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/no-self-use/442cda07_refactored.csv')
++    @staticmethod
++    def _validate_y_class_weight(y):
+         # Default implementation
+         return y, None
+ 

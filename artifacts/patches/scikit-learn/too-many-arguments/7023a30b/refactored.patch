@@ -1,0 +1,1443 @@
+diff --git a/benchmarks/bench_plot_nmf.py b/benchmarks/bench_plot_nmf.py
+index 76d1a6de82..0dd0cfec04 100644
+--- a/benchmarks/bench_plot_nmf.py
++++ b/benchmarks/bench_plot_nmf.py
+@@ -25,6 +25,15 @@ from sklearn.utils.extmath import safe_sparse_dot, squared_norm
+ from sklearn.utils.validation import check_is_fitted, check_non_negative
+ 
+ mem = Memory(cachedir=".", verbose=0)
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ ###################
+ # Start of _PGNMF #
+diff --git a/examples/applications/plot_out_of_core_classification.py b/examples/applications/plot_out_of_core_classification.py
+index ad0ff9638e..b3633a3541 100644
+--- a/examples/applications/plot_out_of_core_classification.py
++++ b/examples/applications/plot_out_of_core_classification.py
+@@ -35,6 +35,15 @@ from sklearn.datasets import get_data_home
+ from sklearn.feature_extraction.text import HashingVectorizer
+ from sklearn.linear_model import PassiveAggressiveClassifier, Perceptron, SGDClassifier
+ from sklearn.naive_bayes import MultinomialNB
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _not_in_sphinx():
+diff --git a/examples/svm/plot_rbf_parameters.py b/examples/svm/plot_rbf_parameters.py
+index 356707e2d7..6db5d46fc9 100644
+--- a/examples/svm/plot_rbf_parameters.py
++++ b/examples/svm/plot_rbf_parameters.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """
+ ==================
+ RBF SVM parameters
+diff --git a/sklearn/_loss/loss.py b/sklearn/_loss/loss.py
+index b45ff33226..39380967bb 100644
+--- a/sklearn/_loss/loss.py
++++ b/sklearn/_loss/loss.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """
+ This module contains loss classes suitable for fitting.
+ 
+diff --git a/sklearn/cluster/_agglomerative.py b/sklearn/cluster/_agglomerative.py
+index f068dc9341..1502231649 100644
+--- a/sklearn/cluster/_agglomerative.py
++++ b/sklearn/cluster/_agglomerative.py
+@@ -38,6 +38,15 @@ from ..utils.validation import check_memory, validate_data
+ # mypy error: Module 'sklearn.cluster' has no attribute '_hierarchical_fast'
+ from . import _hierarchical_fast as _hierarchical  # type: ignore[attr-defined]
+ from ._feature_agglomeration import AgglomerationTransform
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ ###############################################################################
+ # For non fully-connected graphs
+diff --git a/sklearn/cluster/_bicluster.py b/sklearn/cluster/_bicluster.py
+index 04a4e68024..9172fc78c4 100644
+--- a/sklearn/cluster/_bicluster.py
++++ b/sklearn/cluster/_bicluster.py
+@@ -19,6 +19,15 @@ from ..utils.validation import assert_all_finite, validate_data
+ from ._kmeans import KMeans, MiniBatchKMeans
+ 
+ __all__ = ["SpectralBiclustering", "SpectralCoclustering"]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _scale_normalize(X):
+diff --git a/sklearn/cluster/_bisect_k_means.py b/sklearn/cluster/_bisect_k_means.py
+index 77e24adbf8..826b9243f1 100644
+--- a/sklearn/cluster/_bisect_k_means.py
++++ b/sklearn/cluster/_bisect_k_means.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """Bisecting K-means clustering."""
+ 
+ # Authors: The scikit-learn developers
+diff --git a/sklearn/cluster/_kmeans.py b/sklearn/cluster/_kmeans.py
+index 11c8561023..676d17ad50 100644
+--- a/sklearn/cluster/_kmeans.py
++++ b/sklearn/cluster/_kmeans.py
+@@ -49,6 +49,15 @@ from ._k_means_elkan import (
+ )
+ from ._k_means_lloyd import lloyd_iter_chunked_dense, lloyd_iter_chunked_sparse
+ from ._k_means_minibatch import _minibatch_update_dense, _minibatch_update_sparse
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ ###############################################################################
+ # Initialization heuristic
+diff --git a/sklearn/covariance/_elliptic_envelope.py b/sklearn/covariance/_elliptic_envelope.py
+index 71fb72ccd6..b041b77bad 100644
+--- a/sklearn/covariance/_elliptic_envelope.py
++++ b/sklearn/covariance/_elliptic_envelope.py
+@@ -1,6 +1,15 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ from numbers import Real
+ 
+ import numpy as np
+diff --git a/sklearn/covariance/_graph_lasso.py b/sklearn/covariance/_graph_lasso.py
+index e946631202..bb58db9a5f 100644
+--- a/sklearn/covariance/_graph_lasso.py
++++ b/sklearn/covariance/_graph_lasso.py
+@@ -5,6 +5,7 @@ estimator.
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import operator
+ import sys
+ import time
+@@ -38,6 +39,15 @@ from ..utils.validation import (
+     validate_data,
+ )
+ from . import EmpiricalCovariance, empirical_covariance, log_likelihood
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ # Helper functions to compute the objective and dual objective functions
+@@ -370,23 +380,17 @@ class BaseGraphicalLasso(EmpiricalCovariance):
+     }
+     _parameter_constraints.pop("store_precision")
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_7023a30b', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/7023a30b_refactored.csv')
+     def __init__(
+         self,
+-        tol=1e-4,
+-        enet_tol=1e-4,
+-        max_iter=100,
+-        mode="cd",
+-        verbose=False,
+-        eps=np.finfo(np.float64).eps,
+-        assume_centered=False,
+-    ):
+-        super().__init__(assume_centered=assume_centered)
+-        self.tol = tol
+-        self.enet_tol = enet_tol
+-        self.max_iter = max_iter
+-        self.mode = mode
+-        self.verbose = verbose
+-        self.eps = eps
++        data_params):
++        super().__init__(data_params.assume_centered=data_params.assume_centered)
++        self.tol = data_params.tol
++        self.enet_tol = data_params.enet_tol
++        self.max_iter = data_params.max_iter
++        self.mode = data_params.mode
++        self.verbose = data_params.verbose
++        self.eps = data_params.eps
+ 
+ 
+ class GraphicalLasso(BaseGraphicalLasso):
+diff --git a/sklearn/covariance/_shrunk_covariance.py b/sklearn/covariance/_shrunk_covariance.py
+index 99d6f70f57..f8e42a1dc7 100644
+--- a/sklearn/covariance/_shrunk_covariance.py
++++ b/sklearn/covariance/_shrunk_covariance.py
+@@ -20,6 +20,15 @@ from ..utils import check_array
+ from ..utils._param_validation import Interval, validate_params
+ from ..utils.validation import validate_data
+ from . import EmpiricalCovariance, empirical_covariance
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _ledoit_wolf(X, *, assume_centered, block_size):
+diff --git a/sklearn/cross_decomposition/_pls.py b/sklearn/cross_decomposition/_pls.py
+index 0bf6ec8f01..65baaa2a5c 100644
+--- a/sklearn/cross_decomposition/_pls.py
++++ b/sklearn/cross_decomposition/_pls.py
+@@ -27,6 +27,15 @@ from ..utils.extmath import svd_flip
+ from ..utils.validation import FLOAT_DTYPES, check_is_fitted, validate_data
+ 
+ __all__ = ["PLSSVD", "PLSCanonical", "PLSRegression"]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _pinv2_old(a):
+diff --git a/sklearn/decomposition/_dict_learning.py b/sklearn/decomposition/_dict_learning.py
+index ae40e28e9f..7013bbbc9f 100644
+--- a/sklearn/decomposition/_dict_learning.py
++++ b/sklearn/decomposition/_dict_learning.py
+@@ -24,6 +24,15 @@ from ..utils._param_validation import Interval, StrOptions, validate_params
+ from ..utils.extmath import _randomized_svd, row_norms, svd_flip
+ from ..utils.parallel import Parallel, delayed
+ from ..utils.validation import check_is_fitted, validate_data
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _check_positive_coding(method, positive):
+diff --git a/sklearn/decomposition/_fastica.py b/sklearn/decomposition/_fastica.py
+index efda7bfca5..225e39c5fe 100644
+--- a/sklearn/decomposition/_fastica.py
++++ b/sklearn/decomposition/_fastica.py
+@@ -26,6 +26,15 @@ from ..utils._param_validation import Interval, Options, StrOptions, validate_pa
+ from ..utils.validation import check_is_fitted, validate_data
+ 
+ __all__ = ["FastICA", "fastica"]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _gs_decorrelation(w, W, j):
+diff --git a/sklearn/decomposition/_nmf.py b/sklearn/decomposition/_nmf.py
+index 4c96353861..15ac289f4e 100644
+--- a/sklearn/decomposition/_nmf.py
++++ b/sklearn/decomposition/_nmf.py
+@@ -37,6 +37,15 @@ from ..utils.validation import (
+ from ._cdnmf_fast import _update_cdnmf_fast
+ 
+ EPSILON = np.finfo(np.float32).eps
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def norm(x):
+diff --git a/sklearn/decomposition/_sparse_pca.py b/sklearn/decomposition/_sparse_pca.py
+index 2717230c9d..5e87ad2d80 100644
+--- a/sklearn/decomposition/_sparse_pca.py
++++ b/sklearn/decomposition/_sparse_pca.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """Matrix factorization with Sparse PCA."""
+ 
+ # Authors: The scikit-learn developers
+diff --git a/sklearn/ensemble/_bagging.py b/sklearn/ensemble/_bagging.py
+index 34b613b152..bb5d88d9f7 100644
+--- a/sklearn/ensemble/_bagging.py
++++ b/sklearn/ensemble/_bagging.py
+@@ -49,6 +49,15 @@ from ._base import BaseEnsemble, _partition_estimators
+ __all__ = ["BaggingClassifier", "BaggingRegressor"]
+ 
+ MAX_INT = np.iinfo(np.int32).max
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _generate_indices(random_state, bootstrap, n_population, n_samples):
+diff --git a/sklearn/ensemble/_forest.py b/sklearn/ensemble/_forest.py
+index 5def6ac608..962ecfce0b 100644
+--- a/sklearn/ensemble/_forest.py
++++ b/sklearn/ensemble/_forest.py
+@@ -86,6 +86,15 @@ __all__ = [
+ ]
+ 
+ MAX_INT = np.iinfo(np.int32).max
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _get_n_samples_bootstrap(n_samples, max_samples):
+diff --git a/sklearn/ensemble/_gb.py b/sklearn/ensemble/_gb.py
+index 55c8e79e06..2a6f7324d1 100644
+--- a/sklearn/ensemble/_gb.py
++++ b/sklearn/ensemble/_gb.py
+@@ -60,6 +60,15 @@ _LOSSES.update(
+         "huber": HuberLoss,
+     }
+ )
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _safe_divide(numerator, denominator):
+diff --git a/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py b/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py
+index 064391abab..aab74e2d4d 100644
+--- a/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py
++++ b/sklearn/ensemble/_hist_gradient_boosting/gradient_boosting.py
+@@ -61,6 +61,15 @@ _LOSSES.update(
+         "quantile": PinballLoss,
+     }
+ )
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _update_leaves_values(loss, grower, y_true, raw_prediction, sample_weight):
+diff --git a/sklearn/ensemble/_iforest.py b/sklearn/ensemble/_iforest.py
+index 4e5287af7f..db304bbc5f 100644
+--- a/sklearn/ensemble/_iforest.py
++++ b/sklearn/ensemble/_iforest.py
+@@ -24,6 +24,15 @@ from ..utils.validation import _num_samples, check_is_fitted, validate_data
+ from ._bagging import BaseBagging
+ 
+ __all__ = ["IsolationForest"]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _parallel_compute_tree_depths(
+diff --git a/sklearn/ensemble/_stacking.py b/sklearn/ensemble/_stacking.py
+index 2894d8f174..4021280e06 100644
+--- a/sklearn/ensemble/_stacking.py
++++ b/sklearn/ensemble/_stacking.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """Stacking classifier and regressor."""
+ 
+ # Authors: The scikit-learn developers
+diff --git a/sklearn/ensemble/_voting.py b/sklearn/ensemble/_voting.py
+index 369d3f0f55..758d77c1c1 100644
+--- a/sklearn/ensemble/_voting.py
++++ b/sklearn/ensemble/_voting.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """
+ Soft Voting/Majority Rule classifier and Voting regressor.
+ 
+diff --git a/sklearn/ensemble/_weight_boosting.py b/sklearn/ensemble/_weight_boosting.py
+index 37c6468a5e..d0405d4050 100644
+--- a/sklearn/ensemble/_weight_boosting.py
++++ b/sklearn/ensemble/_weight_boosting.py
+@@ -316,6 +316,15 @@ class BaseWeightBoosting(BaseEnsemble, metaclass=ABCMeta):
+         tags = super().__sklearn_tags__()
+         tags.input_tags.sparse = True
+         return tags
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _samme_proba(estimator, n_classes, X):
+diff --git a/sklearn/ensemble/tests/test_forest.py b/sklearn/ensemble/tests/test_forest.py
+index 5dec5c7ab9..2c193c5831 100644
+--- a/sklearn/ensemble/tests/test_forest.py
++++ b/sklearn/ensemble/tests/test_forest.py
+@@ -116,6 +116,15 @@ FOREST_ESTIMATORS.update(FOREST_TRANSFORMERS)
+ 
+ FOREST_CLASSIFIERS_REGRESSORS: Dict[str, Any] = FOREST_CLASSIFIERS.copy()
+ FOREST_CLASSIFIERS_REGRESSORS.update(FOREST_REGRESSORS)
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ @pytest.mark.parametrize("name", FOREST_CLASSIFIERS)
+diff --git a/sklearn/exceptions.py b/sklearn/exceptions.py
+index 7db5a2ff04..83deccd57e 100644
+--- a/sklearn/exceptions.py
++++ b/sklearn/exceptions.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """Custom warnings and errors used across scikit-learn."""
+ 
+ # Authors: The scikit-learn developers
+diff --git a/sklearn/externals/_arff.py b/sklearn/externals/_arff.py
+index 7c9d51d070..d0fd247a75 100644
+--- a/sklearn/externals/_arff.py
++++ b/sklearn/externals/_arff.py
+@@ -184,6 +184,15 @@ if TYPE_CHECKING:
+ 
+ else:
+     ArffContainerType = Dict[str, Any]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _build_re_values():
+diff --git a/sklearn/feature_extraction/text.py b/sklearn/feature_extraction/text.py
+index eb3226b01c..30189906d2 100644
+--- a/sklearn/feature_extraction/text.py
++++ b/sklearn/feature_extraction/text.py
+@@ -37,6 +37,15 @@ __all__ = [
+     "strip_accents_unicode",
+     "strip_tags",
+ ]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _preprocess(doc, accent_function=None, lower=False):
+diff --git a/sklearn/feature_selection/_univariate_selection.py b/sklearn/feature_selection/_univariate_selection.py
+index 7671a7ad79..5d0841fa34 100644
+--- a/sklearn/feature_selection/_univariate_selection.py
++++ b/sklearn/feature_selection/_univariate_selection.py
+@@ -17,6 +17,15 @@ from ..utils._param_validation import Interval, StrOptions, validate_params
+ from ..utils.extmath import row_norms, safe_sparse_dot
+ from ..utils.validation import check_is_fitted, validate_data
+ from ._base import SelectorMixin
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _clean_nans(scores):
+diff --git a/sklearn/gaussian_process/kernels.py b/sklearn/gaussian_process/kernels.py
+index 4a0a6ec667..b7b9a86a5a 100644
+--- a/sklearn/gaussian_process/kernels.py
++++ b/sklearn/gaussian_process/kernels.py
+@@ -35,6 +35,15 @@ from ..base import clone
+ from ..exceptions import ConvergenceWarning
+ from ..metrics.pairwise import pairwise_kernels
+ from ..utils.validation import _num_samples
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _check_length_scale(X, length_scale):
+diff --git a/sklearn/impute/_base.py b/sklearn/impute/_base.py
+index 689ba8acee..a9700363b3 100644
+--- a/sklearn/impute/_base.py
++++ b/sklearn/impute/_base.py
+@@ -24,6 +24,15 @@ from ..utils.validation import (
+     check_is_fitted,
+     validate_data,
+ )
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _check_inputs_dtype(X, missing_values):
+diff --git a/sklearn/impute/_iterative.py b/sklearn/impute/_iterative.py
+index ddae5373c5..06fbc6c1d9 100644
+--- a/sklearn/impute/_iterative.py
++++ b/sklearn/impute/_iterative.py
+@@ -35,6 +35,15 @@ from ._base import SimpleImputer, _BaseImputer, _check_inputs_dtype
+ _ImputerTriplet = namedtuple(
+     "_ImputerTriplet", ["feat_idx", "neighbor_feat_idx", "estimator"]
+ )
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _assign_where(X1, X2, cond):
+diff --git a/sklearn/impute/_knn.py b/sklearn/impute/_knn.py
+index 1b7ef06edc..a2c1fa3e23 100644
+--- a/sklearn/impute/_knn.py
++++ b/sklearn/impute/_knn.py
+@@ -1,6 +1,15 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ from numbers import Integral
+ 
+ import numpy as np
+diff --git a/sklearn/linear_model/_coordinate_descent.py b/sklearn/linear_model/_coordinate_descent.py
+index 62096133ad..2f7dc08870 100644
+--- a/sklearn/linear_model/_coordinate_descent.py
++++ b/sklearn/linear_model/_coordinate_descent.py
+@@ -43,6 +43,15 @@ from ..utils.validation import (
+ # mypy error: Module 'sklearn.linear_model' has no attribute '_cd_fast'
+ from . import _cd_fast as cd_fast  # type: ignore[attr-defined]
+ from ._base import LinearModel, _pre_fit, _preprocess_data
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _set_order(X, y, order="C"):
+diff --git a/sklearn/linear_model/_glm/glm.py b/sklearn/linear_model/_glm/glm.py
+index 7f138f420d..44c7a42668 100644
+--- a/sklearn/linear_model/_glm/glm.py
++++ b/sklearn/linear_model/_glm/glm.py
+@@ -1,6 +1,15 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """
+ Generalized Linear Models with Exponential Dispersion Family
+ """
+diff --git a/sklearn/linear_model/_least_angle.py b/sklearn/linear_model/_least_angle.py
+index 4bffe5f6e8..a69de1bb2d 100644
+--- a/sklearn/linear_model/_least_angle.py
++++ b/sklearn/linear_model/_least_angle.py
+@@ -39,6 +39,15 @@ from ..utils.validation import validate_data
+ from ._base import LinearModel, LinearRegression, _preprocess_data
+ 
+ SOLVE_TRIANGULAR_ARGS = {"check_finite": False}
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ @validate_params(
+diff --git a/sklearn/linear_model/_passive_aggressive.py b/sklearn/linear_model/_passive_aggressive.py
+index 61eb06edae..3a01e67556 100644
+--- a/sklearn/linear_model/_passive_aggressive.py
++++ b/sklearn/linear_model/_passive_aggressive.py
+@@ -1,6 +1,15 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ from numbers import Real
+ 
+ from ..base import _fit_context
+diff --git a/sklearn/linear_model/_perceptron.py b/sklearn/linear_model/_perceptron.py
+index e93200ba38..58074a4fc6 100644
+--- a/sklearn/linear_model/_perceptron.py
++++ b/sklearn/linear_model/_perceptron.py
+@@ -1,6 +1,15 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ from numbers import Real
+ 
+ from ..utils._param_validation import Interval, StrOptions
+diff --git a/sklearn/linear_model/_ridge.py b/sklearn/linear_model/_ridge.py
+index 0a55291a70..74885893e7 100644
+--- a/sklearn/linear_model/_ridge.py
++++ b/sklearn/linear_model/_ridge.py
+@@ -51,6 +51,15 @@ from ..utils.sparsefuncs import mean_variance_axis
+ from ..utils.validation import _check_sample_weight, check_is_fitted, validate_data
+ from ._base import LinearClassifierMixin, LinearModel, _preprocess_data, _rescale_data
+ from ._sag import sag_solver
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _get_rescaled_operator(X, X_offset, sample_weight_sqrt):
+diff --git a/sklearn/linear_model/_stochastic_gradient.py b/sklearn/linear_model/_stochastic_gradient.py
+index 859e527fb3..32a535bf30 100644
+--- a/sklearn/linear_model/_stochastic_gradient.py
++++ b/sklearn/linear_model/_stochastic_gradient.py
+@@ -328,6 +328,15 @@ class BaseSGD(SparseCoefMixin, BaseEstimator, metaclass=ABCMeta):
+             sample_weight[validation_mask],
+             classes=classes,
+         )
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _prepare_fit_binary(est, y, i, input_dtype, label_encode=True):
+diff --git a/sklearn/metrics/_scorer.py b/sklearn/metrics/_scorer.py
+index 08e5a20187..a0b4813366 100644
+--- a/sklearn/metrics/_scorer.py
++++ b/sklearn/metrics/_scorer.py
+@@ -80,6 +80,15 @@ from .cluster import (
+     rand_score,
+     v_measure_score,
+ )
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _cached_call(cache, estimator, response_method, *args, **kwargs):
+diff --git a/sklearn/mixture/_bayesian_mixture.py b/sklearn/mixture/_bayesian_mixture.py
+index 57220186fa..2a0eb36aca 100644
+--- a/sklearn/mixture/_bayesian_mixture.py
++++ b/sklearn/mixture/_bayesian_mixture.py
+@@ -20,6 +20,15 @@ from ._gaussian_mixture import (
+     _estimate_gaussian_parameters,
+     _estimate_log_gaussian_prob,
+ )
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _log_dirichlet_norm(dirichlet_concentration):
+diff --git a/sklearn/mixture/_gaussian_mixture.py b/sklearn/mixture/_gaussian_mixture.py
+index c4bdd3a0d6..cf13bfbde5 100644
+--- a/sklearn/mixture/_gaussian_mixture.py
++++ b/sklearn/mixture/_gaussian_mixture.py
+@@ -10,6 +10,15 @@ from ..utils import check_array
+ from ..utils._param_validation import StrOptions
+ from ..utils.extmath import row_norms
+ from ._base import BaseMixture, _check_shape
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ ###############################################################################
+ # Gaussian mixture shape checkers used by the GaussianMixture class
+diff --git a/sklearn/model_selection/_classification_threshold.py b/sklearn/model_selection/_classification_threshold.py
+index c68ed38b88..ca7c8086dd 100644
+--- a/sklearn/model_selection/_classification_threshold.py
++++ b/sklearn/model_selection/_classification_threshold.py
+@@ -42,6 +42,15 @@ from ..utils.validation import (
+     indexable,
+ )
+ from ._split import StratifiedShuffleSplit, check_cv
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _check_is_fitted(estimator):
+diff --git a/sklearn/model_selection/_search.py b/sklearn/model_selection/_search.py
+index 5bd3f81195..3c7c597735 100644
+--- a/sklearn/model_selection/_search.py
++++ b/sklearn/model_selection/_search.py
+@@ -344,6 +344,15 @@ class ParameterSampler:
+             return min(self.n_iter, grid_size)
+         else:
+             return self.n_iter
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _check_refit(search_cv, attr):
+diff --git a/sklearn/model_selection/_search_successive_halving.py b/sklearn/model_selection/_search_successive_halving.py
+index bcd9a83e6d..a4f01dd03a 100644
+--- a/sklearn/model_selection/_search_successive_halving.py
++++ b/sklearn/model_selection/_search_successive_halving.py
+@@ -45,6 +45,15 @@ class _SubsampleMetaSplitter:
+                     n_samples=int(self.fraction * len(test_idx)),
+                 )
+             yield train_idx, test_idx
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _top_k(results, k, itr):
+diff --git a/sklearn/model_selection/_split.py b/sklearn/model_selection/_split.py
+index ee85af7fe3..30bea9b8d5 100644
+--- a/sklearn/model_selection/_split.py
++++ b/sklearn/model_selection/_split.py
+@@ -2428,6 +2428,15 @@ class StratifiedShuffleSplit(BaseShuffleSplit):
+             )
+         y = check_array(y, input_name="y", ensure_2d=False, dtype=None)
+         return super().split(X, y, groups)
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _validate_shuffle_split(n_samples, test_size, train_size, default_test_size=None):
+diff --git a/sklearn/model_selection/tests/test_search.py b/sklearn/model_selection/tests/test_search.py
+index 7888dd2d17..a15b3c4903 100644
+--- a/sklearn/model_selection/tests/test_search.py
++++ b/sklearn/model_selection/tests/test_search.py
+@@ -155,6 +155,15 @@ class LinearSVCNoScore(LinearSVC):
+ 
+ X = np.array([[-1, -1], [-2, -1], [1, 1], [2, 1]])
+ y = np.array([1, 1, 2, 2])
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def assert_grid_iter_equals_getitem(grid):
+diff --git a/sklearn/model_selection/tests/test_successive_halving.py b/sklearn/model_selection/tests/test_successive_halving.py
+index bdfab45b4f..c80dc2bef0 100644
+--- a/sklearn/model_selection/tests/test_successive_halving.py
++++ b/sklearn/model_selection/tests/test_successive_halving.py
+@@ -85,6 +85,15 @@ class SometimesFailClassifier(DummyClassifier):
+         if self.fail_predict:
+             raise Exception("predict failed")
+         return super().predict(X)
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ @pytest.mark.filterwarnings("ignore::sklearn.exceptions.FitFailedWarning")
+diff --git a/sklearn/model_selection/tests/test_validation.py b/sklearn/model_selection/tests/test_validation.py
+index c20131b8d3..0ff099ce8b 100644
+--- a/sklearn/model_selection/tests/test_validation.py
++++ b/sklearn/model_selection/tests/test_validation.py
+@@ -280,6 +280,15 @@ y = np.array([0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6])
+ # for StratifiedKFold(n_splits=3)
+ y2 = np.array([1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3])
+ P = np.eye(5)
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ @pytest.mark.parametrize("coo_container", COO_CONTAINERS)
+diff --git a/sklearn/multioutput.py b/sklearn/multioutput.py
+index 08b0c95c94..6f16948a91 100644
+--- a/sklearn/multioutput.py
++++ b/sklearn/multioutput.py
+@@ -57,6 +57,15 @@ __all__ = [
+     "MultiOutputRegressor",
+     "RegressorChain",
+ ]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _fit_estimator(estimator, X, y, sample_weight=None, **fit_params):
+diff --git a/sklearn/naive_bayes.py b/sklearn/naive_bayes.py
+index e5b03abbb9..d07415187a 100644
+--- a/sklearn/naive_bayes.py
++++ b/sklearn/naive_bayes.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """Naive Bayes algorithms.
+ 
+ These are supervised learning methods based on applying Bayes' theorem with strong
+diff --git a/sklearn/neighbors/_classification.py b/sklearn/neighbors/_classification.py
+index c70b83cb1d..0c1e707920 100644
+--- a/sklearn/neighbors/_classification.py
++++ b/sklearn/neighbors/_classification.py
+@@ -26,6 +26,15 @@ from ..utils.validation import (
+     validate_data,
+ )
+ from ._base import KNeighborsMixin, NeighborsBase, RadiusNeighborsMixin, _get_weights
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _adjusted_metric(metric, metric_kwargs, p=None):
+diff --git a/sklearn/neighbors/_graph.py b/sklearn/neighbors/_graph.py
+index 3562fab1fc..7d08a5079e 100644
+--- a/sklearn/neighbors/_graph.py
++++ b/sklearn/neighbors/_graph.py
+@@ -16,6 +16,15 @@ from ..utils._param_validation import (
+ from ..utils.validation import check_is_fitted
+ from ._base import VALID_METRICS, KNeighborsMixin, NeighborsBase, RadiusNeighborsMixin
+ from ._unsupervised import NearestNeighbors
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _check_params(X, metric, p, metric_params):
+diff --git a/sklearn/neighbors/_lof.py b/sklearn/neighbors/_lof.py
+index d9f00be425..ec8aa6c1ea 100644
+--- a/sklearn/neighbors/_lof.py
++++ b/sklearn/neighbors/_lof.py
+@@ -1,6 +1,15 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ import warnings
+ from numbers import Real
+ 
+diff --git a/sklearn/neighbors/_regression.py b/sklearn/neighbors/_regression.py
+index 0ee0a340b8..d9cecd10bd 100644
+--- a/sklearn/neighbors/_regression.py
++++ b/sklearn/neighbors/_regression.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """Nearest Neighbor Regression."""
+ 
+ # Authors: The scikit-learn developers
+diff --git a/sklearn/neighbors/_unsupervised.py b/sklearn/neighbors/_unsupervised.py
+index 8888fe1848..f90990c727 100644
+--- a/sklearn/neighbors/_unsupervised.py
++++ b/sklearn/neighbors/_unsupervised.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """Unsupervised nearest neighbors learner"""
+ 
+ # Authors: The scikit-learn developers
+diff --git a/sklearn/neural_network/_multilayer_perceptron.py b/sklearn/neural_network/_multilayer_perceptron.py
+index a8a00fe3b4..447aec2701 100644
+--- a/sklearn/neural_network/_multilayer_perceptron.py
++++ b/sklearn/neural_network/_multilayer_perceptron.py
+@@ -43,6 +43,15 @@ from ._base import ACTIVATIONS, DERIVATIVES, LOSS_FUNCTIONS
+ from ._stochastic_optimizers import AdamOptimizer, SGDOptimizer
+ 
+ _STOCHASTIC_SOLVERS = ["sgd", "adam"]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _pack(coefs_, intercepts_):
+diff --git a/sklearn/neural_network/_stochastic_optimizers.py b/sklearn/neural_network/_stochastic_optimizers.py
+index 52641a91ce..e3f0b4f6d7 100644
+--- a/sklearn/neural_network/_stochastic_optimizers.py
++++ b/sklearn/neural_network/_stochastic_optimizers.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """Stochastic optimization methods for MLP"""
+ 
+ # Authors: The scikit-learn developers
+diff --git a/sklearn/random_projection.py b/sklearn/random_projection.py
+index f98b11365d..182a4568fc 100644
+--- a/sklearn/random_projection.py
++++ b/sklearn/random_projection.py
+@@ -51,6 +51,15 @@ __all__ = [
+     "SparseRandomProjection",
+     "johnson_lindenstrauss_min_dim",
+ ]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ @validate_params(
+diff --git a/sklearn/semi_supervised/_label_propagation.py b/sklearn/semi_supervised/_label_propagation.py
+index 559a17a13d..440f3d03da 100644
+--- a/sklearn/semi_supervised/_label_propagation.py
++++ b/sklearn/semi_supervised/_label_propagation.py
+@@ -1,4 +1,13 @@
+ # coding=utf8
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """
+ Label propagation in the context of this module refers to a set of
+ semi-supervised classification algorithms. At a high level, these algorithms
+diff --git a/sklearn/svm/_base.py b/sklearn/svm/_base.py
+index db295e4e87..699cf28ef0 100644
+--- a/sklearn/svm/_base.py
++++ b/sklearn/svm/_base.py
+@@ -32,6 +32,15 @@ from . import _libsvm as libsvm  # type: ignore[attr-defined]
+ from . import _libsvm_sparse as libsvm_sparse  # type: ignore[attr-defined]
+ 
+ LIBSVM_IMPL = ["c_svc", "nu_svc", "one_class", "epsilon_svr", "nu_svr"]
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _one_vs_one_coef(dual_coef, n_support, support_vectors):
+diff --git a/sklearn/svm/_classes.py b/sklearn/svm/_classes.py
+index 277da42893..ea6c0beb4d 100644
+--- a/sklearn/svm/_classes.py
++++ b/sklearn/svm/_classes.py
+@@ -11,6 +11,15 @@ from ..utils._param_validation import Interval, StrOptions
+ from ..utils.multiclass import check_classification_targets
+ from ..utils.validation import _num_samples, validate_data
+ from ._base import BaseLibSVM, BaseSVC, _fit_liblinear, _get_liblinear_solver_type
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _validate_dual_parameter(dual, loss, penalty, multi_class, X):
+diff --git a/sklearn/tests/metadata_routing_common.py b/sklearn/tests/metadata_routing_common.py
+index f4dd79581d..2d4c65ccb9 100644
+--- a/sklearn/tests/metadata_routing_common.py
++++ b/sklearn/tests/metadata_routing_common.py
+@@ -25,6 +25,15 @@ from sklearn.utils.metadata_routing import (
+     process_routing,
+ )
+ from sklearn.utils.multiclass import _check_partial_fit_first_call
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def record_metadata(obj, record_default=True, **kwargs):
+diff --git a/sklearn/tree/_classes.py b/sklearn/tree/_classes.py
+index 8536ccf0d6..31b69f8f21 100644
+--- a/sklearn/tree/_classes.py
++++ b/sklearn/tree/_classes.py
+@@ -1,3 +1,12 @@
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ """
+ This module gathers tree-based methods, including decision, regression and
+ randomized trees. Single and multi-output problems are both handled.
+diff --git a/sklearn/tree/_export.py b/sklearn/tree/_export.py
+index 6726d0c67b..18657bb333 100644
+--- a/sklearn/tree/_export.py
++++ b/sklearn/tree/_export.py
+@@ -16,6 +16,15 @@ from ..utils._param_validation import HasMethods, Interval, StrOptions, validate
+ from ..utils.validation import check_array, check_is_fitted
+ from . import DecisionTreeClassifier, DecisionTreeRegressor, _criterion, _tree
+ from ._reingold_tilford import Tree, buchheim
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _color_brew(n):
+diff --git a/sklearn/utils/_bunch.py b/sklearn/utils/_bunch.py
+index a11e80e366..8f594ee619 100644
+--- a/sklearn/utils/_bunch.py
++++ b/sklearn/utils/_bunch.py
+@@ -1,6 +1,15 @@
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ import warnings
+ 
+ 
+diff --git a/sklearn/utils/_encode.py b/sklearn/utils/_encode.py
+index 147ba5abf1..9d4218875a 100644
+--- a/sklearn/utils/_encode.py
++++ b/sklearn/utils/_encode.py
+@@ -15,6 +15,15 @@ from ._array_api import (
+     xpx,
+ )
+ from ._missing import is_scalar_nan
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _unique(values, *, return_inverse=False, return_counts=False):
+diff --git a/sklearn/utils/_param_validation.py b/sklearn/utils/_param_validation.py
+index 27df9f4526..9a5a2ce1f2 100644
+--- a/sklearn/utils/_param_validation.py
++++ b/sklearn/utils/_param_validation.py
+@@ -23,6 +23,15 @@ class InvalidParameterError(ValueError, TypeError):
+     """
+ 
+     # Inherits from ValueError and TypeError to keep backward compatibility.
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def validate_parameter_constraints(parameter_constraints, params, caller_name):
+diff --git a/sklearn/utils/_pprint.py b/sklearn/utils/_pprint.py
+index 527843fe42..3d3f3c440d 100644
+--- a/sklearn/utils/_pprint.py
++++ b/sklearn/utils/_pprint.py
+@@ -86,6 +86,15 @@ class KeyValTupleParam(KeyValTuple):
+     """Dummy class for correctly rendering key-value tuples from parameters."""
+ 
+     pass
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _changed_params(estimator):
+diff --git a/sklearn/utils/_repr_html/params.py b/sklearn/utils/_repr_html/params.py
+index d85bf1280a..b72a5ea1e9 100644
+--- a/sklearn/utils/_repr_html/params.py
++++ b/sklearn/utils/_repr_html/params.py
+@@ -6,6 +6,15 @@ import reprlib
+ from collections import UserDict
+ 
+ from sklearn.utils._repr_html.base import ReprHTMLMixin
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ def _read_params(name, value, non_default_params):
+diff --git a/sklearn/utils/tests/test_param_validation.py b/sklearn/utils/tests/test_param_validation.py
+index a47eaace5b..3a0bb3c3ec 100644
+--- a/sklearn/utils/tests/test_param_validation.py
++++ b/sklearn/utils/tests/test_param_validation.py
+@@ -35,6 +35,15 @@ from sklearn.utils._param_validation import (
+     validate_params,
+ )
+ from sklearn.utils.fixes import CSR_CONTAINERS
++class DataParams___init___375:
++    def __init__(self, tol = 1e-4, enet_tol = 1e-4, max_iter = 100, mode = "cd", verbose = False, eps = np.finfo(np.float64).eps, assume_centered = False):
++        self.tol = tol
++        self.enet_tol = enet_tol
++        self.max_iter = max_iter
++        self.mode = mode
++        self.verbose = verbose
++        self.eps = eps
++        self.assume_centered = assume_centered
+ 
+ 
+ # Some helpers for the tests

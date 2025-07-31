@@ -1,0 +1,24 @@
+diff --git a/sklearn/ensemble/_forest.py b/sklearn/ensemble/_forest.py
+index 5def6ac608..a5d26172d6 100644
+--- a/sklearn/ensemble/_forest.py
++++ b/sklearn/ensemble/_forest.py
+@@ -35,6 +35,7 @@ Single and multi-output problems are both handled.
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import EmissionsTracker
+ import threading
+ from abc import ABCMeta, abstractmethod
+ from numbers import Integral, Real
+@@ -1121,7 +1122,10 @@ class ForestRegressor(RegressorMixin, BaseForest, metaclass=ABCMeta):
+         scoring_function : callable, default=None
+             Scoring function for OOB score. Defaults to `r2_score`.
+         """
+-        self.oob_prediction_ = super()._compute_oob_predictions(X, y).squeeze(axis=1)
++        with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_LMC001_4df72a88', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/long-message-chain/4df72a88_refactored.csv') as tracker:
++            intermediate_0 = super()
++            intermediate_1 = intermediate_0._compute_oob_predictions(X, y)
++            self.oob_prediction_ = intermediate_1.squeeze(axis=1)
+         if self.oob_prediction_.shape[-1] == 1:
+             # drop the n_outputs axis if there is a single output
+             self.oob_prediction_ = self.oob_prediction_.squeeze(axis=-1)

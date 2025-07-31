@@ -300,7 +300,7 @@ def main():
     if args.repo:
         if not args.smells:
             logging.info(f"Generating patches for repo: {args.repo}")
-        repo_list = [args.repo]
+        repo_list = args.repo.split(",")
     else:
         logging.info("Generating patches for all selected repositories")
 

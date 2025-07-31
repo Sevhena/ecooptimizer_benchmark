@@ -1,0 +1,17 @@
+diff --git a/dask/array/utils.py b/dask/array/utils.py
+index b1147f1b6..6d03f9c99 100644
+--- a/dask/array/utils.py
++++ b/dask/array/utils.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ from __future__ import annotations
+ 
+ import contextlib
+@@ -298,6 +299,7 @@ def _get_dt_meta_computed(
+     return x, adt, x_meta, x_computed
+ 
+ 
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_79acf82a', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/79acf82a.csv')
+ def assert_eq(
+     a,
+     b,

@@ -1,0 +1,20 @@
+diff --git a/sklearn/covariance/_graph_lasso.py b/sklearn/covariance/_graph_lasso.py
+index e946631202..de8b1d91ef 100644
+--- a/sklearn/covariance/_graph_lasso.py
++++ b/sklearn/covariance/_graph_lasso.py
+@@ -5,6 +5,7 @@ estimator.
+ # Authors: The scikit-learn developers
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
++from codecarbon import track_emissions
+ import operator
+ import sys
+ import time
+@@ -370,6 +371,7 @@ class BaseGraphicalLasso(EmpiricalCovariance):
+     }
+     _parameter_constraints.pop("store_precision")
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_7023a30b', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/7023a30b.csv')
+     def __init__(
+         self,
+         tol=1e-4,
