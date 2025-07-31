@@ -1,6 +1,6 @@
 django:
   venv_command: ""
-  test_command: ""
+  test_command: ["tests/runtests.py", "--settings=test_sqlite"]
   target: "django/django" 
   patterns_to_exclude:
     - "django/django/test"
@@ -13,7 +13,7 @@ streamlit:
     - "**/tests/**"
 scikit-learn:
   venv_command: ""
-  test_command: ""
+  test_command: ["-m", "pytest"]
   target: "scikit-learn/sklearn"
   patterns_to_exclude:
     - "**/tests/**"
@@ -40,7 +40,7 @@ scipy:
     - "**/test_*.py"
 dask:
   venv_command: ""
-  test_command: ""
+  test_command: ["-m", "pytest", "dask"]
   target: "dask/dask"
   patterns_to_exclude:
     - "**/tests/**"
