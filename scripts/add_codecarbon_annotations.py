@@ -4,6 +4,7 @@ import logging
 from pathlib import Path
 import sys
 import argparse
+from codecarbon import EmissionsTracker
 
 import astroid
 from astroid import nodes
@@ -67,6 +68,9 @@ def find_import_insertion_point(lines: list[str]) -> int:
             continue
         if line.startswith(("from __future__", "import ", "from ")):
             last_import_line = i
+        elif lines[last_import_line].strip().endswith("("):
+            # If the last import line is a multi-line import, continue
+            continue
         else:
             break
     return last_import_line + 1  # Insert after the last import
