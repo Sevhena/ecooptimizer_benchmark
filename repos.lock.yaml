@@ -5,6 +5,9 @@ repos:
   - name: airflow
     url: https://github.com/apache/airflow.git
     commit: a8a9fc5ead28ab4902a328a6911fe2c95e737776
+  - name: ansible
+    url: https://github.com/ansible/ansible.git
+    commit: 97b2242b78f253b5d6b61c44871e51cc90457ea2
   - name: beautifulsoup
     url: https://git.launchpad.net/beautifulsoup
     commit: 53d328406ec8c37c0edbd00ace3782be63e2e7e5
@@ -35,6 +38,9 @@ repos:
   - name: geopy
     url: https://github.com/geopy/geopy.git
     commit: f495974c32a7a7b1eb433e7b8c87166e96375c32
+  - name: glances
+    url: https://github.com/nicolargo/glances.git
+    commit: f5ec34cdf91fb4e4ae2812e722ecc5de088b55f9
   - name: gpiozero
     url: https://github.com/gpiozero/gpiozero.git
     commit: 859029006a46843336725b5f32d97b60b5113f3f

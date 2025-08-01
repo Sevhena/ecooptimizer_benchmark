@@ -273,3 +273,17 @@ pytorch:
     - pytorch/test  
     - "**/testing/**"   
     - "**/test_*.py"
+ansible:
+  venv_command: ""
+  test_command: ""
+  target: "ansible/lib/ansible"
+  patterns_to_exclude:
+    - "**/test/**"
+    - "**/test_*.py"
+glances:
+  venv_command: ""
+  test_command: ""
+  target: "glances/glances"
+  patterns_to_exclude:
+    - "**/tests/**"
+    - "**/test_*.py"

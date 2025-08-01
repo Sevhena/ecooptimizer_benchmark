@@ -33,6 +33,8 @@ domains:
     - cryptography
     - requests
     - tqdm
+    - ansible
+    - glances
   embedded:
     - paho.mqtt.python
     - gpiozero
