@@ -153,6 +153,7 @@ def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> N
 
     patch_path_original = PATCHES_DIR / repo_name / symbol / smell_id / "original.patch"
     patch_path_refactored = PATCHES_DIR / repo_name / symbol / smell_id / "refactored.patch"
+    failed_patch_path = PATCHES_DIR / repo_name / "_failed" / f"{symbol}_{smell_id}.patch"
     try:
         if not worktree_path.exists():
             create_worktree(base_repo, worktree_path)
@@ -170,17 +171,25 @@ def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> N
             raise Exception(f"Refactored patch creation failed for smell {smell_id}")
         if not fix_refactored_patch_path(patch_path_refactored, smell_id, symbol):
             raise Exception("Path update in refactored .patch failed")
-    except Exception as e:
+
+        if failed_patch_path.exists():
+            logging.debug(f"[{smell_id}] Removing existing failed patch: {failed_patch_path}")
+            failed_patch_path.unlink()
+    except (KeyboardInterrupt, Exception) as e:
         logging.error(f"[{smell_id}] Patches creation failed: {e}")
 
         subprocess.run(["git", "restore", "."], cwd=worktree_path, check=True)
 
-        # Remove any created patches due to possible errors/corruption
-        logging.debug(f"[{smell_id}] Cleaning up created patches.")
-        patch_path_original.unlink(missing_ok=True)
-        # patch_path_refactored.unlink(missing_ok=True)
+        if patch_path_original.exists():
+            logging.debug(
+                f"[{smell_id}] Cleaning up created patches. Adding original patch to failed patches."
+            )
+            failed_patch_path.parent.mkdir(parents=True, exist_ok=True)
+            patch_path_original.replace(failed_patch_path)
 
-        raise Exception(f"Patch creation failed for {smell_id}") from e
+        shutil.rmtree(patch_path_refactored.parent, ignore_errors=True)
+
+        raise e
     finally:
         # Clean up the worktree
         subprocess.run(["git", "restore", "."], cwd=worktree_path, check=True)
@@ -198,34 +207,38 @@ def load_smells(repo_name: str) -> dict[str, dict]:
     return smells
 
 
-def clear_patches(
-    repo_name: str, smell_id: Optional[str] = None, smells: Optional[dict] = None
-) -> None:
+def clear_patches(repo_name: str, smell_data: Optional[dict] = None) -> None:
     """Clear existing patches for a specific smell or all smells in a repo."""
     annotated_smells_file = ANNOTATED_SMELLS_DIR / f"{repo_name}.json"
 
-    if smell_id:
-        patch_path = PATCHES_DIR / repo_name / smell_id
+    if smell_data:
+        patch_path = PATCHES_DIR / repo_name / smell_data["symbol"] / smell_data["smell_id"]
         if patch_path.exists():
-            logging.info(f"Removing patches for smell {smell_id} in repo {repo_name}: {patch_path}")
+            logging.debug(
+                f"Removing patches for smell {smell_data['smell_id']} in repo {repo_name}: {patch_path}"
+            )
             shutil.rmtree(patch_path)
         else:
-            logging.debug(f"No patches found for smell {smell_id} in repo {repo_name}")
+            logging.debug(
+                f"No patches found for smell {smell_data['smell_id']} in repo {repo_name}"
+            )
 
         if annotated_smells_file.exists():
             logging.debug(f"Annotated smells file exists: {annotated_smells_file}")
             with annotated_smells_file.open() as f:
                 annotated_smells = load_smells(repo_name)
-            if smell_id not in annotated_smells:
+            if smell_data["smell_id"] not in annotated_smells:
                 logging.warning(
-                    f"Smell {smell_id} not found in annotated smells for repo {repo_name}. Deleting file."
+                    f"Smell {smell_data['smell_id']} not found in annotated smells for repo {repo_name}. Deleting file."
                 )
                 annotated_smells_file.unlink(missing_ok=True)
             else:
                 logging.debug(
-                    f"Updating annotated smells file for smell {smell_id} in repo {repo_name}"
+                    f"Updating annotated smells file for smell {smell_data['smell_id']} in repo {repo_name}"
                 )
-                annotated_smells[smell_id] = smells[smell_id]
+                annotated_smells[smell_data["smell_id"]] = smell_data["smells"][
+                    smell_data["smell_id"]
+                ]
                 with annotated_smells_file.open("w") as f:
                     json.dump(annotated_smells, f, indent=4)
         else:
@@ -273,6 +286,11 @@ def main():
         + "\n- ".join([str(item) for item in ALL_SMELL_TYPES.items()]),
     )
     group.add_argument("--smells", nargs="+", help="Generate patch for a specific smell (id)")
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Generate patches for all smells in the specified repo or type including overwriting existing ones (DEFAULT: False)",
+    )
     args = parser.parse_args()
 
     setup_logging()
@@ -302,7 +320,7 @@ def main():
     if args.repo:
         if not args.smells:
             logging.info(f"Generating patches for repo: {args.repo}")
-        repo_list = args.repo.split(",")
+        repo_list: list[str] = args.repo.split(",")
     else:
         logging.info("Generating patches for all selected repositories")
 
@@ -327,10 +345,15 @@ def main():
             logging.info(f"Generating patches for smells {args.smells} in repo {repo_name}\n")
             for smell in args.smells:
                 smell_meta.append((smells[smell]["symbol"], smell))
-                clear_patches(repo_name, smell, smells)
+                clear_patches(
+                    repo_name,
+                    {"symbol": smells[smell]["symbol"], "smell_id": smell, "smells": smells},
+                )
         elif args.type:
             logging.info(f"Generating patches for smell type {args.type} in repo {repo_name}\n")
-            smell_map = select_repos_config.get("smells", {}).get(repo_name, {})
+            smell_map: dict[str, list[str]] = select_repos_config.get("smells", {}).get(
+                repo_name, {}
+            )
             if not smell_map:
                 logging.warning(
                     f"No smells of type '{args.type}' selected for {repo_name}. Skipping patch generation."
@@ -341,8 +364,22 @@ def main():
             for symbol, smell_ids in smell_map.items():
                 for smell_id in smell_ids:
                     if smell_id in smells:
+                        patch_dir = PATCHES_DIR / repo_name / symbol / smell_id
+                        patches_exist = (patch_dir / "original.patch").exists() and (
+                            patch_dir / "refactored.patch"
+                        ).exists()
+                        if not args.all and patches_exist:
+                            logging.debug(
+                                f"Patches already exist for {smell_id} in {repo_name}. Skipping."
+                            )
+                            continue
+
                         smell_meta.append((symbol, smell_id))
-                        clear_patches(repo_name, smell_id, smells)
+
+                        logging.debug(f"Removing existing patches for {smell_id} in {repo_name}")
+                        clear_patches(
+                            repo_name, {"symbol": symbol, "smell_id": smell_id, "smells": smells}
+                        )
                     else:
                         logging.warning(
                             f"Smell ID {smell_id} not found in analysis results for {repo_name}"
@@ -360,10 +397,14 @@ def main():
                 continue
 
             logging.info(f"Generating patches for all smells in {repo_name}\n")
+
+            repo_patch_dir = PATCHES_DIR / repo_name
+
             smell_meta = [
                 (smell["symbol"], smell_id)
                 for smell_id, smell in smells.items()
                 if smell_id in smell_id_list
+                and (args.all or not (repo_patch_dir / smell["symbol"] / smell_id).exists())
             ]
             clear_patches(repo_name)
 
@@ -376,9 +417,12 @@ def main():
         for smell in smell_meta:
             try:
                 logging.info(
-                    f"[{repo_name}] [{smells_processed + 1}/{len(smell_meta)}] Patching {smell}..."
+                    f"\n[{repo_name}] [{smells_processed + 1}/{len(smell_meta)}] Patching {smell}..."
                 )
                 create_patches(smell, repo_name, base_repo)
+            except KeyboardInterrupt:
+                logging.info("Patch creation interrupted by user.")
+                sys.exit(0)
             except Exception as e:
                 logging.error(f"Failed to create patch for {smell[1]} in {repo_name}")
                 sys.stdout.write("\033[1A")
