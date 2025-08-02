@@ -44,6 +44,9 @@ repos:
   - name: gpiozero
     url: https://github.com/gpiozero/gpiozero.git
     commit: 859029006a46843336725b5f32d97b60b5113f3f
+  - name: gunicorn
+    url: https://github.com/benoitc/gunicorn.git
+    commit: a86ea1e4e6c271d1cd1823c7e14490123f9238fe
   - name: keras
     url: https://github.com/keras-team/keras.git
     commit: 08ad93b77488f911328da6a676f04709b6e9f788
@@ -53,6 +56,9 @@ repos:
   - name: matplotlib
     url: https://github.com/matplotlib/matplotlib.git
     commit: c44ae00ac0d384d8a514883a993fb0c83cc3d9fa
+  - name: mitmproxy
+    url: https://github.com/mitmproxy/mitmproxy.git
+    commit: a4d794c59a27472d193a592d8037505a1cf6ae93
   - name: nltk
     url: https://github.com/nltk/nltk.git
     commit: ebaf5f9ce0736fab9c57ba145081693ab19fd2ee

@@ -287,3 +287,17 @@ glances:
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
+gunicorn:
+  venv_command: ""
+  test_command: ""
+  target: "gunicorn/gunicorn"
+  patterns_to_exclude:
+    - "**/tests/**"
+    - "**/test_*.py"
+mitmproxy:
+  venv_command: ""
+  test_command: ""
+  target: "mitmproxy/mitmproxy"
+  patterns_to_exclude:
+    - "**/test/**"
+    - "**/test_*.py"
