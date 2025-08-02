@@ -176,7 +176,7 @@ def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> N
         # Remove any created patches due to possible errors/corruption
         logging.debug(f"[{smell_id}] Cleaning up created patches.")
         patch_path_original.unlink(missing_ok=True)
-        patch_path_refactored.unlink(missing_ok=True)
+        # patch_path_refactored.unlink(missing_ok=True)
 
         raise Exception(f"Patch creation failed for {smell_id}") from e
     finally:

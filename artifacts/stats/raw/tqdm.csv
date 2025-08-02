@@ -1,7 +1,6 @@
 Smell Type,Total Count,Thresholds
-TOTAL,6,N/A
-cached-repeated-calls,4,"10/2:1, 4/2:2, 3/2:1"
 too-many-arguments,2,"27/6:1, 14/6:1"
+TOTAL,2,N/A
 long-element-chain,0,N/A
 long-lambda-expr,0,N/A
 long-message-chain,0,N/A

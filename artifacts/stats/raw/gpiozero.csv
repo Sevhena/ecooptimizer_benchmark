@@ -4,7 +4,6 @@ too-many-arguments,24,"7/6:10, 9/6:5, 11/6:2, 8/6:7"
 no-self-use,15,N/A
 long-message-chain,3,3/3:3
 long-lambda-expr,1,N/A
-cached-repeated-calls,0,N/A
 long-element-chain,0,N/A
 string-concat-loop,0,N/A
 use-a-generator,0,N/A

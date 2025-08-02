@@ -442,8 +442,8 @@
             {
                 "column": 4,
                 "endColumn": 12,
-                "endLine": 254,
-                "line": 254
+                "endLine": 256,
+                "line": 256
             }
         ],
         "path": "numpy/_core/_internal.py",
@@ -804,10 +804,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 19,
-                "endColumn": 81,
-                "endLine": 646,
-                "line": 646
+                "column": 15,
+                "endColumn": 77,
+                "endLine": 644,
+                "line": 644
             }
         ],
         "path": "numpy/_core/einsumfunc.py",
@@ -836,10 +836,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 82,
-                "endLine": 381,
-                "line": 381
+                "column": 8,
+                "endColumn": 78,
+                "endLine": 379,
+                "line": 379
             }
         ],
         "path": "numpy/matlib.py",
@@ -868,10 +868,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 79,
-                "endLine": 5019,
-                "line": 5019
+                "column": 16,
+                "endColumn": 75,
+                "endLine": 5017,
+                "line": 5017
             }
         ],
         "path": "numpy/ma/core.py",

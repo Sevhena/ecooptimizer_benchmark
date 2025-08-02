@@ -1,0 +1,9 @@
+Smell Type,Total Count,Thresholds
+TOTAL,156,N/A
+no-self-use,103,N/A
+long-element-chain,23,3/3:23
+string-concat-loop,10,N/A
+long-message-chain,8,"3/3:6, 4/3:2"
+too-many-arguments,8,"9/6:3, 10/6:1, 7/6:4"
+long-lambda-expr,4,N/A
+use-a-generator,0,N/A

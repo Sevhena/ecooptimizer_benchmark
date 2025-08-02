@@ -1,50 +1,52 @@
 SUMMARY STATISTICS
 
-Total repos processed:,7
-Total smells detected:,2217
+Total repos processed:,9
+Total smells detected:,2611
 
 SMELL TYPE BREAKDOWN
 Smell Type,Total Count
-long-element-chain,29
-long-lambda-expr,6
-long-message-chain,79
-no-self-use,824
-string-concat-loop,26
-too-many-arguments,1239
+long-element-chain,49
+long-lambda-expr,20
+long-message-chain,85
+no-self-use,1061
+string-concat-loop,30
+too-many-arguments,1352
 use-a-generator,14
 
 THRESHOLD BREAKDOWN
 Smell Type,Threshold,Count
-long-element-chain,3/3,28
-long-element-chain,4/3,1
-long-message-chain,3/3,73
+long-element-chain,3/3,45
+long-element-chain,4/3,4
+long-message-chain,3/3,79
 long-message-chain,4/3,6
-too-many-arguments,10/6,106
-too-many-arguments,11/6,65
-too-many-arguments,12/6,66
-too-many-arguments,13/6,37
-too-many-arguments,14/6,26
+too-many-arguments,10/6,112
+too-many-arguments,11/6,69
+too-many-arguments,12/6,68
+too-many-arguments,13/6,38
+too-many-arguments,14/6,28
 too-many-arguments,15/6,37
 too-many-arguments,16/6,15
 too-many-arguments,17/6,20
 too-many-arguments,18/6,8
-too-many-arguments,19/6,5
+too-many-arguments,19/6,6
 too-many-arguments,21/6,5
 too-many-arguments,22/6,5
 too-many-arguments,23/6,7
 too-many-arguments,24/6,1
 too-many-arguments,25/6,5
 too-many-arguments,26/6,1
-too-many-arguments,7/6,398
-too-many-arguments,8/6,251
-too-many-arguments,9/6,181
+too-many-arguments,7/6,459
+too-many-arguments,8/6,276
+too-many-arguments,9/6,192
 
 REPO BREAKDOWN
 Repository,Total Smells,Smell Types Present,Smell Types Under Threshold,Smell Types Missing
 scipy,868,7,"long-lambda-expr:1, string-concat-loop:3",
 django,587,6,"long-lambda-expr:0, use-a-generator:2",long-lambda-expr
+nltk,378,6,"long-message-chain:3, string-concat-loop:3, use-a-generator:0",use-a-generator
 scikit-learn,245,6,"long-element-chain:4, long-lambda-expr:0, string-concat-loop:5, use-a-generator:1",long-lambda-expr
 numpy,179,5,"long-element-chain:0, long-lambda-expr:1, string-concat-loop:5, use-a-generator:0","long-element-chain, use-a-generator"
 dask,173,6,"long-element-chain:4, long-lambda-expr:0, string-concat-loop:4, use-a-generator:4",long-lambda-expr
 streamlit,123,5,"long-element-chain:1, long-lambda-expr:3, long-message-chain:4, string-concat-loop:0, use-a-generator:0","string-concat-loop, use-a-generator"
 gpiozero,42,4,"long-element-chain:0, long-lambda-expr:1, long-message-chain:2, string-concat-loop:0, use-a-generator:0, cached-repeated-calls:1","long-element-chain, string-concat-loop, use-a-generator"
+paho.mqtt.python,16,4,"long-element-chain:0, long-lambda-expr:0, long-message-chain:3, no-self-use:3, string-concat-loop:1, use-a-generator:0, cached-repeated-calls:3","long-element-chain, long-lambda-expr, use-a-generator"

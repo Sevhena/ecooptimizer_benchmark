@@ -1,8 +1,7 @@
 Smell Type,Total Count,Thresholds
-TOTAL,153,N/A
+TOTAL,138,N/A
 too-many-arguments,64,"7/6:10, 26/6:1, 10/6:1, 8/6:9, 23/6:1, 9/6:6, 12/6:4, 17/6:2, 13/6:2, 31/6:2, 20/6:2, 33/6:1, 22/6:1, 11/6:2, 16/6:2, 19/6:2, 30/6:1, 28/6:2, 18/6:2, 24/6:1, 21/6:1, 15/6:3, 14/6:1, 27/6:1, 40/6:1, 34/6:2, 29/6:1"
 no-self-use,56,N/A
-cached-repeated-calls,15,"3/2:14, 5/2:1"
 long-message-chain,14,"3/3:11, 5/3:1, 4/3:2"
 use-a-generator,3,N/A
 string-concat-loop,1,N/A
