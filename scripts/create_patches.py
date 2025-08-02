@@ -149,6 +149,8 @@ def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> N
     smell_id = smell[1]
 
     worktree_path = WORKTREE_DIR / repo_name
+    worktree_path.parent.mkdir(exist_ok=True)
+
     patch_path_original = PATCHES_DIR / repo_name / symbol / smell_id / "original.patch"
     patch_path_refactored = PATCHES_DIR / repo_name / symbol / smell_id / "refactored.patch"
     try:
