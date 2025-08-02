@@ -73,7 +73,7 @@ def add_codecarbon_annotations(repo_name: str, smell_id: str) -> bool:
     try:
         logging.debug("Adding CodeCarbon annotations")
         subprocess.run(
-            ["python", "scripts/add_codecarbon_annotations.py", repo_name, smell_id],
+            [sys.executable, "scripts/add_codecarbon_annotations.py", repo_name, smell_id],
             cwd=Path(),
             check=True,
             stdout=subprocess.DEVNULL,
