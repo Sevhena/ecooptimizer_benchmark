@@ -1,0 +1,20 @@
+diff --git a/sklearn/metrics/_plot/confusion_matrix.py b/sklearn/metrics/_plot/confusion_matrix.py
+index cee515beb..0d86d7ad3 100644
+--- a/sklearn/metrics/_plot/confusion_matrix.py
++++ b/sklearn/metrics/_plot/confusion_matrix.py
+@@ -10,6 +10,7 @@ from ...utils._optional_dependencies import check_matplotlib_support
+ from ...utils._plotting import _validate_style_kwargs
+ from ...utils.multiclass import unique_labels
+ from .. import confusion_matrix
++from codecarbon import track_emissions
+ 
+ 
+ class ConfusionMatrixDisplay:
+@@ -351,6 +352,7 @@ class ConfusionMatrixDisplay:
+         )
+ 
+     @classmethod
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_ad87e6d8', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/ad87e6d8.csv')
+     def from_predictions(
+         cls,
+         y_true,

@@ -1,16 +1,8 @@
 diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
-index 0fbc407..f5e23aa 100644
+index 0fbc407..53f507a 100644
 --- a/gpiozero/pins/__init__.py
 +++ b/gpiozero/pins/__init__.py
-@@ -9,6 +9,7 @@
- #
- # SPDX-License-Identifier: BSD-3-Clause
- 
-+from codecarbon import track_emissions
- import warnings
- from weakref import ref
- from threading import Lock
-@@ -131,6 +132,7 @@ class Factory:
+@@ -131,6 +131,7 @@ class Factory:
          """
          pass
  
@@ -18,3 +10,11 @@ index 0fbc407..f5e23aa 100644
      def pin(self, name):
          """
          Creates an instance of a :class:`Pin` descendent representing the
+@@ -834,6 +835,7 @@ class PinInfo(namedtuple('PinInfo', (
+ 
+         An integer containing the physical pin number on the header (starting
+         from 1 in accordance with convention).
++from codecarbon import track_emissions
+ 
+     .. attribute:: name
+ 

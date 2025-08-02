@@ -1,12 +1,15 @@
 diff --git a/scipy/special/_mptestutils.py b/scipy/special/_mptestutils.py
-index 9e519093d..9ff149c56 100644
+index 9e519093d..ed3ec45a5 100644
 --- a/scipy/special/_mptestutils.py
 +++ b/scipy/special/_mptestutils.py
-@@ -1,3 +1,4 @@
+@@ -8,6 +8,7 @@ from numpy.testing import assert_
+ import pytest
+ 
+ from scipy.special._testutils import assert_func_equal
 +from codecarbon import track_emissions
- import os
- import sys
- import time
+ 
+ try:
+     import mpmath
 @@ -36,7 +37,9 @@ class Arg:
  
          self.inclusive_a, self.inclusive_b = inclusive_a, inclusive_b

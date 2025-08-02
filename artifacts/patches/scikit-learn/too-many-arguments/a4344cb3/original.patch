@@ -1,15 +1,12 @@
 diff --git a/sklearn/linear_model/_linear_loss.py b/sklearn/linear_model/_linear_loss.py
-index 9213008a19..45b009968d 100644
+index 9213008a1..85cb26a34 100644
 --- a/sklearn/linear_model/_linear_loss.py
 +++ b/sklearn/linear_model/_linear_loss.py
-@@ -5,6 +5,7 @@ Loss functions for linear models with raw_prediction = X @ coef
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -1,3 +1,4 @@
 +from codecarbon import track_emissions
- import numpy as np
- from scipy import sparse
- 
+ """
+ Loss functions for linear models with raw_prediction = X @ coef
+ """
 @@ -414,6 +415,7 @@ class LinearModelLoss:
              else:
                  return grad

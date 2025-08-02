@@ -1,15 +1,12 @@
 diff --git a/sklearn/model_selection/_validation.py b/sklearn/model_selection/_validation.py
-index 8b70bf4260..ba7c44f43b 100644
+index 8b70bf426..878374e28 100644
 --- a/sklearn/model_selection/_validation.py
 +++ b/sklearn/model_selection/_validation.py
-@@ -6,6 +6,7 @@ functions to validate the model.
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -1,3 +1,4 @@
 +from codecarbon import EmissionsTracker
- import numbers
- import time
- import warnings
+ """
+ The :mod:`sklearn.model_selection._validation` module includes classes and
+ functions to validate the model.
 @@ -893,12 +894,13 @@ def _fit_and_score(
          result_msg = params_msg + (";" if params_msg else "")
          if verbose > 2:

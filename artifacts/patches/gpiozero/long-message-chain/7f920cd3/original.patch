@@ -1,0 +1,23 @@
+diff --git a/gpiozero/boards.py b/gpiozero/boards.py
+index 7abc9f4..f7fbd4c 100644
+--- a/gpiozero/boards.py
++++ b/gpiozero/boards.py
+@@ -24,6 +24,7 @@ from threading import Lock
+ from collections import OrderedDict, Counter, namedtuple
+ from collections.abc import MutableMapping
+ from pprint import pformat
++from codecarbon import EmissionsTracker
+ 
+ # Remove the try clause when 3.7 support is no longer trivial
+ try:
+@@ -954,7 +955,9 @@ class LEDCharDisplay(LEDCollection):
+ 
+         if font is None:
+             if len(pins) == 7:
+-                with resources.files('gpiozero.fonts').joinpath('7seg.txt').open() as f:
++                with EmissionsTracker(project_name='gpiozero-benchmark', experiment_id='gpiozero_LMC001_7f920cd3', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/long-message-chain/7f920cd3.csv') as tracker:
++                    _carbon_wrapped_b0e5ca31 = resources.files('gpiozero.fonts').joinpath('7seg.txt').open()
++                with _carbon_wrapped_b0e5ca31 as f:
+                     font = load_font_7seg(f)
+             elif len(pins) == 14:
+                 with resources.files('gpiozero.fonts').joinpath('14seg.txt').open() as f:

@@ -1,0 +1,20 @@
+diff --git a/dask/dataframe/io/csv.py b/dask/dataframe/io/csv.py
+index 4dc9ad8a0..0cdef97e0 100644
+--- a/dask/dataframe/io/csv.py
++++ b/dask/dataframe/io/csv.py
+@@ -7,6 +7,7 @@ from io import BytesIO
+ from warnings import catch_warnings, simplefilter, warn
+ 
+ from dask._task_spec import convert_legacy_task
++from codecarbon import track_emissions
+ 
+ try:
+     import psutil
+@@ -764,6 +765,7 @@ def _write_csv(df, fil, *, depend_on=None, **kwargs):
+     return os.path.normpath(fil.path)
+ 
+ 
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_3f5d3f21', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/3f5d3f21.csv')
+ def to_csv(
+     df,
+     filename,

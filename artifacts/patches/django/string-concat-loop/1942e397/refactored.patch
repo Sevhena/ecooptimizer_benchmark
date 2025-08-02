@@ -1,14 +1,15 @@
 diff --git a/django/test/html.py b/django/test/html.py
-index 33d1d4dafb..d6387143f3 100644
+index 33d1d4dafb..91554b8a4f 100644
 --- a/django/test/html.py
 +++ b/django/test/html.py
-@@ -1,5 +1,6 @@
- """Compare two HTML documents."""
+@@ -5,6 +5,7 @@ from html.parser import HTMLParser
  
+ from django.utils.html import VOID_ELEMENTS
+ from django.utils.regex_helper import _lazy_re_compile
 +from codecarbon import EmissionsTracker
- import html
- from html.parser import HTMLParser
  
+ # ASCII whitespace is U+0009 TAB, U+000A LF, U+000C FF, U+000D CR, or U+0020
+ # SPACE.
 @@ -165,11 +166,14 @@ class Element:
  
      def __str__(self):

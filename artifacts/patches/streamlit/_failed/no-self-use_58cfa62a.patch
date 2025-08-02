@@ -1,0 +1,20 @@
+diff --git a/lib/streamlit/web/server/browser_websocket_handler.py b/lib/streamlit/web/server/browser_websocket_handler.py
+index de19dfa50..4938bba07 100644
+--- a/lib/streamlit/web/server/browser_websocket_handler.py
++++ b/lib/streamlit/web/server/browser_websocket_handler.py
+@@ -42,6 +42,7 @@ if TYPE_CHECKING:
+     from collections.abc import Awaitable
+ 
+     from streamlit.proto.ForwardMsg_pb2 import ForwardMsg
++from codecarbon import track_emissions
+ 
+ _LOGGER: Final = get_logger(__name__)
+ 
+@@ -193,6 +194,7 @@ class BrowserWebSocketHandler(WebSocketHandler, SessionClient):
+         self._runtime.disconnect_session(self._session_id)
+         self._session_id = None
+ 
++    @track_emissions(project_name='streamlit-benchmark', experiment_id='streamlit_R6301_58cfa62a', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/no-self-use/58cfa62a.csv')
+     def get_compression_options(self) -> dict[Any, Any] | None:
+         """Enable WebSocket compression.
+ 

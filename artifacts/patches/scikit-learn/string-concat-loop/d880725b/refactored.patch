@@ -1,15 +1,15 @@
 diff --git a/sklearn/utils/validation.py b/sklearn/utils/validation.py
-index d766ad1654..d395c0a7a3 100644
+index d766ad165..09e300643 100644
 --- a/sklearn/utils/validation.py
 +++ b/sklearn/utils/validation.py
-@@ -3,6 +3,7 @@
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -30,6 +30,7 @@ from ..utils.fixes import ComplexWarning, _preserve_dia_indices_dtype
+ from ._isfinite import FiniteStatus, cy_isfinite
+ from ._tags import get_tags
+ from .fixes import _object_dtype_isnan
 +from codecarbon import EmissionsTracker
- import numbers
- import operator
- import sys
+ 
+ FLOAT_DTYPES = (np.float64, np.float32, np.float16)
+ 
 @@ -2777,11 +2778,14 @@ def _check_feature_names(estimator, X, *, reset):
          def add_names(names):
              output = ""

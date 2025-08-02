@@ -1,0 +1,26 @@
+diff --git a/dask/dataframe/io/parquet/arrow.py b/dask/dataframe/io/parquet/arrow.py
+index c4e02d640..3c20ee787 100644
+--- a/dask/dataframe/io/parquet/arrow.py
++++ b/dask/dataframe/io/parquet/arrow.py
+@@ -38,6 +38,7 @@ from dask.dataframe.utils import clear_known_categories, pyarrow_strings_enabled
+ from dask.delayed import Delayed
+ from dask.tokenize import normalize_token, tokenize
+ from dask.utils import getargspec, natural_sort_key
++from codecarbon import EmissionsTracker
+ 
+ PYARROW_NULLABLE_DTYPE_MAPPING = {
+     pa.int8(): pd.Int8Dtype(),
+@@ -1477,8 +1478,11 @@ class ArrowDatasetEngine(Engine):
+         blocksize = dataset_info_kwargs["blocksize"]
+ 
+         # Initialize row-group and statistics data structures
+-        file_row_groups = defaultdict(list)
+-        file_row_group_stats = defaultdict(list)
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_CRC001_0f19175b', output_file='/root/ecooptimizer_benchmark/emissions/dask/cached-repeated-calls/0f19175b_refactored.csv') as tracker:
++            cached_defaultdict = defaultdict(list)
++            with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_CRC001_0f19175b', output_file='/root/ecooptimizer_benchmark/emissions/dask/cached-repeated-calls/0f19175b_refactored.csv') as tracker:
++                file_row_groups = defaultdict(list)
++        file_row_group_stats = cached_defaultdict
+         file_row_group_column_stats = defaultdict(list)
+         single_rg_parts = int(split_row_groups) == 1
+         hive_partition_keys = {}

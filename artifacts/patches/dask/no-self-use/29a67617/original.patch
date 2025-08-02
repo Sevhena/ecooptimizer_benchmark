@@ -1,0 +1,20 @@
+diff --git a/dask/dataframe/dask_expr/_collection.py b/dask/dataframe/dask_expr/_collection.py
+index 0e16f3ed9..01c790fd4 100644
+--- a/dask/dataframe/dask_expr/_collection.py
++++ b/dask/dataframe/dask_expr/_collection.py
+@@ -144,6 +144,7 @@ from dask.utils import (
+     typename,
+ )
+ from dask.widgets import get_template
++from codecarbon import track_emissions
+ 
+ #
+ # Utilities to wrap Expr API
+@@ -2741,6 +2742,7 @@ class DataFrame(FrameBase):
+     def _elemwise(self):
+         return elemwise
+ 
++    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R6301_29a67617', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/29a67617.csv')
+     def __array_ufunc__(self, numpy_ufunc, method, *inputs, **kwargs):
+         out = kwargs.get("out", ())
+         for x in inputs + out:

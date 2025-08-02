@@ -1,23 +1,23 @@
 diff --git a/sklearn/impute/_base.py b/sklearn/impute/_base.py
-index 689ba8acee..5adab4b62a 100644
+index 689ba8ace..16ef28145 100644
 --- a/sklearn/impute/_base.py
 +++ b/sklearn/impute/_base.py
-@@ -1,6 +1,7 @@
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -18,6 +18,7 @@ from ..utils._param_validation import MissingValues, StrOptions
+ from ..utils.fixes import _mode
+ from ..utils.sparsefuncs import _get_median
+ from ..utils.validation import (
 +from codecarbon import EmissionsTracker
- import numbers
- import warnings
- from collections import Counter
+     FLOAT_DTYPES,
+     _check_feature_names_in,
+     _check_n_features,
 @@ -570,7 +571,9 @@ class SimpleImputer(_BaseImputer):
          elif strategy == "constant":
              # TODO(1.8): Remove FutureWarning and add `np.nan` as a statistic
              # for empty features to drop them later.
 -            if not self.keep_empty_features and ma.getmask(masked_X).all(axis=0).any():
 +            with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_LMC001_e5ceae0f', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/long-message-chain/e5ceae0f.csv') as tracker:
-+                _carbon_wrapped_5af5bacd = ma.getmask(masked_X).all(axis=0).any()
-+            if not self.keep_empty_features and _carbon_wrapped_5af5bacd:
++                _carbon_wrapped_bde15738 = ma.getmask(masked_X).all(axis=0).any()
++            if not self.keep_empty_features and _carbon_wrapped_bde15738:
                  warnings.warn(
                      "Currently, when `keep_empty_feature=False` and "
                      '`strategy="constant"`, empty features are not dropped. '

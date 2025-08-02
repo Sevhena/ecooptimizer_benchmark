@@ -1,23 +1,23 @@
 diff --git a/sklearn/utils/random.py b/sklearn/utils/random.py
-index aad8b84828..9e262f705b 100644
+index aad8b8482..44fa6e051 100644
 --- a/sklearn/utils/random.py
 +++ b/sklearn/utils/random.py
-@@ -3,6 +3,7 @@
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
+@@ -10,6 +10,7 @@ import scipy.sparse as sp
  
+ from . import check_random_state
+ from ._random import sample_without_replacement
 +from codecarbon import EmissionsTracker
- import array
  
- import numpy as np
+ __all__ = ["sample_without_replacement"]
+ 
 @@ -95,7 +96,9 @@ def _random_choice_csc(n_samples, classes, class_probability=None, random_state=
              classes_ind = np.searchsorted(
                  class_probability_nz_norm.cumsum(), rng.uniform(size=nnz)
              )
 -            data.extend(classes[j][classes_j_nonzero][classes_ind])
 +            with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_LEC001_96642a91', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/long-element-chain/96642a91_refactored.csv') as tracker:
-+                _carbon_wrapped_d68e3ec4 = classes[j][classes_j_nonzero][classes_ind]
-+            data.extend(_carbon_wrapped_d68e3ec4)
++                _carbon_wrapped_21bc91d0 = classes[j][classes_j_nonzero][classes_ind]
++            data.extend(_carbon_wrapped_21bc91d0)
          indptr.append(len(indices))
  
      return sp.csc_matrix((data, indices, indptr), (n_samples, len(classes)), dtype=int)

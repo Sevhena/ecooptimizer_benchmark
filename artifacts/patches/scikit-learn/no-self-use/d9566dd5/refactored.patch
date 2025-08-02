@@ -1,15 +1,15 @@
 diff --git a/sklearn/gaussian_process/kernels.py b/sklearn/gaussian_process/kernels.py
-index 4a0a6ec667..42f3ed10a9 100644
+index 4a0a6ec66..3eb0de624 100644
 --- a/sklearn/gaussian_process/kernels.py
 +++ b/sklearn/gaussian_process/kernels.py
-@@ -11,6 +11,7 @@
- # The space of hyperparameters can be specified by giving lower und upper
- # boundaries for the value of each hyperparameter (the search space is thus
- # rectangular). Instead of specifying bounds, hyperparameters can also be
+@@ -35,6 +35,7 @@ from ..base import clone
+ from ..exceptions import ConvergenceWarning
+ from ..metrics.pairwise import pairwise_kernels
+ from ..utils.validation import _num_samples
 +from codecarbon import track_emissions
- # declared to be "fixed", which causes these hyperparameters to be excluded from
- # optimization.
  
+ 
+ def _check_length_scale(X, length_scale):
 @@ -491,7 +492,9 @@ class StationaryKernelMixin:
      .. versionadded:: 0.18
      """

@@ -1,0 +1,22 @@
+diff --git a/lib/streamlit/runtime/connection_factory.py b/lib/streamlit/runtime/connection_factory.py
+index a74f20b2f..5dafd4456 100644
+--- a/lib/streamlit/runtime/connection_factory.py
++++ b/lib/streamlit/runtime/connection_factory.py
+@@ -29,6 +29,7 @@ from streamlit.errors import StreamlitAPIException
+ from streamlit.runtime.caching import cache_resource
+ from streamlit.runtime.metrics_util import gather_metrics
+ from streamlit.runtime.secrets import secrets_singleton
++from codecarbon import EmissionsTracker
+ 
+ if TYPE_CHECKING:
+     from datetime import timedelta
+@@ -391,7 +392,8 @@ def connection_factory(  # type: ignore
+             # it must be the case that it's defined in secrets.toml and should raise an
+             # Exception otherwise.
+             secrets_singleton.load_if_toml_exists()
+-            connection_class = secrets_singleton["connections"][name]["type"]
++            with EmissionsTracker(project_name='streamlit-benchmark', experiment_id='streamlit_LEC001_a9610835', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-element-chain/a9610835.csv') as tracker:
++                connection_class = secrets_singleton["connections"][name]["type"]
+ 
+     if isinstance(connection_class, str):
+         # We assume that a connection_class specified via string is either the fully

@@ -1,0 +1,33 @@
+diff --git a/dask/highlevelgraph.py b/dask/highlevelgraph.py
+index c56e13999..4fa453006 100644
+--- a/dask/highlevelgraph.py
++++ b/dask/highlevelgraph.py
+@@ -29,6 +29,7 @@ from dask.tokenize import normalize_token, tokenize
+ from dask.typing import DaskCollection, Graph, Key
+ from dask.utils import ensure_dict, import_required, key_split
+ from dask.widgets import get_template
++from codecarbon import EmissionsTracker
+ 
+ 
+ def compute_layer_dependencies(layers):
+@@ -852,8 +853,11 @@ class HighLevelGraph(Graph):
+     def __repr__(self) -> str:
+         representation = f"{type(self).__name__} with {len(self.layers)} layers.\n"
+         representation += f"<{self.__class__.__module__}.{self.__class__.__name__} object at {hex(id(self))}>\n"
+-        for i, layerkey in enumerate(self._toposort_layers()):
+-            representation += f" {i}. {layerkey}\n"
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_SCL001_5254055f', output_file='/root/ecooptimizer_benchmark/emissions/dask/string-concat-loop/5254055f_refactored.csv') as tracker:
++            representation = [representation]
++            for i, layerkey in enumerate(self._toposort_layers()):
++                representation.append(f' {i}. {layerkey}\n')
++            representation = ''.join(representation)
+         return representation
+ 
+     def _repr_html_(self) -> str:
+@@ -1016,4 +1020,4 @@ def _get_some_layer_name(collection) -> str:
+ def register_highlevelgraph(hlg):
+     # Note: Layer keys are not necessarily identifying HLGs uniquely
+     # see https://github.com/dask/dask/issues/9888
+-    return normalize_token(list(hlg.layers.keys()))
++    return normalize_token(list(hlg.layers.keys()))
+\ No newline at end of file

@@ -1,15 +1,15 @@
 diff --git a/lib/streamlit/runtime/secrets.py b/lib/streamlit/runtime/secrets.py
-index a4ab9fb20..4e88ac176 100644
+index a4ab9fb20..6decb8dca 100644
 --- a/lib/streamlit/runtime/secrets.py
 +++ b/lib/streamlit/runtime/secrets.py
-@@ -12,6 +12,7 @@
- # See the License for the specific language governing permissions and
- # limitations under the License.
- 
+@@ -31,6 +31,7 @@ import streamlit.watcher.path_watcher
+ from streamlit import config, runtime
+ from streamlit.errors import StreamlitSecretNotFoundError
+ from streamlit.logger import get_logger
 +from codecarbon import EmissionsTracker
- from __future__ import annotations
  
- import os
+ _LOGGER: Final = get_logger(__name__)
+ 
 @@ -57,9 +58,10 @@ class SecretErrorMessages:
              "on Streamlit Cloud? More info: "
              "https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management"

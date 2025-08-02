@@ -1,0 +1,24 @@
+diff --git a/scipy/stats/_distn_infrastructure.py b/scipy/stats/_distn_infrastructure.py
+index 82cb1e343..b765b1fb4 100644
+--- a/scipy/stats/_distn_infrastructure.py
++++ b/scipy/stats/_distn_infrastructure.py
+@@ -34,6 +34,7 @@ from scipy.stats._finite_differences import _derivative
+ from scipy import stats
+ 
+ from numpy import (arange, putmask, ones, shape, ndarray, zeros, floor,
++from codecarbon import EmissionsTracker
+                    logical_and, log, sqrt, place, argmax, vectorize, asarray,
+                    nan, inf, isinf, empty)
+ 
+@@ -976,8 +977,9 @@ class rv_generic:
+         # two shapes are compatible if for each dimension, the lengths are the
+         # same or one of the lengths is 1.  Here, the length of a dimension in
+         # size_ must not be less than the corresponding length in bcast_shape.
+-        ok = all([bcdim == 1 or bcdim == szdim
+-                  for (bcdim, szdim) in zip(bcast_shape, size_)])
++        with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_R1729_671eb1fa', output_file='/root/ecooptimizer_benchmark/emissions/scipy/use-a-generator/671eb1fa.csv') as tracker:
++            ok = all([bcdim == 1 or bcdim == szdim
++                      for (bcdim, szdim) in zip(bcast_shape, size_)])
+         if not ok:
+             raise ValueError("size does not match the broadcast shape of "
+                              f"the parameters. {size}, {size_}, {bcast_shape}")

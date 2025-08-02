@@ -1,0 +1,2 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-07-31_18-05-18,dask,no-self-use,29a67617,original,30,1.39,0.0,16.0

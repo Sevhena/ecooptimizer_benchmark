@@ -1,0 +1,20 @@
+diff --git a/gpiozero/mixins.py b/gpiozero/mixins.py
+index 1b3b34a..90d03e2 100644
+--- a/gpiozero/mixins.py
++++ b/gpiozero/mixins.py
+@@ -19,6 +19,7 @@ from statistics import median
+ 
+ from .threads import GPIOThread
+ from .exc import (
++from codecarbon import track_emissions
+     BadEventHandler,
+     BadWaitTime,
+     BadQueueLen,
+@@ -162,6 +163,7 @@ class event:
+         self.handlers = {}
+         self.__doc__ = doc
+ 
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_c8dd9144', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/c8dd9144.csv')
+     def _wrap_callback(self, instance, fn):
+         if not callable(fn):
+             raise BadEventHandler('value must be None or a callable')

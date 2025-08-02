@@ -1,13 +1,15 @@
 diff --git a/scipy/stats/_continuous_distns.py b/scipy/stats/_continuous_distns.py
-index 52208164a..85af9b5be 100644
+index 52208164a..e834c408f 100644
 --- a/scipy/stats/_continuous_distns.py
 +++ b/scipy/stats/_continuous_distns.py
-@@ -1,4 +1,5 @@
- #
+@@ -12,6 +12,7 @@ import numpy as np
+ from numpy.polynomial import Polynomial
+ from scipy.interpolate import BSpline
+ from scipy._lib.doccer import (extend_notes_in_docstring,
 +from codecarbon import EmissionsTracker
- # Author:  Travis Oliphant  2002-2011 with contributions from
- #          SciPy Developers 2004-2011
- #
+                                replace_notes_in_docstring,
+                                inherit_docstring_from)
+ from scipy._lib._ccallback import LowLevelCallable
 @@ -12477,7 +12478,8 @@ rel_breitwigner = rel_breitwigner_gen(a=0.0, name="rel_breitwigner")
  
  

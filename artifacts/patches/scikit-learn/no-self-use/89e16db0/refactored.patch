@@ -1,15 +1,15 @@
 diff --git a/sklearn/utils/estimator_checks.py b/sklearn/utils/estimator_checks.py
-index 6347692842..67399fc61a 100644
+index 634769284..9bd9a37ab 100644
 --- a/sklearn/utils/estimator_checks.py
 +++ b/sklearn/utils/estimator_checks.py
-@@ -2,6 +2,7 @@
- 
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
+@@ -106,6 +106,7 @@ from ._testing import (
+     set_random_state,
+ )
+ from .validation import _num_samples, check_is_fitted, has_fit_parameter
 +from codecarbon import track_emissions
- from __future__ import annotations
  
- import pickle
+ REGRESSION_DATASET = None
+ 
 @@ -943,7 +944,9 @@ class _NotAnArray:
      def __array__(self, dtype=None, copy=None):
          return self.data

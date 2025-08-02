@@ -1,0 +1,32 @@
+diff --git a/scipy/linalg/_solvers.py b/scipy/linalg/_solvers.py
+index ea68e1180..8199bd1c6 100644
+--- a/scipy/linalg/_solvers.py
++++ b/scipy/linalg/_solvers.py
+@@ -21,6 +21,7 @@ from ._decomp_qr import qr
+ from ._decomp_qz import ordqz
+ from ._decomp import _asarray_validated
+ from ._special_matrices import block_diag
++from codecarbon import EmissionsTracker
+ 
+ __all__ = ['solve_sylvester',
+            'solve_continuous_lyapunov', 'solve_discrete_lyapunov',
+@@ -522,12 +523,13 @@ def solve_continuous_are(a, b, q, r, e=None, s=None, balanced=True):
+         raise LinAlgError('Failed to find a finite solution.')
+ 
+     # Exploit the triangular structure
+-    x = solve_triangular(ul.conj().T,
+-                         solve_triangular(uu.conj().T,
+-                                          u10.conj().T,
+-                                          lower=True),
+-                         unit_diagonal=True,
+-                         ).conj().T.dot(up.conj().T)
++    with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LMC001_adc91a18', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-message-chain/adc91a18.csv') as tracker:
++        x = solve_triangular(ul.conj().T,
++                             solve_triangular(uu.conj().T,
++                                              u10.conj().T,
++                                              lower=True),
++                             unit_diagonal=True,
++                             ).conj().T.dot(up.conj().T)
+     if balanced:
+         x *= sca[:m, None] * sca[:m]
+ 

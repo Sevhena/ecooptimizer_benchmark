@@ -1,0 +1,350 @@
+diff --git a/dask/array/_array_expr/_overlap.py b/dask/array/_array_expr/_overlap.py
+index 4a3a2249e..153b863e6 100644
+--- a/dask/array/_array_expr/_overlap.py
++++ b/dask/array/_array_expr/_overlap.py
+@@ -21,6 +21,15 @@ from dask.array.numpy_compat import normalize_axis_tuple
+ from dask.array.utils import meta_from_array
+ from dask.layers import ArrayOverlapLayer
+ from dask.utils import derived_from, ensure_dict
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ def _overlap_internal_chunks(original_chunks, axes):
+@@ -277,12 +286,7 @@ def constant(x, axis, depth, value):
+     chunks[axis] = (depth,)
+ 
+     c = full_like(
+-        x,
+-        value,
+-        shape=tuple(map(sum, chunks)),
+-        chunks=tuple(chunks),
+-        dtype=x.dtype,
+-    )
++        DataParams_full_like_234(x, value, shape = tuple(map(sum, chunks)), chunks = tuple(chunks), dtype = x.dtype))
+ 
+     return concatenate([c, x, c], axis=axis)
+ 
+diff --git a/dask/array/backends.py b/dask/array/backends.py
+index b6514a7fb..edf577c4e 100644
+--- a/dask/array/backends.py
++++ b/dask/array/backends.py
+@@ -32,6 +32,15 @@ empty_lookup.register((object, np.ndarray), np.empty)
+ empty_lookup.register(np.ma.masked_array, np.ma.empty)
+ divide_lookup.register((object, np.ndarray), np_divide)
+ divide_lookup.register(np.ma.masked_array, ma_divide)
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ @percentile_lookup.register(np.ndarray)
+@@ -296,7 +305,7 @@ def _numel(x, coerce_np_ndarray: bool, **kwargs):
+         if coerce_np_ndarray:
+             return np.full(shape=(1,) * len(shape), fill_value=prod, dtype=dtype)
+         else:
+-            return np.full_like(x, prod, shape=(1,) * len(shape), dtype=dtype)
++            return np.full_like(DataParams_full_like_234(x, prod, shape = (1,) * len(shape), dtype = dtype))
+ 
+     if not isinstance(axis, (tuple, list)):
+         axis = [axis]
+@@ -312,7 +321,7 @@ def _numel(x, coerce_np_ndarray: bool, **kwargs):
+     if coerce_np_ndarray:
+         return np.broadcast_to(np.array(prod, dtype=dtype), new_shape)
+     else:
+-        return np.full_like(x, prod, shape=new_shape, dtype=dtype)
++        return np.full_like(DataParams_full_like_234(x, prod, shape = new_shape, dtype = dtype))
+ 
+ 
+ @nannumel_lookup.register((object, np.ndarray))
+diff --git a/dask/array/creation.py b/dask/array/creation.py
+index ba7e96889..3ac6f4901 100644
+--- a/dask/array/creation.py
++++ b/dask/array/creation.py
+@@ -30,6 +30,16 @@ from dask.array.wrap import empty, full, ones, zeros
+ from dask.base import tokenize
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.utils import cached_cumsum, derived_from, is_cupy_type
++from codecarbon import track_emissions
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ def to_backend(x: Array, backend: str | None = None, **kwargs):
+@@ -229,7 +239,8 @@ def zeros_like(a, dtype=None, order="C", chunks=None, name=None, shape=None):
+     )
+ 
+ 
+-def full_like(a, fill_value, order="C", dtype=None, chunks=None, name=None, shape=None):
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_1e59b7f6', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/1e59b7f6_refactored.csv')
++def full_like(data_params):
+     """
+     Return a full array with the same shape and type as a given array.
+ 
+@@ -270,22 +281,22 @@ def full_like(a, fill_value, order="C", dtype=None, chunks=None, name=None, shap
+     full : Fill a new array.
+     """
+ 
+-    a = asarray(a, name=False)
+-    shape, chunks = _get_like_function_shapes_chunks(a, chunks, shape)
++    data_params.a = asarray(data_params.a, data_params.name=False)
++    data_params.shape, data_params.chunks = _get_like_function_shapes_chunks(data_params.a, data_params.chunks, data_params.shape)
+ 
+     # if shape is nan we cannot rely on regular full function, we use
+     # generic map_blocks.
+-    if np.isnan(shape).any():
+-        return a.map_blocks(partial(np.full_like, dtype=(dtype or a.dtype)), fill_value)
++    if np.isnan(data_params.shape).any():
++        return data_params.a.map_blocks(partial(np.full_like, data_params.dtype=(data_params.dtype or data_params.a.data_params.dtype)), data_params.fill_value)
+ 
+     return full(
+-        shape,
+-        fill_value,
+-        dtype=(dtype or a.dtype),
+-        order=order,
+-        chunks=chunks,
+-        name=name,
+-        meta=a._meta,
++        data_params.shape,
++        data_params.fill_value,
++        data_params.dtype=(data_params.dtype or data_params.a.data_params.dtype),
++        data_params.order=data_params.order,
++        data_params.chunks=data_params.chunks,
++        data_params.name=data_params.name,
++        meta=data_params.a._meta,
+     )
+ 
+ 
+diff --git a/dask/array/overlap.py b/dask/array/overlap.py
+index 4d52db810..5b34315c0 100644
+--- a/dask/array/overlap.py
++++ b/dask/array/overlap.py
+@@ -21,6 +21,15 @@ from dask.base import tokenize
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.layers import ArrayOverlapLayer
+ from dask.utils import derived_from
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ def _overlap_internal_chunks(original_chunks, axes):
+@@ -263,12 +272,7 @@ def constant(x, axis, depth, value):
+     chunks[axis] = (depth,)
+ 
+     c = full_like(
+-        x,
+-        value,
+-        shape=tuple(map(sum, chunks)),
+-        chunks=tuple(chunks),
+-        dtype=x.dtype,
+-    )
++        DataParams_full_like_234(x, value, shape = tuple(map(sum, chunks)), chunks = tuple(chunks), dtype = x.dtype))
+ 
+     return concatenate([c, x, c], axis=axis)
+ 
+diff --git a/dask/array/svg.py b/dask/array/svg.py
+index 29da53546..f700ba112 100644
+--- a/dask/array/svg.py
++++ b/dask/array/svg.py
+@@ -7,6 +7,15 @@ from functools import lru_cache
+ import numpy as np
+ 
+ from dask.utils import cached_cumsum
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ @lru_cache(maxsize=512)
+@@ -210,7 +219,7 @@ def svg_grid(x, y, offset=(0, 0), skew=(0, 0), size=200):
+     # Horizontal lines
+     x1 = np.zeros_like(y) + offset[0]
+     y1 = y + offset[1]
+-    x2 = np.full_like(y, x[-1]) + offset[0]
++    x2 = np.full_like(DataParams_full_like_234(y, x[-1])) + offset[0]
+     y2 = y + offset[1]
+ 
+     if skew[0]:
+@@ -231,7 +240,7 @@ def svg_grid(x, y, offset=(0, 0), skew=(0, 0), size=200):
+     x1 = x + offset[0]
+     y1 = np.zeros_like(x) + offset[1]
+     x2 = x + offset[0]
+-    y2 = np.full_like(x, y[-1]) + offset[1]
++    y2 = np.full_like(DataParams_full_like_234(x, y[-1])) + offset[1]
+ 
+     if skew[0]:
+         y1 += skew[0] * x
+diff --git a/dask/array/tests/test_creation.py b/dask/array/tests/test_creation.py
+index efbfb72e0..3fd2b4efc 100644
+--- a/dask/array/tests/test_creation.py
++++ b/dask/array/tests/test_creation.py
+@@ -18,6 +18,15 @@ import dask.array as da
+ from dask.array.core import normalize_chunks
+ from dask.array.numpy_compat import NUMPY_GE_210, AxisError
+ from dask.array.utils import assert_eq, same_keys
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ @pytest.mark.parametrize(
+@@ -1095,8 +1104,8 @@ def test_nan_full_like(val, shape_chunks, dtype):
+     x2 = x1.compute()
+     y2 = x2[x2 < 0.5]
+     assert_eq(
+-        da.full_like(y1, val, dtype=dtype),
+-        np.full_like(y2, val, dtype=dtype),
++        da.full_like(DataParams_full_like_234(y1, val, dtype = dtype)),
++        np.full_like(DataParams_full_like_234(y2, val, dtype = dtype)),
+     )
+ 
+ 
+diff --git a/dask/array/tests/test_cupy_core.py b/dask/array/tests/test_cupy_core.py
+index 750d2c65b..ab86b4bce 100644
+--- a/dask/array/tests/test_cupy_core.py
++++ b/dask/array/tests/test_cupy_core.py
+@@ -32,7 +32,7 @@ functions = [
+     lambda x: da.empty_like(x),
+     lambda x: da.ones_like(x),
+     lambda x: da.zeros_like(x),
+-    lambda x: da.full_like(x, 5),
++    lambda x: da.full_like(DataParams_full_like_234(x, 5)),
+     pytest.param(
+         lambda x: x.mean(),
+         marks=pytest.mark.skipif(
+@@ -123,6 +123,15 @@ functions = [
+         ),
+     ),
+ ]
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ @pytest.mark.parametrize("func", functions)
+diff --git a/dask/array/tests/test_sparse.py b/dask/array/tests/test_sparse.py
+index 67e76f763..3d4f3397e 100644
+--- a/dask/array/tests/test_sparse.py
++++ b/dask/array/tests/test_sparse.py
+@@ -71,8 +71,17 @@ functions = [
+     lambda x: np.isposinf(x),
+     lambda x: np.zeros_like(x),
+     lambda x: np.ones_like(x),
+-    lambda x: np.full_like(x, fill_value=2),
++    lambda x: np.full_like(DataParams_full_like_234(x, fill_value = 2)),
+ ]
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ @pytest.mark.parametrize("func", functions)
+diff --git a/dask/array/tests/test_wrap.py b/dask/array/tests/test_wrap.py
+index 476da863b..08723b444 100644
+--- a/dask/array/tests/test_wrap.py
++++ b/dask/array/tests/test_wrap.py
+@@ -9,6 +9,15 @@ import numpy as np
+ import dask.array as da
+ from dask.array.utils import assert_eq
+ from dask.array.wrap import ones
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ def test_ones():
+@@ -69,7 +78,7 @@ def test_full_none_dtype():
+ def test_full_like_error_nonscalar_fill_value():
+     x = np.full((3, 3), 1, dtype="i8")
+     with pytest.raises(ValueError, match="fill_value must be scalar"):
+-        da.full_like(x, [100, 100], chunks=(2, 2), dtype="i8")
++        da.full_like(DataParams_full_like_234(x, [100, 100], chunks = (2, 2), dtype = "i8"))
+ 
+ 
+ def test_can_make_really_big_array_of_ones():
+diff --git a/dask/dataframe/core.py b/dask/dataframe/core.py
+index 0e683dffb..7ec700d83 100644
+--- a/dask/dataframe/core.py
++++ b/dask/dataframe/core.py
+@@ -30,6 +30,15 @@ from dask.utils import M
+ DEFAULT_GET = named_schedulers.get("threads", named_schedulers["sync"])
+ 
+ pd.set_option("compute.use_numexpr", False)
++class DataParams_full_like_234:
++    def __init__(self, a, fill_value, order = "C", dtype = None, chunks = None, name = None, shape = None):
++        self.a = a
++        self.fill_value = fill_value
++        self.order = order
++        self.dtype = dtype
++        self.chunks = chunks
++        self.name = name
++        self.shape = shape
+ 
+ 
+ def _concat(args, ignore_index=False):
+@@ -173,7 +182,7 @@ def _cov_corr_chunk(df, corr=False):
+         counts[idx] = df[mask].count().values
+     # Special case single-row DataFrame cov to avoid warnings from pandas.
+     if df.shape[0] == 1:
+-        cov = np.full_like(sums, np.nan)  # always an all nan result
++        cov = np.full_like(DataParams_full_like_234(sums, np.nan))  # always an all nan result
+     else:
+         cov = df.cov().values
+     dtype = [("sum", sums.dtype), ("count", counts.dtype), ("cov", cov.dtype)]

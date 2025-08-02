@@ -1,15 +1,15 @@
 diff --git a/gpiozero/internal_devices.py b/gpiozero/internal_devices.py
-index 370bc39..8f3acd7 100644
+index 370bc39..aa2c1a5 100644
 --- a/gpiozero/internal_devices.py
 +++ b/gpiozero/internal_devices.py
-@@ -9,6 +9,7 @@
- #
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -19,6 +19,7 @@ from .devices import Device
+ from .mixins import EventsMixin, event
+ from .threads import GPIOThread
+ from .exc import ThresholdOutOfRange, DeviceClosed
 +from codecarbon import track_emissions
- import os
- import io
- import warnings
+ 
+ 
+ class InternalDevice(EventsMixin, Device):
 @@ -553,6 +554,7 @@ class TimeOfDay(PolledInternalDevice):
          except DeviceClosed:
              return super().__repr__()

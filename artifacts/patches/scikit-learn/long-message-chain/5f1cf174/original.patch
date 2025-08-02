@@ -1,15 +1,12 @@
 diff --git a/sklearn/datasets/_samples_generator.py b/sklearn/datasets/_samples_generator.py
-index e2d80422e7..c9e0a303c0 100644
+index e2d80422e..e3c457d78 100644
 --- a/sklearn/datasets/_samples_generator.py
 +++ b/sklearn/datasets/_samples_generator.py
-@@ -5,6 +5,7 @@ Generate samples of synthetic data sets.
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -1,3 +1,4 @@
 +from codecarbon import EmissionsTracker
- import array
- import numbers
- from collections.abc import Iterable
+ """
+ Generate samples of synthetic data sets.
+ """
 @@ -537,7 +538,8 @@ def make_multilabel_classification(
              return words, y
  

@@ -1,0 +1,31 @@
+diff --git a/dask/dataframe/dask_expr/_reductions.py b/dask/dataframe/dask_expr/_reductions.py
+index 53d549d32..70d83b92a 100644
+--- a/dask/dataframe/dask_expr/_reductions.py
++++ b/dask/dataframe/dask_expr/_reductions.py
+@@ -42,6 +42,7 @@ from dask.dataframe.dispatch import make_meta, meta_nonempty
+ from dask.dataframe.utils import is_scalar
+ from dask.typing import no_default
+ from dask.utils import M, apply, funcname
++from codecarbon import EmissionsTracker
+ 
+ 
+ class Chunk(Blockwise):
+@@ -75,12 +76,13 @@ class Chunk(Blockwise):
+             for dep in self.dependencies():
+                 lines.extend(dep._tree_repr_lines(2))
+ 
+-        for k, v in self._kwargs.items():
+-            try:
+-                if v != self.kind._defaults[k]:
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_SCL001_bf9f2446', output_file='/root/ecooptimizer_benchmark/emissions/dask/string-concat-loop/bf9f2446.csv') as tracker:
++            for k, v in self._kwargs.items():
++                try:
++                    if v != self.kind._defaults[k]:
++                        header += f" {k}={v}"
++                except KeyError:
+                     header += f" {k}={v}"
+-            except KeyError:
+-                header += f" {k}={v}"
+ 
+         lines = [header] + lines
+         lines = [" " * indent + line for line in lines]

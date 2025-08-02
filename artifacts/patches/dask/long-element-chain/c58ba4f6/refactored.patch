@@ -1,0 +1,23 @@
+diff --git a/dask/dataframe/io/parquet/arrow.py b/dask/dataframe/io/parquet/arrow.py
+index c4e02d640..74a2c090c 100644
+--- a/dask/dataframe/io/parquet/arrow.py
++++ b/dask/dataframe/io/parquet/arrow.py
+@@ -38,6 +38,7 @@ from dask.dataframe.utils import clear_known_categories, pyarrow_strings_enabled
+ from dask.delayed import Delayed
+ from dask.tokenize import normalize_token, tokenize
+ from dask.utils import getargspec, natural_sort_key
++from codecarbon import EmissionsTracker
+ 
+ PYARROW_NULLABLE_DTYPE_MAPPING = {
+     pa.int8(): pd.Int8Dtype(),
+@@ -892,7 +893,9 @@ class ArrowDatasetEngine(Engine):
+                 _meta = parts[0][0]["meta"]
+                 i_start = 1
+             for i in range(i_start, len(parts)):
+-                _append_row_groups(_meta, parts[i][0]["meta"])
++                with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LEC001_c58ba4f6', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-element-chain/c58ba4f6_refactored.csv') as tracker:
++                    _carbon_wrapped_30f42bbb = parts[i][0]["meta"]
++                _append_row_groups(_meta, _carbon_wrapped_30f42bbb)
+             with fs.open(metadata_path, "wb") as fil:
+                 _meta.write_metadata_file(fil)
+ 

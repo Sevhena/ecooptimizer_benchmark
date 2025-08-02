@@ -1,0 +1,20 @@
+diff --git a/dask/bag/core.py b/dask/bag/core.py
+index aa54972b4..ce6c19bbd 100644
+--- a/dask/bag/core.py
++++ b/dask/bag/core.py
+@@ -349,6 +349,7 @@ class StringAccessor:
+         fnmatch.fnmatch
+         """
+         from fnmatch import fnmatch
++from codecarbon import track_emissions
+ 
+         return self._bag.filter(partial(fnmatch, pat=pattern))
+ 
+@@ -393,6 +394,7 @@ class Item(DaskMethodsMixin):
+     __dask_optimize__ = globalmethod(optimize, key="bag_optimize", falsey=dont_optimize)
+     __dask_scheduler__ = staticmethod(DEFAULT_GET)
+ 
++    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R6301_a6637294', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/a6637294.csv')
+     def __dask_postcompute__(self):
+         return finalize_item, ()
+ 

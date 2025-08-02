@@ -1,15 +1,15 @@
 diff --git a/gpiozero/internal_devices.py b/gpiozero/internal_devices.py
-index 370bc39..356888b 100644
+index 370bc39..540cafd 100644
 --- a/gpiozero/internal_devices.py
 +++ b/gpiozero/internal_devices.py
-@@ -9,6 +9,7 @@
- #
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -19,6 +19,7 @@ from .devices import Device
+ from .mixins import EventsMixin, event
+ from .threads import GPIOThread
+ from .exc import ThresholdOutOfRange, DeviceClosed
 +from codecarbon import EmissionsTracker
- import os
- import io
- import warnings
+ 
+ 
+ class InternalDevice(EventsMixin, Device):
 @@ -432,7 +433,10 @@ class LoadAverage(PolledInternalDevice):
          Returns the current load average.
          """

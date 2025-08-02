@@ -1,0 +1,20 @@
+diff --git a/dask/dataframe/dask_expr/io/parquet.py b/dask/dataframe/dask_expr/io/parquet.py
+index 4563d238c..cbef32c9b 100644
+--- a/dask/dataframe/dask_expr/io/parquet.py
++++ b/dask/dataframe/dask_expr/io/parquet.py
+@@ -64,6 +64,7 @@ from dask.delayed import delayed
+ from dask.tokenize import _tokenize_deterministic, normalize_token, tokenize
+ from dask.typing import Key
+ from dask.utils import apply, funcname, natural_sort_key, parse_bytes, typename
++from codecarbon import track_emissions
+ 
+ 
+ @normalize_token.register(pa.fs.FileInfo)
+@@ -334,6 +335,7 @@ class ToParquetBarrier(Expr):
+             return {(self._name, 0): (lambda x: None, self.frame.__dask_keys__())}
+ 
+ 
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_b791c549', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/b791c549.csv')
+ def to_parquet(
+     df,
+     path,

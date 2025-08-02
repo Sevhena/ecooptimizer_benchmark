@@ -1,0 +1,22 @@
+diff --git a/dask/optimization.py b/dask/optimization.py
+index 4e65fe715..48bdb4c2f 100644
+--- a/dask/optimization.py
++++ b/dask/optimization.py
+@@ -7,6 +7,7 @@ from enum import Enum
+ from dask import config, utils
+ from dask._task_spec import GraphNode
+ from dask.core import (
++from codecarbon import EmissionsTracker
+     flatten,
+     get_dependencies,
+     ishashable,
+@@ -193,7 +194,8 @@ def fuse_linear(dsk, keys=None, dependencies=None, rename_keys=True):
+             is_renamed = (
+                 new_key is not None and new_key not in dsk and new_key not in rv
+             )
+-        child = chain.pop()
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_CRC001_cfd0f2af', output_file='/root/ecooptimizer_benchmark/emissions/dask/cached-repeated-calls/cfd0f2af.csv') as tracker:
++            child = chain.pop()
+         val = dsk[child]
+         while chain:
+             parent = chain.pop()

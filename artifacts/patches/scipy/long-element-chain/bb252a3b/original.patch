@@ -1,0 +1,19 @@
+diff --git a/scipy/io/matlab/_mio5.py b/scipy/io/matlab/_mio5.py
+index 7200b75b3..fcbab86df 100644
+--- a/scipy/io/matlab/_mio5.py
++++ b/scipy/io/matlab/_mio5.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ ''' Classes for read / write of matlab (TM) 5 files
+ 
+ The matfile specification last found here:
+@@ -507,7 +508,8 @@ def to_writeable(source):
+ 
+ 
+ # Native byte ordered dtypes for convenience for writers
+-NDT_FILE_HDR = MDTYPES[native_code]['dtypes']['file_header']
++with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LEC001_bb252a3b', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-element-chain/bb252a3b.csv') as tracker:
++    NDT_FILE_HDR = MDTYPES[native_code]['dtypes']['file_header']
+ NDT_TAG_FULL = MDTYPES[native_code]['dtypes']['tag_full']
+ NDT_TAG_SMALL = MDTYPES[native_code]['dtypes']['tag_smalldata']
+ NDT_ARRAY_FLAGS = MDTYPES[native_code]['dtypes']['array_flags']

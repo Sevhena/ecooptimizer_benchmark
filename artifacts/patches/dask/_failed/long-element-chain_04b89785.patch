@@ -1,0 +1,22 @@
+diff --git a/dask/array/core.py b/dask/array/core.py
+index 3f0215ed0..6b79221e1 100644
+--- a/dask/array/core.py
++++ b/dask/array/core.py
+@@ -29,6 +29,7 @@ from toolz import frequencies
+ 
+ from dask._compatibility import import_optional_dependency
+ from dask.core import flatten
++from codecarbon import EmissionsTracker
+ 
+ xr = import_optional_dependency("xarray", errors="ignore")
+ 
+@@ -981,7 +982,8 @@ def map_blocks(
+                     "shape": shape,
+                     "num-chunks": num_chunks[i],
+                     "array-location": [
+-                        (starts[i][ij][j], starts[i][ij][j + 1])
++                        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LEC001_04b89785', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-element-chain/04b89785.csv') as tracker:
++                            (starts[i][ij][j], starts[i][ij][j + 1])
+                         for ij, j in enumerate(arr_k)
+                     ],
+                     "chunk-location": arr_k,

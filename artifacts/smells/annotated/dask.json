@@ -1,73 +1,173 @@
 {
-    "ced2363b": {
+    "b6ac58df": {
         "additionalInfo": {
-            "callString": "len(leafs_connected[r])",
+            "callString": "kwargs.get(\"skiprows\")",
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": 2
+            "repetitions": 4
         },
-        "confidence": "MEDIUM",
+        "confidence": "HIGH",
         "energyMetadata": {
             "end": null,
             "isFunc": false,
             "start": null,
             "useOccurences": true
         },
-        "id": "ced2363b",
-        "message": "Repeated function call detected (2/2). Consider caching the result: len(leafs_connected[r])",
+        "id": "b6ac58df",
+        "message": "Repeated function call detected (4/2). Consider caching the result: kwargs.get(\"skiprows\")",
         "messageId": "CRC001",
-        "module": "order",
+        "module": "csv",
         "obj": null,
         "occurences": [
             {
-                "column": 27,
-                "endColumn": 50,
-                "endLine": 458,
-                "line": 458
+                "column": 35,
+                "endColumn": 57,
+                "endLine": 470,
+                "line": 470
             },
             {
-                "column": 29,
-                "endColumn": 52,
-                "endLine": 459,
-                "line": 459
+                "column": 37,
+                "endColumn": 59,
+                "endLine": 472,
+                "line": 472
+            },
+            {
+                "column": 13,
+                "endColumn": 35,
+                "endLine": 474,
+                "line": 474
+            },
+            {
+                "column": 27,
+                "endColumn": 49,
+                "endLine": 481,
+                "line": 481
             }
         ],
-        "path": "dask/order.py",
+        "path": "dask/dataframe/io/csv.py",
         "symbol": "cached-repeated-calls",
         "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/order.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/io/csv.py"
     },
-    "e4f3dfaa": {
+    "0f19175b": {
         "additionalInfo": {
-            "callString": "self.get_dependencies(k, all_hlg_keys)",
+            "callString": "defaultdict(list)",
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": 2
+            "repetitions": 3
         },
-        "confidence": "MEDIUM",
+        "confidence": "HIGH",
         "energyMetadata": {
             "end": null,
             "isFunc": false,
             "start": null,
             "useOccurences": true
         },
-        "id": "e4f3dfaa",
-        "message": "Repeated function call detected (2/2). Consider caching the result: self.get_dependencies(k, all_hlg_keys)",
+        "id": "0f19175b",
+        "message": "Repeated function call detected (3/2). Consider caching the result: defaultdict(list)",
         "messageId": "CRC001",
-        "module": "highlevelgraph",
+        "module": "arrow",
         "obj": null,
         "occurences": [
             {
                 "column": 30,
-                "endColumn": 68,
-                "endLine": 168,
-                "line": 168
+                "endColumn": 47,
+                "endLine": 1482,
+                "line": 1482
+            },
+            {
+                "column": 35,
+                "endColumn": 52,
+                "endLine": 1484,
+                "line": 1484
+            },
+            {
+                "column": 42,
+                "endColumn": 59,
+                "endLine": 1486,
+                "line": 1486
             }
         ],
-        "path": "dask/highlevelgraph.py",
+        "path": "dask/dataframe/io/parquet/arrow.py",
         "symbol": "cached-repeated-calls",
         "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/highlevelgraph.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/io/parquet/arrow.py"
+    },
+    "2354b0b3": {
+        "additionalInfo": {
+            "callString": "slice_with_int_dask_array_on_axis(x, idx, out_axis)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2354b0b3",
+        "message": "Repeated function call detected (2/2). Consider caching the result: slice_with_int_dask_array_on_axis(x, idx, out_axis)",
+        "messageId": "CRC001",
+        "module": "slicing",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 75,
+                "endLine": 977,
+                "line": 977
+            },
+            {
+                "column": 24,
+                "endColumn": 75,
+                "endLine": 982,
+                "line": 982
+            }
+        ],
+        "path": "dask/array/slicing.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/slicing.py"
+    },
+    "61459db0": {
+        "additionalInfo": {
+            "callString": "int(offsets[ind])",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "61459db0",
+        "message": "Repeated function call detected (2/2). Consider caching the result: int(offsets[ind])",
+        "messageId": "CRC001",
+        "module": "io",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 39,
+                "endLine": 340,
+                "line": 340
+            },
+            {
+                "column": 24,
+                "endColumn": 41,
+                "endLine": 350,
+                "line": 350
+            }
+        ],
+        "path": "dask/dataframe/io/io.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/io/io.py"
     },
     "0082590c": {
         "additionalInfo": {
@@ -90,10 +190,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 29,
-                "endColumn": 59,
-                "endLine": 67,
-                "line": 67
+                "column": 33,
+                "endColumn": 63,
+                "endLine": 69,
+                "line": 69
             }
         ],
         "path": "dask/dataframe/dask_expr/_repartition.py",
@@ -101,9 +201,9 @@
         "type": "performance",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_repartition.py"
     },
-    "b02574fe": {
+    "cfd0f2af": {
         "additionalInfo": {
-            "callString": "self._get_lengths()",
+            "callString": "chain.pop()",
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": 2
@@ -115,117 +215,157 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "b02574fe",
-        "message": "Repeated function call detected (2/2). Consider caching the result: self._get_lengths()",
+        "id": "cfd0f2af",
+        "message": "Repeated function call detected (2/2). Consider caching the result: chain.pop()",
         "messageId": "CRC001",
-        "module": "parquet",
+        "module": "optimization",
         "obj": null,
         "occurences": [
             {
-                "column": 23,
-                "endColumn": 42,
-                "endLine": 759,
-                "line": 759
+                "column": 20,
+                "endColumn": 31,
+                "endLine": 198,
+                "line": 198
             },
             {
-                "column": 23,
-                "endColumn": 42,
-                "endLine": 764,
-                "line": 764
+                "column": 25,
+                "endColumn": 36,
+                "endLine": 202,
+                "line": 202
+            }
+        ],
+        "path": "dask/optimization.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/optimization.py"
+    },
+    "b791c549": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b791c549",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "dask.dataframe.dask_expr.io.parquet",
+        "obj": "to_parquet",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 14,
+                "endLine": 339,
+                "line": 339
             }
         ],
         "path": "dask/dataframe/dask_expr/io/parquet.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/io/parquet.py"
     },
-    "37d7c987": {
+    "d1395d53": {
         "additionalInfo": {
-            "callString": "_normalize_spec({None: self.arg}, [])",
+            "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": 2
+            "repetitions": null
         },
-        "confidence": "MEDIUM",
+        "confidence": "UNDEFINED",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "37d7c987",
-        "message": "Repeated function call detected (2/2). Consider caching the result: _normalize_spec({None: self.arg}, [])",
-        "messageId": "CRC001",
-        "module": "_groupby",
-        "obj": null,
+        "id": "d1395d53",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "dask.dataframe.io.csv",
+        "obj": "text_blocks_to_pandas",
         "occurences": [
             {
-                "column": 23,
-                "endColumn": 60,
-                "endLine": 397,
-                "line": 397
-            },
-            {
-                "column": 23,
-                "endColumn": 60,
-                "endLine": 404,
-                "line": 404
+                "column": 0,
+                "endColumn": 25,
+                "endLine": 185,
+                "line": 185
             }
         ],
-        "path": "dask/dataframe/dask_expr/_groupby.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_groupby.py"
+        "path": "dask/dataframe/io/csv.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/io/csv.py"
     },
-    "ebc5bf78": {
+    "1e59b7f6": {
         "additionalInfo": {
-            "callString": "r.squeeze(axis=axis)",
+            "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": 4
+            "repetitions": null
         },
-        "confidence": "HIGH",
+        "confidence": "UNDEFINED",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "ebc5bf78",
-        "message": "Repeated function call detected (4/2). Consider caching the result: r.squeeze(axis=axis)",
-        "messageId": "CRC001",
-        "module": "linalg",
-        "obj": null,
+        "id": "1e59b7f6",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "dask.array.creation",
+        "obj": "full_like",
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 40,
-                "endLine": 1503,
-                "line": 1503
-            },
-            {
-                "column": 20,
-                "endColumn": 40,
-                "endLine": 1510,
-                "line": 1510
-            },
-            {
-                "column": 20,
-                "endColumn": 40,
-                "endLine": 1522,
-                "line": 1522
-            },
-            {
-                "column": 16,
-                "endColumn": 36,
-                "endLine": 1526,
-                "line": 1526
+                "column": 0,
+                "endColumn": 13,
+                "endLine": 234,
+                "line": 234
             }
         ],
-        "path": "dask/array/linalg.py",
-        "symbol": "cached-repeated-calls",
-        "type": "performance",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/linalg.py"
+        "path": "dask/array/creation.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/creation.py"
+    },
+    "3f5d3f21": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3f5d3f21",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "dask.dataframe.io.csv",
+        "obj": "to_csv",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 10,
+                "endLine": 769,
+                "line": 769
+            }
+        ],
+        "path": "dask/dataframe/io/csv.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/io/csv.py"
     },
     "b217bf24": {
         "additionalInfo": {
@@ -259,7 +399,7 @@
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/_reductions_generic.py"
     },
-    "79acf82a": {
+    "ca05b444": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -273,151 +413,23 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "79acf82a",
-        "message": "Too many arguments (11/6)",
-        "messageId": "R0913",
-        "module": "dask.array.utils",
-        "obj": "assert_eq",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 13,
-                "endLine": 303,
-                "line": 303
-            }
-        ],
-        "path": "dask/array/utils.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/utils.py"
-    },
-    "4e24e944": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "4e24e944",
-        "message": "Too many arguments (13/6)",
-        "messageId": "R0913",
-        "module": "dask.dataframe.io.sql",
-        "obj": "to_sql",
-        "occurences": [
-            {
-                "column": 0,
-                "endColumn": 10,
-                "endLine": 427,
-                "line": 427
-            }
-        ],
-        "path": "dask/dataframe/io/sql.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/io/sql.py"
-    },
-    "a82e6319": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "a82e6319",
-        "message": "Too many arguments (10/6)",
-        "messageId": "R0913",
-        "module": "dask.dataframe.io.csv",
-        "obj": "make_reader.read",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 12,
-                "endLine": 720,
-                "line": 720
-            }
-        ],
-        "path": "dask/dataframe/io/csv.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/io/csv.py"
-    },
-    "fa78ea44": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "fa78ea44",
+        "id": "ca05b444",
         "message": "Too many arguments (8/6)",
         "messageId": "R0913",
-        "module": "dask.dataframe.dask_expr._groupby",
-        "obj": "groupby_slice_transform",
+        "module": "dask.array.reductions",
+        "obj": "arg_reduction",
         "occurences": [
             {
                 "column": 0,
-                "endColumn": 27,
-                "endLine": 1266,
-                "line": 1266
+                "endColumn": 17,
+                "endLine": 843,
+                "line": 843
             }
         ],
-        "path": "dask/dataframe/dask_expr/_groupby.py",
+        "path": "dask/array/reductions.py",
         "symbol": "too-many-arguments",
         "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_groupby.py"
-    },
-    "17fcee15": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": true,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "17fcee15",
-        "message": "Too many arguments (9/6)",
-        "messageId": "R0913",
-        "module": "dask.bag.core",
-        "obj": "Bag.to_avro",
-        "occurences": [
-            {
-                "column": 4,
-                "endColumn": 15,
-                "endLine": 842,
-                "line": 842
-            }
-        ],
-        "path": "dask/bag/core.py",
-        "symbol": "too-many-arguments",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/bag/core.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/reductions.py"
     },
     "04b89785": {
         "additionalInfo": {
@@ -675,102 +687,6 @@
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/routines.py"
     },
-    "b320286e": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "b320286e",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "utils",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 39,
-                "endColumn": 85,
-                "endLine": 1363,
-                "line": 1363
-            }
-        ],
-        "path": "dask/utils.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/utils.py"
-    },
-    "206a4433": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "206a4433",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "system",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 29,
-                "endColumn": 56,
-                "endLine": 33,
-                "line": 33
-            }
-        ],
-        "path": "dask/system.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/system.py"
-    },
-    "745bc2fb": {
-        "additionalInfo": {
-            "callString": null,
-            "concatTarget": null,
-            "innerLoopLine": null,
-            "repetitions": null
-        },
-        "confidence": "UNDEFINED",
-        "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
-        },
-        "id": "745bc2fb",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "_version",
-        "obj": null,
-        "occurences": [
-            {
-                "column": 25,
-                "endColumn": 78,
-                "endLine": 412,
-                "line": 412
-            }
-        ],
-        "path": "dask/_version.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/_version.py"
-    },
     "6fb2eba3": {
         "additionalInfo": {
             "callString": null,
@@ -802,6 +718,38 @@
         "symbol": "long-message-chain",
         "type": "convention",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/einsumfuncs.py"
+    },
+    "8da83e08": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8da83e08",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "methods",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 35,
+                "endColumn": 72,
+                "endLine": 415,
+                "line": 415
+            }
+        ],
+        "path": "dask/dataframe/methods.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/methods.py"
     },
     "aab89951": {
         "additionalInfo": {
@@ -835,7 +783,7 @@
         "type": "convention",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_expr.py"
     },
-    "ba97ee6b": {
+    "b320286e": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -849,87 +797,87 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "ba97ee6b",
+        "id": "b320286e",
         "message": "Method chain too long (3/3)",
         "messageId": "LMC001",
-        "module": "groupby",
+        "module": "utils",
         "obj": null,
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 54,
-                "endLine": 521,
-                "line": 519
+                "column": 39,
+                "endColumn": 85,
+                "endLine": 1363,
+                "line": 1363
             }
         ],
-        "path": "dask/dataframe/groupby.py",
+        "path": "dask/utils.py",
         "symbol": "long-message-chain",
         "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/groupby.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/utils.py"
     },
-    "eb231117": {
+    "5b93ca8d": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": null
         },
-        "confidence": "INFERENCE",
+        "confidence": "UNDEFINED",
         "energyMetadata": {
             "end": null,
-            "isFunc": true,
+            "isFunc": false,
             "start": null,
             "useOccurences": true
         },
-        "id": "eb231117",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "dask.array._array_expr._collection",
-        "obj": "Array.__dask_postcompute__",
+        "id": "5b93ca8d",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "_version",
+        "obj": null,
         "occurences": [
             {
-                "column": 4,
-                "endColumn": 28,
-                "endLine": 54,
-                "line": 54
+                "column": 19,
+                "endColumn": 72,
+                "endLine": 220,
+                "line": 220
             }
         ],
-        "path": "dask/array/_array_expr/_collection.py",
-        "symbol": "no-self-use",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/_array_expr/_collection.py"
+        "path": "dask/_version.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/_version.py"
     },
-    "29a67617": {
+    "206a4433": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
             "innerLoopLine": null,
             "repetitions": null
         },
-        "confidence": "INFERENCE",
+        "confidence": "UNDEFINED",
         "energyMetadata": {
             "end": null,
-            "isFunc": true,
+            "isFunc": false,
             "start": null,
             "useOccurences": true
         },
-        "id": "29a67617",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "dask.dataframe.dask_expr._collection",
-        "obj": "DataFrame.__array_ufunc__",
+        "id": "206a4433",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "system",
+        "obj": null,
         "occurences": [
             {
-                "column": 4,
-                "endColumn": 23,
-                "endLine": 2746,
-                "line": 2746
+                "column": 29,
+                "endColumn": 56,
+                "endLine": 33,
+                "line": 33
             }
         ],
-        "path": "dask/dataframe/dask_expr/_collection.py",
-        "symbol": "no-self-use",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_collection.py"
+        "path": "dask/system.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/system.py"
     },
     "70eba4d1": {
         "additionalInfo": {
@@ -963,7 +911,7 @@
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/array/core.py"
     },
-    "f25132d5": {
+    "29a67617": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -977,25 +925,25 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "f25132d5",
+        "id": "29a67617",
         "message": "Method could be a function",
         "messageId": "R6301",
-        "module": "dask.dataframe.dask_expr.io.io",
-        "obj": "FusedIO.dependencies",
+        "module": "dask.dataframe.dask_expr._collection",
+        "obj": "DataFrame.__array_ufunc__",
         "occurences": [
             {
                 "column": 4,
-                "endColumn": 20,
-                "endLine": 126,
-                "line": 126
+                "endColumn": 23,
+                "endLine": 2746,
+                "line": 2746
             }
         ],
-        "path": "dask/dataframe/dask_expr/io/io.py",
+        "path": "dask/dataframe/dask_expr/_collection.py",
         "symbol": "no-self-use",
         "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/io/io.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_collection.py"
     },
-    "feb9973e": {
+    "4ea830b2": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -1009,23 +957,23 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "feb9973e",
+        "id": "4ea830b2",
         "message": "Method could be a function",
         "messageId": "R6301",
-        "module": "dask.dataframe.dask_expr._describe",
-        "obj": "DescribeNumericAggregate._broadcast_dep",
+        "module": "dask.dataframe.dask_expr._quantiles",
+        "obj": "RepartitionQuantiles._divisions",
         "occurences": [
             {
                 "column": 4,
-                "endColumn": 22,
-                "endLine": 85,
-                "line": 85
+                "endColumn": 18,
+                "endLine": 34,
+                "line": 34
             }
         ],
-        "path": "dask/dataframe/dask_expr/_describe.py",
+        "path": "dask/dataframe/dask_expr/_quantiles.py",
         "symbol": "no-self-use",
         "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_describe.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_quantiles.py"
     },
     "a6637294": {
         "additionalInfo": {
@@ -1058,6 +1006,70 @@
         "symbol": "no-self-use",
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/bag/core.py"
+    },
+    "4a6855eb": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4a6855eb",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "dask.dataframe.dask_expr._reductions",
+        "obj": "TreeReduce.__dask_postcompute__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 332,
+                "line": 332
+            }
+        ],
+        "path": "dask/dataframe/dask_expr/_reductions.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_reductions.py"
+    },
+    "cdb5b8c8": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cdb5b8c8",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "dask.dataframe.dask_expr._concat",
+        "obj": "ConcatIndexed._broadcast_dep",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 380,
+                "line": 380
+            }
+        ],
+        "path": "dask/dataframe/dask_expr/_concat.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/dask/dask/dataframe/dask_expr/_concat.py"
     },
     "3cad881d": {
         "additionalInfo": {

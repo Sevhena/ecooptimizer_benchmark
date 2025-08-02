@@ -1,0 +1,20 @@
+diff --git a/sklearn/model_selection/_plot.py b/sklearn/model_selection/_plot.py
+index a69c8f455..c5640cd82 100644
+--- a/sklearn/model_selection/_plot.py
++++ b/sklearn/model_selection/_plot.py
+@@ -6,6 +6,7 @@ import numpy as np
+ from ..utils._optional_dependencies import check_matplotlib_support
+ from ..utils._plotting import _interval_max_min_ratio, _validate_score_name
+ from ._validation import learning_curve, validation_curve
++from codecarbon import track_emissions
+ 
+ 
+ class _BaseCurveDisplay:
+@@ -284,6 +285,7 @@ class LearningCurveDisplay(_BaseCurveDisplay):
+         return self
+ 
+     @classmethod
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_5e6f25c4', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/5e6f25c4.csv')
+     def from_estimator(
+         cls,
+         estimator,

@@ -1,14 +1,15 @@
 diff --git a/numpy/distutils/command/build_src.py b/numpy/distutils/command/build_src.py
-index cfcc80caec..44079b19a3 100644
+index cfcc80caec..87c0daab95 100644
 --- a/numpy/distutils/command/build_src.py
 +++ b/numpy/distutils/command/build_src.py
-@@ -1,5 +1,6 @@
- """ Build swig and f2py sources.
- """
+@@ -21,6 +21,7 @@
+     )
+ from numpy.distutils.from_template import process_file as process_f_file
+ from numpy.distutils.conv_template import process_file as process_c_file
 +from codecarbon import track_emissions
- import os
- import re
- import sys
+ 
+ def subst_vars(target, source, d):
+     """Substitute any occurrence of @foo@ by d['foo'] from source file into
 @@ -393,6 +394,7 @@ def filter_py_files(self, sources):
      def filter_h_files(self, sources):
          return self.filter_files(sources, ['.h', '.hpp', '.inc'])

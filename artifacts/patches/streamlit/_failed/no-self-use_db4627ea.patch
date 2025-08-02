@@ -1,0 +1,20 @@
+diff --git a/lib/streamlit/delta_generator.py b/lib/streamlit/delta_generator.py
+index 53f3b9690..6341a16c6 100644
+--- a/lib/streamlit/delta_generator.py
++++ b/lib/streamlit/delta_generator.py
+@@ -102,6 +102,7 @@ from streamlit.proto.RootContainer_pb2 import RootContainer
+ from streamlit.runtime import caching
+ from streamlit.runtime.scriptrunner import enqueue_message as _enqueue_message
+ from streamlit.runtime.scriptrunner import get_script_run_ctx
++from codecarbon import track_emissions
+ 
+ if TYPE_CHECKING:
+     from types import TracebackType
+@@ -398,6 +399,7 @@ class DeltaGenerator(
+             if a._block_type is not None:
+                 yield a._block_type
+ 
++    @track_emissions(project_name='streamlit-benchmark', experiment_id='streamlit_R6301_db4627ea', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/no-self-use/db4627ea.csv')
+     def _count_num_of_parent_columns(
+         self, ancestor_block_types: AncestorBlockTypes
+     ) -> int:

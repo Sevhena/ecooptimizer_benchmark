@@ -1,0 +1,20 @@
+diff --git a/django/forms/renderers.py b/django/forms/renderers.py
+index 1fc4431302..ce94407408 100644
+--- a/django/forms/renderers.py
++++ b/django/forms/renderers.py
+@@ -6,6 +6,7 @@ from django.template.backends.django import DjangoTemplates
+ from django.template.loader import get_template
+ from django.utils.functional import cached_property
+ from django.utils.module_loading import import_string
++from codecarbon import track_emissions
+ 
+ 
+ @functools.lru_cache
+@@ -61,6 +62,7 @@ class Jinja2(EngineMixin, BaseRenderer):
+     """
+ 
+     @cached_property
++    @track_emissions(project_name='django-benchmark', experiment_id='django_R6301_7c0c950e', output_file='/root/ecooptimizer_benchmark/emissions/django/no-self-use/7c0c950e.csv')
+     def backend(self):
+         from django.template.backends.jinja2 import Jinja2
+ 

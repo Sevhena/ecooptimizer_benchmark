@@ -442,8 +442,8 @@
             {
                 "column": 4,
                 "endColumn": 17,
-                "endLine": 994,
-                "line": 994
+                "endLine": 996,
+                "line": 996
             }
         ],
         "path": "scipy/stats/_distn_infrastructure.py",
@@ -632,10 +632,10 @@
         "obj": "rv_generic._argcheck_rvs",
         "occurences": [
             {
-                "column": 13,
-                "endColumn": 65,
-                "endLine": 980,
-                "line": 979
+                "column": 17,
+                "endColumn": 69,
+                "endLine": 982,
+                "line": 981
             }
         ],
         "path": "scipy/stats/_distn_infrastructure.py",
@@ -920,10 +920,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 111,
-                "endLine": 392,
-                "line": 392
+                "column": 15,
+                "endColumn": 87,
+                "endLine": 390,
+                "line": 390
             }
         ],
         "path": "scipy/sparse/_lil.py",

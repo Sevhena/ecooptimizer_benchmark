@@ -1,0 +1,20 @@
+diff --git a/sklearn/preprocessing/_function_transformer.py b/sklearn/preprocessing/_function_transformer.py
+index 3d7592b17..7612c478c 100644
+--- a/sklearn/preprocessing/_function_transformer.py
++++ b/sklearn/preprocessing/_function_transformer.py
+@@ -15,6 +15,7 @@ from ..utils._set_output import (
+ )
+ from ..utils.metaestimators import available_if
+ from ..utils.validation import (
++from codecarbon import track_emissions
+     _allclose_dense_sparse,
+     _check_feature_names,
+     _check_feature_names_in,
+@@ -386,6 +387,7 @@ class FunctionTransformer(TransformerMixin, BaseEstimator):
+ 
+         return func(X, **(kw_args if kw_args else {}))
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R6301_20e40681', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/no-self-use/20e40681.csv')
+     def __sklearn_is_fitted__(self):
+         """Return True since FunctionTransfomer is stateless."""
+         return True

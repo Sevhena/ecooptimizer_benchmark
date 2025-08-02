@@ -1,12 +1,15 @@
 diff --git a/django/utils/http.py b/django/utils/http.py
-index 1c7aec7141..b235aa16c5 100644
+index 1c7aec7141..0d7eb87a1b 100644
 --- a/django/utils/http.py
 +++ b/django/utils/http.py
-@@ -1,3 +1,4 @@
+@@ -11,6 +11,7 @@ from urllib.parse import urlsplit
+ 
+ from django.utils.datastructures import MultiValueDict
+ from django.utils.regex_helper import _lazy_re_compile
 +from codecarbon import EmissionsTracker
- import base64
- import re
- import unicodedata
+ 
+ # Based on RFC 9110 Appendix A.
+ ETAG_MATCH = _lazy_re_compile(
 @@ -171,9 +172,10 @@ def int_to_base36(i):
      if i < 36:
          return char_set[i]

@@ -1,0 +1,20 @@
+diff --git a/scipy/_lib/_testutils.py b/scipy/_lib/_testutils.py
+index 442bb539d..4948cce4c 100644
+--- a/scipy/_lib/_testutils.py
++++ b/scipy/_lib/_testutils.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ """
+ Generic test utilities.
+ 
+@@ -196,7 +197,9 @@ class _TestPythranFunc:
+     def test_views(self):
+         args_array = []
+         for arg_idx in self.arguments:
+-            args_array.append(self.arguments[arg_idx][0][::-1][::-1])
++            with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LEC001_9c8a87c1', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-element-chain/9c8a87c1_refactored.csv') as tracker:
++                _carbon_wrapped_6adf07e5 = self.arguments[arg_idx][0][::-1][::-1]
++            args_array.append(_carbon_wrapped_6adf07e5)
+         self.pythranfunc(*args_array)
+ 
+     def test_strided(self):

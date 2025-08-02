@@ -1,0 +1,20 @@
+diff --git a/dask/dataframe/dask_expr/_quantiles.py b/dask/dataframe/dask_expr/_quantiles.py
+index 1d7e20282..44c7522e9 100644
+--- a/dask/dataframe/dask_expr/_quantiles.py
++++ b/dask/dataframe/dask_expr/_quantiles.py
+@@ -15,6 +15,7 @@ from dask.dataframe.partitionquantiles import (
+ )
+ from dask.tokenize import tokenize
+ from dask.utils import random_state_data
++from codecarbon import track_emissions
+ 
+ 
+ class RepartitionQuantiles(Expr):
+@@ -29,6 +30,7 @@ class RepartitionQuantiles(Expr):
+     def npartitions(self):
+         return 1
+ 
++    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R6301_4ea830b2', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/4ea830b2.csv')
+     def _divisions(self):
+         return 0.0, 1.0
+ 

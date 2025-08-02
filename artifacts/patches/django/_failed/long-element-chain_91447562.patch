@@ -1,0 +1,19 @@
+diff --git a/django/forms/widgets.py b/django/forms/widgets.py
+index 9b5ad1b2b9..b975c6ef59 100644
+--- a/django/forms/widgets.py
++++ b/django/forms/widgets.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ """
+ HTML Widget classes
+ """
+@@ -571,7 +572,8 @@ class ClearableFileInput(FileInput):
+             }
+         )
+         context["widget"]["attrs"].setdefault("disabled", False)
+-        context["widget"]["attrs"]["checked"] = self.checked
++        with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LEC001_91447562', output_file='/root/ecooptimizer_benchmark/emissions/django/long-element-chain/91447562.csv') as tracker:
++            context["widget"]["attrs"]["checked"] = self.checked
+         return context
+ 
+     def value_from_datadict(self, data, files, name):

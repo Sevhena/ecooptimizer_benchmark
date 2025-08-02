@@ -1,0 +1,190 @@
+diff --git a/dask/array/reductions.py b/dask/array/reductions.py
+index 0458f583b..c07bb9d7e 100644
+--- a/dask/array/reductions.py
++++ b/dask/array/reductions.py
+@@ -37,6 +37,7 @@ from dask.array.wrap import ones, zeros
+ from dask.base import tokenize
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.utils import apply, deepmap, derived_from
++from codecarbon import track_emissions
+ 
+ try:
+     import numbagg
+@@ -47,6 +48,16 @@ if da._array_expr_enabled():
+     from dask.array._array_expr import _tree_reduce, reduction
+ else:
+     from dask.array._reductions_generic import _tree_reduce, reduction
++class DataParams_arg_reduction_843:
++    def __init__(self, x, chunk, combine, agg, axis = None, keepdims = False, split_every = None, out = None):
++        self.x = x
++        self.chunk = chunk
++        self.combine = combine
++        self.agg = agg
++        self.axis = axis
++        self.keepdims = keepdims
++        self.split_every = split_every
++        self.out = out
+ 
+ 
+ def divide(a, b, dtype=None):
+@@ -838,9 +849,9 @@ def nanarg_agg(argfunc, data, axis=None, keepdims=False, **kwargs):
+     return arg
+ 
+ 
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_ca05b444', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/ca05b444_refactored.csv')
+ def arg_reduction(
+-    x, chunk, combine, agg, axis=None, keepdims=False, split_every=None, out=None
+-):
++    data_params):
+     """Generic function for argreduction.
+ 
+     Parameters
+@@ -855,18 +866,18 @@ def arg_reduction(
+     axis : int, optional
+     split_every : int or dict, optional
+     """
+-    if axis is None:
+-        axis = tuple(range(x.ndim))
++    if data_params.axis is None:
++        data_params.axis = tuple(range(data_params.x.ndim))
+         ravel = True
+-    elif isinstance(axis, Integral):
+-        axis = validate_axis(axis, x.ndim)
+-        axis = (axis,)
+-        ravel = x.ndim == 1
++    elif isinstance(data_params.axis, Integral):
++        data_params.axis = validate_axis(data_params.axis, data_params.x.ndim)
++        data_params.axis = (data_params.axis,)
++        ravel = data_params.x.ndim == 1
+     else:
+-        raise TypeError(f"axis must be either `None` or int, got '{axis}'")
++        raise TypeError(f"axis must be either `None` or int, got '{data_params.axis}'")
+ 
+-    for ax in axis:
+-        chunks = x.chunks[ax]
++    for ax in data_params.axis:
++        chunks = data_params.x.chunks[ax]
+         if len(chunks) > 1 and np.isnan(chunks).any():
+             raise ValueError(
+                 "Arg-reductions do not work with arrays that have "
+@@ -877,22 +888,22 @@ def arg_reduction(
+             )
+ 
+     # Map chunk across all blocks
+-    name = f"arg-reduce-{tokenize(axis, x, chunk, combine, split_every)}"
+-    old = x.name
+-    keys = list(product(*map(range, x.numblocks)))
+-    offsets = list(product(*(accumulate(operator.add, bd[:-1], 0) for bd in x.chunks)))
++    name = f"arg-reduce-{tokenize(data_params.axis, data_params.x, data_params.chunk, data_params.combine, data_params.split_every)}"
++    old = data_params.x.name
++    keys = list(product(*map(range, data_params.x.numblocks)))
++    offsets = list(product(*(accumulate(operator.add, bd[:-1], 0) for bd in data_params.x.chunks)))
+     if ravel:
+-        offset_info = zip(offsets, repeat(x.shape))
++        offset_info = zip(offsets, repeat(data_params.x.shape))
+     else:
+-        offset_info = pluck(axis[0], offsets)
++        offset_info = pluck(data_params.axis[0], offsets)
+ 
+-    chunks = tuple((1,) * len(c) if i in axis else c for (i, c) in enumerate(x.chunks))
++    chunks = tuple((1,) * len(c) if i in data_params.axis else c for (i, c) in enumerate(data_params.x.chunks))
+     dsk = {
+-        (name,) + k: (chunk, (old,) + k, axis, off)
++        (name,) + k: (data_params.chunk, (old,) + k, data_params.axis, off)
+         for (k, off) in zip(keys, offset_info)
+     }
+ 
+-    dtype = np.argmin(asarray_safe([1], like=meta_from_array(x)))
++    dtype = np.argmin(asarray_safe([1], like=meta_from_array(data_params.x)))
+     meta = None
+     if is_arraylike(dtype):
+         # This case occurs on non-NumPy types (e.g., CuPy), where the returned
+@@ -900,19 +911,19 @@ def arg_reduction(
+         meta = dtype
+         dtype = meta.dtype
+ 
+-    graph = HighLevelGraph.from_collections(name, dsk, dependencies=[x])
++    graph = HighLevelGraph.from_collections(name, dsk, dependencies=[data_params.x])
+     tmp = Array(graph, name, chunks, dtype=dtype, meta=meta)
+ 
+     result = _tree_reduce(
+         tmp,
+-        agg,
+-        axis,
+-        keepdims=keepdims,
++        data_params.agg,
++        data_params.axis,
++        data_params.keepdims=data_params.keepdims,
+         dtype=dtype,
+-        split_every=split_every,
+-        combine=combine,
++        data_params.split_every=data_params.split_every,
++        data_params.combine=data_params.combine,
+     )
+-    return handle_out(out, result)
++    return handle_out(data_params.out, result)
+ 
+ 
+ def _nanargmin(x, axis, **kwargs):
+@@ -932,57 +943,25 @@ def _nanargmax(x, axis, **kwargs):
+ @derived_from(np)
+ def argmax(a, axis=None, keepdims=False, split_every=None, out=None):
+     return arg_reduction(
+-        a,
+-        partial(arg_chunk, chunk.max, chunk.argmax),
+-        partial(arg_combine, chunk.argmax),
+-        partial(arg_agg, chunk.argmax),
+-        axis=axis,
+-        keepdims=keepdims,
+-        split_every=split_every,
+-        out=out,
+-    )
++        DataParams_arg_reduction_843(a, partial(arg_chunk, chunk.max, chunk.argmax), partial(arg_combine, chunk.argmax), partial(arg_agg, chunk.argmax), axis = axis, keepdims = keepdims, split_every = split_every, out = out))
+ 
+ 
+ @derived_from(np)
+ def argmin(a, axis=None, keepdims=False, split_every=None, out=None):
+     return arg_reduction(
+-        a,
+-        partial(arg_chunk, chunk.min, chunk.argmin),
+-        partial(arg_combine, chunk.argmin),
+-        partial(arg_agg, chunk.argmin),
+-        axis=axis,
+-        keepdims=keepdims,
+-        split_every=split_every,
+-        out=out,
+-    )
++        DataParams_arg_reduction_843(a, partial(arg_chunk, chunk.min, chunk.argmin), partial(arg_combine, chunk.argmin), partial(arg_agg, chunk.argmin), axis = axis, keepdims = keepdims, split_every = split_every, out = out))
+ 
+ 
+ @derived_from(np)
+ def nanargmax(a, axis=None, keepdims=False, split_every=None, out=None):
+     return arg_reduction(
+-        a,
+-        partial(arg_chunk, chunk.nanmax, _nanargmax),
+-        partial(arg_combine, _nanargmax),
+-        partial(nanarg_agg, _nanargmax),
+-        axis=axis,
+-        keepdims=keepdims,
+-        split_every=split_every,
+-        out=out,
+-    )
++        DataParams_arg_reduction_843(a, partial(arg_chunk, chunk.nanmax, _nanargmax), partial(arg_combine, _nanargmax), partial(nanarg_agg, _nanargmax), axis = axis, keepdims = keepdims, split_every = split_every, out = out))
+ 
+ 
+ @derived_from(np)
+ def nanargmin(a, axis=None, keepdims=False, split_every=None, out=None):
+     return arg_reduction(
+-        a,
+-        partial(arg_chunk, chunk.nanmin, _nanargmin),
+-        partial(arg_combine, _nanargmin),
+-        partial(nanarg_agg, _nanargmin),
+-        axis=axis,
+-        keepdims=keepdims,
+-        split_every=split_every,
+-        out=out,
+-    )
++        DataParams_arg_reduction_843(a, partial(arg_chunk, chunk.nanmin, _nanargmin), partial(arg_combine, _nanargmin), partial(nanarg_agg, _nanargmin), axis = axis, keepdims = keepdims, split_every = split_every, out = out))
+ 
+ 
+ def _prefixscan_combine(func, binop, pre, x, axis, dtype):

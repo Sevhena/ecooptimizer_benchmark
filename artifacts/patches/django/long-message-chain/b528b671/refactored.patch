@@ -1,12 +1,15 @@
 diff --git a/django/contrib/auth/migrations/0011_update_proxy_permissions.py b/django/contrib/auth/migrations/0011_update_proxy_permissions.py
-index aa6ddd50c5..c8b1d581b7 100644
+index aa6ddd50c5..fb16113c17 100644
 --- a/django/contrib/auth/migrations/0011_update_proxy_permissions.py
 +++ b/django/contrib/auth/migrations/0011_update_proxy_permissions.py
-@@ -1,3 +1,4 @@
-+from codecarbon import EmissionsTracker
- import sys
- 
+@@ -3,6 +3,7 @@ import sys
  from django.core.management.color import color_style
+ from django.db import IntegrityError, migrations, transaction
+ from django.db.models import Q
++from codecarbon import EmissionsTracker
+ 
+ WARNING = """
+     A problem arose migrating proxy model permissions for {old} to {new}.
 @@ -44,10 +45,12 @@ def update_proxy_model_permissions(apps, schema_editor, reverse=False):
          new_content_type = concrete_content_type if reverse else proxy_content_type
          try:

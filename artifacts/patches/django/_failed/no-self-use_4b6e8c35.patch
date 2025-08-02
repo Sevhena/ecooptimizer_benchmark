@@ -1,0 +1,20 @@
+diff --git a/django/contrib/staticfiles/storage.py b/django/contrib/staticfiles/storage.py
+index 95e71e45fc..56743d7537 100644
+--- a/django/contrib/staticfiles/storage.py
++++ b/django/contrib/staticfiles/storage.py
+@@ -11,6 +11,7 @@ from django.core.exceptions import ImproperlyConfigured
+ from django.core.files.base import ContentFile
+ from django.core.files.storage import FileSystemStorage, storages
+ from django.utils.functional import LazyObject
++from codecarbon import track_emissions
+ 
+ 
+ class StaticFilesStorage(FileSystemStorage):
+@@ -413,6 +414,7 @@ class HashedFilesMixin:
+     def clean_name(self, name):
+         return name.replace("\\", "/")
+ 
++    @track_emissions(project_name='django-benchmark', experiment_id='django_R6301_4b6e8c35', output_file='/root/ecooptimizer_benchmark/emissions/django/no-self-use/4b6e8c35.csv')
+     def hash_key(self, name):
+         return name
+ 

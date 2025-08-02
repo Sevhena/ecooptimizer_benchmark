@@ -1,0 +1,253 @@
+diff --git a/dask/dataframe/io/csv.py b/dask/dataframe/io/csv.py
+index 4dc9ad8a0..0d2788d15 100644
+--- a/dask/dataframe/io/csv.py
++++ b/dask/dataframe/io/csv.py
+@@ -7,6 +7,7 @@ from io import BytesIO
+ from warnings import catch_warnings, simplefilter, warn
+ 
+ from dask._task_spec import convert_legacy_task
++from codecarbon import track_emissions
+ 
+ try:
+     import psutil
+@@ -35,6 +36,19 @@ from dask.dataframe.backends import dataframe_creation_dispatch
+ from dask.dataframe.utils import clear_known_categories
+ from dask.delayed import delayed
+ from dask.utils import asciitable, parse_bytes
++class DataParams_text_blocks_to_pandas_185:
++    def __init__(self, reader, block_lists, header, head, kwargs, enforce = False, specified_dtypes = None, blocksize = None):
++        self.reader = reader
++        self.block_lists = block_lists
++        self.header = header
++        self.head = head
++        self.kwargs = kwargs
++        self.enforce = enforce
++        self.specified_dtypes = specified_dtypes
++        self.blocksize = blocksize
++class ConfigParams_text_blocks_to_pandas_185:
++    def __init__(self, path = None):
++        self.path = path
+ 
+ 
+ def pandas_read_text(
+@@ -180,18 +194,9 @@ def coerce_dtypes(df, dtypes):
+         raise ValueError(msg)
+ 
+ 
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_d1395d53', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/d1395d53_refactored.csv')
+ def text_blocks_to_pandas(
+-    reader,
+-    block_lists,
+-    header,
+-    head,
+-    kwargs,
+-    enforce=False,
+-    specified_dtypes=None,
+-    path=None,
+-    blocksize=None,
+-    urlpath=None,
+-):
++    data_params, config_params):
+     """Convert blocks of bytes to a dask.dataframe
+ 
+     This accepts a list of lists of values of bytes where each list corresponds
+@@ -218,20 +223,20 @@ def text_blocks_to_pandas(
+     -------
+     A dask.dataframe
+     """
+-    dtypes = head.dtypes.to_dict()
++    dtypes = data_params.head.dtypes.to_dict()
+     # dtypes contains only instances of CategoricalDtype, which causes issues
+     # in coerce_dtypes for non-uniform categories across partitions.
+     # We will modify `dtype` (which is inferred) to
+     # 1. contain instances of CategoricalDtypes for user-provided types
+     # 2. contain 'category' for data inferred types
+-    categoricals = head.select_dtypes(include=["category"]).columns
++    categoricals = data_params.head.select_dtypes(include=["category"]).columns
+ 
+-    if isinstance(specified_dtypes, Mapping):
++    if isinstance(data_params.specified_dtypes, Mapping):
+         known_categoricals = [
+             k
+             for k in categoricals
+-            if isinstance(specified_dtypes.get(k), CategoricalDtype)
+-            and specified_dtypes.get(k).categories is not None
++            if isinstance(data_params.specified_dtypes.get(k), CategoricalDtype)
++            and data_params.specified_dtypes.get(k).categories is not None
+         ]
+         unknown_categoricals = categoricals.difference(known_categoricals)
+     else:
+@@ -241,33 +246,33 @@ def text_blocks_to_pandas(
+     for k in unknown_categoricals:
+         dtypes[k] = "category"
+ 
+-    columns = list(head.columns)
++    columns = list(data_params.head.columns)
+ 
+-    blocks = tuple(flatten(block_lists))
++    blocks = tuple(flatten(data_params.block_lists))
+     # Create mask of first blocks from nested block_lists
+-    is_first = tuple(block_mask(block_lists))
+-    is_last = tuple(block_mask_last(block_lists))
++    is_first = tuple(block_mask(data_params.block_lists))
++    is_last = tuple(block_mask_last(data_params.block_lists))
+ 
+-    if path:
+-        colname, path_converter = path
+-        paths = [b.args[0].path for b in blocks]
++    if config_params.path:
++        colname, path_converter = config_params.path
++        paths = [b.args[0].config_params.path for b in blocks]
+         if path_converter:
+             paths = [path_converter(p) for p in paths]
+-        head = head.assign(
++        data_params.head = data_params.head.assign(
+             **{
+                 colname: pd.Categorical.from_codes(
+-                    np.zeros(len(head), dtype=int), set(paths)
++                    np.zeros(len(data_params.head), dtype=int), set(paths)
+                 )
+             }
+         )
+-        path = (colname, paths)
++        config_params.path = (colname, paths)
+ 
+     if len(unknown_categoricals):
+-        head = clear_known_categories(head, cols=unknown_categoricals)
++        data_params.head = clear_known_categories(data_params.head, cols=unknown_categoricals)
+ 
+     # Define parts
+     parts = []
+-    colname, paths = path or (None, None)
++    colname, paths = config_params.path or (None, None)
+ 
+     for i in range(len(blocks)):
+         parts.append([paths[i] if paths else None, is_first[i], is_last[i]])
+@@ -277,17 +282,17 @@ def text_blocks_to_pandas(
+             _read_csv,
+             full_columns=columns,
+             colname=colname,
+-            head=head,
+-            header=header,
+-            reader=reader,
++            data_params.head=data_params.head,
++            data_params.header=data_params.header,
++            data_params.reader=data_params.reader,
+             dtypes=dtypes,
+-            enforce=enforce,
+-            kwargs=kwargs,
+-            blocksize=blocksize,
++            data_params.enforce=data_params.enforce,
++            data_params.kwargs=data_params.kwargs,
++            data_params.blocksize=data_params.blocksize,
+         ),
+         blocks,
+         parts,
+-        meta=head,
++        meta=data_params.head,
+         label="read-csv",
+         enforce_metadata=False,
+     )
+@@ -626,17 +631,7 @@ def read_pandas(
+     ]
+ 
+     return text_blocks_to_pandas(
+-        reader,
+-        values,
+-        header,
+-        head,
+-        kwargs,
+-        enforce=enforce,
+-        specified_dtypes=specified_dtypes,
+-        path=path,
+-        blocksize=blocksize,
+-        urlpath=urlpath,
+-    )
++        DataParams_text_blocks_to_pandas_185(reader, values, header, head, kwargs, enforce = enforce, specified_dtypes = specified_dtypes, blocksize = blocksize), ConfigParams_text_blocks_to_pandas_185(path = path))
+ 
+ 
+ READ_DOC_TEMPLATE = """
+diff --git a/dask/dataframe/io/tests/test_csv.py b/dask/dataframe/io/tests/test_csv.py
+index b1e340dd4..dfe07a57c 100644
+--- a/dask/dataframe/io/tests/test_csv.py
++++ b/dask/dataframe/io/tests/test_csv.py
+@@ -40,6 +40,19 @@ from dask.utils import filetext, filetexts, tmpdir, tmpfile
+ 
+ # List of available compression format for test_read_csv_compression
+ compression_fmts = [fmt for fmt in compr] + [None]
++class DataParams_text_blocks_to_pandas_185:
++    def __init__(self, reader, block_lists, header, head, kwargs, enforce = False, specified_dtypes = None, blocksize = None):
++        self.reader = reader
++        self.block_lists = block_lists
++        self.header = header
++        self.head = head
++        self.kwargs = kwargs
++        self.enforce = enforce
++        self.specified_dtypes = specified_dtypes
++        self.blocksize = blocksize
++class ConfigParams_text_blocks_to_pandas_185:
++    def __init__(self, path = None):
++        self.path = path
+ 
+ 
+ def normalize_text(s):
+@@ -200,11 +213,11 @@ def test_text_blocks_to_pandas_simple(reader, files):
+     head = pandas_read_text(reader, files["2014-01-01.csv"], b"", {})
+     header = files["2014-01-01.csv"].split(b"\n")[0] + b"\n"
+ 
+-    df = text_blocks_to_pandas(reader, blocks, header, head, kwargs)
++    df = text_blocks_to_pandas(DataParams_text_blocks_to_pandas_185(reader, blocks, header, head, kwargs))
+     assert isinstance(df, dd.DataFrame)
+     assert list(df.columns) == ["name", "amount", "id"]
+ 
+-    values = text_blocks_to_pandas(reader, blocks, header, head, kwargs)
++    values = text_blocks_to_pandas(DataParams_text_blocks_to_pandas_185(reader, blocks, header, head, kwargs))
+     assert isinstance(values, dd.DataFrame)
+     assert hasattr(values, "dask")
+     assert len(values.dask) == 6 if pyarrow_strings_enabled() else 3
+@@ -220,7 +233,7 @@ def test_text_blocks_to_pandas_kwargs(reader, files):
+     head = pandas_read_text(reader, files["2014-01-01.csv"], b"", kwargs)
+     header = files["2014-01-01.csv"].split(b"\n")[0] + b"\n"
+ 
+-    df = text_blocks_to_pandas(reader, blocks, header, head, kwargs)
++    df = text_blocks_to_pandas(DataParams_text_blocks_to_pandas_185(reader, blocks, header, head, kwargs))
+     assert list(df.columns) == ["name", "id"]
+     result = df.compute()
+     assert (result.columns == df.columns).all()
+@@ -236,7 +249,7 @@ def test_text_blocks_to_pandas_blocked(reader, files):
+         lines = b.split(b"\n")
+         blocks.append([b"\n".join(bs) for bs in partition_all(2, lines)])
+ 
+-    df = text_blocks_to_pandas(reader, blocks, header, expected.head(), {})
++    df = text_blocks_to_pandas(DataParams_text_blocks_to_pandas_185(reader, blocks, header, expected.head(), {}))
+     assert_eq(
+         df.compute().reset_index(drop=True),
+         expected.reset_index(drop=True),
+@@ -245,8 +258,7 @@ def test_text_blocks_to_pandas_blocked(reader, files):
+ 
+     expected2 = expected[["name", "id"]]
+     df = text_blocks_to_pandas(
+-        reader, blocks, header, expected2.head(), {"usecols": ["name", "id"]}
+-    )
++        DataParams_text_blocks_to_pandas_185(reader, blocks, header, expected2.head(), {"usecols": ["name", "id"]}))
+     assert_eq(
+         df.compute().reset_index(drop=True),
+         expected2.reset_index(drop=True),
+@@ -333,7 +345,7 @@ tsv_blocks = [
+ def test_enforce_dtypes(reader, blocks):
+     head = reader(BytesIO(blocks[0][0]), header=0)
+     header = blocks[0][0].split(b"\n")[0] + b"\n"
+-    dfs = text_blocks_to_pandas(reader, blocks, header, head, {})
++    dfs = text_blocks_to_pandas(DataParams_text_blocks_to_pandas_185(reader, blocks, header, head, {}))
+     dfs = dask.compute(dfs, scheduler="sync")
+     assert all(df.dtypes.to_dict() == head.dtypes.to_dict() for df in dfs)
+ 
+@@ -347,7 +359,7 @@ def test_enforce_columns(reader, blocks):
+     head = reader(BytesIO(blocks[0][0]), header=0)
+     header = blocks[0][0].split(b"\n")[0] + b"\n"
+     with pytest.raises(ValueError):
+-        dfs = text_blocks_to_pandas(reader, blocks, header, head, {}, enforce=True)
++        dfs = text_blocks_to_pandas(DataParams_text_blocks_to_pandas_185(reader, blocks, header, head, {}, enforce = True))
+         dask.compute(*dfs, scheduler="sync")
+ 
+ 

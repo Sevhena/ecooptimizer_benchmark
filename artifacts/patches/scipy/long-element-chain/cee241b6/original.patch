@@ -1,0 +1,22 @@
+diff --git a/scipy/stats/_page_trend_test.py b/scipy/stats/_page_trend_test.py
+index 1e11f5ac0..ccdcc6643 100644
+--- a/scipy/stats/_page_trend_test.py
++++ b/scipy/stats/_page_trend_test.py
+@@ -7,6 +7,7 @@ import numpy as np
+ 
+ from ._continuous_distns import norm
+ import scipy.stats
++from codecarbon import EmissionsTracker
+ 
+ 
+ @dataclass
+@@ -476,7 +477,8 @@ class _PageL:
+             p1 = self.pmf(l-t, n-1)
+             p2 = self.pmf(t, 1)
+             p += p1*p2
+-        self.all_pmfs[n][self.k][l] = p
++        with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LEC001_cee241b6', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-element-chain/cee241b6.csv') as tracker:
++            self.all_pmfs[n][self.k][l] = p
+         return p
+ 
+ 

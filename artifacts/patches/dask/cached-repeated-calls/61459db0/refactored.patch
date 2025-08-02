@@ -1,0 +1,35 @@
+diff --git a/dask/dataframe/io/io.py b/dask/dataframe/io/io.py
+index c2858d57c..838fa6561 100644
+--- a/dask/dataframe/io/io.py
++++ b/dask/dataframe/io/io.py
+@@ -13,6 +13,7 @@ from dask.dataframe.utils import pyarrow_strings_enabled
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.tokenize import tokenize
+ from dask.utils import ensure_dict, is_series_like
++from codecarbon import EmissionsTracker
+ 
+ if TYPE_CHECKING:
+     pass
+@@ -335,16 +336,19 @@ def sorted_division_locations(seq, npartitions=None, chunksize=None):
+                     ind -= divs_remain - offs_remain
+                     i = offsets[ind]
+                     div = seq[i]
+-            pos = int(offsets[ind])
++            with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_CRC001_61459db0', output_file='/root/ecooptimizer_benchmark/emissions/dask/cached-repeated-calls/61459db0_refactored.csv') as tracker:
++                cached_int = int(offsets[ind])
++                pos = cached_int
+         else:
+             pos = i
+         if div <= divisions[-1]:
+             # pos overlaps with divisions.
+             # Try the next element on the following pass
+             if duplicates:
+-                ind += 1
++                with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_CRC001_61459db0', output_file='/root/ecooptimizer_benchmark/emissions/dask/cached-repeated-calls/61459db0_refactored.csv') as tracker:
++                    ind += 1
+                 # Note: cupy requires cast to `int`
+-                i = int(offsets[ind]) if ind < len(offsets) else len(seq)
++                i = cached_int if ind < len(offsets) else len(seq)
+             else:
+                 i += 1
+         else:

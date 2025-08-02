@@ -1,15 +1,12 @@
 diff --git a/sklearn/utils/_metadata_requests.py b/sklearn/utils/_metadata_requests.py
-index 2c7e650b13..1786e8b085 100644
+index 2c7e650b1..01399e603 100644
 --- a/sklearn/utils/_metadata_requests.py
 +++ b/sklearn/utils/_metadata_requests.py
-@@ -67,6 +67,7 @@ To give the above representation some structure, we use the following objects:
- - ``(mapping=..., router=...)`` is a namedtuple called ``RouterMappingPair``
- 
- The ``set_{method}_request`` methods are dynamically generated for estimators
+@@ -1,3 +1,4 @@
 +from codecarbon import EmissionsTracker
- which inherit from the ``BaseEstimator``. This is done by attaching instances
- of the ``RequestMethod`` descriptor to classes, which is done in the
- ``_MetadataRequester`` class, and ``BaseEstimator`` inherits from this mixin.
+ """
+ Metadata Routing Utility
+ 
 @@ -1331,8 +1332,9 @@ class RequestMethod:
              return_annotation=owner,
          )

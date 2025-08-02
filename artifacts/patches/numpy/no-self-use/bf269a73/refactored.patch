@@ -1,12 +1,15 @@
 diff --git a/numpy/distutils/fcompiler/arm.py b/numpy/distutils/fcompiler/arm.py
-index 3eb7e9af9c..6b42595aae 100644
+index 3eb7e9af9c..aebbd65eb8 100644
 --- a/numpy/distutils/fcompiler/arm.py
 +++ b/numpy/distutils/fcompiler/arm.py
-@@ -1,3 +1,4 @@
-+from codecarbon import track_emissions
- import sys                                                                     
-                                                                                
+@@ -3,6 +3,7 @@
  from numpy.distutils.fcompiler import FCompiler, dummy_fortran_file
+ from sys import platform                                                       
+ from os.path import join, dirname, normpath
++from codecarbon import track_emissions
+ 
+ compilers = ['ArmFlangCompiler']
+ 
 @@ -44,7 +45,9 @@ def get_library_dirs(self):
  
          return opt

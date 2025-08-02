@@ -1,0 +1,20 @@
+diff --git a/dask/array/creation.py b/dask/array/creation.py
+index ba7e96889..a18e88fea 100644
+--- a/dask/array/creation.py
++++ b/dask/array/creation.py
+@@ -30,6 +30,7 @@ from dask.array.wrap import empty, full, ones, zeros
+ from dask.base import tokenize
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.utils import cached_cumsum, derived_from, is_cupy_type
++from codecarbon import track_emissions
+ 
+ 
+ def to_backend(x: Array, backend: str | None = None, **kwargs):
+@@ -229,6 +230,7 @@ def zeros_like(a, dtype=None, order="C", chunks=None, name=None, shape=None):
+     )
+ 
+ 
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_1e59b7f6', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/1e59b7f6.csv')
+ def full_like(a, fill_value, order="C", dtype=None, chunks=None, name=None, shape=None):
+     """
+     Return a full array with the same shape and type as a given array.

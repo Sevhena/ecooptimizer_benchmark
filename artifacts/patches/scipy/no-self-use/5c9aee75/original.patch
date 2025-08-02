@@ -1,13 +1,15 @@
 diff --git a/scipy/optimize/_shgo_lib/_complex.py b/scipy/optimize/_shgo_lib/_complex.py
-index ddc364075..3eb03c1be 100644
+index ddc364075..03105d3a4 100644
 --- a/scipy/optimize/_shgo_lib/_complex.py
 +++ b/scipy/optimize/_shgo_lib/_complex.py
-@@ -1,4 +1,5 @@
- """Base classes for low memory simplicial complex structures."""
+@@ -8,6 +8,7 @@ from functools import cache
+ import numpy as np
+ 
+ from ._vertex import (VertexCacheField, VertexCacheIndex)
 +from codecarbon import track_emissions
- import copy
- import logging
- import itertools
+ 
+ 
+ class Complex:
 @@ -1197,6 +1198,7 @@ class Complex:
  
          return True

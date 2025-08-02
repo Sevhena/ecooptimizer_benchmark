@@ -1,0 +1,24 @@
+diff --git a/dask/dataframe/io/csv.py b/dask/dataframe/io/csv.py
+index 4dc9ad8a0..3e281015b 100644
+--- a/dask/dataframe/io/csv.py
++++ b/dask/dataframe/io/csv.py
+@@ -7,6 +7,7 @@ from io import BytesIO
+ from warnings import catch_warnings, simplefilter, warn
+ 
+ from dask._task_spec import convert_legacy_task
++from codecarbon import EmissionsTracker
+ 
+ try:
+     import psutil
+@@ -465,7 +466,10 @@ def read_pandas(
+             "recommended to use `dd.{0}(...)."
+             "head(n=nrows)`".format(reader_name)
+         )
+-    if isinstance(kwargs.get("skiprows"), int):
++    with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_CRC001_b6ac58df', output_file='/root/ecooptimizer_benchmark/emissions/dask/cached-repeated-calls/b6ac58df.csv') as tracker:
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_CRC001_b6ac58df', output_file='/root/ecooptimizer_benchmark/emissions/dask/cached-repeated-calls/b6ac58df.csv') as tracker:
++            _carbon_wrapped_dfccd590 = kwargs.get("skiprows")
++    if isinstance(_carbon_wrapped_dfccd590, int):
+         lastskiprow = firstrow = kwargs.get("skiprows")
+     elif kwargs.get("skiprows") is None:
+         lastskiprow = firstrow = 0

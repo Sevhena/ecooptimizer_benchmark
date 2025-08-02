@@ -1,5 +1,5 @@
 diff --git a/dask/utils.py b/dask/utils.py
-index 6edfda8f8..f11ca3bee 100644
+index 6edfda8f8..9a5e9f50e 100644
 --- a/dask/utils.py
 +++ b/dask/utils.py
 @@ -28,6 +28,7 @@ import tlz as toolz
@@ -18,8 +18,8 @@ index 6edfda8f8..f11ca3bee 100644
 +        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LMC001_b320286e', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/b320286e_refactored.csv') as tracker:
 +            intermediate_0 = multiprocessing.get_context()
 +            intermediate_1 = intermediate_0.Manager()
-+            _carbon_wrapped_b45f0a7c = intermediate_1.Lock()
-+        return _carbon_wrapped_b45f0a7c
++            _carbon_wrapped_621cef41 = intermediate_1.Lock()
++        return _carbon_wrapped_621cef41
      else:
          # if this is a distributed client, we need to lock on
          # the level between processes, SerializableLock won't work

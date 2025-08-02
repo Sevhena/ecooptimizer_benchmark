@@ -1,0 +1,20 @@
+diff --git a/lib/streamlit/elements/widgets/audio_input.py b/lib/streamlit/elements/widgets/audio_input.py
+index db30430fa..2d110e0b5 100644
+--- a/lib/streamlit/elements/widgets/audio_input.py
++++ b/lib/streamlit/elements/widgets/audio_input.py
+@@ -47,6 +47,7 @@ from streamlit.runtime.state import (
+     register_widget,
+ )
+ from streamlit.runtime.uploaded_file_manager import DeletedFile, UploadedFile
++from codecarbon import track_emissions
+ 
+ if TYPE_CHECKING:
+     from streamlit.delta_generator import DeltaGenerator
+@@ -57,6 +58,7 @@ SomeUploadedAudioFile: TypeAlias = Union[UploadedFile, DeletedFile, None]
+ 
+ @dataclass
+ class AudioInputSerde:
++    @track_emissions(project_name='streamlit-benchmark', experiment_id='streamlit_R6301_fdd64247', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/no-self-use/fdd64247.csv')
+     def serialize(
+         self,
+         audio_file: SomeUploadedAudioFile,

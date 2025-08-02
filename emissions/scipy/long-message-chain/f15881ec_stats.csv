@@ -1,0 +1,7 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-07-28_09-32-46,scipy,long-message-chain,f15881ec,original,30,1085.05,0.0,16.3
+2025-07-28_09-49-40,scipy,long-message-chain,f15881ec,original,30,1013.63,0.0,16.3
+2025-07-28_10-08-46,scipy,long-message-chain,f15881ec,original,30,1146.15,0.0,16.3
+2025-07-28_10-25-13,scipy,long-message-chain,f15881ec,original,30,986.90,0.0,16.3
+2025-07-28_10-43-21,scipy,long-message-chain,f15881ec,original,30,1087.51,0.0,16.3
+2025-07-28_10-43-42,scipy,long-message-chain,f15881ec,refactored,30,20.35,0.0,16.3

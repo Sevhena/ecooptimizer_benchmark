@@ -1,0 +1,26 @@
+diff --git a/dask/array/slicing.py b/dask/array/slicing.py
+index f456bacd3..cd12cc859 100644
+--- a/dask/array/slicing.py
++++ b/dask/array/slicing.py
+@@ -17,6 +17,7 @@ from dask.array.chunk import getitem
+ from dask.base import is_dask_collection, tokenize
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.utils import _deprecated, cached_cumsum, disable_gc, is_arraylike
++from codecarbon import EmissionsTracker
+ 
+ colon = slice(None, None, None)
+ 
+@@ -972,9 +973,11 @@ def slice_with_int_dask_array(x, index):
+         if isinstance(idx, Array) and idx.dtype.kind in "iu":
+             if idx.ndim == 0:
+                 idx = idx[np.newaxis]
+-                x = slice_with_int_dask_array_on_axis(x, idx, out_axis)
++                with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_CRC001_2354b0b3', output_file='/root/ecooptimizer_benchmark/emissions/dask/cached-repeated-calls/2354b0b3.csv') as tracker:
++                    x = slice_with_int_dask_array_on_axis(x, idx, out_axis)
+                 x = x[tuple(0 if i == out_axis else slice(None) for i in range(x.ndim))]
+-                dropped_axis_cnt += 1
++                with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_CRC001_2354b0b3', output_file='/root/ecooptimizer_benchmark/emissions/dask/cached-repeated-calls/2354b0b3.csv') as tracker:
++                    dropped_axis_cnt += 1
+             elif idx.ndim == 1:
+                 x = slice_with_int_dask_array_on_axis(x, idx, out_axis)
+                 out_index.append(slice(None))

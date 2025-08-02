@@ -1,15 +1,15 @@
 diff --git a/sklearn/utils/_testing.py b/sklearn/utils/_testing.py
-index 6582bb7636..94e3560d76 100644
+index 6582bb763..04491c41a 100644
 --- a/sklearn/utils/_testing.py
 +++ b/sklearn/utils/_testing.py
-@@ -3,6 +3,7 @@
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
+@@ -76,6 +76,7 @@ def ignore_warnings(obj=None, category=Warning):
  
+     Note: Using this (in both variants) will clear all warnings
+     from all python modules loaded. In case you need to test
 +from codecarbon import EmissionsTracker
- import atexit
- import contextlib
- import functools
+     cross-module-warning-logging, this is not your tool of choice.
+ 
+     Parameters
 @@ -656,32 +657,34 @@ def _get_diff_msg(docstrings_grouped):
      of objects with that docstring. Objects with the same type/desc docstring are
      thus grouped together.

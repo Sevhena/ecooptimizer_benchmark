@@ -1,15 +1,15 @@
 diff --git a/sklearn/datasets/_openml.py b/sklearn/datasets/_openml.py
-index 47ecdcd14d..4d9eaf2397 100644
+index 47ecdcd14..a133958f5 100644
 --- a/sklearn/datasets/_openml.py
 +++ b/sklearn/datasets/_openml.py
-@@ -1,6 +1,7 @@
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -30,6 +30,7 @@ from ..utils._param_validation import (
+ )
+ from . import get_data_home
+ from ._arff_parser import load_arff_from_gzip_file
 +from codecarbon import EmissionsTracker
- import gzip
- import hashlib
- import json
+ 
+ __all__ = ["fetch_openml"]
+ 
 @@ -316,11 +317,12 @@ def _get_data_info_by_name(
                  f"returning version {first_version}. "
                  "Available versions:\n"

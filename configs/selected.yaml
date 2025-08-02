@@ -11,37 +11,44 @@ repos:
 - paho.mqtt.python
 smells:
   dask:
+    cached-repeated-calls:
+    - b6ac58df
+    - 0f19175b
+    - 2354b0b3
+    - 61459db0
+    - 0082590c
+    - cfd0f2af
     long-element-chain:
     - 04b89785
     - 715a6d62
     - 928ca4b1
     - c58ba4f6
     long-message-chain:
-    - b320286e
-    - 206a4433
-    - 745bc2fb
     - 6fb2eba3
+    - 8da83e08
     - aab89951
-    - ba97ee6b
+    - b320286e
+    - 5b93ca8d
+    - 206a4433
     no-self-use:
-    - eb231117
-    - 29a67617
     - 70eba4d1
-    - f25132d5
-    - feb9973e
+    - 29a67617
+    - 4ea830b2
     - a6637294
+    - 4a6855eb
+    - cdb5b8c8
     string-concat-loop:
     - 3cad881d
     - 5254055f
     - bf9f2446
     - f7bd63cf
     too-many-arguments:
+    - b791c549
+    - d1395d53
+    - 1e59b7f6
+    - 3f5d3f21
     - b217bf24
-    - 79acf82a
-    - 4e24e944
-    - a82e6319
-    - fa78ea44
-    - 17fcee15
+    - ca05b444
     use-a-generator:
     - 055bc4c5
     - 0fa92701

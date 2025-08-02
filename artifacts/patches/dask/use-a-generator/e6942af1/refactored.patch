@@ -1,0 +1,22 @@
+diff --git a/dask/array/routines.py b/dask/array/routines.py
+index b0f60e690..b7dc84e32 100644
+--- a/dask/array/routines.py
++++ b/dask/array/routines.py
+@@ -46,6 +46,7 @@ from dask.core import flatten
+ from dask.delayed import Delayed, unpack_collections
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.utils import apply, derived_from, funcname, is_arraylike, is_cupy_type
++from codecarbon import EmissionsTracker
+ 
+ # save built-in for histogram functions which use range as a kwarg.
+ _range = range
+@@ -1362,7 +1363,8 @@ def histogramdd(sample, bins, range=None, normed=None, weights=None, density=Non
+     # range= these are unsupported.
+     dc_bins = is_dask_collection(bins)
+     if isinstance(bins, (list, tuple)):
+-        dc_bins = dc_bins or any([is_dask_collection(b) for b in bins])
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_R1729_e6942af1', output_file='/root/ecooptimizer_benchmark/emissions/dask/use-a-generator/e6942af1_refactored.csv') as tracker:
++            dc_bins = dc_bins or any(is_dask_collection(b) for b in bins)
+     dc_range = (
+         any([is_dask_collection(r) for r in range]) if range is not None else False
+     )

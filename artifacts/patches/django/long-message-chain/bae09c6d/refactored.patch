@@ -1,12 +1,15 @@
 diff --git a/django/db/backends/base/operations.py b/django/db/backends/base/operations.py
-index c426a2b90a..ba603d09d7 100644
+index c426a2b90a..f0cf6f7a10 100644
 --- a/django/db/backends/base/operations.py
 +++ b/django/db/backends/base/operations.py
-@@ -1,3 +1,4 @@
+@@ -10,6 +10,7 @@ from django.db import NotSupportedError, transaction
+ from django.db.models.expressions import Col
+ from django.utils import timezone
+ from django.utils.encoding import force_str
 +from codecarbon import EmissionsTracker
- import datetime
- import decimal
- import json
+ 
+ 
+ class BaseDatabaseOperations:
 @@ -499,7 +500,12 @@ class BaseDatabaseOperations:
  
      def prep_for_like_query(self, x):
@@ -16,8 +19,8 @@ index c426a2b90a..ba603d09d7 100644
 +            intermediate_0 = str(x)
 +            intermediate_1 = intermediate_0.replace("\\", "\\\\")
 +            intermediate_2 = intermediate_1.replace("%", r"\%")
-+            _carbon_wrapped_6fd36d2a = intermediate_2.replace("_", r"\_")
-+        return _carbon_wrapped_6fd36d2a
++            _carbon_wrapped_39224b70 = intermediate_2.replace("_", r"\_")
++        return _carbon_wrapped_39224b70
  
      # Same as prep_for_like_query(), but called for "iexact" matches, which
      # need not necessarily be implemented using "LIKE" in the backend.

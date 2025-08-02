@@ -1,0 +1,17 @@
+diff --git a/sklearn/semi_supervised/_label_propagation.py b/sklearn/semi_supervised/_label_propagation.py
+index 559a17a13..e70914c1b 100644
+--- a/sklearn/semi_supervised/_label_propagation.py
++++ b/sklearn/semi_supervised/_label_propagation.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # coding=utf8
+ """
+ Label propagation in the context of this module refers to a set of
+@@ -432,6 +433,7 @@ class LabelPropagation(BaseLabelPropagation):
+     _parameter_constraints: dict = {**BaseLabelPropagation._parameter_constraints}
+     _parameter_constraints.pop("alpha")
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_02a14926', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/02a14926.csv')
+     def __init__(
+         self,
+         kernel="rbf",

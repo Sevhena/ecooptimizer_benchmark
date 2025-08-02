@@ -1,0 +1,20 @@
+diff --git a/dask/array/reductions.py b/dask/array/reductions.py
+index 0458f583b..1b926e453 100644
+--- a/dask/array/reductions.py
++++ b/dask/array/reductions.py
+@@ -37,6 +37,7 @@ from dask.array.wrap import ones, zeros
+ from dask.base import tokenize
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.utils import apply, deepmap, derived_from
++from codecarbon import track_emissions
+ 
+ try:
+     import numbagg
+@@ -838,6 +839,7 @@ def nanarg_agg(argfunc, data, axis=None, keepdims=False, **kwargs):
+     return arg
+ 
+ 
++@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_ca05b444', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/ca05b444.csv')
+ def arg_reduction(
+     x, chunk, combine, agg, axis=None, keepdims=False, split_every=None, out=None
+ ):

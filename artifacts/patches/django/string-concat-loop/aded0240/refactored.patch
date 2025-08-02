@@ -1,15 +1,12 @@
 diff --git a/django/core/signing.py b/django/core/signing.py
-index e3d7785910..eb9217310a 100644
+index e3d7785910..b05d2b5206 100644
 --- a/django/core/signing.py
 +++ b/django/core/signing.py
-@@ -33,6 +33,7 @@ There are 65 url-safe characters: the 64 used by url-safe base64 and the ':'.
- These functions make use of all of them.
- """
- 
+@@ -1,3 +1,4 @@
 +from codecarbon import EmissionsTracker
- import base64
- import datetime
- import json
+ """
+ Functions for creating and restoring url-safe signed JSON objects.
+ 
 @@ -66,10 +67,12 @@ def b62_encode(s):
          return "0"
      sign = "-" if s < 0 else ""

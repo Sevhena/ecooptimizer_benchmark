@@ -1,0 +1,17 @@
+diff --git a/django/forms/widgets.py b/django/forms/widgets.py
+index 9b5ad1b2b9..422b5eb1da 100644
+--- a/django/forms/widgets.py
++++ b/django/forms/widgets.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ """
+ HTML Widget classes
+ """
+@@ -348,6 +349,7 @@ class Widget(metaclass=MediaDefiningClass):
+     def value_omitted_from_data(self, data, files, name):
+         return name not in data
+ 
++    @track_emissions(project_name='django-benchmark', experiment_id='django_R6301_dab7b75a', output_file='/root/ecooptimizer_benchmark/emissions/django/no-self-use/dab7b75a.csv')
+     def id_for_label(self, id_):
+         """
+         Return the HTML ID attribute of this Widget for use by a <label>, given

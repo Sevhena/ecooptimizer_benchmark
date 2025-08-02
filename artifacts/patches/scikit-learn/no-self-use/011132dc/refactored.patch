@@ -1,15 +1,12 @@
 diff --git a/sklearn/_loss/link.py b/sklearn/_loss/link.py
-index 53dff6c2e9..88bcc1e6ac 100644
+index 53dff6c2e..90de33b35 100644
 --- a/sklearn/_loss/link.py
 +++ b/sklearn/_loss/link.py
-@@ -5,6 +5,7 @@ Module contains classes for invertible (and differentiable) link functions.
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -1,3 +1,4 @@
 +from codecarbon import track_emissions
- from abc import ABC, abstractmethod
- from dataclasses import dataclass
- 
+ """
+ Module contains classes for invertible (and differentiable) link functions.
+ """
 @@ -256,7 +257,9 @@ class MultinomialLogit(BaseLink):
      is_multiclass = True
      interval_y_pred = Interval(0, 1, False, False)

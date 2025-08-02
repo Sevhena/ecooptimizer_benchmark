@@ -1,15 +1,12 @@
 diff --git a/sklearn/ensemble/_forest.py b/sklearn/ensemble/_forest.py
-index 5def6ac608..a5d26172d6 100644
+index 5def6ac60..fc1b1c395 100644
 --- a/sklearn/ensemble/_forest.py
 +++ b/sklearn/ensemble/_forest.py
-@@ -35,6 +35,7 @@ Single and multi-output problems are both handled.
- # Authors: The scikit-learn developers
- # SPDX-License-Identifier: BSD-3-Clause
- 
+@@ -1,3 +1,4 @@
 +from codecarbon import EmissionsTracker
- import threading
- from abc import ABCMeta, abstractmethod
- from numbers import Integral, Real
+ """
+ Forest of trees-based ensemble methods.
+ 
 @@ -1121,7 +1122,10 @@ class ForestRegressor(RegressorMixin, BaseForest, metaclass=ABCMeta):
          scoring_function : callable, default=None
              Scoring function for OOB score. Defaults to `r2_score`.

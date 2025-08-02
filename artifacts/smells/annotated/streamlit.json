@@ -232,8 +232,8 @@
             {
                 "column": 4,
                 "endColumn": 17,
-                "endLine": 80,
-                "line": 80
+                "endLine": 82,
+                "line": 82
             }
         ],
         "path": "lib/streamlit/elements/widgets/button.py",
@@ -264,8 +264,8 @@
             {
                 "column": 4,
                 "endColumn": 17,
-                "endLine": 128,
-                "line": 128
+                "endLine": 130,
+                "line": 130
             }
         ],
         "path": "lib/streamlit/elements/widgets/file_uploader.py",
@@ -296,8 +296,8 @@
             {
                 "column": 4,
                 "endColumn": 36,
-                "endLine": 401,
-                "line": 401
+                "endLine": 403,
+                "line": 403
             }
         ],
         "path": "lib/streamlit/delta_generator.py",
@@ -328,8 +328,8 @@
             {
                 "column": 4,
                 "endColumn": 31,
-                "endLine": 196,
-                "line": 196
+                "endLine": 198,
+                "line": 198
             }
         ],
         "path": "lib/streamlit/web/server/browser_websocket_handler.py",
@@ -360,8 +360,8 @@
             {
                 "column": 4,
                 "endColumn": 15,
-                "endLine": 510,
-                "line": 510
+                "endLine": 512,
+                "line": 512
             }
         ],
         "path": "lib/streamlit/user_info.py",
@@ -392,8 +392,8 @@
             {
                 "column": 4,
                 "endColumn": 17,
-                "endLine": 60,
-                "line": 60
+                "endLine": 62,
+                "line": 62
             }
         ],
         "path": "lib/streamlit/elements/widgets/audio_input.py",
@@ -710,10 +710,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 23,
-                "endColumn": 82,
-                "endLine": 429,
-                "line": 429
+                "column": 47,
+                "endColumn": 106,
+                "endLine": 430,
+                "line": 430
             }
         ],
         "path": "lib/streamlit/runtime/caching/hashing.py",
@@ -742,10 +742,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 34,
-                "endLine": 61,
-                "line": 61
+                "column": 35,
+                "endColumn": 57,
+                "endLine": 63,
+                "line": 63
             }
         ],
         "path": "lib/streamlit/commands/page_config.py",
@@ -774,10 +774,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 15,
-                "endColumn": 69,
-                "endLine": 94,
-                "line": 94
+                "column": 39,
+                "endColumn": 93,
+                "endLine": 96,
+                "line": 96
             }
         ],
         "path": "lib/streamlit/elements/widgets/time_widgets.py",
@@ -806,10 +806,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 15,
-                "endColumn": 60,
-                "endLine": 1384,
-                "line": 1384
+                "column": 39,
+                "endColumn": 84,
+                "endLine": 1386,
+                "line": 1386
             }
         ],
         "path": "lib/streamlit/dataframe_util.py",
@@ -838,10 +838,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 31,
-                "endColumn": 77,
-                "endLine": 394,
-                "line": 394
+                "column": 35,
+                "endColumn": 81,
+                "endLine": 396,
+                "line": 396
             }
         ],
         "path": "lib/streamlit/runtime/connection_factory.py",

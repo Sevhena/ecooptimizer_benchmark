@@ -1,0 +1,20 @@
+diff --git a/sklearn/datasets/_openml.py b/sklearn/datasets/_openml.py
+index 47ecdcd14..5b2af4677 100644
+--- a/sklearn/datasets/_openml.py
++++ b/sklearn/datasets/_openml.py
+@@ -30,6 +30,7 @@ from ..utils._param_validation import (
+ )
+ from . import get_data_home
+ from ._arff_parser import load_arff_from_gzip_file
++from codecarbon import track_emissions
+ 
+ __all__ = ["fetch_openml"]
+ 
+@@ -771,6 +772,7 @@ def _valid_data_column_names(features_list, target_columns):
+     },
+     prefer_skip_nested_validation=True,
+ )
++@track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_0a586a8b', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/0a586a8b.csv')
+ def fetch_openml(
+     name: Optional[str] = None,
+     *,
