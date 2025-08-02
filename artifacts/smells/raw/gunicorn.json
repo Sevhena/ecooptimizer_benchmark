@@ -1,0 +1,1841 @@
+{
+    "00240ac7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "00240ac7",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.config",
+        "obj": "NewSSLContext.ssl_context",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 2023,
+                "line": 2023
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/config.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "098ed194": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "098ed194",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.workers.base_async",
+        "obj": "AsyncWorker.is_already_handled",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 28,
+                "line": 28
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/base_async.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "0d7b1fd0": {
+        "additionalInfo": {
+            "callString": "io.BytesIO()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0d7b1fd0",
+        "message": "Repeated function call detected (2/2). Consider caching the result: io.BytesIO()",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 31,
+                "endLine": 228,
+                "line": 228
+            },
+            {
+                "column": 23,
+                "endColumn": 35,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "0dcfc009": {
+        "additionalInfo": {
+            "callString": "CONFIG_DEFAULTS.copy()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0dcfc009",
+        "message": "Repeated function call detected (3/2). Consider caching the result: CONFIG_DEFAULTS.copy()",
+        "messageId": "CRC001",
+        "module": "glogging",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 43,
+                "endLine": 230,
+                "line": 230
+            },
+            {
+                "column": 21,
+                "endColumn": 43,
+                "endLine": 242,
+                "line": 242
+            },
+            {
+                "column": 27,
+                "endColumn": 49,
+                "endLine": 258,
+                "line": 258
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/glogging.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "12a652e6": {
+        "additionalInfo": {
+            "callString": "lines.pop(0)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "12a652e6",
+        "message": "Repeated function call detected (2/2). Consider caching the result: lines.pop(0)",
+        "messageId": "CRC001",
+        "module": "message",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 31,
+                "endLine": 98,
+                "line": 98
+            },
+            {
+                "column": 23,
+                "endColumn": 35,
+                "endLine": 121,
+                "line": 121
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/message.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "18755c0d": {
+        "additionalInfo": {
+            "callString": "self.buf.getvalue()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "18755c0d",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.buf.getvalue()",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 34,
+                "endLine": 226,
+                "line": 226
+            },
+            {
+                "column": 19,
+                "endColumn": 38,
+                "endLine": 214,
+                "line": 214
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "1883950f": {
+        "additionalInfo": {
+            "callString": "datetime.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1883950f",
+        "message": "Repeated function call detected (2/2). Consider caching the result: datetime.now()",
+        "messageId": "CRC001",
+        "module": "base_async",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 38,
+                "endLine": 90,
+                "line": 90
+            },
+            {
+                "column": 31,
+                "endColumn": 45,
+                "endLine": 118,
+                "line": 118
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/base_async.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "2450aebc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2450aebc",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.http.body",
+        "obj": "ChunkedReader.get_data",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 108,
+                "line": 108
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "2474b7a4": {
+        "additionalInfo": {
+            "callString": "self.buf.getvalue()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2474b7a4",
+        "message": "Repeated function call detected (3/2). Consider caching the result: self.buf.getvalue()",
+        "messageId": "CRC001",
+        "module": "unreader",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 34,
+                "endLine": 46,
+                "line": 46
+            },
+            {
+                "column": 18,
+                "endColumn": 37,
+                "endLine": 32,
+                "line": 32
+            },
+            {
+                "column": 22,
+                "endColumn": 41,
+                "endLine": 42,
+                "line": 42
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/unreader.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "2681618a": {
+        "additionalInfo": {
+            "callString": "self.unreader.read()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2681618a",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.unreader.read()",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 35,
+                "endLine": 131,
+                "line": 131
+            },
+            {
+                "column": 19,
+                "endColumn": 39,
+                "endLine": 136,
+                "line": 136
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "29bad752": {
+        "additionalInfo": {
+            "callString": "os.getcwd()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "29bad752",
+        "message": "Repeated function call detected (3/2). Consider caching the result: os.getcwd()",
+        "messageId": "CRC001",
+        "module": "util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 31,
+                "endLine": 445,
+                "line": 445
+            },
+            {
+                "column": 18,
+                "endColumn": 29,
+                "endLine": 449,
+                "line": 449
+            },
+            {
+                "column": 14,
+                "endColumn": 25,
+                "endLine": 451,
+                "line": 451
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "2c35af86": {
+        "additionalInfo": {
+            "callString": "datetime.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2c35af86",
+        "message": "Repeated function call detected (2/2). Consider caching the result: datetime.now()",
+        "messageId": "CRC001",
+        "module": "gthread",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 42,
+                "endLine": 317,
+                "line": 317
+            },
+            {
+                "column": 31,
+                "endColumn": 45,
+                "endLine": 343,
+                "line": 343
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/gthread.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "2e695490": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2e695490",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.reloader",
+        "obj": "InotifyReloader.get_dirs",
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 20,
+                "endLine": 93,
+                "line": 93
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/reloader.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "3534b5a7": {
+        "additionalInfo": {
+            "callString": "self.read_line(unreader, buf, self.limit_request_line)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3534b5a7",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.read_line(unreader, buf, self.limit_request_line)",
+        "messageId": "CRC001",
+        "module": "message",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 75,
+                "endLine": 274,
+                "line": 274
+            },
+            {
+                "column": 25,
+                "endColumn": 79,
+                "endLine": 281,
+                "line": 281
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/message.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "39ec506d": {
+        "additionalInfo": {
+            "callString": "unreader.read()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "39ec506d",
+        "message": "Repeated function call detected (2/2). Consider caching the result: unreader.read()",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 38,
+                "endLine": 62,
+                "line": 62
+            },
+            {
+                "column": 27,
+                "endColumn": 42,
+                "endLine": 69,
+                "line": 69
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "3bed5815": {
+        "additionalInfo": {
+            "callString": "buf.getvalue().find(b\"\\r\\n\\r\\n\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3bed5815",
+        "message": "Repeated function call detected (2/2). Consider caching the result: buf.getvalue().find(b\"\\r\\n\\r\\n\")",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 46,
+                "endLine": 44,
+                "line": 44
+            },
+            {
+                "column": 18,
+                "endColumn": 50,
+                "endLine": 48,
+                "line": 48
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "4619147e": {
+        "additionalInfo": {
+            "callString": "self.unreader.read()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4619147e",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.unreader.read()",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 35,
+                "endLine": 166,
+                "line": 166
+            },
+            {
+                "column": 19,
+                "endColumn": 39,
+                "endLine": 171,
+                "line": 171
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "4ba0e43d": {
+        "additionalInfo": {
+            "callString": "unreader.read()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4ba0e43d",
+        "message": "Repeated function call detected (2/2). Consider caching the result: unreader.read()",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 38,
+                "endLine": 62,
+                "line": 62
+            },
+            {
+                "column": 27,
+                "endColumn": 42,
+                "endLine": 69,
+                "line": 69
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "4d996f23": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4d996f23",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.app.base",
+        "obj": "Application.get_config_from_module_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 35,
+                "endLine": 119,
+                "line": 119
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/app/base.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "529585b6": {
+        "additionalInfo": {
+            "callString": "deque()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "529585b6",
+        "message": "Repeated function call detected (2/2). Consider caching the result: deque()",
+        "messageId": "CRC001",
+        "module": "gthread",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 30,
+                "endLine": 78,
+                "line": 78
+            },
+            {
+                "column": 21,
+                "endColumn": 28,
+                "endLine": 79,
+                "line": 79
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/gthread.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "5a195521": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5a195521",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.glogging",
+        "obj": "Logger.close_on_exec",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 393,
+                "line": 393
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/glogging.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "6baecb7e": {
+        "additionalInfo": {
+            "callString": "os.getpid()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6baecb7e",
+        "message": "Repeated function call detected (2/2). Consider caching the result: os.getpid()",
+        "messageId": "CRC001",
+        "module": "arbiter",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 32,
+                "endLine": 413,
+                "line": 413
+            },
+            {
+                "column": 40,
+                "endColumn": 51,
+                "endLine": 424,
+                "line": 424
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/arbiter.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "6bd49f63": {
+        "additionalInfo": {
+            "callString": "self.chunk()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6bd49f63",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.chunk()",
+        "messageId": "CRC001",
+        "module": "unreader",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 28,
+                "endLine": 36,
+                "line": 36
+            },
+            {
+                "column": 20,
+                "endColumn": 32,
+                "endLine": 40,
+                "line": 40
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/unreader.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "6e0cf847": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6e0cf847",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.glogging",
+        "obj": "Logger._get_gunicorn_handler",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 29,
+                "endLine": 404,
+                "line": 404
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/glogging.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "6f4cc335": {
+        "additionalInfo": {
+            "callString": "os.open(REDIRECT_TO, os.O_RDWR)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6f4cc335",
+        "message": "Repeated function call detected (2/2). Consider caching the result: os.open(REDIRECT_TO, os.O_RDWR)",
+        "messageId": "CRC001",
+        "module": "util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 53,
+                "endLine": 495,
+                "line": 495
+            },
+            {
+                "column": 22,
+                "endColumn": 53,
+                "endLine": 507,
+                "line": 507
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "724ed401": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "724ed401",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.glogging",
+        "obj": "Logger._set_syslog_handler",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 433,
+                "line": 433
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/glogging.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "77554958": {
+        "additionalInfo": {
+            "callString": "time.time()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "77554958",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time.time()",
+        "messageId": "CRC001",
+        "module": "ggevent",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 17,
+                "endColumn": 28,
+                "endLine": 98,
+                "line": 98
+            },
+            {
+                "column": 18,
+                "endColumn": 29,
+                "endLine": 99,
+                "line": 99
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/ggevent.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "77f8b100": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "77f8b100",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.http.body",
+        "obj": "Body.getsize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 199,
+                "line": 199
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "79432515": {
+        "additionalInfo": {
+            "callString": "buf.getvalue().find(b\"\\r\\n\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "79432515",
+        "message": "Repeated function call detected (2/2). Consider caching the result: buf.getvalue().find(b\"\\r\\n\")",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 42,
+                "endLine": 82,
+                "line": 82
+            },
+            {
+                "column": 18,
+                "endColumn": 46,
+                "endLine": 85,
+                "line": 85
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "7d74bc17": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7d74bc17",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.glogging",
+        "obj": "Logger.now",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 366,
+                "line": 366
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/glogging.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "7e5e3dcf": {
+        "additionalInfo": {
+            "callString": "buf.getvalue()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7e5e3dcf",
+        "message": "Repeated function call detected (3/2). Consider caching the result: buf.getvalue()",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 29,
+                "endLine": 87,
+                "line": 87
+            },
+            {
+                "column": 14,
+                "endColumn": 28,
+                "endLine": 82,
+                "line": 82
+            },
+            {
+                "column": 18,
+                "endColumn": 32,
+                "endLine": 85,
+                "line": 85
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "8fbe55c9": {
+        "additionalInfo": {
+            "callString": "data.find(b\"\\r\\n\\r\\n\")",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8fbe55c9",
+        "message": "Repeated function call detected (2/2). Consider caching the result: data.find(b\"\\r\\n\\r\\n\")",
+        "messageId": "CRC001",
+        "module": "message",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 36,
+                "endLine": 289,
+                "line": 289
+            },
+            {
+                "column": 18,
+                "endColumn": 40,
+                "endLine": 293,
+                "line": 293
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/message.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "99bd4b5b": {
+        "additionalInfo": {
+            "callString": "datetime.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "99bd4b5b",
+        "message": "Repeated function call detected (2/2). Consider caching the result: datetime.now()",
+        "messageId": "CRC001",
+        "module": "base",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 38,
+                "endLine": 207,
+                "line": 207
+            },
+            {
+                "column": 27,
+                "endColumn": 41,
+                "endLine": 271,
+                "line": 271
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/base.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "b9ddca7e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b9ddca7e",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.app.base",
+        "obj": "Application.get_config_from_filename",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 32,
+                "endLine": 92,
+                "line": 92
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/app/base.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "bf28cb4c": {
+        "additionalInfo": {
+            "callString": "buf.getvalue()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bf28cb4c",
+        "message": "Repeated function call detected (2/2). Consider caching the result: buf.getvalue()",
+        "messageId": "CRC001",
+        "module": "message",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 29,
+                "endLine": 315,
+                "line": 315
+            },
+            {
+                "column": 19,
+                "endColumn": 33,
+                "endLine": 327,
+                "line": 327
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/message.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "c07e993c": {
+        "additionalInfo": {
+            "callString": "io.BytesIO()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c07e993c",
+        "message": "Repeated function call detected (3/2). Consider caching the result: io.BytesIO()",
+        "messageId": "CRC001",
+        "module": "unreader",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 31,
+                "endLine": 47,
+                "line": 47
+            },
+            {
+                "column": 23,
+                "endColumn": 35,
+                "endLine": 33,
+                "line": 33
+            },
+            {
+                "column": 27,
+                "endColumn": 39,
+                "endLine": 43,
+                "line": 43
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/unreader.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "cb05332e": {
+        "additionalInfo": {
+            "callString": "lines.pop(0)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cb05332e",
+        "message": "Repeated function call detected (2/2). Consider caching the result: lines.pop(0)",
+        "messageId": "CRC001",
+        "module": "message",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 31,
+                "endLine": 98,
+                "line": 98
+            },
+            {
+                "column": 23,
+                "endColumn": 35,
+                "endLine": 121,
+                "line": 121
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/message.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "d0cfa96b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d0cfa96b",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "gunicorn.workers.base",
+        "obj": "Worker.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 38,
+                "line": 38
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/base.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor"
+    },
+    "d2e23b37": {
+        "additionalInfo": {
+            "callString": "io.BytesIO()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d2e23b37",
+        "message": "Repeated function call detected (3/2). Consider caching the result: io.BytesIO()",
+        "messageId": "CRC001",
+        "module": "message",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 26,
+                "endLine": 270,
+                "line": 270
+            },
+            {
+                "column": 14,
+                "endColumn": 26,
+                "endLine": 284,
+                "line": 284
+            },
+            {
+                "column": 18,
+                "endColumn": 30,
+                "endLine": 279,
+                "line": 279
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/message.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "d62e44d1": {
+        "additionalInfo": {
+            "callString": "buf.getvalue()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d62e44d1",
+        "message": "Repeated function call detected (2/2). Consider caching the result: buf.getvalue()",
+        "messageId": "CRC001",
+        "module": "message",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 29,
+                "endLine": 288,
+                "line": 288
+            },
+            {
+                "column": 23,
+                "endColumn": 37,
+                "endLine": 298,
+                "line": 298
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/message.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "dac97a5b": {
+        "additionalInfo": {
+            "callString": "super_new(cls, name, bases, attrs)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "dac97a5b",
+        "message": "Repeated function call detected (2/2). Consider caching the result: super_new(cls, name, bases, attrs)",
+        "messageId": "CRC001",
+        "module": "config",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 54,
+                "endLine": 247,
+                "line": 247
+            },
+            {
+                "column": 19,
+                "endColumn": 53,
+                "endLine": 242,
+                "line": 242
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/config.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "db25f49b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "db25f49b",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.http.message",
+        "obj": "Request.get_data",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 261,
+                "line": 261
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/message.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "dedafe34": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "dedafe34",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.workers.geventlet",
+        "obj": "EventletWorker.patch",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 126,
+                "line": 126
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/geventlet.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    },
+    "e2104218": {
+        "additionalInfo": {
+            "callString": "len(workers)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e2104218",
+        "message": "Repeated function call detected (2/2). Consider caching the result: len(workers)",
+        "messageId": "CRC001",
+        "module": "arbiter",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 42,
+                "endLine": 580,
+                "line": 580
+            },
+            {
+                "column": 14,
+                "endColumn": 26,
+                "endLine": 576,
+                "line": 576
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/arbiter.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "e5746b9e": {
+        "additionalInfo": {
+            "callString": "datetime.now()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e5746b9e",
+        "message": "Repeated function call detected (2/2). Consider caching the result: datetime.now()",
+        "messageId": "CRC001",
+        "module": "sync",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 28,
+                "endColumn": 42,
+                "endLine": 166,
+                "line": 166
+            },
+            {
+                "column": 31,
+                "endColumn": 45,
+                "endLine": 186,
+                "line": 186
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/sync.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "e5911e2e": {
+        "additionalInfo": {
+            "callString": "traceback.format_exc()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e5911e2e",
+        "message": "Repeated function call detected (3/2). Consider caching the result: traceback.format_exc()",
+        "messageId": "CRC001",
+        "module": "util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 40,
+                "endLine": 84,
+                "line": 84
+            },
+            {
+                "column": 18,
+                "endColumn": 40,
+                "endLine": 112,
+                "line": 112
+            },
+            {
+                "column": 26,
+                "endColumn": 48,
+                "endLine": 103,
+                "line": 103
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "e7009c85": {
+        "additionalInfo": {
+            "callString": "next(parser)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e7009c85",
+        "message": "Repeated function call detected (2/2). Consider caching the result: next(parser)",
+        "messageId": "CRC001",
+        "module": "base_async",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 38,
+                "endLine": 39,
+                "line": 39
+            },
+            {
+                "column": 34,
+                "endColumn": 46,
+                "endLine": 47,
+                "line": 47
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/workers/base_async.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "e899cb60": {
+        "additionalInfo": {
+            "callString": "self.mesg.body.read(8192)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e899cb60",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.mesg.body.read(8192)",
+        "messageId": "CRC001",
+        "module": "parser",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 44,
+                "endLine": 35,
+                "line": 35
+            },
+            {
+                "column": 23,
+                "endColumn": 48,
+                "endLine": 37,
+                "line": 37
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/parser.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "eda277fe": {
+        "additionalInfo": {
+            "callString": "io.BytesIO()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "eda277fe",
+        "message": "Repeated function call detected (2/2). Consider caching the result: io.BytesIO()",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 31,
+                "endLine": 178,
+                "line": 178
+            },
+            {
+                "column": 23,
+                "endColumn": 35,
+                "endLine": 162,
+                "line": 162
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "f19bf745": {
+        "additionalInfo": {
+            "callString": "self.buf.getvalue()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f19bf745",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self.buf.getvalue()",
+        "messageId": "CRC001",
+        "module": "body",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 34,
+                "endLine": 176,
+                "line": 176
+            },
+            {
+                "column": 19,
+                "endColumn": 38,
+                "endLine": 160,
+                "line": 160
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/http/body.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance"
+    },
+    "fe197cf5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "fe197cf5",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gunicorn.arbiter",
+        "obj": "Arbiter.handle_term",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 256,
+                "line": 256
+            }
+        ],
+        "path": "/root/ecooptimizer_benchmark/repositories/gunicorn/gunicorn/arbiter.py",
+        "symbol": "no-self-use",
+        "type": "refactor"
+    }
+}
