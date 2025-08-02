@@ -365,10 +365,7 @@ def main():
                 for smell_id in smell_ids:
                     if smell_id in smells:
                         patch_dir = PATCHES_DIR / repo_name / symbol / smell_id
-                        patches_exist = (patch_dir / "original.patch").exists() and (
-                            patch_dir / "refactored.patch"
-                        ).exists()
-                        if not args.all and patches_exist:
+                        if not args.all and patch_dir.exists():
                             logging.debug(
                                 f"Patches already exist for {smell_id} in {repo_name}. Skipping."
                             )
@@ -406,8 +403,18 @@ def main():
                 if smell_id in smell_id_list
                 and (args.all or not (repo_patch_dir / smell["symbol"] / smell_id).exists())
             ]
-            clear_patches(repo_name)
 
+            if args.all:
+                clear_patches(repo_name)
+            else:
+                logging.debug(
+                    f"Clearing existing patches for smells in {repo_name} before patch creation"
+                )
+                for smell in smell_meta:
+                    clear_patches(
+                        repo_name,
+                        {"symbol": smell[0], "smell_id": smell[1], "smells": smells},
+                    )
         total_smells = len(smell_meta)
 
         logging.info(f"Patching {total_smells} smells in {repo_name}")
