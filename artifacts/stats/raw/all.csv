@@ -1,51 +1,51 @@
 SUMMARY STATISTICS
 
-Total repos processed:,39
-Total smells detected:,15090
+Total repos processed:,40
+Total smells detected:,16771
 
 SMELL TYPE BREAKDOWN
 Smell Type,Total Count
-long-element-chain,525
-long-lambda-expr,534
-long-message-chain,1562
-no-self-use,4946
-string-concat-loop,399
-too-many-arguments,7058
-use-a-generator,66
+long-element-chain,1092
+long-lambda-expr,866
+long-message-chain,1761
+no-self-use,5174
+string-concat-loop,408
+too-many-arguments,7403
+use-a-generator,67
 
 THRESHOLD BREAKDOWN
 Smell Type,Threshold,Count
-long-element-chain,3/3,448
-long-element-chain,4/3,63
-long-element-chain,5/3,9
+long-element-chain,3/3,966
+long-element-chain,4/3,103
+long-element-chain,5/3,16
 long-element-chain,6/3,3
-long-element-chain,7/3,2
+long-element-chain,7/3,4
 long-message-chain,10/3,2
 long-message-chain,11/3,1
 long-message-chain,12/3,4
 long-message-chain,13/3,2
 long-message-chain,14/3,1
-long-message-chain,3/3,1158
+long-message-chain,3/3,1290
 long-message-chain,33/3,1
-long-message-chain,4/3,268
-long-message-chain,5/3,72
-long-message-chain,6/3,31
+long-message-chain,4/3,307
+long-message-chain,5/3,94
+long-message-chain,6/3,35
 long-message-chain,66/3,1
-long-message-chain,7/3,2
+long-message-chain,7/3,3
 long-message-chain,8/3,15
-long-message-chain,9/3,4
-too-many-arguments,10/6,639
+long-message-chain,9/3,5
+too-many-arguments,10/6,669
 too-many-arguments,105/6,1
-too-many-arguments,11/6,479
-too-many-arguments,12/6,321
-too-many-arguments,13/6,242
-too-many-arguments,14/6,205
-too-many-arguments,15/6,178
-too-many-arguments,16/6,106
+too-many-arguments,11/6,493
+too-many-arguments,12/6,334
+too-many-arguments,13/6,255
+too-many-arguments,14/6,209
+too-many-arguments,15/6,180
+too-many-arguments,16/6,108
 too-many-arguments,160/6,1
-too-many-arguments,17/6,109
-too-many-arguments,18/6,49
-too-many-arguments,19/6,42
+too-many-arguments,17/6,110
+too-many-arguments,18/6,52
+too-many-arguments,19/6,43
 too-many-arguments,20/6,28
 too-many-arguments,21/6,23
 too-many-arguments,22/6,32
@@ -82,15 +82,16 @@ too-many-arguments,57/6,1
 too-many-arguments,58/6,1
 too-many-arguments,60/6,2
 too-many-arguments,67/6,1
-too-many-arguments,7/6,2030
+too-many-arguments,7/6,2167
 too-many-arguments,75/6,1
-too-many-arguments,8/6,1366
-too-many-arguments,9/6,1026
+too-many-arguments,8/6,1440
+too-many-arguments,9/6,1077
 
 REPO BREAKDOWN
 Repository,Total Smells,Smell Types Present,Smell Types Under Threshold,Smell Types Missing
 pytorch,3741,7,use-a-generator:5,
 airflow,2655,7,,
+homeassistant,1681,7,use-a-generator:1,
 scipy,978,7,,
 tensorflow,909,7,,
 keras,795,6,"long-element-chain:0, use-a-generator:3",long-element-chain
