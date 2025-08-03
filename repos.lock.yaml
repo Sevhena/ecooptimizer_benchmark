@@ -47,6 +47,9 @@ repos:
   - name: gunicorn
     url: https://github.com/benoitc/gunicorn.git
     commit: a86ea1e4e6c271d1cd1823c7e14490123f9238fe
+  - name: homeassistant
+    url: https://github.com/home-assistant/core.git
+    commit: 1236801b7d75ce7ec1b84c702079761760c30b95
   - name: keras
     url: https://github.com/keras-team/keras.git
     commit: 08ad93b77488f911328da6a676f04709b6e9f788

@@ -41,3 +41,4 @@ domains:
     - paho.mqtt.python
     - gpiozero
     - rclpy
+    - homeassistant

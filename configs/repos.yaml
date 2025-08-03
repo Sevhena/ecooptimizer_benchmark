@@ -301,3 +301,10 @@ mitmproxy:
   patterns_to_exclude:
     - "**/test/**"
     - "**/test_*.py"
+homeassistant:
+  venv_command: ""
+  test_command: ""
+  target: "homeassistant/homeassistant"
+  patterns_to_exclude:
+    - "**/tests/**"
+    - "**/test_*.py"
