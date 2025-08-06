@@ -22,8 +22,8 @@
             {
                 "column": 4,
                 "endColumn": 22,
-                "endLine": 682,
-                "line": 682
+                "endLine": 680,
+                "line": 680
             }
         ],
         "path": "gpiozero/pins/__init__.py",
@@ -54,8 +54,8 @@
             {
                 "column": 4,
                 "endColumn": 22,
-                "endLine": 371,
-                "line": 371
+                "endLine": 369,
+                "line": 369
             }
         ],
         "path": "gpiozero/pins/__init__.py",
@@ -150,8 +150,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 254,
-                "line": 254
+                "endLine": 252,
+                "line": 252
             }
         ],
         "path": "gpiozero/input_devices.py",
@@ -182,8 +182,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 217,
-                "line": 217
+                "endLine": 215,
+                "line": 215
             }
         ],
         "path": "gpiozero/boards.py",
@@ -212,10 +212,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 47,
-                "endColumn": 108,
-                "endLine": 959,
-                "line": 959
+                "column": 21,
+                "endColumn": 82,
+                "endLine": 957,
+                "line": 957
             }
         ],
         "path": "gpiozero/boards.py",
@@ -244,10 +244,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 31,
-                "endColumn": 55,
-                "endLine": 437,
-                "line": 437
+                "column": 27,
+                "endColumn": 51,
+                "endLine": 435,
+                "line": 435
             }
         ],
         "path": "gpiozero/internal_devices.py",

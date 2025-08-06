@@ -1,5 +1,5 @@
 diff --git a/django/template/defaultfilters.py b/django/template/defaultfilters.py
-index 66c6e76d20..4f6bc44b75 100644
+index 66c6e76d20..366e826a13 100644
 --- a/django/template/defaultfilters.py
 +++ b/django/template/defaultfilters.py
 @@ -26,6 +26,7 @@ from django.utils.translation import gettext, ngettext
@@ -18,8 +18,8 @@ index 66c6e76d20..4f6bc44b75 100644
 +    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LMC001_dfadbb34', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/dfadbb34_refactored.csv') as tracker:
 +        intermediate_0 = value.replace("\\", "\\\\")
 +        intermediate_1 = intermediate_0.replace('"', '\\"')
-+        _carbon_wrapped_00da0721 = intermediate_1.replace("'", "\\'")
-+    return _carbon_wrapped_00da0721
++        _carbon_wrapped_9b787da1 = intermediate_1.replace("'", "\\'")
++    return _carbon_wrapped_9b787da1
  
  
  @register.filter(is_safe=True)

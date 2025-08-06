@@ -22,8 +22,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 58,
-                "line": 58
+                "endLine": 56,
+                "line": 56
             }
         ],
         "path": "nltk/tokenize/stanford_segmenter.py",
@@ -54,8 +54,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 40,
-                "line": 40
+                "endLine": 38,
+                "line": 38
             }
         ],
         "path": "nltk/corpus/reader/chunked.py",
@@ -86,8 +86,8 @@
             {
                 "column": 0,
                 "endColumn": 8,
-                "endLine": 1725,
-                "line": 1725
+                "endLine": 1723,
+                "line": 1723
             }
         ],
         "path": "nltk/parse/chart.py",
@@ -150,8 +150,8 @@
             {
                 "column": 4,
                 "endColumn": 24,
-                "endLine": 2470,
-                "line": 2470
+                "endLine": 2468,
+                "line": 2468
             }
         ],
         "path": "nltk/corpus/reader/framenet.py",
@@ -182,8 +182,8 @@
             {
                 "column": 4,
                 "endColumn": 20,
-                "endLine": 72,
-                "line": 72
+                "endLine": 70,
+                "line": 70
             }
         ],
         "path": "nltk/cluster/api.py",
@@ -227,7 +227,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "cv_sequence",
-            "innerLoopLine": 189,
+            "innerLoopLine": 187,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -244,16 +244,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 51,
-                "endLine": 191,
-                "line": 191
+                "column": 16,
+                "endColumn": 47,
+                "endLine": 189,
+                "line": 189
             },
             {
-                "column": 20,
-                "endColumn": 51,
-                "endLine": 193,
-                "line": 193
+                "column": 16,
+                "endColumn": 47,
+                "endLine": 191,
+                "line": 191
             }
         ],
         "path": "nltk/stem/porter.py",
@@ -265,7 +265,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 164,
+            "innerLoopLine": 162,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -282,16 +282,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 38,
-                "endLine": 167,
-                "line": 167
+                "column": 12,
+                "endColumn": 34,
+                "endLine": 165,
+                "line": 165
             },
             {
-                "column": 16,
-                "endColumn": 38,
-                "endLine": 170,
-                "line": 170
+                "column": 12,
+                "endColumn": 34,
+                "endLine": 168,
+                "line": 168
             }
         ],
         "path": "nltk/util.py",
@@ -303,7 +303,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "inside",
-            "innerLoopLine": 143,
+            "innerLoopLine": 141,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -320,10 +320,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 41,
-                "endLine": 148,
-                "line": 148
+                "column": 12,
+                "endColumn": 37,
+                "endLine": 146,
+                "line": 146
             }
         ],
         "path": "nltk/ccg/lexicon.py",
@@ -352,10 +352,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 19,
-                "endColumn": 82,
-                "endLine": 5178,
-                "line": 5178
+                "column": 15,
+                "endColumn": 78,
+                "endLine": 5176,
+                "line": 5176
             }
         ],
         "path": "nltk/stem/snowball.py",
@@ -384,10 +384,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 17,
-                "endColumn": 78,
-                "endLine": 5196,
-                "line": 5196
+                "column": 13,
+                "endColumn": 74,
+                "endLine": 5194,
+                "line": 5194
             }
         ],
         "path": "nltk/stem/snowball.py",

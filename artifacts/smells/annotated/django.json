@@ -22,8 +22,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 70,
-                "line": 70
+                "endLine": 68,
+                "line": 68
             }
         ],
         "path": "django/contrib/admin/views/main.py",
@@ -54,8 +54,8 @@
             {
                 "column": 0,
                 "endColumn": 25,
-                "endLine": 1302,
-                "line": 1302
+                "endLine": 1300,
+                "line": 1300
             }
         ],
         "path": "django/forms/models.py",
@@ -86,8 +86,8 @@
             {
                 "column": 4,
                 "endColumn": 19,
-                "endLine": 1700,
-                "line": 1700
+                "endLine": 1698,
+                "line": 1698
             }
         ],
         "path": "django/test/client.py",
@@ -118,8 +118,8 @@
             {
                 "column": 4,
                 "endColumn": 23,
-                "endLine": 75,
-                "line": 75
+                "endLine": 73,
+                "line": 73
             }
         ],
         "path": "django/db/backends/mysql/features.py",
@@ -150,8 +150,8 @@
             {
                 "column": 4,
                 "endColumn": 28,
-                "endLine": 86,
-                "line": 86
+                "endLine": 82,
+                "line": 82
             }
         ],
         "path": "django/middleware/cache.py",
@@ -182,8 +182,8 @@
             {
                 "column": 4,
                 "endColumn": 30,
-                "endLine": 127,
-                "line": 127
+                "endLine": 123,
+                "line": 123
             }
         ],
         "path": "django/template/engine.py",
@@ -195,7 +195,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "encoded",
-            "innerLoopLine": 72,
+            "innerLoopLine": 70,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -212,10 +212,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 58,
-                "endLine": 74,
-                "line": 74
+                "column": 8,
+                "endColumn": 54,
+                "endLine": 72,
+                "line": 72
             }
         ],
         "path": "django/core/signing.py",
@@ -227,7 +227,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "ns_pattern",
-            "innerLoopLine": 62,
+            "innerLoopLine": 60,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -244,10 +244,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 51,
-                "endLine": 85,
-                "line": 85
+                "column": 16,
+                "endColumn": 47,
+                "endLine": 83,
+                "line": 83
             }
         ],
         "path": "django/urls/base.py",
@@ -314,10 +314,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 36,
-                "endColumn": 92,
-                "endLine": 91,
-                "line": 91
+                "column": 32,
+                "endColumn": 88,
+                "endLine": 89,
+                "line": 89
             }
         ],
         "path": "django/core/serializers/python.py",
@@ -346,10 +346,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 107,
-                "endLine": 504,
-                "line": 504
+                "column": 15,
+                "endColumn": 83,
+                "endLine": 502,
+                "line": 502
             }
         ],
         "path": "django/db/backends/base/operations.py",
@@ -410,10 +410,10 @@
         "obj": "all_valid",
         "occurences": [
             {
-                "column": 35,
-                "endColumn": 84,
-                "endLine": 586,
-                "line": 586
+                "column": 11,
+                "endColumn": 60,
+                "endLine": 584,
+                "line": 584
             }
         ],
         "path": "django/forms/formsets.py",

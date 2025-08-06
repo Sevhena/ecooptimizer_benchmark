@@ -1,5 +1,5 @@
 diff --git a/sklearn/isotonic.py b/sklearn/isotonic.py
-index 2f2c56ae5..f4fcb0c31 100644
+index 2f2c56ae5d..f4fcb0c31d 100644
 --- a/sklearn/isotonic.py
 +++ b/sklearn/isotonic.py
 @@ -19,6 +19,7 @@ from .utils import check_array, check_consistent_length

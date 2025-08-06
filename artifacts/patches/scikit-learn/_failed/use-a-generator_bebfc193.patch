@@ -1,5 +1,5 @@
 diff --git a/sklearn/impute/_base.py b/sklearn/impute/_base.py
-index 689ba8ace..5411b77d5 100644
+index 689ba8acee..26d4bd0b30 100644
 --- a/sklearn/impute/_base.py
 +++ b/sklearn/impute/_base.py
 @@ -18,6 +18,7 @@ from ..utils._param_validation import MissingValues, StrOptions
@@ -18,8 +18,8 @@ index 689ba8ace..5411b77d5 100644
 -                [all(missing_mask[:, i].data) for i in range(missing_mask.shape[1])]
 -            ):
 +            with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R1729_bebfc193', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/use-a-generator/bebfc193.csv') as tracker:
-+                _carbon_wrapped_10699ea1 = any( [all(missing_mask[:, i].data) for i in range(missing_mask.shape[1])] )
-+            if not self.keep_empty_features and _carbon_wrapped_10699ea1:
++                _carbon_wrapped_0bb5bad7 = any( [all(missing_mask[:, i].data) for i in range(missing_mask.shape[1])] )
++            if not self.keep_empty_features and _carbon_wrapped_0bb5bad7:
                  warnings.warn(
                      "Currently, when `keep_empty_feature=False` and "
                      '`strategy="constant"`, empty features are not dropped. '

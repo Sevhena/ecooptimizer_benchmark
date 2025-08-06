@@ -22,8 +22,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 659,
-                "line": 659
+                "endLine": 657,
+                "line": 657
             }
         ],
         "path": "dask/array/gufunc.py",
@@ -54,8 +54,8 @@
             {
                 "column": 0,
                 "endColumn": 14,
-                "endLine": 339,
-                "line": 339
+                "endLine": 337,
+                "line": 337
             }
         ],
         "path": "dask/dataframe/dask_expr/io/parquet.py",
@@ -148,10 +148,10 @@
         "obj": "histogramdd",
         "occurences": [
             {
-                "column": 33,
-                "endColumn": 75,
-                "endLine": 1367,
-                "line": 1367
+                "column": 29,
+                "endColumn": 71,
+                "endLine": 1365,
+                "line": 1365
             }
         ],
         "path": "dask/array/routines.py",
@@ -180,10 +180,10 @@
         "obj": "overlap",
         "occurences": [
             {
-                "column": 40,
-                "endColumn": 91,
-                "endLine": 448,
-                "line": 448
+                "column": 36,
+                "endColumn": 87,
+                "endLine": 446,
+                "line": 446
             }
         ],
         "path": "dask/array/overlap.py",
@@ -212,10 +212,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 85,
-                "endLine": 1363,
-                "line": 1363
+                "column": 15,
+                "endColumn": 61,
+                "endLine": 1361,
+                "line": 1361
             }
         ],
         "path": "dask/utils.py",
@@ -244,10 +244,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 17,
-                "endColumn": 89,
-                "endLine": 3078,
-                "line": 3078
+                "column": 13,
+                "endColumn": 85,
+                "endLine": 3076,
+                "line": 3076
             }
         ],
         "path": "dask/dataframe/dask_expr/_expr.py",
@@ -310,8 +310,8 @@
             {
                 "column": 4,
                 "endColumn": 28,
-                "endLine": 332,
-                "line": 332
+                "endLine": 330,
+                "line": 330
             }
         ],
         "path": "dask/dataframe/dask_expr/_reductions.py",
@@ -342,8 +342,8 @@
             {
                 "column": 4,
                 "endColumn": 22,
-                "endLine": 380,
-                "line": 380
+                "endLine": 378,
+                "line": 378
             }
         ],
         "path": "dask/dataframe/dask_expr/_concat.py",
@@ -387,7 +387,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "header",
-            "innerLoopLine": 80,
+            "innerLoopLine": 78,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -404,10 +404,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 24,
-                "endColumn": 53,
-                "endLine": 83,
-                "line": 83
+                "column": 20,
+                "endColumn": 49,
+                "endLine": 81,
+                "line": 81
             }
         ],
         "path": "dask/dataframe/dask_expr/_reductions.py",
@@ -451,7 +451,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 1990,
+            "innerLoopLine": 1988,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -468,10 +468,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 48,
-                "endLine": 1994,
-                "line": 1994
+                "column": 16,
+                "endColumn": 44,
+                "endLine": 1992,
+                "line": 1992
             }
         ],
         "path": "dask/utils.py",

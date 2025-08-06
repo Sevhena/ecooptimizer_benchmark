@@ -1,5 +1,5 @@
 diff --git a/sklearn/datasets/_openml.py b/sklearn/datasets/_openml.py
-index 47ecdcd14..a133958f5 100644
+index 47ecdcd14d..a133958f50 100644
 --- a/sklearn/datasets/_openml.py
 +++ b/sklearn/datasets/_openml.py
 @@ -30,6 +30,7 @@ from ..utils._param_validation import (

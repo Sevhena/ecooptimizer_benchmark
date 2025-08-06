@@ -11,126 +11,55 @@ repos:
 smells:
   dask:
     long-message-chain:
-    - b320286e
-    - aab89951
     - 8da83e08
     no-self-use:
-    - 4a6855eb
-    - cdb5b8c8
     - 81ec5021
     string-concat-loop:
-    - bf9f2446
     - 5254055f
-    - 3cad881d
     too-many-arguments:
-    - 87046ae9
-    - b791c549
     - 4e24e944
     use-a-generator:
     - 0fa92701
-    - e6942af1
-    - 4eddae0f
   django:
     long-message-chain:
-    - ff438a32
-    - bae09c6d
     - dfadbb34
     no-self-use:
     - f0dffe2e
-    - e257c14b
-    - 5041c570
     string-concat-loop:
-    - aded0240
-    - c23ed0ad
     - 871b0de2
-    too-many-arguments:
-    - 40b20e67
-    - fe1ad8e7
-    - b3935b4a
     use-a-generator:
-    - a1f57a8c
     - cf18c1e1
   gpiozero:
     long-lambda-expr:
     - e04be5d7
-    long-message-chain:
-    - 7f920cd3
-    - ddfcea54
     no-self-use:
-    - cb611f29
-    - b3e91708
     - fc7e33d2
     too-many-arguments:
     - e50ab4c5
-    - d091a9bd
-    - e18fe1c4
   nltk:
     long-lambda-expr:
     - 13d438e9
-    long-message-chain:
-    - 781f1a9a
-    - e3bd1ce6
     no-self-use:
     - dc979356
-    - 4e040ff2
-    - e8965bd2
-    string-concat-loop:
-    - f041ae6d
-    - 48b77d42
-    - 5829a76e
-    too-many-arguments:
-    - da4d0f22
-    - 3e0580a8
-    - c8457a5b
   numpy:
     long-lambda-expr:
     - b89c2eb1
-    long-message-chain:
-    - 64cee6dc
-    - 3d27f9c5
-    - 1a72f208
-    no-self-use:
-    - 662a8d34
-    - 49debb68
-    - 54f82199
     string-concat-loop:
-    - 58bf0058
     - 050c312a
-    too-many-arguments:
-    - '53941361'
-    - 768c615b
-    - 77b3ceed
   paho.mqtt.python:
     long-message-chain:
     - 89b86924
-    - 5d8aba75
-    no-self-use:
-    - 18dbac6a
-    - 59ee5cc8
-    - 26129bdd
     string-concat-loop:
     - cbf43c4b
-    too-many-arguments:
-    - 841b8801
-    - a39279b0
-    - e2344573
   scikit-learn:
     long-message-chain:
-    - 2585706f
     - 5f1cf174
-    - 4df72a88
-    no-self-use:
-    - 442cda07
-    - 20e40681
+    no-self-use:    
     - db63474a
     string-concat-loop:
     - de2a415f
-    - f5e98a18
-    - d880725b
     too-many-arguments:
     - 809dea56
-    - 95c86cba
-    - 818d01b3
     use-a-generator:
     - bebfc193
   scipy:
@@ -138,37 +67,13 @@ smells:
     - e0748c3e
     long-message-chain:
     - f7d9627c
-    - f15881ec
-    - 757214c4
-    no-self-use:
-    - df06b2c4
-    - 9d6cdbb1
-    - 53e7e0bd
-    string-concat-loop:
-    - cfbd3f39
-    - fa242649
-    - 304ee0bf
     too-many-arguments:
     - 83d99ed0
-    - fa062b40
-    - 461790b5
     use-a-generator:
     - c0a0307d
     - 2bbdf916
-    - cfd9184e
   streamlit:
     long-lambda-expr:
     - 3dff6d86
-    - 9fed98e9
-    long-message-chain:
-    - d25eb7e8
-    - f1d47f3f
-    - b4b48cfc
-    no-self-use:
-    - 143bf683
-    - efac49af
-    - '88168186'
     too-many-arguments:
-    - 0d45d624
     - f5d06531
-    - 1fbba654

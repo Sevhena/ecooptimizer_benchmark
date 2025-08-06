@@ -1,5 +1,5 @@
 diff --git a/dask/dataframe/methods.py b/dask/dataframe/methods.py
-index 060b66a37..a54e25d12 100644
+index 060b66a37..2ae5ae427 100644
 --- a/dask/dataframe/methods.py
 +++ b/dask/dataframe/methods.py
 @@ -17,6 +17,7 @@ from dask.dataframe._compat import (
@@ -18,8 +18,8 @@ index 060b66a37..a54e25d12 100644
 +    with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LMC001_8da83e08', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/8da83e08_refactored.csv') as tracker:
 +        intermediate_0 = out.isnull()
 +        intermediate_1 = intermediate_0.values.all(axis=0)
-+        _carbon_wrapped_89393e3a = intermediate_1.any()
-+    if check and _carbon_wrapped_89393e3a:
++        _carbon_wrapped_49091daa = intermediate_1.any()
++    if check and _carbon_wrapped_49091daa:
          raise ValueError(
              "All NaN partition encountered in `fillna`. Try "
              "using ``df.repartition`` to increase the partition "

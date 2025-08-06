@@ -20,9 +20,3 @@ index 63346088b6..4f74ea0a96 100644
      return _discrete_interpolation_to_boundaries((n * quantiles) - 1 - 0.5,
                                                   gamma_fun)
  
-diff --git a/vendored-meson/meson b/vendored-meson/meson
---- a/vendored-meson/meson
-+++ b/vendored-meson/meson
-@@ -1 +1 @@
--Subproject commit f754c4258805056ed7be09830d96af45215d341b
-+Subproject commit f754c4258805056ed7be09830d96af45215d341b-dirty

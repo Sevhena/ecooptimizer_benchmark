@@ -34,9 +34,3 @@ index 8e71e6d4b1..10c7b22e57 100644
 -        return asanyarray(operands[0], order=output_order)
 +        return asanyarray(operands[0], order=output_order)
 \ No newline at end of file
-diff --git a/vendored-meson/meson b/vendored-meson/meson
---- a/vendored-meson/meson
-+++ b/vendored-meson/meson
-@@ -1 +1 @@
--Subproject commit f754c4258805056ed7be09830d96af45215d341b
-+Subproject commit f754c4258805056ed7be09830d96af45215d341b-dirty

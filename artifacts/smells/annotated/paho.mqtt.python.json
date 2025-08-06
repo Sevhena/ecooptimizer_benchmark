@@ -22,8 +22,8 @@
             {
                 "column": 4,
                 "endColumn": 19,
-                "endLine": 3364,
-                "line": 3364
+                "endLine": 3362,
+                "line": 3362
             }
         ],
         "path": "src/paho/mqtt/client.py",
@@ -54,8 +54,8 @@
             {
                 "column": 4,
                 "endColumn": 21,
-                "endLine": 4821,
-                "line": 4821
+                "endLine": 4819,
+                "line": 4819
             }
         ],
         "path": "src/paho/mqtt/client.py",
@@ -86,8 +86,8 @@
             {
                 "column": 4,
                 "endColumn": 30,
-                "endLine": 3347,
-                "line": 3347
+                "endLine": 3345,
+                "line": 3345
             }
         ],
         "path": "src/paho/mqtt/client.py",
@@ -118,8 +118,8 @@
             {
                 "column": 0,
                 "endColumn": 12,
-                "endLine": 108,
-                "line": 108
+                "endLine": 106,
+                "line": 106
             }
         ],
         "path": "src/paho/mqtt/publish.py",
@@ -150,8 +150,8 @@
             {
                 "column": 4,
                 "endColumn": 15,
-                "endLine": 1395,
-                "line": 1395
+                "endLine": 1393,
+                "line": 1393
             }
         ],
         "path": "src/paho/mqtt/client.py",
@@ -182,8 +182,8 @@
             {
                 "column": 4,
                 "endColumn": 19,
-                "endLine": 1439,
-                "line": 1439
+                "endLine": 1437,
+                "line": 1437
             }
         ],
         "path": "src/paho/mqtt/client.py",
@@ -244,10 +244,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 51,
-                "endColumn": 96,
-                "endLine": 4787,
-                "line": 4787
+                "column": 50,
+                "endColumn": 95,
+                "endLine": 4785,
+                "line": 4785
             }
         ],
         "path": "src/paho/mqtt/client.py",

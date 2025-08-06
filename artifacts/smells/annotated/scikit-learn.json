@@ -54,8 +54,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 228,
-                "line": 228
+                "endLine": 226,
+                "line": 226
             }
         ],
         "path": "sklearn/cluster/_bisect_k_means.py",
@@ -86,8 +86,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 638,
-                "line": 638
+                "endLine": 636,
+                "line": 636
             }
         ],
         "path": "sklearn/cluster/_spectral.py",
@@ -118,8 +118,8 @@
             {
                 "column": 4,
                 "endColumn": 32,
-                "endLine": 626,
-                "line": 626
+                "endLine": 624,
+                "line": 624
             }
         ],
         "path": "sklearn/ensemble/_forest.py",
@@ -150,8 +150,8 @@
             {
                 "column": 4,
                 "endColumn": 29,
-                "endLine": 393,
-                "line": 393
+                "endLine": 389,
+                "line": 389
             }
         ],
         "path": "sklearn/preprocessing/_function_transformer.py",
@@ -233,7 +233,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result_msg",
-            "innerLoopLine": 898,
+            "innerLoopLine": 896,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -250,22 +250,22 @@
         "obj": null,
         "occurences": [
             {
-                "column": 24,
-                "endColumn": 70,
-                "endLine": 899,
-                "line": 899
-            },
-            {
-                "column": 28,
-                "endColumn": 84,
-                "endLine": 902,
-                "line": 902
+                "column": 20,
+                "endColumn": 66,
+                "endLine": 897,
+                "line": 897
             },
             {
                 "column": 24,
-                "endColumn": 89,
-                "endLine": 903,
-                "line": 903
+                "endColumn": 80,
+                "endLine": 900,
+                "line": 900
+            },
+            {
+                "column": 20,
+                "endColumn": 85,
+                "endLine": 901,
+                "line": 901
             }
         ],
         "path": "sklearn/model_selection/_validation.py",
@@ -277,7 +277,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "output",
-            "innerLoopLine": 2782,
+            "innerLoopLine": 2780,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -294,10 +294,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 24,
-                "endColumn": 51,
-                "endLine": 2784,
-                "line": 2784
+                "column": 20,
+                "endColumn": 47,
+                "endLine": 2782,
+                "line": 2782
             }
         ],
         "path": "sklearn/utils/validation.py",
@@ -326,10 +326,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 17,
-                "endLine": 563,
-                "line": 554
+                "column": 12,
+                "endColumn": 13,
+                "endLine": 561,
+                "line": 552
             }
         ],
         "path": "sklearn/calibration.py",
@@ -390,10 +390,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 35,
-                "endColumn": 89,
-                "endLine": 1126,
-                "line": 1126
+                "column": 31,
+                "endColumn": 85,
+                "endLine": 1124,
+                "line": 1124
             }
         ],
         "path": "sklearn/ensemble/_forest.py",

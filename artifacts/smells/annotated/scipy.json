@@ -54,8 +54,8 @@
             {
                 "column": 0,
                 "endColumn": 17,
-                "endLine": 94,
-                "line": 94
+                "endLine": 92,
+                "line": 92
             }
         ],
         "path": "scipy/optimize/_lbfgsb_py.py",
@@ -86,8 +86,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 4014,
-                "line": 4014
+                "endLine": 4012,
+                "line": 4012
             }
         ],
         "path": "scipy/stats/_distn_infrastructure.py",
@@ -118,8 +118,8 @@
             {
                 "column": 4,
                 "endColumn": 24,
-                "endLine": 5212,
-                "line": 5212
+                "endLine": 5208,
+                "line": 5208
             }
         ],
         "path": "scipy/stats/_distribution_infrastructure.py",
@@ -150,8 +150,8 @@
             {
                 "column": 4,
                 "endColumn": 10,
-                "endLine": 10767,
-                "line": 10767
+                "endLine": 10765,
+                "line": 10765
             }
         ],
         "path": "scipy/stats/_stats_py.py",
@@ -182,8 +182,8 @@
             {
                 "column": 4,
                 "endColumn": 13,
-                "endLine": 71,
-                "line": 71
+                "endLine": 67,
+                "line": 67
             }
         ],
         "path": "scipy/integrate/_quad_vec.py",
@@ -276,10 +276,10 @@
         "obj": "_cossin",
         "occurences": [
             {
-                "column": 15,
-                "endColumn": 70,
-                "endLine": 173,
-                "line": 173
+                "column": 11,
+                "endColumn": 66,
+                "endLine": 171,
+                "line": 171
             }
         ],
         "path": "scipy/linalg/_decomp_cossin.py",
@@ -340,10 +340,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 17,
-                "endColumn": 41,
-                "endLine": 2097,
-                "line": 2097
+                "column": 13,
+                "endColumn": 37,
+                "endLine": 2095,
+                "line": 2095
             }
         ],
         "path": "scipy/stats/_discrete_distns.py",
@@ -372,10 +372,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 17,
-                "endColumn": 41,
-                "endLine": 12482,
-                "line": 12482
+                "column": 13,
+                "endColumn": 37,
+                "endLine": 12480,
+                "line": 12480
             }
         ],
         "path": "scipy/stats/_continuous_distns.py",
@@ -387,7 +387,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "msg",
-            "innerLoopLine": 693,
+            "innerLoopLine": 691,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -404,22 +404,22 @@
         "obj": null,
         "occurences": [
             {
+                "column": 12,
+                "endColumn": 74,
+                "endLine": 692,
+                "line": 692
+            },
+            {
                 "column": 16,
-                "endColumn": 78,
+                "endColumn": 74,
                 "endLine": 694,
                 "line": 694
             },
             {
-                "column": 20,
-                "endColumn": 78,
-                "endLine": 696,
-                "line": 696
-            },
-            {
-                "column": 16,
-                "endColumn": 32,
-                "endLine": 697,
-                "line": 697
+                "column": 12,
+                "endColumn": 28,
+                "endLine": 695,
+                "line": 695
             }
         ],
         "path": "scipy/io/arff/_arffread.py",
@@ -431,7 +431,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "signature",
-            "innerLoopLine": 199,
+            "innerLoopLine": 197,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -448,16 +448,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 70,
-                "endLine": 201,
-                "line": 201
+                "column": 16,
+                "endColumn": 66,
+                "endLine": 199,
+                "line": 199
             },
             {
-                "column": 20,
-                "endColumn": 77,
-                "endLine": 203,
-                "line": 203
+                "column": 16,
+                "endColumn": 73,
+                "endLine": 201,
+                "line": 201
             }
         ],
         "path": "scipy/_lib/_ccallback.py",
@@ -469,7 +469,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 5365,
+            "innerLoopLine": 5363,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -486,10 +486,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 69,
-                "endLine": 5366,
-                "line": 5366
+                "column": 16,
+                "endColumn": 65,
+                "endLine": 5364,
+                "line": 5364
             }
         ],
         "path": "scipy/stats/_distribution_infrastructure.py",
