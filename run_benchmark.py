@@ -229,6 +229,11 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
     venv_bin = venv_dir / "bin"
     python_path = venv_bin / "python"
 
+    if "-" in test_cmd[0]:
+        command = [python_path, *test_cmd]
+    else:
+        command = test_cmd
+
     env = os.environ.copy()
     env["VIRTUAL_ENV"] = str(venv_dir)
     env["PATH"] = str(venv_bin) + os.pathsep + env["PATH"]
@@ -242,7 +247,7 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
         with console_out_log.open("a") as f:  # append mode
             f.write(f"\n=== New Test Run: {time.ctime()} ===\n")
             subprocess.run(
-                [str(python_path), *test_cmd],
+                command,
                 cwd=(WORKTREES_DIR / repo),
                 env=env,
                 check=True,
