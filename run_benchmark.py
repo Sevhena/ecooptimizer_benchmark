@@ -372,6 +372,7 @@ def main():
         logging.info(f" - {repo}")
 
     # --- Execute Benchmarks ---
+    raised_error = False
     for repo, smell_items in smells_to_run.items():
         logging.info(f"\nRunning benchmarks for {repo}...")
         for smell_type, smell_instances in smell_items.items():
@@ -421,16 +422,19 @@ def main():
                         logging.error(
                             f"Error running benchmark for {repo} | {smell_type} | {smell_id} | {version}: {e}"
                         )
+                        raised_error = True
                         continue
                     finally:
                         logging.info(f"    Restoring {repo_dir} to original state...")
                         subprocess.run(["git", "restore", "."], cwd=repo_dir)
 
-                        # --- Move Emissions Files ---
-                        if EMISSIONS_DIR.exists():
-                            logging.info("\nMoving emissions files to timestamped folder...")
-                            move_named_subfolders(selected_repos)
+    # --- Move Emissions Files ---
+    if EMISSIONS_DIR.exists():
+        logging.info("\nMoving emissions files to timestamped folder...")
+        move_named_subfolders(selected_repos)
 
+    if raised_error:
+        logging.error("\n❗ Some benchmarks encountered errors. Please check the logs for details.")
     logging.info("\n✅ Benchmarking complete.")
 
 
