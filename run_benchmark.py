@@ -237,7 +237,7 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
         with console_out_log.open("a") as f:  # append mode
             f.write(f"\n=== New Test Run: {time.ctime()} ===\n")
             subprocess.run(
-                [python_path, *test_cmd],
+                [str(python_path), *test_cmd],
                 cwd=(WORKTREES_DIR / repo),
                 env=env,
                 check=True,
