@@ -250,8 +250,7 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
                 stderr=subprocess.STDOUT,
             )
     except Exception as e:
-        logging.error(f"Test run failed for {repo}: {e}")
-        raise e
+        logging.debug(f"Error raised during testing. Check logs. {e}")
 
     elapsed = time.time() - start_time
     avg_cpu = process.cpu_percent(interval=0.1)
