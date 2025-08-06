@@ -16,7 +16,7 @@ scikit-learn:
     - "**/tests/**"
     - "**/test_*.py"
 numpy:
-  test_command: ["-c", "import numpy as np; np.test()"]
+  test_command: ["-c", "'import numpy as np; np.test()'"]
   target: "numpy/numpy"
   patterns_to_exclude:
     - "**/tests/**"
