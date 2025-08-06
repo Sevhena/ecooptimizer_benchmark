@@ -175,6 +175,12 @@ def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> N
         if failed_patch_path.exists():
             logging.debug(f"[{smell_id}] Removing existing failed patch: {failed_patch_path}")
             failed_patch_path.unlink()
+
+            failed_smells = next((file for file in failed_patch_path.parent.iterdir()), None)
+            if not failed_smells:
+                failed_patch_path.parent.rmdir()
+                logging.debug("No remaining failed patches, _failed directory removed")
+
     except (KeyboardInterrupt, Exception) as e:
         logging.error(f"[{smell_id}] Patches creation failed: {e}")
 
@@ -287,6 +293,11 @@ def main():
     )
     group.add_argument("--smells", nargs="+", help="Generate patch for a specific smell (id)")
     parser.add_argument(
+        "--failed-only",
+        action="store_true",
+        help="Generate patches only for smells that had previously failed.",
+    )
+    parser.add_argument(
         "--all",
         action="store_true",
         help="Generate patches for all smells in the specified repo or type including overwriting existing ones (DEFAULT: False)",
@@ -297,6 +308,10 @@ def main():
 
     if args.smells and not args.repo:
         logging.error("Please specify a repository with --repo when using --smells")
+        sys.exit(1)
+
+    if args.failed_only and args.smells:
+        logging.error("Do not use --failed-only when specifying smell ids.")
         sys.exit(1)
 
     repos_dir = Path("repositories")
@@ -341,80 +356,101 @@ def main():
             continue
 
         smell_meta = []
-        if args.smells:
-            logging.info(f"Generating patches for smells {args.smells} in repo {repo_name}\n")
-            for smell in args.smells:
-                smell_meta.append((smells[smell]["symbol"], smell))
-                clear_patches(
-                    repo_name,
-                    {"symbol": smells[smell]["symbol"], "smell_id": smell, "smells": smells},
-                )
-        elif args.type:
-            logging.info(f"Generating patches for smell type {args.type} in repo {repo_name}\n")
-            smell_map: dict[str, list[str]] = select_repos_config.get("smells", {}).get(
-                repo_name, {}
-            )
-            if not smell_map:
-                logging.warning(
-                    f"No smells of type '{args.type}' selected for {repo_name}. Skipping patch generation."
-                )
+        smell_map: dict[str, list[str]] = select_repos_config.get("smells", {}).get(repo_name, {})
+        if args.failed_only:
+            failed_dir = PATCHES_DIR / repo_name / "_failed"
+            if not failed_dir.exists():
+                logging.debug(f"No smells failed to create patches for repo {repo_name}")
                 continue
-            logging.debug(f"Selected smells for {repo_name}: {smell_map}")
 
-            for symbol, smell_ids in smell_map.items():
-                for smell_id in smell_ids:
-                    if smell_id in smells:
-                        patch_dir = PATCHES_DIR / repo_name / symbol / smell_id
-                        if not args.all and patch_dir.exists():
-                            logging.debug(
-                                f"Patches already exist for {smell_id} in {repo_name}. Skipping."
-                            )
-                            continue
+            logging.info(f"Refactoring failed smells in {repo_name}")
 
-                        smell_meta.append((symbol, smell_id))
-
-                        logging.debug(f"Removing existing patches for {smell_id} in {repo_name}")
-                        clear_patches(
-                            repo_name, {"symbol": symbol, "smell_id": smell_id, "smells": smells}
-                        )
-                    else:
-                        logging.warning(
-                            f"Smell ID {smell_id} not found in analysis results for {repo_name}"
-                        )
+            for file in failed_dir.iterdir():
+                smell_type, smell_id = file.stem.split("_")
+                if args.type and smell_type != ALL_SMELL_TYPES[args.type]:
+                    continue
+                smell_meta.append((smell_type, smell_id))
         else:
-            smell_map = select_repos_config.get("smells", {}).get(repo_name, {})
-            logging.debug(f"Selected smells for {repo_name}: {smell_map}")
-
-            smell_id_list = []
-            for _, smell_ids in smell_map.items():
-                smell_id_list.extend(smell_ids)
-            logging.debug(f"Smell IDs selected for {repo_name}: {smell_id_list}")
-            if not smell_id_list:
-                logging.warning(f"No smells selected for {repo_name}. Skipping patch generation.")
-                continue
-
-            logging.info(f"Generating patches for all smells in {repo_name}\n")
-
-            repo_patch_dir = PATCHES_DIR / repo_name
-
-            smell_meta = [
-                (smell["symbol"], smell_id)
-                for smell_id, smell in smells.items()
-                if smell_id in smell_id_list
-                and (args.all or not (repo_patch_dir / smell["symbol"] / smell_id).exists())
-            ]
-
-            if args.all:
-                clear_patches(repo_name)
-            else:
-                logging.debug(
-                    f"Clearing existing patches for smells in {repo_name} before patch creation"
-                )
-                for smell in smell_meta:
+            if args.smells:
+                logging.info(f"Generating patches for smells {args.smells} in repo {repo_name}\n")
+                for smell in args.smells:
+                    smell_meta.append((smells[smell]["symbol"], smell))
                     clear_patches(
                         repo_name,
-                        {"symbol": smell[0], "smell_id": smell[1], "smells": smells},
+                        {"symbol": smells[smell]["symbol"], "smell_id": smell, "smells": smells},
                     )
+            elif args.type:
+                logging.info(f"Generating patches for smell type {args.type} in repo {repo_name}\n")
+                if not smell_map:
+                    logging.warning(
+                        f"No smells of type '{args.type}' selected for {repo_name}. Skipping patch generation."
+                    )
+                    continue
+                logging.debug(f"Selected smells for {repo_name}: {smell_map}")
+
+                for symbol, smell_ids in smell_map.items():
+                    for smell_id in smell_ids:
+                        if smell_id in smells:
+                            patch_dir = PATCHES_DIR / repo_name / symbol / smell_id
+                            if not args.all and patch_dir.exists():
+                                logging.debug(
+                                    f"Patches already exist for {smell_id} in {repo_name}. Skipping."
+                                )
+                                continue
+
+                            smell_meta.append((symbol, smell_id))
+
+                            logging.debug(
+                                f"Removing existing patches for {smell_id} in {repo_name}"
+                            )
+                            clear_patches(
+                                repo_name,
+                                {"symbol": symbol, "smell_id": smell_id, "smells": smells},
+                            )
+                        else:
+                            logging.warning(
+                                f"Smell ID {smell_id} not found in analysis results for {repo_name}"
+                            )
+            else:
+                if not smell_map:
+                    logging.warning(
+                        f"No smells of type '{args.type}' selected for {repo_name}. Skipping patch generation."
+                    )
+                    continue
+                logging.debug(f"Selected smells for {repo_name}: {smell_map}")
+
+                smell_id_list = []
+                for _, smell_ids in smell_map.items():
+                    smell_id_list.extend(smell_ids)
+                logging.debug(f"Smell IDs selected for {repo_name}: {smell_id_list}")
+                if not smell_id_list:
+                    logging.warning(
+                        f"No smells selected for {repo_name}. Skipping patch generation."
+                    )
+                    continue
+
+                logging.info(f"Generating patches for all smells in {repo_name}\n")
+
+                repo_patch_dir = PATCHES_DIR / repo_name
+
+                smell_meta = [
+                    (smell["symbol"], smell_id)
+                    for smell_id, smell in smells.items()
+                    if smell_id in smell_id_list
+                    and (args.all or not (repo_patch_dir / smell["symbol"] / smell_id).exists())
+                ]
+
+                if args.all:
+                    clear_patches(repo_name)
+                else:
+                    logging.debug(
+                        f"Clearing existing patches for smells in {repo_name} before patch creation"
+                    )
+                    for smell in smell_meta:
+                        clear_patches(
+                            repo_name,
+                            {"symbol": smell[0], "smell_id": smell[1], "smells": smells},
+                        )
         total_smells = len(smell_meta)
 
         logging.info(f"Patching {total_smells} smells in {repo_name}")
@@ -441,7 +477,9 @@ def main():
     if any(failed_patch for failed_patch in failed_patches.values()):
         logging.warning("Some patches failed to create:")
         for repo, smell_ids in failed_patches.items():
-            logging.warning(f"Repo: {repo}, Smells: {', '.join(smell_ids)}")
+            if smell_ids:
+                display_ids = "\n\t- ".join(smell_ids)
+                logging.warning(f"Repo: {repo}, Smells:\n\t-{display_ids}")
     else:
         logging.info("All patches created successfully.")
 
