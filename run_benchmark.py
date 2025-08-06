@@ -386,6 +386,8 @@ def main():
                 continue
             elif smell_dir.parent.name not in ALL_SMELL_TYPES:
                 continue
+            elif smell_dir.parent.name not in smells_to_run[repo]:
+                continue
             smell_id = smell_dir.name
             if args.smell_id and repo != args.repo:
                 continue
