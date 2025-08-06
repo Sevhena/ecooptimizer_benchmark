@@ -1,0 +1,90 @@
+diff --git a/nltk/test/unit/translate/test_meteor.py b/nltk/test/unit/translate/test_meteor.py
+index b7b9f8961..46d191946 100644
+--- a/nltk/test/unit/translate/test_meteor.py
++++ b/nltk/test/unit/translate/test_meteor.py
+@@ -1,3 +1,13 @@
++class DataParams_meteor_score_349:
++    def __init__(self, references, hypothesis, preprocess = str.lower, stemmer = PorterStemmer(), wordnet = wordnet, alpha = 0.9, beta = 3.0, gamma = 0.5):
++        self.references = references
++        self.hypothesis = hypothesis
++        self.preprocess = preprocess
++        self.stemmer = stemmer
++        self.wordnet = wordnet
++        self.alpha = alpha
++        self.beta = beta
++        self.gamma = gamma
+ import unittest
+ 
+ from nltk.translate.meteor_score import meteor_score
+@@ -8,7 +18,7 @@ class TestMETEOR(unittest.TestCase):
+     candidate = ["THIS", "Is", "a", "tEST"]
+ 
+     def test_meteor(self):
+-        score = meteor_score(self.reference, self.candidate, preprocess=str.lower)
++        score = meteor_score(DataParams_meteor_score_349(self.reference, self.candidate, preprocess = str.lower))
+         assert score == 0.9921875
+ 
+     def test_reference_type_check(self):
+diff --git a/nltk/translate/meteor_score.py b/nltk/translate/meteor_score.py
+index 98c16b534..4df1a01c5 100644
+--- a/nltk/translate/meteor_score.py
++++ b/nltk/translate/meteor_score.py
+@@ -13,6 +13,17 @@ from typing import Callable, Iterable, List, Tuple
+ from nltk.corpus import WordNetCorpusReader, wordnet
+ from nltk.stem.api import StemmerI
+ from nltk.stem.porter import PorterStemmer
++from codecarbon import track_emissions
++class DataParams_meteor_score_349:
++    def __init__(self, references, hypothesis, preprocess = str.lower, stemmer = PorterStemmer(), wordnet = wordnet, alpha = 0.9, beta = 3.0, gamma = 0.5):
++        self.references = references
++        self.hypothesis = hypothesis
++        self.preprocess = preprocess
++        self.stemmer = stemmer
++        self.wordnet = wordnet
++        self.alpha = alpha
++        self.beta = beta
++        self.gamma = gamma
+ 
+ 
+ def _generate_enums(
+@@ -344,16 +355,9 @@ def single_meteor_score(
+     return (1 - penalty) * fmean
+ 
+ 
++@track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_da310a76', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/da310a76_refactored.csv')
+ def meteor_score(
+-    references: Iterable[Iterable[str]],
+-    hypothesis: Iterable[str],
+-    preprocess: Callable[[str], str] = str.lower,
+-    stemmer: StemmerI = PorterStemmer(),
+-    wordnet: WordNetCorpusReader = wordnet,
+-    alpha: float = 0.9,
+-    beta: float = 3.0,
+-    gamma: float = 0.5,
+-) -> float:
++    data_params) -> float:
+     """
+     Calculates METEOR score for hypothesis with multiple references as
+     described in "Meteor: An Automatic Metric for MT Evaluation with
+@@ -397,13 +401,13 @@ def meteor_score(
+     return max(
+         single_meteor_score(
+             reference,
+-            hypothesis,
+-            preprocess=preprocess,
+-            stemmer=stemmer,
+-            wordnet=wordnet,
+-            alpha=alpha,
+-            beta=beta,
+-            gamma=gamma,
++            data_params.hypothesis,
++            data_params.preprocess=data_params.preprocess,
++            data_params.stemmer=data_params.stemmer,
++            data_params.wordnet=data_params.wordnet,
++            data_params.alpha=data_params.alpha,
++            data_params.beta=data_params.beta,
++            data_params.gamma=data_params.gamma,
+         )
+-        for reference in references
++        for reference in data_params.references
+     )

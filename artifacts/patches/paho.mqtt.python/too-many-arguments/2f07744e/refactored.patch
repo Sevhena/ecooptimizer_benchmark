@@ -1,0 +1,213 @@
+diff --git a/src/paho/mqtt/client.py b/src/paho/mqtt/client.py
+index 4ccc869..8d00091 100644
+--- a/src/paho/mqtt/client.py
++++ b/src/paho/mqtt/client.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Copyright (c) 2012-2019 Roger Light and others
+ #
+ # All rights reserved. This program and the accompanying materials
+@@ -286,6 +287,16 @@ class WebsocketConnectionError(ConnectionError):
+         It's raised when unable to perform the Websocket handshake.
+     """
+     pass
++class DataParams__send_publish_3369:
++    def __init__(self, mid, topic, payload = b"", qos = 0, retain = False, dup = False, info = None, properties = None):
++        self.mid = mid
++        self.topic = topic
++        self.payload = payload
++        self.qos = qos
++        self.retain = retain
++        self.dup = dup
++        self.info = info
++        self.properties = properties
+ 
+ 
+ def error_string(mqtt_errno: MQTTErrorCode | int) -> str:
+@@ -1772,7 +1783,7 @@ class Client:
+         if qos == 0:
+             info = MQTTMessageInfo(local_mid)
+             rc = self._send_publish(
+-                local_mid, topic_bytes, local_payload, qos, retain, False, info, properties)
++                DataParams__send_publish_3369(local_mid, topic_bytes, local_payload, qos, retain, False, info, properties))
+             info.rc = rc
+             return info
+         else:
+@@ -1801,8 +1812,7 @@ class Client:
+                     elif qos == 2:
+                         message.state = mqtt_ms_wait_for_pubrec
+ 
+-                    rc = self._send_publish(message.mid, topic_bytes, message.payload, message.qos, message.retain,
+-                                            message.dup, message.info, message.properties)
++                    rc = self._send_publish(DataParams__send_publish_3369(message.mid, topic_bytes, message.payload, message.qos, message.retain, message.dup, message.info, message.properties))
+ 
+                     # remove from inflight messages so it will be send after a connection is made
+                     if rc == MQTTErrorCode.MQTT_ERR_NO_CONN:
+@@ -3364,84 +3374,77 @@ class Client:
+         packet.extend(struct.pack("!H", len(data)))
+         packet.extend(data)
+ 
++    @track_emissions(project_name='paho.mqtt.python-benchmark', experiment_id='paho.mqtt.python_R0913_2f07744e', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/too-many-arguments/2f07744e_refactored.csv')
+     def _send_publish(
+         self,
+-        mid: int,
+-        topic: bytes,
+-        payload: bytes|bytearray = b"",
+-        qos: int = 0,
+-        retain: bool = False,
+-        dup: bool = False,
+-        info: MQTTMessageInfo | None = None,
+-        properties: Properties | None = None,
+-    ) -> MQTTErrorCode:
++        data_params) -> MQTTErrorCode:
+         # we assume that topic and payload are already properly encoded
+-        if not isinstance(topic, bytes):
++        if not isinstance(data_params.topic, bytes):
+             raise TypeError('topic must be bytes, not str')
+-        if payload and not isinstance(payload, (bytes, bytearray)):
++        if data_params.payload and not isinstance(data_params.payload, (bytes, bytearray)):
+             raise TypeError('payload must be bytes if set')
+ 
+         if self._sock is None:
+             return MQTTErrorCode.MQTT_ERR_NO_CONN
+ 
+-        command = PUBLISH | ((dup & 0x1) << 3) | (qos << 1) | retain
++        command = PUBLISH | ((data_params.dup & 0x1) << 3) | (data_params.qos << 1) | data_params.retain
+         packet = bytearray()
+         packet.append(command)
+ 
+-        payloadlen = len(payload)
+-        remaining_length = 2 + len(topic) + payloadlen
++        payloadlen = len(data_params.payload)
++        remaining_length = 2 + len(data_params.topic) + payloadlen
+ 
+         if payloadlen == 0:
+             if self._protocol == MQTTv5:
+                 self._easy_log(
+                     MQTT_LOG_DEBUG,
+                     "Sending PUBLISH (d%d, q%d, r%d, m%d), '%s', properties=%s (NULL payload)",
+-                    dup, qos, retain, mid, topic, properties
++                    data_params.dup, data_params.qos, data_params.retain, data_params.mid, data_params.topic, data_params.properties
+                 )
+             else:
+                 self._easy_log(
+                     MQTT_LOG_DEBUG,
+                     "Sending PUBLISH (d%d, q%d, r%d, m%d), '%s' (NULL payload)",
+-                    dup, qos, retain, mid, topic
++                    data_params.dup, data_params.qos, data_params.retain, data_params.mid, data_params.topic
+                 )
+         else:
+             if self._protocol == MQTTv5:
+                 self._easy_log(
+                     MQTT_LOG_DEBUG,
+                     "Sending PUBLISH (d%d, q%d, r%d, m%d), '%s', properties=%s, ... (%d bytes)",
+-                    dup, qos, retain, mid, topic, properties, payloadlen
++                    data_params.dup, data_params.qos, data_params.retain, data_params.mid, data_params.topic, data_params.properties, payloadlen
+                 )
+             else:
+                 self._easy_log(
+                     MQTT_LOG_DEBUG,
+                     "Sending PUBLISH (d%d, q%d, r%d, m%d), '%s', ... (%d bytes)",
+-                    dup, qos, retain, mid, topic, payloadlen
++                    data_params.dup, data_params.qos, data_params.retain, data_params.mid, data_params.topic, payloadlen
+                 )
+ 
+-        if qos > 0:
++        if data_params.qos > 0:
+             # For message id
+             remaining_length += 2
+ 
+         if self._protocol == MQTTv5:
+-            if properties is None:
++            if data_params.properties is None:
+                 packed_properties = b'\x00'
+             else:
+-                packed_properties = properties.pack()
++                packed_properties = data_params.properties.pack()
+             remaining_length += len(packed_properties)
+ 
+         self._pack_remaining_length(packet, remaining_length)
+-        self._pack_str16(packet, topic)
++        self._pack_str16(packet, data_params.topic)
+ 
+-        if qos > 0:
++        if data_params.qos > 0:
+             # For message id
+-            packet.extend(struct.pack("!H", mid))
++            packet.extend(struct.pack("!H", data_params.mid))
+ 
+         if self._protocol == MQTTv5:
+             packet.extend(packed_properties)
+ 
+-        packet.extend(payload)
++        packet.extend(data_params.payload)
+ 
+-        return self._packet_queue(PUBLISH, packet, mid, qos, info)
++        return self._packet_queue(PUBLISH, packet, data_params.mid, data_params.qos, data_params.info)
+ 
+     def _send_pubrec(self, mid: int) -> MQTTErrorCode:
+         self._easy_log(MQTT_LOG_DEBUG, "Sending PUBREC (Mid: %d)", mid)
+@@ -3958,14 +3961,7 @@ class Client:
+                     if m.qos == 0:
+                         with self._in_callback_mutex:  # Don't call loop_write after _send_publish()
+                             rc = self._send_publish(
+-                                m.mid,
+-                                m.topic.encode('utf-8'),
+-                                m.payload,
+-                                m.qos,
+-                                m.retain,
+-                                m.dup,
+-                                properties=m.properties
+-                            )
++                                DataParams__send_publish_3369(m.mid, m.topic.encode('utf-8'), m.payload, m.qos, m.retain, m.dup, properties = m.properties))
+                         if rc != MQTTErrorCode.MQTT_ERR_SUCCESS:
+                             return rc
+                     elif m.qos == 1:
+@@ -3974,14 +3970,7 @@ class Client:
+                             m.state = mqtt_ms_wait_for_puback
+                             with self._in_callback_mutex:  # Don't call loop_write after _send_publish()
+                                 rc = self._send_publish(
+-                                    m.mid,
+-                                    m.topic.encode('utf-8'),
+-                                    m.payload,
+-                                    m.qos,
+-                                    m.retain,
+-                                    m.dup,
+-                                    properties=m.properties
+-                                )
++                                    DataParams__send_publish_3369(m.mid, m.topic.encode('utf-8'), m.payload, m.qos, m.retain, m.dup, properties = m.properties))
+                             if rc != MQTTErrorCode.MQTT_ERR_SUCCESS:
+                                 return rc
+                     elif m.qos == 2:
+@@ -3990,14 +3979,7 @@ class Client:
+                             m.state = mqtt_ms_wait_for_pubrec
+                             with self._in_callback_mutex:  # Don't call loop_write after _send_publish()
+                                 rc = self._send_publish(
+-                                    m.mid,
+-                                    m.topic.encode('utf-8'),
+-                                    m.payload,
+-                                    m.qos,
+-                                    m.retain,
+-                                    m.dup,
+-                                    properties=m.properties
+-                                )
++                                    DataParams__send_publish_3369(m.mid, m.topic.encode('utf-8'), m.payload, m.qos, m.retain, m.dup, properties = m.properties))
+                             if rc != MQTTErrorCode.MQTT_ERR_SUCCESS:
+                                 return rc
+                         elif m.state == mqtt_ms_resend_pubrel:
+@@ -4237,14 +4219,7 @@ class Client:
+                     elif m.qos == 2:
+                         m.state = mqtt_ms_wait_for_pubrec
+                     rc = self._send_publish(
+-                        m.mid,
+-                        m.topic.encode('utf-8'),
+-                        m.payload,
+-                        m.qos,
+-                        m.retain,
+-                        m.dup,
+-                        properties=m.properties,
+-                    )
++                        DataParams__send_publish_3369(m.mid, m.topic.encode('utf-8'), m.payload, m.qos, m.retain, m.dup, properties = m.properties))
+                     if rc != MQTTErrorCode.MQTT_ERR_SUCCESS:
+                         return rc
+             else:

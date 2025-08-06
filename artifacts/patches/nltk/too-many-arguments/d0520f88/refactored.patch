@@ -1,0 +1,2425 @@
+diff --git a/nltk/app/collocations_app.py b/nltk/app/collocations_app.py
+index 9dc34af42..c5b32fe1f 100644
+--- a/nltk/app/collocations_app.py
++++ b/nltk/app/collocations_app.py
+@@ -421,6 +421,18 @@ class CollocationsModel:
+             except Exception as e:
+                 print(e)
+                 self.model.queue.put(ERROR_LOADING_CORPUS_EVENT)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ # def collocations():
+diff --git a/nltk/app/concordance_app.py b/nltk/app/concordance_app.py
+index 0d7f44a76..27ab7d007 100755
+--- a/nltk/app/concordance_app.py
++++ b/nltk/app/concordance_app.py
+@@ -696,6 +696,18 @@ class ConcordanceSearchModel:
+                 else:
+                     new.append(BOUNDARY + term + "/" + WORD_OR_TAG + BOUNDARY)
+             return " ".join(new)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def app():
+diff --git a/nltk/ccg/chart.py b/nltk/ccg/chart.py
+index a87aefe8f..609ace782 100644
+--- a/nltk/ccg/chart.py
++++ b/nltk/ccg/chart.py
+@@ -343,6 +343,18 @@ class CCGChart(Chart):
+ 
+         memo[edge] = trees
+         return trees
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def compute_semantics(children, edge):
+diff --git a/nltk/chunk/named_entity.py b/nltk/chunk/named_entity.py
+index a8ef6cacb..75ee45723 100644
+--- a/nltk/chunk/named_entity.py
++++ b/nltk/chunk/named_entity.py
+@@ -176,6 +176,18 @@ class NEChunkParser(ChunkParserI):
+             else:
+                 toks.append((child, "O"))
+         return toks
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def shape(word):
+diff --git a/nltk/chunk/regexp.py b/nltk/chunk/regexp.py
+index 69338d7d2..d0a467adb 100644
+--- a/nltk/chunk/regexp.py
++++ b/nltk/chunk/regexp.py
+@@ -894,6 +894,18 @@ class ChunkRuleWithContext(RegexpChunkRule):
+ CHUNK_TAG_PATTERN = re.compile(
+     r"^(({}|<{}>)*)$".format(r"([^\{\}<>]|\{\d+,?\}|\{\d*,\d+\})+", r"[^\{\}<>]+")
+ )
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def tag_pattern2re_pattern(tag_pattern):
+diff --git a/nltk/classify/maxent.py b/nltk/classify/maxent.py
+index 5491b23b7..d0d4c72b5 100644
+--- a/nltk/classify/maxent.py
++++ b/nltk/classify/maxent.py
+@@ -1018,6 +1018,18 @@ class TypedMaxentFeatureEncoding(MaxentFeatureEncodingI):
+         if labels is None:
+             labels = seen_labels
+         return cls(labels, mapping, **options)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ######################################################################
+diff --git a/nltk/cluster/em.py b/nltk/cluster/em.py
+index 11a908a9e..dd6596cd7 100644
+--- a/nltk/cluster/em.py
++++ b/nltk/cluster/em.py
+@@ -174,6 +174,18 @@ class EMClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<EMClusterer means=%s>" % list(self._means)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def demo():
+diff --git a/nltk/cluster/gaac.py b/nltk/cluster/gaac.py
+index 0d54728fe..46b64db3d 100644
+--- a/nltk/cluster/gaac.py
++++ b/nltk/cluster/gaac.py
+@@ -135,6 +135,18 @@ class GAAClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<GroupAverageAgglomerative Clusterer n=%d>" % self._num_clusters
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def demo():
+diff --git a/nltk/cluster/kmeans.py b/nltk/cluster/kmeans.py
+index e53aa15c5..89f34b946 100644
+--- a/nltk/cluster/kmeans.py
++++ b/nltk/cluster/kmeans.py
+@@ -186,6 +186,18 @@ class KMeansClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<KMeansClusterer means=%s repeats=%d>" % (self._means, self._repeats)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ #################################################################################
+diff --git a/nltk/collections.py b/nltk/collections.py
+index 7fd2a7d2c..3d2d829b5 100644
+--- a/nltk/collections.py
++++ b/nltk/collections.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ import bisect
+ from functools import total_ordering
+ from itertools import chain, islice
+diff --git a/nltk/collocations.py b/nltk/collocations.py
+index 89b6eb396..7cb1edace 100644
+--- a/nltk/collocations.py
++++ b/nltk/collocations.py
+@@ -349,6 +349,18 @@ class QuadgramCollocationFinder(AbstractCollocationFinder):
+             (n_ixxx, n_xixx, n_xxix, n_xxxi),
+             n_all,
+         )
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def demo(scorer=None, compare_scorer=None):
+diff --git a/nltk/corpus/reader/aligned.py b/nltk/corpus/reader/aligned.py
+index f95c2fd83..820404796 100644
+--- a/nltk/corpus/reader/aligned.py
++++ b/nltk/corpus/reader/aligned.py
+@@ -5,6 +5,18 @@
+ # Author: Steven Bird <stevenbird1@gmail.com>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ from nltk.corpus.reader.api import CorpusReader
+ from nltk.corpus.reader.util import (
+     StreamBackedCorpusView,
+diff --git a/nltk/corpus/reader/bcp47.py b/nltk/corpus/reader/bcp47.py
+index 7040f3b4b..a7dbbc1b1 100644
+--- a/nltk/corpus/reader/bcp47.py
++++ b/nltk/corpus/reader/bcp47.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ import re
+ from warnings import warn
+ from xml.etree import ElementTree as et
+diff --git a/nltk/corpus/reader/bnc.py b/nltk/corpus/reader/bnc.py
+index 50782dd62..4bd118817 100644
+--- a/nltk/corpus/reader/bnc.py
++++ b/nltk/corpus/reader/bnc.py
+@@ -136,6 +136,18 @@ class BNCCorpusReader(XMLCorpusReader):
+ 
+         assert None not in result
+         return result
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _all_xmlwords_in(elt, result=None):
+diff --git a/nltk/corpus/reader/bracket_parse.py b/nltk/corpus/reader/bracket_parse.py
+index 538569770..07f54eac8 100644
+--- a/nltk/corpus/reader/bracket_parse.py
++++ b/nltk/corpus/reader/bracket_parse.py
+@@ -5,6 +5,18 @@
+ #         Edward Loper <edloper@gmail.com>
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Corpus reader for corpora that consist of parenthesis-delineated parse trees.
+ """
+diff --git a/nltk/corpus/reader/categorized_sents.py b/nltk/corpus/reader/categorized_sents.py
+index 786e4c0ea..1ed0cc10c 100644
+--- a/nltk/corpus/reader/categorized_sents.py
++++ b/nltk/corpus/reader/categorized_sents.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ CorpusReader structured for corpora that contain one instance on each row.
+ This CorpusReader is specifically used for the Subjectivity Dataset and the
+diff --git a/nltk/corpus/reader/chasen.py b/nltk/corpus/reader/chasen.py
+index 8009198a6..1e6f4bfd6 100644
+--- a/nltk/corpus/reader/chasen.py
++++ b/nltk/corpus/reader/chasen.py
+@@ -124,6 +124,18 @@ class ChasenCorpusView(StreamBackedCorpusView):
+                 block.extend(para)
+ 
+         return block
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def demo():
+diff --git a/nltk/corpus/reader/childes.py b/nltk/corpus/reader/childes.py
+index d334a4347..ac6a678a4 100644
+--- a/nltk/corpus/reader/childes.py
++++ b/nltk/corpus/reader/childes.py
+@@ -561,6 +561,18 @@ class CHILDESCorpusReader(XMLCorpusReader):
+         print("Opening in browser:", url)
+         # Pausing is a good idea, but it's up to the user...
+         # raw_input("Hit Return to continue")
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def demo(corpus_root=None):
+diff --git a/nltk/corpus/reader/chunked.py b/nltk/corpus/reader/chunked.py
+index dbf5b2d64..a483917e1 100644
+--- a/nltk/corpus/reader/chunked.py
++++ b/nltk/corpus/reader/chunked.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ A reader for corpora that contain chunked (and optionally tagged)
+ documents.
+diff --git a/nltk/corpus/reader/comparative_sents.py b/nltk/corpus/reader/comparative_sents.py
+index 0473eebcb..702ffe697 100644
+--- a/nltk/corpus/reader/comparative_sents.py
++++ b/nltk/corpus/reader/comparative_sents.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ CorpusReader for the Comparative Sentence Dataset.
+ 
+diff --git a/nltk/corpus/reader/conll.py b/nltk/corpus/reader/conll.py
+index e3673b7c5..c10ff42bc 100644
+--- a/nltk/corpus/reader/conll.py
++++ b/nltk/corpus/reader/conll.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Read CoNLL-style chunk fileids.
+ """
+diff --git a/nltk/corpus/reader/crubadan.py b/nltk/corpus/reader/crubadan.py
+index 180fcfb6d..b33cdaa3a 100644
+--- a/nltk/corpus/reader/crubadan.py
++++ b/nltk/corpus/reader/crubadan.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ An NLTK interface for the n-gram statistics gathered from
+ the corpora for each language using An Crubadan.
+diff --git a/nltk/corpus/reader/dependency.py b/nltk/corpus/reader/dependency.py
+index 2b9455014..4110cb899 100644
+--- a/nltk/corpus/reader/dependency.py
++++ b/nltk/corpus/reader/dependency.py
+@@ -7,6 +7,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ from nltk.corpus.reader.api import *
+ from nltk.corpus.reader.util import *
+ from nltk.parse import DependencyGraph
+diff --git a/nltk/corpus/reader/framenet.py b/nltk/corpus/reader/framenet.py
+index 2d871512b..db850e25b 100644
+--- a/nltk/corpus/reader/framenet.py
++++ b/nltk/corpus/reader/framenet.py
+@@ -26,6 +26,18 @@ from nltk.corpus.reader import XMLCorpusReader, XMLCorpusView
+ from nltk.util import LazyConcatenation, LazyIteratorList, LazyMap
+ 
+ __docformat__ = "epytext en"
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def mimic_wrap(lines, wrap_at=65, **kwargs):
+diff --git a/nltk/corpus/reader/indian.py b/nltk/corpus/reader/indian.py
+index 8c058dfc6..f7f5f794b 100644
+--- a/nltk/corpus/reader/indian.py
++++ b/nltk/corpus/reader/indian.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Indian Language POS-Tagged Corpus
+ Collected by A Kumaran, Microsoft Research, India
+diff --git a/nltk/corpus/reader/ipipan.py b/nltk/corpus/reader/ipipan.py
+index 939d80bbd..8705f24de 100644
+--- a/nltk/corpus/reader/ipipan.py
++++ b/nltk/corpus/reader/ipipan.py
+@@ -9,6 +9,18 @@ import functools
+ 
+ from nltk.corpus.reader.api import CorpusReader
+ from nltk.corpus.reader.util import StreamBackedCorpusView, concat
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _parse_args(fun):
+diff --git a/nltk/corpus/reader/knbc.py b/nltk/corpus/reader/knbc.py
+index 01d795042..6d244d22f 100644
+--- a/nltk/corpus/reader/knbc.py
++++ b/nltk/corpus/reader/knbc.py
+@@ -122,6 +122,18 @@ class KNBCorpusReader(SyntaxCorpusReader):
+                 node["word"] = self.morphs2str(node["word"])
+ 
+         return dg.tree()
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/lin.py b/nltk/corpus/reader/lin.py
+index 88fa47b8f..72a25b668 100644
+--- a/nltk/corpus/reader/lin.py
++++ b/nltk/corpus/reader/lin.py
+@@ -151,6 +151,18 @@ class LinThesaurusCorpusReader(CorpusReader):
+             self._fileids,
+             False,
+         )
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/markdown.py b/nltk/corpus/reader/markdown.py
+index cf69a35cd..27131e82f 100644
+--- a/nltk/corpus/reader/markdown.py
++++ b/nltk/corpus/reader/markdown.py
+@@ -5,6 +5,18 @@ from nltk.corpus.reader.api import CategorizedCorpusReader
+ from nltk.corpus.reader.plaintext import PlaintextCorpusReader
+ from nltk.corpus.reader.util import concat, read_blankline_block
+ from nltk.tokenize import blankline_tokenize, sent_tokenize, word_tokenize
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def comma_separated_string_args(func):
+diff --git a/nltk/corpus/reader/mte.py b/nltk/corpus/reader/mte.py
+index 8c39fb0e1..900ddd82e 100644
+--- a/nltk/corpus/reader/mte.py
++++ b/nltk/corpus/reader/mte.py
+@@ -8,6 +8,18 @@ from functools import reduce
+ 
+ from nltk.corpus.reader import TaggedCorpusReader, concat
+ from nltk.corpus.reader.xmldocs import XMLCorpusView
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def xpath(root, path, ns):
+diff --git a/nltk/corpus/reader/nkjp.py b/nltk/corpus/reader/nkjp.py
+index 8b0a2e266..593e7ea6c 100644
+--- a/nltk/corpus/reader/nkjp.py
++++ b/nltk/corpus/reader/nkjp.py
+@@ -12,6 +12,18 @@ import tempfile
+ 
+ from nltk.corpus.reader.util import concat
+ from nltk.corpus.reader.xmldocs import XMLCorpusReader, XMLCorpusView
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _parse_args(fun):
+diff --git a/nltk/corpus/reader/nombank.py b/nltk/corpus/reader/nombank.py
+index b2c68f915..61a3c4929 100644
+--- a/nltk/corpus/reader/nombank.py
++++ b/nltk/corpus/reader/nombank.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ from functools import total_ordering
+ from xml.etree import ElementTree
+ 
+diff --git a/nltk/corpus/reader/nps_chat.py b/nltk/corpus/reader/nps_chat.py
+index a00c799a9..d04e5301b 100644
+--- a/nltk/corpus/reader/nps_chat.py
++++ b/nltk/corpus/reader/nps_chat.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ import re
+ import textwrap
+ 
+diff --git a/nltk/corpus/reader/opinion_lexicon.py b/nltk/corpus/reader/opinion_lexicon.py
+index 964e400bb..9ea9694a6 100644
+--- a/nltk/corpus/reader/opinion_lexicon.py
++++ b/nltk/corpus/reader/opinion_lexicon.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ CorpusReader for the Opinion Lexicon.
+ 
+diff --git a/nltk/corpus/reader/panlex_lite.py b/nltk/corpus/reader/panlex_lite.py
+index c068d2879..99de0183c 100644
+--- a/nltk/corpus/reader/panlex_lite.py
++++ b/nltk/corpus/reader/panlex_lite.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ CorpusReader for PanLex Lite, a stripped down version of PanLex distributed
+ as an SQLite database. See the README.txt in the panlex_lite corpus directory
+diff --git a/nltk/corpus/reader/panlex_swadesh.py b/nltk/corpus/reader/panlex_swadesh.py
+index 034669330..7a0cfc6ba 100644
+--- a/nltk/corpus/reader/panlex_swadesh.py
++++ b/nltk/corpus/reader/panlex_swadesh.py
+@@ -7,6 +7,18 @@
+ # For license information, see LICENSE.TXT
+ 
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ import re
+ from collections import defaultdict, namedtuple
+ 
+diff --git a/nltk/corpus/reader/pl196x.py b/nltk/corpus/reader/pl196x.py
+index f1623f3d6..23be13412 100644
+--- a/nltk/corpus/reader/pl196x.py
++++ b/nltk/corpus/reader/pl196x.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ from nltk.corpus.reader.api import *
+ from nltk.corpus.reader.xmldocs import XMLCorpusReader
+ 
+diff --git a/nltk/corpus/reader/plaintext.py b/nltk/corpus/reader/plaintext.py
+index 0acb256b6..9ee8336cf 100644
+--- a/nltk/corpus/reader/plaintext.py
++++ b/nltk/corpus/reader/plaintext.py
+@@ -7,6 +7,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ A reader for corpora that consist of plaintext documents.
+ """
+diff --git a/nltk/corpus/reader/propbank.py b/nltk/corpus/reader/propbank.py
+index f67b9e3c7..3b4889e72 100644
+--- a/nltk/corpus/reader/propbank.py
++++ b/nltk/corpus/reader/propbank.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ import re
+ from functools import total_ordering
+ from xml.etree import ElementTree
+diff --git a/nltk/corpus/reader/pros_cons.py b/nltk/corpus/reader/pros_cons.py
+index 396dfaf0e..c1c9ea4e4 100644
+--- a/nltk/corpus/reader/pros_cons.py
++++ b/nltk/corpus/reader/pros_cons.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ CorpusReader for the Pros and Cons dataset.
+ 
+diff --git a/nltk/corpus/reader/reviews.py b/nltk/corpus/reader/reviews.py
+index fdd495f95..f50e9c502 100644
+--- a/nltk/corpus/reader/reviews.py
++++ b/nltk/corpus/reader/reviews.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ CorpusReader for reviews corpora (syntax based on Customer Review Corpus).
+ 
+diff --git a/nltk/corpus/reader/semcor.py b/nltk/corpus/reader/semcor.py
+index 9f84dd0e4..783bab978 100644
+--- a/nltk/corpus/reader/semcor.py
++++ b/nltk/corpus/reader/semcor.py
+@@ -220,6 +220,18 @@ class SemcorCorpusReader(XMLCorpusReader):
+                     return bottom[0]
+                 else:
+                     return bottom  # chunk as a list
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _all_xmlwords_in(elt, result=None):
+diff --git a/nltk/corpus/reader/senseval.py b/nltk/corpus/reader/senseval.py
+index 38178b4a3..54c1f378c 100644
+--- a/nltk/corpus/reader/senseval.py
++++ b/nltk/corpus/reader/senseval.py
+@@ -156,6 +156,18 @@ class SensevalCorpusView(StreamBackedCorpusView):
+             else:
+                 assert False, "unexpected tag %s" % child.tag
+         return SensevalInstance(lexelt, position, context, senses)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _fixXML(text):
+diff --git a/nltk/corpus/reader/sentiwordnet.py b/nltk/corpus/reader/sentiwordnet.py
+index 38f095f58..463688926 100644
+--- a/nltk/corpus/reader/sentiwordnet.py
++++ b/nltk/corpus/reader/sentiwordnet.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ An NLTK interface for SentiWordNet
+ 
+diff --git a/nltk/corpus/reader/string_category.py b/nltk/corpus/reader/string_category.py
+index 192d6bfbe..67643f1bb 100644
+--- a/nltk/corpus/reader/string_category.py
++++ b/nltk/corpus/reader/string_category.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Read tuples from a corpus consisting of categorized strings.
+ For example, from the question classification corpus:
+diff --git a/nltk/corpus/reader/switchboard.py b/nltk/corpus/reader/switchboard.py
+index 3e3ecf0ed..0cb1c7dff 100644
+--- a/nltk/corpus/reader/switchboard.py
++++ b/nltk/corpus/reader/switchboard.py
+@@ -4,6 +4,18 @@
+ # Author: Edward Loper <edloper@gmail.com>
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ import re
+ 
+ from nltk.corpus.reader.api import *
+diff --git a/nltk/corpus/reader/tagged.py b/nltk/corpus/reader/tagged.py
+index 1f1c7221f..d53bef5db 100644
+--- a/nltk/corpus/reader/tagged.py
++++ b/nltk/corpus/reader/tagged.py
+@@ -7,6 +7,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ A reader for corpora whose documents contain part-of-speech-tagged words.
+ """
+diff --git a/nltk/corpus/reader/timit.py b/nltk/corpus/reader/timit.py
+index cf258ba44..52ef644bb 100644
+--- a/nltk/corpus/reader/timit.py
++++ b/nltk/corpus/reader/timit.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Natural Language Toolkit: TIMIT Corpus Reader
+ #
+ # Copyright (C) 2001-2007 NLTK Project
+@@ -274,7 +275,7 @@ class TimitCorpusReader(CorpusReader):
+                         continue
+                     rec = line.strip().split(None, 9)
+                     key = f"dr{rec[2]}-{rec[1].lower()}{rec[0].lower()}"
+-                    self._speakerinfo[key] = SpeakerInfo(*rec)
++                    self._speakerinfo[key] = SpeakerInfo(DataParams___init___483(rec))
+ 
+         return self._speakerinfo[speaker]
+ 
+@@ -478,9 +479,26 @@ class TimitCorpusReader(CorpusReader):
+ 
+ 
+ class SpeakerInfo:
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_d0520f88', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/d0520f88_refactored.csv')
+     def __init__(
+-        self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments=None
+-    ):
++        self, data_params):
++        self.id = data_params.id
++        self.sex = data_params.sex
++        self.dr = data_params.dr
++        self.use = data_params.use
++        self.recdate = data_params.recdate
++        self.birthdate = data_params.birthdate
++        self.ht = data_params.ht
++        self.race = data_params.race
++        self.edu = data_params.edu
++        self.comments = data_params.comments
++
++    def __repr__(self):
++        attribs = "id sex dr use recdate birthdate ht race edu comments"
++        args = [f"{attr}={getattr(self, attr)!r}" for attr in attribs.split()]
++        return "SpeakerInfo(%s)" % (", ".join(args))
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
+         self.id = id
+         self.sex = sex
+         self.dr = dr
+@@ -492,11 +510,6 @@ class SpeakerInfo:
+         self.edu = edu
+         self.comments = comments
+ 
+-    def __repr__(self):
+-        attribs = "id sex dr use recdate birthdate ht race edu comments"
+-        args = [f"{attr}={getattr(self, attr)!r}" for attr in attribs.split()]
+-        return "SpeakerInfo(%s)" % (", ".join(args))
+-
+ 
+ def read_timit_block(stream):
+     """
+diff --git a/nltk/corpus/reader/twitter.py b/nltk/corpus/reader/twitter.py
+index 8a0004a19..648cf6073 100644
+--- a/nltk/corpus/reader/twitter.py
++++ b/nltk/corpus/reader/twitter.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ A reader for corpora that consist of Tweets. It is assumed that the Tweets
+ have been serialised into line-delimited JSON.
+diff --git a/nltk/corpus/reader/udhr.py b/nltk/corpus/reader/udhr.py
+index b50aa4c0f..9c72a8aaf 100644
+--- a/nltk/corpus/reader/udhr.py
++++ b/nltk/corpus/reader/udhr.py
+@@ -1,3 +1,15 @@
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ UDHR corpus reader. It mostly deals with encodings.
+ """
+diff --git a/nltk/corpus/reader/verbnet.py b/nltk/corpus/reader/verbnet.py
+index 4bea6aaac..669323867 100644
+--- a/nltk/corpus/reader/verbnet.py
++++ b/nltk/corpus/reader/verbnet.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ An NLTK interface to the VerbNet verb lexicon
+ 
+diff --git a/nltk/corpus/reader/wordnet.py b/nltk/corpus/reader/wordnet.py
+index f74006b90..a12abedb9 100644
+--- a/nltk/corpus/reader/wordnet.py
++++ b/nltk/corpus/reader/wordnet.py
+@@ -2367,6 +2367,18 @@ class WordNetICCorpusReader(CorpusReader):
+                 if value != 0:
+                     ic[pos][offset] = value
+         return ic
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/xmldocs.py b/nltk/corpus/reader/xmldocs.py
+index 67c4b9c73..84b84db47 100644
+--- a/nltk/corpus/reader/xmldocs.py
++++ b/nltk/corpus/reader/xmldocs.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Corpus reader for corpora whose documents are xml files.
+ 
+diff --git a/nltk/corpus/reader/ycoe.py b/nltk/corpus/reader/ycoe.py
+index db39538f2..49c6c357f 100644
+--- a/nltk/corpus/reader/ycoe.py
++++ b/nltk/corpus/reader/ycoe.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Corpus reader for the York-Toronto-Helsinki Parsed Corpus of Old
+ English Prose (YCOE), a 1.5 million word syntactically-annotated
+diff --git a/nltk/data.py b/nltk/data.py
+index c65c69e82..33ddf5038 100644
+--- a/nltk/data.py
++++ b/nltk/data.py
+@@ -95,6 +95,18 @@ else:
+         "/usr/lib/nltk_data",
+         "/usr/local/lib/nltk_data",
+     ]
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ######################################################################
+diff --git a/nltk/downloader.py b/nltk/downloader.py
+index 3bd0b8d0d..203f74216 100644
+--- a/nltk/downloader.py
++++ b/nltk/downloader.py
+@@ -2222,6 +2222,18 @@ class DownloaderGUI:
+         # Check the queue again after MONITOR_QUEUE_DELAY msec.
+         afterid = self.top.after(self._MONITOR_QUEUE_DELAY, self._monitor_message_queue)
+         self._afterid["_monitor_message_queue"] = afterid
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ######################################################################
+diff --git a/nltk/draw/table.py b/nltk/draw/table.py
+index e84a1593f..159998f97 100644
+--- a/nltk/draw/table.py
++++ b/nltk/draw/table.py
+@@ -1124,6 +1124,18 @@ class Table:
+                 if self._reprfunc is not None:
+                     cell = self._reprfunc(i, j, cell)
+                 assert self._mlb.get(i)[j] == cell
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ######################################################################
+diff --git a/nltk/draw/tree.py b/nltk/draw/tree.py
+index b90fd6507..9ffd8db81 100644
+--- a/nltk/draw/tree.py
++++ b/nltk/draw/tree.py
+@@ -417,6 +417,18 @@ class TreeSegmentWidget(CanvasWidget):
+ 
+     def __repr__(self):
+         return f"[TreeSeg {self._label}: {self._subtrees}]"
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _tree_to_treeseg(
+diff --git a/nltk/draw/util.py b/nltk/draw/util.py
+index 111f5e7e2..92446d074 100644
+--- a/nltk/draw/util.py
++++ b/nltk/draw/util.py
+@@ -2512,6 +2512,18 @@ class MutableOptionMenu(Menubutton):
+         """Destroy this widget and the associated menu."""
+         Menubutton.destroy(self)
+         self._menu = None
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/featstruct.py b/nltk/featstruct.py
+index d6c339a98..0abd8e57e 100644
+--- a/nltk/featstruct.py
++++ b/nltk/featstruct.py
+@@ -569,6 +569,18 @@ class FeatStruct(SubstituteBindingsI):
+ # Mutation: disable if frozen.
+ _FROZEN_ERROR = "Frozen FeatStructs may not be modified."
+ _FROZEN_NOTICE = "\n%sIf self is frozen, raise ValueError."
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _check_frozen(method, indent=""):
+diff --git a/nltk/grammar.py b/nltk/grammar.py
+index 1a0137172..66a896010 100644
+--- a/nltk/grammar.py
++++ b/nltk/grammar.py
+@@ -189,6 +189,18 @@ class Nonterminal:
+         :rtype: Nonterminal
+         """
+         return self.__div__(rhs)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def nonterminals(symbols):
+diff --git a/nltk/inference/api.py b/nltk/inference/api.py
+index 93c513f22..de1a070e2 100644
+--- a/nltk/inference/api.py
++++ b/nltk/inference/api.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Interfaces and base classes for theorem provers and model builders.
+ 
+diff --git a/nltk/inference/mace.py b/nltk/inference/mace.py
+index 370abbd27..a00ddadc8 100644
+--- a/nltk/inference/mace.py
++++ b/nltk/inference/mace.py
+@@ -267,6 +267,18 @@ class Mace(Prover9Parent, ModelBuilder):
+         updated_input_str += input_str
+ 
+         return self._call(updated_input_str, self._mace4_bin, args, verbose)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def spacer(num=30):
+diff --git a/nltk/inference/prover9.py b/nltk/inference/prover9.py
+index f379325ae..fd0e63b6d 100644
+--- a/nltk/inference/prover9.py
++++ b/nltk/inference/prover9.py
+@@ -217,6 +217,18 @@ class Prover9Parent:
+                 print("stderr:\n", stderr, "\n")
+ 
+         return (stdout.decode("utf-8"), p.returncode)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def convert_to_prover9(input):
+diff --git a/nltk/inference/resolution.py b/nltk/inference/resolution.py
+index fd7362068..3dc0be29c 100755
+--- a/nltk/inference/resolution.py
++++ b/nltk/inference/resolution.py
+@@ -335,6 +335,18 @@ class Clause(list):
+ 
+     def __repr__(self):
+         return "%s" % self
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _iterate_first(first, second, bindings, used, skipped, finalize_method, debug):
+diff --git a/nltk/inference/tableau.py b/nltk/inference/tableau.py
+index 7fb005e9b..f72801069 100644
+--- a/nltk/inference/tableau.py
++++ b/nltk/inference/tableau.py
+@@ -622,6 +622,18 @@ class Categories:
+     EQ = 18
+     EXISTS = 19
+     ALL = 20
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def testTableauProver():
+diff --git a/nltk/internals.py b/nltk/internals.py
+index 566668578..2c67c9b87 100644
+--- a/nltk/internals.py
++++ b/nltk/internals.py
+@@ -25,6 +25,18 @@ from xml.etree import ElementTree
+ 
+ _java_bin = None
+ _java_options = []
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ # [xx] add classpath option to config_java?
+diff --git a/nltk/lm/models.py b/nltk/lm/models.py
+index 3a9dcbee1..2fe42ca01 100644
+--- a/nltk/lm/models.py
++++ b/nltk/lm/models.py
+@@ -5,6 +5,18 @@
+ #         Manu Joseph <manujosephv@gmail.com>
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """Language Models"""
+ 
+ from nltk.lm.api import LanguageModel, Smoothing
+diff --git a/nltk/lm/smoothing.py b/nltk/lm/smoothing.py
+index d1b8941ef..9dee36336 100644
+--- a/nltk/lm/smoothing.py
++++ b/nltk/lm/smoothing.py
+@@ -14,6 +14,18 @@ from operator import methodcaller
+ 
+ from nltk.lm.api import Smoothing
+ from nltk.probability import ConditionalFreqDist
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _count_values_gt_zero(distribution):
+diff --git a/nltk/parse/chart.py b/nltk/parse/chart.py
+index 0e0ce174a..8734f64d4 100644
+--- a/nltk/parse/chart.py
++++ b/nltk/parse/chart.py
+@@ -1295,6 +1295,18 @@ class FilteredBottomUpPredictCombineRule(BottomUpPredictCombineRule):
+                 new_edge = TreeEdge(edge.span(), prod.lhs(), prod.rhs(), 1)
+                 if chart.insert(new_edge, (edge,)):
+                     yield new_edge
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _bottomup_filter(grammar, nexttoken, rhs, dot=0):
+diff --git a/nltk/parse/earleychart.py b/nltk/parse/earleychart.py
+index 226c3ebb0..a828c8b67 100644
+--- a/nltk/parse/earleychart.py
++++ b/nltk/parse/earleychart.py
+@@ -493,6 +493,18 @@ class FeatureIncrementalBottomUpLeftCornerChartParser(FeatureIncrementalChartPar
+         FeatureIncrementalChartParser.__init__(
+             self, grammar, BU_LC_INCREMENTAL_FEATURE_STRATEGY, **parser_args
+         )
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ # ////////////////////////////////////////////////////////////
+diff --git a/nltk/parse/featurechart.py b/nltk/parse/featurechart.py
+index c9e0f7ed5..01ffbf10d 100644
+--- a/nltk/parse/featurechart.py
++++ b/nltk/parse/featurechart.py
+@@ -581,6 +581,18 @@ class InstantiateVarsChart(FeatureChart):
+             for var in edge.lhs().variables()
+             if var.name.startswith("@")
+         }
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ # ////////////////////////////////////////////////////////////
+diff --git a/nltk/parse/pchart.py b/nltk/parse/pchart.py
+index ec0e350b3..e3985bb4a 100644
+--- a/nltk/parse/pchart.py
++++ b/nltk/parse/pchart.py
+@@ -420,6 +420,18 @@ class LongestChartParser(BottomUpProbabilisticChartParser):
+     # Inherit constructor
+     def sort_queue(self, queue, chart):
+         queue.sort(key=lambda edge: edge.length())
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/recursivedescent.py b/nltk/parse/recursivedescent.py
+index d0452ca43..5946c6cc7 100644
+--- a/nltk/parse/recursivedescent.py
++++ b/nltk/parse/recursivedescent.py
+@@ -643,6 +643,18 @@ class SteppingRecursiveDescentParser(RecursiveDescentParser):
+         :type grammar: CFG
+         """
+         self._grammar = grammar
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/shiftreduce.py b/nltk/parse/shiftreduce.py
+index 34e8628d9..d48b7f13e 100644
+--- a/nltk/parse/shiftreduce.py
++++ b/nltk/parse/shiftreduce.py
+@@ -439,6 +439,18 @@ class SteppingShiftReduceParser(ShiftReduceParser):
+         :type grammar: CFG
+         """
+         self._grammar = grammar
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/stanford.py b/nltk/parse/stanford.py
+index 030c8404b..a547cfcaa 100644
+--- a/nltk/parse/stanford.py
++++ b/nltk/parse/stanford.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ import os
+ import tempfile
+ import warnings
+diff --git a/nltk/probability.py b/nltk/probability.py
+index fffe1478f..d7d831761 100755
+--- a/nltk/probability.py
++++ b/nltk/probability.py
+@@ -1804,6 +1804,18 @@ class KneserNeyProbDist(ProbDistI):
+         :rtype: str
+         """
+         return f"<KneserNeyProbDist based on {self._trigrams.N()} trigrams"
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/sem/boxer.py b/nltk/sem/boxer.py
+index 101bb0792..ae5c9aa8f 100644
+--- a/nltk/sem/boxer.py
++++ b/nltk/sem/boxer.py
+@@ -7,6 +7,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ An interface to Boxer.
+ 
+diff --git a/nltk/sem/drt.py b/nltk/sem/drt.py
+index ea69c5c6e..1a446daa0 100644
+--- a/nltk/sem/drt.py
++++ b/nltk/sem/drt.py
+@@ -541,6 +541,18 @@ class DRS(DrtExpression, Expression):
+                 + DrtTokens.CLOSE
+             )
+         return drs
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def DrtVariableExpression(variable):
+diff --git a/nltk/sem/evaluate.py b/nltk/sem/evaluate.py
+index 304ae2c3f..224a20598 100644
+--- a/nltk/sem/evaluate.py
++++ b/nltk/sem/evaluate.py
+@@ -47,6 +47,18 @@ class Error(Exception):
+ 
+ class Undefined(Error):
+     pass
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def trace(f, *args, **kw):
+diff --git a/nltk/sem/glue.py b/nltk/sem/glue.py
+index 9db2034aa..e9e8e06bb 100644
+--- a/nltk/sem/glue.py
++++ b/nltk/sem/glue.py
+@@ -779,6 +779,18 @@ class DrtGlue(Glue):
+ 
+     def get_glue_dict(self):
+         return DrtGlueDict(self.semtype_file)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def demo(show_example=-1):
+diff --git a/nltk/sem/linearlogic.py b/nltk/sem/linearlogic.py
+index 8ca29aa1f..3bbe34de2 100644
+--- a/nltk/sem/linearlogic.py
++++ b/nltk/sem/linearlogic.py
+@@ -462,6 +462,18 @@ class UnificationException(Exception):
+ 
+ class LinearLogicApplicationException(Exception):
+     pass
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def demo():
+diff --git a/nltk/sem/logic.py b/nltk/sem/logic.py
+index 816a04585..0baad6a92 100644
+--- a/nltk/sem/logic.py
++++ b/nltk/sem/logic.py
+@@ -67,6 +67,18 @@ class Tokens:
+ 
+     # Special
+     SYMBOLS = [x for x in TOKENS if re.match(r"^[-\\.(),!&^|>=<]*$", x)]
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def boolean_ops():
+diff --git a/nltk/stem/snowball.py b/nltk/stem/snowball.py
+index 06ed5bbe3..7e9f16392 100644
+--- a/nltk/stem/snowball.py
++++ b/nltk/stem/snowball.py
+@@ -5844,6 +5844,18 @@ class SwedishStemmer(_ScandinavianStemmer):
+                 break
+ 
+         return word
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def demo():
+diff --git a/nltk/tag/senna.py b/nltk/tag/senna.py
+index e423e1ee6..68eec6993 100644
+--- a/nltk/tag/senna.py
++++ b/nltk/tag/senna.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Senna POS tagger, NER Tagger, Chunk Tagger
+ 
+diff --git a/nltk/tag/sequential.py b/nltk/tag/sequential.py
+index 2bd539d5b..24728523a 100644
+--- a/nltk/tag/sequential.py
++++ b/nltk/tag/sequential.py
+@@ -7,6 +7,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Classes for tagging sentences sequentially, left to right.  The
+ abstract base class SequentialBackoffTagger serves as the base
+diff --git a/nltk/tag/stanford.py b/nltk/tag/stanford.py
+index 9f74ebb7b..c210a2342 100644
+--- a/nltk/tag/stanford.py
++++ b/nltk/tag/stanford.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ A module for interfacing with the Stanford taggers.
+ 
+diff --git a/nltk/tbl/rule.py b/nltk/tbl/rule.py
+index a85e0ebe3..39899b000 100644
+--- a/nltk/tbl/rule.py
++++ b/nltk/tbl/rule.py
+@@ -7,6 +7,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see  LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ from abc import ABCMeta, abstractmethod
+ 
+ from nltk import jsontags
+diff --git a/nltk/text.py b/nltk/text.py
+index fae2ffa9a..1c79ebe16 100644
+--- a/nltk/text.py
++++ b/nltk/text.py
+@@ -740,6 +740,18 @@ class TextCollection(Text):
+ 
+     def tf_idf(self, term, text):
+         return self.tf(term, text) * self.idf(term)
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def demo():
+diff --git a/nltk/tokenize/punkt.py b/nltk/tokenize/punkt.py
+index 877b79dd2..546291c12 100644
+--- a/nltk/tokenize/punkt.py
++++ b/nltk/tokenize/punkt.py
+@@ -299,6 +299,18 @@ class PunktLanguageVars:
+ _re_non_punct = re.compile(r"[^\W\d]", re.UNICODE)
+ """Matches token types that are not merely punctuation. (Types for
+ numeric tokens are changed to ##number## and hence contain alpha.)"""
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ # }
+diff --git a/nltk/tokenize/regexp.py b/nltk/tokenize/regexp.py
+index f8ab28df4..b8536908a 100644
+--- a/nltk/tokenize/regexp.py
++++ b/nltk/tokenize/regexp.py
+@@ -194,6 +194,18 @@ class WordPunctTokenizer(RegexpTokenizer):
+ 
+     def __init__(self):
+         RegexpTokenizer.__init__(self, r"\w+|[^\w\s]+")
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ ######################################################################
+diff --git a/nltk/toolbox.py b/nltk/toolbox.py
+index a1d01c253..10487a7e5 100644
+--- a/nltk/toolbox.py
++++ b/nltk/toolbox.py
+@@ -269,6 +269,18 @@ class ToolboxData(StandardFormat):
+ 
+ 
+ _is_value = re.compile(r"\S")
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def to_sfm_string(tree, encoding=None, errors="strict", unicode_fields=None):
+diff --git a/nltk/translate/ibm1.py b/nltk/translate/ibm1.py
+index c278f04d6..dc5272427 100644
+--- a/nltk/translate/ibm1.py
++++ b/nltk/translate/ibm1.py
+@@ -11,6 +11,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Lexical translation model that ignores word order.
+ 
+diff --git a/nltk/translate/ibm2.py b/nltk/translate/ibm2.py
+index e85586e79..cb08c895d 100644
+--- a/nltk/translate/ibm2.py
++++ b/nltk/translate/ibm2.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Lexical translation model that considers word order.
+ 
+diff --git a/nltk/translate/ibm3.py b/nltk/translate/ibm3.py
+index 3adaabfa3..fb6b7d03a 100644
+--- a/nltk/translate/ibm3.py
++++ b/nltk/translate/ibm3.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Translation model that considers how a word can be aligned to
+ multiple words in another language.
+diff --git a/nltk/translate/ibm4.py b/nltk/translate/ibm4.py
+index 35e6ffcd2..97da27a34 100644
+--- a/nltk/translate/ibm4.py
++++ b/nltk/translate/ibm4.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Translation model that reorders output words based on their type and
+ distance from other related words in the output sentence.
+diff --git a/nltk/translate/ibm5.py b/nltk/translate/ibm5.py
+index 9b9721695..c8cce746d 100644
+--- a/nltk/translate/ibm5.py
++++ b/nltk/translate/ibm5.py
+@@ -5,6 +5,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ Translation model that keeps track of vacant positions in the target
+ sentence to decide where to place translated words.
+diff --git a/nltk/tree/immutable.py b/nltk/tree/immutable.py
+index ba4c3e464..6c9124857 100644
+--- a/nltk/tree/immutable.py
++++ b/nltk/tree/immutable.py
+@@ -8,6 +8,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ from nltk.probability import ProbabilisticMixIn
+ from nltk.tree.parented import MultiParentedTree, ParentedTree
+ from nltk.tree.tree import Tree
+diff --git a/nltk/tree/parented.py b/nltk/tree/parented.py
+index fd6656320..897386e1d 100644
+--- a/nltk/tree/parented.py
++++ b/nltk/tree/parented.py
+@@ -8,6 +8,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ import warnings
+ from abc import ABCMeta, abstractmethod
+ 
+diff --git a/nltk/tree/probabilistic.py b/nltk/tree/probabilistic.py
+index a258aa290..a40f05fcd 100644
+--- a/nltk/tree/probabilistic.py
++++ b/nltk/tree/probabilistic.py
+@@ -9,6 +9,18 @@
+ # For license information, see LICENSE.TXT
+ 
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ from nltk.internals import raise_unorderable_types
+ from nltk.probability import ProbabilisticMixIn
+ from nltk.tree.immutable import ImmutableProbabilisticTree
+diff --git a/nltk/tree/tree.py b/nltk/tree/tree.py
+index b951786c7..f9f6a36a5 100644
+--- a/nltk/tree/tree.py
++++ b/nltk/tree/tree.py
+@@ -888,6 +888,18 @@ class Tree(list):
+                 " ".join(childstrs),
+                 parens[1],
+             )
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ 
+ def _child_names(tree):
+diff --git a/nltk/twitter/api.py b/nltk/twitter/api.py
+index 85758c9cf..a9c71f627 100644
+--- a/nltk/twitter/api.py
++++ b/nltk/twitter/api.py
+@@ -6,6 +6,18 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ This module provides an interface for TweetHandlers, and support for timezone
+ handling.
+diff --git a/nltk/twitter/twitterclient.py b/nltk/twitter/twitterclient.py
+index 99eae2941..4adc9b5c7 100644
+--- a/nltk/twitter/twitterclient.py
++++ b/nltk/twitter/twitterclient.py
+@@ -7,6 +7,18 @@
+ # For license information, see LICENSE.TXT
+ 
+ 
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ """
+ NLTK Twitter client
+ 
+diff --git a/nltk/util.py b/nltk/util.py
+index 411e3132f..09b25e505 100644
+--- a/nltk/util.py
++++ b/nltk/util.py
+@@ -28,6 +28,18 @@ from urllib.request import (
+ 
+ from nltk.collections import *
+ from nltk.internals import deprecated, raise_unorderable_types, slice_bounds
++class DataParams___init___483:
++    def __init__(self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments = None):
++        self.id = id
++        self.sex = sex
++        self.dr = dr
++        self.use = use
++        self.recdate = recdate
++        self.birthdate = birthdate
++        self.ht = ht
++        self.race = race
++        self.edu = edu
++        self.comments = comments
+ 
+ ######################################################################
+ # Short usage message

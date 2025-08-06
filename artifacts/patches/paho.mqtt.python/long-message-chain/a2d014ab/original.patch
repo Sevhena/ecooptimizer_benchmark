@@ -1,0 +1,20 @@
+diff --git a/src/paho/mqtt/client.py b/src/paho/mqtt/client.py
+index 4ccc869..aea83bf 100644
+--- a/src/paho/mqtt/client.py
++++ b/src/paho/mqtt/client.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ # Copyright (c) 2012-2019 Roger Light and others
+ #
+ # All rights reserved. This program and the accompanying materials
+@@ -4775,7 +4776,9 @@ class _WebsocketWrapper:
+                 if len(self._readbuffer) > 2:
+                     # check upgrade
+                     if b"connection" in str(self._readbuffer).lower().encode('utf-8'):
+-                        if b"upgrade" not in str(self._readbuffer).lower().encode('utf-8'):
++                        with EmissionsTracker(project_name='paho.mqtt.python-benchmark', experiment_id='paho.mqtt.python_LMC001_a2d014ab', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/long-message-chain/a2d014ab.csv') as tracker:
++                            _carbon_wrapped_a4c75178 = str(self._readbuffer).lower().encode('utf-8')
++                        if b"upgrade" not in _carbon_wrapped_a4c75178:
+                             raise WebsocketConnectionError(
+                                 "WebSocket handshake error, connection not upgraded")
+                         else:

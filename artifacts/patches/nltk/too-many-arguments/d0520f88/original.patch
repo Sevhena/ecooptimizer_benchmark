@@ -1,0 +1,17 @@
+diff --git a/nltk/corpus/reader/timit.py b/nltk/corpus/reader/timit.py
+index cf258ba44..2b89e0e7f 100644
+--- a/nltk/corpus/reader/timit.py
++++ b/nltk/corpus/reader/timit.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Natural Language Toolkit: TIMIT Corpus Reader
+ #
+ # Copyright (C) 2001-2007 NLTK Project
+@@ -478,6 +479,7 @@ class TimitCorpusReader(CorpusReader):
+ 
+ 
+ class SpeakerInfo:
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_d0520f88', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/d0520f88.csv')
+     def __init__(
+         self, id, sex, dr, use, recdate, birthdate, ht, race, edu, comments=None
+     ):

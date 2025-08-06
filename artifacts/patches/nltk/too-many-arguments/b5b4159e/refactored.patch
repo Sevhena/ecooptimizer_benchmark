@@ -1,0 +1,293 @@
+diff --git a/nltk/tbl/demo.py b/nltk/tbl/demo.py
+index 434188e64..c1d54fc51 100644
+--- a/nltk/tbl/demo.py
++++ b/nltk/tbl/demo.py
+@@ -16,6 +16,28 @@ from nltk.corpus import treebank
+ from nltk.tag import BrillTaggerTrainer, RegexpTagger, UnigramTagger
+ from nltk.tag.brill import Pos, Word
+ from nltk.tbl import Template, error_list
++from codecarbon import track_emissions
++class DataParams_postag_142:
++    def __init__(self, templates = None, tagged_data = None, num_sents = 1000, max_rules = 300, min_score = 3, min_acc = None, train = 0.8, trace = 3, randomize = False, ruleformat = "str", incremental_stats = False, template_stats = False, error_output = None, serialize_output = None, learning_curve_output = None, learning_curve_take = 300, baseline_backoff_tagger = None, separate_baseline_data = False, cache_baseline_tagger = None):
++        self.templates = templates
++        self.tagged_data = tagged_data
++        self.num_sents = num_sents
++        self.max_rules = max_rules
++        self.min_score = min_score
++        self.min_acc = min_acc
++        self.train = train
++        self.trace = trace
++        self.randomize = randomize
++        self.ruleformat = ruleformat
++        self.incremental_stats = incremental_stats
++        self.template_stats = template_stats
++        self.error_output = error_output
++        self.serialize_output = serialize_output
++        self.learning_curve_output = learning_curve_output
++        self.learning_curve_take = learning_curve_take
++        self.baseline_backoff_tagger = baseline_backoff_tagger
++        self.separate_baseline_data = separate_baseline_data
++        self.cache_baseline_tagger = cache_baseline_tagger
+ 
+ 
+ def demo():
+@@ -30,21 +52,21 @@ def demo_repr_rule_format():
+     """
+     Exemplify repr(Rule) (see also str(Rule) and Rule.format("verbose"))
+     """
+-    postag(ruleformat="repr")
++    postag(DataParams_postag_142(ruleformat = "repr"))
+ 
+ 
+ def demo_str_rule_format():
+     """
+     Exemplify repr(Rule) (see also str(Rule) and Rule.format("verbose"))
+     """
+-    postag(ruleformat="str")
++    postag(DataParams_postag_142(ruleformat = "str"))
+ 
+ 
+ def demo_verbose_rule_format():
+     """
+     Exemplify Rule.format("verbose")
+     """
+-    postag(ruleformat="verbose")
++    postag(DataParams_postag_142(ruleformat = "verbose"))
+ 
+ 
+ def demo_multiposition_feature():
+@@ -59,14 +81,14 @@ def demo_multiposition_feature():
+     points can also be used: Pos(-3, -1) is the same as the arg
+     below.
+     """
+-    postag(templates=[Template(Pos([-3, -2, -1]))])
++    postag(DataParams_postag_142(templates = [Template(Pos([-3, -2, -1]))]))
+ 
+ 
+ def demo_multifeature_template():
+     """
+     Templates can have more than a single feature.
+     """
+-    postag(templates=[Template(Word([0]), Pos([-2, -1]))])
++    postag(DataParams_postag_142(templates = [Template(Word([0]), Pos([-2, -1]))]))
+ 
+ 
+ def demo_template_statistics():
+@@ -78,7 +100,7 @@ def demo_template_statistics():
+     training is basically O(T) in the number of templates T
+     (also in terms of memory usage, which often will be the limiting factor).
+     """
+-    postag(incremental_stats=True, template_stats=True)
++    postag(DataParams_postag_142(incremental_stats = True, template_stats = True))
+ 
+ 
+ def demo_generated_templates():
+@@ -98,7 +120,7 @@ def demo_generated_templates():
+             len(templates)
+         )
+     )
+-    postag(templates=templates, incremental_stats=True, template_stats=True)
++    postag(DataParams_postag_142(templates = templates, incremental_stats = True, template_stats = True))
+ 
+ 
+ def demo_learning_curve():
+@@ -108,17 +130,14 @@ def demo_learning_curve():
+     Note: requires matplotlib
+     """
+     postag(
+-        incremental_stats=True,
+-        separate_baseline_data=True,
+-        learning_curve_output="learningcurve.png",
+-    )
++        DataParams_postag_142(incremental_stats = True, separate_baseline_data = True, learning_curve_output = "learningcurve.png"))
+ 
+ 
+ def demo_error_analysis():
+     """
+     Writes a file with context for each erroneous word after tagging testing data
+     """
+-    postag(error_output="errors.txt")
++    postag(DataParams_postag_142(error_output = "errors.txt"))
+ 
+ 
+ def demo_serialize_tagger():
+@@ -126,7 +145,7 @@ def demo_serialize_tagger():
+     Serializes the learned tagger to a file in pickle format; reloads it
+     and validates the process.
+     """
+-    postag(serialize_output="tagger.pcl")
++    postag(DataParams_postag_142(serialize_output = "tagger.pcl"))
+ 
+ 
+ def demo_high_accuracy_rules():
+@@ -134,30 +153,12 @@ def demo_high_accuracy_rules():
+     Discard rules with low accuracy. This may hurt performance a bit,
+     but will often produce rules which are more interesting read to a human.
+     """
+-    postag(num_sents=3000, min_acc=0.96, min_score=10)
++    postag(DataParams_postag_142(num_sents = 3000, min_acc = 0.96, min_score = 10))
+ 
+ 
++@track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_b5b4159e', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/b5b4159e_refactored.csv')
+ def postag(
+-    templates=None,
+-    tagged_data=None,
+-    num_sents=1000,
+-    max_rules=300,
+-    min_score=3,
+-    min_acc=None,
+-    train=0.8,
+-    trace=3,
+-    randomize=False,
+-    ruleformat="str",
+-    incremental_stats=False,
+-    template_stats=False,
+-    error_output=None,
+-    serialize_output=None,
+-    learning_curve_output=None,
+-    learning_curve_take=300,
+-    baseline_backoff_tagger=None,
+-    separate_baseline_data=False,
+-    cache_baseline_tagger=None,
+-):
++    data_params):
+     """
+     Brill Tagger Demonstration
+     :param templates: how many sentences of training and testing data to use
+@@ -225,38 +226,38 @@ def postag(
+     """
+ 
+     # defaults
+-    baseline_backoff_tagger = baseline_backoff_tagger or REGEXP_TAGGER
+-    if templates is None:
++    data_params.baseline_backoff_tagger = data_params.baseline_backoff_tagger or REGEXP_TAGGER
++    if data_params.templates is None:
+         from nltk.tag.brill import brill24, describe_template_sets
+ 
+         # some pre-built template sets taken from typical systems or publications are
+         # available. Print a list with describe_template_sets()
+         # for instance:
+-        templates = brill24()
++        data_params.templates = brill24()
+     (training_data, baseline_data, gold_data, testing_data) = _demo_prepare_data(
+-        tagged_data, train, num_sents, randomize, separate_baseline_data
++        data_params.tagged_data, data_params.train, data_params.num_sents, data_params.randomize, data_params.separate_baseline_data
+     )
+ 
+     # creating (or reloading from cache) a baseline tagger (unigram tagger)
+     # this is just a mechanism for getting deterministic output from the baseline between
+     # python versions
+-    if cache_baseline_tagger:
+-        if not os.path.exists(cache_baseline_tagger):
++    if data_params.cache_baseline_tagger:
++        if not os.path.exists(data_params.cache_baseline_tagger):
+             baseline_tagger = UnigramTagger(
+-                baseline_data, backoff=baseline_backoff_tagger
++                baseline_data, backoff=data_params.baseline_backoff_tagger
+             )
+-            with open(cache_baseline_tagger, "w") as print_rules:
++            with open(data_params.cache_baseline_tagger, "w") as print_rules:
+                 pickle.dump(baseline_tagger, print_rules)
+             print(
+                 "Trained baseline tagger, pickled it to {}".format(
+-                    cache_baseline_tagger
++                    data_params.cache_baseline_tagger
+                 )
+             )
+-        with open(cache_baseline_tagger) as print_rules:
++        with open(data_params.cache_baseline_tagger) as print_rules:
+             baseline_tagger = pickle.load(print_rules)
+-            print(f"Reloaded pickled tagger from {cache_baseline_tagger}")
++            print(f"Reloaded pickled tagger from {data_params.cache_baseline_tagger}")
+     else:
+-        baseline_tagger = UnigramTagger(baseline_data, backoff=baseline_backoff_tagger)
++        baseline_tagger = UnigramTagger(baseline_data, backoff=data_params.baseline_backoff_tagger)
+         print("Trained baseline tagger")
+     if gold_data:
+         print(
+@@ -268,23 +269,23 @@ def postag(
+     # creating a Brill tagger
+     tbrill = time.time()
+     trainer = BrillTaggerTrainer(
+-        baseline_tagger, templates, trace, ruleformat=ruleformat
++        baseline_tagger, data_params.templates, data_params.trace, data_params.ruleformat=data_params.ruleformat
+     )
+     print("Training tbl tagger...")
+-    brill_tagger = trainer.train(training_data, max_rules, min_score, min_acc)
++    brill_tagger = trainer.data_params.train(training_data, data_params.max_rules, data_params.min_score, data_params.min_acc)
+     print(f"Trained tbl tagger in {time.time() - tbrill:0.2f} seconds")
+     if gold_data:
+         print("    Accuracy on test set: %.4f" % brill_tagger.accuracy(gold_data))
+ 
+     # printing the learned rules, if learned silently
+-    if trace == 1:
++    if data_params.trace == 1:
+         print("\nLearned rules: ")
+         for ruleno, rule in enumerate(brill_tagger.rules(), 1):
+-            print(f"{ruleno:4d} {rule.format(ruleformat):s}")
++            print(f"{ruleno:4d} {rule.format(data_params.ruleformat):s}")
+ 
+     # printing template statistics (optionally including comparison with the training data)
+     # note: if not separate_baseline_data, then baseline accuracy will be artificially high
+-    if incremental_stats:
++    if data_params.incremental_stats:
+         print(
+             "Incrementally tagging the test data, collecting individual rule statistics"
+         )
+@@ -292,41 +293,41 @@ def postag(
+             testing_data, gold_data
+         )
+         print("    Rule statistics collected")
+-        if not separate_baseline_data:
++        if not data_params.separate_baseline_data:
+             print(
+                 "WARNING: train_stats asked for separate_baseline_data=True; the baseline "
+                 "will be artificially high"
+             )
+         trainstats = brill_tagger.train_stats()
+-        if template_stats:
++        if data_params.template_stats:
+             brill_tagger.print_template_statistics(teststats)
+-        if learning_curve_output:
++        if data_params.learning_curve_output:
+             _demo_plot(
+-                learning_curve_output, teststats, trainstats, take=learning_curve_take
++                data_params.learning_curve_output, teststats, trainstats, take=data_params.learning_curve_take
+             )
+-            print(f"Wrote plot of learning curve to {learning_curve_output}")
++            print(f"Wrote plot of learning curve to {data_params.learning_curve_output}")
+     else:
+         print("Tagging the test data")
+         taggedtest = brill_tagger.tag_sents(testing_data)
+-        if template_stats:
++        if data_params.template_stats:
+             brill_tagger.print_template_statistics()
+ 
+     # writing error analysis to file
+-    if error_output is not None:
+-        with open(error_output, "w") as f:
+-            f.write("Errors for Brill Tagger %r\n\n" % serialize_output)
++    if data_params.error_output is not None:
++        with open(data_params.error_output, "w") as f:
++            f.write("Errors for Brill Tagger %r\n\n" % data_params.serialize_output)
+             f.write("\n".join(error_list(gold_data, taggedtest)).encode("utf-8") + "\n")
+-        print(f"Wrote tagger errors including context to {error_output}")
++        print(f"Wrote tagger errors including context to {data_params.error_output}")
+ 
+     # serializing the tagger to a pickle file and reloading (just to see it works)
+-    if serialize_output is not None:
++    if data_params.serialize_output is not None:
+         taggedtest = brill_tagger.tag_sents(testing_data)
+-        with open(serialize_output, "w") as print_rules:
++        with open(data_params.serialize_output, "w") as print_rules:
+             pickle.dump(brill_tagger, print_rules)
+-        print(f"Wrote pickled tagger to {serialize_output}")
+-        with open(serialize_output) as print_rules:
++        print(f"Wrote pickled tagger to {data_params.serialize_output}")
++        with open(data_params.serialize_output) as print_rules:
+             brill_tagger_reloaded = pickle.load(print_rules)
+-        print(f"Reloaded pickled tagger from {serialize_output}")
++        print(f"Reloaded pickled tagger from {data_params.serialize_output}")
+         taggedtest_reloaded = brill_tagger.tag_sents(testing_data)
+         if taggedtest == taggedtest_reloaded:
+             print("Reloaded tagger tried on test set, results identical")

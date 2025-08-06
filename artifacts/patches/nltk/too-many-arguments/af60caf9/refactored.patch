@@ -1,0 +1,2621 @@
+diff --git a/nltk/app/collocations_app.py b/nltk/app/collocations_app.py
+index 9dc34af42..eb69477d0 100644
+--- a/nltk/app/collocations_app.py
++++ b/nltk/app/collocations_app.py
+@@ -421,6 +421,19 @@ class CollocationsModel:
+             except Exception as e:
+                 print(e)
+                 self.model.queue.put(ERROR_LOADING_CORPUS_EVENT)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ # def collocations():
+diff --git a/nltk/app/concordance_app.py b/nltk/app/concordance_app.py
+index 0d7f44a76..2c94504b7 100755
+--- a/nltk/app/concordance_app.py
++++ b/nltk/app/concordance_app.py
+@@ -696,6 +696,19 @@ class ConcordanceSearchModel:
+                 else:
+                     new.append(BOUNDARY + term + "/" + WORD_OR_TAG + BOUNDARY)
+             return " ".join(new)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def app():
+diff --git a/nltk/ccg/chart.py b/nltk/ccg/chart.py
+index a87aefe8f..10c9f3888 100644
+--- a/nltk/ccg/chart.py
++++ b/nltk/ccg/chart.py
+@@ -343,6 +343,19 @@ class CCGChart(Chart):
+ 
+         memo[edge] = trees
+         return trees
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def compute_semantics(children, edge):
+diff --git a/nltk/chunk/named_entity.py b/nltk/chunk/named_entity.py
+index a8ef6cacb..61427ea0b 100644
+--- a/nltk/chunk/named_entity.py
++++ b/nltk/chunk/named_entity.py
+@@ -176,6 +176,19 @@ class NEChunkParser(ChunkParserI):
+             else:
+                 toks.append((child, "O"))
+         return toks
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def shape(word):
+diff --git a/nltk/chunk/regexp.py b/nltk/chunk/regexp.py
+index 69338d7d2..d66b0fe3b 100644
+--- a/nltk/chunk/regexp.py
++++ b/nltk/chunk/regexp.py
+@@ -894,6 +894,19 @@ class ChunkRuleWithContext(RegexpChunkRule):
+ CHUNK_TAG_PATTERN = re.compile(
+     r"^(({}|<{}>)*)$".format(r"([^\{\}<>]|\{\d+,?\}|\{\d*,\d+\})+", r"[^\{\}<>]+")
+ )
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def tag_pattern2re_pattern(tag_pattern):
+diff --git a/nltk/classify/maxent.py b/nltk/classify/maxent.py
+index 5491b23b7..c54b545ef 100644
+--- a/nltk/classify/maxent.py
++++ b/nltk/classify/maxent.py
+@@ -1018,6 +1018,19 @@ class TypedMaxentFeatureEncoding(MaxentFeatureEncodingI):
+         if labels is None:
+             labels = seen_labels
+         return cls(labels, mapping, **options)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ######################################################################
+diff --git a/nltk/cluster/em.py b/nltk/cluster/em.py
+index 11a908a9e..3e2cbc92d 100644
+--- a/nltk/cluster/em.py
++++ b/nltk/cluster/em.py
+@@ -174,6 +174,19 @@ class EMClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<EMClusterer means=%s>" % list(self._means)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def demo():
+diff --git a/nltk/cluster/gaac.py b/nltk/cluster/gaac.py
+index 0d54728fe..2e648229e 100644
+--- a/nltk/cluster/gaac.py
++++ b/nltk/cluster/gaac.py
+@@ -135,6 +135,19 @@ class GAAClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<GroupAverageAgglomerative Clusterer n=%d>" % self._num_clusters
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def demo():
+diff --git a/nltk/cluster/kmeans.py b/nltk/cluster/kmeans.py
+index e53aa15c5..94cb78840 100644
+--- a/nltk/cluster/kmeans.py
++++ b/nltk/cluster/kmeans.py
+@@ -186,6 +186,19 @@ class KMeansClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<KMeansClusterer means=%s repeats=%d>" % (self._means, self._repeats)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ #################################################################################
+diff --git a/nltk/collections.py b/nltk/collections.py
+index 7fd2a7d2c..595c8352c 100644
+--- a/nltk/collections.py
++++ b/nltk/collections.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ import bisect
+ from functools import total_ordering
+ from itertools import chain, islice
+diff --git a/nltk/collocations.py b/nltk/collocations.py
+index 89b6eb396..db75778f4 100644
+--- a/nltk/collocations.py
++++ b/nltk/collocations.py
+@@ -349,6 +349,19 @@ class QuadgramCollocationFinder(AbstractCollocationFinder):
+             (n_ixxx, n_xixx, n_xxix, n_xxxi),
+             n_all,
+         )
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def demo(scorer=None, compare_scorer=None):
+diff --git a/nltk/corpus/reader/aligned.py b/nltk/corpus/reader/aligned.py
+index f95c2fd83..ef30a3d30 100644
+--- a/nltk/corpus/reader/aligned.py
++++ b/nltk/corpus/reader/aligned.py
+@@ -5,6 +5,19 @@
+ # Author: Steven Bird <stevenbird1@gmail.com>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ from nltk.corpus.reader.api import CorpusReader
+ from nltk.corpus.reader.util import (
+     StreamBackedCorpusView,
+diff --git a/nltk/corpus/reader/bcp47.py b/nltk/corpus/reader/bcp47.py
+index 7040f3b4b..9316225bf 100644
+--- a/nltk/corpus/reader/bcp47.py
++++ b/nltk/corpus/reader/bcp47.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ import re
+ from warnings import warn
+ from xml.etree import ElementTree as et
+diff --git a/nltk/corpus/reader/bnc.py b/nltk/corpus/reader/bnc.py
+index 50782dd62..24fb9bae5 100644
+--- a/nltk/corpus/reader/bnc.py
++++ b/nltk/corpus/reader/bnc.py
+@@ -136,6 +136,19 @@ class BNCCorpusReader(XMLCorpusReader):
+ 
+         assert None not in result
+         return result
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _all_xmlwords_in(elt, result=None):
+diff --git a/nltk/corpus/reader/bracket_parse.py b/nltk/corpus/reader/bracket_parse.py
+index 538569770..532986c72 100644
+--- a/nltk/corpus/reader/bracket_parse.py
++++ b/nltk/corpus/reader/bracket_parse.py
+@@ -5,6 +5,19 @@
+ #         Edward Loper <edloper@gmail.com>
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Corpus reader for corpora that consist of parenthesis-delineated parse trees.
+ """
+diff --git a/nltk/corpus/reader/categorized_sents.py b/nltk/corpus/reader/categorized_sents.py
+index 786e4c0ea..24d66281a 100644
+--- a/nltk/corpus/reader/categorized_sents.py
++++ b/nltk/corpus/reader/categorized_sents.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ CorpusReader structured for corpora that contain one instance on each row.
+ This CorpusReader is specifically used for the Subjectivity Dataset and the
+diff --git a/nltk/corpus/reader/chasen.py b/nltk/corpus/reader/chasen.py
+index 8009198a6..ef0926a6e 100644
+--- a/nltk/corpus/reader/chasen.py
++++ b/nltk/corpus/reader/chasen.py
+@@ -124,6 +124,19 @@ class ChasenCorpusView(StreamBackedCorpusView):
+                 block.extend(para)
+ 
+         return block
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def demo():
+diff --git a/nltk/corpus/reader/childes.py b/nltk/corpus/reader/childes.py
+index d334a4347..5ea403c4e 100644
+--- a/nltk/corpus/reader/childes.py
++++ b/nltk/corpus/reader/childes.py
+@@ -561,6 +561,19 @@ class CHILDESCorpusReader(XMLCorpusReader):
+         print("Opening in browser:", url)
+         # Pausing is a good idea, but it's up to the user...
+         # raw_input("Hit Return to continue")
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def demo(corpus_root=None):
+diff --git a/nltk/corpus/reader/chunked.py b/nltk/corpus/reader/chunked.py
+index dbf5b2d64..0dc609a2c 100644
+--- a/nltk/corpus/reader/chunked.py
++++ b/nltk/corpus/reader/chunked.py
+@@ -1,3 +1,17 @@
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
++from codecarbon import track_emissions
+ # Natural Language Toolkit: Chunked Corpus Reader
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -63,7 +77,7 @@ class ChunkedCorpusReader(CorpusReader):
+         """
+         return concat(
+             [
+-                ChunkedCorpusView(f, enc, 0, 0, 0, 0, *self._cv_args)
++                ChunkedCorpusView(DataParams___init___208(f, enc, 0, 0, 0, 0, self._cv_args))
+                 for (f, enc) in self.abspaths(fileids, True)
+             ]
+         )
+@@ -77,7 +91,7 @@ class ChunkedCorpusReader(CorpusReader):
+         """
+         return concat(
+             [
+-                ChunkedCorpusView(f, enc, 0, 1, 0, 0, *self._cv_args)
++                ChunkedCorpusView(DataParams___init___208(f, enc, 0, 1, 0, 0, self._cv_args))
+                 for (f, enc) in self.abspaths(fileids, True)
+             ]
+         )
+@@ -91,7 +105,7 @@ class ChunkedCorpusReader(CorpusReader):
+         """
+         return concat(
+             [
+-                ChunkedCorpusView(f, enc, 0, 1, 1, 0, *self._cv_args)
++                ChunkedCorpusView(DataParams___init___208(f, enc, 0, 1, 1, 0, self._cv_args))
+                 for (f, enc) in self.abspaths(fileids, True)
+             ]
+         )
+@@ -106,8 +120,7 @@ class ChunkedCorpusReader(CorpusReader):
+         return concat(
+             [
+                 ChunkedCorpusView(
+-                    f, enc, 1, 0, 0, 0, *self._cv_args, target_tagset=tagset
+-                )
++                    DataParams___init___208(f, enc, 1, 0, 0, 0, self._cv_args, target_tagset = tagset))
+                 for (f, enc) in self.abspaths(fileids, True)
+             ]
+         )
+@@ -122,8 +135,7 @@ class ChunkedCorpusReader(CorpusReader):
+         return concat(
+             [
+                 ChunkedCorpusView(
+-                    f, enc, 1, 1, 0, 0, *self._cv_args, target_tagset=tagset
+-                )
++                    DataParams___init___208(f, enc, 1, 1, 0, 0, self._cv_args, target_tagset = tagset))
+                 for (f, enc) in self.abspaths(fileids, True)
+             ]
+         )
+@@ -138,8 +150,7 @@ class ChunkedCorpusReader(CorpusReader):
+         return concat(
+             [
+                 ChunkedCorpusView(
+-                    f, enc, 1, 1, 1, 0, *self._cv_args, target_tagset=tagset
+-                )
++                    DataParams___init___208(f, enc, 1, 1, 1, 0, self._cv_args, target_tagset = tagset))
+                 for (f, enc) in self.abspaths(fileids, True)
+             ]
+         )
+@@ -156,8 +167,7 @@ class ChunkedCorpusReader(CorpusReader):
+         return concat(
+             [
+                 ChunkedCorpusView(
+-                    f, enc, 1, 0, 0, 1, *self._cv_args, target_tagset=tagset
+-                )
++                    DataParams___init___208(f, enc, 1, 0, 0, 1, self._cv_args, target_tagset = tagset))
+                 for (f, enc) in self.abspaths(fileids, True)
+             ]
+         )
+@@ -174,8 +184,7 @@ class ChunkedCorpusReader(CorpusReader):
+         return concat(
+             [
+                 ChunkedCorpusView(
+-                    f, enc, 1, 1, 0, 1, *self._cv_args, target_tagset=tagset
+-                )
++                    DataParams___init___208(f, enc, 1, 1, 0, 1, self._cv_args, target_tagset = tagset))
+                 for (f, enc) in self.abspaths(fileids, True)
+             ]
+         )
+@@ -192,8 +201,7 @@ class ChunkedCorpusReader(CorpusReader):
+         return concat(
+             [
+                 ChunkedCorpusView(
+-                    f, enc, 1, 1, 1, 1, *self._cv_args, target_tagset=tagset
+-                )
++                    DataParams___init___208(f, enc, 1, 1, 1, 1, self._cv_args, target_tagset = tagset))
+                 for (f, enc) in self.abspaths(fileids, True)
+             ]
+         )
+@@ -203,30 +211,20 @@ class ChunkedCorpusReader(CorpusReader):
+ 
+ 
+ class ChunkedCorpusView(StreamBackedCorpusView):
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_af60caf9', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/af60caf9_refactored.csv')
+     def __init__(
+         self,
+-        fileid,
+-        encoding,
+-        tagged,
+-        group_by_sent,
+-        group_by_para,
+-        chunked,
+-        str2chunktree,
+-        sent_tokenizer,
+-        para_block_reader,
+-        source_tagset=None,
+-        target_tagset=None,
+-    ):
+-        StreamBackedCorpusView.__init__(self, fileid, encoding=encoding)
+-        self._tagged = tagged
+-        self._group_by_sent = group_by_sent
+-        self._group_by_para = group_by_para
+-        self._chunked = chunked
+-        self._str2chunktree = str2chunktree
+-        self._sent_tokenizer = sent_tokenizer
+-        self._para_block_reader = para_block_reader
+-        self._source_tagset = source_tagset
+-        self._target_tagset = target_tagset
++        data_params):
++        StreamBackedCorpusView.__init__(self, data_params.fileid, data_params.encoding=data_params.encoding)
++        self._tagged = data_params.tagged
++        self._group_by_sent = data_params.group_by_sent
++        self._group_by_para = data_params.group_by_para
++        self._chunked = data_params.chunked
++        self._str2chunktree = data_params.str2chunktree
++        self._sent_tokenizer = data_params.sent_tokenizer
++        self._para_block_reader = data_params.para_block_reader
++        self._source_tagset = data_params.source_tagset
++        self._target_tagset = data_params.target_tagset
+ 
+     def read_block(self, stream):
+         block = []
+diff --git a/nltk/corpus/reader/comparative_sents.py b/nltk/corpus/reader/comparative_sents.py
+index 0473eebcb..f0e7634d8 100644
+--- a/nltk/corpus/reader/comparative_sents.py
++++ b/nltk/corpus/reader/comparative_sents.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ CorpusReader for the Comparative Sentence Dataset.
+ 
+diff --git a/nltk/corpus/reader/conll.py b/nltk/corpus/reader/conll.py
+index e3673b7c5..ec3e7a0d4 100644
+--- a/nltk/corpus/reader/conll.py
++++ b/nltk/corpus/reader/conll.py
+@@ -6,6 +6,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Read CoNLL-style chunk fileids.
+ """
+diff --git a/nltk/corpus/reader/crubadan.py b/nltk/corpus/reader/crubadan.py
+index 180fcfb6d..eaf6725d8 100644
+--- a/nltk/corpus/reader/crubadan.py
++++ b/nltk/corpus/reader/crubadan.py
+@@ -6,6 +6,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ An NLTK interface for the n-gram statistics gathered from
+ the corpora for each language using An Crubadan.
+diff --git a/nltk/corpus/reader/dependency.py b/nltk/corpus/reader/dependency.py
+index 2b9455014..13ef8937a 100644
+--- a/nltk/corpus/reader/dependency.py
++++ b/nltk/corpus/reader/dependency.py
+@@ -7,6 +7,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ from nltk.corpus.reader.api import *
+ from nltk.corpus.reader.util import *
+ from nltk.parse import DependencyGraph
+diff --git a/nltk/corpus/reader/framenet.py b/nltk/corpus/reader/framenet.py
+index 2d871512b..08925a443 100644
+--- a/nltk/corpus/reader/framenet.py
++++ b/nltk/corpus/reader/framenet.py
+@@ -26,6 +26,19 @@ from nltk.corpus.reader import XMLCorpusReader, XMLCorpusView
+ from nltk.util import LazyConcatenation, LazyIteratorList, LazyMap
+ 
+ __docformat__ = "epytext en"
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def mimic_wrap(lines, wrap_at=65, **kwargs):
+diff --git a/nltk/corpus/reader/indian.py b/nltk/corpus/reader/indian.py
+index 8c058dfc6..d1dfe6619 100644
+--- a/nltk/corpus/reader/indian.py
++++ b/nltk/corpus/reader/indian.py
+@@ -6,6 +6,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Indian Language POS-Tagged Corpus
+ Collected by A Kumaran, Microsoft Research, India
+diff --git a/nltk/corpus/reader/ipipan.py b/nltk/corpus/reader/ipipan.py
+index 939d80bbd..e53873ac8 100644
+--- a/nltk/corpus/reader/ipipan.py
++++ b/nltk/corpus/reader/ipipan.py
+@@ -9,6 +9,19 @@ import functools
+ 
+ from nltk.corpus.reader.api import CorpusReader
+ from nltk.corpus.reader.util import StreamBackedCorpusView, concat
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _parse_args(fun):
+diff --git a/nltk/corpus/reader/knbc.py b/nltk/corpus/reader/knbc.py
+index 01d795042..eb054b10e 100644
+--- a/nltk/corpus/reader/knbc.py
++++ b/nltk/corpus/reader/knbc.py
+@@ -122,6 +122,19 @@ class KNBCorpusReader(SyntaxCorpusReader):
+                 node["word"] = self.morphs2str(node["word"])
+ 
+         return dg.tree()
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/lin.py b/nltk/corpus/reader/lin.py
+index 88fa47b8f..8d753896f 100644
+--- a/nltk/corpus/reader/lin.py
++++ b/nltk/corpus/reader/lin.py
+@@ -151,6 +151,19 @@ class LinThesaurusCorpusReader(CorpusReader):
+             self._fileids,
+             False,
+         )
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/markdown.py b/nltk/corpus/reader/markdown.py
+index cf69a35cd..43c11b44c 100644
+--- a/nltk/corpus/reader/markdown.py
++++ b/nltk/corpus/reader/markdown.py
+@@ -5,6 +5,19 @@ from nltk.corpus.reader.api import CategorizedCorpusReader
+ from nltk.corpus.reader.plaintext import PlaintextCorpusReader
+ from nltk.corpus.reader.util import concat, read_blankline_block
+ from nltk.tokenize import blankline_tokenize, sent_tokenize, word_tokenize
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def comma_separated_string_args(func):
+diff --git a/nltk/corpus/reader/mte.py b/nltk/corpus/reader/mte.py
+index 8c39fb0e1..8d6a22dd7 100644
+--- a/nltk/corpus/reader/mte.py
++++ b/nltk/corpus/reader/mte.py
+@@ -8,6 +8,19 @@ from functools import reduce
+ 
+ from nltk.corpus.reader import TaggedCorpusReader, concat
+ from nltk.corpus.reader.xmldocs import XMLCorpusView
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def xpath(root, path, ns):
+diff --git a/nltk/corpus/reader/nkjp.py b/nltk/corpus/reader/nkjp.py
+index 8b0a2e266..d84bc2809 100644
+--- a/nltk/corpus/reader/nkjp.py
++++ b/nltk/corpus/reader/nkjp.py
+@@ -12,6 +12,19 @@ import tempfile
+ 
+ from nltk.corpus.reader.util import concat
+ from nltk.corpus.reader.xmldocs import XMLCorpusReader, XMLCorpusView
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _parse_args(fun):
+diff --git a/nltk/corpus/reader/nombank.py b/nltk/corpus/reader/nombank.py
+index b2c68f915..fe9698e86 100644
+--- a/nltk/corpus/reader/nombank.py
++++ b/nltk/corpus/reader/nombank.py
+@@ -6,6 +6,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ from functools import total_ordering
+ from xml.etree import ElementTree
+ 
+diff --git a/nltk/corpus/reader/nps_chat.py b/nltk/corpus/reader/nps_chat.py
+index a00c799a9..56d3c88dc 100644
+--- a/nltk/corpus/reader/nps_chat.py
++++ b/nltk/corpus/reader/nps_chat.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ import re
+ import textwrap
+ 
+diff --git a/nltk/corpus/reader/opinion_lexicon.py b/nltk/corpus/reader/opinion_lexicon.py
+index 964e400bb..171d2ccbd 100644
+--- a/nltk/corpus/reader/opinion_lexicon.py
++++ b/nltk/corpus/reader/opinion_lexicon.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ CorpusReader for the Opinion Lexicon.
+ 
+diff --git a/nltk/corpus/reader/panlex_lite.py b/nltk/corpus/reader/panlex_lite.py
+index c068d2879..4af09f09c 100644
+--- a/nltk/corpus/reader/panlex_lite.py
++++ b/nltk/corpus/reader/panlex_lite.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ CorpusReader for PanLex Lite, a stripped down version of PanLex distributed
+ as an SQLite database. See the README.txt in the panlex_lite corpus directory
+diff --git a/nltk/corpus/reader/panlex_swadesh.py b/nltk/corpus/reader/panlex_swadesh.py
+index 034669330..2cc1011b6 100644
+--- a/nltk/corpus/reader/panlex_swadesh.py
++++ b/nltk/corpus/reader/panlex_swadesh.py
+@@ -7,6 +7,19 @@
+ # For license information, see LICENSE.TXT
+ 
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ import re
+ from collections import defaultdict, namedtuple
+ 
+diff --git a/nltk/corpus/reader/pl196x.py b/nltk/corpus/reader/pl196x.py
+index f1623f3d6..f73bc724f 100644
+--- a/nltk/corpus/reader/pl196x.py
++++ b/nltk/corpus/reader/pl196x.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ from nltk.corpus.reader.api import *
+ from nltk.corpus.reader.xmldocs import XMLCorpusReader
+ 
+diff --git a/nltk/corpus/reader/plaintext.py b/nltk/corpus/reader/plaintext.py
+index 0acb256b6..eee5c70bc 100644
+--- a/nltk/corpus/reader/plaintext.py
++++ b/nltk/corpus/reader/plaintext.py
+@@ -7,6 +7,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ A reader for corpora that consist of plaintext documents.
+ """
+diff --git a/nltk/corpus/reader/propbank.py b/nltk/corpus/reader/propbank.py
+index f67b9e3c7..6fdbbcec1 100644
+--- a/nltk/corpus/reader/propbank.py
++++ b/nltk/corpus/reader/propbank.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ import re
+ from functools import total_ordering
+ from xml.etree import ElementTree
+diff --git a/nltk/corpus/reader/pros_cons.py b/nltk/corpus/reader/pros_cons.py
+index 396dfaf0e..86faf9041 100644
+--- a/nltk/corpus/reader/pros_cons.py
++++ b/nltk/corpus/reader/pros_cons.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ CorpusReader for the Pros and Cons dataset.
+ 
+diff --git a/nltk/corpus/reader/reviews.py b/nltk/corpus/reader/reviews.py
+index fdd495f95..3c2a97514 100644
+--- a/nltk/corpus/reader/reviews.py
++++ b/nltk/corpus/reader/reviews.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ CorpusReader for reviews corpora (syntax based on Customer Review Corpus).
+ 
+diff --git a/nltk/corpus/reader/semcor.py b/nltk/corpus/reader/semcor.py
+index 9f84dd0e4..47cc4b329 100644
+--- a/nltk/corpus/reader/semcor.py
++++ b/nltk/corpus/reader/semcor.py
+@@ -220,6 +220,19 @@ class SemcorCorpusReader(XMLCorpusReader):
+                     return bottom[0]
+                 else:
+                     return bottom  # chunk as a list
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _all_xmlwords_in(elt, result=None):
+diff --git a/nltk/corpus/reader/senseval.py b/nltk/corpus/reader/senseval.py
+index 38178b4a3..c61cb904f 100644
+--- a/nltk/corpus/reader/senseval.py
++++ b/nltk/corpus/reader/senseval.py
+@@ -156,6 +156,19 @@ class SensevalCorpusView(StreamBackedCorpusView):
+             else:
+                 assert False, "unexpected tag %s" % child.tag
+         return SensevalInstance(lexelt, position, context, senses)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _fixXML(text):
+diff --git a/nltk/corpus/reader/sentiwordnet.py b/nltk/corpus/reader/sentiwordnet.py
+index 38f095f58..f77c1a40d 100644
+--- a/nltk/corpus/reader/sentiwordnet.py
++++ b/nltk/corpus/reader/sentiwordnet.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ An NLTK interface for SentiWordNet
+ 
+diff --git a/nltk/corpus/reader/string_category.py b/nltk/corpus/reader/string_category.py
+index 192d6bfbe..85b39fffa 100644
+--- a/nltk/corpus/reader/string_category.py
++++ b/nltk/corpus/reader/string_category.py
+@@ -6,6 +6,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Read tuples from a corpus consisting of categorized strings.
+ For example, from the question classification corpus:
+diff --git a/nltk/corpus/reader/switchboard.py b/nltk/corpus/reader/switchboard.py
+index 3e3ecf0ed..8e35a1209 100644
+--- a/nltk/corpus/reader/switchboard.py
++++ b/nltk/corpus/reader/switchboard.py
+@@ -4,6 +4,19 @@
+ # Author: Edward Loper <edloper@gmail.com>
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ import re
+ 
+ from nltk.corpus.reader.api import *
+diff --git a/nltk/corpus/reader/tagged.py b/nltk/corpus/reader/tagged.py
+index 1f1c7221f..64f92fdd8 100644
+--- a/nltk/corpus/reader/tagged.py
++++ b/nltk/corpus/reader/tagged.py
+@@ -7,6 +7,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ A reader for corpora whose documents contain part-of-speech-tagged words.
+ """
+diff --git a/nltk/corpus/reader/timit.py b/nltk/corpus/reader/timit.py
+index cf258ba44..1ba3ee025 100644
+--- a/nltk/corpus/reader/timit.py
++++ b/nltk/corpus/reader/timit.py
+@@ -496,6 +496,19 @@ class SpeakerInfo:
+         attribs = "id sex dr use recdate birthdate ht race edu comments"
+         args = [f"{attr}={getattr(self, attr)!r}" for attr in attribs.split()]
+         return "SpeakerInfo(%s)" % (", ".join(args))
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def read_timit_block(stream):
+diff --git a/nltk/corpus/reader/twitter.py b/nltk/corpus/reader/twitter.py
+index 8a0004a19..2d41ae5fc 100644
+--- a/nltk/corpus/reader/twitter.py
++++ b/nltk/corpus/reader/twitter.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ A reader for corpora that consist of Tweets. It is assumed that the Tweets
+ have been serialised into line-delimited JSON.
+diff --git a/nltk/corpus/reader/udhr.py b/nltk/corpus/reader/udhr.py
+index b50aa4c0f..cb5f010c5 100644
+--- a/nltk/corpus/reader/udhr.py
++++ b/nltk/corpus/reader/udhr.py
+@@ -1,3 +1,16 @@
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ UDHR corpus reader. It mostly deals with encodings.
+ """
+diff --git a/nltk/corpus/reader/verbnet.py b/nltk/corpus/reader/verbnet.py
+index 4bea6aaac..64f7caa5c 100644
+--- a/nltk/corpus/reader/verbnet.py
++++ b/nltk/corpus/reader/verbnet.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ An NLTK interface to the VerbNet verb lexicon
+ 
+diff --git a/nltk/corpus/reader/wordnet.py b/nltk/corpus/reader/wordnet.py
+index f74006b90..71a9f6dcb 100644
+--- a/nltk/corpus/reader/wordnet.py
++++ b/nltk/corpus/reader/wordnet.py
+@@ -2367,6 +2367,19 @@ class WordNetICCorpusReader(CorpusReader):
+                 if value != 0:
+                     ic[pos][offset] = value
+         return ic
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/xmldocs.py b/nltk/corpus/reader/xmldocs.py
+index 67c4b9c73..f7cd640a2 100644
+--- a/nltk/corpus/reader/xmldocs.py
++++ b/nltk/corpus/reader/xmldocs.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Corpus reader for corpora whose documents are xml files.
+ 
+diff --git a/nltk/corpus/reader/ycoe.py b/nltk/corpus/reader/ycoe.py
+index db39538f2..098ddf062 100644
+--- a/nltk/corpus/reader/ycoe.py
++++ b/nltk/corpus/reader/ycoe.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Corpus reader for the York-Toronto-Helsinki Parsed Corpus of Old
+ English Prose (YCOE), a 1.5 million word syntactically-annotated
+diff --git a/nltk/data.py b/nltk/data.py
+index c65c69e82..8a122b23a 100644
+--- a/nltk/data.py
++++ b/nltk/data.py
+@@ -95,6 +95,19 @@ else:
+         "/usr/lib/nltk_data",
+         "/usr/local/lib/nltk_data",
+     ]
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ######################################################################
+diff --git a/nltk/downloader.py b/nltk/downloader.py
+index 3bd0b8d0d..122990e9d 100644
+--- a/nltk/downloader.py
++++ b/nltk/downloader.py
+@@ -2222,6 +2222,19 @@ class DownloaderGUI:
+         # Check the queue again after MONITOR_QUEUE_DELAY msec.
+         afterid = self.top.after(self._MONITOR_QUEUE_DELAY, self._monitor_message_queue)
+         self._afterid["_monitor_message_queue"] = afterid
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ######################################################################
+diff --git a/nltk/draw/table.py b/nltk/draw/table.py
+index e84a1593f..e6d731035 100644
+--- a/nltk/draw/table.py
++++ b/nltk/draw/table.py
+@@ -1124,6 +1124,19 @@ class Table:
+                 if self._reprfunc is not None:
+                     cell = self._reprfunc(i, j, cell)
+                 assert self._mlb.get(i)[j] == cell
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ######################################################################
+diff --git a/nltk/draw/tree.py b/nltk/draw/tree.py
+index b90fd6507..9626f575d 100644
+--- a/nltk/draw/tree.py
++++ b/nltk/draw/tree.py
+@@ -417,6 +417,19 @@ class TreeSegmentWidget(CanvasWidget):
+ 
+     def __repr__(self):
+         return f"[TreeSeg {self._label}: {self._subtrees}]"
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _tree_to_treeseg(
+diff --git a/nltk/draw/util.py b/nltk/draw/util.py
+index 111f5e7e2..34b946cd7 100644
+--- a/nltk/draw/util.py
++++ b/nltk/draw/util.py
+@@ -2512,6 +2512,19 @@ class MutableOptionMenu(Menubutton):
+         """Destroy this widget and the associated menu."""
+         Menubutton.destroy(self)
+         self._menu = None
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/featstruct.py b/nltk/featstruct.py
+index d6c339a98..d9dee159f 100644
+--- a/nltk/featstruct.py
++++ b/nltk/featstruct.py
+@@ -569,6 +569,19 @@ class FeatStruct(SubstituteBindingsI):
+ # Mutation: disable if frozen.
+ _FROZEN_ERROR = "Frozen FeatStructs may not be modified."
+ _FROZEN_NOTICE = "\n%sIf self is frozen, raise ValueError."
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _check_frozen(method, indent=""):
+diff --git a/nltk/grammar.py b/nltk/grammar.py
+index 1a0137172..2e46e09bb 100644
+--- a/nltk/grammar.py
++++ b/nltk/grammar.py
+@@ -189,6 +189,19 @@ class Nonterminal:
+         :rtype: Nonterminal
+         """
+         return self.__div__(rhs)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def nonterminals(symbols):
+diff --git a/nltk/inference/api.py b/nltk/inference/api.py
+index 93c513f22..b08c641e6 100644
+--- a/nltk/inference/api.py
++++ b/nltk/inference/api.py
+@@ -6,6 +6,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Interfaces and base classes for theorem provers and model builders.
+ 
+diff --git a/nltk/inference/mace.py b/nltk/inference/mace.py
+index 370abbd27..054261523 100644
+--- a/nltk/inference/mace.py
++++ b/nltk/inference/mace.py
+@@ -267,6 +267,19 @@ class Mace(Prover9Parent, ModelBuilder):
+         updated_input_str += input_str
+ 
+         return self._call(updated_input_str, self._mace4_bin, args, verbose)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def spacer(num=30):
+diff --git a/nltk/inference/prover9.py b/nltk/inference/prover9.py
+index f379325ae..b10824945 100644
+--- a/nltk/inference/prover9.py
++++ b/nltk/inference/prover9.py
+@@ -217,6 +217,19 @@ class Prover9Parent:
+                 print("stderr:\n", stderr, "\n")
+ 
+         return (stdout.decode("utf-8"), p.returncode)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def convert_to_prover9(input):
+diff --git a/nltk/inference/resolution.py b/nltk/inference/resolution.py
+index fd7362068..003d0d1af 100755
+--- a/nltk/inference/resolution.py
++++ b/nltk/inference/resolution.py
+@@ -335,6 +335,19 @@ class Clause(list):
+ 
+     def __repr__(self):
+         return "%s" % self
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _iterate_first(first, second, bindings, used, skipped, finalize_method, debug):
+diff --git a/nltk/inference/tableau.py b/nltk/inference/tableau.py
+index 7fb005e9b..66394c185 100644
+--- a/nltk/inference/tableau.py
++++ b/nltk/inference/tableau.py
+@@ -622,6 +622,19 @@ class Categories:
+     EQ = 18
+     EXISTS = 19
+     ALL = 20
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def testTableauProver():
+diff --git a/nltk/internals.py b/nltk/internals.py
+index 566668578..bbefa6c69 100644
+--- a/nltk/internals.py
++++ b/nltk/internals.py
+@@ -25,6 +25,19 @@ from xml.etree import ElementTree
+ 
+ _java_bin = None
+ _java_options = []
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ # [xx] add classpath option to config_java?
+diff --git a/nltk/lm/models.py b/nltk/lm/models.py
+index 3a9dcbee1..9ba57986c 100644
+--- a/nltk/lm/models.py
++++ b/nltk/lm/models.py
+@@ -5,6 +5,19 @@
+ #         Manu Joseph <manujosephv@gmail.com>
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """Language Models"""
+ 
+ from nltk.lm.api import LanguageModel, Smoothing
+diff --git a/nltk/lm/smoothing.py b/nltk/lm/smoothing.py
+index d1b8941ef..e242dcb16 100644
+--- a/nltk/lm/smoothing.py
++++ b/nltk/lm/smoothing.py
+@@ -14,6 +14,19 @@ from operator import methodcaller
+ 
+ from nltk.lm.api import Smoothing
+ from nltk.probability import ConditionalFreqDist
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _count_values_gt_zero(distribution):
+diff --git a/nltk/parse/chart.py b/nltk/parse/chart.py
+index 0e0ce174a..0af8a76af 100644
+--- a/nltk/parse/chart.py
++++ b/nltk/parse/chart.py
+@@ -1295,6 +1295,19 @@ class FilteredBottomUpPredictCombineRule(BottomUpPredictCombineRule):
+                 new_edge = TreeEdge(edge.span(), prod.lhs(), prod.rhs(), 1)
+                 if chart.insert(new_edge, (edge,)):
+                     yield new_edge
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _bottomup_filter(grammar, nexttoken, rhs, dot=0):
+diff --git a/nltk/parse/earleychart.py b/nltk/parse/earleychart.py
+index 226c3ebb0..ed1a4d159 100644
+--- a/nltk/parse/earleychart.py
++++ b/nltk/parse/earleychart.py
+@@ -493,6 +493,19 @@ class FeatureIncrementalBottomUpLeftCornerChartParser(FeatureIncrementalChartPar
+         FeatureIncrementalChartParser.__init__(
+             self, grammar, BU_LC_INCREMENTAL_FEATURE_STRATEGY, **parser_args
+         )
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ # ////////////////////////////////////////////////////////////
+diff --git a/nltk/parse/featurechart.py b/nltk/parse/featurechart.py
+index c9e0f7ed5..0a2883f12 100644
+--- a/nltk/parse/featurechart.py
++++ b/nltk/parse/featurechart.py
+@@ -581,6 +581,19 @@ class InstantiateVarsChart(FeatureChart):
+             for var in edge.lhs().variables()
+             if var.name.startswith("@")
+         }
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ # ////////////////////////////////////////////////////////////
+diff --git a/nltk/parse/pchart.py b/nltk/parse/pchart.py
+index ec0e350b3..625231cd7 100644
+--- a/nltk/parse/pchart.py
++++ b/nltk/parse/pchart.py
+@@ -420,6 +420,19 @@ class LongestChartParser(BottomUpProbabilisticChartParser):
+     # Inherit constructor
+     def sort_queue(self, queue, chart):
+         queue.sort(key=lambda edge: edge.length())
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/recursivedescent.py b/nltk/parse/recursivedescent.py
+index d0452ca43..81ef87699 100644
+--- a/nltk/parse/recursivedescent.py
++++ b/nltk/parse/recursivedescent.py
+@@ -643,6 +643,19 @@ class SteppingRecursiveDescentParser(RecursiveDescentParser):
+         :type grammar: CFG
+         """
+         self._grammar = grammar
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/shiftreduce.py b/nltk/parse/shiftreduce.py
+index 34e8628d9..3e35be724 100644
+--- a/nltk/parse/shiftreduce.py
++++ b/nltk/parse/shiftreduce.py
+@@ -439,6 +439,19 @@ class SteppingShiftReduceParser(ShiftReduceParser):
+         :type grammar: CFG
+         """
+         self._grammar = grammar
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/stanford.py b/nltk/parse/stanford.py
+index 030c8404b..76328ca1b 100644
+--- a/nltk/parse/stanford.py
++++ b/nltk/parse/stanford.py
+@@ -6,6 +6,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ import os
+ import tempfile
+ import warnings
+diff --git a/nltk/probability.py b/nltk/probability.py
+index fffe1478f..f719652d6 100755
+--- a/nltk/probability.py
++++ b/nltk/probability.py
+@@ -1804,6 +1804,19 @@ class KneserNeyProbDist(ProbDistI):
+         :rtype: str
+         """
+         return f"<KneserNeyProbDist based on {self._trigrams.N()} trigrams"
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/sem/boxer.py b/nltk/sem/boxer.py
+index 101bb0792..b1d6de5c4 100644
+--- a/nltk/sem/boxer.py
++++ b/nltk/sem/boxer.py
+@@ -7,6 +7,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ An interface to Boxer.
+ 
+diff --git a/nltk/sem/drt.py b/nltk/sem/drt.py
+index ea69c5c6e..e837decfa 100644
+--- a/nltk/sem/drt.py
++++ b/nltk/sem/drt.py
+@@ -541,6 +541,19 @@ class DRS(DrtExpression, Expression):
+                 + DrtTokens.CLOSE
+             )
+         return drs
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def DrtVariableExpression(variable):
+diff --git a/nltk/sem/evaluate.py b/nltk/sem/evaluate.py
+index 304ae2c3f..2a172716e 100644
+--- a/nltk/sem/evaluate.py
++++ b/nltk/sem/evaluate.py
+@@ -47,6 +47,19 @@ class Error(Exception):
+ 
+ class Undefined(Error):
+     pass
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def trace(f, *args, **kw):
+diff --git a/nltk/sem/glue.py b/nltk/sem/glue.py
+index 9db2034aa..085cccd88 100644
+--- a/nltk/sem/glue.py
++++ b/nltk/sem/glue.py
+@@ -779,6 +779,19 @@ class DrtGlue(Glue):
+ 
+     def get_glue_dict(self):
+         return DrtGlueDict(self.semtype_file)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def demo(show_example=-1):
+diff --git a/nltk/sem/linearlogic.py b/nltk/sem/linearlogic.py
+index 8ca29aa1f..4dd7802e9 100644
+--- a/nltk/sem/linearlogic.py
++++ b/nltk/sem/linearlogic.py
+@@ -462,6 +462,19 @@ class UnificationException(Exception):
+ 
+ class LinearLogicApplicationException(Exception):
+     pass
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def demo():
+diff --git a/nltk/sem/logic.py b/nltk/sem/logic.py
+index 816a04585..cf93deb49 100644
+--- a/nltk/sem/logic.py
++++ b/nltk/sem/logic.py
+@@ -67,6 +67,19 @@ class Tokens:
+ 
+     # Special
+     SYMBOLS = [x for x in TOKENS if re.match(r"^[-\\.(),!&^|>=<]*$", x)]
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def boolean_ops():
+diff --git a/nltk/stem/snowball.py b/nltk/stem/snowball.py
+index 06ed5bbe3..505ff01a5 100644
+--- a/nltk/stem/snowball.py
++++ b/nltk/stem/snowball.py
+@@ -5844,6 +5844,19 @@ class SwedishStemmer(_ScandinavianStemmer):
+                 break
+ 
+         return word
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def demo():
+diff --git a/nltk/tag/senna.py b/nltk/tag/senna.py
+index e423e1ee6..a67ef77c9 100644
+--- a/nltk/tag/senna.py
++++ b/nltk/tag/senna.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Senna POS tagger, NER Tagger, Chunk Tagger
+ 
+diff --git a/nltk/tag/sequential.py b/nltk/tag/sequential.py
+index 2bd539d5b..372bf9ab9 100644
+--- a/nltk/tag/sequential.py
++++ b/nltk/tag/sequential.py
+@@ -7,6 +7,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Classes for tagging sentences sequentially, left to right.  The
+ abstract base class SequentialBackoffTagger serves as the base
+diff --git a/nltk/tag/stanford.py b/nltk/tag/stanford.py
+index 9f74ebb7b..23a388955 100644
+--- a/nltk/tag/stanford.py
++++ b/nltk/tag/stanford.py
+@@ -6,6 +6,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ A module for interfacing with the Stanford taggers.
+ 
+diff --git a/nltk/tbl/rule.py b/nltk/tbl/rule.py
+index a85e0ebe3..fe87fe920 100644
+--- a/nltk/tbl/rule.py
++++ b/nltk/tbl/rule.py
+@@ -7,6 +7,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see  LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ from abc import ABCMeta, abstractmethod
+ 
+ from nltk import jsontags
+diff --git a/nltk/text.py b/nltk/text.py
+index fae2ffa9a..afea7a0bb 100644
+--- a/nltk/text.py
++++ b/nltk/text.py
+@@ -740,6 +740,19 @@ class TextCollection(Text):
+ 
+     def tf_idf(self, term, text):
+         return self.tf(term, text) * self.idf(term)
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def demo():
+diff --git a/nltk/tokenize/punkt.py b/nltk/tokenize/punkt.py
+index 877b79dd2..89fe0f8b1 100644
+--- a/nltk/tokenize/punkt.py
++++ b/nltk/tokenize/punkt.py
+@@ -299,6 +299,19 @@ class PunktLanguageVars:
+ _re_non_punct = re.compile(r"[^\W\d]", re.UNICODE)
+ """Matches token types that are not merely punctuation. (Types for
+ numeric tokens are changed to ##number## and hence contain alpha.)"""
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ # }
+diff --git a/nltk/tokenize/regexp.py b/nltk/tokenize/regexp.py
+index f8ab28df4..d68a07bbd 100644
+--- a/nltk/tokenize/regexp.py
++++ b/nltk/tokenize/regexp.py
+@@ -194,6 +194,19 @@ class WordPunctTokenizer(RegexpTokenizer):
+ 
+     def __init__(self):
+         RegexpTokenizer.__init__(self, r"\w+|[^\w\s]+")
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ ######################################################################
+diff --git a/nltk/toolbox.py b/nltk/toolbox.py
+index a1d01c253..bd8252da6 100644
+--- a/nltk/toolbox.py
++++ b/nltk/toolbox.py
+@@ -269,6 +269,19 @@ class ToolboxData(StandardFormat):
+ 
+ 
+ _is_value = re.compile(r"\S")
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def to_sfm_string(tree, encoding=None, errors="strict", unicode_fields=None):
+diff --git a/nltk/translate/ibm1.py b/nltk/translate/ibm1.py
+index c278f04d6..11f1a39e5 100644
+--- a/nltk/translate/ibm1.py
++++ b/nltk/translate/ibm1.py
+@@ -11,6 +11,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Lexical translation model that ignores word order.
+ 
+diff --git a/nltk/translate/ibm2.py b/nltk/translate/ibm2.py
+index e85586e79..16aba45ea 100644
+--- a/nltk/translate/ibm2.py
++++ b/nltk/translate/ibm2.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Lexical translation model that considers word order.
+ 
+diff --git a/nltk/translate/ibm3.py b/nltk/translate/ibm3.py
+index 3adaabfa3..dcb8341ad 100644
+--- a/nltk/translate/ibm3.py
++++ b/nltk/translate/ibm3.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Translation model that considers how a word can be aligned to
+ multiple words in another language.
+diff --git a/nltk/translate/ibm4.py b/nltk/translate/ibm4.py
+index 35e6ffcd2..f70ff58f2 100644
+--- a/nltk/translate/ibm4.py
++++ b/nltk/translate/ibm4.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Translation model that reorders output words based on their type and
+ distance from other related words in the output sentence.
+diff --git a/nltk/translate/ibm5.py b/nltk/translate/ibm5.py
+index 9b9721695..897042ba4 100644
+--- a/nltk/translate/ibm5.py
++++ b/nltk/translate/ibm5.py
+@@ -5,6 +5,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ Translation model that keeps track of vacant positions in the target
+ sentence to decide where to place translated words.
+diff --git a/nltk/tree/immutable.py b/nltk/tree/immutable.py
+index ba4c3e464..bdb0f7336 100644
+--- a/nltk/tree/immutable.py
++++ b/nltk/tree/immutable.py
+@@ -8,6 +8,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ from nltk.probability import ProbabilisticMixIn
+ from nltk.tree.parented import MultiParentedTree, ParentedTree
+ from nltk.tree.tree import Tree
+diff --git a/nltk/tree/parented.py b/nltk/tree/parented.py
+index fd6656320..578c025d0 100644
+--- a/nltk/tree/parented.py
++++ b/nltk/tree/parented.py
+@@ -8,6 +8,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ import warnings
+ from abc import ABCMeta, abstractmethod
+ 
+diff --git a/nltk/tree/probabilistic.py b/nltk/tree/probabilistic.py
+index a258aa290..c5ecab493 100644
+--- a/nltk/tree/probabilistic.py
++++ b/nltk/tree/probabilistic.py
+@@ -9,6 +9,19 @@
+ # For license information, see LICENSE.TXT
+ 
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ from nltk.internals import raise_unorderable_types
+ from nltk.probability import ProbabilisticMixIn
+ from nltk.tree.immutable import ImmutableProbabilisticTree
+diff --git a/nltk/tree/tree.py b/nltk/tree/tree.py
+index b951786c7..ffc8efd52 100644
+--- a/nltk/tree/tree.py
++++ b/nltk/tree/tree.py
+@@ -888,6 +888,19 @@ class Tree(list):
+                 " ".join(childstrs),
+                 parens[1],
+             )
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ 
+ def _child_names(tree):
+diff --git a/nltk/twitter/api.py b/nltk/twitter/api.py
+index 85758c9cf..b12c3eae9 100644
+--- a/nltk/twitter/api.py
++++ b/nltk/twitter/api.py
+@@ -6,6 +6,19 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ This module provides an interface for TweetHandlers, and support for timezone
+ handling.
+diff --git a/nltk/twitter/twitterclient.py b/nltk/twitter/twitterclient.py
+index 99eae2941..6e2c29a6d 100644
+--- a/nltk/twitter/twitterclient.py
++++ b/nltk/twitter/twitterclient.py
+@@ -7,6 +7,19 @@
+ # For license information, see LICENSE.TXT
+ 
+ 
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ """
+ NLTK Twitter client
+ 
+diff --git a/nltk/util.py b/nltk/util.py
+index 411e3132f..a6092024a 100644
+--- a/nltk/util.py
++++ b/nltk/util.py
+@@ -28,6 +28,19 @@ from urllib.request import (
+ 
+ from nltk.collections import *
+ from nltk.internals import deprecated, raise_unorderable_types, slice_bounds
++class DataParams___init___208:
++    def __init__(self, fileid, encoding, tagged, group_by_sent, group_by_para, chunked, str2chunktree, sent_tokenizer, para_block_reader, source_tagset = None, target_tagset = None):
++        self.fileid = fileid
++        self.encoding = encoding
++        self.tagged = tagged
++        self.group_by_sent = group_by_sent
++        self.group_by_para = group_by_para
++        self.chunked = chunked
++        self.str2chunktree = str2chunktree
++        self.sent_tokenizer = sent_tokenizer
++        self.para_block_reader = para_block_reader
++        self.source_tagset = source_tagset
++        self.target_tagset = target_tagset
+ 
+ ######################################################################
+ # Short usage message

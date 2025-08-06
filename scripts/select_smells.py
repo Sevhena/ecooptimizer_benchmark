@@ -239,6 +239,7 @@ def get_covered_smells_file(repo: str):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo", type=str, help="Filter smells for a specific repo only")
+    parser.add_argument("--all", action="store_true", help="Process all selected repos")
     args = parser.parse_args()
 
     setup_logging()
@@ -249,7 +250,7 @@ def main():
     with SELECTED_CONFIG_PATH.open() as f:
         selected_config: dict = yaml.safe_load(f)
 
-    selected_repos: list[str] | None = selected_config.get("repos")
+    selected_repos: list[str] | None = selected_config.get("repos", [])
     if not args.repo and not selected_repos:
         logging.warning(
             f"No selected repos found in {SELECTED_CONFIG_PATH.relative_to(Path())}."
@@ -257,6 +258,7 @@ def main():
         )
         sys.exit(0)
 
+    processed_repos = selected_config.get("smells", {}).keys()
     if args.repo:
         covered_smells_file = get_covered_smells_file(args.repo)
 
@@ -270,7 +272,13 @@ def main():
 
     else:
         uncovered_repos = []
-        for repo in selected_repos:
+        for repo in selected_repos:  # type: ignore
+            if not args.all and repo in processed_repos:
+                logging.debug(
+                    f"Skipping {repo} as it has already been processed. Add --all to process all selected repos."
+                )
+                continue
+
             covered_smells_file = get_covered_smells_file(repo)
 
             if not covered_smells_file:

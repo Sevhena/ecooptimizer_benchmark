@@ -1,0 +1,22 @@
+diff --git a/nltk/tag/brill_trainer.py b/nltk/tag/brill_trainer.py
+index cfcf22855..ec62261bd 100644
+--- a/nltk/tag/brill_trainer.py
++++ b/nltk/tag/brill_trainer.py
+@@ -12,6 +12,7 @@ import textwrap
+ from collections import defaultdict
+ 
+ from nltk.tag import BrillTagger, untag
++from codecarbon import EmissionsTracker
+ 
+ ######################################################################
+ #  Brill Tagger Trainer
+@@ -349,7 +350,8 @@ class BrillTaggerTrainer:
+                 self._tag_positions[tag].append((sentnum, wordnum))
+ 
+                 # If it's an error token, update the rule-related mappings.
+-                correct_tag = train_sents[sentnum][wordnum][1]
++                with EmissionsTracker(project_name='nltk-benchmark', experiment_id='nltk_LEC001_34433d6e', output_file='/root/ecooptimizer_benchmark/emissions/nltk/long-element-chain/34433d6e.csv') as tracker:
++                    correct_tag = train_sents[sentnum][wordnum][1]
+                 if tag != correct_tag:
+                     for rule in self._find_rules(sent, wordnum, correct_tag):
+                         self._update_rule_applies(rule, sentnum, wordnum, train_sents)

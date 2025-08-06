@@ -1,0 +1,20 @@
+diff --git a/nltk/corpus/reader/propbank.py b/nltk/corpus/reader/propbank.py
+index f67b9e3c7..ee5154e65 100644
+--- a/nltk/corpus/reader/propbank.py
++++ b/nltk/corpus/reader/propbank.py
+@@ -13,6 +13,7 @@ from nltk.corpus.reader.api import *
+ from nltk.corpus.reader.util import *
+ from nltk.internals import raise_unorderable_types
+ from nltk.tree import Tree
++from codecarbon import track_emissions
+ 
+ 
+ class PropbankCorpusReader(CorpusReader):
+@@ -164,6 +165,7 @@ class PropbankCorpusReader(CorpusReader):
+ 
+ 
+ class PropbankInstance:
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_b204cbeb', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/b204cbeb.csv')
+     def __init__(
+         self,
+         fileid,

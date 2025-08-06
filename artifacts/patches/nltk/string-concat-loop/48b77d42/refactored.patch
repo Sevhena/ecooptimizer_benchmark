@@ -1,0 +1,55 @@
+diff --git a/nltk/util.py b/nltk/util.py
+index 411e3132f..eeeca5517 100644
+--- a/nltk/util.py
++++ b/nltk/util.py
+@@ -28,6 +28,7 @@ from urllib.request import (
+ 
+ from nltk.collections import *
+ from nltk.internals import deprecated, raise_unorderable_types, slice_bounds
++from codecarbon import EmissionsTracker
+ 
+ ######################################################################
+ # Short usage message
+@@ -155,21 +156,23 @@ def cut_string(s, width=70):
+     """
+     chars_sofar = 0
+     width_sofar = 0
+-    result = ""
++    result = []
+ 
+     abs_width = abs(width)
+     max_chars = len(s)
+-    while width_sofar < abs_width and chars_sofar < max_chars:
+-        if width < 0:
+-            char = s[-(chars_sofar + 1)]
+-            result = char + result
+-        else:
+-            char = s[chars_sofar]
+-            result = result + char
+-
+-        chars_sofar += 1
+-        if not unicodedata.combining(char):
+-            width_sofar += 1
++    with EmissionsTracker(project_name='nltk-benchmark', experiment_id='nltk_SCL001_48b77d42', output_file='/root/ecooptimizer_benchmark/emissions/nltk/string-concat-loop/48b77d42_refactored.csv') as tracker:
++        while width_sofar < abs_width and chars_sofar < max_chars:
++            if width < 0:
++                char = s[-(chars_sofar + 1)]
++                result.insert(0, char)
++            else:
++                char = s[chars_sofar]
++                result.append(char)
++    
++            chars_sofar += 1
++            if not unicodedata.combining(char):
++                width_sofar += 1
++        result = ''.join(result)
+ 
+     return result
+ 
+@@ -1303,4 +1306,4 @@ def parallelize_preprocess(func, iterator, processes, progress_bar=False):
+     iterator = tqdm(iterator) if progress_bar else iterator
+     if processes <= 1:
+         return map(func, iterator)
+-    return Parallel(n_jobs=processes)(delayed(func)(line) for line in iterator)
++    return Parallel(n_jobs=processes)(delayed(func)(line) for line in iterator)
+\ No newline at end of file

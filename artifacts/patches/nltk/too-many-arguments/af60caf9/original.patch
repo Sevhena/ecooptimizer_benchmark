@@ -1,0 +1,17 @@
+diff --git a/nltk/corpus/reader/chunked.py b/nltk/corpus/reader/chunked.py
+index dbf5b2d64..048c1c79f 100644
+--- a/nltk/corpus/reader/chunked.py
++++ b/nltk/corpus/reader/chunked.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Natural Language Toolkit: Chunked Corpus Reader
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -203,6 +204,7 @@ class ChunkedCorpusReader(CorpusReader):
+ 
+ 
+ class ChunkedCorpusView(StreamBackedCorpusView):
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_af60caf9', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/af60caf9.csv')
+     def __init__(
+         self,
+         fileid,

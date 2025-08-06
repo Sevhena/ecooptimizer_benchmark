@@ -1,0 +1,34 @@
+{
+  "d6424519": {
+    "additionalInfo": {
+      "callString": "self.fetch()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d6424519",
+    "message": "Repeated function call detected (2/2). Consider caching the result: self.fetch()",
+    "messageId": "CRC001",
+    "module": "glances_hddtemp",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 15,
+        "endColumn": 27,
+        "endLine": 89,
+        "line": 89
+      }
+    ],
+    "path": "glances/plugins/sensors/sensor/glances_hddtemp.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/glances/glances/plugins/sensors/sensor/glances_hddtemp.py"
+  }
+}

@@ -1,0 +1,1116 @@
+{
+  "da310a76": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "da310a76",
+    "message": "Too many arguments (8/6)",
+    "messageId": "R0913",
+    "module": "nltk.translate.meteor_score",
+    "obj": "meteor_score",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 16,
+        "endLine": 347,
+        "line": 347
+      }
+    ],
+    "path": "nltk/translate/meteor_score.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/translate/meteor_score.py"
+  },
+  "b204cbeb": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b204cbeb",
+    "message": "Too many arguments (10/6)",
+    "messageId": "R0913",
+    "module": "nltk.corpus.reader.propbank",
+    "obj": "PropbankInstance.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 167,
+        "line": 167
+      }
+    ],
+    "path": "nltk/corpus/reader/propbank.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/propbank.py"
+  },
+  "b5b4159e": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b5b4159e",
+    "message": "Too many arguments (19/6)",
+    "messageId": "R0913",
+    "module": "nltk.tbl.demo",
+    "obj": "postag",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 10,
+        "endLine": 140,
+        "line": 140
+      }
+    ],
+    "path": "nltk/tbl/demo.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/tbl/demo.py"
+  },
+  "af60caf9": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "af60caf9",
+    "message": "Too many arguments (12/6)",
+    "messageId": "R0913",
+    "module": "nltk.corpus.reader.chunked",
+    "obj": "ChunkedCorpusView.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 206,
+        "line": 206
+      }
+    ],
+    "path": "nltk/corpus/reader/chunked.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/chunked.py"
+  },
+  "d0520f88": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d0520f88",
+    "message": "Too many arguments (11/6)",
+    "messageId": "R0913",
+    "module": "nltk.corpus.reader.timit",
+    "obj": "SpeakerInfo.__init__",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 16,
+        "endLine": 481,
+        "line": 481
+      }
+    ],
+    "path": "nltk/corpus/reader/timit.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/timit.py"
+  },
+  "1b71d437": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "1b71d437",
+    "message": "Too many arguments (9/6)",
+    "messageId": "R0913",
+    "module": "nltk.featstruct",
+    "obj": "_unify_feature_values",
+    "occurences": [
+      {
+        "column": 0,
+        "endColumn": 25,
+        "endLine": 1578,
+        "line": 1578
+      }
+    ],
+    "path": "nltk/featstruct.py",
+    "symbol": "too-many-arguments",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/featstruct.py"
+  },
+  "8d602184": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8d602184",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "nltk.corpus.reader.rte",
+    "obj": "RTECorpusReader._read_etree",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 19,
+        "endLine": 119,
+        "line": 119
+      }
+    ],
+    "path": "nltk/corpus/reader/rte.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/rte.py"
+  },
+  "a2439c22": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "a2439c22",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "nltk.stem.isri",
+    "obj": "ISRIStemmer.pro_w64",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 15,
+        "endLine": 366,
+        "line": 366
+      }
+    ],
+    "path": "nltk/stem/isri.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/stem/isri.py"
+  },
+  "2c324e25": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "2c324e25",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "nltk.corpus.reader.childes",
+    "obj": "CHILDESCorpusReader._get_participants",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 25,
+        "endLine": 234,
+        "line": 234
+      }
+    ],
+    "path": "nltk/corpus/reader/childes.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/childes.py"
+  },
+  "051b05d3": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "051b05d3",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "nltk.corpus.reader.senseval",
+    "obj": "SensevalCorpusReader._entry",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 14,
+        "endLine": 58,
+        "line": 58
+      }
+    ],
+    "path": "nltk/corpus/reader/senseval.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/senseval.py"
+  },
+  "46291afa": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "46291afa",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "nltk.corpus.reader.bcp47",
+    "obj": "BCP47CorpusReader.wiki_dict",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 17,
+        "endLine": 49,
+        "line": 49
+      }
+    ],
+    "path": "nltk/corpus/reader/bcp47.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/bcp47.py"
+  },
+  "71c59f1b": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "INFERENCE",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": true,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "71c59f1b",
+    "message": "Method could be a function",
+    "messageId": "R6301",
+    "module": "nltk.tag.tnt",
+    "obj": "TnT._safe_div",
+    "occurences": [
+      {
+        "column": 4,
+        "endColumn": 17,
+        "endLine": 254,
+        "line": 254
+      }
+    ],
+    "path": "nltk/tag/tnt.py",
+    "symbol": "no-self-use",
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/tag/tnt.py"
+  },
+  "9d87a23d": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "9d87a23d",
+    "message": "Dictionary chain too long (3/3)",
+    "messageId": "LEC001",
+    "module": "brill_trainer",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 19,
+        "endColumn": 50,
+        "endLine": 495,
+        "line": 495
+      }
+    ],
+    "path": "nltk/tag/brill_trainer.py",
+    "symbol": "long-element-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/tag/brill_trainer.py"
+  },
+  "6f7d9659": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "6f7d9659",
+    "message": "Dictionary chain too long (4/3)",
+    "messageId": "LEC001",
+    "module": "dependencygraph",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 27,
+        "endColumn": 71,
+        "endLine": 372,
+        "line": 372
+      }
+    ],
+    "path": "nltk/parse/dependencygraph.py",
+    "symbol": "long-element-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/parse/dependencygraph.py"
+  },
+  "34433d6e": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "34433d6e",
+    "message": "Dictionary chain too long (3/3)",
+    "messageId": "LEC001",
+    "module": "brill_trainer",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 30,
+        "endColumn": 62,
+        "endLine": 352,
+        "line": 352
+      }
+    ],
+    "path": "nltk/tag/brill_trainer.py",
+    "symbol": "long-element-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/tag/brill_trainer.py"
+  },
+  "b2a75b92": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b2a75b92",
+    "message": "Dictionary chain too long (3/3)",
+    "messageId": "LEC001",
+    "module": "ibm4",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 23,
+        "endColumn": 80,
+        "endLine": 419,
+        "line": 419
+      }
+    ],
+    "path": "nltk/translate/ibm4.py",
+    "symbol": "long-element-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/translate/ibm4.py"
+  },
+  "0a0acf96": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "0a0acf96",
+    "message": "Dictionary chain too long (3/3)",
+    "messageId": "LEC001",
+    "module": "wordnet",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 38,
+        "endColumn": 25,
+        "endLine": 2234,
+        "line": 2232
+      }
+    ],
+    "path": "nltk/corpus/reader/wordnet.py",
+    "symbol": "long-element-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/wordnet.py"
+  },
+  "d7ac9f6a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "d7ac9f6a",
+    "message": "Dictionary chain too long (3/3)",
+    "messageId": "LEC001",
+    "module": "mapping",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 8,
+        "endColumn": 44,
+        "endLine": 76,
+        "line": 76
+      }
+    ],
+    "path": "nltk/tag/mapping.py",
+    "symbol": "long-element-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/tag/mapping.py"
+  },
+  "9a30e539": {
+    "additionalInfo": {
+      "callString": "defaultdict(lambda : initial_prob)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 4
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "9a30e539",
+    "message": "Repeated function call detected (4/2). Consider caching the result: defaultdict(lambda : initial_prob)",
+    "messageId": "CRC001",
+    "module": "ibm5",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 53,
+        "endColumn": 86,
+        "endLine": 301,
+        "line": 301
+      },
+      {
+        "column": 60,
+        "endColumn": 17,
+        "endLine": 304,
+        "line": 302
+      },
+      {
+        "column": 57,
+        "endColumn": 17,
+        "endLine": 307,
+        "line": 305
+      },
+      {
+        "column": 64,
+        "endColumn": 17,
+        "endLine": 310,
+        "line": 308
+      }
+    ],
+    "path": "nltk/translate/ibm5.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/translate/ibm5.py"
+  },
+  "589c9687": {
+    "additionalInfo": {
+      "callString": "len(cells)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "589c9687",
+    "message": "Repeated function call detected (2/2). Consider caching the result: len(cells)",
+    "messageId": "CRC001",
+    "module": "dependencygraph",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 30,
+        "endColumn": 40,
+        "endLine": 323,
+        "line": 323
+      },
+      {
+        "column": 38,
+        "endColumn": 48,
+        "endLine": 325,
+        "line": 325
+      }
+    ],
+    "path": "nltk/parse/dependencygraph.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/parse/dependencygraph.py"
+  },
+  "3e29c8f8": {
+    "additionalInfo": {
+      "callString": "defaultdict(lambda : initial_prob)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 4
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "3e29c8f8",
+    "message": "Repeated function call detected (4/2). Consider caching the result: defaultdict(lambda : initial_prob)",
+    "messageId": "CRC001",
+    "module": "ibm4",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 49,
+        "endColumn": 82,
+        "endLine": 288,
+        "line": 288
+      },
+      {
+        "column": 50,
+        "endColumn": 83,
+        "endLine": 289,
+        "line": 289
+      }
+    ],
+    "path": "nltk/translate/ibm4.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/translate/ibm4.py"
+  },
+  "f231c8eb": {
+    "additionalInfo": {
+      "callString": "MaxentClassifier.train(featurized_train_set, algorithm)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "f231c8eb",
+    "message": "Repeated function call detected (2/2). Consider caching the result: MaxentClassifier.train(featurized_train_set, algorithm)",
+    "messageId": "CRC001",
+    "module": "rte_classify",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 14,
+        "endColumn": 69,
+        "endLine": 173,
+        "line": 173
+      }
+    ],
+    "path": "nltk/classify/rte_classify.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/classify/rte_classify.py"
+  },
+  "fedfc443": {
+    "additionalInfo": {
+      "callString": "len(mapping)",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 2
+    },
+    "confidence": "MEDIUM",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "fedfc443",
+    "message": "Repeated function call detected (2/2). Consider caching the result: len(mapping)",
+    "messageId": "CRC001",
+    "module": "maxent",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 23,
+        "endColumn": 35,
+        "endLine": 546,
+        "line": 546
+      },
+      {
+        "column": 46,
+        "endColumn": 58,
+        "endLine": 534,
+        "line": 534
+      }
+    ],
+    "path": "nltk/classify/maxent.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/classify/maxent.py"
+  },
+  "eabe9169": {
+    "additionalInfo": {
+      "callString": "_next_token()",
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": 8
+    },
+    "confidence": "HIGH",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "eabe9169",
+    "message": "Repeated function call detected (8/2). Consider caching the result: _next_token()",
+    "messageId": "CRC001",
+    "module": "wordnet",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 32,
+        "endColumn": 45,
+        "endLine": 1393,
+        "line": 1393
+      },
+      {
+        "column": 30,
+        "endColumn": 43,
+        "endLine": 1394,
+        "line": 1394
+      },
+      {
+        "column": 24,
+        "endColumn": 37,
+        "endLine": 1411,
+        "line": 1411
+      },
+      {
+        "column": 40,
+        "endColumn": 53,
+        "endLine": 1397,
+        "line": 1397
+      },
+      {
+        "column": 41,
+        "endColumn": 54,
+        "endLine": 1402,
+        "line": 1402
+      },
+      {
+        "column": 25,
+        "endColumn": 38,
+        "endLine": 1403,
+        "line": 1403
+      },
+      {
+        "column": 39,
+        "endColumn": 52,
+        "endLine": 1406,
+        "line": 1406
+      },
+      {
+        "column": 46,
+        "endColumn": 59,
+        "endLine": 1414,
+        "line": 1414
+      }
+    ],
+    "path": "nltk/corpus/reader/wordnet.py",
+    "symbol": "cached-repeated-calls",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/wordnet.py"
+  },
+  "4f7ac270": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "4f7ac270",
+    "message": "Lambda function too long (5/5 expressions)",
+    "messageId": "LLE001",
+    "module": "tgrep",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 21,
+        "endColumn": 13,
+        "endLine": 472,
+        "line": 470
+      }
+    ],
+    "path": "nltk/tgrep.py",
+    "symbol": "long-lambda-expr",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/tgrep.py"
+  },
+  "b54b020b": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "b54b020b",
+    "message": "Lambda function too long (8/5 expressions)",
+    "messageId": "LLE001",
+    "module": "tgrep",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 21,
+        "endColumn": 13,
+        "endLine": 441,
+        "line": 436
+      }
+    ],
+    "path": "nltk/tgrep.py",
+    "symbol": "long-lambda-expr",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/tgrep.py"
+  },
+  "48b77d42": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": "result",
+      "innerLoopLine": 162,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": 172,
+      "isFunc": false,
+      "start": 162,
+      "useOccurences": false
+    },
+    "id": "48b77d42",
+    "message": "String concatenation inside loop detected",
+    "messageId": "SCL001",
+    "module": "util.py",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 12,
+        "endColumn": 34,
+        "endLine": 165,
+        "line": 165
+      },
+      {
+        "column": 12,
+        "endColumn": 34,
+        "endLine": 168,
+        "line": 168
+      }
+    ],
+    "path": "nltk/util.py",
+    "symbol": "string-concat-loop",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/util.py"
+  },
+  "5829a76e": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": "inside",
+      "innerLoopLine": 141,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": 147,
+      "isFunc": false,
+      "start": 141,
+      "useOccurences": false
+    },
+    "id": "5829a76e",
+    "message": "String concatenation inside loop detected",
+    "messageId": "SCL001",
+    "module": "lexicon.py",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 12,
+        "endColumn": 37,
+        "endLine": 146,
+        "line": 146
+      }
+    ],
+    "path": "nltk/ccg/lexicon.py",
+    "symbol": "string-concat-loop",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/ccg/lexicon.py"
+  },
+  "f041ae6d": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": "cv_sequence",
+      "innerLoopLine": 187,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": 191,
+      "isFunc": false,
+      "start": 187,
+      "useOccurences": false
+    },
+    "id": "f041ae6d",
+    "message": "String concatenation inside loop detected",
+    "messageId": "SCL001",
+    "module": "porter.py",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 16,
+        "endColumn": 47,
+        "endLine": 189,
+        "line": 189
+      },
+      {
+        "column": 16,
+        "endColumn": 47,
+        "endLine": 191,
+        "line": 191
+      }
+    ],
+    "path": "nltk/stem/porter.py",
+    "symbol": "string-concat-loop",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/stem/porter.py"
+  },
+  "781f1a9a": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "781f1a9a",
+    "message": "Method chain too long (3/3)",
+    "messageId": "LMC001",
+    "module": "snowball",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 15,
+        "endColumn": 78,
+        "endLine": 5176,
+        "line": 5176
+      }
+    ],
+    "path": "nltk/stem/snowball.py",
+    "symbol": "long-message-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/stem/snowball.py"
+  },
+  "8b07ea49": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "8b07ea49",
+    "message": "Method chain too long (3/3)",
+    "messageId": "LMC001",
+    "module": "snowball",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 13,
+        "endColumn": 74,
+        "endLine": 5193,
+        "line": 5193
+      }
+    ],
+    "path": "nltk/stem/snowball.py",
+    "symbol": "long-message-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/stem/snowball.py"
+  },
+  "e3bd1ce6": {
+    "additionalInfo": {
+      "callString": null,
+      "concatTarget": null,
+      "innerLoopLine": null,
+      "repetitions": null
+    },
+    "confidence": "UNDEFINED",
+    "energyMetadata": {
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
+    },
+    "id": "e3bd1ce6",
+    "message": "Method chain too long (3/3)",
+    "messageId": "LMC001",
+    "module": "snowball",
+    "obj": null,
+    "occurences": [
+      {
+        "column": 13,
+        "endColumn": 74,
+        "endLine": 5194,
+        "line": 5194
+      }
+    ],
+    "path": "nltk/stem/snowball.py",
+    "symbol": "long-message-chain",
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/stem/snowball.py"
+  }
+}

@@ -1,0 +1,20 @@
+diff --git a/nltk/translate/meteor_score.py b/nltk/translate/meteor_score.py
+index 98c16b534..f34f745cb 100644
+--- a/nltk/translate/meteor_score.py
++++ b/nltk/translate/meteor_score.py
+@@ -13,6 +13,7 @@ from typing import Callable, Iterable, List, Tuple
+ from nltk.corpus import WordNetCorpusReader, wordnet
+ from nltk.stem.api import StemmerI
+ from nltk.stem.porter import PorterStemmer
++from codecarbon import track_emissions
+ 
+ 
+ def _generate_enums(
+@@ -344,6 +345,7 @@ def single_meteor_score(
+     return (1 - penalty) * fmean
+ 
+ 
++@track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_da310a76', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/da310a76.csv')
+ def meteor_score(
+     references: Iterable[Iterable[str]],
+     hypothesis: Iterable[str],

@@ -1,0 +1,20 @@
+diff --git a/nltk/translate/ibm4.py b/nltk/translate/ibm4.py
+index 35e6ffcd2..1cfcf8708 100644
+--- a/nltk/translate/ibm4.py
++++ b/nltk/translate/ibm4.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ # Natural Language Toolkit: IBM Model 4
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -416,7 +417,9 @@ class IBMModel4(IBMModel):
+                     src_class = ibm_model.src_classes[previous_s]
+                 trg_class = ibm_model.trg_classes[t]
+                 dj = j - alignment_info.center_of_cept(previous_cept)
+-                return ibm_model.head_distortion_table[dj][src_class][trg_class]
++                with EmissionsTracker(project_name='nltk-benchmark', experiment_id='nltk_LEC001_b2a75b92', output_file='/root/ecooptimizer_benchmark/emissions/nltk/long-element-chain/b2a75b92_refactored.csv') as tracker:
++                    _carbon_wrapped_225e4452 = ibm_model.head_distortion_table[dj][src_class][trg_class]
++                return _carbon_wrapped_225e4452
+ 
+             # case 3: t is a subsequent word of a tablet
+             previous_position = alignment_info.previous_in_tablet(j)

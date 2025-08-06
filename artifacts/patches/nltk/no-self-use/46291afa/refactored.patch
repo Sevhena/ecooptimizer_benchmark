@@ -1,0 +1,26 @@
+diff --git a/nltk/corpus/reader/bcp47.py b/nltk/corpus/reader/bcp47.py
+index 7040f3b4b..fa2072139 100644
+--- a/nltk/corpus/reader/bcp47.py
++++ b/nltk/corpus/reader/bcp47.py
+@@ -10,6 +10,7 @@ from warnings import warn
+ from xml.etree import ElementTree as et
+ 
+ from nltk.corpus.reader import CorpusReader
++from codecarbon import track_emissions
+ 
+ 
+ class BCP47CorpusReader(CorpusReader):
+@@ -44,9 +45,11 @@ class BCP47CorpusReader(CorpusReader):
+     def load_wiki_q(self):
+         """Load conversion table to Wikidata Q-codes (only if needed)"""
+         with self.open("cldr/tools-cldr-rdf-external-entityToCode.tsv") as fp:
+-            self.wiki_q = self.wiki_dict(fp.read().strip().split("\n")[1:])
++            self.wiki_q = BCP47CorpusReader.wiki_dict(fp.read().strip().split("\n")[1:])
+ 
+-    def wiki_dict(self, lines):
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R6301_46291afa', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/46291afa_refactored.csv')
++    @staticmethod
++    def wiki_dict(lines):
+         """Convert Wikidata list of Q-codes to a BCP-47 dictionary"""
+         return {
+             pair[1]: pair[0].split("/")[-1]

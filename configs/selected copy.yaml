@@ -1,0 +1,204 @@
+repos:
+- numpy
+- scipy
+- nltk
+- scikit-learn
+- django
+- streamlit
+- gpiozero
+- dask
+- paho.mqtt.python
+smells:
+  dask:
+    cached-repeated-calls:
+    - b6ac58df
+    - 0f19175b
+    - 2354b0b3
+    - 61459db0
+    - 0082590c
+    - cfd0f2af
+    long-element-chain:
+    - 04b89785
+    - 715a6d62
+    - 928ca4b1
+    - c58ba4f6
+    long-message-chain:
+    - 6fb2eba3
+    - 8da83e08
+    - aab89951
+    - b320286e
+    - 5b93ca8d
+    - 206a4433
+    no-self-use:
+    - 70eba4d1
+    - 29a67617
+    - 4ea830b2
+    - a6637294
+    - 4a6855eb
+    - cdb5b8c8
+    string-concat-loop:
+    - 3cad881d
+    - 5254055f
+    - bf9f2446
+    - f7bd63cf
+    too-many-arguments:
+    - b791c549
+    - d1395d53
+    - 1e59b7f6
+    - 3f5d3f21
+    - b217bf24
+    - ca05b444
+    use-a-generator:
+    - 055bc4c5
+    - 0fa92701
+    - 4eddae0f
+    - e6942af1
+  django:
+    long-element-chain:
+    - '91447562'
+    - a236e6b1
+    long-message-chain:
+    - e055564c
+    - bae09c6d
+    - b2eccd0d
+    - c3a94c12
+    - b528b671
+    - e56e9460
+    no-self-use:
+    - ec474b52
+    - dab7b75a
+    - 4ee9ae29
+    - 4b6e8c35
+    - f47930c3
+    - 7c0c950e
+    string-concat-loop:
+    - 4ff23e74
+    - 1942e397
+    - aa3f1568
+    - 91cfff72
+    - aded0240
+    - 871b0de2
+    use-a-generator:
+    - a1f57a8c
+    - cf18c1e1
+  gpiozero:
+    long-lambda-expr:
+    - e04be5d7
+    long-message-chain:
+    - 7f920cd3
+    - ddfcea54
+    no-self-use:
+    - c8dd9144
+    - ff83f704
+    - c5aae0e5
+    - d948ded5
+    - a40bd959
+    - 02f79a90
+  numpy:
+    long-lambda-expr:
+    - b89c2eb1
+    long-message-chain:
+    - 3d27f9c5
+    - 64cee6dc
+    - 1a72f208
+    no-self-use:
+    - '29620294'
+    - bf269a73
+    - d548bfe8
+    - 1b16b69b
+    - a662500a
+    - 2b7b9645
+    string-concat-loop:
+    - 050c312a
+    - 2a61e075
+    - 58bf0058
+    - c432c236
+    - db50d3b0
+  scikit-learn:
+    long-element-chain:
+    - 052d901c
+    - 09af4903
+    - 96642a91
+    - bb3826fc
+    long-message-chain:
+    - 4bb1070c
+    - 534920bb
+    - 4df72a88
+    - e5ceae0f
+    - 5f1cf174
+    - 2585706f
+    no-self-use:
+    - 03c81556
+    - 20e40681
+    - 442cda07
+    - d9566dd5
+    - 011132dc
+    - 89e16db0
+    string-concat-loop:
+    - 0386f191
+    - b63a56a5
+    - d880725b
+    - de2a415f
+    - f5e98a18
+    too-many-arguments:
+    - 5e6f25c4
+    - 0a586a8b
+    - 02a14926
+    - a4344cb3
+    - 7023a30b
+    - ad87e6d8
+    use-a-generator:
+    - bebfc193
+  scipy:
+    long-element-chain:
+    - d99bd01f
+    - 9c8a87c1
+    - cee241b6
+    - 4cdb3f2f
+    - bb252a3b
+    long-lambda-expr:
+    - e0748c3e
+    long-message-chain:
+    - ff234213
+    - 56f8cd5d
+    - f15881ec
+    - f7d9627c
+    - adc91a18
+    - 757214c4
+    no-self-use:
+    - 8a894bd5
+    - 5c9aee75
+    - 80e93795
+    - 2125be72
+    - 42e96228
+    - 80ee36aa
+    string-concat-loop:
+    - 304ee0bf
+    - cfbd3f39
+    - fa242649
+    use-a-generator:
+    - 671eb1fa
+    - c0a0307d
+    - 2bbdf916
+    - cfd9184e
+    - 06fcdecd
+    - 002c736b
+  streamlit:
+    long-element-chain:
+    - a9610835
+    long-lambda-expr:
+    - 2fc0f712
+    - 3dff6d86
+    - 9fed98e9
+    long-message-chain:
+    - 4971d3a7
+    - b4b48cfc
+    - d25eb7e8
+    - f1d47f3f
+    no-self-use:
+    - f97679da
+    - bee5f1fb
+    - db4627ea
+    - 58cfa62a
+    - 74745eb3
+    - fdd64247

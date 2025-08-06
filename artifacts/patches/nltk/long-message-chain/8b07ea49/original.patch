@@ -1,0 +1,19 @@
+diff --git a/nltk/stem/snowball.py b/nltk/stem/snowball.py
+index 06ed5bbe3..3ac5269af 100644
+--- a/nltk/stem/snowball.py
++++ b/nltk/stem/snowball.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ #
+ # Natural Language Toolkit: Snowball Stemmer
+ #
+@@ -5190,7 +5191,8 @@ class RussianStemmer(_LanguageSpecificStemmer):
+                 rv = word[i + 1 :]
+                 break
+ 
+-        r2 = r2.replace("A", "i^a").replace("U", "i^u").replace("E", "e`")
++        with EmissionsTracker(project_name='nltk-benchmark', experiment_id='nltk_LMC001_8b07ea49', output_file='/root/ecooptimizer_benchmark/emissions/nltk/long-message-chain/8b07ea49.csv') as tracker:
++            r2 = r2.replace("A", "i^a").replace("U", "i^u").replace("E", "e`")
+         rv = rv.replace("A", "i^a").replace("U", "i^u").replace("E", "e`")
+ 
+         return (rv, r2)

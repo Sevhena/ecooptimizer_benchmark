@@ -1,10 +1,11 @@
 import argparse
 import json
+import os
+import shutil
 import subprocess
 import logging
 from threading import Thread, Event
 import yaml
-import shutil
 import time
 import psutil
 from pathlib import Path
@@ -29,13 +30,14 @@ REPOS_YAML = CONFIGS_DIR / "repos.yaml"
 SELECTED_YAML = CONFIGS_DIR / "selected.yaml"
 DOMAIN_YAML = CONFIGS_DIR / "domains.yaml"
 
+LOG_DIR = BENCHMARK_ROOT / "logs"
+LOG_DIR.mkdir(parents=True, exist_ok=True)
+
 
 DEFAULT_ITERS = 30
 
 # --- Smell Types ---
 ALL_SMELL_TYPES = [
-    "cached-repeated-calls",
-    "long-element-chain",
     "long-lambda-expr",
     "long-message-chain",
     "no-self-use",
@@ -54,9 +56,7 @@ class UTCFormatter(logging.Formatter):
 
 def setup_logging():
     """Configure logging to file and console."""
-    log_dir = BENCHMARK_ROOT / "logs"
-    log_dir.mkdir(parents=True, exist_ok=True)
-    log_file = log_dir / "benchmark.log"
+    log_file = LOG_DIR / "benchmark.log"
 
     file_handler = logging.FileHandler(log_file)
     file_handler.setLevel(logging.DEBUG)
@@ -134,7 +134,7 @@ def run_benchmark(
     verbose: bool = False,
 ):
     """Run benchmark test suite for a given repo smell version."""
-    venv_python = WORKTREES_DIR / repo / ".venv/bin/python"
+    venv_dir = WORKTREES_DIR / repo / ".venv"
     datapoints = 0
 
     emissions_csv = (
@@ -163,7 +163,7 @@ def run_benchmark(
 
     try:
         while datapoints < iters + 1:
-            elapsed, avg_cpu, peak_mem = _run_single_test(venv_python, test_cmd, repo)
+            elapsed, avg_cpu, peak_mem = _run_single_test(venv_dir, test_cmd, repo)
 
             timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
             row = [
@@ -218,18 +218,31 @@ def run_benchmark(
     return True
 
 
-def _run_single_test(python_bin: Path, test_cmd: list[str], repo: str):
+def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
     """Run a single test iteration and collect system metrics."""
     process = psutil.Process()
+    venv_bin = venv_dir / "bin"
+
+    env = os.environ.copy()
+    env["VIRTUAL_ENV"] = str(venv_dir)
+    env["PATH"] = str(venv_bin) + os.pathsep + env["PATH"]
+
+    console_out_log = LOG_DIR / "bench_console_output.log"
+
     logging.debug(f"Running test command: {test_cmd} in {repo}")
     start_time = time.time()
 
     try:
-        subprocess.run(
-            [str(python_bin), *test_cmd],
-            cwd=(WORKTREES_DIR / repo),
-            stdout=subprocess.DEVNULL,
-        )
+        with console_out_log.open("a") as f:  # append mode
+            f.write(f"\n=== New Test Run: {time.ctime()} ===\n")
+            subprocess.run(
+                test_cmd,
+                cwd=(WORKTREES_DIR / repo),
+                env=env,
+                check=True,
+                stdout=f,
+                stderr=subprocess.STDOUT,
+            )
     except Exception as e:
         logging.error(f"Test run failed for {repo}: {e}")
         return 0.0, 0.0, 0.0
@@ -239,6 +252,28 @@ def _run_single_test(python_bin: Path, test_cmd: list[str], repo: str):
     mem_mb = process.memory_info().rss / (1024**2)
 
     return elapsed, avg_cpu, mem_mb
+
+
+def move_named_subfolders(folder_names: set[str]):
+    """
+    Move subfolders with specific names into a new UTC-timestamped subfolder,
+    unless they are already inside a timestamp-named folder.
+    """
+
+    # Prepare destination folder
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%SZ")
+    destination = EMISSIONS_DIR / timestamp
+    destination.mkdir()
+
+    moved = False
+    for name in folder_names:
+        subfolder = EMISSIONS_DIR / name
+        if subfolder.exists():
+            shutil.move(str(subfolder), str(destination))
+            moved = True
+
+    if not moved:
+        destination.rmdir()  # Clean up if nothing was moved
 
 
 # --- Entry Point ---
@@ -360,7 +395,7 @@ def main():
                     logging.info(f"    [{version}]")
                     try:
                         apply_patch(smell_dir / f"{version}.patch", repo_dir)
-                    except FileNotFoundError as e:
+                    except FileNotFoundError:
                         logging.debug(
                             f"Patch file not found. Skipping for {repo} | {smell_type} | {smell_id}."
                         )
@@ -390,6 +425,11 @@ def main():
                     finally:
                         logging.info(f"    Restoring {repo_dir} to original state...")
                         subprocess.run(["git", "restore", "."], cwd=repo_dir)
+
+    # --- Move Emissions Files ---
+    if EMISSIONS_DIR.exists():
+        logging.info("\nMoving emissions files to timestamped folder...")
+        move_named_subfolders(selected_repos)
 
     logging.info("\n✅ Benchmarking complete.")
 

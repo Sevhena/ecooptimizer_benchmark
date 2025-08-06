@@ -1,0 +1,269 @@
+diff --git a/examples/publish_single.py b/examples/publish_single.py
+index 9e48279..d7526d6 100755
+--- a/examples/publish_single.py
++++ b/examples/publish_single.py
+@@ -15,8 +15,24 @@
+ 
+ # This shows an example of using the publish.single helper function.
+ 
++class DataParams_single_233:
++    def __init__(self, topic, payload = None, qos = 0, retain = False, hostname = "localhost", port = 1883, client_id = "", keepalive = 60, will = None, auth = None, tls = None, protocol = paho.MQTTv311, transport = "tcp", proxy_args = None):
++        self.topic = topic
++        self.payload = payload
++        self.qos = qos
++        self.retain = retain
++        self.hostname = hostname
++        self.port = port
++        self.client_id = client_id
++        self.keepalive = keepalive
++        self.will = will
++        self.auth = auth
++        self.tls = tls
++        self.protocol = protocol
++        self.transport = transport
++        self.proxy_args = proxy_args
+ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.publish as publish
+ 
+-publish.single("paho/test/single", "boo", hostname="mqtt.eclipseprojects.io")
++publish.single(DataParams_single_233("paho/test/single", "boo", hostname = "mqtt.eclipseprojects.io"))
+diff --git a/examples/publish_utf8-27.py b/examples/publish_utf8-27.py
+index 74dee2b..c73c563 100755
+--- a/examples/publish_utf8-27.py
++++ b/examples/publish_utf8-27.py
+@@ -15,10 +15,26 @@
+ 
+ # This shows an example of using the publish.single helper function with unicode topic and payload.
+ 
++class DataParams_single_233:
++    def __init__(self, topic, payload = None, qos = 0, retain = False, hostname = "localhost", port = 1883, client_id = "", keepalive = 60, will = None, auth = None, tls = None, protocol = paho.MQTTv311, transport = "tcp", proxy_args = None):
++        self.topic = topic
++        self.payload = payload
++        self.qos = qos
++        self.retain = retain
++        self.hostname = hostname
++        self.port = port
++        self.client_id = client_id
++        self.keepalive = keepalive
++        self.will = will
++        self.auth = auth
++        self.tls = tls
++        self.protocol = protocol
++        self.transport = transport
++        self.proxy_args = proxy_args
+ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.publish as publish
+ 
+ topic = u"paho/test/single/ô"
+ payload = u"bôô"
+-publish.single(topic, payload, hostname="mqtt.eclipseprojects.io")
++publish.single(DataParams_single_233(topic, payload, hostname = "mqtt.eclipseprojects.io"))
+diff --git a/examples/publish_utf8-3.py b/examples/publish_utf8-3.py
+index e7bb46c..9358fd9 100755
+--- a/examples/publish_utf8-3.py
++++ b/examples/publish_utf8-3.py
+@@ -15,10 +15,26 @@
+ 
+ # This shows an example of using the publish.single helper function with unicode topic and payload.
+ 
++class DataParams_single_233:
++    def __init__(self, topic, payload = None, qos = 0, retain = False, hostname = "localhost", port = 1883, client_id = "", keepalive = 60, will = None, auth = None, tls = None, protocol = paho.MQTTv311, transport = "tcp", proxy_args = None):
++        self.topic = topic
++        self.payload = payload
++        self.qos = qos
++        self.retain = retain
++        self.hostname = hostname
++        self.port = port
++        self.client_id = client_id
++        self.keepalive = keepalive
++        self.will = will
++        self.auth = auth
++        self.tls = tls
++        self.protocol = protocol
++        self.transport = transport
++        self.proxy_args = proxy_args
+ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.publish as publish
+ 
+ topic = u"paho/test/single/ô"
+ payload = u'German umlauts like "ä" ü"ö" are not supported'
+-publish.single(topic, payload, hostname="mqtt.eclipseprojects.io")
++publish.single(DataParams_single_233(topic, payload, hostname = "mqtt.eclipseprojects.io"))
+diff --git a/src/paho/mqtt/publish.py b/src/paho/mqtt/publish.py
+index 333c190..62f925b 100644
+--- a/src/paho/mqtt/publish.py
++++ b/src/paho/mqtt/publish.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Copyright (c) 2014 Roger Light <roger@atchoo.org>
+ #
+ # All rights reserved. This program and the accompanying materials
+@@ -67,6 +68,22 @@ if TYPE_CHECKING:
+     MessageTuple = Tuple[str, paho.PayloadType, int, bool]
+ 
+     MessagesList = List[Union[MessageDict, MessageTuple]]
++class DataParams_single_233:
++    def __init__(self, topic, payload = None, qos = 0, retain = False, hostname = "localhost", port = 1883, client_id = "", keepalive = 60, will = None, auth = None, tls = None, protocol = paho.MQTTv311, transport = "tcp", proxy_args = None):
++        self.topic = topic
++        self.payload = payload
++        self.qos = qos
++        self.retain = retain
++        self.hostname = hostname
++        self.port = port
++        self.client_id = client_id
++        self.keepalive = keepalive
++        self.will = will
++        self.auth = auth
++        self.tls = tls
++        self.protocol = protocol
++        self.transport = transport
++        self.proxy_args = proxy_args
+ 
+ 
+ def _do_publish(client: paho.Client):
+@@ -228,22 +245,9 @@ def multiple(
+     client.loop_forever()
+ 
+ 
++@track_emissions(project_name='paho.mqtt.python-benchmark', experiment_id='paho.mqtt.python_R0913_62deeb1a', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/too-many-arguments/62deeb1a_refactored.csv')
+ def single(
+-    topic: str,
+-    payload: paho.PayloadType = None,
+-    qos: int = 0,
+-    retain: bool = False,
+-    hostname: str = "localhost",
+-    port: int = 1883,
+-    client_id: str = "",
+-    keepalive: int = 60,
+-    will: MessageDict | None = None,
+-    auth: AuthParameter | None = None,
+-    tls: TLSParameter | None = None,
+-    protocol: MQTTProtocolVersion = paho.MQTTv311,
+-    transport: Literal["tcp", "websockets"] = "tcp",
+-    proxy_args: Any | None = None,
+-) -> None:
++    data_params) -> None:
+     """Publish a single message to a broker, then disconnect cleanly.
+ 
+     This function creates an MQTT client, connects to a broker and publishes a
+@@ -300,7 +304,7 @@ def single(
+     :param proxy_args: a dictionary that will be given to the client.
+     """
+ 
+-    msg: MessageDict = {'topic':topic, 'payload':payload, 'qos':qos, 'retain':retain}
++    msg: MessageDict = {'topic':data_params.topic, 'payload':data_params.payload, 'qos':data_params.qos, 'retain':data_params.retain}
+ 
+-    multiple([msg], hostname, port, client_id, keepalive, will, auth, tls,
+-             protocol, transport, proxy_args)
++    multiple([msg], data_params.hostname, data_params.port, data_params.client_id, data_params.keepalive, data_params.will, data_params.auth, data_params.tls,
++             data_params.protocol, data_params.transport, data_params.proxy_args)
+diff --git a/tests/lib/clients/03-publish-helper-qos0-v5.py b/tests/lib/clients/03-publish-helper-qos0-v5.py
+index 1b59113..e2cb715 100644
+--- a/tests/lib/clients/03-publish-helper-qos0-v5.py
++++ b/tests/lib/clients/03-publish-helper-qos0-v5.py
+@@ -1,3 +1,19 @@
++class DataParams_single_233:
++    def __init__(self, topic, payload = None, qos = 0, retain = False, hostname = "localhost", port = 1883, client_id = "", keepalive = 60, will = None, auth = None, tls = None, protocol = paho.MQTTv311, transport = "tcp", proxy_args = None):
++        self.topic = topic
++        self.payload = payload
++        self.qos = qos
++        self.retain = retain
++        self.hostname = hostname
++        self.port = port
++        self.client_id = client_id
++        self.keepalive = keepalive
++        self.will = will
++        self.auth = auth
++        self.tls = tls
++        self.protocol = protocol
++        self.transport = transport
++        self.proxy_args = proxy_args
+ import paho.mqtt.client
+ import paho.mqtt.publish
+ 
+@@ -5,11 +21,4 @@ from tests.paho_test import get_test_server_port, wait_for_keyboard_interrupt
+ 
+ with wait_for_keyboard_interrupt():
+     paho.mqtt.publish.single(
+-        "pub/qos0/test",
+-        "message",
+-        qos=0,
+-        hostname="localhost",
+-        port=get_test_server_port(),
+-        client_id="publish-helper-qos0-test",
+-        protocol=paho.mqtt.client.MQTTv5,
+-    )
++        DataParams_single_233("pub/qos0/test", "message", qos = 0, hostname = "localhost", port = get_test_server_port(), client_id = "publish-helper-qos0-test", protocol = paho.mqtt.client.MQTTv5))
+diff --git a/tests/lib/clients/03-publish-helper-qos0.py b/tests/lib/clients/03-publish-helper-qos0.py
+index a7b696e..0251ff7 100644
+--- a/tests/lib/clients/03-publish-helper-qos0.py
++++ b/tests/lib/clients/03-publish-helper-qos0.py
+@@ -1,13 +1,23 @@
++class DataParams_single_233:
++    def __init__(self, topic, payload = None, qos = 0, retain = False, hostname = "localhost", port = 1883, client_id = "", keepalive = 60, will = None, auth = None, tls = None, protocol = paho.MQTTv311, transport = "tcp", proxy_args = None):
++        self.topic = topic
++        self.payload = payload
++        self.qos = qos
++        self.retain = retain
++        self.hostname = hostname
++        self.port = port
++        self.client_id = client_id
++        self.keepalive = keepalive
++        self.will = will
++        self.auth = auth
++        self.tls = tls
++        self.protocol = protocol
++        self.transport = transport
++        self.proxy_args = proxy_args
+ import paho.mqtt.publish
+ 
+ from tests.paho_test import get_test_server_port, wait_for_keyboard_interrupt
+ 
+ with wait_for_keyboard_interrupt():
+     paho.mqtt.publish.single(
+-        "pub/qos0/test",
+-        "message",
+-        qos=0,
+-        hostname="localhost",
+-        port=get_test_server_port(),
+-        client_id="publish-helper-qos0-test",
+-    )
++        DataParams_single_233("pub/qos0/test", "message", qos = 0, hostname = "localhost", port = get_test_server_port(), client_id = "publish-helper-qos0-test"))
+diff --git a/tests/lib/clients/03-publish-helper-qos1-disconnect.py b/tests/lib/clients/03-publish-helper-qos1-disconnect.py
+index b07166f..1de6b5b 100644
+--- a/tests/lib/clients/03-publish-helper-qos1-disconnect.py
++++ b/tests/lib/clients/03-publish-helper-qos1-disconnect.py
+@@ -1,13 +1,23 @@
++class DataParams_single_233:
++    def __init__(self, topic, payload = None, qos = 0, retain = False, hostname = "localhost", port = 1883, client_id = "", keepalive = 60, will = None, auth = None, tls = None, protocol = paho.MQTTv311, transport = "tcp", proxy_args = None):
++        self.topic = topic
++        self.payload = payload
++        self.qos = qos
++        self.retain = retain
++        self.hostname = hostname
++        self.port = port
++        self.client_id = client_id
++        self.keepalive = keepalive
++        self.will = will
++        self.auth = auth
++        self.tls = tls
++        self.protocol = protocol
++        self.transport = transport
++        self.proxy_args = proxy_args
+ import paho.mqtt.publish
+ 
+ from tests.paho_test import get_test_server_port, wait_for_keyboard_interrupt
+ 
+ with wait_for_keyboard_interrupt():
+     paho.mqtt.publish.single(
+-        "pub/qos1/test",
+-        "message",
+-        qos=1,
+-        hostname="localhost",
+-        port=get_test_server_port(),
+-        client_id="publish-helper-qos1-disconnect-test",
+-    )
++        DataParams_single_233("pub/qos1/test", "message", qos = 1, hostname = "localhost", port = get_test_server_port(), client_id = "publish-helper-qos1-disconnect-test"))

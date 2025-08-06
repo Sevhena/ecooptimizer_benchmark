@@ -1,0 +1,2379 @@
+diff --git a/nltk/app/collocations_app.py b/nltk/app/collocations_app.py
+index 9dc34af42..ae30be154 100644
+--- a/nltk/app/collocations_app.py
++++ b/nltk/app/collocations_app.py
+@@ -421,6 +421,17 @@ class CollocationsModel:
+             except Exception as e:
+                 print(e)
+                 self.model.queue.put(ERROR_LOADING_CORPUS_EVENT)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ # def collocations():
+diff --git a/nltk/app/concordance_app.py b/nltk/app/concordance_app.py
+index 0d7f44a76..c65b970df 100755
+--- a/nltk/app/concordance_app.py
++++ b/nltk/app/concordance_app.py
+@@ -696,6 +696,17 @@ class ConcordanceSearchModel:
+                 else:
+                     new.append(BOUNDARY + term + "/" + WORD_OR_TAG + BOUNDARY)
+             return " ".join(new)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def app():
+diff --git a/nltk/ccg/chart.py b/nltk/ccg/chart.py
+index a87aefe8f..a4468f4f5 100644
+--- a/nltk/ccg/chart.py
++++ b/nltk/ccg/chart.py
+@@ -343,6 +343,17 @@ class CCGChart(Chart):
+ 
+         memo[edge] = trees
+         return trees
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def compute_semantics(children, edge):
+diff --git a/nltk/chunk/named_entity.py b/nltk/chunk/named_entity.py
+index a8ef6cacb..365ed18f2 100644
+--- a/nltk/chunk/named_entity.py
++++ b/nltk/chunk/named_entity.py
+@@ -176,6 +176,17 @@ class NEChunkParser(ChunkParserI):
+             else:
+                 toks.append((child, "O"))
+         return toks
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def shape(word):
+diff --git a/nltk/chunk/regexp.py b/nltk/chunk/regexp.py
+index 69338d7d2..79030e9e4 100644
+--- a/nltk/chunk/regexp.py
++++ b/nltk/chunk/regexp.py
+@@ -894,6 +894,17 @@ class ChunkRuleWithContext(RegexpChunkRule):
+ CHUNK_TAG_PATTERN = re.compile(
+     r"^(({}|<{}>)*)$".format(r"([^\{\}<>]|\{\d+,?\}|\{\d*,\d+\})+", r"[^\{\}<>]+")
+ )
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def tag_pattern2re_pattern(tag_pattern):
+diff --git a/nltk/classify/maxent.py b/nltk/classify/maxent.py
+index 5491b23b7..5978dc32f 100644
+--- a/nltk/classify/maxent.py
++++ b/nltk/classify/maxent.py
+@@ -1018,6 +1018,17 @@ class TypedMaxentFeatureEncoding(MaxentFeatureEncodingI):
+         if labels is None:
+             labels = seen_labels
+         return cls(labels, mapping, **options)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ######################################################################
+diff --git a/nltk/cluster/em.py b/nltk/cluster/em.py
+index 11a908a9e..bc3247ae7 100644
+--- a/nltk/cluster/em.py
++++ b/nltk/cluster/em.py
+@@ -174,6 +174,17 @@ class EMClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<EMClusterer means=%s>" % list(self._means)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def demo():
+diff --git a/nltk/cluster/gaac.py b/nltk/cluster/gaac.py
+index 0d54728fe..7f6285164 100644
+--- a/nltk/cluster/gaac.py
++++ b/nltk/cluster/gaac.py
+@@ -135,6 +135,17 @@ class GAAClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<GroupAverageAgglomerative Clusterer n=%d>" % self._num_clusters
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def demo():
+diff --git a/nltk/cluster/kmeans.py b/nltk/cluster/kmeans.py
+index e53aa15c5..a3e8dc9fa 100644
+--- a/nltk/cluster/kmeans.py
++++ b/nltk/cluster/kmeans.py
+@@ -186,6 +186,17 @@ class KMeansClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<KMeansClusterer means=%s repeats=%d>" % (self._means, self._repeats)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ #################################################################################
+diff --git a/nltk/collections.py b/nltk/collections.py
+index 7fd2a7d2c..94aa338c2 100644
+--- a/nltk/collections.py
++++ b/nltk/collections.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ import bisect
+ from functools import total_ordering
+ from itertools import chain, islice
+diff --git a/nltk/collocations.py b/nltk/collocations.py
+index 89b6eb396..61ed00d45 100644
+--- a/nltk/collocations.py
++++ b/nltk/collocations.py
+@@ -349,6 +349,17 @@ class QuadgramCollocationFinder(AbstractCollocationFinder):
+             (n_ixxx, n_xixx, n_xxix, n_xxxi),
+             n_all,
+         )
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def demo(scorer=None, compare_scorer=None):
+diff --git a/nltk/corpus/reader/aligned.py b/nltk/corpus/reader/aligned.py
+index f95c2fd83..97302db39 100644
+--- a/nltk/corpus/reader/aligned.py
++++ b/nltk/corpus/reader/aligned.py
+@@ -5,6 +5,17 @@
+ # Author: Steven Bird <stevenbird1@gmail.com>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ from nltk.corpus.reader.api import CorpusReader
+ from nltk.corpus.reader.util import (
+     StreamBackedCorpusView,
+diff --git a/nltk/corpus/reader/bcp47.py b/nltk/corpus/reader/bcp47.py
+index 7040f3b4b..86c629d2c 100644
+--- a/nltk/corpus/reader/bcp47.py
++++ b/nltk/corpus/reader/bcp47.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ import re
+ from warnings import warn
+ from xml.etree import ElementTree as et
+diff --git a/nltk/corpus/reader/bnc.py b/nltk/corpus/reader/bnc.py
+index 50782dd62..1e9eee69e 100644
+--- a/nltk/corpus/reader/bnc.py
++++ b/nltk/corpus/reader/bnc.py
+@@ -136,6 +136,17 @@ class BNCCorpusReader(XMLCorpusReader):
+ 
+         assert None not in result
+         return result
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _all_xmlwords_in(elt, result=None):
+diff --git a/nltk/corpus/reader/bracket_parse.py b/nltk/corpus/reader/bracket_parse.py
+index 538569770..0f240c8f8 100644
+--- a/nltk/corpus/reader/bracket_parse.py
++++ b/nltk/corpus/reader/bracket_parse.py
+@@ -5,6 +5,17 @@
+ #         Edward Loper <edloper@gmail.com>
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Corpus reader for corpora that consist of parenthesis-delineated parse trees.
+ """
+diff --git a/nltk/corpus/reader/categorized_sents.py b/nltk/corpus/reader/categorized_sents.py
+index 786e4c0ea..6d8367d4a 100644
+--- a/nltk/corpus/reader/categorized_sents.py
++++ b/nltk/corpus/reader/categorized_sents.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ CorpusReader structured for corpora that contain one instance on each row.
+ This CorpusReader is specifically used for the Subjectivity Dataset and the
+diff --git a/nltk/corpus/reader/chasen.py b/nltk/corpus/reader/chasen.py
+index 8009198a6..58d6b9fa5 100644
+--- a/nltk/corpus/reader/chasen.py
++++ b/nltk/corpus/reader/chasen.py
+@@ -124,6 +124,17 @@ class ChasenCorpusView(StreamBackedCorpusView):
+                 block.extend(para)
+ 
+         return block
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def demo():
+diff --git a/nltk/corpus/reader/childes.py b/nltk/corpus/reader/childes.py
+index d334a4347..8fc1a516b 100644
+--- a/nltk/corpus/reader/childes.py
++++ b/nltk/corpus/reader/childes.py
+@@ -561,6 +561,17 @@ class CHILDESCorpusReader(XMLCorpusReader):
+         print("Opening in browser:", url)
+         # Pausing is a good idea, but it's up to the user...
+         # raw_input("Hit Return to continue")
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def demo(corpus_root=None):
+diff --git a/nltk/corpus/reader/chunked.py b/nltk/corpus/reader/chunked.py
+index dbf5b2d64..9f95935a1 100644
+--- a/nltk/corpus/reader/chunked.py
++++ b/nltk/corpus/reader/chunked.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ A reader for corpora that contain chunked (and optionally tagged)
+ documents.
+diff --git a/nltk/corpus/reader/comparative_sents.py b/nltk/corpus/reader/comparative_sents.py
+index 0473eebcb..845fa2620 100644
+--- a/nltk/corpus/reader/comparative_sents.py
++++ b/nltk/corpus/reader/comparative_sents.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ CorpusReader for the Comparative Sentence Dataset.
+ 
+diff --git a/nltk/corpus/reader/conll.py b/nltk/corpus/reader/conll.py
+index e3673b7c5..0cc8389bb 100644
+--- a/nltk/corpus/reader/conll.py
++++ b/nltk/corpus/reader/conll.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Read CoNLL-style chunk fileids.
+ """
+diff --git a/nltk/corpus/reader/crubadan.py b/nltk/corpus/reader/crubadan.py
+index 180fcfb6d..7dc984431 100644
+--- a/nltk/corpus/reader/crubadan.py
++++ b/nltk/corpus/reader/crubadan.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ An NLTK interface for the n-gram statistics gathered from
+ the corpora for each language using An Crubadan.
+diff --git a/nltk/corpus/reader/dependency.py b/nltk/corpus/reader/dependency.py
+index 2b9455014..e953c767b 100644
+--- a/nltk/corpus/reader/dependency.py
++++ b/nltk/corpus/reader/dependency.py
+@@ -7,6 +7,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ from nltk.corpus.reader.api import *
+ from nltk.corpus.reader.util import *
+ from nltk.parse import DependencyGraph
+diff --git a/nltk/corpus/reader/framenet.py b/nltk/corpus/reader/framenet.py
+index 2d871512b..f08bc6603 100644
+--- a/nltk/corpus/reader/framenet.py
++++ b/nltk/corpus/reader/framenet.py
+@@ -26,6 +26,17 @@ from nltk.corpus.reader import XMLCorpusReader, XMLCorpusView
+ from nltk.util import LazyConcatenation, LazyIteratorList, LazyMap
+ 
+ __docformat__ = "epytext en"
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def mimic_wrap(lines, wrap_at=65, **kwargs):
+diff --git a/nltk/corpus/reader/indian.py b/nltk/corpus/reader/indian.py
+index 8c058dfc6..dbf41a4c6 100644
+--- a/nltk/corpus/reader/indian.py
++++ b/nltk/corpus/reader/indian.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Indian Language POS-Tagged Corpus
+ Collected by A Kumaran, Microsoft Research, India
+diff --git a/nltk/corpus/reader/ipipan.py b/nltk/corpus/reader/ipipan.py
+index 939d80bbd..1b6863b7f 100644
+--- a/nltk/corpus/reader/ipipan.py
++++ b/nltk/corpus/reader/ipipan.py
+@@ -9,6 +9,17 @@ import functools
+ 
+ from nltk.corpus.reader.api import CorpusReader
+ from nltk.corpus.reader.util import StreamBackedCorpusView, concat
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _parse_args(fun):
+diff --git a/nltk/corpus/reader/knbc.py b/nltk/corpus/reader/knbc.py
+index 01d795042..bfcfefe6a 100644
+--- a/nltk/corpus/reader/knbc.py
++++ b/nltk/corpus/reader/knbc.py
+@@ -122,6 +122,17 @@ class KNBCorpusReader(SyntaxCorpusReader):
+                 node["word"] = self.morphs2str(node["word"])
+ 
+         return dg.tree()
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/lin.py b/nltk/corpus/reader/lin.py
+index 88fa47b8f..6a01774a5 100644
+--- a/nltk/corpus/reader/lin.py
++++ b/nltk/corpus/reader/lin.py
+@@ -151,6 +151,17 @@ class LinThesaurusCorpusReader(CorpusReader):
+             self._fileids,
+             False,
+         )
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/markdown.py b/nltk/corpus/reader/markdown.py
+index cf69a35cd..ed0c225c0 100644
+--- a/nltk/corpus/reader/markdown.py
++++ b/nltk/corpus/reader/markdown.py
+@@ -5,6 +5,17 @@ from nltk.corpus.reader.api import CategorizedCorpusReader
+ from nltk.corpus.reader.plaintext import PlaintextCorpusReader
+ from nltk.corpus.reader.util import concat, read_blankline_block
+ from nltk.tokenize import blankline_tokenize, sent_tokenize, word_tokenize
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def comma_separated_string_args(func):
+diff --git a/nltk/corpus/reader/mte.py b/nltk/corpus/reader/mte.py
+index 8c39fb0e1..7101fae84 100644
+--- a/nltk/corpus/reader/mte.py
++++ b/nltk/corpus/reader/mte.py
+@@ -8,6 +8,17 @@ from functools import reduce
+ 
+ from nltk.corpus.reader import TaggedCorpusReader, concat
+ from nltk.corpus.reader.xmldocs import XMLCorpusView
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def xpath(root, path, ns):
+diff --git a/nltk/corpus/reader/nkjp.py b/nltk/corpus/reader/nkjp.py
+index 8b0a2e266..18e51e5cf 100644
+--- a/nltk/corpus/reader/nkjp.py
++++ b/nltk/corpus/reader/nkjp.py
+@@ -12,6 +12,17 @@ import tempfile
+ 
+ from nltk.corpus.reader.util import concat
+ from nltk.corpus.reader.xmldocs import XMLCorpusReader, XMLCorpusView
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _parse_args(fun):
+diff --git a/nltk/corpus/reader/nombank.py b/nltk/corpus/reader/nombank.py
+index b2c68f915..f623c69f0 100644
+--- a/nltk/corpus/reader/nombank.py
++++ b/nltk/corpus/reader/nombank.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ from functools import total_ordering
+ from xml.etree import ElementTree
+ 
+diff --git a/nltk/corpus/reader/nps_chat.py b/nltk/corpus/reader/nps_chat.py
+index a00c799a9..78ce2365e 100644
+--- a/nltk/corpus/reader/nps_chat.py
++++ b/nltk/corpus/reader/nps_chat.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ import re
+ import textwrap
+ 
+diff --git a/nltk/corpus/reader/opinion_lexicon.py b/nltk/corpus/reader/opinion_lexicon.py
+index 964e400bb..fc55b3466 100644
+--- a/nltk/corpus/reader/opinion_lexicon.py
++++ b/nltk/corpus/reader/opinion_lexicon.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ CorpusReader for the Opinion Lexicon.
+ 
+diff --git a/nltk/corpus/reader/panlex_lite.py b/nltk/corpus/reader/panlex_lite.py
+index c068d2879..ec9e997e8 100644
+--- a/nltk/corpus/reader/panlex_lite.py
++++ b/nltk/corpus/reader/panlex_lite.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ CorpusReader for PanLex Lite, a stripped down version of PanLex distributed
+ as an SQLite database. See the README.txt in the panlex_lite corpus directory
+diff --git a/nltk/corpus/reader/panlex_swadesh.py b/nltk/corpus/reader/panlex_swadesh.py
+index 034669330..fc0d7b73e 100644
+--- a/nltk/corpus/reader/panlex_swadesh.py
++++ b/nltk/corpus/reader/panlex_swadesh.py
+@@ -7,6 +7,17 @@
+ # For license information, see LICENSE.TXT
+ 
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ import re
+ from collections import defaultdict, namedtuple
+ 
+diff --git a/nltk/corpus/reader/pl196x.py b/nltk/corpus/reader/pl196x.py
+index f1623f3d6..dc49265b4 100644
+--- a/nltk/corpus/reader/pl196x.py
++++ b/nltk/corpus/reader/pl196x.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ from nltk.corpus.reader.api import *
+ from nltk.corpus.reader.xmldocs import XMLCorpusReader
+ 
+diff --git a/nltk/corpus/reader/plaintext.py b/nltk/corpus/reader/plaintext.py
+index 0acb256b6..f83ce6e9e 100644
+--- a/nltk/corpus/reader/plaintext.py
++++ b/nltk/corpus/reader/plaintext.py
+@@ -7,6 +7,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ A reader for corpora that consist of plaintext documents.
+ """
+diff --git a/nltk/corpus/reader/propbank.py b/nltk/corpus/reader/propbank.py
+index f67b9e3c7..271446669 100644
+--- a/nltk/corpus/reader/propbank.py
++++ b/nltk/corpus/reader/propbank.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ import re
+ from functools import total_ordering
+ from xml.etree import ElementTree
+@@ -13,6 +24,7 @@ from nltk.corpus.reader.api import *
+ from nltk.corpus.reader.util import *
+ from nltk.internals import raise_unorderable_types
+ from nltk.tree import Tree
++from codecarbon import track_emissions
+ 
+ 
+ class PropbankCorpusReader(CorpusReader):
+@@ -164,56 +176,48 @@ class PropbankCorpusReader(CorpusReader):
+ 
+ 
+ class PropbankInstance:
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_b204cbeb', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/b204cbeb_refactored.csv')
+     def __init__(
+         self,
+-        fileid,
+-        sentnum,
+-        wordnum,
+-        tagger,
+-        roleset,
+-        inflection,
+-        predicate,
+-        arguments,
+-        parse_corpus=None,
+-    ):
+-        self.fileid = fileid
++        data_params):
++        self.fileid = data_params.fileid
+         """The name of the file containing the parse tree for this
+         instance's sentence."""
+ 
+-        self.sentnum = sentnum
++        self.sentnum = data_params.sentnum
+         """The sentence number of this sentence within ``fileid``.
+         Indexing starts from zero."""
+ 
+-        self.wordnum = wordnum
++        self.wordnum = data_params.wordnum
+         """The word number of this instance's predicate within its
+         containing sentence.  Word numbers are indexed starting from
+         zero, and include traces and other empty parse elements."""
+ 
+-        self.tagger = tagger
++        self.tagger = data_params.tagger
+         """An identifier for the tagger who tagged this instance; or
+         ``'gold'`` if this is an adjuticated instance."""
+ 
+-        self.roleset = roleset
++        self.roleset = data_params.roleset
+         """The name of the roleset used by this instance's predicate.
+         Use ``propbank.roleset() <PropbankCorpusReader.roleset>`` to
+         look up information about the roleset."""
+ 
+-        self.inflection = inflection
++        self.inflection = data_params.inflection
+         """A ``PropbankInflection`` object describing the inflection of
+         this instance's predicate."""
+ 
+-        self.predicate = predicate
++        self.predicate = data_params.predicate
+         """A ``PropbankTreePointer`` indicating the position of this
+         instance's predicate within its containing sentence."""
+ 
+-        self.arguments = tuple(arguments)
++        self.arguments = tuple(data_params.arguments)
+         """A list of tuples (argloc, argid), specifying the location
+         and identifier for each of the predicate's argument in the
+         containing sentence.  Argument identifiers are strings such as
+         ``'ARG0'`` or ``'ARGM-TMP'``.  This list does *not* contain
+         the predicate."""
+ 
+-        self.parse_corpus = parse_corpus
++        self.parse_corpus = data_params.parse_corpus
+         """A corpus reader for the parse trees corresponding to the
+         instances in this propbank corpus."""
+ 
+@@ -302,16 +306,7 @@ class PropbankInstance:
+ 
+         # Put it all together.
+         return PropbankInstance(
+-            fileid,
+-            sentnum,
+-            wordnum,
+-            tagger,
+-            roleset,
+-            inflection,
+-            predicate,
+-            arguments,
+-            parse_corpus,
+-        )
++            DataParams___init___169(fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus))
+ 
+ 
+ class PropbankPointer:
+diff --git a/nltk/corpus/reader/pros_cons.py b/nltk/corpus/reader/pros_cons.py
+index 396dfaf0e..49b837e0d 100644
+--- a/nltk/corpus/reader/pros_cons.py
++++ b/nltk/corpus/reader/pros_cons.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ CorpusReader for the Pros and Cons dataset.
+ 
+diff --git a/nltk/corpus/reader/reviews.py b/nltk/corpus/reader/reviews.py
+index fdd495f95..86c73209d 100644
+--- a/nltk/corpus/reader/reviews.py
++++ b/nltk/corpus/reader/reviews.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ CorpusReader for reviews corpora (syntax based on Customer Review Corpus).
+ 
+diff --git a/nltk/corpus/reader/semcor.py b/nltk/corpus/reader/semcor.py
+index 9f84dd0e4..a47260a57 100644
+--- a/nltk/corpus/reader/semcor.py
++++ b/nltk/corpus/reader/semcor.py
+@@ -220,6 +220,17 @@ class SemcorCorpusReader(XMLCorpusReader):
+                     return bottom[0]
+                 else:
+                     return bottom  # chunk as a list
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _all_xmlwords_in(elt, result=None):
+diff --git a/nltk/corpus/reader/senseval.py b/nltk/corpus/reader/senseval.py
+index 38178b4a3..065906687 100644
+--- a/nltk/corpus/reader/senseval.py
++++ b/nltk/corpus/reader/senseval.py
+@@ -156,6 +156,17 @@ class SensevalCorpusView(StreamBackedCorpusView):
+             else:
+                 assert False, "unexpected tag %s" % child.tag
+         return SensevalInstance(lexelt, position, context, senses)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _fixXML(text):
+diff --git a/nltk/corpus/reader/sentiwordnet.py b/nltk/corpus/reader/sentiwordnet.py
+index 38f095f58..fafb2fdfb 100644
+--- a/nltk/corpus/reader/sentiwordnet.py
++++ b/nltk/corpus/reader/sentiwordnet.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ An NLTK interface for SentiWordNet
+ 
+diff --git a/nltk/corpus/reader/string_category.py b/nltk/corpus/reader/string_category.py
+index 192d6bfbe..43f8969e6 100644
+--- a/nltk/corpus/reader/string_category.py
++++ b/nltk/corpus/reader/string_category.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Read tuples from a corpus consisting of categorized strings.
+ For example, from the question classification corpus:
+diff --git a/nltk/corpus/reader/switchboard.py b/nltk/corpus/reader/switchboard.py
+index 3e3ecf0ed..554751028 100644
+--- a/nltk/corpus/reader/switchboard.py
++++ b/nltk/corpus/reader/switchboard.py
+@@ -4,6 +4,17 @@
+ # Author: Edward Loper <edloper@gmail.com>
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ import re
+ 
+ from nltk.corpus.reader.api import *
+diff --git a/nltk/corpus/reader/tagged.py b/nltk/corpus/reader/tagged.py
+index 1f1c7221f..e23796b64 100644
+--- a/nltk/corpus/reader/tagged.py
++++ b/nltk/corpus/reader/tagged.py
+@@ -7,6 +7,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ A reader for corpora whose documents contain part-of-speech-tagged words.
+ """
+diff --git a/nltk/corpus/reader/timit.py b/nltk/corpus/reader/timit.py
+index cf258ba44..abddd8e7a 100644
+--- a/nltk/corpus/reader/timit.py
++++ b/nltk/corpus/reader/timit.py
+@@ -496,6 +496,17 @@ class SpeakerInfo:
+         attribs = "id sex dr use recdate birthdate ht race edu comments"
+         args = [f"{attr}={getattr(self, attr)!r}" for attr in attribs.split()]
+         return "SpeakerInfo(%s)" % (", ".join(args))
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def read_timit_block(stream):
+diff --git a/nltk/corpus/reader/twitter.py b/nltk/corpus/reader/twitter.py
+index 8a0004a19..14c999960 100644
+--- a/nltk/corpus/reader/twitter.py
++++ b/nltk/corpus/reader/twitter.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ A reader for corpora that consist of Tweets. It is assumed that the Tweets
+ have been serialised into line-delimited JSON.
+diff --git a/nltk/corpus/reader/udhr.py b/nltk/corpus/reader/udhr.py
+index b50aa4c0f..d388ae261 100644
+--- a/nltk/corpus/reader/udhr.py
++++ b/nltk/corpus/reader/udhr.py
+@@ -1,3 +1,14 @@
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ UDHR corpus reader. It mostly deals with encodings.
+ """
+diff --git a/nltk/corpus/reader/verbnet.py b/nltk/corpus/reader/verbnet.py
+index 4bea6aaac..6a3257404 100644
+--- a/nltk/corpus/reader/verbnet.py
++++ b/nltk/corpus/reader/verbnet.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ An NLTK interface to the VerbNet verb lexicon
+ 
+diff --git a/nltk/corpus/reader/wordnet.py b/nltk/corpus/reader/wordnet.py
+index f74006b90..0a9d83275 100644
+--- a/nltk/corpus/reader/wordnet.py
++++ b/nltk/corpus/reader/wordnet.py
+@@ -2367,6 +2367,17 @@ class WordNetICCorpusReader(CorpusReader):
+                 if value != 0:
+                     ic[pos][offset] = value
+         return ic
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/xmldocs.py b/nltk/corpus/reader/xmldocs.py
+index 67c4b9c73..5f60f96c1 100644
+--- a/nltk/corpus/reader/xmldocs.py
++++ b/nltk/corpus/reader/xmldocs.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Corpus reader for corpora whose documents are xml files.
+ 
+diff --git a/nltk/corpus/reader/ycoe.py b/nltk/corpus/reader/ycoe.py
+index db39538f2..db11227d6 100644
+--- a/nltk/corpus/reader/ycoe.py
++++ b/nltk/corpus/reader/ycoe.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Corpus reader for the York-Toronto-Helsinki Parsed Corpus of Old
+ English Prose (YCOE), a 1.5 million word syntactically-annotated
+diff --git a/nltk/data.py b/nltk/data.py
+index c65c69e82..761217ae0 100644
+--- a/nltk/data.py
++++ b/nltk/data.py
+@@ -95,6 +95,17 @@ else:
+         "/usr/lib/nltk_data",
+         "/usr/local/lib/nltk_data",
+     ]
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ######################################################################
+diff --git a/nltk/downloader.py b/nltk/downloader.py
+index 3bd0b8d0d..1e2f1c61c 100644
+--- a/nltk/downloader.py
++++ b/nltk/downloader.py
+@@ -2222,6 +2222,17 @@ class DownloaderGUI:
+         # Check the queue again after MONITOR_QUEUE_DELAY msec.
+         afterid = self.top.after(self._MONITOR_QUEUE_DELAY, self._monitor_message_queue)
+         self._afterid["_monitor_message_queue"] = afterid
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ######################################################################
+diff --git a/nltk/draw/table.py b/nltk/draw/table.py
+index e84a1593f..f44a1b5f2 100644
+--- a/nltk/draw/table.py
++++ b/nltk/draw/table.py
+@@ -1124,6 +1124,17 @@ class Table:
+                 if self._reprfunc is not None:
+                     cell = self._reprfunc(i, j, cell)
+                 assert self._mlb.get(i)[j] == cell
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ######################################################################
+diff --git a/nltk/draw/tree.py b/nltk/draw/tree.py
+index b90fd6507..c75104c5f 100644
+--- a/nltk/draw/tree.py
++++ b/nltk/draw/tree.py
+@@ -417,6 +417,17 @@ class TreeSegmentWidget(CanvasWidget):
+ 
+     def __repr__(self):
+         return f"[TreeSeg {self._label}: {self._subtrees}]"
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _tree_to_treeseg(
+diff --git a/nltk/draw/util.py b/nltk/draw/util.py
+index 111f5e7e2..ce4de4a8a 100644
+--- a/nltk/draw/util.py
++++ b/nltk/draw/util.py
+@@ -2512,6 +2512,17 @@ class MutableOptionMenu(Menubutton):
+         """Destroy this widget and the associated menu."""
+         Menubutton.destroy(self)
+         self._menu = None
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/featstruct.py b/nltk/featstruct.py
+index d6c339a98..28dd1bd21 100644
+--- a/nltk/featstruct.py
++++ b/nltk/featstruct.py
+@@ -569,6 +569,17 @@ class FeatStruct(SubstituteBindingsI):
+ # Mutation: disable if frozen.
+ _FROZEN_ERROR = "Frozen FeatStructs may not be modified."
+ _FROZEN_NOTICE = "\n%sIf self is frozen, raise ValueError."
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _check_frozen(method, indent=""):
+diff --git a/nltk/grammar.py b/nltk/grammar.py
+index 1a0137172..c77ba6221 100644
+--- a/nltk/grammar.py
++++ b/nltk/grammar.py
+@@ -189,6 +189,17 @@ class Nonterminal:
+         :rtype: Nonterminal
+         """
+         return self.__div__(rhs)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def nonterminals(symbols):
+diff --git a/nltk/inference/api.py b/nltk/inference/api.py
+index 93c513f22..bdb9527b0 100644
+--- a/nltk/inference/api.py
++++ b/nltk/inference/api.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Interfaces and base classes for theorem provers and model builders.
+ 
+diff --git a/nltk/inference/mace.py b/nltk/inference/mace.py
+index 370abbd27..17354b46f 100644
+--- a/nltk/inference/mace.py
++++ b/nltk/inference/mace.py
+@@ -267,6 +267,17 @@ class Mace(Prover9Parent, ModelBuilder):
+         updated_input_str += input_str
+ 
+         return self._call(updated_input_str, self._mace4_bin, args, verbose)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def spacer(num=30):
+diff --git a/nltk/inference/prover9.py b/nltk/inference/prover9.py
+index f379325ae..3e7eb80fe 100644
+--- a/nltk/inference/prover9.py
++++ b/nltk/inference/prover9.py
+@@ -217,6 +217,17 @@ class Prover9Parent:
+                 print("stderr:\n", stderr, "\n")
+ 
+         return (stdout.decode("utf-8"), p.returncode)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def convert_to_prover9(input):
+diff --git a/nltk/inference/resolution.py b/nltk/inference/resolution.py
+index fd7362068..8911d3939 100755
+--- a/nltk/inference/resolution.py
++++ b/nltk/inference/resolution.py
+@@ -335,6 +335,17 @@ class Clause(list):
+ 
+     def __repr__(self):
+         return "%s" % self
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _iterate_first(first, second, bindings, used, skipped, finalize_method, debug):
+diff --git a/nltk/inference/tableau.py b/nltk/inference/tableau.py
+index 7fb005e9b..89e1b4db3 100644
+--- a/nltk/inference/tableau.py
++++ b/nltk/inference/tableau.py
+@@ -622,6 +622,17 @@ class Categories:
+     EQ = 18
+     EXISTS = 19
+     ALL = 20
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def testTableauProver():
+diff --git a/nltk/internals.py b/nltk/internals.py
+index 566668578..61c852842 100644
+--- a/nltk/internals.py
++++ b/nltk/internals.py
+@@ -25,6 +25,17 @@ from xml.etree import ElementTree
+ 
+ _java_bin = None
+ _java_options = []
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ # [xx] add classpath option to config_java?
+diff --git a/nltk/lm/models.py b/nltk/lm/models.py
+index 3a9dcbee1..d0f14b3c1 100644
+--- a/nltk/lm/models.py
++++ b/nltk/lm/models.py
+@@ -5,6 +5,17 @@
+ #         Manu Joseph <manujosephv@gmail.com>
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """Language Models"""
+ 
+ from nltk.lm.api import LanguageModel, Smoothing
+diff --git a/nltk/lm/smoothing.py b/nltk/lm/smoothing.py
+index d1b8941ef..d6217e9e7 100644
+--- a/nltk/lm/smoothing.py
++++ b/nltk/lm/smoothing.py
+@@ -14,6 +14,17 @@ from operator import methodcaller
+ 
+ from nltk.lm.api import Smoothing
+ from nltk.probability import ConditionalFreqDist
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _count_values_gt_zero(distribution):
+diff --git a/nltk/parse/chart.py b/nltk/parse/chart.py
+index 0e0ce174a..1c9179e46 100644
+--- a/nltk/parse/chart.py
++++ b/nltk/parse/chart.py
+@@ -1295,6 +1295,17 @@ class FilteredBottomUpPredictCombineRule(BottomUpPredictCombineRule):
+                 new_edge = TreeEdge(edge.span(), prod.lhs(), prod.rhs(), 1)
+                 if chart.insert(new_edge, (edge,)):
+                     yield new_edge
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _bottomup_filter(grammar, nexttoken, rhs, dot=0):
+diff --git a/nltk/parse/earleychart.py b/nltk/parse/earleychart.py
+index 226c3ebb0..8d02e3f40 100644
+--- a/nltk/parse/earleychart.py
++++ b/nltk/parse/earleychart.py
+@@ -493,6 +493,17 @@ class FeatureIncrementalBottomUpLeftCornerChartParser(FeatureIncrementalChartPar
+         FeatureIncrementalChartParser.__init__(
+             self, grammar, BU_LC_INCREMENTAL_FEATURE_STRATEGY, **parser_args
+         )
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ # ////////////////////////////////////////////////////////////
+diff --git a/nltk/parse/featurechart.py b/nltk/parse/featurechart.py
+index c9e0f7ed5..1c266e94a 100644
+--- a/nltk/parse/featurechart.py
++++ b/nltk/parse/featurechart.py
+@@ -581,6 +581,17 @@ class InstantiateVarsChart(FeatureChart):
+             for var in edge.lhs().variables()
+             if var.name.startswith("@")
+         }
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ # ////////////////////////////////////////////////////////////
+diff --git a/nltk/parse/pchart.py b/nltk/parse/pchart.py
+index ec0e350b3..ef126f385 100644
+--- a/nltk/parse/pchart.py
++++ b/nltk/parse/pchart.py
+@@ -420,6 +420,17 @@ class LongestChartParser(BottomUpProbabilisticChartParser):
+     # Inherit constructor
+     def sort_queue(self, queue, chart):
+         queue.sort(key=lambda edge: edge.length())
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/recursivedescent.py b/nltk/parse/recursivedescent.py
+index d0452ca43..13bb54fb9 100644
+--- a/nltk/parse/recursivedescent.py
++++ b/nltk/parse/recursivedescent.py
+@@ -643,6 +643,17 @@ class SteppingRecursiveDescentParser(RecursiveDescentParser):
+         :type grammar: CFG
+         """
+         self._grammar = grammar
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/shiftreduce.py b/nltk/parse/shiftreduce.py
+index 34e8628d9..86250c402 100644
+--- a/nltk/parse/shiftreduce.py
++++ b/nltk/parse/shiftreduce.py
+@@ -439,6 +439,17 @@ class SteppingShiftReduceParser(ShiftReduceParser):
+         :type grammar: CFG
+         """
+         self._grammar = grammar
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/stanford.py b/nltk/parse/stanford.py
+index 030c8404b..57cc7777c 100644
+--- a/nltk/parse/stanford.py
++++ b/nltk/parse/stanford.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ import os
+ import tempfile
+ import warnings
+diff --git a/nltk/probability.py b/nltk/probability.py
+index fffe1478f..3b50c5086 100755
+--- a/nltk/probability.py
++++ b/nltk/probability.py
+@@ -1804,6 +1804,17 @@ class KneserNeyProbDist(ProbDistI):
+         :rtype: str
+         """
+         return f"<KneserNeyProbDist based on {self._trigrams.N()} trigrams"
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/sem/boxer.py b/nltk/sem/boxer.py
+index 101bb0792..48326a5da 100644
+--- a/nltk/sem/boxer.py
++++ b/nltk/sem/boxer.py
+@@ -7,6 +7,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ An interface to Boxer.
+ 
+diff --git a/nltk/sem/drt.py b/nltk/sem/drt.py
+index ea69c5c6e..0e8a284a6 100644
+--- a/nltk/sem/drt.py
++++ b/nltk/sem/drt.py
+@@ -541,6 +541,17 @@ class DRS(DrtExpression, Expression):
+                 + DrtTokens.CLOSE
+             )
+         return drs
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def DrtVariableExpression(variable):
+diff --git a/nltk/sem/evaluate.py b/nltk/sem/evaluate.py
+index 304ae2c3f..69878c0d8 100644
+--- a/nltk/sem/evaluate.py
++++ b/nltk/sem/evaluate.py
+@@ -47,6 +47,17 @@ class Error(Exception):
+ 
+ class Undefined(Error):
+     pass
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def trace(f, *args, **kw):
+diff --git a/nltk/sem/glue.py b/nltk/sem/glue.py
+index 9db2034aa..4d37d95b4 100644
+--- a/nltk/sem/glue.py
++++ b/nltk/sem/glue.py
+@@ -779,6 +779,17 @@ class DrtGlue(Glue):
+ 
+     def get_glue_dict(self):
+         return DrtGlueDict(self.semtype_file)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def demo(show_example=-1):
+diff --git a/nltk/sem/linearlogic.py b/nltk/sem/linearlogic.py
+index 8ca29aa1f..b196a236a 100644
+--- a/nltk/sem/linearlogic.py
++++ b/nltk/sem/linearlogic.py
+@@ -462,6 +462,17 @@ class UnificationException(Exception):
+ 
+ class LinearLogicApplicationException(Exception):
+     pass
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def demo():
+diff --git a/nltk/sem/logic.py b/nltk/sem/logic.py
+index 816a04585..51e484d6b 100644
+--- a/nltk/sem/logic.py
++++ b/nltk/sem/logic.py
+@@ -67,6 +67,17 @@ class Tokens:
+ 
+     # Special
+     SYMBOLS = [x for x in TOKENS if re.match(r"^[-\\.(),!&^|>=<]*$", x)]
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def boolean_ops():
+diff --git a/nltk/stem/snowball.py b/nltk/stem/snowball.py
+index 06ed5bbe3..cb986e6b2 100644
+--- a/nltk/stem/snowball.py
++++ b/nltk/stem/snowball.py
+@@ -5844,6 +5844,17 @@ class SwedishStemmer(_ScandinavianStemmer):
+                 break
+ 
+         return word
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def demo():
+diff --git a/nltk/tag/senna.py b/nltk/tag/senna.py
+index e423e1ee6..f782c9eb8 100644
+--- a/nltk/tag/senna.py
++++ b/nltk/tag/senna.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Senna POS tagger, NER Tagger, Chunk Tagger
+ 
+diff --git a/nltk/tag/sequential.py b/nltk/tag/sequential.py
+index 2bd539d5b..fcc0bfef0 100644
+--- a/nltk/tag/sequential.py
++++ b/nltk/tag/sequential.py
+@@ -7,6 +7,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Classes for tagging sentences sequentially, left to right.  The
+ abstract base class SequentialBackoffTagger serves as the base
+diff --git a/nltk/tag/stanford.py b/nltk/tag/stanford.py
+index 9f74ebb7b..93333be24 100644
+--- a/nltk/tag/stanford.py
++++ b/nltk/tag/stanford.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ A module for interfacing with the Stanford taggers.
+ 
+diff --git a/nltk/tbl/rule.py b/nltk/tbl/rule.py
+index a85e0ebe3..30ade9b35 100644
+--- a/nltk/tbl/rule.py
++++ b/nltk/tbl/rule.py
+@@ -7,6 +7,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see  LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ from abc import ABCMeta, abstractmethod
+ 
+ from nltk import jsontags
+diff --git a/nltk/text.py b/nltk/text.py
+index fae2ffa9a..92dc9bb9e 100644
+--- a/nltk/text.py
++++ b/nltk/text.py
+@@ -740,6 +740,17 @@ class TextCollection(Text):
+ 
+     def tf_idf(self, term, text):
+         return self.tf(term, text) * self.idf(term)
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def demo():
+diff --git a/nltk/tokenize/punkt.py b/nltk/tokenize/punkt.py
+index 877b79dd2..abe072068 100644
+--- a/nltk/tokenize/punkt.py
++++ b/nltk/tokenize/punkt.py
+@@ -299,6 +299,17 @@ class PunktLanguageVars:
+ _re_non_punct = re.compile(r"[^\W\d]", re.UNICODE)
+ """Matches token types that are not merely punctuation. (Types for
+ numeric tokens are changed to ##number## and hence contain alpha.)"""
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ # }
+diff --git a/nltk/tokenize/regexp.py b/nltk/tokenize/regexp.py
+index f8ab28df4..5cf282eba 100644
+--- a/nltk/tokenize/regexp.py
++++ b/nltk/tokenize/regexp.py
+@@ -194,6 +194,17 @@ class WordPunctTokenizer(RegexpTokenizer):
+ 
+     def __init__(self):
+         RegexpTokenizer.__init__(self, r"\w+|[^\w\s]+")
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ ######################################################################
+diff --git a/nltk/toolbox.py b/nltk/toolbox.py
+index a1d01c253..ee06bc05e 100644
+--- a/nltk/toolbox.py
++++ b/nltk/toolbox.py
+@@ -269,6 +269,17 @@ class ToolboxData(StandardFormat):
+ 
+ 
+ _is_value = re.compile(r"\S")
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def to_sfm_string(tree, encoding=None, errors="strict", unicode_fields=None):
+diff --git a/nltk/translate/ibm1.py b/nltk/translate/ibm1.py
+index c278f04d6..18d949992 100644
+--- a/nltk/translate/ibm1.py
++++ b/nltk/translate/ibm1.py
+@@ -11,6 +11,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Lexical translation model that ignores word order.
+ 
+diff --git a/nltk/translate/ibm2.py b/nltk/translate/ibm2.py
+index e85586e79..a7844f4fb 100644
+--- a/nltk/translate/ibm2.py
++++ b/nltk/translate/ibm2.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Lexical translation model that considers word order.
+ 
+diff --git a/nltk/translate/ibm3.py b/nltk/translate/ibm3.py
+index 3adaabfa3..505830ffa 100644
+--- a/nltk/translate/ibm3.py
++++ b/nltk/translate/ibm3.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Translation model that considers how a word can be aligned to
+ multiple words in another language.
+diff --git a/nltk/translate/ibm4.py b/nltk/translate/ibm4.py
+index 35e6ffcd2..32a2207f4 100644
+--- a/nltk/translate/ibm4.py
++++ b/nltk/translate/ibm4.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Translation model that reorders output words based on their type and
+ distance from other related words in the output sentence.
+diff --git a/nltk/translate/ibm5.py b/nltk/translate/ibm5.py
+index 9b9721695..4fff9d48f 100644
+--- a/nltk/translate/ibm5.py
++++ b/nltk/translate/ibm5.py
+@@ -5,6 +5,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ Translation model that keeps track of vacant positions in the target
+ sentence to decide where to place translated words.
+diff --git a/nltk/tree/immutable.py b/nltk/tree/immutable.py
+index ba4c3e464..a980e1789 100644
+--- a/nltk/tree/immutable.py
++++ b/nltk/tree/immutable.py
+@@ -8,6 +8,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ from nltk.probability import ProbabilisticMixIn
+ from nltk.tree.parented import MultiParentedTree, ParentedTree
+ from nltk.tree.tree import Tree
+diff --git a/nltk/tree/parented.py b/nltk/tree/parented.py
+index fd6656320..6447b87e4 100644
+--- a/nltk/tree/parented.py
++++ b/nltk/tree/parented.py
+@@ -8,6 +8,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ import warnings
+ from abc import ABCMeta, abstractmethod
+ 
+diff --git a/nltk/tree/probabilistic.py b/nltk/tree/probabilistic.py
+index a258aa290..191e350be 100644
+--- a/nltk/tree/probabilistic.py
++++ b/nltk/tree/probabilistic.py
+@@ -9,6 +9,17 @@
+ # For license information, see LICENSE.TXT
+ 
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ from nltk.internals import raise_unorderable_types
+ from nltk.probability import ProbabilisticMixIn
+ from nltk.tree.immutable import ImmutableProbabilisticTree
+diff --git a/nltk/tree/tree.py b/nltk/tree/tree.py
+index b951786c7..d71193450 100644
+--- a/nltk/tree/tree.py
++++ b/nltk/tree/tree.py
+@@ -888,6 +888,17 @@ class Tree(list):
+                 " ".join(childstrs),
+                 parens[1],
+             )
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ 
+ def _child_names(tree):
+diff --git a/nltk/twitter/api.py b/nltk/twitter/api.py
+index 85758c9cf..bcd5a87da 100644
+--- a/nltk/twitter/api.py
++++ b/nltk/twitter/api.py
+@@ -6,6 +6,17 @@
+ # URL: <https://www.nltk.org/>
+ # For license information, see LICENSE.TXT
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ This module provides an interface for TweetHandlers, and support for timezone
+ handling.
+diff --git a/nltk/twitter/twitterclient.py b/nltk/twitter/twitterclient.py
+index 99eae2941..fbfa3e9d0 100644
+--- a/nltk/twitter/twitterclient.py
++++ b/nltk/twitter/twitterclient.py
+@@ -7,6 +7,17 @@
+ # For license information, see LICENSE.TXT
+ 
+ 
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ """
+ NLTK Twitter client
+ 
+diff --git a/nltk/util.py b/nltk/util.py
+index 411e3132f..9c65a424d 100644
+--- a/nltk/util.py
++++ b/nltk/util.py
+@@ -28,6 +28,17 @@ from urllib.request import (
+ 
+ from nltk.collections import *
+ from nltk.internals import deprecated, raise_unorderable_types, slice_bounds
++class DataParams___init___169:
++    def __init__(self, fileid, sentnum, wordnum, tagger, roleset, inflection, predicate, arguments, parse_corpus = None):
++        self.fileid = fileid
++        self.sentnum = sentnum
++        self.wordnum = wordnum
++        self.tagger = tagger
++        self.roleset = roleset
++        self.inflection = inflection
++        self.predicate = predicate
++        self.arguments = arguments
++        self.parse_corpus = parse_corpus
+ 
+ ######################################################################
+ # Short usage message

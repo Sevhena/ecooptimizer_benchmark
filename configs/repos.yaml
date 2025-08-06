@@ -1,52 +1,62 @@
 django:
-  venv_command: ""
-  test_command: ["tests/runtests.py", "--settings=test_sqlite"]
+  test_command: ["python", "tests/runtests.py", "--settings=test_sqlite"]
   target: "django/django" 
   patterns_to_exclude:
     - "django/django/test"
 streamlit:
-  venv_command: ""
-  test_command: ""
+  test_command: ["make", "pytest"]
   target: "streamlit/lib"
   patterns_to_exclude:
     - "**/testing/**"
     - "**/tests/**"
 scikit-learn:
-  venv_command: ""
-  test_command: ["-m", "pytest"]
+  test_command: ["python", "-m", "pytest"]
   target: "scikit-learn/sklearn"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
-tensorflow:
-  venv_command: ""
-  test_command: ""
-  target: "tensorflow/tensorflow/python"
-  patterns_to_exclude:
-    - "**/*_test.py"
 numpy:
-  venv: ".numpy_venv"
-  test_command: ["-c", "import numpy as np; np.test()"]
+  test_command: ["python", "-c", "import numpy as np; np.test()"]
   target: "numpy/numpy"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
+nltk:
+  test_command: ["python", "-m", "pytest", "nltk"]
+  target: "nltk/nltk"
+  patterns_to_exclude:
+    - "**/test/**"
+    - "**/test_*.py"
 scipy:
-  venv: ".scipy_venv"
-  test_command: ["-m", "pytest", "scipy"]
+  test_command: ["python", "-m", "pytest", "scipy"]
   target: "scipy/scipy"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 dask:
-  venv_command: ""
-  test_command: ["-m", "pytest", "dask"]
+  test_command: ["py.test", "dask", "--verbose", "--doctest-modules"]
   target: "dask/dask"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
+gpiozero:
+  test_command: ["make", "test"]
+  target: "gpiozero/gpiozero"
+  patterns_to_exclude:
+    - "**/tests/**"
+    - "**/test_*.py"
+paho.mqtt.python:
+  test_command: ["python", "-m", "pytest", "."]
+  target: "paho.mqtt.python/src/paho"
+  patterns_to_exclude:
+    - "**/tests/**"
+    - "**/test_*.py"
+tensorflow:
+  test_command: ""
+  target: "tensorflow/tensorflow/python"
+  patterns_to_exclude:
+    - "**/*_test.py"
 airflow:
-  venv_command: ""
   test_command: ""
   target: "airflow"
   patterns_to_exclude:
@@ -61,57 +71,31 @@ airflow:
     - airflow/devel-common
     - "**/tests/**"
     - "**/test_*.py"
-gpiozero:
-  venv: ".gpiozero_venv"
-  test_command: ["-m", "pytest"]
-  target: "gpiozero/gpiozero"
-  patterns_to_exclude:
-    - "**/tests/**"
-    - "**/test_*.py"
-paho.mqtt.python:
-  venv_command: ""
-  test_command: ""
-  target: "paho.mqtt.python/src/paho"
-  patterns_to_exclude:
-    - "**/tests/**"
-    - "**/test_*.py"
 beautifulsoup:
-  venv_command: ""
   test_command: ""
   target: "beautifulsoup/bs4"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 keras:
-  venv_command: ""
   test_command: ""
   target: "keras/keras/src"
   patterns_to_exclude:
     - "**/testing/**"
     - "**/*_test.py"
 librosa:
-  venv_command: ""
   test_command: ""
   target: "librosa/librosa"
   patterns_to_exclude:
     - "**/tests/**"
 matplotlib:
-  venv_command: ""
   test_command: ""
   target: "matplotlib/lib/matplotlib"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/testing/**"
     - "**/test_*.py"
-nltk:
-  venv_command: ""
-  test_command: ""
-  target: "nltk/nltk"
-  patterns_to_exclude:
-    - "**/test/**"
-    - "**/test_*.py"
 pandas:
-  venv_command: ""
   test_command: ""
   target: "pandas/pandas"
   patterns_to_exclude:
@@ -119,14 +103,12 @@ pandas:
     - "**/tests/**"
     - "**/test_*.py"
 geopy:
-  venv_command: ""
   test_command: ""
   target: "geopy/geopy"
   patterns_to_exclude:
     - "**/test/**"
     - "**/test_*.py"
 geopandas:
-  venv_command: ""
   test_command: ""
   target: "geopandas/geopandas"
   patterns_to_exclude:
@@ -134,118 +116,101 @@ geopandas:
     - "**/test_*.py"
     - "**/testing.py"
 seaborn:
-  venv_command: ""
   test_command: ""
   target: "seaborn/seaborn"
   patterns_to_exclude:
     - "**/external/**"
     - "**/test_*.py"
 SeleniumBase:
-  venv_command: ""
   test_command: ""
   target: "SeleniumBase/seleniumbase"
   patterns_to_exclude:
     - "**/test_*.py"
 cryptography:
-  venv_command: ""
   test_command: ""
   target: "cryptography/src/cryptography"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 pytest:
-  venv_command: ""
   test_command: ""
   target: "pytest/src/_pytest"
   patterns_to_exclude:
     - "**/testing/**"
     - "**/test_*.py"
 requests:
-  venv_command: ""
   test_command: ""
   target: "requests/src/requests"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 tqdm:
-  venv_command: ""
   test_command: ""
   target: "tqdm/tqdm"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 taichi:
-  venv_command: ""
   test_command: ""
   target: "taichi/python/taichi"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 rclpy:
-  venv_command: ""
   test_command: ""
   target: "rclpy/rclpy/rclpy"
   patterns_to_exclude:
     - "**/test/**"
     - "**/test_*.py"
 scrapy:
-  venv_command: ""
   test_command: ""
   target: "scrapy/scrapy"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 fastapi:
-  venv_command: ""
   test_command: ""
   target: "fastapi/fastapi"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 flask:
-  venv_command: ""
   test_command: ""
   target: "flask/src/flask"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 uvicorn:
-  venv_command: ""
   test_command: ""
   target: "uvicorn/uvicorn"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 tornado:
-  venv_command: ""
   test_command: ""
   target: "tornado/tornado"
   patterns_to_exclude:
     - "**/test/**"
     - "**/*_test.py"
 sanic:
-  venv_command: ""
   test_command: ""
   target: "sanic/sanic"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 black:
-  venv_command: ""
   test_command: ""
   target: "black/src/black"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 celery:
-  venv_command: ""
   test_command: ""
   target: "celery/celery"
   patterns_to_exclude:
     - "**/t/**"
     - "**/test_*.py"
 pytorch:
-  venv_command: ""
   test_command: ""
   target: "pytorch"
   patterns_to_exclude:
@@ -274,35 +239,30 @@ pytorch:
     - "**/testing/**"   
     - "**/test_*.py"
 ansible:
-  venv_command: ""
   test_command: ""
   target: "ansible/lib/ansible"
   patterns_to_exclude:
     - "**/test/**"
     - "**/test_*.py"
 glances:
-  venv_command: ""
   test_command: ""
   target: "glances/glances"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 gunicorn:
-  venv_command: ""
   test_command: ""
   target: "gunicorn/gunicorn"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 mitmproxy:
-  venv_command: ""
   test_command: ""
   target: "mitmproxy/mitmproxy"
   patterns_to_exclude:
     - "**/test/**"
     - "**/test_*.py"
 homeassistant:
-  venv_command: ""
   test_command: ""
   target: "homeassistant/homeassistant"
   patterns_to_exclude:

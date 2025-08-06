@@ -1,0 +1,17 @@
+diff --git a/nltk/featstruct.py b/nltk/featstruct.py
+index d6c339a98..ae37eb0d6 100644
+--- a/nltk/featstruct.py
++++ b/nltk/featstruct.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Natural Language Toolkit: Feature Structures
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -1575,6 +1576,7 @@ def _destructively_unify(
+     raise TypeError("Expected mappings or sequences")
+ 
+ 
++@track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_1b71d437', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/1b71d437.csv')
+ def _unify_feature_values(
+     fname, fval1, fval2, bindings, forward, trace, fail, fs_class, fpath
+ ):

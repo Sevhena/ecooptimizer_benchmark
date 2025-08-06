@@ -1,0 +1,27 @@
+diff --git a/src/paho/mqtt/properties.py b/src/paho/mqtt/properties.py
+index f307b86..a8f3caf 100644
+--- a/src/paho/mqtt/properties.py
++++ b/src/paho/mqtt/properties.py
+@@ -17,6 +17,7 @@
+ import struct
+ 
+ from .packettypes import PacketTypes
++from codecarbon import EmissionsTracker
+ 
+ 
+ class MQTTException(Exception):
+@@ -380,9 +381,12 @@ class Properties:
+         elif type == self.types.index("Binary Data"):
+             value, valuelen = readBytes(buffer)
+         elif type == self.types.index("UTF-8 Encoded String"):
+-            value, valuelen = readUTF(buffer, propslen)
++            with EmissionsTracker(project_name='paho.mqtt.python-benchmark', experiment_id='paho.mqtt.python_CRC001_3813df14', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/cached-repeated-calls/3813df14_refactored.csv') as tracker:
++                cached_readUTF = readUTF(buffer, propslen)
++                with EmissionsTracker(project_name='paho.mqtt.python-benchmark', experiment_id='paho.mqtt.python_CRC001_3813df14', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/cached-repeated-calls/3813df14_refactored.csv') as tracker:
++                    value, valuelen = readUTF(buffer, propslen)
+         elif type == self.types.index("UTF-8 String Pair"):
+-            value, valuelen = readUTF(buffer, propslen)
++            value, valuelen = cached_readUTF
+             buffer = buffer[valuelen:]  # strip the bytes used by the value
+             value1, valuelen1 = readUTF(buffer, propslen - valuelen)
+             value = (value, value1)

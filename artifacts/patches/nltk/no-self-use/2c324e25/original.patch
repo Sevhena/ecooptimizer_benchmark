@@ -1,0 +1,17 @@
+diff --git a/nltk/corpus/reader/childes.py b/nltk/corpus/reader/childes.py
+index d334a4347..b96363af3 100644
+--- a/nltk/corpus/reader/childes.py
++++ b/nltk/corpus/reader/childes.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # CHILDES XML Corpus Reader
+ 
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -231,6 +232,7 @@ class CHILDESCorpusReader(XMLCorpusReader):
+             return [self._get_participants(fileid) for fileid in self.abspaths(fileids)]
+         return LazyMap(self._get_participants, self.abspaths(fileids))
+ 
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R6301_2c324e25', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/2c324e25.csv')
+     def _get_participants(self, fileid):
+         # multidimensional dicts
+         def dictOfDicts():

@@ -1,0 +1,20 @@
+diff --git a/nltk/translate/ibm4.py b/nltk/translate/ibm4.py
+index 35e6ffcd2..461069eec 100644
+--- a/nltk/translate/ibm4.py
++++ b/nltk/translate/ibm4.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ # Natural Language Toolkit: IBM Model 4
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -285,7 +286,9 @@ class IBMModel4(IBMModel):
+             self.head_distortion_table[-dj] = defaultdict(
+                 lambda: defaultdict(lambda: initial_prob)
+             )
+-            self.non_head_distortion_table[dj] = defaultdict(lambda: initial_prob)
++            with EmissionsTracker(project_name='nltk-benchmark', experiment_id='nltk_CRC001_3e29c8f8', output_file='/root/ecooptimizer_benchmark/emissions/nltk/cached-repeated-calls/3e29c8f8_refactored.csv') as tracker:
++                cached_defaultdict = defaultdict(lambda : initial_prob)
++                self.non_head_distortion_table[dj] = defaultdict(lambda: initial_prob)
+             self.non_head_distortion_table[-dj] = defaultdict(lambda: initial_prob)
+ 
+     def train(self, parallel_corpus):

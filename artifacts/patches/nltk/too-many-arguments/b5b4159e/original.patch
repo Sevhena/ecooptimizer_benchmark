@@ -1,0 +1,20 @@
+diff --git a/nltk/tbl/demo.py b/nltk/tbl/demo.py
+index 434188e64..72d7e6961 100644
+--- a/nltk/tbl/demo.py
++++ b/nltk/tbl/demo.py
+@@ -16,6 +16,7 @@ from nltk.corpus import treebank
+ from nltk.tag import BrillTaggerTrainer, RegexpTagger, UnigramTagger
+ from nltk.tag.brill import Pos, Word
+ from nltk.tbl import Template, error_list
++from codecarbon import track_emissions
+ 
+ 
+ def demo():
+@@ -137,6 +138,7 @@ def demo_high_accuracy_rules():
+     postag(num_sents=3000, min_acc=0.96, min_score=10)
+ 
+ 
++@track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_b5b4159e', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/b5b4159e.csv')
+ def postag(
+     templates=None,
+     tagged_data=None,

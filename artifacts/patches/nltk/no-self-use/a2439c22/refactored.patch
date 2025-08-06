@@ -1,0 +1,29 @@
+diff --git a/nltk/stem/isri.py b/nltk/stem/isri.py
+index 0399780c0..0a12678b6 100644
+--- a/nltk/stem/isri.py
++++ b/nltk/stem/isri.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ #
+ # Natural Language Toolkit: The ISRI Arabic Stemmer
+ #
+@@ -363,7 +364,9 @@ class ISRIStemmer(StemmerI):
+                 word = self.pre1(word)  # do - normalize short prefix
+         return word
+ 
+-    def pro_w64(self, word):
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R6301_a2439c22', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/a2439c22_refactored.csv')
++    @staticmethod
++    def pro_w64(word):
+         """process length six patterns and extract length four roots"""
+         if word[0] == "\u0627" and word[4] == "\u0627":  # افعلال
+             word = word[1:4] + word[5]
+@@ -377,7 +380,7 @@ class ISRIStemmer(StemmerI):
+             word = self.pro_w53(word)
+             word = self.end_w5(word)
+         elif len(word) == 6:
+-            word = self.pro_w64(word)
++            word = ISRIStemmer.pro_w64(word)
+         return word
+ 
+     def suf1(self, word):

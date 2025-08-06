@@ -1,0 +1,532 @@
+{
+    "6751274c": {
+        "additionalInfo": {
+            "callString": "time_func()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6751274c",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time_func()",
+        "messageId": "CRC001",
+        "module": "client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 32,
+                "endColumn": 43,
+                "endLine": 1580,
+                "line": 1580
+            },
+            {
+                "column": 33,
+                "endColumn": 44,
+                "endLine": 1581,
+                "line": 1581
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "e52758b0": {
+        "additionalInfo": {
+            "callString": "time_func()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e52758b0",
+        "message": "Repeated function call detected (2/2). Consider caching the result: time_func()",
+        "messageId": "CRC001",
+        "module": "client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 32,
+                "endColumn": 43,
+                "endLine": 3157,
+                "line": 3157
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "3813df14": {
+        "additionalInfo": {
+            "callString": "readUTF(buffer, propslen)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3813df14",
+        "message": "Repeated function call detected (2/2). Consider caching the result: readUTF(buffer, propslen)",
+        "messageId": "CRC001",
+        "module": "properties",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 55,
+                "endLine": 383,
+                "line": 383
+            },
+            {
+                "column": 30,
+                "endColumn": 55,
+                "endLine": 385,
+                "line": 385
+            }
+        ],
+        "path": "src/paho/mqtt/properties.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/properties.py"
+    },
+    "18dbac6a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "18dbac6a",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "paho.mqtt.client",
+        "obj": "Client._pack_str16",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 3362,
+                "line": 3362
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "26129bdd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "26129bdd",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "paho.mqtt.client",
+        "obj": "Client._pack_remaining_length",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 30,
+                "endLine": 3345,
+                "line": 3345
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "59ee5cc8": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "59ee5cc8",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "paho.mqtt.client",
+        "obj": "_WebsocketWrapper._create_frame",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 4819,
+                "line": 4819
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "62deeb1a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "62deeb1a",
+        "message": "Too many arguments (14/6)",
+        "messageId": "R0913",
+        "module": "paho.mqtt.publish",
+        "obj": "single",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 10,
+                "endLine": 231,
+                "line": 231
+            }
+        ],
+        "path": "src/paho/mqtt/publish.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/publish.py"
+    },
+    "2f07744e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2f07744e",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "paho.mqtt.client",
+        "obj": "Client._send_publish",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 3367,
+                "line": 3367
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "e2344573": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e2344573",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "paho.mqtt.client",
+        "obj": "Client.connect_srv",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 1439,
+                "line": 1439
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "841b8801": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "841b8801",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "paho.mqtt.publish",
+        "obj": "multiple",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 12,
+                "endLine": 106,
+                "line": 106
+            }
+        ],
+        "path": "src/paho/mqtt/publish.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/publish.py"
+    },
+    "a39279b0": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a39279b0",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "paho.mqtt.client",
+        "obj": "Client.connect",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 1393,
+                "line": 1393
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "7e7c94af": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7e7c94af",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "paho.mqtt.client",
+        "obj": "_WebsocketWrapper.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 4691,
+                "line": 4691
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "5d8aba75": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5d8aba75",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 50,
+                "endColumn": 95,
+                "endLine": 4785,
+                "line": 4785
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "89b86924": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "89b86924",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 40,
+                "endColumn": 85,
+                "endLine": 4777,
+                "line": 4777
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "a2d014ab": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a2d014ab",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "client",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 45,
+                "endColumn": 90,
+                "endLine": 4778,
+                "line": 4778
+            }
+        ],
+        "path": "src/paho/mqtt/client.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/client.py"
+    },
+    "cbf43c4b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "buffer",
+            "innerLoopLine": 295,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 301,
+            "isFunc": false,
+            "start": 295,
+            "useOccurences": false
+        },
+        "id": "cbf43c4b",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "properties.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 42,
+                "endLine": 299,
+                "line": 299
+            },
+            {
+                "column": 16,
+                "endColumn": 87,
+                "endLine": 300,
+                "line": 300
+            }
+        ],
+        "path": "src/paho/mqtt/properties.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/paho.mqtt.python/src/paho/mqtt/properties.py"
+    }
+}

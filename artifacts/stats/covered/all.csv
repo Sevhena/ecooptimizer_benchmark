@@ -1,6 +1,6 @@
 SUMMARY STATISTICS
 
-Total repos processed:,9
+Total repos processed:,10
 Total smells detected:,2611
 
 SMELL TYPE BREAKDOWN
@@ -50,3 +50,4 @@ dask,173,6,"long-element-chain:4, long-lambda-expr:0, string-concat-loop:4, use-
 streamlit,123,5,"long-element-chain:1, long-lambda-expr:3, long-message-chain:4, string-concat-loop:0, use-a-generator:0","string-concat-loop, use-a-generator"
 gpiozero,42,4,"long-element-chain:0, long-lambda-expr:1, long-message-chain:2, string-concat-loop:0, use-a-generator:0, cached-repeated-calls:1","long-element-chain, string-concat-loop, use-a-generator"
 paho.mqtt.python,16,4,"long-element-chain:0, long-lambda-expr:0, long-message-chain:3, no-self-use:3, string-concat-loop:1, use-a-generator:0, cached-repeated-calls:3","long-element-chain, long-lambda-expr, use-a-generator"
+glances,0,0,"long-element-chain:0, long-lambda-expr:0, long-message-chain:0, no-self-use:0, string-concat-loop:0, too-many-arguments:0, use-a-generator:0, cached-repeated-calls:1","long-element-chain, long-lambda-expr, long-message-chain, no-self-use, string-concat-loop, too-many-arguments, use-a-generator"

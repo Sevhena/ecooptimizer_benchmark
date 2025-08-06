@@ -1,0 +1,35 @@
+diff --git a/nltk/tag/tnt.py b/nltk/tag/tnt.py
+index d21d15eea..151b343b1 100755
+--- a/nltk/tag/tnt.py
++++ b/nltk/tag/tnt.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Natural Language Toolkit: TnT Tagger
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -211,11 +212,11 @@ class TnT(TaggerI):
+ 
+                 # safe_div provides a safe floating point division
+                 # it returns -1 if the denominator is 0
+-                c3 = self._safe_div(
++                c3 = TnT._safe_div(
+                     (self._tri[history][tag] - 1), (self._tri[history].N() - 1)
+                 )
+-                c2 = self._safe_div((self._bi[h2][tag] - 1), (self._bi[h2].N() - 1))
+-                c1 = self._safe_div((self._uni[tag] - 1), (self._uni.N() - 1))
++                c2 = TnT._safe_div((self._bi[h2][tag] - 1), (self._bi[h2].N() - 1))
++                c1 = TnT._safe_div((self._uni[tag] - 1), (self._uni.N() - 1))
+ 
+                 # if c1 is the maximum value:
+                 if (c1 > c3) and (c1 > c2):
+@@ -251,7 +252,9 @@ class TnT(TaggerI):
+         self._l2 = tl2 / (tl1 + tl2 + tl3)
+         self._l3 = tl3 / (tl1 + tl2 + tl3)
+ 
+-    def _safe_div(self, v1, v2):
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R6301_71c59f1b', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/71c59f1b_refactored.csv')
++    @staticmethod
++    def _safe_div(v1, v2):
+         """
+         Safe floating point division function, does not allow division by 0
+         returns -1 if the denominator is 0

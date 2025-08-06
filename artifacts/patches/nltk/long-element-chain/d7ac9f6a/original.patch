@@ -1,0 +1,19 @@
+diff --git a/nltk/tag/mapping.py b/nltk/tag/mapping.py
+index ffd0cf659..046e2b976 100644
+--- a/nltk/tag/mapping.py
++++ b/nltk/tag/mapping.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ # Natural Language Toolkit: Tagset Mapping
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -73,7 +74,8 @@ def _load_universal_map(fileid):
+             fine not in _MAPPINGS[fileid]["universal"]
+         ), f"Multiple entries for original tag: {fine}"
+ 
+-        _MAPPINGS[fileid]["universal"][fine] = coarse
++        with EmissionsTracker(project_name='nltk-benchmark', experiment_id='nltk_LEC001_d7ac9f6a', output_file='/root/ecooptimizer_benchmark/emissions/nltk/long-element-chain/d7ac9f6a.csv') as tracker:
++            _MAPPINGS[fileid]["universal"][fine] = coarse
+ 
+ 
+ def tagset_mapping(source, target):

@@ -1,0 +1,23 @@
+diff --git a/nltk/corpus/reader/wordnet.py b/nltk/corpus/reader/wordnet.py
+index f74006b90..507e2b7d7 100644
+--- a/nltk/corpus/reader/wordnet.py
++++ b/nltk/corpus/reader/wordnet.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ # Natural Language Toolkit: WordNet
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -2229,9 +2230,10 @@ class WordNetCorpusReader(CorpusReader):
+                         if offset_pos not in lang_offsets:
+                             lang_offsets.append(offset_pos)
+                     if attr in self.lg_attrs:
+-                        lang_lemmas = self._lang_data[lang][self.lg_attrs.index(attr)][
+-                            offset_pos
+-                        ]
++                        with EmissionsTracker(project_name='nltk-benchmark', experiment_id='nltk_LEC001_0a0acf96', output_file='/root/ecooptimizer_benchmark/emissions/nltk/long-element-chain/0a0acf96.csv') as tracker:
++                            lang_lemmas = self._lang_data[lang][self.lg_attrs.index(attr)][
++                                offset_pos
++                            ]
+                         if val not in lang_lemmas:
+                             lang_lemmas.append(val)
+ 

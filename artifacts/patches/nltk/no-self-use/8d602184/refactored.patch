@@ -1,0 +1,26 @@
+diff --git a/nltk/corpus/reader/rte.py b/nltk/corpus/reader/rte.py
+index ca73766d6..69214c83d 100644
+--- a/nltk/corpus/reader/rte.py
++++ b/nltk/corpus/reader/rte.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Natural Language Toolkit: RTE Corpus Reader
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -116,7 +117,9 @@ class RTECorpusReader(XMLCorpusReader):
+     structure of input documents.
+     """
+ 
+-    def _read_etree(self, doc):
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R6301_8d602184', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/8d602184_refactored.csv')
++    @staticmethod
++    def _read_etree(doc):
+         """
+         Map the XML input into an RTEPair.
+ 
+@@ -143,4 +146,4 @@ class RTECorpusReader(XMLCorpusReader):
+         """
+         if isinstance(fileids, str):
+             fileids = [fileids]
+-        return concat([self._read_etree(self.xml(fileid)) for fileid in fileids])
++        return concat([RTECorpusReader._read_etree(self.xml(fileid)) for fileid in fileids])
