@@ -4,6 +4,7 @@ import os
 import shutil
 import subprocess
 import logging
+import textwrap
 from threading import Thread, Event
 import yaml
 import time
@@ -281,6 +282,18 @@ def move_named_subfolders(folder_names: set[str]):
         destination.rmdir()  # Clean up if nothing was moved
 
 
+SMELL_TYPES_REF = {
+    "crc": "cached-repeated-calls",
+    "lec": "long-element-chain",
+    "lle": "long-lambda-expr",
+    "lmc": "long-message-chain",
+    "nsu": "no-self-use",
+    "scl": "string-concat-loop",
+    "tma": "too-many-arguments",
+    "ugen": "use-a-generator",
+}
+
+
 # --- Entry Point ---
 def main():
     parser = argparse.ArgumentParser(description="Run benchmark tests for smells.")
@@ -291,6 +304,15 @@ def main():
         nargs="+",
         default=ALL_SMELL_TYPES,
         help="Benchmark specific smell types",
+    )
+    parser.add_argument(
+        "--exclude",
+        nargs="+",
+        choices=SMELL_TYPES_REF.keys(),
+        help=textwrap.dedent(
+            "Exclude certain smell types:\n- "
+            + "\n- ".join(f"{k}: {v}" for k, v in SMELL_TYPES_REF.items())
+        ),
     )
     parser.add_argument(
         "--smell-id", type=str, help="Benchmark a specific smell ID (must use with --repo)"
@@ -340,6 +362,8 @@ def main():
     else:
         target_repos = selected_repos
 
+    exclusions = [SMELL_TYPES_REF[smell] for smell in args.exclude]
+
     # --- Smell Filtering ---
     smells_to_run = {}
     for repo in target_repos:
@@ -353,7 +377,11 @@ def main():
         for smell_dir in sorted(patch_repo_dir.rglob("*")):
             if not smell_dir.is_dir():
                 continue
-            elif smell_dir.name in ALL_SMELL_TYPES and smell_dir.name in args.smell_types:
+            elif (
+                smell_dir.name in ALL_SMELL_TYPES
+                and smell_dir.name not in exclusions
+                and smell_dir.name in args.smell_types
+            ):
                 smells_to_run[repo][smell_dir.name] = []
                 continue
             elif smell_dir.parent.name not in ALL_SMELL_TYPES:
@@ -380,6 +408,7 @@ def main():
     raised_error = False
     for repo, smell_items in smells_to_run.items():
         logging.info(f"\nRunning benchmarks for {repo}...")
+        logging.info(f"Smell types: {smell_items.keys()}")
         for smell_type, smell_instances in smell_items.items():
             logging.info(f"\n  {smell_type}:")
             for repo, smell_type, smell_id, smell_dir in smell_instances:

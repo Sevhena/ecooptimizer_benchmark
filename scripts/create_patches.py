@@ -370,6 +370,10 @@ def main():
                 if args.type and smell_type != ALL_SMELL_TYPES[args.type]:
                     continue
                 smell_meta.append((smell_type, smell_id))
+                clear_patches(
+                    repo_name,
+                    {"symbol": smells[smell_id]["symbol"], "smell_id": smell_id, "smells": smells},
+                )
         else:
             if args.smells:
                 logging.info(f"Generating patches for smells {args.smells} in repo {repo_name}\n")
@@ -478,8 +482,8 @@ def main():
         logging.warning("Some patches failed to create:")
         for repo, smell_ids in failed_patches.items():
             if smell_ids:
-                display_ids = "\n\t- ".join(smell_ids)
-                logging.warning(f"Repo: {repo}, Smells:\n\t-{display_ids}")
+                display_ids = "\n  - ".join(smell_ids)
+                logging.warning(f"[{repo}]\n  - {display_ids}")
     else:
         logging.info("All patches created successfully.")
 
