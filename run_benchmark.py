@@ -203,12 +203,16 @@ def run_benchmark(
                     datapoints = sum(1 for _ in f) - initial_lines
             else:
                 logging.warning(f"No emissions file found: {emissions_csv}")
-                return False
+                raise Exception(f"Emissions file not found for {repo} | {smell_id} | {version}")
 
             if datapoints < iters:
                 logging.debug(
                     f"Only {datapoints} datapoints for {repo} | {smell_id} | rerunning..."
                 )
+    except KeyboardInterrupt as e:
+        raise e
+    except Exception as e:
+        raise e
     finally:
         if verbose:
             stop_event.set()
@@ -246,7 +250,7 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
             )
     except Exception as e:
         logging.error(f"Test run failed for {repo}: {e}")
-        return 0.0, 0.0, 0.0
+        raise e
 
     elapsed = time.time() - start_time
     avg_cpu = process.cpu_percent(interval=0.1)
@@ -419,6 +423,10 @@ def main():
                                 f"Failed to run benchmark for {repo} | {smell_type} | {smell_id} | {version}"
                             )
                             break
+                    except KeyboardInterrupt:
+                        logging.info("Benchmark run interrupted by user.")
+                        move_named_subfolders(selected_repos)
+                        sys.exit(0)
                     except Exception as e:
                         logging.error(
                             f"Error running benchmark for {repo} | {smell_type} | {smell_id} | {version}: {e}"
