@@ -1,5 +1,5 @@
 django:
-  test_command: ["python", "tests/runtests.py", "--settings=test_sqlite"]
+  test_command: ["tests/runtests.py", "--settings=test_sqlite"]
   target: "django/django" 
   patterns_to_exclude:
     - "django/django/test"
@@ -10,25 +10,25 @@ streamlit:
     - "**/testing/**"
     - "**/tests/**"
 scikit-learn:
-  test_command: ["python", "-m", "pytest"]
+  test_command: ["-m", "pytest"]
   target: "scikit-learn/sklearn"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 numpy:
-  test_command: ["python", "-c", "import numpy as np; np.test()"]
+  test_command: ["-c", "import numpy as np; np.test()"]
   target: "numpy/numpy"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 nltk:
-  test_command: ["python", "-m", "pytest", "nltk"]
+  test_command: ["-m", "pytest", "nltk"]
   target: "nltk/nltk"
   patterns_to_exclude:
     - "**/test/**"
     - "**/test_*.py"
 scipy:
-  test_command: ["python", "-m", "pytest", "scipy"]
+  test_command: ["-m", "pytest", "scipy"]
   target: "scipy/scipy"
   patterns_to_exclude:
     - "**/tests/**"
@@ -40,13 +40,13 @@ dask:
     - "**/tests/**"
     - "**/test_*.py"
 gpiozero:
-  test_command: ["make", "test"]
+  test_command: ["-m", "pytest", "."]
   target: "gpiozero/gpiozero"
   patterns_to_exclude:
     - "**/tests/**"
     - "**/test_*.py"
 paho.mqtt.python:
-  test_command: ["python", "-m", "pytest", "."]
+  test_command: ["-m", "pytest", "."]
   target: "paho.mqtt.python/src/paho"
   patterns_to_exclude:
     - "**/tests/**"

@@ -222,6 +222,7 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
     """Run a single test iteration and collect system metrics."""
     process = psutil.Process()
     venv_bin = venv_dir / "bin"
+    python_path = venv_bin / "python"
 
     env = os.environ.copy()
     env["VIRTUAL_ENV"] = str(venv_dir)
@@ -236,7 +237,7 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
         with console_out_log.open("a") as f:  # append mode
             f.write(f"\n=== New Test Run: {time.ctime()} ===\n")
             subprocess.run(
-                test_cmd,
+                [python_path, *test_cmd],
                 cwd=(WORKTREES_DIR / repo),
                 env=env,
                 check=True,
