@@ -426,10 +426,10 @@ def main():
                         logging.info(f"    Restoring {repo_dir} to original state...")
                         subprocess.run(["git", "restore", "."], cwd=repo_dir)
 
-    # --- Move Emissions Files ---
-    if EMISSIONS_DIR.exists():
-        logging.info("\nMoving emissions files to timestamped folder...")
-        move_named_subfolders(selected_repos)
+                        # --- Move Emissions Files ---
+                        if EMISSIONS_DIR.exists():
+                            logging.info("\nMoving emissions files to timestamped folder...")
+                            move_named_subfolders(selected_repos)
 
     logging.info("\n✅ Benchmarking complete.")
 
