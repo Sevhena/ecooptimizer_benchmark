@@ -11,58 +11,42 @@ repos:
 smells:
   dask:
     long-message-chain:
-    - 6fb2eba3
-    - 8da83e08
-    - aab89951
     - b320286e
-    - 5b93ca8d
-    - 206a4433
+    - aab89951
+    - 8da83e08
     no-self-use:
-    - 70eba4d1
-    - 29a67617
-    - 4ea830b2
-    - a6637294
     - 4a6855eb
     - cdb5b8c8
+    - 81ec5021
     string-concat-loop:
-    - 3cad881d
-    - 5254055f
     - bf9f2446
-    - f7bd63cf
+    - 5254055f
+    - 3cad881d
     too-many-arguments:
+    - 87046ae9
     - b791c549
-    - d1395d53
-    - 1e59b7f6
-    - 3f5d3f21
-    - b217bf24
-    - ca05b444
+    - 4e24e944
     use-a-generator:
-    - 055bc4c5
     - 0fa92701
-    - 4eddae0f
     - e6942af1
+    - 4eddae0f
   django:
     long-message-chain:
-    - e055564c
+    - ff438a32
     - bae09c6d
-    - b2eccd0d
-    - c3a94c12
-    - b528b671
-    - e56e9460
+    - dfadbb34
     no-self-use:
-    - ec474b52
-    - dab7b75a
-    - 4ee9ae29
-    - 4b6e8c35
-    - f47930c3
-    - 7c0c950e
+    - f0dffe2e
+    - e257c14b
+    - 5041c570
     string-concat-loop:
-    - 4ff23e74
-    - 1942e397
-    - aa3f1568
-    - 91cfff72
     - aded0240
+    - c23ed0ad
     - 871b0de2
+    too-many-arguments:
+    - 40b20e67
+    - fe1ad8e7
+    - b3935b4a
     use-a-generator:
     - a1f57a8c
     - cf18c1e1
@@ -73,148 +57,118 @@ smells:
     - 7f920cd3
     - ddfcea54
     no-self-use:
-    - c8dd9144
-    - ff83f704
-    - c5aae0e5
-    - d948ded5
-    - a40bd959
-    - 02f79a90
+    - cb611f29
+    - b3e91708
+    - fc7e33d2
+    too-many-arguments:
+    - e50ab4c5
+    - d091a9bd
+    - e18fe1c4
   nltk:
     long-lambda-expr:
-    - 4f7ac270
-    - b54b020b
+    - 13d438e9
     long-message-chain:
     - 781f1a9a
-    - 8b07ea49
     - e3bd1ce6
     no-self-use:
-    - 8d602184
-    - a2439c22
-    - 2c324e25
-    - 051b05d3
-    - 46291afa
-    - 71c59f1b
+    - dc979356
+    - 4e040ff2
+    - e8965bd2
     string-concat-loop:
+    - f041ae6d
     - 48b77d42
     - 5829a76e
-    - f041ae6d
     too-many-arguments:
-    - da310a76
-    - b204cbeb
-    - b5b4159e
-    - af60caf9
-    - d0520f88
-    - 1b71d437
+    - da4d0f22
+    - 3e0580a8
+    - c8457a5b
   numpy:
     long-lambda-expr:
     - b89c2eb1
     long-message-chain:
-    - 3d27f9c5
     - 64cee6dc
+    - 3d27f9c5
     - 1a72f208
     no-self-use:
-    - '29620294'
-    - bf269a73
-    - d548bfe8
-    - 1b16b69b
-    - a662500a
-    - 2b7b9645
+    - 662a8d34
+    - 49debb68
+    - 54f82199
     string-concat-loop:
-    - 050c312a
-    - 2a61e075
     - 58bf0058
-    - c432c236
-    - db50d3b0
+    - 050c312a
+    too-many-arguments:
+    - '53941361'
+    - 768c615b
+    - 77b3ceed
   paho.mqtt.python:
     long-message-chain:
-    - 5d8aba75
     - 89b86924
-    - a2d014ab
+    - 5d8aba75
     no-self-use:
     - 18dbac6a
-    - 26129bdd
     - 59ee5cc8
+    - 26129bdd
     string-concat-loop:
     - cbf43c4b
     too-many-arguments:
-    - 62deeb1a
-    - 2f07744e
-    - e2344573
     - 841b8801
     - a39279b0
-    - 7e7c94af
+    - e2344573
   scikit-learn:
     long-message-chain:
-    - 4bb1070c
-    - 534920bb
-    - 4df72a88
-    - e5ceae0f
-    - 5f1cf174
     - 2585706f
+    - 5f1cf174
+    - 4df72a88
     no-self-use:
-    - 03c81556
-    - 20e40681
     - 442cda07
-    - d9566dd5
-    - 011132dc
-    - 89e16db0
+    - 20e40681
+    - db63474a
     string-concat-loop:
-    - 0386f191
-    - b63a56a5
-    - d880725b
     - de2a415f
     - f5e98a18
+    - d880725b
     too-many-arguments:
-    - 5e6f25c4
-    - 0a586a8b
-    - 02a14926
-    - a4344cb3
-    - 7023a30b
-    - ad87e6d8
+    - 809dea56
+    - 95c86cba
+    - 818d01b3
     use-a-generator:
     - bebfc193
   scipy:
     long-lambda-expr:
     - e0748c3e
     long-message-chain:
-    - ff234213
-    - 56f8cd5d
-    - f15881ec
     - f7d9627c
-    - adc91a18
+    - f15881ec
     - 757214c4
     no-self-use:
-    - 8a894bd5
-    - 5c9aee75
-    - 80e93795
-    - 2125be72
-    - 42e96228
-    - 80ee36aa
+    - df06b2c4
+    - 9d6cdbb1
+    - 53e7e0bd
     string-concat-loop:
-    - 304ee0bf
     - cfbd3f39
     - fa242649
+    - 304ee0bf
+    too-many-arguments:
+    - 83d99ed0
+    - fa062b40
+    - 461790b5
     use-a-generator:
-    - 671eb1fa
     - c0a0307d
     - 2bbdf916
     - cfd9184e
-    - 06fcdecd
-    - 002c736b
   streamlit:
     long-lambda-expr:
-    - 2fc0f712
     - 3dff6d86
     - 9fed98e9
     long-message-chain:
-    - 4971d3a7
-    - b4b48cfc
     - d25eb7e8
     - f1d47f3f
+    - b4b48cfc
     no-self-use:
-    - f97679da
-    - bee5f1fb
-    - db4627ea
-    - 58cfa62a
-    - 74745eb3
-    - fdd64247
+    - 143bf683
+    - efac49af
+    - '88168186'
+    too-many-arguments:
+    - 0d45d624
+    - f5d06531
+    - 1fbba654

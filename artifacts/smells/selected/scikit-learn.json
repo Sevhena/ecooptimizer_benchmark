@@ -1,227 +1,5 @@
 {
-  "7aaf333a": {
-    "additionalInfo": {
-      "callString": "np.dot(ri, ri)",
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": 2
-    },
-    "confidence": "MEDIUM",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "7aaf333a",
-    "message": "Repeated function call detected (2/2). Consider caching the result: np.dot(ri, ri)",
-    "messageId": "CRC001",
-    "module": "optimize",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 11,
-        "endColumn": 25,
-        "endLine": 143,
-        "line": 143
-      },
-      {
-        "column": 15,
-        "endColumn": 29,
-        "endLine": 187,
-        "line": 187
-      }
-    ],
-    "path": "sklearn/utils/optimize.py",
-    "symbol": "cached-repeated-calls",
-    "type": "performance",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/utils/optimize.py"
-  },
-  "acd31ac3": {
-    "additionalInfo": {
-      "callString": "XBS_sparse.tolil()",
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": 2
-    },
-    "confidence": "MEDIUM",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "acd31ac3",
-    "message": "Repeated function call detected (2/2). Consider caching the result: XBS_sparse.tolil()",
-    "messageId": "CRC001",
-    "module": "_polynomial",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 41,
-        "endColumn": 59,
-        "endLine": 1099,
-        "line": 1099
-      },
-      {
-        "column": 41,
-        "endColumn": 59,
-        "endLine": 1110,
-        "line": 1110
-      }
-    ],
-    "path": "sklearn/preprocessing/_polynomial.py",
-    "symbol": "cached-repeated-calls",
-    "type": "performance",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/preprocessing/_polynomial.py"
-  },
-  "06a1a758": {
-    "additionalInfo": {
-      "callString": "np.dot(components, rotation_matrix)",
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": 2
-    },
-    "confidence": "MEDIUM",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "06a1a758",
-    "message": "Repeated function call detected (2/2). Consider caching the result: np.dot(components, rotation_matrix)",
-    "messageId": "CRC001",
-    "module": "_factor_analysis",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 19,
-        "endColumn": 54,
-        "endLine": 445,
-        "line": 445
-      },
-      {
-        "column": 11,
-        "endColumn": 46,
-        "endLine": 457,
-        "line": 457
-      }
-    ],
-    "path": "sklearn/decomposition/_factor_analysis.py",
-    "symbol": "cached-repeated-calls",
-    "type": "performance",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/decomposition/_factor_analysis.py"
-  },
-  "e84bd1a6": {
-    "additionalInfo": {
-      "callString": "linalg.norm(X[:, lam])",
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": 2
-    },
-    "confidence": "MEDIUM",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "e84bd1a6",
-    "message": "Repeated function call detected (2/2). Consider caching the result: linalg.norm(X[:, lam])",
-    "messageId": "CRC001",
-    "module": "_omp",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 22,
-        "endColumn": 44,
-        "endLine": 126,
-        "line": 126
-      },
-      {
-        "column": 18,
-        "endColumn": 40,
-        "endLine": 120,
-        "line": 120
-      }
-    ],
-    "path": "sklearn/linear_model/_omp.py",
-    "symbol": "cached-repeated-calls",
-    "type": "performance",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/linear_model/_omp.py"
-  },
-  "6bf9d8dc": {
-    "additionalInfo": {
-      "callString": "predictions.reshape(n_samples, -1)",
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": 2
-    },
-    "confidence": "MEDIUM",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "6bf9d8dc",
-    "message": "Repeated function call detected (2/2). Consider caching the result: predictions.reshape(n_samples, -1)",
-    "messageId": "CRC001",
-    "module": "_partial_dependence",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 22,
-        "endColumn": 56,
-        "endLine": 330,
-        "line": 330
-      }
-    ],
-    "path": "sklearn/inspection/_partial_dependence.py",
-    "symbol": "cached-repeated-calls",
-    "type": "performance",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/inspection/_partial_dependence.py"
-  },
-  "419c0626": {
-    "additionalInfo": {
-      "callString": "slice(block_size * i, block_size * (i + 1))",
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": 2
-    },
-    "confidence": "MEDIUM",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "419c0626",
-    "message": "Repeated function call detected (2/2). Consider caching the result: slice(block_size * i, block_size * (i + 1))",
-    "messageId": "CRC001",
-    "module": "_shrunk_covariance",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 15,
-        "endColumn": 58,
-        "endLine": 375,
-        "line": 375
-      },
-      {
-        "column": 19,
-        "endColumn": 62,
-        "endLine": 371,
-        "line": 371
-      }
-    ],
-    "path": "sklearn/covariance/_shrunk_covariance.py",
-    "symbol": "cached-repeated-calls",
-    "type": "performance",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/covariance/_shrunk_covariance.py"
-  },
-  "5e6f25c4": {
+  "809dea56": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -235,89 +13,25 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "5e6f25c4",
-    "message": "Too many arguments (24/6)",
+    "id": "809dea56",
+    "message": "Too many arguments (19/6)",
     "messageId": "R0913",
-    "module": "sklearn.model_selection._plot",
-    "obj": "LearningCurveDisplay.from_estimator",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 22,
-        "endLine": 287,
-        "line": 287
-      }
-    ],
-    "path": "sklearn/model_selection/_plot.py",
-    "symbol": "too-many-arguments",
-    "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/model_selection/_plot.py"
-  },
-  "0a586a8b": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "0a586a8b",
-    "message": "Too many arguments (12/6)",
-    "messageId": "R0913",
-    "module": "sklearn.datasets._openml",
-    "obj": "fetch_openml",
-    "occurences": [
-      {
-        "column": 0,
-        "endColumn": 16,
-        "endLine": 774,
-        "line": 774
-      }
-    ],
-    "path": "sklearn/datasets/_openml.py",
-    "symbol": "too-many-arguments",
-    "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/datasets/_openml.py"
-  },
-  "02a14926": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "02a14926",
-    "message": "Too many arguments (7/6)",
-    "messageId": "R0913",
-    "module": "sklearn.semi_supervised._label_propagation",
-    "obj": "LabelPropagation.__init__",
+    "module": "sklearn.ensemble._forest",
+    "obj": "RandomForestRegressor.__init__",
     "occurences": [
       {
         "column": 4,
         "endColumn": 16,
-        "endLine": 435,
-        "line": 435
+        "endLine": 1877,
+        "line": 1877
       }
     ],
-    "path": "sklearn/semi_supervised/_label_propagation.py",
+    "path": "sklearn/ensemble/_forest.py",
     "symbol": "too-many-arguments",
     "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/semi_supervised/_label_propagation.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/ensemble/_forest.py"
   },
-  "a4344cb3": {
+  "95c86cba": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -331,57 +45,25 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "a4344cb3",
-    "message": "Too many arguments (10/6)",
+    "id": "95c86cba",
+    "message": "Too many arguments (11/6)",
     "messageId": "R0913",
-    "module": "sklearn.linear_model._linear_loss",
-    "obj": "LinearModelLoss.gradient_hessian",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 24,
-        "endLine": 417,
-        "line": 417
-      }
-    ],
-    "path": "sklearn/linear_model/_linear_loss.py",
-    "symbol": "too-many-arguments",
-    "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/linear_model/_linear_loss.py"
-  },
-  "7023a30b": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "7023a30b",
-    "message": "Too many arguments (8/6)",
-    "messageId": "R0913",
-    "module": "sklearn.covariance._graph_lasso",
-    "obj": "BaseGraphicalLasso.__init__",
+    "module": "sklearn.cluster._bisect_k_means",
+    "obj": "BisectingKMeans.__init__",
     "occurences": [
       {
         "column": 4,
         "endColumn": 16,
-        "endLine": 373,
-        "line": 373
+        "endLine": 226,
+        "line": 226
       }
     ],
-    "path": "sklearn/covariance/_graph_lasso.py",
+    "path": "sklearn/cluster/_bisect_k_means.py",
     "symbol": "too-many-arguments",
     "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/covariance/_graph_lasso.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/cluster/_bisect_k_means.py"
   },
-  "ad87e6d8": {
+  "818d01b3": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -395,87 +77,23 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "ad87e6d8",
-    "message": "Too many arguments (15/6)",
+    "id": "818d01b3",
+    "message": "Too many arguments (16/6)",
     "messageId": "R0913",
-    "module": "sklearn.metrics._plot.confusion_matrix",
-    "obj": "ConfusionMatrixDisplay.from_predictions",
+    "module": "sklearn.cluster._spectral",
+    "obj": "SpectralClustering.__init__",
     "occurences": [
       {
         "column": 4,
-        "endColumn": 24,
-        "endLine": 354,
-        "line": 354
+        "endColumn": 16,
+        "endLine": 636,
+        "line": 636
       }
     ],
-    "path": "sklearn/metrics/_plot/confusion_matrix.py",
+    "path": "sklearn/cluster/_spectral.py",
     "symbol": "too-many-arguments",
     "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/metrics/_plot/confusion_matrix.py"
-  },
-  "03c81556": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "INFERENCE",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "03c81556",
-    "message": "Method could be a function",
-    "messageId": "R6301",
-    "module": "sklearn.feature_extraction.text",
-    "obj": "CountVectorizer._sort_features",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 22,
-        "endLine": 1193,
-        "line": 1193
-      }
-    ],
-    "path": "sklearn/feature_extraction/text.py",
-    "symbol": "no-self-use",
-    "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/feature_extraction/text.py"
-  },
-  "20e40681": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "INFERENCE",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "20e40681",
-    "message": "Method could be a function",
-    "messageId": "R6301",
-    "module": "sklearn.preprocessing._function_transformer",
-    "obj": "FunctionTransformer.__sklearn_is_fitted__",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 29,
-        "endLine": 389,
-        "line": 389
-      }
-    ],
-    "path": "sklearn/preprocessing/_function_transformer.py",
-    "symbol": "no-self-use",
-    "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/preprocessing/_function_transformer.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/cluster/_spectral.py"
   },
   "442cda07": {
     "additionalInfo": {
@@ -509,7 +127,7 @@
     "type": "refactor",
     "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/ensemble/_forest.py"
   },
-  "d9566dd5": {
+  "20e40681": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -523,25 +141,25 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "d9566dd5",
+    "id": "20e40681",
     "message": "Method could be a function",
     "messageId": "R6301",
-    "module": "sklearn.gaussian_process.kernels",
-    "obj": "StationaryKernelMixin.is_stationary",
+    "module": "sklearn.preprocessing._function_transformer",
+    "obj": "FunctionTransformer.__sklearn_is_fitted__",
     "occurences": [
       {
         "column": 4,
-        "endColumn": 21,
-        "endLine": 494,
-        "line": 494
+        "endColumn": 29,
+        "endLine": 389,
+        "line": 389
       }
     ],
-    "path": "sklearn/gaussian_process/kernels.py",
+    "path": "sklearn/preprocessing/_function_transformer.py",
     "symbol": "no-self-use",
     "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/gaussian_process/kernels.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/preprocessing/_function_transformer.py"
   },
-  "011132dc": {
+  "db63474a": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -555,163 +173,23 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "011132dc",
+    "id": "db63474a",
     "message": "Method could be a function",
     "messageId": "R6301",
-    "module": "sklearn._loss.link",
-    "obj": "MultinomialLogit.symmetrize_raw_prediction",
+    "module": "sklearn.isotonic",
+    "obj": "IsotonicRegression._check_input_data_shape",
     "occurences": [
       {
         "column": 4,
-        "endColumn": 33,
-        "endLine": 259,
-        "line": 259
+        "endColumn": 31,
+        "endLine": 294,
+        "line": 294
       }
     ],
-    "path": "sklearn/_loss/link.py",
+    "path": "sklearn/isotonic.py",
     "symbol": "no-self-use",
     "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/_loss/link.py"
-  },
-  "89e16db0": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "INFERENCE",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": true,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "89e16db0",
-    "message": "Method could be a function",
-    "messageId": "R6301",
-    "module": "sklearn.utils.estimator_checks",
-    "obj": "_NotAnArray.__array_function__",
-    "occurences": [
-      {
-        "column": 4,
-        "endColumn": 26,
-        "endLine": 946,
-        "line": 946
-      }
-    ],
-    "path": "sklearn/utils/estimator_checks.py",
-    "symbol": "no-self-use",
-    "type": "refactor",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/utils/estimator_checks.py"
-  },
-  "0386f191": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": "doc",
-      "innerLoopLine": 1334,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": 1335,
-      "isFunc": false,
-      "start": 1334,
-      "useOccurences": false
-    },
-    "id": "0386f191",
-    "message": "String concatenation inside loop detected",
-    "messageId": "SCL001",
-    "module": "_metadata_requests.py",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 12,
-        "endColumn": 87,
-        "endLine": 1335,
-        "line": 1335
-      }
-    ],
-    "path": "sklearn/utils/_metadata_requests.py",
-    "symbol": "string-concat-loop",
-    "type": "performance",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/utils/_metadata_requests.py"
-  },
-  "b63a56a5": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": "msg_diff",
-      "innerLoopLine": 662,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": 684,
-      "isFunc": false,
-      "start": 662,
-      "useOccurences": false
-    },
-    "id": "b63a56a5",
-    "message": "String concatenation inside loop detected",
-    "messageId": "SCL001",
-    "module": "_testing.py",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 8,
-        "endColumn": 49,
-        "endLine": 676,
-        "line": 676
-      },
-      {
-        "column": 16,
-        "endColumn": 61,
-        "endLine": 680,
-        "line": 680
-      },
-      {
-        "column": 8,
-        "endColumn": 36,
-        "endLine": 684,
-        "line": 684
-      }
-    ],
-    "path": "sklearn/utils/_testing.py",
-    "symbol": "string-concat-loop",
-    "type": "performance",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/utils/_testing.py"
-  },
-  "d880725b": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": "output",
-      "innerLoopLine": 2780,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": 2784,
-      "isFunc": false,
-      "start": 2780,
-      "useOccurences": false
-    },
-    "id": "d880725b",
-    "message": "String concatenation inside loop detected",
-    "messageId": "SCL001",
-    "module": "validation.py",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 20,
-        "endColumn": 47,
-        "endLine": 2782,
-        "line": 2782
-      }
-    ],
-    "path": "sklearn/utils/validation.py",
-    "symbol": "string-concat-loop",
-    "type": "performance",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/utils/validation.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/isotonic.py"
   },
   "de2a415f": {
     "additionalInfo": {
@@ -795,39 +273,39 @@
     "type": "performance",
     "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/model_selection/_validation.py"
   },
-  "052d901c": {
+  "d880725b": {
     "additionalInfo": {
       "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
+      "concatTarget": "output",
+      "innerLoopLine": 2780,
       "repetitions": null
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": null,
+      "end": 2784,
       "isFunc": false,
-      "start": null,
-      "useOccurences": true
+      "start": 2780,
+      "useOccurences": false
     },
-    "id": "052d901c",
-    "message": "Dictionary chain too long (3/3)",
-    "messageId": "LEC001",
-    "module": "pipeline",
+    "id": "d880725b",
+    "message": "String concatenation inside loop detected",
+    "messageId": "SCL001",
+    "module": "validation.py",
     "obj": null,
     "occurences": [
       {
-        "column": 16,
-        "endColumn": 60,
-        "endLine": 470,
-        "line": 470
+        "column": 20,
+        "endColumn": 47,
+        "endLine": 2782,
+        "line": 2782
       }
     ],
-    "path": "sklearn/pipeline.py",
-    "symbol": "long-element-chain",
-    "type": "convention",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/pipeline.py"
+    "path": "sklearn/utils/validation.py",
+    "symbol": "string-concat-loop",
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/utils/validation.py"
   },
-  "09af4903": {
+  "2585706f": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -841,215 +319,23 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "09af4903",
-    "message": "Dictionary chain too long (3/3)",
-    "messageId": "LEC001",
-    "module": "pipeline",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 16,
-        "endColumn": 62,
-        "endLine": 469,
-        "line": 469
-      }
-    ],
-    "path": "sklearn/pipeline.py",
-    "symbol": "long-element-chain",
-    "type": "convention",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/pipeline.py"
-  },
-  "96642a91": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "96642a91",
-    "message": "Dictionary chain too long (3/3)",
-    "messageId": "LEC001",
-    "module": "random",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 24,
-        "endColumn": 66,
-        "endLine": 98,
-        "line": 98
-      }
-    ],
-    "path": "sklearn/utils/random.py",
-    "symbol": "long-element-chain",
-    "type": "convention",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/utils/random.py"
-  },
-  "bb3826fc": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "bb3826fc",
-    "message": "Dictionary chain too long (3/3)",
-    "messageId": "LEC001",
-    "module": "_openml",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 11,
-        "endColumn": 42,
-        "endLine": 352,
-        "line": 352
-      }
-    ],
-    "path": "sklearn/datasets/_openml.py",
-    "symbol": "long-element-chain",
-    "type": "convention",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/datasets/_openml.py"
-  },
-  "4bb1070c": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "4bb1070c",
+    "id": "2585706f",
     "message": "Method chain too long (4/3)",
     "messageId": "LMC001",
-    "module": "_validation",
+    "module": "calibration",
     "obj": null,
     "occurences": [
       {
         "column": 12,
         "endColumn": 13,
-        "endLine": 1995,
-        "line": 1979
+        "endLine": 561,
+        "line": 552
       }
     ],
-    "path": "sklearn/model_selection/_validation.py",
+    "path": "sklearn/calibration.py",
     "symbol": "long-message-chain",
     "type": "convention",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/model_selection/_validation.py"
-  },
-  "534920bb": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "534920bb",
-    "message": "Method chain too long (3/3)",
-    "messageId": "LMC001",
-    "module": "multioutput",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 27,
-        "endColumn": 44,
-        "endLine": 341,
-        "line": 339
-      }
-    ],
-    "path": "sklearn/multioutput.py",
-    "symbol": "long-message-chain",
-    "type": "convention",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/multioutput.py"
-  },
-  "4df72a88": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "4df72a88",
-    "message": "Method chain too long (3/3)",
-    "messageId": "LMC001",
-    "module": "_forest",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 31,
-        "endColumn": 85,
-        "endLine": 1124,
-        "line": 1124
-      }
-    ],
-    "path": "sklearn/ensemble/_forest.py",
-    "symbol": "long-message-chain",
-    "type": "convention",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/ensemble/_forest.py"
-  },
-  "e5ceae0f": {
-    "additionalInfo": {
-      "callString": null,
-      "concatTarget": null,
-      "innerLoopLine": null,
-      "repetitions": null
-    },
-    "confidence": "UNDEFINED",
-    "energyMetadata": {
-      "end": null,
-      "isFunc": false,
-      "start": null,
-      "useOccurences": true
-    },
-    "id": "e5ceae0f",
-    "message": "Method chain too long (3/3)",
-    "messageId": "LMC001",
-    "module": "_base",
-    "obj": null,
-    "occurences": [
-      {
-        "column": 48,
-        "endColumn": 86,
-        "endLine": 573,
-        "line": 573
-      }
-    ],
-    "path": "sklearn/impute/_base.py",
-    "symbol": "long-message-chain",
-    "type": "convention",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/impute/_base.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/calibration.py"
   },
   "5f1cf174": {
     "additionalInfo": {
@@ -1083,7 +369,7 @@
     "type": "convention",
     "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/datasets/_samples_generator.py"
   },
-  "2585706f": {
+  "4df72a88": {
     "additionalInfo": {
       "callString": null,
       "concatTarget": null,
@@ -1097,23 +383,23 @@
       "start": null,
       "useOccurences": true
     },
-    "id": "2585706f",
-    "message": "Method chain too long (4/3)",
+    "id": "4df72a88",
+    "message": "Method chain too long (3/3)",
     "messageId": "LMC001",
-    "module": "calibration",
+    "module": "_forest",
     "obj": null,
     "occurences": [
       {
-        "column": 12,
-        "endColumn": 13,
-        "endLine": 561,
-        "line": 552
+        "column": 31,
+        "endColumn": 85,
+        "endLine": 1124,
+        "line": 1124
       }
     ],
-    "path": "sklearn/calibration.py",
+    "path": "sklearn/ensemble/_forest.py",
     "symbol": "long-message-chain",
     "type": "convention",
-    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/calibration.py"
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/scikit-learn/sklearn/ensemble/_forest.py"
   },
   "bebfc193": {
     "additionalInfo": {

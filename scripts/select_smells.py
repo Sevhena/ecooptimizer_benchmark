@@ -18,7 +18,9 @@ SELECTED_SMELLS_DIR = SMELLS_DIR / "selected"
 
 SELECTED_SMELLS_DIR.mkdir(exist_ok=True)
 
-SMELL_COUNT = 6
+SMELL_COUNT = 3
+
+EXCLUDED_SMELLS = {"cached-repeated-calls", "long-element-chain"}
 
 # Typing alias
 Smell = dict[str, Any]
@@ -116,7 +118,7 @@ def build_tree(smells: list[Smell]) -> GroupedTree:
     return level3
 
 
-def select_from_tree(tree: GroupedTree, max_instances: int = 6) -> list[Smell]:
+def select_from_tree(tree: GroupedTree, max_instances: int = SMELL_COUNT) -> list[Smell]:
     """Selects up to `max_instances` from different bins in the tree."""
     selected = []
 
@@ -169,12 +171,15 @@ def process_repo(
     output[repo] = {}
 
     for smell_type, instances in grouped_by_type.items():
+        if smell_type in EXCLUDED_SMELLS:
+            continue
+
         logging.debug(
             f"{repo}: Processing smell type '{smell_type}' with {len(instances)} instances"
         )
-        if len(instances) <= SMELL_COUNT:
+        if len(instances) < SMELL_COUNT:
             logging.warning(
-                f"{repo}: Only {len(instances)} instances found for smell type '{smell_type}' (less than 6)"
+                f"{repo}: Only {len(instances)} instances found for smell type '{smell_type}' (less than {SMELL_COUNT}). Selecting all."
             )
             selected = instances
         else:
@@ -196,7 +201,7 @@ def defaultdict_to_dict(d: Any) -> Any:
     return d
 
 
-def update_selected_config(output: dict[str, dict[str, list[str]]]):
+def update_selected_config(output: dict[str, dict[str, list[str]]], overwrite: bool = False):
     if SELECTED_CONFIG_PATH.exists():
         with SELECTED_CONFIG_PATH.open("r") as f:
             config: dict[Any, Any] = yaml.safe_load(f) or {
@@ -205,7 +210,7 @@ def update_selected_config(output: dict[str, dict[str, list[str]]]):
     else:
         config: dict[Any, Any] = {"repos": [repo for repo in output.keys()]}
 
-    if not config.get("smells"):
+    if not config.get("smells") or overwrite:
         config["smells"] = defaultdict_to_dict(output)
     else:
         # Merge output into existing smells, overwriting same keys
@@ -304,7 +309,7 @@ def main():
     for repo in smells_by_repo:
         process_repo(repo, smells_by_repo, selected_smells_config, selected_smells)
 
-    update_selected_config(selected_smells_config)
+    update_selected_config(selected_smells_config, args.all)
     write_selected_smells(selected_smells)
     logging.info("Smell selection completed")
 

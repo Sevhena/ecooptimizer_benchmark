@@ -10,18 +10,6 @@ repos:
 - paho.mqtt.python
 smells:
   dask:
-    cached-repeated-calls:
-    - b6ac58df
-    - 0f19175b
-    - 2354b0b3
-    - 61459db0
-    - 0082590c
-    - cfd0f2af
-    long-element-chain:
-    - 04b89785
-    - 715a6d62
-    - 928ca4b1
-    - c58ba4f6
     long-message-chain:
     - 6fb2eba3
     - 8da83e08
@@ -54,9 +42,6 @@ smells:
     - 4eddae0f
     - e6942af1
   django:
-    long-element-chain:
-    - '91447562'
-    - a236e6b1
     long-message-chain:
     - e055564c
     - bae09c6d
@@ -94,6 +79,32 @@ smells:
     - d948ded5
     - a40bd959
     - 02f79a90
+  nltk:
+    long-lambda-expr:
+    - 4f7ac270
+    - b54b020b
+    long-message-chain:
+    - 781f1a9a
+    - 8b07ea49
+    - e3bd1ce6
+    no-self-use:
+    - 8d602184
+    - a2439c22
+    - 2c324e25
+    - 051b05d3
+    - 46291afa
+    - 71c59f1b
+    string-concat-loop:
+    - 48b77d42
+    - 5829a76e
+    - f041ae6d
+    too-many-arguments:
+    - da310a76
+    - b204cbeb
+    - b5b4159e
+    - af60caf9
+    - d0520f88
+    - 1b71d437
   numpy:
     long-lambda-expr:
     - b89c2eb1
@@ -114,12 +125,25 @@ smells:
     - 58bf0058
     - c432c236
     - db50d3b0
+  paho.mqtt.python:
+    long-message-chain:
+    - 5d8aba75
+    - 89b86924
+    - a2d014ab
+    no-self-use:
+    - 18dbac6a
+    - 26129bdd
+    - 59ee5cc8
+    string-concat-loop:
+    - cbf43c4b
+    too-many-arguments:
+    - 62deeb1a
+    - 2f07744e
+    - e2344573
+    - 841b8801
+    - a39279b0
+    - 7e7c94af
   scikit-learn:
-    long-element-chain:
-    - 052d901c
-    - 09af4903
-    - 96642a91
-    - bb3826fc
     long-message-chain:
     - 4bb1070c
     - 534920bb
@@ -150,12 +174,6 @@ smells:
     use-a-generator:
     - bebfc193
   scipy:
-    long-element-chain:
-    - d99bd01f
-    - 9c8a87c1
-    - cee241b6
-    - 4cdb3f2f
-    - bb252a3b
     long-lambda-expr:
     - e0748c3e
     long-message-chain:
@@ -184,8 +202,6 @@ smells:
     - 06fcdecd
     - 002c736b
   streamlit:
-    long-element-chain:
-    - a9610835
     long-lambda-expr:
     - 2fc0f712
     - 3dff6d86
