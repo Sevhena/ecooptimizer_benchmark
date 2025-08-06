@@ -1,0 +1,25 @@
+diff --git a/django/template/defaultfilters.py b/django/template/defaultfilters.py
+index 66c6e76d20..4f6bc44b75 100644
+--- a/django/template/defaultfilters.py
++++ b/django/template/defaultfilters.py
+@@ -26,6 +26,7 @@ from django.utils.translation import gettext, ngettext
+ 
+ from .base import VARIABLE_ATTRIBUTE_SEPARATOR
+ from .library import Library
++from codecarbon import EmissionsTracker
+ 
+ register = Library()
+ 
+@@ -65,7 +66,11 @@ def addslashes(value):
+     example. Less useful for escaping JavaScript; use the ``escapejs``
+     filter instead.
+     """
+-    return value.replace("\\", "\\\\").replace('"', '\\"').replace("'", "\\'")
++    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LMC001_dfadbb34', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/dfadbb34_refactored.csv') as tracker:
++        intermediate_0 = value.replace("\\", "\\\\")
++        intermediate_1 = intermediate_0.replace('"', '\\"')
++        _carbon_wrapped_00da0721 = intermediate_1.replace("'", "\\'")
++    return _carbon_wrapped_00da0721
+ 
+ 
+ @register.filter(is_safe=True)

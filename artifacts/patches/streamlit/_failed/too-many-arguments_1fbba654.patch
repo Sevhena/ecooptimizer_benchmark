@@ -1,0 +1,20 @@
+diff --git a/lib/streamlit/elements/widgets/button.py b/lib/streamlit/elements/widgets/button.py
+index 2bae2074a..c051b03e9 100644
+--- a/lib/streamlit/elements/widgets/button.py
++++ b/lib/streamlit/elements/widgets/button.py
+@@ -62,6 +62,7 @@ from streamlit.runtime.state import (
+ )
+ from streamlit.string_util import validate_icon_or_emoji
+ from streamlit.url_util import is_url
++from codecarbon import track_emissions
+ 
+ if TYPE_CHECKING:
+     from streamlit.delta_generator import DeltaGenerator
+@@ -256,6 +257,7 @@ class ButtonMixin:
+         )
+ 
+     @gather_metrics("download_button")
++    @track_emissions(project_name='streamlit-benchmark', experiment_id='streamlit_R0913_1fbba654', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/too-many-arguments/1fbba654.csv')
+     def download_button(
+         self,
+         label: str,

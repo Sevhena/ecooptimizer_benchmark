@@ -1,0 +1,72 @@
+diff --git a/src/paho/mqtt/client.py b/src/paho/mqtt/client.py
+index 4ccc869..7f73ca1 100644
+--- a/src/paho/mqtt/client.py
++++ b/src/paho/mqtt/client.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Copyright (c) 2012-2019 Roger Light and others
+ #
+ # All rights reserved. This program and the accompanying materials
+@@ -3359,7 +3360,9 @@ class Client:
+                 # FIXME - this doesn't deal with incorrectly large payloads
+                 return packet
+ 
+-    def _pack_str16(self, packet: bytearray, data: bytes | str) -> None:
++    @track_emissions(project_name='paho.mqtt.python-benchmark', experiment_id='paho.mqtt.python_R6301_18dbac6a', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/no-self-use/18dbac6a_refactored.csv')
++    @staticmethod
++    def _pack_str16(packet: bytearray, data: bytes | str) -> None:
+         data = _force_bytes(data)
+         packet.extend(struct.pack("!H", len(data)))
+         packet.extend(data)
+@@ -3430,7 +3433,7 @@ class Client:
+             remaining_length += len(packed_properties)
+ 
+         self._pack_remaining_length(packet, remaining_length)
+-        self._pack_str16(packet, topic)
++        Client._pack_str16(packet, topic)
+ 
+         if qos > 0:
+             # For message id
+@@ -3527,19 +3530,19 @@ class Client:
+         if self._protocol == MQTTv5:
+             packet += packed_connect_properties
+ 
+-        self._pack_str16(packet, self._client_id)
++        Client._pack_str16(packet, self._client_id)
+ 
+         if self._will:
+             if self._protocol == MQTTv5:
+                 packet += packed_will_properties
+-            self._pack_str16(packet, self._will_topic)
+-            self._pack_str16(packet, self._will_payload)
++            Client._pack_str16(packet, self._will_topic)
++            Client._pack_str16(packet, self._will_payload)
+ 
+         if self._username is not None:
+-            self._pack_str16(packet, self._username)
++            Client._pack_str16(packet, self._username)
+ 
+             if self._password is not None:
+-                self._pack_str16(packet, self._password)
++                Client._pack_str16(packet, self._password)
+ 
+         self._keepalive = keepalive
+         if self._protocol == MQTTv5:
+@@ -3636,7 +3639,7 @@ class Client:
+             packet += packed_subscribe_properties
+ 
+         for t, q in topics:
+-            self._pack_str16(packet, t)
++            Client._pack_str16(packet, t)
+             if self._protocol == MQTTv5:
+                 packet += q.pack()  # type: ignore
+             else:
+@@ -3678,7 +3681,7 @@ class Client:
+             packet += packed_unsubscribe_properties
+ 
+         for t in topics:
+-            self._pack_str16(packet, t)
++            Client._pack_str16(packet, t)
+ 
+         # topics_repr = ", ".join("'"+topic.decode('utf8')+"'" for topic in topics)
+         if self._protocol == MQTTv5:

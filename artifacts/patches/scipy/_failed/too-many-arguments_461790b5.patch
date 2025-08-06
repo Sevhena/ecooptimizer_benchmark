@@ -1,0 +1,20 @@
+diff --git a/scipy/stats/_distn_infrastructure.py b/scipy/stats/_distn_infrastructure.py
+index 82cb1e343..cda889eb2 100644
+--- a/scipy/stats/_distn_infrastructure.py
++++ b/scipy/stats/_distn_infrastructure.py
+@@ -34,6 +34,7 @@ from scipy.stats._finite_differences import _derivative
+ from scipy import stats
+ 
+ from numpy import (arange, putmask, ones, shape, ndarray, zeros, floor,
++from codecarbon import track_emissions
+                    logical_and, log, sqrt, place, argmax, vectorize, asarray,
+                    nan, inf, isinf, empty)
+ 
+@@ -4009,6 +4010,7 @@ class rv_sample(rv_discrete):
+     The ctor ignores most of the arguments, only needs the `values` argument.
+     """
+ 
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R0913_461790b5', output_file='/root/ecooptimizer_benchmark/emissions/scipy/too-many-arguments/461790b5.csv')
+     def __init__(self, a=0, b=inf, name=None, badvalue=None,
+                  moment_tol=1e-8, values=None, inc=1, longname=None,
+                  shapes=None, seed=None):

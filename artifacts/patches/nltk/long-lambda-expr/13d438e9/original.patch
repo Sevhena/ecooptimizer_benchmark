@@ -1,0 +1,29 @@
+diff --git a/nltk/tgrep.py b/nltk/tgrep.py
+index dead3d856..268b58598 100644
+--- a/nltk/tgrep.py
++++ b/nltk/tgrep.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ #!/usr/bin/env python
+ #
+ # Natural Language Toolkit: TGrep search
+@@ -611,12 +612,13 @@ def _tgrep_relation_action(_s, _l, tokens):
+             )
+         # A $,, B     A is a sister of and follows B.
+         elif operator == "$,," or operator == "%,,":
+-            retval = lambda n, m=None, l=None: (
+-                hasattr(n, "parent")
+-                and hasattr(n, "parent_index")
+-                and bool(n.parent())
+-                and any(predicate(x, m, l) for x in n.parent()[: n.parent_index()])
+-            )
++            with EmissionsTracker(project_name='nltk-benchmark', experiment_id='nltk_LLE001_13d438e9', output_file='/root/ecooptimizer_benchmark/emissions/nltk/long-lambda-expr/13d438e9.csv') as tracker:
++                retval = lambda n, m=None, l=None: (
++                    hasattr(n, "parent")
++                    and hasattr(n, "parent_index")
++                    and bool(n.parent())
++                    and any(predicate(x, m, l) for x in n.parent()[: n.parent_index()])
++                )
+         else:
+             raise TgrepException(f'cannot interpret tgrep operator "{operator}"')
+     # now return the built function

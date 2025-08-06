@@ -1,0 +1,29 @@
+diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
+index 0fbc407..9639ed3 100644
+--- a/gpiozero/pins/__init__.py
++++ b/gpiozero/pins/__init__.py
+@@ -366,6 +366,7 @@ class Pin:
+         underlying hardware, :exc:`PinInvalidPull` is raised.
+         """)
+ 
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_b3e91708', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/b3e91708_refactored.csv')
+     def _get_frequency(self):
+         return None  # pragma: no cover
+ 
+@@ -375,7 +376,7 @@ class Pin:
+                 f"PWM is not supported on pin {self!r}")
+ 
+     frequency = property(
+-        lambda self: self._get_frequency(),
++        lambda self: Pin._get_frequency(),
+         lambda self, value: self._set_frequency(value),
+         doc="""\
+         The frequency (in Hz) for the pin's PWM implementation, or :data:`None`
+@@ -834,6 +835,7 @@ class PinInfo(namedtuple('PinInfo', (
+ 
+         An integer containing the physical pin number on the header (starting
+         from 1 in accordance with convention).
++from codecarbon import track_emissions
+ 
+     .. attribute:: name
+ 

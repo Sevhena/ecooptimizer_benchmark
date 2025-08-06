@@ -1,0 +1,20 @@
+diff --git a/dask/array/gufunc.py b/dask/array/gufunc.py
+index a6a1ba5bd..2b53b68bd 100644
+--- a/dask/array/gufunc.py
++++ b/dask/array/gufunc.py
+@@ -12,6 +12,7 @@ from dask.array.utils import meta_from_array
+ from dask.core import flatten
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.utils import cached_max
++from codecarbon import track_emissions
+ 
+ # Modified version of `numpy.lib.function_base._parse_gufunc_signature`
+ # Modifications:
+@@ -654,6 +655,7 @@ class gufunc:
+     .. [2] https://docs.scipy.org/doc/numpy/reference/c-api/generalized-ufuncs.html
+     """
+ 
++    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_87046ae9', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/87046ae9.csv')
+     def __init__(
+         self,
+         pyfunc,

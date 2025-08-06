@@ -26,9 +26,10 @@
                 "line": 3584
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/cluster/hierarchy.py",
+        "path": "scipy/cluster/hierarchy.py",
         "symbol": "too-many-arguments",
-        "type": "refactor"
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/cluster/hierarchy.py"
     },
     "fa062b40": {
         "additionalInfo": {
@@ -57,9 +58,10 @@
                 "line": 94
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_lbfgsb_py.py",
+        "path": "scipy/optimize/_lbfgsb_py.py",
         "symbol": "too-many-arguments",
-        "type": "refactor"
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/optimize/_lbfgsb_py.py"
     },
     "461790b5": {
         "additionalInfo": {
@@ -88,9 +90,10 @@
                 "line": 4014
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_distn_infrastructure.py",
+        "path": "scipy/stats/_distn_infrastructure.py",
         "symbol": "too-many-arguments",
-        "type": "refactor"
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_distn_infrastructure.py"
     },
     "df06b2c4": {
         "additionalInfo": {
@@ -115,13 +118,14 @@
             {
                 "column": 4,
                 "endColumn": 24,
-                "endLine": 5210,
-                "line": 5210
+                "endLine": 5212,
+                "line": 5212
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_distribution_infrastructure.py",
+        "path": "scipy/stats/_distribution_infrastructure.py",
         "symbol": "no-self-use",
-        "type": "refactor"
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_distribution_infrastructure.py"
     },
     "9d6cdbb1": {
         "additionalInfo": {
@@ -150,9 +154,10 @@
                 "line": 10767
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_stats_py.py",
+        "path": "scipy/stats/_stats_py.py",
         "symbol": "no-self-use",
-        "type": "refactor"
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_stats_py.py"
     },
     "53e7e0bd": {
         "additionalInfo": {
@@ -177,13 +182,14 @@
             {
                 "column": 4,
                 "endColumn": 13,
-                "endLine": 69,
-                "line": 69
+                "endLine": 71,
+                "line": 71
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/integrate/_quad_vec.py",
+        "path": "scipy/integrate/_quad_vec.py",
         "symbol": "no-self-use",
-        "type": "refactor"
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/integrate/_quad_vec.py"
     },
     "c0a0307d": {
         "additionalInfo": {
@@ -212,9 +218,10 @@
                 "line": 214
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/special/_mptestutils.py",
+        "path": "scipy/special/_mptestutils.py",
         "symbol": "use-a-generator",
-        "type": "refactor"
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/special/_mptestutils.py"
     },
     "2bbdf916": {
         "additionalInfo": {
@@ -243,9 +250,10 @@
                 "line": 976
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/ndimage/_interpolation.py",
+        "path": "scipy/ndimage/_interpolation.py",
         "symbol": "use-a-generator",
-        "type": "refactor"
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/ndimage/_interpolation.py"
     },
     "cfd9184e": {
         "additionalInfo": {
@@ -274,9 +282,10 @@
                 "line": 173
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/linalg/_decomp_cossin.py",
+        "path": "scipy/linalg/_decomp_cossin.py",
         "symbol": "use-a-generator",
-        "type": "refactor"
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/linalg/_decomp_cossin.py"
     },
     "f7d9627c": {
         "additionalInfo": {
@@ -305,9 +314,10 @@
                 "line": 392
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/_lil.py",
+        "path": "scipy/sparse/_lil.py",
         "symbol": "long-message-chain",
-        "type": "convention"
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/_lil.py"
     },
     "f15881ec": {
         "additionalInfo": {
@@ -336,9 +346,10 @@
                 "line": 2097
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_discrete_distns.py",
+        "path": "scipy/stats/_discrete_distns.py",
         "symbol": "long-message-chain",
-        "type": "convention"
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_discrete_distns.py"
     },
     "757214c4": {
         "additionalInfo": {
@@ -367,9 +378,10 @@
                 "line": 12482
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_continuous_distns.py",
+        "path": "scipy/stats/_continuous_distns.py",
         "symbol": "long-message-chain",
-        "type": "convention"
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_continuous_distns.py"
     },
     "cfbd3f39": {
         "additionalInfo": {
@@ -410,15 +422,16 @@
                 "line": 697
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/io/arff/_arffread.py",
+        "path": "scipy/io/arff/_arffread.py",
         "symbol": "string-concat-loop",
-        "type": "performance"
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/io/arff/_arffread.py"
     },
     "fa242649": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": "signature",
-            "innerLoopLine": 197,
+            "innerLoopLine": 199,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -435,27 +448,28 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 66,
-                "endLine": 199,
-                "line": 199
-            },
-            {
-                "column": 16,
-                "endColumn": 73,
+                "column": 20,
+                "endColumn": 70,
                 "endLine": 201,
                 "line": 201
+            },
+            {
+                "column": 20,
+                "endColumn": 77,
+                "endLine": 203,
+                "line": 203
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/_lib/_ccallback.py",
+        "path": "scipy/_lib/_ccallback.py",
         "symbol": "string-concat-loop",
-        "type": "performance"
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/_lib/_ccallback.py"
     },
     "304ee0bf": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 5363,
+            "innerLoopLine": 5365,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -472,15 +486,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 65,
-                "endLine": 5364,
-                "line": 5364
+                "column": 20,
+                "endColumn": 69,
+                "endLine": 5366,
+                "line": 5366
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_distribution_infrastructure.py",
+        "path": "scipy/stats/_distribution_infrastructure.py",
         "symbol": "string-concat-loop",
-        "type": "performance"
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/stats/_distribution_infrastructure.py"
     },
     "e0748c3e": {
         "additionalInfo": {
@@ -503,14 +518,15 @@
         "obj": null,
         "occurences": [
             {
-                "column": 26,
-                "endColumn": 70,
-                "endLine": 510,
-                "line": 509
+                "column": 30,
+                "endColumn": 74,
+                "endLine": 512,
+                "line": 511
             }
         ],
-        "path": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/linalg/_eigen/arpack/arpack.py",
+        "path": "scipy/sparse/linalg/_eigen/arpack/arpack.py",
         "symbol": "long-lambda-expr",
-        "type": "convention"
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/scipy/scipy/sparse/linalg/_eigen/arpack/arpack.py"
     }
 }

@@ -1,0 +1,40 @@
+diff --git a/sklearn/calibration.py b/sklearn/calibration.py
+index 5b2bca2ed..01bfe76cf 100644
+--- a/sklearn/calibration.py
++++ b/sklearn/calibration.py
+@@ -549,16 +549,17 @@ class CalibratedClassifierCV(ClassifierMixin, MetaEstimatorMixin, BaseEstimator)
+             routing information.
+         """
+         router = (
+-            MetadataRouter(owner=self.__class__.__name__)
+-            .add_self_request(self)
+-            .add(
+-                estimator=self._get_estimator(),
+-                method_mapping=MethodMapping().add(caller="fit", callee="fit"),
+-            )
+-            .add(
+-                splitter=self.cv,
+-                method_mapping=MethodMapping().add(caller="fit", callee="split"),
+-            )
++            with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_LMC001_2585706f', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/long-message-chain/2585706f_refactored.csv') as tracker:
++                MetadataRouter(owner=self.__class__.__name__)
++                .add_self_request(self)
++                .add(
++                    estimator=self._get_estimator(),
++                    method_mapping=MethodMapping().add(caller="fit", callee="fit"),
++                )
++                .add(
++                    splitter=self.cv,
++                    method_mapping=MethodMapping().add(caller="fit", callee="split"),
++                )
+         )
+         return router
+ 
+@@ -1229,6 +1230,7 @@ class CalibrationDisplay(_BinaryClassifierCurveDisplayMixin):
+ 
+         A calibration curve, also known as a reliability diagram, uses inputs
+         from a binary classifier and plots the average predicted probability
++from codecarbon import EmissionsTracker
+         for each bin against the fraction of positive classes, on the
+         y-axis.
+ 

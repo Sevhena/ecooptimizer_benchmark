@@ -1,0 +1,23 @@
+diff --git a/numpy/lib/_npyio_impl.py b/numpy/lib/_npyio_impl.py
+index f284eeb748..8f260d3e63 100644
+--- a/numpy/lib/_npyio_impl.py
++++ b/numpy/lib/_npyio_impl.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ """
+ IO related functions.
+ """
+@@ -871,6 +872,7 @@ def _preprocess_comments(iterable, comments, encoding):
+ _loadtxt_chunksize = 50000
+ 
+ 
++@track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R0913_768c615b', output_file='/root/ecooptimizer_benchmark/emissions/numpy/too-many-arguments/768c615b.csv')
+ def _read(fname, *, delimiter=',', comment='#', quote='"',
+           imaginary_unit='j', usecols=None, skiplines=0,
+           max_rows=None, converters=None, ndmin=None, unpack=False,
+diff --git a/vendored-meson/meson b/vendored-meson/meson
+--- a/vendored-meson/meson
++++ b/vendored-meson/meson
+@@ -1 +1 @@
+-Subproject commit f754c4258805056ed7be09830d96af45215d341b
++Subproject commit f754c4258805056ed7be09830d96af45215d341b-dirty

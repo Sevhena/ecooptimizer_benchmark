@@ -1,0 +1,25 @@
+diff --git a/sklearn/impute/_base.py b/sklearn/impute/_base.py
+index 689ba8ace..5411b77d5 100644
+--- a/sklearn/impute/_base.py
++++ b/sklearn/impute/_base.py
+@@ -18,6 +18,7 @@ from ..utils._param_validation import MissingValues, StrOptions
+ from ..utils.fixes import _mode
+ from ..utils.sparsefuncs import _get_median
+ from ..utils.validation import (
++from codecarbon import EmissionsTracker
+     FLOAT_DTYPES,
+     _check_feature_names_in,
+     _check_n_features,
+@@ -467,9 +468,9 @@ class SimpleImputer(_BaseImputer):
+         if strategy == "constant":
+             # TODO(1.8): Remove FutureWarning and add `np.nan` as a statistic
+             # for empty features to drop them later.
+-            if not self.keep_empty_features and any(
+-                [all(missing_mask[:, i].data) for i in range(missing_mask.shape[1])]
+-            ):
++            with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R1729_bebfc193', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/use-a-generator/bebfc193.csv') as tracker:
++                _carbon_wrapped_10699ea1 = any( [all(missing_mask[:, i].data) for i in range(missing_mask.shape[1])] )
++            if not self.keep_empty_features and _carbon_wrapped_10699ea1:
+                 warnings.warn(
+                     "Currently, when `keep_empty_feature=False` and "
+                     '`strategy="constant"`, empty features are not dropped. '

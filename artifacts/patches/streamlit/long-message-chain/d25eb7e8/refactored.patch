@@ -1,0 +1,25 @@
+diff --git a/lib/streamlit/elements/widgets/time_widgets.py b/lib/streamlit/elements/widgets/time_widgets.py
+index 7023f15ce..e5b9f0f0c 100644
+--- a/lib/streamlit/elements/widgets/time_widgets.py
++++ b/lib/streamlit/elements/widgets/time_widgets.py
+@@ -60,6 +60,7 @@ from streamlit.runtime.state import (
+     register_widget,
+ )
+ from streamlit.time_util import adjust_years
++from codecarbon import EmissionsTracker
+ 
+ if TYPE_CHECKING:
+     from streamlit.delta_generator import DeltaGenerator
+@@ -91,7 +92,11 @@ ALLOWED_DATE_FORMATS: Final = re.compile(
+ def _convert_timelike_to_time(value: TimeValue) -> time:
+     if value == "now":
+         # Set value default.
+-        return datetime.now().time().replace(second=0, microsecond=0)
++        with EmissionsTracker(project_name='streamlit-benchmark', experiment_id='streamlit_LMC001_d25eb7e8', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-message-chain/d25eb7e8_refactored.csv') as tracker:
++            intermediate_0 = datetime.now()
++            intermediate_1 = intermediate_0.time()
++            _carbon_wrapped_b2db0f6e = intermediate_1.replace(second=0, microsecond=0)
++        return _carbon_wrapped_b2db0f6e
+ 
+     if isinstance(value, str):
+         try:

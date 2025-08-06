@@ -1,0 +1,20 @@
+diff --git a/nltk/tokenize/stanford_segmenter.py b/nltk/tokenize/stanford_segmenter.py
+index 95bd20258..9d3f34114 100644
+--- a/nltk/tokenize/stanford_segmenter.py
++++ b/nltk/tokenize/stanford_segmenter.py
+@@ -25,6 +25,7 @@ from nltk.internals import (
+     java,
+ )
+ from nltk.tokenize.api import TokenizerI
++from codecarbon import track_emissions
+ 
+ _stanford_url = "https://nlp.stanford.edu/software"
+ 
+@@ -53,6 +54,7 @@ class StanfordSegmenter(TokenizerI):
+ 
+     _JAR = "stanford-segmenter.jar"
+ 
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_da4d0f22', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/da4d0f22.csv')
+     def __init__(
+         self,
+         path_to_jar=None,

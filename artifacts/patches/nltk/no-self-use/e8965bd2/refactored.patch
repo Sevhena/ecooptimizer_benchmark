@@ -1,0 +1,36 @@
+diff --git a/nltk/cluster/api.py b/nltk/cluster/api.py
+index 6d1159897..0e127420e 100644
+--- a/nltk/cluster/api.py
++++ b/nltk/cluster/api.py
+@@ -9,6 +9,7 @@
+ from abc import ABCMeta, abstractmethod
+ 
+ from nltk.probability import DictionaryProbDist
++from codecarbon import track_emissions
+ 
+ 
+ class ClusterI(metaclass=ABCMeta):
+@@ -67,7 +68,9 @@ class ClusterI(metaclass=ABCMeta):
+         """
+         return list(range(self.num_clusters()))
+ 
+-    def cluster_name(self, index):
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R6301_e8965bd2', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/e8965bd2_refactored.csv')
++    @staticmethod
++    def cluster_name(index):
+         """
+         Returns the names of the cluster at index.
+         """
+diff --git a/nltk/cluster/util.py b/nltk/cluster/util.py
+index 065f5763d..92e369392 100644
+--- a/nltk/cluster/util.py
++++ b/nltk/cluster/util.py
+@@ -74,7 +74,7 @@ class VectorSpaceClusterer(ClusterI):
+         if self._Tt is not None:
+             vector = numpy.dot(self._Tt, vector)
+         cluster = self.classify_vectorspace(vector)
+-        return self.cluster_name(cluster)
++        return VectorSpaceClusterer.cluster_name(cluster)
+ 
+     @abstractmethod
+     def classify_vectorspace(self, vector):

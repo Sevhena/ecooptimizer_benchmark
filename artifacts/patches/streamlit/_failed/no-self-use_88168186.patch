@@ -1,0 +1,20 @@
+diff --git a/lib/streamlit/runtime/app_session.py b/lib/streamlit/runtime/app_session.py
+index d688b47d3..5d622306d 100644
+--- a/lib/streamlit/runtime/app_session.py
++++ b/lib/streamlit/runtime/app_session.py
+@@ -48,6 +48,7 @@ from streamlit.runtime.secrets import secrets_singleton
+ from streamlit.string_util import to_snake_case
+ from streamlit.version import STREAMLIT_VERSION_STRING
+ from streamlit.watcher import LocalSourcesWatcher
++from codecarbon import track_emissions
+ 
+ if TYPE_CHECKING:
+     from streamlit.proto.BackMsg_pb2 import BackMsg
+@@ -891,6 +892,7 @@ class AppSession:
+ 
+     def _populate_app_pages(
+         self, msg: NewSession, pages: dict[PageHash, PageInfo]
++    @track_emissions(project_name='streamlit-benchmark', experiment_id='streamlit_R6301_88168186', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/no-self-use/88168186.csv')
+     ) -> None:
+         for page_script_hash, page_info in pages.items():
+             page_proto = msg.app_pages.add()

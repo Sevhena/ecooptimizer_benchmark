@@ -1,0 +1,33 @@
+diff --git a/django/core/signing.py b/django/core/signing.py
+index e3d7785910..b05d2b5206 100644
+--- a/django/core/signing.py
++++ b/django/core/signing.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ """
+ Functions for creating and restoring url-safe signed JSON objects.
+ 
+@@ -66,10 +67,12 @@ def b62_encode(s):
+         return "0"
+     sign = "-" if s < 0 else ""
+     s = abs(s)
+-    encoded = ""
+-    while s > 0:
+-        s, remainder = divmod(s, 62)
+-        encoded = BASE62_ALPHABET[remainder] + encoded
++    encoded = []
++    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_SCL001_aded0240', output_file='/root/ecooptimizer_benchmark/emissions/django/string-concat-loop/aded0240_refactored.csv') as tracker:
++        while s > 0:
++            s, remainder = divmod(s, 62)
++            encoded.insert(0, BASE62_ALPHABET[remainder])
++        encoded = ''.join(encoded)
+     return sign + encoded
+ 
+ 
+@@ -274,4 +277,4 @@ class TimestampSigner(Signer):
+             age = time.time() - timestamp
+             if age > max_age:
+                 raise SignatureExpired("Signature age %s > %s seconds" % (age, max_age))
+-        return value
++        return value
+\ No newline at end of file

@@ -1,0 +1,20 @@
+diff --git a/gpiozero/input_devices.py b/gpiozero/input_devices.py
+index b632a02..96230d1 100644
+--- a/gpiozero/input_devices.py
++++ b/gpiozero/input_devices.py
+@@ -29,6 +29,7 @@ from .exc import (
+ )
+ from .devices import GPIODevice, CompositeDevice
+ from .mixins import GPIOQueue, EventsMixin, HoldMixin, event
++from codecarbon import track_emissions
+ try:
+     from .pins.pigpio import PiGPIOFactory
+ except ImportError:
+@@ -249,6 +250,7 @@ class SmoothedInputDevice(EventsMixin, InputDevice):
+         See :doc:`api_pins` for more information (this is an advanced feature
+         which most users can ignore).
+     """
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R0913_d091a9bd', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/too-many-arguments/d091a9bd.csv')
+     def __init__(
+             self, pin=None, *, pull_up=False, active_state=None, threshold=0.5,
+             queue_len=5, sample_wait=0.0, partial=False, average=median,

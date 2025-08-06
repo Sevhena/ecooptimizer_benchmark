@@ -1,0 +1,29 @@
+diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
+index 0fbc407..6f2f2a1 100644
+--- a/gpiozero/pins/__init__.py
++++ b/gpiozero/pins/__init__.py
+@@ -677,6 +677,7 @@ class SPI(Device):
+         :attr:`clock_phase` attributes simultaneously.
+         """)
+ 
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_cb611f29', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/cb611f29_refactored.csv')
+     def _get_lsb_first(self):
+         return False  # pragma: no cover
+ 
+@@ -685,7 +686,7 @@ class SPI(Device):
+             f"lsb_first cannot be changed on {self!r}")
+ 
+     lsb_first = property(
+-        lambda self: self._get_lsb_first(),
++        lambda self: SPI._get_lsb_first(),
+         lambda self, value: self._set_lsb_first(value),
+         doc="""\
+         Controls whether words are read and written LSB in (Least Significant
+@@ -834,6 +835,7 @@ class PinInfo(namedtuple('PinInfo', (
+ 
+         An integer containing the physical pin number on the header (starting
+         from 1 in accordance with convention).
++from codecarbon import track_emissions
+ 
+     .. attribute:: name
+ 

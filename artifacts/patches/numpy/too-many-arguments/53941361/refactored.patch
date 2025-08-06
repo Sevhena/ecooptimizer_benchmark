@@ -1,0 +1,693 @@
+diff --git a/numpy/_core/defchararray.py b/numpy/_core/defchararray.py
+index bde8921f55..b42cee4736 100644
+--- a/numpy/_core/defchararray.py
++++ b/numpy/_core/defchararray.py
+@@ -64,6 +64,22 @@
+ 
+ array_function_dispatch = functools.partial(
+     overrides.array_function_dispatch, module='numpy.char')
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ 
+ def _binary_op_dispatcher(x1, x2):
+@@ -576,13 +592,9 @@ def __new__(subtype, shape, itemsize=1, unicode=False, buffer=None,
+             filler = None
+ 
+         if buffer is None:
+-            self = ndarray.__new__(subtype, shape, (dtype, itemsize),
+-                                   order=order)
++            self = ndarray.__new__(DataParams___new___96(subtype, shape, (dtype, itemsize)), order = order)
+         else:
+-            self = ndarray.__new__(subtype, shape, (dtype, itemsize),
+-                                   buffer=buffer,
+-                                   offset=offset, strides=strides,
+-                                   order=order)
++            self = ndarray.__new__(DataParams___new___96(subtype, shape, (dtype, itemsize), offset = offset, strides = strides), buffer = buffer, order = order)
+         if filler is not None:
+             self[...] = filler
+ 
+diff --git a/numpy/_core/getlimits.py b/numpy/_core/getlimits.py
+index afa2ccebcf..c8c6f1bfdf 100644
+--- a/numpy/_core/getlimits.py
++++ b/numpy/_core/getlimits.py
+@@ -13,6 +13,22 @@
+ from ._machar import MachAr
+ from .numeric import array, inf, nan
+ from .umath import exp2, isnan, log10, nextafter
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ 
+ def _fr0(a):
+@@ -542,7 +558,7 @@ def __new__(cls, dtype):
+                     for dt in dtypes:
+                         cls._finfo_cache[dt] = obj
+                     return obj
+-        obj = object.__new__(cls)._init(dtype)
++        obj = object.__new__(DataParams___new___96(cls))._init(dtype)
+         for dt in dtypes:
+             cls._finfo_cache[dt] = obj
+         return obj
+diff --git a/numpy/_core/memmap.py b/numpy/_core/memmap.py
+index 8cfa7f94a8..e2a99cb435 100644
+--- a/numpy/_core/memmap.py
++++ b/numpy/_core/memmap.py
+@@ -1,3 +1,19 @@
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ import operator
+ from contextlib import nullcontext
+ 
+@@ -290,8 +306,7 @@ def __new__(subtype, filename, dtype=uint8, mode='r+', offset=0,
+             array_offset = offset - start
+             mm = mmap.mmap(fid.fileno(), bytes, access=acc, offset=start)
+ 
+-            self = ndarray.__new__(subtype, shape, dtype=descr, buffer=mm,
+-                                   offset=array_offset, order=order)
++            self = ndarray.__new__(DataParams___new___96(subtype, shape, dtype = descr, offset = array_offset), buffer = mm, order = order)
+             self._mmap = mm
+             self.offset = offset
+             self.mode = mode
+diff --git a/numpy/_core/records.py b/numpy/_core/records.py
+index 39bcf4ba62..01ba51e4a9 100644
+--- a/numpy/_core/records.py
++++ b/numpy/_core/records.py
+@@ -42,6 +42,22 @@
+ # are equally allowed
+ 
+ numfmt = nt.sctypeDict
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ 
+ @set_module('numpy.rec')
+@@ -397,13 +413,10 @@ def __new__(subtype, shape, dtype=None, buf=None, offset=0, strides=None,
+ 
+         if buf is None:
+             self = ndarray.__new__(
+-                subtype, shape, (record, descr), order=order
+-            )
++                DataParams___new___96(subtype, shape, (record, descr)), order = order)
+         else:
+             self = ndarray.__new__(
+-                subtype, shape, (record, descr), buffer=buf,
+-                offset=offset, strides=strides, order=order
+-            )
++                DataParams___new___96(subtype, shape, (record, descr), offset = offset, strides = strides), buffer = buf, order = order)
+         return self
+ 
+     def __array_finalize__(self, obj):
+diff --git a/numpy/_core/tests/test_function_base.py b/numpy/_core/tests/test_function_base.py
+index 3a8552de2d..65ae39c406 100644
+--- a/numpy/_core/tests/test_function_base.py
++++ b/numpy/_core/tests/test_function_base.py
+@@ -28,6 +28,22 @@
+     assert_equal,
+     assert_raises,
+ )
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ 
+ def _is_armhf():
+@@ -37,7 +53,7 @@ def _is_armhf():
+ 
+ class PhysicalQuantity(float):
+     def __new__(cls, value):
+-        return float.__new__(cls, value)
++        return float.__new__(DataParams___new___96(cls, value))
+ 
+     def __add__(self, x):
+         assert_(isinstance(x, PhysicalQuantity))
+diff --git a/numpy/_core/tests/test_umath.py b/numpy/_core/tests/test_umath.py
+index 001a7bffbc..d91aac9e98 100644
+--- a/numpy/_core/tests/test_umath.py
++++ b/numpy/_core/tests/test_umath.py
+@@ -51,6 +51,22 @@
+ UFUNCS_BINARY_ACC = [
+     uf for uf in UFUNCS_BINARY if hasattr(uf, "accumulate") and uf.nout == 1
+ ]
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ def interesting_binop_operands(val1, val2, dtype):
+     """
+@@ -4471,7 +4487,7 @@ def test_subclass_op(self):
+ 
+         class simple(np.ndarray):
+             def __new__(subtype, shape):
+-                self = np.ndarray.__new__(subtype, shape, dtype=object)
++                self = np.ndarray.__new__(DataParams___new___96(subtype, shape, dtype = object))
+                 self.fill(0)
+                 return self
+ 
+diff --git a/numpy/_globals.py b/numpy/_globals.py
+index 5f838ba915..303e08557c 100644
+--- a/numpy/_globals.py
++++ b/numpy/_globals.py
+@@ -1,3 +1,19 @@
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ """
+ Module defining global singleton classes.
+ 
+@@ -53,7 +69,7 @@ class _NoValueType:
+     def __new__(cls):
+         # ensure that only one instance exists
+         if not cls.__instance:
+-            cls.__instance = super().__new__(cls)
++            cls.__instance = super().__new__(DataParams___new___96(cls))
+         return cls.__instance
+ 
+     def __repr__(self):
+diff --git a/numpy/core/_internal.py b/numpy/core/_internal.py
+index 63a6ccc75e..67893151c0 100644
+--- a/numpy/core/_internal.py
++++ b/numpy/core/_internal.py
+@@ -1,4 +1,20 @@
+ from numpy._core import _internal
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ 
+ # Build a new array from the information in a pickle.
+@@ -8,7 +24,7 @@
+ # break backward compatibility.
+ def _reconstruct(subtype, shape, dtype):
+     from numpy import ndarray
+-    return ndarray.__new__(subtype, shape, dtype)
++    return ndarray.__new__(DataParams___new___96(subtype, shape, dtype))
+ 
+ 
+ # Pybind11 (in versions <= 2.11.1) imports _dtype_from_pep3118 from the
+diff --git a/numpy/distutils/fcompiler/__init__.py b/numpy/distutils/fcompiler/__init__.py
+index 5160e2abf5..05c98b80cb 100644
+--- a/numpy/distutils/fcompiler/__init__.py
++++ b/numpy/distutils/fcompiler/__init__.py
+@@ -44,6 +44,22 @@
+ 
+ class CompilerNotFound(Exception):
+     pass
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ def flaglist(s):
+     if is_string(s):
+@@ -231,7 +247,7 @@ def __init__(self, *args, **kw):
+         self._is_customised = False
+ 
+     def __copy__(self):
+-        obj = self.__new__(self.__class__)
++        obj = self.__new__(DataParams___new___96(self.__class__))
+         obj.__dict__.update(self.__dict__)
+         obj.distutils_vars = obj.distutils_vars.clone(obj._environment_hook)
+         obj.command_vars = obj.command_vars.clone(obj._environment_hook)
+diff --git a/numpy/f2py/tests/test_array_from_pyobj.py b/numpy/f2py/tests/test_array_from_pyobj.py
+index a8f952752c..4c1ba78628 100644
+--- a/numpy/f2py/tests/test_array_from_pyobj.py
++++ b/numpy/f2py/tests/test_array_from_pyobj.py
+@@ -17,6 +17,22 @@
+     CHARACTER=np.dtype("c"),
+     **_c_names_dict
+ )
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ 
+ def get_testdir():
+@@ -180,7 +196,7 @@ def __new__(cls, name):
+         obj = cls._type_cache.get(name.upper(), None)
+         if obj is not None:
+             return obj
+-        obj = object.__new__(cls)
++        obj = object.__new__(DataParams___new___96(cls))
+         obj._init(name)
+         cls._type_cache[name.upper()] = obj
+         return obj
+diff --git a/numpy/ma/core.py b/numpy/ma/core.py
+index 05ea373a6a..720c8e77a3 100644
+--- a/numpy/ma/core.py
++++ b/numpy/ma/core.py
+@@ -89,6 +89,22 @@
+ 
+ class MaskedArrayFutureWarning(FutureWarning):
+     pass
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ def _deprecate_argsort_axis(arr):
+     """
+@@ -6517,7 +6533,7 @@ def __reduce__(self):
+ 
+     def __deepcopy__(self, memo=None):
+         from copy import deepcopy
+-        copied = MaskedArray.__new__(type(self), self, copy=True)
++        copied = MaskedArray.__new__(DataParams___new___96(type(self), self, copy = True))
+         if memo is None:
+             memo = {}
+         memo[id(self)] = copied
+@@ -6537,9 +6553,9 @@ def _mareconstruct(subtype, baseclass, baseshape, basetype,):
+     information stored in a pickle.
+ 
+     """
+-    _data = ndarray.__new__(baseclass, baseshape, basetype)
+-    _mask = ndarray.__new__(ndarray, baseshape, make_mask_descr(basetype))
+-    return subtype.__new__(subtype, _data, mask=_mask, dtype=basetype,)
++    _data = ndarray.__new__(DataParams___new___96(baseclass, baseshape, basetype))
++    _mask = ndarray.__new__(DataParams___new___96(ndarray, baseshape, make_mask_descr(basetype)))
++    return subtype.__new__(DataParams___new___96(subtype, _data, mask = _mask, dtype = basetype))
+ 
+ 
+ class mvoid(MaskedArray):
+diff --git a/numpy/ma/mrecords.py b/numpy/ma/mrecords.py
+index 835f3ce5b7..38da4590d9 100644
+--- a/numpy/ma/mrecords.py
++++ b/numpy/ma/mrecords.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ """:mod:`numpy.ma..mrecords`
+ 
+ Defines the equivalent of :class:`numpy.recarrays` for masked arrays,
+@@ -30,6 +31,22 @@
+ ]
+ 
+ reserved_fields = ['_data', '_mask', '_fieldmask', 'dtype']
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ 
+ def _checknames(descr, names=None):
+@@ -91,6 +108,7 @@ class MaskedRecords(ma.MaskedArray):
+ 
+     """
+ 
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R0913_53941361', output_file='/root/ecooptimizer_benchmark/emissions/numpy/too-many-arguments/53941361_refactored.csv')
+     def __new__(cls, shape, dtype=None, buf=None, offset=0, strides=None,
+                 formats=None, names=None, titles=None,
+                 byteorder=None, aligned=False,
+@@ -98,10 +116,7 @@ def __new__(cls, shape, dtype=None, buf=None, offset=0, strides=None,
+                 copy=False,
+                 **options):
+ 
+-        self = np.recarray.__new__(cls, shape, dtype=dtype, buf=buf, offset=offset,
+-                                   strides=strides, formats=formats, names=names,
+-                                   titles=titles, byteorder=byteorder,
+-                                   aligned=aligned,)
++        self = np.recarray.__new__(DataParams___new___96(cls, shape, dtype = dtype, buf = buf, offset = offset, strides = strides, formats = formats, names = names, titles = titles, byteorder = byteorder, aligned = aligned))
+ 
+         mdtype = ma.make_mask_descr(self.dtype)
+         if mask is ma.nomask or not np.size(mask):
+@@ -478,9 +493,9 @@ def _mrreconstruct(subtype, baseclass, baseshape, basetype,):
+     Build a new MaskedArray from the information stored in a pickle.
+ 
+     """
+-    _data = np.ndarray.__new__(baseclass, baseshape, basetype).view(subtype)
+-    _mask = np.ndarray.__new__(np.ndarray, baseshape, 'b1')
+-    return subtype.__new__(subtype, _data, mask=_mask, dtype=basetype,)
++    _data = np.ndarray.__new__(DataParams___new___96(baseclass, baseshape, basetype)).view(subtype)
++    _mask = np.ndarray.__new__(DataParams___new___96(np.ndarray, baseshape, 'b1'))
++    return subtype.__new__(DataParams___new___96(subtype, _data, mask = _mask, dtype = basetype))
+ 
+ 
+ mrecarray = MaskedRecords
+diff --git a/numpy/ma/tests/test_core.py b/numpy/ma/tests/test_core.py
+index 091ba6c99f..c7e40ac59e 100644
+--- a/numpy/ma/tests/test_core.py
++++ b/numpy/ma/tests/test_core.py
+@@ -5534,7 +5534,7 @@ def test_repr(self):
+         assert_equal(repr(np.ma.masked), 'masked')
+ 
+         # create a new instance in a weird way
+-        masked2 = np.ma.MaskedArray.__new__(np.ma.core.MaskedConstant)
++        masked2 = np.ma.MaskedArray.__new__(DataParams___new___96(np.ma.core.MaskedConstant))
+         assert_not_equal(repr(masked2), 'masked')
+ 
+     def test_pickle(self):
+@@ -5631,6 +5631,22 @@ def test_masked_values(self):
+ 
+         res = np.ma.masked_values([1, 2, 3, 4], 5, shrink=False)
+         assert_equal(res.mask, [False] * 4)
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ 
+ def test_masked_array():
+diff --git a/numpy/ma/tests/test_subclassing.py b/numpy/ma/tests/test_subclassing.py
+index 3364e56309..00c2598bdd 100644
+--- a/numpy/ma/tests/test_subclassing.py
++++ b/numpy/ma/tests/test_subclassing.py
+@@ -22,6 +22,22 @@
+ )
+ from numpy.ma.testutils import assert_equal
+ from numpy.testing import assert_, assert_raises
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ # from numpy.ma.core import (
+ 
+@@ -58,7 +74,7 @@ def __iadd__(self, other):
+ class SubMaskedArray(MaskedArray):
+     """Pure subclass of MaskedArray, keeping some info on subclass."""
+     def __new__(cls, info=None, **kwargs):
+-        obj = super().__new__(cls, **kwargs)
++        obj = super().__new__(DataParams___new___96(cls, kwargs))
+         obj._optinfo['info'] = info
+         return obj
+ 
+@@ -67,7 +83,7 @@ class MSubArray(SubArray, MaskedArray):
+ 
+     def __new__(cls, data, info={}, mask=nomask):
+         subarr = SubArray(data, info)
+-        _data = MaskedArray.__new__(cls, data=subarr, mask=mask)
++        _data = MaskedArray.__new__(DataParams___new___96(cls, mask = mask), data = subarr)
+         _data.info = subarr.info
+         return _data
+ 
+diff --git a/numpy/matlib.py b/numpy/matlib.py
+index f27d503cdb..499201fdd3 100644
+--- a/numpy/matlib.py
++++ b/numpy/matlib.py
+@@ -21,6 +21,22 @@
+ 
+ __all__ = ['rand', 'randn', 'repmat']
+ __all__ += np.__all__
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ def empty(shape, dtype=None, order='C'):
+     """Return a new matrix of given shape and type, without initializing entries.
+@@ -61,7 +77,7 @@ def empty(shape, dtype=None, order='C'):
+             [ 6586976, 22740995]])
+ 
+     """
+-    return ndarray.__new__(matrix, shape, dtype, order=order)
++    return ndarray.__new__(DataParams___new___96(matrix, shape, dtype), order = order)
+ 
+ def ones(shape, dtype=None, order='C'):
+     """
+@@ -104,7 +120,7 @@ def ones(shape, dtype=None, order='C'):
+     matrix([[1.,  1.]])
+ 
+     """
+-    a = ndarray.__new__(matrix, shape, dtype, order=order)
++    a = ndarray.__new__(DataParams___new___96(matrix, shape, dtype), order = order)
+     a.fill(1)
+     return a
+ 
+@@ -148,7 +164,7 @@ def zeros(shape, dtype=None, order='C'):
+     matrix([[0.,  0.]])
+ 
+     """
+-    a = ndarray.__new__(matrix, shape, dtype, order=order)
++    a = ndarray.__new__(DataParams___new___96(matrix, shape, dtype), order = order)
+     a.fill(0)
+     return a
+ 
+diff --git a/numpy/matrixlib/defmatrix.py b/numpy/matrixlib/defmatrix.py
+index 39b9a93550..03f0b98478 100644
+--- a/numpy/matrixlib/defmatrix.py
++++ b/numpy/matrixlib/defmatrix.py
+@@ -11,6 +11,22 @@
+ # While not in __all__, matrix_power used to be defined here, so we import
+ # it for backward compatibility.
+ from numpy.linalg import matrix_power
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ 
+ 
+ def _convert_from_string(data):
+@@ -166,9 +182,7 @@ def __new__(subtype, data, dtype=None, copy=True):
+         if not (order or arr.flags.contiguous):
+             arr = arr.copy()
+ 
+-        ret = N.ndarray.__new__(subtype, shape, arr.dtype,
+-                                buffer=arr,
+-                                order=order)
++        ret = N.ndarray.__new__(DataParams___new___96(subtype, shape, arr.dtype), buffer = arr, order = order)
+         return ret
+ 
+     def __array_finalize__(self, obj):
+diff --git a/numpy/matrixlib/tests/test_masked_matrix.py b/numpy/matrixlib/tests/test_masked_matrix.py
+index e6df047ee6..57ef01eb2b 100644
+--- a/numpy/matrixlib/tests/test_masked_matrix.py
++++ b/numpy/matrixlib/tests/test_masked_matrix.py
+@@ -1,3 +1,19 @@
++class DataParams___new___96:
++    def __init__(self, cls, shape, dtype = None, buf = None, offset = 0, strides = None, formats = None, names = None, titles = None, byteorder = None, aligned = False, mask = ma.nomask, keep_mask = True, copy = False):
++        self.cls = cls
++        self.shape = shape
++        self.dtype = dtype
++        self.buf = buf
++        self.offset = offset
++        self.strides = strides
++        self.formats = formats
++        self.names = names
++        self.titles = titles
++        self.byteorder = byteorder
++        self.aligned = aligned
++        self.mask = mask
++        self.keep_mask = keep_mask
++        self.copy = copy
+ import pickle
+ 
+ import numpy as np
+@@ -23,7 +39,7 @@ class MMatrix(MaskedArray, np.matrix,):
+ 
+     def __new__(cls, data, mask=nomask):
+         mat = np.matrix(data)
+-        _data = MaskedArray.__new__(cls, data=mat, mask=mask)
++        _data = MaskedArray.__new__(DataParams___new___96(cls, mask = mask), data = mat)
+         return _data
+ 
+     def __array_finalize__(self, obj):
+diff --git a/vendored-meson/meson b/vendored-meson/meson
+--- a/vendored-meson/meson
++++ b/vendored-meson/meson
+@@ -1 +1 @@
+-Subproject commit f754c4258805056ed7be09830d96af45215d341b
++Subproject commit f754c4258805056ed7be09830d96af45215d341b-dirty

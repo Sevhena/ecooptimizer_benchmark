@@ -1,0 +1,20 @@
+diff --git a/gpiozero/pins/__init__.py b/gpiozero/pins/__init__.py
+index 0fbc407..c3af7b8 100644
+--- a/gpiozero/pins/__init__.py
++++ b/gpiozero/pins/__init__.py
+@@ -366,6 +366,7 @@ class Pin:
+         underlying hardware, :exc:`PinInvalidPull` is raised.
+         """)
+ 
++    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_b3e91708', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/b3e91708.csv')
+     def _get_frequency(self):
+         return None  # pragma: no cover
+ 
+@@ -834,6 +835,7 @@ class PinInfo(namedtuple('PinInfo', (
+ 
+         An integer containing the physical pin number on the header (starting
+         from 1 in accordance with convention).
++from codecarbon import track_emissions
+ 
+     .. attribute:: name
+ 

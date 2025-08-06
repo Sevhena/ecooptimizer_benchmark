@@ -1,0 +1,26 @@
+diff --git a/django/db/backends/base/operations.py b/django/db/backends/base/operations.py
+index c426a2b90a..c97508be1b 100644
+--- a/django/db/backends/base/operations.py
++++ b/django/db/backends/base/operations.py
+@@ -10,6 +10,7 @@ from django.db import NotSupportedError, transaction
+ from django.db.models.expressions import Col
+ from django.utils import timezone
+ from django.utils.encoding import force_str
++from codecarbon import EmissionsTracker
+ 
+ 
+ class BaseDatabaseOperations:
+@@ -499,7 +500,12 @@ class BaseDatabaseOperations:
+ 
+     def prep_for_like_query(self, x):
+         """Prepare a value for use in a LIKE query."""
+-        return str(x).replace("\\", "\\\\").replace("%", r"\%").replace("_", r"\_")
++        with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LMC001_bae09c6d', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/bae09c6d_refactored.csv') as tracker:
++            intermediate_0 = str(x)
++            intermediate_1 = intermediate_0.replace("\\", "\\\\")
++            intermediate_2 = intermediate_1.replace("%", r"\%")
++            _carbon_wrapped_c294d350 = intermediate_2.replace("_", r"\_")
++        return _carbon_wrapped_c294d350
+ 
+     # Same as prep_for_like_query(), but called for "iexact" matches, which
+     # need not necessarily be implemented using "LIKE" in the backend.

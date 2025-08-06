@@ -1,0 +1,23 @@
+diff --git a/dask/utils.py b/dask/utils.py
+index 6edfda8f8..d681d64fc 100644
+--- a/dask/utils.py
++++ b/dask/utils.py
+@@ -28,6 +28,7 @@ import tlz as toolz
+ 
+ from dask import config
+ from dask.typing import no_default
++from codecarbon import EmissionsTracker
+ 
+ K = TypeVar("K")
+ V = TypeVar("V")
+@@ -1358,7 +1359,9 @@ def get_scheduler_lock(collection=None, scheduler=None):
+     actual_get = get_scheduler(collections=[collection], scheduler=scheduler)
+ 
+     if actual_get == multiprocessing.get:
+-        return multiprocessing.get_context().Manager().Lock()
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LMC001_b320286e', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/b320286e.csv') as tracker:
++            _carbon_wrapped_b9c25af4 = multiprocessing.get_context().Manager().Lock()
++        return _carbon_wrapped_b9c25af4
+     else:
+         # if this is a distributed client, we need to lock on
+         # the level between processes, SerializableLock won't work

@@ -1,0 +1,29 @@
+diff --git a/nltk/stem/arlstem2.py b/nltk/stem/arlstem2.py
+index e4121b6cf..b8a00c710 100644
+--- a/nltk/stem/arlstem2.py
++++ b/nltk/stem/arlstem2.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ #
+ # Natural Language Toolkit: ARLSTem Stemmer v2
+ #
+@@ -123,7 +124,7 @@ class ARLSTem2(StemmerI):
+             if pre is not None:
+                 token = pre
+             # transform the feminine form to masculine form
+-            fm = self.fem2masc(token)
++            fm = ARLSTem2.fem2masc(token)
+             if fm is not None:
+                 return fm
+             # strip the adjective affixes
+@@ -261,7 +262,9 @@ class ARLSTem2(StemmerI):
+             return token[:-2]
+         return token
+ 
+-    def fem2masc(self, token):
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R6301_dc979356', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/dc979356_refactored.csv')
++    @staticmethod
++    def fem2masc(token):
+         """
+         transform the word from the feminine form to the masculine form.
+         """

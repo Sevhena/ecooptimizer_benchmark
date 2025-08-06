@@ -1,0 +1,20 @@
+diff --git a/sklearn/cluster/_spectral.py b/sklearn/cluster/_spectral.py
+index 00d234375..35decf485 100644
+--- a/sklearn/cluster/_spectral.py
++++ b/sklearn/cluster/_spectral.py
+@@ -18,6 +18,7 @@ from ..utils import as_float_array, check_random_state
+ from ..utils._param_validation import Interval, StrOptions, validate_params
+ from ..utils.validation import validate_data
+ from ._kmeans import k_means
++from codecarbon import track_emissions
+ 
+ 
+ def cluster_qr(vectors):
+@@ -633,6 +634,7 @@ class SpectralClustering(ClusterMixin, BaseEstimator):
+         "verbose": ["verbose"],
+     }
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_818d01b3', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/818d01b3.csv')
+     def __init__(
+         self,
+         n_clusters=8,

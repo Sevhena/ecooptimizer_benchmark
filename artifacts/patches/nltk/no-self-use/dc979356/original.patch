@@ -1,0 +1,17 @@
+diff --git a/nltk/stem/arlstem2.py b/nltk/stem/arlstem2.py
+index e4121b6cf..0b2b68d88 100644
+--- a/nltk/stem/arlstem2.py
++++ b/nltk/stem/arlstem2.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ #
+ # Natural Language Toolkit: ARLSTem Stemmer v2
+ #
+@@ -261,6 +262,7 @@ class ARLSTem2(StemmerI):
+             return token[:-2]
+         return token
+ 
++    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R6301_dc979356', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/dc979356.csv')
+     def fem2masc(self, token):
+         """
+         transform the word from the feminine form to the masculine form.

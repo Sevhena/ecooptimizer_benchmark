@@ -1,0 +1,20 @@
+diff --git a/django/test/client.py b/django/test/client.py
+index c733372130..1604cfb88d 100644
+--- a/django/test/client.py
++++ b/django/test/client.py
+@@ -27,6 +27,7 @@ from django.utils.encoding import force_bytes
+ from django.utils.functional import SimpleLazyObject
+ from django.utils.http import urlencode
+ from django.utils.regex_helper import _lazy_re_compile
++from codecarbon import track_emissions
+ 
+ __all__ = (
+     "AsyncClient",
+@@ -1695,6 +1696,7 @@ class AsyncClient(ClientMixin, AsyncRequestFactory):
+             )
+         return response
+ 
++    @track_emissions(project_name='django-benchmark', experiment_id='django_R0913_b3935b4a', output_file='/root/ecooptimizer_benchmark/emissions/django/too-many-arguments/b3935b4a.csv')
+     async def trace(
+         self,
+         path,

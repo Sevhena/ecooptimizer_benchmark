@@ -1,0 +1,34 @@
+diff --git a/dask/utils.py b/dask/utils.py
+index 6edfda8f8..fcbe97579 100644
+--- a/dask/utils.py
++++ b/dask/utils.py
+@@ -28,6 +28,7 @@ import tlz as toolz
+ 
+ from dask import config
+ from dask.typing import no_default
++from codecarbon import EmissionsTracker
+ 
+ K = TypeVar("K")
+ V = TypeVar("V")
+@@ -1985,13 +1986,14 @@ def key_split(s):
+             result = words[0].split(",")[0].strip("_'()\"")
+         else:
+             result = words[0]
+-        for word in words[1:]:
+-            if word.isalpha() and not (
+-                len(word) == 8 and hex_pattern.match(word) is not None
+-            ):
+-                result += "-" + word
+-            else:
+-                break
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_SCL001_3cad881d', output_file='/root/ecooptimizer_benchmark/emissions/dask/string-concat-loop/3cad881d.csv') as tracker:
++            for word in words[1:]:
++                if word.isalpha() and not (
++                    len(word) == 8 and hex_pattern.match(word) is not None
++                ):
++                    result += "-" + word
++                else:
++                    break
+         if len(result) == 32 and re.match(r"[a-f0-9]{32}", result):
+             return "data"
+         else:

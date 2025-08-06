@@ -1,0 +1,20 @@
+diff --git a/sklearn/cluster/_bisect_k_means.py b/sklearn/cluster/_bisect_k_means.py
+index 77e24adbf..20d5b93ce 100644
+--- a/sklearn/cluster/_bisect_k_means.py
++++ b/sklearn/cluster/_bisect_k_means.py
+@@ -20,6 +20,7 @@ from ..utils.validation import (
+ )
+ from ._k_means_common import _inertia_dense, _inertia_sparse
+ from ._kmeans import (
++from codecarbon import track_emissions
+     _BaseKMeans,
+     _kmeans_single_elkan,
+     _kmeans_single_lloyd,
+@@ -223,6 +224,7 @@ class BisectingKMeans(_BaseKMeans):
+         "bisecting_strategy": [StrOptions({"biggest_inertia", "largest_cluster"})],
+     }
+ 
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R0913_95c86cba', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/too-many-arguments/95c86cba.csv')
+     def __init__(
+         self,
+         n_clusters=8,

@@ -1,0 +1,20 @@
+diff --git a/django/db/backends/mysql/features.py b/django/db/backends/mysql/features.py
+index 6ae4c56af1..407265c713 100644
+--- a/django/db/backends/mysql/features.py
++++ b/django/db/backends/mysql/features.py
+@@ -2,6 +2,7 @@ import operator
+ 
+ from django.db.backends.base.features import BaseDatabaseFeatures
+ from django.utils.functional import cached_property
++from codecarbon import track_emissions
+ 
+ 
+ class DatabaseFeatures(BaseDatabaseFeatures):
+@@ -70,6 +71,7 @@ class DatabaseFeatures(BaseDatabaseFeatures):
+     @cached_property
+     def test_collations(self):
+         return {
++    @track_emissions(project_name='django-benchmark', experiment_id='django_R6301_f0dffe2e', output_file='/root/ecooptimizer_benchmark/emissions/django/no-self-use/f0dffe2e.csv')
+             "ci": "utf8mb4_general_ci",
+             "non_default": "utf8mb4_esperanto_ci",
+             "swedish_ci": "utf8mb4_swedish_ci",

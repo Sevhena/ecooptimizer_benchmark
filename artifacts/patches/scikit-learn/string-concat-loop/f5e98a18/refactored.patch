@@ -1,0 +1,41 @@
+diff --git a/sklearn/model_selection/_validation.py b/sklearn/model_selection/_validation.py
+index 8b70bf426..2e16b39af 100644
+--- a/sklearn/model_selection/_validation.py
++++ b/sklearn/model_selection/_validation.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ """
+ The :mod:`sklearn.model_selection._validation` module includes classes and
+ functions to validate the model.
+@@ -890,15 +891,17 @@ def _fit_and_score(
+     if verbose > 1:
+         total_time = score_time + fit_time
+         end_msg = f"[CV{progress_msg}] END "
+-        result_msg = params_msg + (";" if params_msg else "")
++        result_msg = [params_msg + (';' if params_msg else '')]
+         if verbose > 2:
+             if isinstance(test_scores, dict):
+-                for scorer_name in sorted(test_scores):
+-                    result_msg += f" {scorer_name}: ("
+-                    if return_train_score:
+-                        scorer_scores = train_scores[scorer_name]
+-                        result_msg += f"train={scorer_scores:.3f}, "
+-                    result_msg += f"test={test_scores[scorer_name]:.3f})"
++                with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_SCL001_f5e98a18', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/string-concat-loop/f5e98a18_refactored.csv') as tracker:
++                    for scorer_name in sorted(test_scores):
++                        result_msg.append(f' {scorer_name}: (')
++                        if return_train_score:
++                            scorer_scores = train_scores[scorer_name]
++                            result_msg.append(f'train={scorer_scores:.3f}, ')
++                        result_msg.append(f'test={test_scores[scorer_name]:.3f})')
++                    result_msg = ''.join(result_msg)
+             else:
+                 result_msg += ", score="
+                 if return_train_score:
+@@ -2523,4 +2526,4 @@ def _aggregate_score_dicts(scores):
+             else [score[key] for score in scores]
+         )
+         for key in scores[0]
+-    }
++    }
+\ No newline at end of file

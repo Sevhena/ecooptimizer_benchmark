@@ -1,0 +1,1455 @@
+diff --git a/nltk/ccg/chart.py b/nltk/ccg/chart.py
+index a87aefe8f..7b5f89f3e 100644
+--- a/nltk/ccg/chart.py
++++ b/nltk/ccg/chart.py
+@@ -343,6 +343,15 @@ class CCGChart(Chart):
+ 
+         memo[edge] = trees
+         return trees
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def compute_semantics(children, edge):
+diff --git a/nltk/chat/iesha.py b/nltk/chat/iesha.py
+index d7d57d63d..1b74e50e2 100644
+--- a/nltk/chat/iesha.py
++++ b/nltk/chat/iesha.py
+@@ -140,6 +140,15 @@ pairs = (
+ )
+ 
+ iesha_chatbot = Chat(pairs, reflections)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def iesha_chat():
+diff --git a/nltk/chat/rude.py b/nltk/chat/rude.py
+index a4fda1ca3..7edf0b9f9 100644
+--- a/nltk/chat/rude.py
++++ b/nltk/chat/rude.py
+@@ -106,6 +106,15 @@ pairs = (
+ )
+ 
+ rude_chatbot = Chat(pairs, reflections)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def rude_chat():
+diff --git a/nltk/chat/suntsu.py b/nltk/chat/suntsu.py
+index 872ddc607..2e342ca50 100644
+--- a/nltk/chat/suntsu.py
++++ b/nltk/chat/suntsu.py
+@@ -121,6 +121,15 @@ pairs = (
+ )
+ 
+ suntsu_chatbot = Chat(pairs, reflections)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def suntsu_chat():
+diff --git a/nltk/chat/zen.py b/nltk/chat/zen.py
+index 13e26b857..348827f5e 100644
+--- a/nltk/chat/zen.py
++++ b/nltk/chat/zen.py
+@@ -306,6 +306,15 @@ responses = (
+ )
+ 
+ zen_chatbot = Chat(responses, reflections)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def zen_chat():
+diff --git a/nltk/chunk/regexp.py b/nltk/chunk/regexp.py
+index 69338d7d2..db9d2698b 100644
+--- a/nltk/chunk/regexp.py
++++ b/nltk/chunk/regexp.py
+@@ -894,6 +894,15 @@ class ChunkRuleWithContext(RegexpChunkRule):
+ CHUNK_TAG_PATTERN = re.compile(
+     r"^(({}|<{}>)*)$".format(r"([^\{\}<>]|\{\d+,?\}|\{\d*,\d+\})+", r"[^\{\}<>]+")
+ )
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def tag_pattern2re_pattern(tag_pattern):
+diff --git a/nltk/chunk/util.py b/nltk/chunk/util.py
+index 765961efa..d3d8b4265 100644
+--- a/nltk/chunk/util.py
++++ b/nltk/chunk/util.py
+@@ -12,6 +12,15 @@ from nltk.metrics import accuracy as _accuracy
+ from nltk.tag.mapping import map_tag
+ from nltk.tag.util import str2tuple
+ from nltk.tree import Tree
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ ##//////////////////////////////////////////////////////
+ ## EVALUATION
+diff --git a/nltk/classify/decisiontree.py b/nltk/classify/decisiontree.py
+index abf649c4c..3fae2a75a 100644
+--- a/nltk/classify/decisiontree.py
++++ b/nltk/classify/decisiontree.py
+@@ -324,6 +324,15 @@ class DecisionTreeClassifier(ClassifierI):
+                 )
+             )
+         return best_stump
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/classify/maxent.py b/nltk/classify/maxent.py
+index 5491b23b7..cc658a6b2 100644
+--- a/nltk/classify/maxent.py
++++ b/nltk/classify/maxent.py
+@@ -1018,6 +1018,15 @@ class TypedMaxentFeatureEncoding(MaxentFeatureEncodingI):
+         if labels is None:
+             labels = seen_labels
+         return cls(labels, mapping, **options)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ######################################################################
+diff --git a/nltk/classify/naivebayes.py b/nltk/classify/naivebayes.py
+index f159964db..f1346cbc5 100644
+--- a/nltk/classify/naivebayes.py
++++ b/nltk/classify/naivebayes.py
+@@ -242,6 +242,15 @@ class NaiveBayesClassifier(ClassifierI):
+             feature_probdist[label, fname] = probdist
+ 
+         return cls(label_probdist, feature_probdist)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/classify/textcat.py b/nltk/classify/textcat.py
+index ba150f314..779ba8990 100644
+--- a/nltk/classify/textcat.py
++++ b/nltk/classify/textcat.py
+@@ -138,6 +138,15 @@ class TextCat:
+ 
+         return min(self.last_distances, key=self.last_distances.get)
+         #################################################')
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo():
+diff --git a/nltk/cluster/em.py b/nltk/cluster/em.py
+index 11a908a9e..4596dd9e2 100644
+--- a/nltk/cluster/em.py
++++ b/nltk/cluster/em.py
+@@ -174,6 +174,15 @@ class EMClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<EMClusterer means=%s>" % list(self._means)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo():
+diff --git a/nltk/cluster/gaac.py b/nltk/cluster/gaac.py
+index 0d54728fe..e1a03ba3b 100644
+--- a/nltk/cluster/gaac.py
++++ b/nltk/cluster/gaac.py
+@@ -135,6 +135,15 @@ class GAAClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<GroupAverageAgglomerative Clusterer n=%d>" % self._num_clusters
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo():
+diff --git a/nltk/cluster/kmeans.py b/nltk/cluster/kmeans.py
+index e53aa15c5..ed55d7a92 100644
+--- a/nltk/cluster/kmeans.py
++++ b/nltk/cluster/kmeans.py
+@@ -186,6 +186,15 @@ class KMeansClusterer(VectorSpaceClusterer):
+ 
+     def __repr__(self):
+         return "<KMeansClusterer means=%s repeats=%d>" % (self._means, self._repeats)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ #################################################################################
+diff --git a/nltk/collocations.py b/nltk/collocations.py
+index 89b6eb396..0cc625357 100644
+--- a/nltk/collocations.py
++++ b/nltk/collocations.py
+@@ -349,6 +349,15 @@ class QuadgramCollocationFinder(AbstractCollocationFinder):
+             (n_ixxx, n_xixx, n_xxix, n_xxxi),
+             n_all,
+         )
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo(scorer=None, compare_scorer=None):
+@@ -403,7 +412,7 @@ if __name__ == "__main__":
+     except IndexError:
+         compare_scorer = None
+ 
+-    demo(scorer, compare_scorer)
++    demo(DataParams_demo_1725(scorer, compare_scorer))
+ 
+ __all__ = [
+     "BigramCollocationFinder",
+diff --git a/nltk/corpus/__init__.py b/nltk/corpus/__init__.py
+index d08e5aa0d..b21ae92f9 100644
+--- a/nltk/corpus/__init__.py
++++ b/nltk/corpus/__init__.py
+@@ -487,6 +487,15 @@ perluniprops: UnicharsCorpusReader = LazyCorpusLoader(
+     nltk_data_subdir="misc",
+     encoding="utf8",
+ )
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ # mwa_ppdb = LazyCorpusLoader(
+ #     'mwa_ppdb', MWAPPDBCorpusReader, r'(?!README|\.).*', nltk_data_subdir='misc', encoding='utf8')
+diff --git a/nltk/corpus/reader/chasen.py b/nltk/corpus/reader/chasen.py
+index 8009198a6..482f792d0 100644
+--- a/nltk/corpus/reader/chasen.py
++++ b/nltk/corpus/reader/chasen.py
+@@ -124,6 +124,15 @@ class ChasenCorpusView(StreamBackedCorpusView):
+                 block.extend(para)
+ 
+         return block
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo():
+diff --git a/nltk/corpus/reader/childes.py b/nltk/corpus/reader/childes.py
+index d334a4347..fcda1b8c7 100644
+--- a/nltk/corpus/reader/childes.py
++++ b/nltk/corpus/reader/childes.py
+@@ -561,6 +561,15 @@ class CHILDESCorpusReader(XMLCorpusReader):
+         print("Opening in browser:", url)
+         # Pausing is a good idea, but it's up to the user...
+         # raw_input("Hit Return to continue")
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo(corpus_root=None):
+diff --git a/nltk/corpus/reader/framenet.py b/nltk/corpus/reader/framenet.py
+index 2d871512b..50f9bb2ea 100644
+--- a/nltk/corpus/reader/framenet.py
++++ b/nltk/corpus/reader/framenet.py
+@@ -26,6 +26,15 @@ from nltk.corpus.reader import XMLCorpusReader, XMLCorpusView
+ from nltk.util import LazyConcatenation, LazyIteratorList, LazyMap
+ 
+ __docformat__ = "epytext en"
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def mimic_wrap(lines, wrap_at=65, **kwargs):
+diff --git a/nltk/corpus/reader/knbc.py b/nltk/corpus/reader/knbc.py
+index 01d795042..ad4db8f62 100644
+--- a/nltk/corpus/reader/knbc.py
++++ b/nltk/corpus/reader/knbc.py
+@@ -122,6 +122,15 @@ class KNBCorpusReader(SyntaxCorpusReader):
+                 node["word"] = self.morphs2str(node["word"])
+ 
+         return dg.tree()
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/lin.py b/nltk/corpus/reader/lin.py
+index 88fa47b8f..8d38f8744 100644
+--- a/nltk/corpus/reader/lin.py
++++ b/nltk/corpus/reader/lin.py
+@@ -151,6 +151,15 @@ class LinThesaurusCorpusReader(CorpusReader):
+             self._fileids,
+             False,
+         )
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ######################################################################
+diff --git a/nltk/corpus/reader/toolbox.py b/nltk/corpus/reader/toolbox.py
+index 75b5af9e5..27591d856 100644
+--- a/nltk/corpus/reader/toolbox.py
++++ b/nltk/corpus/reader/toolbox.py
+@@ -66,6 +66,15 @@ class ToolboxCorpusReader(CorpusReader):
+ 
+     def words(self, fileids, key="lx"):
+         return [contents for marker, contents in self.fields(fileids) if marker == key]
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo():
+diff --git a/nltk/draw/cfg.py b/nltk/draw/cfg.py
+index 33d20c8e6..34a77f310 100644
+--- a/nltk/draw/cfg.py
++++ b/nltk/draw/cfg.py
+@@ -725,6 +725,15 @@ class CFGDemo:
+ 
+     def mainloop(self, *args, **kwargs):
+         self._top.mainloop(*args, **kwargs)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo2():
+diff --git a/nltk/draw/table.py b/nltk/draw/table.py
+index e84a1593f..8b99833ca 100644
+--- a/nltk/draw/table.py
++++ b/nltk/draw/table.py
+@@ -1124,6 +1124,15 @@ class Table:
+                 if self._reprfunc is not None:
+                     cell = self._reprfunc(i, j, cell)
+                 assert self._mlb.get(i)[j] == cell
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ######################################################################
+diff --git a/nltk/draw/tree.py b/nltk/draw/tree.py
+index b90fd6507..f8ceef970 100644
+--- a/nltk/draw/tree.py
++++ b/nltk/draw/tree.py
+@@ -417,6 +417,15 @@ class TreeSegmentWidget(CanvasWidget):
+ 
+     def __repr__(self):
+         return f"[TreeSeg {self._label}: {self._subtrees}]"
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def _tree_to_treeseg(
+diff --git a/nltk/draw/util.py b/nltk/draw/util.py
+index 111f5e7e2..5b20eb872 100644
+--- a/nltk/draw/util.py
++++ b/nltk/draw/util.py
+@@ -2512,6 +2512,15 @@ class MutableOptionMenu(Menubutton):
+         """Destroy this widget and the associated menu."""
+         Menubutton.destroy(self)
+         self._menu = None
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/featstruct.py b/nltk/featstruct.py
+index d6c339a98..59a03f2b5 100644
+--- a/nltk/featstruct.py
++++ b/nltk/featstruct.py
+@@ -569,6 +569,15 @@ class FeatStruct(SubstituteBindingsI):
+ # Mutation: disable if frozen.
+ _FROZEN_ERROR = "Frozen FeatStructs may not be modified."
+ _FROZEN_NOTICE = "\n%sIf self is frozen, raise ValueError."
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def _check_frozen(method, indent=""):
+diff --git a/nltk/grammar.py b/nltk/grammar.py
+index 1a0137172..a54564758 100644
+--- a/nltk/grammar.py
++++ b/nltk/grammar.py
+@@ -189,6 +189,15 @@ class Nonterminal:
+         :rtype: Nonterminal
+         """
+         return self.__div__(rhs)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def nonterminals(symbols):
+diff --git a/nltk/inference/discourse.py b/nltk/inference/discourse.py
+index f933ee7bf..07e0af9c7 100644
+--- a/nltk/inference/discourse.py
++++ b/nltk/inference/discourse.py
+@@ -524,6 +524,15 @@ class DiscourseTester:
+                 new.append(r)
+                 result.append(new)
+         return result
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def load_fol(s):
+diff --git a/nltk/inference/mace.py b/nltk/inference/mace.py
+index 370abbd27..0be0ad7d8 100644
+--- a/nltk/inference/mace.py
++++ b/nltk/inference/mace.py
+@@ -267,6 +267,15 @@ class Mace(Prover9Parent, ModelBuilder):
+         updated_input_str += input_str
+ 
+         return self._call(updated_input_str, self._mace4_bin, args, verbose)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def spacer(num=30):
+diff --git a/nltk/inference/nonmonotonic.py b/nltk/inference/nonmonotonic.py
+index cd407fa0f..d82570756 100644
+--- a/nltk/inference/nonmonotonic.py
++++ b/nltk/inference/nonmonotonic.py
+@@ -37,6 +37,15 @@ from nltk.sem.logic import (
+ 
+ class ProverParseError(Exception):
+     pass
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def get_domain(goal, assumptions):
+diff --git a/nltk/inference/prover9.py b/nltk/inference/prover9.py
+index f379325ae..ec6864d55 100644
+--- a/nltk/inference/prover9.py
++++ b/nltk/inference/prover9.py
+@@ -217,6 +217,15 @@ class Prover9Parent:
+                 print("stderr:\n", stderr, "\n")
+ 
+         return (stdout.decode("utf-8"), p.returncode)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def convert_to_prover9(input):
+diff --git a/nltk/inference/resolution.py b/nltk/inference/resolution.py
+index fd7362068..c93defd02 100755
+--- a/nltk/inference/resolution.py
++++ b/nltk/inference/resolution.py
+@@ -335,6 +335,15 @@ class Clause(list):
+ 
+     def __repr__(self):
+         return "%s" % self
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def _iterate_first(first, second, bindings, used, skipped, finalize_method, debug):
+diff --git a/nltk/inference/tableau.py b/nltk/inference/tableau.py
+index 7fb005e9b..80c60b1d6 100644
+--- a/nltk/inference/tableau.py
++++ b/nltk/inference/tableau.py
+@@ -622,6 +622,15 @@ class Categories:
+     EQ = 18
+     EXISTS = 19
+     ALL = 20
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def testTableauProver():
+diff --git a/nltk/metrics/aline.py b/nltk/metrics/aline.py
+index a355891b0..7ce6bccb8 100644
+--- a/nltk/metrics/aline.py
++++ b/nltk/metrics/aline.py
+@@ -1309,6 +1309,15 @@ feature_matrix = {
+         "aspirated": "minus",
+     },
+ }
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ # === Algorithm ===
+ 
+diff --git a/nltk/metrics/confusionmatrix.py b/nltk/metrics/confusionmatrix.py
+index 9b7249bdf..08e91d81e 100644
+--- a/nltk/metrics/confusionmatrix.py
++++ b/nltk/metrics/confusionmatrix.py
+@@ -333,6 +333,15 @@ class ConfusionMatrix:
+             )
+ 
+         return s
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo():
+diff --git a/nltk/metrics/distance.py b/nltk/metrics/distance.py
+index 4c23090db..e4f0f616e 100644
+--- a/nltk/metrics/distance.py
++++ b/nltk/metrics/distance.py
+@@ -21,6 +21,15 @@ As metrics, they must satisfy the following three requirements:
+ 
+ import operator
+ import warnings
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def _edit_dist_init(len1, len2):
+diff --git a/nltk/metrics/paice.py b/nltk/metrics/paice.py
+index 23d2184a4..6c18b5f41 100644
+--- a/nltk/metrics/paice.py
++++ b/nltk/metrics/paice.py
+@@ -21,6 +21,15 @@ In Proceedings of SIGIR, 42--50.
+ """
+ 
+ from math import sqrt
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def get_words_from_dictionary(lemmas):
+diff --git a/nltk/metrics/scores.py b/nltk/metrics/scores.py
+index a5a419bd3..b0eaa0cc5 100644
+--- a/nltk/metrics/scores.py
++++ b/nltk/metrics/scores.py
+@@ -17,6 +17,15 @@ except ImportError:
+     betai = None
+ 
+ from nltk.util import LazyConcatenation, LazyMap
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def accuracy(reference, test):
+diff --git a/nltk/misc/sort.py b/nltk/misc/sort.py
+index c1b3c0754..5bc0eb1bd 100644
+--- a/nltk/misc/sort.py
++++ b/nltk/misc/sort.py
+@@ -10,6 +10,15 @@ This module provides a variety of list sorting algorithms, to
+ illustrate the many different algorithms (recipes) for solving a
+ problem, and how to analyze algorithms experimentally.
+ """
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ # These algorithms are taken from:
+ # Levitin (2004) The Design and Analysis of Algorithms
+ 
+diff --git a/nltk/parse/chart.py b/nltk/parse/chart.py
+index 0e0ce174a..061106118 100644
+--- a/nltk/parse/chart.py
++++ b/nltk/parse/chart.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Natural Language Toolkit: A Chart Parser
+ #
+ # Copyright (C) 2001-2025 NLTK Project
+@@ -1295,6 +1296,15 @@ class FilteredBottomUpPredictCombineRule(BottomUpPredictCombineRule):
+                 new_edge = TreeEdge(edge.span(), prod.lhs(), prod.rhs(), 1)
+                 if chart.insert(new_edge, (edge,)):
+                     yield new_edge
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def _bottomup_filter(grammar, nexttoken, rhs, dot=0):
+@@ -1720,15 +1730,9 @@ Prep -> "under"
+     )
+ 
+ 
++@track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R0913_c8457a5b', output_file='/root/ecooptimizer_benchmark/emissions/nltk/too-many-arguments/c8457a5b_refactored.csv')
+ def demo(
+-    choice=None,
+-    print_times=True,
+-    print_grammar=False,
+-    print_trees=True,
+-    trace=2,
+-    sent="I saw John with a dog with my cookie",
+-    numparses=5,
+-):
++    data_params):
+     """
+     A demonstration of the chart parsers.
+     """
+@@ -1739,20 +1743,20 @@ def demo(
+ 
+     # The grammar for ChartParser and SteppingChartParser:
+     grammar = demo_grammar()
+-    if print_grammar:
++    if data_params.print_grammar:
+         print("* Grammar")
+         print(grammar)
+ 
+     # Tokenize the sample sentence.
+     print("* Sentence:")
+-    print(sent)
+-    tokens = sent.split()
++    print(data_params.sent)
++    tokens = data_params.sent.split()
+     print(tokens)
+     print()
+ 
+     # Ask the user which parser to test,
+     # if the parser wasn't provided as an argument
+-    if choice is None:
++    if data_params.choice is None:
+         print("  1: Top-down chart parser")
+         print("  2: Bottom-up chart parser")
+         print("  3: Bottom-up left-corner chart parser")
+@@ -1760,11 +1764,11 @@ def demo(
+         print("  5: Stepping chart parser (alternating top-down & bottom-up)")
+         print("  6: All parsers")
+         print("\nWhich parser (1-6)? ", end=" ")
+-        choice = sys.stdin.readline().strip()
++        data_params.choice = sys.stdin.readline().strip()
+         print()
+ 
+-    choice = str(choice)
+-    if choice not in "123456":
++    data_params.choice = str(data_params.choice)
++    if data_params.choice not in "123456":
+         print("Bad parser number")
+         return
+ 
+@@ -1778,25 +1782,25 @@ def demo(
+         "4": ("Filtered left-corner", LC_STRATEGY),
+     }
+     choices = []
+-    if choice in strategies:
+-        choices = [choice]
+-    if choice == "6":
++    if data_params.choice in strategies:
++        choices = [data_params.choice]
++    if data_params.choice == "6":
+         choices = "1234"
+ 
+     # Run the requested chart parser(s), except the stepping parser.
+     for strategy in choices:
+         print("* Strategy: " + strategies[strategy][0])
+         print()
+-        cp = ChartParser(grammar, strategies[strategy][1], trace=trace)
++        cp = ChartParser(grammar, strategies[strategy][1], data_params.trace=data_params.trace)
+         t = time.time()
+         chart = cp.chart_parse(tokens)
+         parses = list(chart.parses(grammar.start()))
+ 
+         times[strategies[strategy][0]] = time.time() - t
+         print("Nr edges in chart:", len(chart.edges()))
+-        if numparses:
+-            assert len(parses) == numparses, "Not all parses found"
+-        if print_trees:
++        if data_params.numparses:
++            assert len(parses) == data_params.numparses, "Not all parses found"
++        if data_params.print_trees:
+             for tree in parses:
+                 print(tree)
+         else:
+@@ -1804,11 +1808,11 @@ def demo(
+         print()
+ 
+     # Run the stepping parser, if requested.
+-    if choice in "56":
++    if data_params.choice in "56":
+         print("* Strategy: Stepping (top-down vs bottom-up)")
+         print()
+         t = time.time()
+-        cp = SteppingChartParser(grammar, trace=trace)
++        cp = SteppingChartParser(grammar, data_params.trace=data_params.trace)
+         cp.initialize(tokens)
+         for i in range(5):
+             print("*** SWITCH TO TOP DOWN")
+@@ -1823,9 +1827,9 @@ def demo(
+                     break
+         times["Stepping"] = time.time() - t
+         print("Nr edges in chart:", len(cp.chart().edges()))
+-        if numparses:
+-            assert len(list(cp.parses())) == numparses, "Not all parses found"
+-        if print_trees:
++        if data_params.numparses:
++            assert len(list(cp.parses())) == data_params.numparses, "Not all parses found"
++        if data_params.print_trees:
+             for tree in cp.parses():
+                 print(tree)
+         else:
+@@ -1833,7 +1837,7 @@ def demo(
+         print()
+ 
+     # Print the times of all parsers:
+-    if not (print_times and times):
++    if not (data_params.print_times and times):
+         return
+     print("* Parsing times")
+     print()
+diff --git a/nltk/parse/dependencygraph.py b/nltk/parse/dependencygraph.py
+index c532a645f..2a4271b86 100755
+--- a/nltk/parse/dependencygraph.py
++++ b/nltk/parse/dependencygraph.py
+@@ -545,6 +545,15 @@ class DependencyGraph:
+         g.add_edges_from(nx_edgelist)
+ 
+         return g
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def dot2img(dot_string, t="svg"):
+diff --git a/nltk/parse/earleychart.py b/nltk/parse/earleychart.py
+index 226c3ebb0..0d456df73 100644
+--- a/nltk/parse/earleychart.py
++++ b/nltk/parse/earleychart.py
+@@ -493,6 +493,15 @@ class FeatureIncrementalBottomUpLeftCornerChartParser(FeatureIncrementalChartPar
+         FeatureIncrementalChartParser.__init__(
+             self, grammar, BU_LC_INCREMENTAL_FEATURE_STRATEGY, **parser_args
+         )
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ # ////////////////////////////////////////////////////////////
+diff --git a/nltk/parse/featurechart.py b/nltk/parse/featurechart.py
+index c9e0f7ed5..efdca1321 100644
+--- a/nltk/parse/featurechart.py
++++ b/nltk/parse/featurechart.py
+@@ -581,6 +581,15 @@ class InstantiateVarsChart(FeatureChart):
+             for var in edge.lhs().variables()
+             if var.name.startswith("@")
+         }
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ # ////////////////////////////////////////////////////////////
+diff --git a/nltk/parse/generate.py b/nltk/parse/generate.py
+index 249c6a981..a44b757b6 100644
+--- a/nltk/parse/generate.py
++++ b/nltk/parse/generate.py
+@@ -12,6 +12,15 @@ import itertools
+ import sys
+ 
+ from nltk.grammar import Nonterminal
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def generate(grammar, start=None, depth=None, n=None):
+diff --git a/nltk/parse/nonprojectivedependencyparser.py b/nltk/parse/nonprojectivedependencyparser.py
+index 62441ce1e..6320ba023 100644
+--- a/nltk/parse/nonprojectivedependencyparser.py
++++ b/nltk/parse/nonprojectivedependencyparser.py
+@@ -701,6 +701,15 @@ class NonprojectiveDependencyParser:
+ 
+             # TODO: check for cycles
+             yield graph
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ #################################################################
+diff --git a/nltk/parse/pchart.py b/nltk/parse/pchart.py
+index ec0e350b3..c7e9906ed 100644
+--- a/nltk/parse/pchart.py
++++ b/nltk/parse/pchart.py
+@@ -420,6 +420,15 @@ class LongestChartParser(BottomUpProbabilisticChartParser):
+     # Inherit constructor
+     def sort_queue(self, queue, chart):
+         queue.sort(key=lambda edge: edge.length())
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/projectivedependencyparser.py b/nltk/parse/projectivedependencyparser.py
+index d09288c85..1a4a81224 100644
+--- a/nltk/parse/projectivedependencyparser.py
++++ b/nltk/parse/projectivedependencyparser.py
+@@ -606,6 +606,15 @@ class ProbabilisticProjectiveDependencyParser:
+                         prob = 0.00000001  # Very small number
+ 
+         return prob
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ #################################################################
+diff --git a/nltk/parse/recursivedescent.py b/nltk/parse/recursivedescent.py
+index d0452ca43..3a0ad0cc8 100644
+--- a/nltk/parse/recursivedescent.py
++++ b/nltk/parse/recursivedescent.py
+@@ -643,6 +643,15 @@ class SteppingRecursiveDescentParser(RecursiveDescentParser):
+         :type grammar: CFG
+         """
+         self._grammar = grammar
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/shiftreduce.py b/nltk/parse/shiftreduce.py
+index 34e8628d9..739721875 100644
+--- a/nltk/parse/shiftreduce.py
++++ b/nltk/parse/shiftreduce.py
+@@ -439,6 +439,15 @@ class SteppingShiftReduceParser(ShiftReduceParser):
+         :type grammar: CFG
+         """
+         self._grammar = grammar
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/parse/viterbi.py b/nltk/parse/viterbi.py
+index dfd1775e1..0977b7367 100644
+--- a/nltk/parse/viterbi.py
++++ b/nltk/parse/viterbi.py
+@@ -319,6 +319,15 @@ class ViterbiParser(ParserI):
+ 
+     def __repr__(self):
+         return "<ViterbiParser for %r>" % self._grammar
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ##//////////////////////////////////////////////////////
+diff --git a/nltk/probability.py b/nltk/probability.py
+index fffe1478f..b1886df1c 100755
+--- a/nltk/probability.py
++++ b/nltk/probability.py
+@@ -1804,6 +1804,15 @@ class KneserNeyProbDist(ProbDistI):
+         :rtype: str
+         """
+         return f"<KneserNeyProbDist based on {self._trigrams.N()} trigrams"
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ ##//////////////////////////////////////////////////////
+@@ -2546,8 +2555,8 @@ def gt_demo():
+ 
+ 
+ if __name__ == "__main__":
+-    demo(6, 10)
+-    demo(5, 5000)
++    demo(DataParams_demo_1725(6, 10))
++    demo(DataParams_demo_1725(5, 5000))
+     gt_demo()
+ 
+ __all__ = [
+diff --git a/nltk/sem/cooper_storage.py b/nltk/sem/cooper_storage.py
+index 257971bd4..b746a610a 100644
+--- a/nltk/sem/cooper_storage.py
++++ b/nltk/sem/cooper_storage.py
+@@ -75,6 +75,15 @@ class CooperStore:
+                     print("  ", term)
+                 term = term.simplify()
+             self.readings.append(term)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def parse_with_bindops(sentence, grammar=None, trace=0):
+diff --git a/nltk/sem/drt.py b/nltk/sem/drt.py
+index ea69c5c6e..2ca400a37 100644
+--- a/nltk/sem/drt.py
++++ b/nltk/sem/drt.py
+@@ -541,6 +541,15 @@ class DRS(DrtExpression, Expression):
+                 + DrtTokens.CLOSE
+             )
+         return drs
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def DrtVariableExpression(variable):
+diff --git a/nltk/sem/drt_glue_demo.py b/nltk/sem/drt_glue_demo.py
+index e80e5b07b..b2383a7fd 100644
+--- a/nltk/sem/drt_glue_demo.py
++++ b/nltk/sem/drt_glue_demo.py
+@@ -521,6 +521,15 @@ class DrsWidget:
+ 
+     def clear(self):
+         self._canvas.create_rectangle(self.bbox, fill="white", width="0")
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo():
+diff --git a/nltk/sem/evaluate.py b/nltk/sem/evaluate.py
+index 304ae2c3f..d9b94ca34 100644
+--- a/nltk/sem/evaluate.py
++++ b/nltk/sem/evaluate.py
+@@ -47,6 +47,15 @@ class Error(Exception):
+ 
+ class Undefined(Error):
+     pass
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def trace(f, *args, **kw):
+@@ -827,4 +836,4 @@ def demo(num=0, trace=None):
+ 
+ 
+ if __name__ == "__main__":
+-    demo(2, trace=0)
++    demo(DataParams_demo_1725(2, trace = 0))
+diff --git a/nltk/sem/glue.py b/nltk/sem/glue.py
+index 9db2034aa..3abc27aa1 100644
+--- a/nltk/sem/glue.py
++++ b/nltk/sem/glue.py
+@@ -779,6 +779,15 @@ class DrtGlue(Glue):
+ 
+     def get_glue_dict(self):
+         return DrtGlueDict(self.semtype_file)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo(show_example=-1):
+diff --git a/nltk/sem/linearlogic.py b/nltk/sem/linearlogic.py
+index 8ca29aa1f..ed9be3633 100644
+--- a/nltk/sem/linearlogic.py
++++ b/nltk/sem/linearlogic.py
+@@ -462,6 +462,15 @@ class UnificationException(Exception):
+ 
+ class LinearLogicApplicationException(Exception):
+     pass
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo():
+diff --git a/nltk/sem/logic.py b/nltk/sem/logic.py
+index 816a04585..1dd8d6470 100644
+--- a/nltk/sem/logic.py
++++ b/nltk/sem/logic.py
+@@ -67,6 +67,15 @@ class Tokens:
+ 
+     # Special
+     SYMBOLS = [x for x in TOKENS if re.match(r"^[-\\.(),!&^|>=<]*$", x)]
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def boolean_ops():
+diff --git a/nltk/sem/util.py b/nltk/sem/util.py
+index 61deb26a9..07a418a27 100644
+--- a/nltk/sem/util.py
++++ b/nltk/sem/util.py
+@@ -16,6 +16,15 @@ a first-order model.
+ import codecs
+ 
+ from nltk.sem import evaluate
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ ##############################################################
+ ## Utility functions for connecting parse output to semantics
+diff --git a/nltk/test/unit/test_brill.py b/nltk/test/unit/test_brill.py
+index 017a393dc..bc313f25c 100644
+--- a/nltk/test/unit/test_brill.py
++++ b/nltk/test/unit/test_brill.py
+@@ -1,3 +1,12 @@
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ """
+ Tests for Brill tagger.
+ """
+diff --git a/nltk/text.py b/nltk/text.py
+index fae2ffa9a..7b93d9e5a 100644
+--- a/nltk/text.py
++++ b/nltk/text.py
+@@ -740,6 +740,15 @@ class TextCollection(Text):
+ 
+     def tf_idf(self, term, text):
+         return self.tf(term, text) * self.idf(term)
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def demo():
+diff --git a/nltk/toolbox.py b/nltk/toolbox.py
+index a1d01c253..f6d04add8 100644
+--- a/nltk/toolbox.py
++++ b/nltk/toolbox.py
+@@ -269,6 +269,15 @@ class ToolboxData(StandardFormat):
+ 
+ 
+ _is_value = re.compile(r"\S")
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def to_sfm_string(tree, encoding=None, errors="strict", unicode_fields=None):
+diff --git a/nltk/tree/transforms.py b/nltk/tree/transforms.py
+index ad93f18d7..550cd234b 100644
+--- a/nltk/tree/transforms.py
++++ b/nltk/tree/transforms.py
+@@ -108,6 +108,15 @@ The following is a short tutorial on the available transformations.
+ """
+ 
+ from nltk.tree.tree import Tree
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def chomsky_normal_form(
+diff --git a/nltk/twitter/twitter_demo.py b/nltk/twitter/twitter_demo.py
+index b719d8175..da71c1520 100644
+--- a/nltk/twitter/twitter_demo.py
++++ b/nltk/twitter/twitter_demo.py
+@@ -45,6 +45,15 @@ from nltk.twitter import (
+ )
+ 
+ SPACER = "###################################"
++class DataParams_demo_1725:
++    def __init__(self, choice = None, print_times = True, print_grammar = False, print_trees = True, trace = 2, sent = "I saw John with a dog with my cookie", numparses = 5):
++        self.choice = choice
++        self.print_times = print_times
++        self.print_grammar = print_grammar
++        self.print_trees = print_trees
++        self.trace = trace
++        self.sent = sent
++        self.numparses = numparses
+ 
+ 
+ def verbose(func):

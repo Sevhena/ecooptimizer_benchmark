@@ -1,0 +1,25 @@
+diff --git a/numpy/distutils/fcompiler/sun.py b/numpy/distutils/fcompiler/sun.py
+index d039f0b257..3a9b4b48ff 100644
+--- a/numpy/distutils/fcompiler/sun.py
++++ b/numpy/distutils/fcompiler/sun.py
+@@ -1,5 +1,6 @@
+ from numpy.distutils.ccompiler import simple_version_match
+ from numpy.distutils.fcompiler import FCompiler
++from codecarbon import track_emissions
+ 
+ compilers = ['SunFCompiler']
+ 
+@@ -32,6 +33,7 @@ def get_flags_f77(self):
+         else:
+             ret.append("-fixed")
+         return ret
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_662a8d34', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/662a8d34.csv')
+     def get_opt(self):
+         return ['-fast', '-dalign']
+     def get_arch(self):
+diff --git a/vendored-meson/meson b/vendored-meson/meson
+--- a/vendored-meson/meson
++++ b/vendored-meson/meson
+@@ -1 +1 @@
+-Subproject commit f754c4258805056ed7be09830d96af45215d341b
++Subproject commit f754c4258805056ed7be09830d96af45215d341b-dirty

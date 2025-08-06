@@ -1,0 +1,20 @@
+diff --git a/scipy/stats/_distribution_infrastructure.py b/scipy/stats/_distribution_infrastructure.py
+index fca270f8f..e98b5ea89 100644
+--- a/scipy/stats/_distribution_infrastructure.py
++++ b/scipy/stats/_distribution_infrastructure.py
+@@ -17,6 +17,7 @@ from scipy.optimize._bracket import _bracket_root, _bracket_minimum
+ from scipy.optimize._chandrupatla import _chandrupatla, _chandrupatla_minimize
+ from scipy.stats._probability_distribution import _ProbabilityDistribution
+ from scipy.stats import qmc
++from codecarbon import track_emissions
+ 
+ # in case we need to distinguish between None and not specified
+ # Typically this is used to determine whether the tolerance has been set by the
+@@ -5207,6 +5208,7 @@ class Mixture(_ProbabilityDistribution):
+ 
+     def _raise_if_method(self, method):
+         if method is not None:
++    @track_emissions(project_name='scipy-benchmark', experiment_id='scipy_R6301_df06b2c4', output_file='/root/ecooptimizer_benchmark/emissions/scipy/no-self-use/df06b2c4.csv')
+             raise NotImplementedError("`method` not implemented for this distribution.")
+ 
+     def logentropy(self, *, method=None):

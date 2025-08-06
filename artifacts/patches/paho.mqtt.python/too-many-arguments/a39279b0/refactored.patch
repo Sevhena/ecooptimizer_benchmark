@@ -1,0 +1,1898 @@
+diff --git a/examples/client_logger.py b/examples/client_logger.py
+index 6b984a7..3766be4 100755
+--- a/examples/client_logger.py
++++ b/examples/client_logger.py
+@@ -15,6 +15,15 @@
+ 
+ # This shows a simple example of standard logging with an MQTT subscriber client.
+ 
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import logging
+ 
+ import context  # Ensures paho is in PYTHONPATH
+@@ -32,7 +41,7 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+ logger = logging.getLogger(__name__)
+ mqttc.enable_logger(logger)
+ 
+-mqttc.connect("mqtt.eclipseprojects.io", 1883, 60)
++mqttc.connect(DataParams_connect_1395("mqtt.eclipseprojects.io", 1883, 60))
+ mqttc.subscribe("$SYS/#", 0)
+ 
+ mqttc.loop_forever()
+diff --git a/examples/client_mqtt_clear_retain.py b/examples/client_mqtt_clear_retain.py
+index 996c7d6..cd5ae1d 100755
+--- a/examples/client_mqtt_clear_retain.py
++++ b/examples/client_mqtt_clear_retain.py
+@@ -25,6 +25,15 @@ import context  # Ensures paho is in PYTHONPATH
+ import paho.mqtt.client as mqtt
+ 
+ final_mid = 0
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, userdata, flags, reason_code, properties):
+@@ -111,7 +120,7 @@ def main(argv):
+ 
+     if username:
+         mqttc.username_pw_set(username, password)
+-    mqttc.connect(host, port, keepalive)
++    mqttc.connect(DataParams_connect_1395(host, port, keepalive))
+     mqttc.subscribe(topic)
+     mqttc.loop_forever()
+ 
+diff --git a/examples/client_pub-wait.py b/examples/client_pub-wait.py
+index 729119d..c9629a1 100755
+--- a/examples/client_pub-wait.py
++++ b/examples/client_pub-wait.py
+@@ -20,6 +20,15 @@
+ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.client as mqtt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, reason_code, properties):
+@@ -48,7 +57,7 @@ mqttc.on_connect = on_connect
+ mqttc.on_publish = on_publish
+ # Uncomment to enable debug messages
+ # mqttc.on_log = on_log
+-mqttc.connect("mqtt.eclipseprojects.io", 1883, 60)
++mqttc.connect(DataParams_connect_1395("mqtt.eclipseprojects.io", 1883, 60))
+ 
+ mqttc.loop_start()
+ 
+diff --git a/examples/client_pub_opts.py b/examples/client_pub_opts.py
+index 40e49cd..45ded45 100755
+--- a/examples/client_pub_opts.py
++++ b/examples/client_pub_opts.py
+@@ -42,6 +42,15 @@ parser.add_argument('--tls-version', required=False, default=None, help='TLS pro
+ parser.add_argument('-D', '--debug', action='store_true')
+ 
+ args, unknown = parser.parse_known_args()
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, reason_code, properties):
+@@ -107,7 +116,7 @@ if args.debug:
+     mqttc.on_log = on_log
+ 
+ print("Connecting to "+args.host+" port: "+str(port))
+-mqttc.connect(args.host, port, args.keepalive)
++mqttc.connect(DataParams_connect_1395(args.host, port, args.keepalive))
+ 
+ mqttc.loop_start()
+ 
+diff --git a/examples/client_rpc_math.py b/examples/client_rpc_math.py
+index 74a47d9..d793ee2 100755
+--- a/examples/client_rpc_math.py
++++ b/examples/client_rpc_math.py
+@@ -37,6 +37,15 @@ corr_id = b"1"
+ 
+ # This is sent in the message callback when we get the response
+ reply = None
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ # The MQTTv5 callback takes the additional 'props' parameter.
+ def on_connect(mqttc, userdata, flags, reason_code, props):
+@@ -71,7 +80,7 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id="", protocol=mqt
+ mqttc.on_message = on_message
+ mqttc.on_connect = on_connect
+ 
+-mqttc.connect(host="mqtt.eclipseprojects.io", clean_start=True)
++mqttc.connect(DataParams_connect_1395(host = "mqtt.eclipseprojects.io", clean_start = True))
+ mqttc.loop_start()
+ 
+ # Wait for connection to set `client_id`, etc.
+diff --git a/examples/client_session_present.py b/examples/client_session_present.py
+index b4552cc..1a0c11e 100755
+--- a/examples/client_session_present.py
++++ b/examples/client_session_present.py
+@@ -20,6 +20,15 @@
+ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.client as mqtt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, reason_code, properties):
+@@ -50,7 +59,7 @@ mqttc.on_disconnect = on_disconnect
+ # Uncomment to enable debug messages
+ # mqttc.on_log = on_log
+ mqttc.user_data_set(0)
+-mqttc.connect("mqtt.eclipseprojects.io", 1883, 60)
++mqttc.connect(DataParams_connect_1395("mqtt.eclipseprojects.io", 1883, 60))
+ 
+ mqttc.loop_forever()
+ 
+@@ -58,5 +67,5 @@ mqttc.loop_forever()
+ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id="asdfj", clean_session=True)
+ mqttc.on_connect = on_connect
+ mqttc.user_data_set(2)
+-mqttc.connect("mqtt.eclipseprojects.io", 1883, 60)
++mqttc.connect(DataParams_connect_1395("mqtt.eclipseprojects.io", 1883, 60))
+ mqttc.loop_forever()
+diff --git a/examples/client_sub-class.py b/examples/client_sub-class.py
+index 9374006..710a050 100755
+--- a/examples/client_sub-class.py
++++ b/examples/client_sub-class.py
+@@ -15,6 +15,15 @@
+ 
+ # This example shows how you can use the MQTT client in a class.
+ 
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.client as mqtt
+@@ -41,7 +50,7 @@ class MyMQTTClass(mqtt.Client):
+         print(string)
+ 
+     def run(self):
+-        self.connect("mqtt.eclipseprojects.io", 1883, 60)
++        self.connect(DataParams_connect_1395("mqtt.eclipseprojects.io", 1883, 60))
+         self.subscribe("$SYS/#", 0)
+ 
+         rc = 0
+diff --git a/examples/client_sub-multiple-callback.py b/examples/client_sub-multiple-callback.py
+index 26a911e..166b536 100755
+--- a/examples/client_sub-multiple-callback.py
++++ b/examples/client_sub-multiple-callback.py
+@@ -19,6 +19,15 @@
+ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.client as mqtt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_message_msgs(mosq, obj, msg):
+@@ -47,7 +56,7 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+ mqttc.message_callback_add("$SYS/broker/messages/#", on_message_msgs)
+ mqttc.message_callback_add("$SYS/broker/bytes/#", on_message_bytes)
+ mqttc.on_message = on_message
+-mqttc.connect("mqtt.eclipseprojects.io", 1883, 60)
++mqttc.connect(DataParams_connect_1395("mqtt.eclipseprojects.io", 1883, 60))
+ mqttc.subscribe("$SYS/#", 0)
+ 
+ mqttc.loop_forever()
+diff --git a/examples/client_sub-ws.py b/examples/client_sub-ws.py
+index e295085..d645c7a 100755
+--- a/examples/client_sub-ws.py
++++ b/examples/client_sub-ws.py
+@@ -20,6 +20,15 @@
+ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.client as mqtt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, reason_code, properties):
+@@ -44,7 +53,7 @@ mqttc.on_connect = on_connect
+ mqttc.on_subscribe = on_subscribe
+ # Uncomment to enable debug messages
+ mqttc.on_log = on_log
+-mqttc.connect("mqtt.eclipseprojects.io", 80, 60)
++mqttc.connect(DataParams_connect_1395("mqtt.eclipseprojects.io", 80, 60))
+ mqttc.subscribe("$SYS/broker/version", 0)
+ 
+ mqttc.loop_forever()
+diff --git a/examples/client_sub.py b/examples/client_sub.py
+index 739fa02..05d95b8 100755
+--- a/examples/client_sub.py
++++ b/examples/client_sub.py
+@@ -20,6 +20,15 @@
+ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.client as mqtt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, reason_code, properties):
+@@ -48,7 +57,7 @@ mqttc.on_connect = on_connect
+ mqttc.on_subscribe = on_subscribe
+ # Uncomment to enable debug messages
+ # mqttc.on_log = on_log
+-mqttc.connect("mqtt.eclipseprojects.io", 1883, 60)
++mqttc.connect(DataParams_connect_1395("mqtt.eclipseprojects.io", 1883, 60))
+ mqttc.subscribe("$SYS/#")
+ 
+ mqttc.loop_forever()
+diff --git a/examples/client_sub_opts.py b/examples/client_sub_opts.py
+index 2968ab5..8c10607 100755
+--- a/examples/client_sub_opts.py
++++ b/examples/client_sub_opts.py
+@@ -39,6 +39,15 @@ parser.add_argument('--tls-version', required=False, default=None, help='TLS pro
+ parser.add_argument('-D', '--debug', action='store_true')
+ 
+ args, unknown = parser.parse_known_args()
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, reason_code, properties):
+@@ -109,7 +118,7 @@ if args.debug:
+     mqttc.on_log = on_log
+ 
+ print("Connecting to "+args.host+" port: "+str(port))
+-mqttc.connect(args.host, port, args.keepalive)
++mqttc.connect(DataParams_connect_1395(args.host, port, args.keepalive))
+ mqttc.subscribe(args.topic, args.qos)
+ 
+ mqttc.loop_forever()
+diff --git a/examples/loop_asyncio.py b/examples/loop_asyncio.py
+index 42ab04a..f27b360 100755
+--- a/examples/loop_asyncio.py
++++ b/examples/loop_asyncio.py
+@@ -1,5 +1,14 @@
+ #!/usr/bin/env python3
+ 
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import asyncio
+ import socket
+ import uuid
+@@ -88,7 +97,7 @@ class AsyncMqttExample:
+ 
+         aioh = AsyncioHelper(self.loop, self.client)
+ 
+-        self.client.connect('mqtt.eclipseprojects.io', 1883, 60)
++        self.client.connect(DataParams_connect_1395('mqtt.eclipseprojects.io', 1883, 60))
+         self.client.socket().setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 2048)
+ 
+         for c in range(3):
+diff --git a/examples/loop_select.py b/examples/loop_select.py
+index 255c902..323f2c6 100755
+--- a/examples/loop_select.py
++++ b/examples/loop_select.py
+@@ -1,5 +1,14 @@
+ #!/usr/bin/env python3
+ 
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import socket
+ import uuid
+ from select import select
+@@ -65,7 +74,7 @@ class SelectMqttExample:
+         self.client.on_message = self.on_message
+         self.client.on_disconnect = self.on_disconnect
+ 
+-        self.client.connect('mqtt.eclipseprojects.io', 1883, 60)
++        self.client.connect(DataParams_connect_1395('mqtt.eclipseprojects.io', 1883, 60))
+         print("Socket opened")
+         self.client.socket().setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 2048)
+ 
+diff --git a/examples/loop_trio.py b/examples/loop_trio.py
+index aa71c3f..eeae877 100755
+--- a/examples/loop_trio.py
++++ b/examples/loop_trio.py
+@@ -1,5 +1,14 @@
+ #!/usr/bin/env python3
+ 
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import socket
+ import uuid
+ 
+@@ -79,7 +88,7 @@ class TrioAsyncMqttExample:
+ 
+         trio_helper = TrioAsyncHelper(self.client)
+ 
+-        self.client.connect('mqtt.eclipseprojects.io', 1883, 60)
++        self.client.connect(DataParams_connect_1395('mqtt.eclipseprojects.io', 1883, 60))
+ 
+         async with trio.open_nursery() as nursery:
+             nursery.start_soon(trio_helper.read_loop)
+diff --git a/examples/server_rpc_math.py b/examples/server_rpc_math.py
+index 2fba6d9..b1550ac 100755
+--- a/examples/server_rpc_math.py
++++ b/examples/server_rpc_math.py
+@@ -23,6 +23,15 @@ import context  # Ensures paho is in PYTHONPATH
+ 
+ import paho.mqtt.client as mqtt
+ from paho.mqtt.packettypes import PacketTypes
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ # The math functions exported
+ 
+@@ -92,5 +101,5 @@ mqttc.on_connect = on_connect
+ # Uncomment to enable debug messages
+ #mqttc.on_log = on_log
+ 
+-mqttc.connect(host="mqtt.eclipseprojects.io", clean_start=False)
++mqttc.connect(DataParams_connect_1395(host = "mqtt.eclipseprojects.io", clean_start = False))
+ mqttc.loop_forever()
+diff --git a/src/paho/mqtt/client.py b/src/paho/mqtt/client.py
+index 4ccc869..b8d1db0 100644
+--- a/src/paho/mqtt/client.py
++++ b/src/paho/mqtt/client.py
+@@ -1,3 +1,4 @@
++from codecarbon import track_emissions
+ # Copyright (c) 2012-2019 Roger Light and others
+ #
+ # All rights reserved. This program and the accompanying materials
+@@ -286,6 +287,15 @@ class WebsocketConnectionError(ConnectionError):
+         It's raised when unable to perform the Websocket handshake.
+     """
+     pass
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def error_string(mqtt_errno: MQTTErrorCode | int) -> str:
+@@ -450,7 +460,7 @@ def _socketpair_compat() -> tuple[socket.socket, socket.socket]:
+         socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
+     sock1.setblocking(False)
+     try:
+-        sock1.connect(("127.0.0.1", port))
++        sock1.connect(DataParams_connect_1395(("127.0.0.1", port)))
+     except BlockingIOError:
+         pass
+     sock2, address = listensock.accept()
+@@ -1390,16 +1400,10 @@ class Client:
+         """
+         self._logger = None
+ 
++    @track_emissions(project_name='paho.mqtt.python-benchmark', experiment_id='paho.mqtt.python_R0913_a39279b0', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/too-many-arguments/a39279b0_refactored.csv')
+     def connect(
+         self,
+-        host: str,
+-        port: int = 1883,
+-        keepalive: int = 60,
+-        bind_address: str = "",
+-        bind_port: int = 0,
+-        clean_start: CleanStartOption = MQTT_CLEAN_START_FIRST_ONLY,
+-        properties: Properties | None = None,
+-    ) -> MQTTErrorCode:
++        data_params) -> MQTTErrorCode:
+         """Connect to a remote broker. This is a blocking call that establishes
+         the underlying connection and transmits a CONNECT packet.
+         Note that the connection status will not be updated until a CONNACK is received and
+@@ -1425,13 +1429,13 @@ class Client:
+         if self._protocol == MQTTv5:
+             self._mqttv5_first_connect = True
+         else:
+-            if clean_start != MQTT_CLEAN_START_FIRST_ONLY:
++            if data_params.clean_start != MQTT_CLEAN_START_FIRST_ONLY:
+                 raise ValueError("Clean start only applies to MQTT V5")
+-            if properties:
++            if data_params.properties:
+                 raise ValueError("Properties only apply to MQTT V5")
+ 
+-        self.connect_async(host, port, keepalive,
+-                           bind_address, bind_port, clean_start, properties)
++        self.connect_async(data_params.host, data_params.port, data_params.keepalive,
++                           data_params.bind_address, data_params.bind_port, data_params.clean_start, data_params.properties)
+         return self.reconnect()
+ 
+     def connect_srv(
+@@ -1476,7 +1480,7 @@ class Client:
+             host, port, prio, weight = answer
+ 
+             try:
+-                return self.connect(host, port, keepalive, bind_address, bind_port, clean_start, properties)
++                return self.connect(DataParams_connect_1395(host, port, keepalive, bind_address, bind_port, clean_start, properties))
+             except Exception:  # noqa: S110
+                 pass
+ 
+@@ -4626,7 +4630,7 @@ class Client:
+ 
+     def _create_unix_socket_connection(self) -> _socket.socket:
+         unix_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+-        unix_socket.connect(self._host)
++        unix_socket.connect(DataParams_connect_1395(self._host))
+         return unix_socket
+ 
+     def _create_socket_connection(self) -> _socket.socket:
+diff --git a/src/paho/mqtt/publish.py b/src/paho/mqtt/publish.py
+index 333c190..eb44161 100644
+--- a/src/paho/mqtt/publish.py
++++ b/src/paho/mqtt/publish.py
+@@ -67,6 +67,15 @@ if TYPE_CHECKING:
+     MessageTuple = Tuple[str, paho.PayloadType, int, bool]
+ 
+     MessagesList = List[Union[MessageDict, MessageTuple]]
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def _do_publish(client: paho.Client):
+@@ -224,7 +233,7 @@ def multiple(
+             # Assume input is SSLContext object
+             client.tls_set_context(tls)
+ 
+-    client.connect(hostname, port, keepalive)
++    client.connect(DataParams_connect_1395(hostname, port, keepalive))
+     client.loop_forever()
+ 
+ 
+diff --git a/src/paho/mqtt/subscribe.py b/src/paho/mqtt/subscribe.py
+index b6c80f4..5a4c241 100644
+--- a/src/paho/mqtt/subscribe.py
++++ b/src/paho/mqtt/subscribe.py
+@@ -21,6 +21,15 @@ you to pass a callback for processing of messages.
+ 
+ from .. import mqtt
+ from . import client as paho
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def _on_connect(client, userdata, flags, reason_code, properties):
+@@ -179,7 +188,7 @@ def callback(callback, topics, qos=0, userdata=None, hostname="localhost",
+             # Assume input is SSLContext object
+             client.tls_set_context(tls)
+ 
+-    client.connect(hostname, port, keepalive)
++    client.connect(DataParams_connect_1395(hostname, port, keepalive))
+     client.loop_forever()
+ 
+ 
+diff --git a/tests/lib/clients/01-asyncio.py b/tests/lib/clients/01-asyncio.py
+index a8ba928..cce7a61 100644
+--- a/tests/lib/clients/01-asyncio.py
++++ b/tests/lib/clients/01-asyncio.py
+@@ -43,6 +43,15 @@ class AsyncioHelper:
+                 await asyncio.sleep(1)
+             except asyncio.CancelledError:
+                 break
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ async def main():
+@@ -80,7 +89,7 @@ async def main():
+ 
+     _aioh = AsyncioHelper(loop, client)
+ 
+-    client.connect('localhost', get_test_server_port(), 60)
++    client.connect(DataParams_connect_1395('localhost', get_test_server_port(), 60))
+     client.socket().setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, 2048)
+ 
+     await disconnected
+diff --git a/tests/lib/clients/01-decorators.py b/tests/lib/clients/01-decorators.py
+index 55e6d48..0ac5344 100644
+--- a/tests/lib/clients/01-decorators.py
++++ b/tests/lib/clients/01-decorators.py
+@@ -4,6 +4,15 @@ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ 
+ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "decorators-test", clean_session=True)
+ payload = b""
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ @mqttc.connect_callback()
+@@ -38,5 +47,5 @@ def on_disconnect(mqttc, obj, rc):
+     pass  # TODO: should probably test that this gets called
+ 
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/01-keepalive-pingreq.py b/tests/lib/clients/01-keepalive-pingreq.py
+index ffa6383..aafbd87 100644
+--- a/tests/lib/clients/01-keepalive-pingreq.py
++++ b/tests/lib/clients/01-keepalive-pingreq.py
+@@ -1,6 +1,15 @@
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -10,5 +19,5 @@ def on_connect(mqttc, obj, flags, rc):
+ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "01-keepalive-pingreq")
+ mqttc.on_connect = on_connect
+ 
+-mqttc.connect("localhost", get_test_server_port(), keepalive=4)
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port(), keepalive = 4))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/01-no-clean-session.py b/tests/lib/clients/01-no-clean-session.py
+index 6296613..7fc7ddb 100644
+--- a/tests/lib/clients/01-no-clean-session.py
++++ b/tests/lib/clients/01-no-clean-session.py
+@@ -1,8 +1,17 @@
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ 
+ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "01-no-clean-session", clean_session=False)
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/01-reconnect-on-failure.py b/tests/lib/clients/01-reconnect-on-failure.py
+index 907a2f1..e54f7ec 100644
+--- a/tests/lib/clients/01-reconnect-on-failure.py
++++ b/tests/lib/clients/01-reconnect-on-failure.py
+@@ -1,6 +1,15 @@
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, wait_for_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -11,6 +20,6 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "01-reconnect-on-failure",
+ mqttc.on_connect = on_connect
+ 
+ with wait_for_keyboard_interrupt():
+-    mqttc.connect("localhost", get_test_server_port())
++    mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+     mqttc.loop_forever()
+     exit(42)  # this is expected by the test case
+diff --git a/tests/lib/clients/01-unpwd-empty-password-set.py b/tests/lib/clients/01-unpwd-empty-password-set.py
+index 40a1a43..2acc6da 100644
+--- a/tests/lib/clients/01-unpwd-empty-password-set.py
++++ b/tests/lib/clients/01-unpwd-empty-password-set.py
+@@ -1,3 +1,12 @@
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+@@ -5,5 +14,5 @@ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "01-unpwd-set")
+ 
+ mqttc.username_pw_set("uname", "")
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/01-unpwd-empty-set.py b/tests/lib/clients/01-unpwd-empty-set.py
+index b65d679..2afddc7 100644
+--- a/tests/lib/clients/01-unpwd-empty-set.py
++++ b/tests/lib/clients/01-unpwd-empty-set.py
+@@ -1,3 +1,12 @@
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+@@ -5,5 +14,5 @@ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "01-unpwd-set")
+ 
+ mqttc.username_pw_set("", "")
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/01-unpwd-set.py b/tests/lib/clients/01-unpwd-set.py
+index 763297f..8f195ba 100644
+--- a/tests/lib/clients/01-unpwd-set.py
++++ b/tests/lib/clients/01-unpwd-set.py
+@@ -1,3 +1,12 @@
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+@@ -5,5 +14,5 @@ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "01-unpwd-set")
+ 
+ mqttc.username_pw_set("uname", ";'[08gn=#")
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/01-unpwd-unicode-set.py b/tests/lib/clients/01-unpwd-unicode-set.py
+index 5844541..ad94827 100644
+--- a/tests/lib/clients/01-unpwd-unicode-set.py
++++ b/tests/lib/clients/01-unpwd-unicode-set.py
+@@ -1,4 +1,13 @@
+ 
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+@@ -8,5 +17,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "01-unpwd-unicode-set")
+ username = "\u00fas\u00e9rn\u00e1m\u00e9-h\u00e9ll\u00f3"
+ password = "h\u00e9ll\u00f3"
+ mqttc.username_pw_set(username, password)
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/01-will-set.py b/tests/lib/clients/01-will-set.py
+index c3310a4..9123482 100644
+--- a/tests/lib/clients/01-will-set.py
++++ b/tests/lib/clients/01-will-set.py
+@@ -1,3 +1,12 @@
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+@@ -5,5 +14,5 @@ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "01-will-set")
+ 
+ mqttc.will_set("topic/on/unexpected/disconnect", "will message", 1, True)
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/01-will-unpwd-set.py b/tests/lib/clients/01-will-unpwd-set.py
+index 31bb976..490fb62 100644
+--- a/tests/lib/clients/01-will-unpwd-set.py
++++ b/tests/lib/clients/01-will-unpwd-set.py
+@@ -1,3 +1,12 @@
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+@@ -6,5 +15,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "01-will-unpwd-set")
+ 
+ mqttc.username_pw_set("oibvvwqw", "#'^2hg9a&nm38*us")
+ mqttc.will_set("will-topic", "will message", 2, False)
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/01-zero-length-clientid.py b/tests/lib/clients/01-zero-length-clientid.py
+index 992efed..78ec1a7 100644
+--- a/tests/lib/clients/01-zero-length-clientid.py
++++ b/tests/lib/clients/01-zero-length-clientid.py
+@@ -1,6 +1,15 @@
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -16,5 +25,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "", clean_session=True, pr
+ mqttc.on_connect = on_connect
+ mqttc.on_disconnect = on_disconnect
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/02-subscribe-qos0.py b/tests/lib/clients/02-subscribe-qos0.py
+index 2444ffb..36bcdf5 100644
+--- a/tests/lib/clients/02-subscribe-qos0.py
++++ b/tests/lib/clients/02-subscribe-qos0.py
+@@ -1,6 +1,15 @@
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -16,5 +25,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "subscribe-qos0-test", cle
+ mqttc.on_connect = on_connect
+ mqttc.on_subscribe = on_subscribe
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/02-subscribe-qos1.py b/tests/lib/clients/02-subscribe-qos1.py
+index 2079de6..2566763 100644
+--- a/tests/lib/clients/02-subscribe-qos1.py
++++ b/tests/lib/clients/02-subscribe-qos1.py
+@@ -1,6 +1,15 @@
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -16,5 +25,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "subscribe-qos1-test", cle
+ mqttc.on_connect = on_connect
+ mqttc.on_subscribe = on_subscribe
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/02-subscribe-qos2.py b/tests/lib/clients/02-subscribe-qos2.py
+index 4776a76..8b94548 100644
+--- a/tests/lib/clients/02-subscribe-qos2.py
++++ b/tests/lib/clients/02-subscribe-qos2.py
+@@ -1,6 +1,15 @@
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -16,5 +25,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "subscribe-qos2-test", cle
+ mqttc.on_connect = on_connect
+ mqttc.on_subscribe = on_subscribe
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/02-unsubscribe.py b/tests/lib/clients/02-unsubscribe.py
+index de36bfb..dddd501 100644
+--- a/tests/lib/clients/02-unsubscribe.py
++++ b/tests/lib/clients/02-unsubscribe.py
+@@ -1,6 +1,15 @@
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -16,5 +25,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "unsubscribe-test", clean_
+ mqttc.on_connect = on_connect
+ mqttc.on_unsubscribe = on_unsubscribe
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/03-publish-b2c-qos1.py b/tests/lib/clients/03-publish-b2c-qos1.py
+index 71ac950..69ba2e1 100644
+--- a/tests/lib/clients/03-publish-b2c-qos1.py
++++ b/tests/lib/clients/03-publish-b2c-qos1.py
+@@ -3,6 +3,15 @@ import paho.mqtt.client as mqtt
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ 
+ expected_payload = b"message"
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_message(mqttc, obj, msg):
+@@ -21,5 +30,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "publish-qos1-test")
+ mqttc.on_connect = on_connect
+ mqttc.on_message = on_message
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/03-publish-b2c-qos2.py b/tests/lib/clients/03-publish-b2c-qos2.py
+index e3b1492..b02501a 100644
+--- a/tests/lib/clients/03-publish-b2c-qos2.py
++++ b/tests/lib/clients/03-publish-b2c-qos2.py
+@@ -5,6 +5,15 @@ import paho.mqtt.client as mqtt
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ 
+ expected_payload = b"message"
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_message(mqttc, obj, msg):
+@@ -24,5 +33,5 @@ mqttc.enable_logger()
+ mqttc.on_connect = on_connect
+ mqttc.on_message = on_message
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/03-publish-c2b-qos1-disconnect.py b/tests/lib/clients/03-publish-c2b-qos1-disconnect.py
+index 52fa516..dbe88a7 100644
+--- a/tests/lib/clients/03-publish-c2b-qos1-disconnect.py
++++ b/tests/lib/clients/03-publish-c2b-qos1-disconnect.py
+@@ -3,6 +3,15 @@ import paho.mqtt.client as mqtt
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ 
+ sent_mid = -1
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -29,5 +38,5 @@ mqttc.on_connect = on_connect
+ mqttc.on_disconnect = on_disconnect
+ mqttc.on_publish = on_publish
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/03-publish-c2b-qos2-disconnect.py b/tests/lib/clients/03-publish-c2b-qos2-disconnect.py
+index fe7c2ae..c0c348d 100644
+--- a/tests/lib/clients/03-publish-c2b-qos2-disconnect.py
++++ b/tests/lib/clients/03-publish-c2b-qos2-disconnect.py
+@@ -3,6 +3,15 @@ import paho.mqtt.client as mqtt
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ 
+ first_connection = 1
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -27,5 +36,5 @@ mqttc.on_connect = on_connect
+ mqttc.on_disconnect = on_disconnect
+ mqttc.on_publish = on_publish
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/03-publish-fill-inflight.py b/tests/lib/clients/03-publish-fill-inflight.py
+index 0a7eb85..4865f5c 100644
+--- a/tests/lib/clients/03-publish-fill-inflight.py
++++ b/tests/lib/clients/03-publish-fill-inflight.py
+@@ -3,6 +3,15 @@ import logging
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def expected_payload(i: int) -> bytes:
+@@ -35,5 +44,5 @@ mqttc.on_disconnect = on_disconnect
+ mqttc.on_message = on_message
+ mqttc.enable_logger()
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/03-publish-qos0-no-payload.py b/tests/lib/clients/03-publish-qos0-no-payload.py
+index 7ac8e35..ae816b0 100644
+--- a/tests/lib/clients/03-publish-qos0-no-payload.py
++++ b/tests/lib/clients/03-publish-qos0-no-payload.py
+@@ -3,6 +3,15 @@ import paho.mqtt.client as mqtt
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ 
+ sent_mid = -1
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -20,5 +29,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "publish-qos0-test-np", cl
+ mqttc.on_connect = on_connect
+ mqttc.on_publish = on_publish
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/03-publish-qos0.py b/tests/lib/clients/03-publish-qos0.py
+index dc6ac74..234e767 100644
+--- a/tests/lib/clients/03-publish-qos0.py
++++ b/tests/lib/clients/03-publish-qos0.py
+@@ -3,6 +3,15 @@ import paho.mqtt.client as mqtt
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
+ 
+ sent_mid = -1
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -22,5 +31,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "publish-qos0-test", clean
+ mqttc.on_connect = on_connect
+ mqttc.on_publish = on_publish
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/04-retain-qos0.py b/tests/lib/clients/04-retain-qos0.py
+index bdfa660..1387162 100644
+--- a/tests/lib/clients/04-retain-qos0.py
++++ b/tests/lib/clients/04-retain-qos0.py
+@@ -1,6 +1,15 @@
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -11,5 +20,5 @@ def on_connect(mqttc, obj, flags, rc):
+ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "retain-qos0-test", clean_session=True)
+ mqttc.on_connect = on_connect
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/08-ssl-connect-alpn.py b/tests/lib/clients/08-ssl-connect-alpn.py
+index f830e50..ab64c9d 100755
+--- a/tests/lib/clients/08-ssl-connect-alpn.py
++++ b/tests/lib/clients/08-ssl-connect-alpn.py
+@@ -3,6 +3,15 @@ import os
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -19,5 +28,5 @@ mqttc.tls_set(
+ )
+ mqttc.on_connect = on_connect
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/08-ssl-connect-cert-auth-pw.py b/tests/lib/clients/08-ssl-connect-cert-auth-pw.py
+index 4681dc4..74ca191 100644
+--- a/tests/lib/clients/08-ssl-connect-cert-auth-pw.py
++++ b/tests/lib/clients/08-ssl-connect-cert-auth-pw.py
+@@ -3,6 +3,15 @@ import os
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -19,5 +28,5 @@ mqttc.tls_set(
+ )
+ mqttc.on_connect = on_connect
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/08-ssl-connect-cert-auth.py b/tests/lib/clients/08-ssl-connect-cert-auth.py
+index a34409a..3caa66b 100644
+--- a/tests/lib/clients/08-ssl-connect-cert-auth.py
++++ b/tests/lib/clients/08-ssl-connect-cert-auth.py
+@@ -3,6 +3,15 @@ import os
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -18,5 +27,5 @@ mqttc.tls_set(
+ )
+ mqttc.on_connect = on_connect
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/08-ssl-connect-no-auth.py b/tests/lib/clients/08-ssl-connect-no-auth.py
+index 9d86f28..ac69e65 100644
+--- a/tests/lib/clients/08-ssl-connect-no-auth.py
++++ b/tests/lib/clients/08-ssl-connect-no-auth.py
+@@ -3,6 +3,15 @@ import os
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, loop_until_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -14,5 +23,5 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1, "08-ssl-connect-no-auth")
+ mqttc.tls_set(os.path.join(os.environ["PAHO_SSL_PATH"], "all-ca.crt"))
+ mqttc.on_connect = on_connect
+ 
+-mqttc.connect("localhost", get_test_server_port())
++mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+ loop_until_keyboard_interrupt(mqttc)
+diff --git a/tests/lib/clients/08-ssl-fake-cacert.py b/tests/lib/clients/08-ssl-fake-cacert.py
+index ffa5364..efb4fdc 100644
+--- a/tests/lib/clients/08-ssl-fake-cacert.py
++++ b/tests/lib/clients/08-ssl-fake-cacert.py
+@@ -4,6 +4,15 @@ import ssl
+ import paho.mqtt.client as mqtt
+ 
+ from tests.paho_test import get_test_server_port, wait_for_keyboard_interrupt
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def on_connect(mqttc, obj, flags, rc):
+@@ -20,7 +29,7 @@ mqttc.on_connect = on_connect
+ 
+ with wait_for_keyboard_interrupt():
+     try:
+-        mqttc.connect("localhost", get_test_server_port())
++        mqttc.connect(DataParams_connect_1395("localhost", get_test_server_port()))
+     except ssl.SSLError as msg:
+         assert msg.errno == 1 and "certificate verify failed" in msg.strerror
+     else:
+diff --git a/tests/test_client.py b/tests/test_client.py
+index 09e4606..7af0154 100644
+--- a/tests/test_client.py
++++ b/tests/test_client.py
+@@ -1,3 +1,12 @@
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ import threading
+ import time
+ import unicodedata
+@@ -335,7 +344,7 @@ class TestConnectionLost:
+         mqttc.on_connect = on_connect
+         mqttc.on_disconnect = on_disconnect
+ 
+-        mqttc.connect("localhost", fake_broker.port)
++        mqttc.connect(DataParams_connect_1395("localhost", fake_broker.port))
+ 
+         fake_broker.start()
+ 
+@@ -384,7 +393,7 @@ class TestPublish:
+         mqttc.on_connect = on_connect
+ 
+         mqttc.loop_start()
+-        mqttc.connect("localhost", fake_broker.port)
++        mqttc.connect(DataParams_connect_1395("localhost", fake_broker.port))
+         mqttc.enable_logger()
+ 
+         try:
+@@ -442,7 +451,7 @@ class TestPublish:
+             transport=fake_broker.transport,
+         )
+ 
+-        mqttc.connect("localhost", fake_broker.port)
++        mqttc.connect(DataParams_connect_1395("localhost", fake_broker.port))
+         mqttc.loop_start()
+         mqttc.enable_logger()
+ 
+diff --git a/tests/test_mqttv5.py b/tests/test_mqttv5.py
+index 83a1fdd..3c3a3e5 100644
+--- a/tests/test_mqttv5.py
++++ b/tests/test_mqttv5.py
+@@ -137,6 +137,15 @@ class Callbacks:
+             pass
+ 
+         return result
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ def cleanRetained(port):
+@@ -147,7 +156,7 @@ def cleanRetained(port):
+         protocol=paho.mqtt.client.MQTTv5,
+     )
+     callback.register(curclient)
+-    curclient.connect(host="localhost", port=port)
++    curclient.connect(DataParams_connect_1395(host = "localhost", port = port))
+     curclient.loop_start()
+     callback.wait_connected()
+     curclient.subscribe("#", options=SubscribeOptions(qos=0))
+@@ -179,7 +188,7 @@ def cleanup(port):
+             protocol=paho.mqtt.client.MQTTv5,
+         )
+         curclient.on_connect = _on_connect
+-        curclient.connect(host="localhost", port=port, clean_start=True)
++        curclient.connect(DataParams_connect_1395(host = "localhost", port = port, clean_start = True))
+         curclient.loop_forever()
+ 
+     # clean retained messages
+@@ -245,7 +254,7 @@ class Test(unittest.TestCase):
+     def test_basic(self):
+         import datetime
+         print(datetime.datetime.now(), "start")
+-        aclient.connect(host="localhost", port=self._test_broker_port)
++        aclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         aclient.loop_start()
+         print(datetime.datetime.now(), "loop_start")
+         response = callback.wait_connected()
+@@ -293,7 +302,7 @@ class Test(unittest.TestCase):
+ 
+         # retained messages
+         callback.clear()
+-        aclient.connect(host="localhost", port=self._test_broker_port)
++        aclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         aclient.loop_start()
+         response = callback.wait_connected()
+         aclient.publish(topics[1], b"qos 0", 0,
+@@ -342,10 +351,10 @@ class Test(unittest.TestCase):
+         aclient.will_set(topics[2], payload=b"will message",
+                          properties=will_properties)
+ 
+-        aclient.connect(host="localhost", port=self._test_broker_port, keepalive=2)
++        aclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, keepalive = 2))
+         aclient.loop_start()
+         response = callback.wait_connected()
+-        bclient.connect(host="localhost", port=self._test_broker_port)
++        bclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         bclient.loop_start()
+         response = callback2.wait_connected()
+         bclient.subscribe(topics[2], qos=2)
+@@ -370,7 +379,7 @@ class Test(unittest.TestCase):
+         callback0.register(client0)
+         client0.loop_start()
+         # should not be rejected
+-        client0.connect(host="localhost", port=self._test_broker_port, clean_start=False)
++        client0.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, clean_start = False))
+         response = callback0.wait_connected()
+         self.assertEqual(response["reasonCode"].getName(), "Success")
+         self.assertTrue(
+@@ -381,7 +390,7 @@ class Test(unittest.TestCase):
+         client0 = paho.mqtt.client.Client(CallbackAPIVersion.VERSION1, protocol=paho.mqtt.client.MQTTv5)
+         callback0.register(client0)
+         client0.loop_start()
+-        client0.connect(host="localhost", port=self._test_broker_port)  # should work
++        client0.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))  # should work
+         response = callback0.wait_connected()
+         self.assertEqual(response["reasonCode"].getName(), "Success")
+         self.assertTrue(
+@@ -395,7 +404,7 @@ class Test(unittest.TestCase):
+         )
+         callback0.register(client0)
+         client0.loop_start()
+-        client0.connect(host="localhost", port=self._test_broker_port)  # should work
++        client0.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))  # should work
+         response = callback0.wait_connected()
+         self.assertEqual(response["reasonCode"].getName(), "Success")
+         self.assertFalse(
+@@ -416,7 +425,7 @@ class Test(unittest.TestCase):
+         connect_properties = Properties(PacketTypes.CONNECT)
+         connect_properties.SessionExpiryInterval = 99999
+         oclient.loop_start()
+-        oclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        oclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         ocallback.wait_connected()
+         oclient.subscribe(wildtopics[5], qos=2)
+         ocallback.wait_subscribed()
+@@ -424,7 +433,7 @@ class Test(unittest.TestCase):
+         oclient.loop_stop()
+ 
+         bclient.loop_start()
+-        bclient.connect(host="localhost", port=self._test_broker_port)
++        bclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         callback2.wait_connected()
+         msg1 = bclient.publish(topics[1], b"qos 0", 0)
+         msg2 = bclient.publish(topics[2], b"qos 1", 1)
+@@ -442,7 +451,7 @@ class Test(unittest.TestCase):
+         )
+         ocallback.register(oclient)
+         oclient.loop_start()
+-        oclient.connect(host="localhost", port=self._test_broker_port, clean_start=False)
++        oclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, clean_start = False))
+         ocallback.wait_connected()
+ 
+         msgs = ocallback.get_at_most_messages(3)
+@@ -468,7 +477,7 @@ class Test(unittest.TestCase):
+         ocallback.register(oclient)
+ 
+         oclient.loop_start()
+-        oclient.connect(host="localhost", port=self._test_broker_port)
++        oclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         ocallback.wait_connected()
+         oclient.subscribe([(wildtopics[6], SubscribeOptions(qos=2)),
+                            (wildtopics[0], SubscribeOptions(qos=1))])
+@@ -503,7 +512,7 @@ class Test(unittest.TestCase):
+         )
+         ocallback.register(oclient)
+         oclient.loop_start()
+-        oclient.connect(host="localhost", port=self._test_broker_port)
++        oclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         ocallback.wait_connected()
+         oclient.subscribe(nosubscribe_topics[0], qos=2)
+         response = ocallback.wait_subscribed()
+@@ -515,7 +524,7 @@ class Test(unittest.TestCase):
+ 
+     def test_unsubscribe(self):
+         callback2.clear()
+-        bclient.connect(host="localhost", port=self._test_broker_port)
++        bclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         bclient.loop_start()
+         callback2.wait_connected()
+         bclient.subscribe(topics[0], qos=2)
+@@ -530,7 +539,7 @@ class Test(unittest.TestCase):
+         callback2.wait_unsubscribed()
+         callback2.clear()  # if there were any retained messages
+ 
+-        aclient.connect(host="localhost", port=self._test_broker_port)
++        aclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         aclient.loop_start()
+         callback.wait_connected()
+         aclient.publish(topics[0], b"topic 0 - unsubscribed", 1, retain=False)
+@@ -566,7 +575,7 @@ class Test(unittest.TestCase):
+ 
+         eclient, ecallback = self.new_client(clientid)
+ 
+-        eclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        eclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         connack = ecallback.wait_connected()
+         self.assertEqual(connack["reasonCode"].getName(), "Success")
+         self.assertEqual(connack["flags"]["session present"], False)
+@@ -591,7 +600,7 @@ class Test(unittest.TestCase):
+ 
+         eclient, ecallback = self.new_client(clientid)
+ 
+-        eclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        eclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         connack = ecallback.wait_connected()
+         self.assertEqual(connack["reasonCode"].getName(), "Success")
+         self.assertEqual(connack["flags"]["session present"], False)
+@@ -604,8 +613,7 @@ class Test(unittest.TestCase):
+         time.sleep(2)
+         # session should still exist
+         fclient, fcallback = self.new_client(clientid)
+-        fclient.connect(host="localhost", port=self._test_broker_port, clean_start=False,
+-                        properties=connect_properties)
++        fclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, clean_start = False, properties = connect_properties))
+         connack = fcallback.wait_connected()
+         self.assertEqual(connack["reasonCode"].getName(), "Success")
+         self.assertEqual(connack["flags"]["session present"], True)
+@@ -616,8 +624,7 @@ class Test(unittest.TestCase):
+         time.sleep(6)
+         # session should not exist
+         fclient, fcallback = self.new_client(clientid)
+-        fclient.connect(host="localhost", port=self._test_broker_port, clean_start=False,
+-                        properties=connect_properties)
++        fclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, clean_start = False, properties = connect_properties))
+         connack = fcallback.wait_connected()
+         self.assertEqual(connack["reasonCode"].getName(), "Success")
+         self.assertEqual(connack["flags"]["session present"], False)
+@@ -628,7 +635,7 @@ class Test(unittest.TestCase):
+         eclient, ecallback = self.new_client(clientid)
+         connect_properties.SessionExpiryInterval = 1
+         connack = eclient.connect(
+-            host="localhost", port=self._test_broker_port, properties=connect_properties)
++            DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         connack = ecallback.wait_connected()
+         self.assertEqual(connack["reasonCode"].getName(), "Success")
+         self.assertEqual(connack["flags"]["session present"], False)
+@@ -643,8 +650,7 @@ class Test(unittest.TestCase):
+         time.sleep(3)
+         # session should still exist as we changed the expiry interval on disconnect
+         fclient, fcallback = self.new_client(clientid)
+-        fclient.connect(host="localhost", port=self._test_broker_port, clean_start=False,
+-                        properties=connect_properties)
++        fclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, clean_start = False, properties = connect_properties))
+         connack = fcallback.wait_connected()
+         self.assertEqual(connack["reasonCode"].getName(), "Success")
+         self.assertEqual(connack["flags"]["session present"], True)
+@@ -655,8 +661,7 @@ class Test(unittest.TestCase):
+ 
+         # session should immediately expire
+         fclient, fcallback = self.new_client(clientid)
+-        fclient.connect(host="localhost", port=self._test_broker_port, clean_start=False,
+-                        properties=connect_properties)
++        fclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, clean_start = False, properties = connect_properties))
+         connack = fcallback.wait_connected()
+         self.assertEqual(connack["reasonCode"].getName(), "Success")
+         self.assertEqual(connack["flags"]["session present"], False)
+@@ -671,7 +676,7 @@ class Test(unittest.TestCase):
+         clientid = "user properties"
+         uclient, ucallback = self.new_client(clientid)
+         uclient.loop_start()
+-        uclient.connect(host="localhost", port=self._test_broker_port)
++        uclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         ucallback.wait_connected()
+ 
+         uclient.subscribe(topics[0], qos=2)
+@@ -757,7 +762,7 @@ class Test(unittest.TestCase):
+ 
+         lbclient, lbcallback = self.new_client(f"{clientid} b")
+         lbclient.loop_start()
+-        lbclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        lbclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         lbcallback.wait_connected()
+         lbclient.subscribe(topics[0], qos=2)
+         lbcallback.wait_subscribed()
+@@ -769,7 +774,7 @@ class Test(unittest.TestCase):
+ 
+         laclient, lacallback = self.new_client(f"{clientid} a")
+         laclient.loop_start()
+-        laclient.connect(host="localhost", port=self._test_broker_port)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         publish_properties = Properties(PacketTypes.PUBLISH)
+         publish_properties.MessageExpiryInterval = 1
+         laclient.publish(topics[0], b"qos 1 - expire", 1,
+@@ -787,7 +792,7 @@ class Test(unittest.TestCase):
+         time.sleep(3)
+         lbclient, lbcallback = self.new_client(f"{clientid} b")
+         lbclient.loop_start()
+-        lbclient.connect(host="localhost", port=self._test_broker_port, clean_start=False)
++        lbclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, clean_start = False))
+         lbcallback.wait_connected()
+ 
+         msgs = lbcallback.get_messages(2)
+@@ -810,7 +815,7 @@ class Test(unittest.TestCase):
+         clientid = 'subscribe options - noLocal'
+ 
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         lacallback.wait_connected()
+         laclient.loop_start()
+         laclient.subscribe(
+@@ -818,7 +823,7 @@ class Test(unittest.TestCase):
+         lacallback.wait_subscribed()
+ 
+         lbclient, lbcallback = self.new_client(f"{clientid} b")
+-        lbclient.connect(host="localhost", port=self._test_broker_port)
++        lbclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         lbcallback.wait_connected()
+         lbclient.loop_start()
+         lbclient.subscribe(
+@@ -846,7 +851,7 @@ class Test(unittest.TestCase):
+         # retainAsPublished
+         clientid = 'subscribe options - retain as published'
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         lacallback.wait_connected()
+         laclient.subscribe(topics[0], options=SubscribeOptions(
+             qos=2, retainAsPublished=True))
+@@ -868,7 +873,7 @@ class Test(unittest.TestCase):
+         # retainHandling
+         clientid = 'subscribe options - retain handling'
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         lacallback.wait_connected()
+         laclient.publish(topics[1], b"qos 0", 0, retain=True)
+         laclient.publish(topics[2], b"qos 1", 1, retain=True)
+@@ -956,7 +961,7 @@ class Test(unittest.TestCase):
+         clientid = 'subscription identifiers'
+ 
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         lacallback.wait_connected()
+         laclient.loop_start()
+ 
+@@ -966,7 +971,7 @@ class Test(unittest.TestCase):
+         lacallback.wait_subscribed()
+ 
+         lbclient, lbcallback = self.new_client(f"{clientid} b")
+-        lbclient.connect(host="localhost", port=self._test_broker_port)
++        lbclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         lbcallback.wait_connected()
+         lbclient.loop_start()
+         sub_properties = Properties(PacketTypes.SUBSCRIBE)
+@@ -1002,12 +1007,12 @@ class Test(unittest.TestCase):
+         clientid = 'request response'
+ 
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         lacallback.wait_connected()
+         laclient.loop_start()
+ 
+         lbclient, lbcallback = self.new_client(f"{clientid} b")
+-        lbclient.connect(host="localhost", port=self._test_broker_port)
++        lbclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         lbcallback.wait_connected()
+         lbclient.loop_start()
+ 
+@@ -1053,7 +1058,7 @@ class Test(unittest.TestCase):
+         connect_properties.TopicAliasMaximum = 0  # server topic aliases not allowed
+         connect_properties.SessionExpiryInterval = 99999
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         connack = lacallback.wait_connected()
+         clientTopicAliasMaximum = 0
+         if hasattr(connack["properties"], "TopicAliasMaximum"):
+@@ -1084,8 +1089,7 @@ class Test(unittest.TestCase):
+ 
+         # check aliases have been deleted
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port, clean_start=False,
+-                         properties=connect_properties)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, clean_start = False, properties = connect_properties))
+ 
+         laclient.publish(topics[0], b"topic alias 3", 1)
+         lacallback.messages.get(timeout=DEFAULT_TIMEOUT)
+@@ -1107,7 +1111,7 @@ class Test(unittest.TestCase):
+         connect_properties.TopicAliasMaximum = serverTopicAliasMaximum
+ 
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         lacallback.wait_connected()
+         laclient.loop_start()
+ 
+@@ -1142,7 +1146,7 @@ class Test(unittest.TestCase):
+         # connect_properties.TopicAliasMaximum = serverTopicAliasMaximum # default is 0
+ 
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         lacallback.wait_connected()
+         laclient.loop_start()
+ 
+@@ -1169,7 +1173,7 @@ class Test(unittest.TestCase):
+         connect_properties.TopicAliasMaximum = serverTopicAliasMaximum  # default is 0
+ 
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         lacallback.wait_connected()
+         laclient.loop_start()
+ 
+@@ -1196,7 +1200,7 @@ class Test(unittest.TestCase):
+ 
+         # 1. server max packet size
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         connack = lacallback.wait_connected()
+         laclient.loop_start()
+ 
+@@ -1223,7 +1227,7 @@ class Test(unittest.TestCase):
+         connect_properties.MaximumPacketSize = maximumPacketSize
+ 
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         connack = lacallback.wait_connected()
+         laclient.loop_start()
+ 
+@@ -1285,14 +1289,14 @@ class Test(unittest.TestCase):
+         laclient, lacallback = self.new_client(f"{clientid} a")
+         laclient.will_set(
+             topics[0], payload=b"test_will_delay will message", properties=will_properties)
+-        laclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         connack = lacallback.wait_connected()
+         self.assertEqual(connack["reasonCode"].getName(), "Success")
+         self.assertEqual(connack["flags"]["session present"], False)
+         laclient.loop_start()
+ 
+         lbclient, lbcallback = self.new_client(f"{clientid} b")
+-        lbclient.connect(host="localhost", port=self._test_broker_port, properties=connect_properties)
++        lbclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port, properties = connect_properties))
+         connack = lbcallback.wait_connected()
+         lbclient.loop_start()
+         # subscribe to will message topic
+@@ -1321,7 +1325,7 @@ class Test(unittest.TestCase):
+         shared_pub_topic = f"{topic_prefix}x"
+ 
+         laclient, lacallback = self.new_client(f"{clientid} a")
+-        laclient.connect(host="localhost", port=self._test_broker_port)
++        laclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         connack = lacallback.wait_connected()
+         laclient.loop_start()
+ 
+@@ -1333,7 +1337,7 @@ class Test(unittest.TestCase):
+         lacallback.wait_subscribed()
+ 
+         lbclient, lbcallback = self.new_client(f"{clientid} b")
+-        lbclient.connect(host="localhost", port=self._test_broker_port)
++        lbclient.connect(DataParams_connect_1395(host = "localhost", port = self._test_broker_port))
+         connack = lbcallback.wait_connected()
+         lbclient.loop_start()
+ 
+diff --git a/tests/test_websocket_integration.py b/tests/test_websocket_integration.py
+index b44f347..fd8b1e1 100644
+--- a/tests/test_websocket_integration.py
++++ b/tests/test_websocket_integration.py
+@@ -9,6 +9,15 @@ import pytest
+ from paho.mqtt.client import WebsocketConnectionError
+ 
+ from tests.testsupport.broker import fake_websocket_broker  # noqa: F401
++class DataParams_connect_1395:
++    def __init__(self, host, port = 1883, keepalive = 60, bind_address = "", bind_port = 0, clean_start = MQTT_CLEAN_START_FIRST_ONLY, properties = None):
++        self.host = host
++        self.port = port
++        self.keepalive = keepalive
++        self.bind_address = bind_address
++        self.bind_port = bind_port
++        self.clean_start = clean_start
++        self.properties = properties
+ 
+ 
+ @pytest.fixture
+@@ -60,7 +69,7 @@ class TestInvalidWebsocketResponse:
+                 _self.request.sendall(b"200 OK")
+ 
+         with fake_websocket_broker.serve(WebsocketHandler), pytest.raises(WebsocketConnectionError) as exc:
+-            mqttc.connect("localhost", fake_websocket_broker.port, keepalive=10)
++            mqttc.connect(DataParams_connect_1395("localhost", fake_websocket_broker.port, keepalive = 10))
+ 
+         assert str(exc.value) == "WebSocket handshake error"
+ 
+@@ -103,7 +112,7 @@ class TestBadWebsocketHeaders:
+         response = self._get_basic_handler(init_response_headers)
+ 
+         with fake_websocket_broker.serve(response), pytest.raises(WebsocketConnectionError) as exc:
+-            mqttc.connect("localhost", fake_websocket_broker.port, keepalive=10)
++            mqttc.connect(DataParams_connect_1395("localhost", fake_websocket_broker.port, keepalive = 10))
+ 
+         assert str(exc.value) == "WebSocket handshake error, connection not upgraded"
+ 
+@@ -121,7 +130,7 @@ class TestBadWebsocketHeaders:
+         response = self._get_basic_handler(init_response_headers)
+ 
+         with fake_websocket_broker.serve(response), pytest.raises(WebsocketConnectionError) as exc:
+-            mqttc.connect("localhost", fake_websocket_broker.port, keepalive=10)
++            mqttc.connect(DataParams_connect_1395("localhost", fake_websocket_broker.port, keepalive = 10))
+ 
+         assert str(exc.value) == "WebSocket handshake error, invalid secret key"
+ 
+@@ -180,7 +189,7 @@ class TestValidHeaders:
+         response = self._get_callback_handler(init_response_headers)
+ 
+         with fake_websocket_broker.serve(response):
+-            mqttc.connect("localhost", fake_websocket_broker.port, keepalive=10)
++            mqttc.connect(DataParams_connect_1395("localhost", fake_websocket_broker.port, keepalive = 10))
+ 
+             mqttc.disconnect()
+ 
+@@ -215,7 +224,7 @@ class TestValidHeaders:
+         )
+ 
+         with fake_websocket_broker.serve(response):
+-            mqttc.connect("localhost", fake_websocket_broker.port, keepalive=10)
++            mqttc.connect(DataParams_connect_1395("localhost", fake_websocket_broker.port, keepalive = 10))
+ 
+             mqttc.disconnect()
+ 
+@@ -252,6 +261,6 @@ class TestValidHeaders:
+         )
+ 
+         with fake_websocket_broker.serve(response):
+-            mqttc.connect("localhost", fake_websocket_broker.port, keepalive=10)
++            mqttc.connect(DataParams_connect_1395("localhost", fake_websocket_broker.port, keepalive = 10))
+ 
+             mqttc.disconnect()

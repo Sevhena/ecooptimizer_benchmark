@@ -1,0 +1,29 @@
+diff --git a/numpy/distutils/fcompiler/compaq.py b/numpy/distutils/fcompiler/compaq.py
+index 01314c136a..78288b10c5 100644
+--- a/numpy/distutils/fcompiler/compaq.py
++++ b/numpy/distutils/fcompiler/compaq.py
+@@ -5,6 +5,7 @@
+ 
+ from numpy.distutils.fcompiler import FCompiler
+ from distutils.errors import DistutilsPlatformError
++from codecarbon import track_emissions
+ 
+ compilers = ['CompaqFCompiler']
+ if os.name != 'posix' or sys.platform[:6] == 'cygwin' :
+@@ -46,7 +47,9 @@ def get_flags_opt(self):
+                 '-assume nozsize', '-math_library fast']
+     def get_flags_arch(self):
+         return ['-arch host', '-tune host']
+-    def get_flags_linker_so(self):
++    @track_emissions(project_name='numpy-benchmark', experiment_id='numpy_R6301_49debb68', output_file='/root/ecooptimizer_benchmark/emissions/numpy/no-self-use/49debb68_refactored.csv')
++    @staticmethod
++    def get_flags_linker_so():
+         if sys.platform[:5]=='linux':
+             return ['-shared']
+         return ['-shared', '-Wl,-expect_unresolved,*']
+diff --git a/vendored-meson/meson b/vendored-meson/meson
+--- a/vendored-meson/meson
++++ b/vendored-meson/meson
+@@ -1 +1 @@
+-Subproject commit f754c4258805056ed7be09830d96af45215d341b
++Subproject commit f754c4258805056ed7be09830d96af45215d341b-dirty

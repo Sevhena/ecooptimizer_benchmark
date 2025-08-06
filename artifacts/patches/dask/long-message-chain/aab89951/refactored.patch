@@ -1,0 +1,24 @@
+diff --git a/dask/dataframe/dask_expr/_expr.py b/dask/dataframe/dask_expr/_expr.py
+index 461bc58dc..ef7b04a75 100644
+--- a/dask/dataframe/dask_expr/_expr.py
++++ b/dask/dataframe/dask_expr/_expr.py
+@@ -336,6 +336,7 @@ class Expr(core.SingletonExpr):
+ 
+     def cumsum(self, skipna=True):
+         from dask.dataframe.dask_expr._cumulative import CumSum
++from codecarbon import EmissionsTracker
+ 
+         return CumSum(self, skipna=skipna)
+ 
+@@ -3073,7 +3074,10 @@ class _DelayedExpr(Expr):
+         return self.obj.key
+ 
+     def _layer(self) -> dict:
+-        dc = self.obj.__dask_optimize__(self.obj.dask, self.obj.key).to_dict().copy()
++        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LMC001_aab89951', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/aab89951_refactored.csv') as tracker:
++            intermediate_0 = self.obj.__dask_optimize__(self.obj.dask, self.obj.key)
++            intermediate_1 = intermediate_0.to_dict()
++            dc = intermediate_1.copy()
+         dc[(self.obj.key, 0)] = dc[self.obj.key]
+         dc.pop(self.obj.key)
+         return dc

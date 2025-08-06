@@ -1,0 +1,21 @@
+diff --git a/dask/dataframe/dask_expr/_concat.py b/dask/dataframe/dask_expr/_concat.py
+index c96287132..51f7575ad 100644
+--- a/dask/dataframe/dask_expr/_concat.py
++++ b/dask/dataframe/dask_expr/_concat.py
+@@ -22,6 +22,7 @@ from dask.dataframe.dispatch import make_meta, meta_nonempty
+ from dask.dataframe.multi import concat_and_check
+ from dask.dataframe.utils import check_meta, strip_unknown_categories
+ from dask.utils import apply, is_dataframe_like, is_series_like
++from codecarbon import track_emissions
+ 
+ 
+ class Concat(Expr):
+@@ -375,5 +376,7 @@ class ConcatIndexed(ConcatUnindexed):
+     def operation(*args, ignore_order, _kwargs, axis, join):
+         return methods.concat(args, ignore_order=ignore_order, axis=axis, join=join)
+ 
+-    def _broadcast_dep(self, dep: Expr):
++    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R6301_cdb5b8c8', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/cdb5b8c8_refactored.csv')
++    @staticmethod
++    def _broadcast_dep(dep: Expr):
+         return dep.npartitions == 1

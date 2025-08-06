@@ -1,0 +1,20 @@
+diff --git a/django/forms/formsets.py b/django/forms/formsets.py
+index c2663154d4..4d699e97a5 100644
+--- a/django/forms/formsets.py
++++ b/django/forms/formsets.py
+@@ -7,6 +7,7 @@ from django.forms.widgets import CheckboxInput, HiddenInput, NumberInput
+ from django.utils.functional import cached_property
+ from django.utils.translation import gettext_lazy as _
+ from django.utils.translation import ngettext_lazy
++from codecarbon import EmissionsTracker
+ 
+ __all__ = ("BaseFormSet", "formset_factory", "all_valid")
+ 
+@@ -581,4 +582,6 @@ def formset_factory(
+ def all_valid(formsets):
+     """Validate every formset and return True if all are valid."""
+     # List comprehension ensures is_valid() is called for all formsets.
+-    return all([formset.is_valid() for formset in formsets])
++    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_R1729_a1f57a8c', output_file='/root/ecooptimizer_benchmark/emissions/django/use-a-generator/a1f57a8c.csv') as tracker:
++        _carbon_wrapped_44c82b57 = all([formset.is_valid() for formset in formsets])
++    return _carbon_wrapped_44c82b57

@@ -1,0 +1,20 @@
+diff --git a/dask/dataframe/dask_expr/_collection.py b/dask/dataframe/dask_expr/_collection.py
+index 0e16f3ed9..c6f5a4c1f 100644
+--- a/dask/dataframe/dask_expr/_collection.py
++++ b/dask/dataframe/dask_expr/_collection.py
+@@ -144,6 +144,7 @@ from dask.utils import (
+     typename,
+ )
+ from dask.widgets import get_template
++from codecarbon import track_emissions
+ 
+ #
+ # Utilities to wrap Expr API
+@@ -4150,6 +4151,7 @@ class Series(FrameBase):
+         """Number of bytes"""
+         return new_collection(self.expr.nbytes)
+ 
++    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R6301_81ec5021', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/81ec5021.csv')
+     def __array_ufunc__(self, numpy_ufunc, method, *inputs, **kwargs):
+         out = kwargs.get("out", ())
+         for x in inputs + out:

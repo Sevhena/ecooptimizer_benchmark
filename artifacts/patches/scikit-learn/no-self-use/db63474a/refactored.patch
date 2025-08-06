@@ -1,0 +1,41 @@
+diff --git a/sklearn/isotonic.py b/sklearn/isotonic.py
+index 2f2c56ae5..bf7b6a2a6 100644
+--- a/sklearn/isotonic.py
++++ b/sklearn/isotonic.py
+@@ -19,6 +19,7 @@ from .utils import check_array, check_consistent_length
+ from .utils._param_validation import Interval, StrOptions, validate_params
+ from .utils.fixes import parse_version, sp_base_version
+ from .utils.validation import _check_sample_weight, check_is_fitted
++from codecarbon import track_emissions
+ 
+ __all__ = ["IsotonicRegression", "check_increasing", "isotonic_regression"]
+ 
+@@ -291,7 +292,9 @@ class IsotonicRegression(RegressorMixin, TransformerMixin, BaseEstimator):
+         self.increasing = increasing
+         self.out_of_bounds = out_of_bounds
+ 
+-    def _check_input_data_shape(self, X):
++    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R6301_db63474a', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/no-self-use/db63474a_refactored.csv')
++    @staticmethod
++    def _check_input_data_shape(X):
+         if not (X.ndim == 1 or (X.ndim == 2 and X.shape[1] == 1)):
+             msg = (
+                 "Isotonic regression input X should be a 1d array or "
+@@ -313,7 +316,7 @@ class IsotonicRegression(RegressorMixin, TransformerMixin, BaseEstimator):
+ 
+     def _build_y(self, X, y, sample_weight, trim_duplicates=True):
+         """Build the y_ IsotonicRegression."""
+-        self._check_input_data_shape(X)
++        IsotonicRegression._check_input_data_shape(X)
+         X = X.reshape(-1)  # use 1d view
+ 
+         # Determine increasing if auto-determination requested
+@@ -427,7 +430,7 @@ class IsotonicRegression(RegressorMixin, TransformerMixin, BaseEstimator):
+ 
+         T = check_array(T, dtype=dtype, ensure_2d=False)
+ 
+-        self._check_input_data_shape(T)
++        IsotonicRegression._check_input_data_shape(T)
+         T = T.reshape(-1)  # use 1d view
+ 
+         if self.out_of_bounds == "clip":

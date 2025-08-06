@@ -1,0 +1,24 @@
+diff --git a/gpiozero/internal_devices.py b/gpiozero/internal_devices.py
+index 370bc39..540cafd 100644
+--- a/gpiozero/internal_devices.py
++++ b/gpiozero/internal_devices.py
+@@ -19,6 +19,7 @@ from .devices import Device
+ from .mixins import EventsMixin, event
+ from .threads import GPIOThread
+ from .exc import ThresholdOutOfRange, DeviceClosed
++from codecarbon import EmissionsTracker
+ 
+ 
+ class InternalDevice(EventsMixin, Device):
+@@ -432,7 +433,10 @@ class LoadAverage(PolledInternalDevice):
+         Returns the current load average.
+         """
+         with io.open(self.load_average_file, 'r') as f:
+-            file_columns = f.read().strip().split()
++            with EmissionsTracker(project_name='gpiozero-benchmark', experiment_id='gpiozero_LMC001_ddfcea54', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/long-message-chain/ddfcea54_refactored.csv') as tracker:
++                intermediate_0 = f.read()
++                intermediate_1 = intermediate_0.strip()
++                file_columns = intermediate_1.split()
+             return float(file_columns[self._load_average_file_column])
+ 
+     @property

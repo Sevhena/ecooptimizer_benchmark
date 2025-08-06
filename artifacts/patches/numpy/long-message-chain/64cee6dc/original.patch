@@ -1,0 +1,24 @@
+diff --git a/numpy/matlib.py b/numpy/matlib.py
+index f27d503cdb..7a9de44353 100644
+--- a/numpy/matlib.py
++++ b/numpy/matlib.py
+@@ -1,4 +1,5 @@
+ import warnings
++from codecarbon import EmissionsTracker
+ 
+ # 2018-05-29, PendingDeprecationWarning added to matrix.__new__
+ # 2020-01-23, numpy 1.19.0 PendingDeprecatonWarning
+@@ -376,5 +377,6 @@ def repmat(a, m, n):
+         origrows, origcols = a.shape
+     rows = origrows * m
+     cols = origcols * n
+-    c = a.reshape(1, a.size).repeat(m, 0).reshape(rows, origcols).repeat(n, 0)
++    with EmissionsTracker(project_name='numpy-benchmark', experiment_id='numpy_LMC001_64cee6dc', output_file='/root/ecooptimizer_benchmark/emissions/numpy/long-message-chain/64cee6dc.csv') as tracker:
++        c = a.reshape(1, a.size).repeat(m, 0).reshape(rows, origcols).repeat(n, 0)
+     return c.reshape(rows, cols)
+diff --git a/vendored-meson/meson b/vendored-meson/meson
+--- a/vendored-meson/meson
++++ b/vendored-meson/meson
+@@ -1 +1 @@
+-Subproject commit f754c4258805056ed7be09830d96af45215d341b
++Subproject commit f754c4258805056ed7be09830d96af45215d341b-dirty
