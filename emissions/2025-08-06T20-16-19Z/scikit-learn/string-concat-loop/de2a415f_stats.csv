@@ -1,0 +1,2 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-06_20-16-18,scikit-learn,string-concat-loop,de2a415f,original,30,1.10,0.0,15.9

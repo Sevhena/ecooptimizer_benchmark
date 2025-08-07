@@ -1,0 +1,2 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-07_11-00-18,scipy,long-message-chain,f7d9627c,original,30,5007.26,0.0,16.1
