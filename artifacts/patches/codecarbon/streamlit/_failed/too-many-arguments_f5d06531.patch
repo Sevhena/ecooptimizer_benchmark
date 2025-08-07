@@ -14,7 +14,7 @@ index 58d043fca..af4df8601 100644
      # 1. type is given as not a keyword-only argument
      # 2. accept_multiple_files = True
      @overload
-+    @track_emissions(project_name='streamlit-benchmark', experiment_id='streamlit_R0913_f5d06531', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/too-many-arguments/f5d06531.csv')
++    @track_emissions(project_name='streamlit-benchmark', measure_power_secs=1, experiment_id='streamlit_R0913_f5d06531', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/too-many-arguments/f5d06531.csv')
      def file_uploader(
          self,
          label: str,

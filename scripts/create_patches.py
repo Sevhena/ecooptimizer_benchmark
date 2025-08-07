@@ -69,11 +69,18 @@ def create_worktree(base_repo: Path, worktree_dir: Path) -> bool:
 
 
 # --- Run add_annotations.py ---
-def add_codecarbon_annotations(repo_name: str, smell_id: str) -> bool:
+def add_annotations(repo_name: str, smell_id: str, tracker: str = "codecarbon") -> bool:
     try:
         logging.debug("Adding CodeCarbon annotations")
         subprocess.run(
-            [sys.executable, "scripts/add_codecarbon_annotations.py", repo_name, smell_id],
+            [
+                sys.executable,
+                "scripts/add_annotations.py",
+                repo_name,
+                smell_id,
+                "--tracker",
+                tracker,
+            ],
             cwd=Path(),
             check=True,
             stdout=subprocess.DEVNULL,
@@ -86,14 +93,14 @@ def add_codecarbon_annotations(repo_name: str, smell_id: str) -> bool:
 
 
 # --- Run apply_refactor.py ---
-def refactor_smell(repo_name: str, smell_id: str) -> bool:
+def refactor_smell(repo_name: str, smell_id: str, tracker: str = "codecarbon") -> bool:
     try:
         logging.debug(f"Refactoring smell {smell_id} in {repo_name}")
         subprocess.run(
             [
                 "ecooptimizer",
                 "refactor",
-                f"{ANNOTATED_SMELLS_DIR}/{repo_name}.json",
+                f"{ANNOTATED_SMELLS_DIR}/{tracker}/{repo_name}.json",
                 "--smell-id",
                 smell_id,
                 "--save-to-original",
@@ -110,13 +117,20 @@ def refactor_smell(repo_name: str, smell_id: str) -> bool:
         raise
 
 
-def fix_refactored_patch_path(patch_path_refactored: Path, smell_id: str, symbol: str):
+def fix_refactored_patch_path(
+    patch_path_refactored: Path, smell_id: str, symbol: str, tracker: str = "codecarbon"
+):
     """Add a refactored tag to the ouput file in the Emissions tracker object in the .patch file."""
     try:
         patch_content = patch_path_refactored.read_text()
-        fixed_patch_content = patch_content.replace(
-            f"{symbol}/{smell_id}.csv", f"{symbol}/{smell_id}_refactored.csv"
-        )
+        if tracker == "codecarbon":
+            fixed_patch_content = patch_content.replace(
+                f"{symbol}/{smell_id}.csv", f"{symbol}/{smell_id}_refactored.csv"
+            )
+        else:
+            fixed_patch_content = patch_content.replace(
+                f"{symbol}/{smell_id}_usage.csv", f"{symbol}/{smell_id}_usage_refactored.csv"
+            )
         patch_path_refactored.write_text(fixed_patch_content)
     except Exception:
         logging.error(f"[{smell_id}] Unable to update refactored .patch file")
@@ -144,21 +158,25 @@ def create_patch(patch_path: Path, smell_id: str, worktree_path: Path):
 
 
 # --- Create patch for a smell ---
-def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> None:
+def create_patches(
+    smell: tuple[str, str], repo_name: str, base_repo: Path, tracker: str = "codecarbon"
+) -> None:
     symbol = smell[0]
     smell_id = smell[1]
 
     worktree_path = WORKTREE_DIR / repo_name
     worktree_path.parent.mkdir(exist_ok=True)
 
-    patch_path_original = PATCHES_DIR / repo_name / symbol / smell_id / "original.patch"
-    patch_path_refactored = PATCHES_DIR / repo_name / symbol / smell_id / "refactored.patch"
-    failed_patch_path = PATCHES_DIR / repo_name / "_failed" / f"{symbol}_{smell_id}.patch"
+    patch_path_original = PATCHES_DIR / tracker / repo_name / symbol / smell_id / "original.patch"
+    patch_path_refactored = (
+        PATCHES_DIR / tracker / repo_name / symbol / smell_id / "refactored.patch"
+    )
+    failed_patch_path = PATCHES_DIR / tracker / repo_name / "_failed" / f"{symbol}_{smell_id}.patch"
     try:
         if not worktree_path.exists():
             create_worktree(base_repo, worktree_path)
 
-        if not add_codecarbon_annotations(repo_name, smell_id):
+        if not add_annotations(repo_name, smell_id, tracker):
             raise Exception(f"Failed to add annotations for {smell_id} in {repo_name}")
 
         patch_path_original.parent.mkdir(parents=True, exist_ok=True)
@@ -169,7 +187,7 @@ def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> N
         refactor_smell(repo_name, smell_id)
         if not create_patch(patch_path_refactored, smell_id, worktree_path):
             raise Exception(f"Refactored patch creation failed for smell {smell_id}")
-        if not fix_refactored_patch_path(patch_path_refactored, smell_id, symbol):
+        if not fix_refactored_patch_path(patch_path_refactored, smell_id, symbol, tracker):
             raise Exception("Path update in refactored .patch failed")
 
         if failed_patch_path.exists():
@@ -213,12 +231,16 @@ def load_smells(repo_name: str) -> dict[str, dict]:
     return smells
 
 
-def clear_patches(repo_name: str, smell_data: Optional[dict] = None) -> None:
+def clear_patches(
+    repo_name: str, smell_data: Optional[dict] = None, tracker: str = "codecarbon"
+) -> None:
     """Clear existing patches for a specific smell or all smells in a repo."""
     annotated_smells_file = ANNOTATED_SMELLS_DIR / f"{repo_name}.json"
 
     if smell_data:
-        patch_path = PATCHES_DIR / repo_name / smell_data["symbol"] / smell_data["smell_id"]
+        patch_path = (
+            PATCHES_DIR / tracker / repo_name / smell_data["symbol"] / smell_data["smell_id"]
+        )
         if patch_path.exists():
             logging.debug(
                 f"Removing patches for smell {smell_data['smell_id']} in repo {repo_name}: {patch_path}"
@@ -250,7 +272,7 @@ def clear_patches(repo_name: str, smell_data: Optional[dict] = None) -> None:
         else:
             logging.debug(f"No annotated smells file found for repo {repo_name}")
     else:
-        repo_patches_dir = PATCHES_DIR / repo_name
+        repo_patches_dir = PATCHES_DIR / tracker / repo_name
         if repo_patches_dir.exists():
             logging.info(f"Removing all patches for repo {repo_name}: {repo_patches_dir}")
             shutil.rmtree(repo_patches_dir)
@@ -301,6 +323,13 @@ def main():
         "--all",
         action="store_true",
         help="Generate patches for all smells in the specified repo or type including overwriting existing ones (DEFAULT: False)",
+    )
+    parser.add_argument(
+        "--tracker",
+        choices=["codecarbon", "usage"],
+        default="codecarbon",
+        type=str,
+        help="Which types of annotations to add",
     )
     args = parser.parse_args()
 
@@ -358,7 +387,7 @@ def main():
         smell_meta = []
         smell_map: dict[str, list[str]] = select_repos_config.get("smells", {}).get(repo_name, {})
         if args.failed_only:
-            failed_dir = PATCHES_DIR / repo_name / "_failed"
+            failed_dir = PATCHES_DIR / args.tracker / repo_name / "_failed"
             if not failed_dir.exists():
                 logging.debug(f"No smells failed to create patches for repo {repo_name}")
                 continue
@@ -373,6 +402,7 @@ def main():
                 clear_patches(
                     repo_name,
                     {"symbol": smells[smell_id]["symbol"], "smell_id": smell_id, "smells": smells},
+                    args.tracker,
                 )
         else:
             if args.smells:
@@ -382,6 +412,7 @@ def main():
                     clear_patches(
                         repo_name,
                         {"symbol": smells[smell]["symbol"], "smell_id": smell, "smells": smells},
+                        args.tracker,
                     )
             elif args.type:
                 logging.info(f"Generating patches for smell type {args.type} in repo {repo_name}\n")
@@ -395,7 +426,7 @@ def main():
                 for symbol, smell_ids in smell_map.items():
                     for smell_id in smell_ids:
                         if smell_id in smells:
-                            patch_dir = PATCHES_DIR / repo_name / symbol / smell_id
+                            patch_dir = PATCHES_DIR / args.tracker / repo_name / symbol / smell_id
                             if not args.all and patch_dir.exists():
                                 logging.debug(
                                     f"Patches already exist for {smell_id} in {repo_name}. Skipping."
@@ -410,6 +441,7 @@ def main():
                             clear_patches(
                                 repo_name,
                                 {"symbol": symbol, "smell_id": smell_id, "smells": smells},
+                                args.tracker,
                             )
                         else:
                             logging.warning(
@@ -435,7 +467,7 @@ def main():
 
                 logging.info(f"Generating patches for all smells in {repo_name}\n")
 
-                repo_patch_dir = PATCHES_DIR / repo_name
+                repo_patch_dir = PATCHES_DIR / args.tracker / repo_name
 
                 smell_meta = [
                     (smell["symbol"], smell_id)
@@ -445,7 +477,7 @@ def main():
                 ]
 
                 if args.all:
-                    clear_patches(repo_name)
+                    clear_patches(repo_name, args.tracker)
                 else:
                     logging.debug(
                         f"Clearing existing patches for smells in {repo_name} before patch creation"
@@ -454,6 +486,7 @@ def main():
                         clear_patches(
                             repo_name,
                             {"symbol": smell[0], "smell_id": smell[1], "smells": smells},
+                            args.tracker,
                         )
         total_smells = len(smell_meta)
 
@@ -466,7 +499,7 @@ def main():
                 logging.info(
                     f"\n[{repo_name}] [{smells_processed + 1}/{len(smell_meta)}] Patching {smell}..."
                 )
-                create_patches(smell, repo_name, base_repo)
+                create_patches(smell, repo_name, base_repo, args.tracker)
             except KeyboardInterrupt:
                 logging.info("Patch creation interrupted by user.")
                 sys.exit(0)

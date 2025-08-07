@@ -1,5 +1,5 @@
 diff --git a/gpiozero/boards.py b/gpiozero/boards.py
-index 7abc9f4..8a68586 100644
+index 7abc9f4..a87ceee 100644
 --- a/gpiozero/boards.py
 +++ b/gpiozero/boards.py
 @@ -24,6 +24,7 @@ from threading import Lock

@@ -1,0 +1,20 @@
+diff --git a/lib/streamlit/elements/code.py b/lib/streamlit/elements/code.py
+index e4118540c..6a535ff0f 100644
+--- a/lib/streamlit/elements/code.py
++++ b/lib/streamlit/elements/code.py
+@@ -26,6 +26,7 @@ from streamlit.elements.lib.layout_utils import (
+ )
+ from streamlit.proto.Code_pb2 import Code as CodeProto
+ from streamlit.runtime.metrics_util import gather_metrics
++from codecarbon import track_emissions
+ 
+ if TYPE_CHECKING:
+     from streamlit.delta_generator import DeltaGenerator
+@@ -34,6 +35,7 @@ if TYPE_CHECKING:
+ 
+ class CodeMixin:
+     @gather_metrics("code")
++    @track_emissions(project_name='streamlit-benchmark', measure_power_secs=1, experiment_id='streamlit_R0913_684ba73c', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/too-many-arguments/684ba73c.csv')
+     def code(
+         self,
+         body: SupportsStr,

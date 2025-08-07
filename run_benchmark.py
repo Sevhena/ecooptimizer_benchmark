@@ -95,9 +95,9 @@ def apply_patch(patch_path: Path, repo_path: Path):
         raise e
 
 
-def load_analysis_results(repo_name: str) -> dict[str, dict] | None:
+def load_analysis_results(repo_name: str, tracker: str = "codecarbon") -> dict[str, dict] | None:
     """Load analysis results for a specific repository."""
-    results_file = SMELLS_DIR / f"{repo_name}.json"
+    results_file = SMELLS_DIR / tracker / f"{repo_name}.json"
     if not results_file.exists():
         logging.error(f"No analysis results found for {repo_name}")
         return None
@@ -336,6 +336,12 @@ def main():
         type=str,
         help="Directory name for storing emissions data in emissions folder",
     )
+    parser.add_argument(
+        "--tracker",
+        choices=["codecarbon", "usage"],
+        default="codecarbon",
+        help="Which types of annotations to add",
+    )
     args = parser.parse_args()
 
     setup_logging()
@@ -383,7 +389,7 @@ def main():
     # --- Smell Filtering ---
     smells_to_run = {}
     for repo in target_repos:
-        patch_repo_dir = PATCHES_DIR / repo
+        patch_repo_dir = PATCHES_DIR / args.tracker / repo
         if not patch_repo_dir.exists():
             logging.warning(f"No patches found for {repo}")
             continue

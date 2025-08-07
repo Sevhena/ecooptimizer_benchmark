@@ -4,7 +4,6 @@ import logging
 from pathlib import Path
 import sys
 import argparse
-from codecarbon import EmissionsTracker
 
 import astroid
 from astroid import nodes
@@ -104,21 +103,40 @@ def find_import_insertion_point(lines: list[str]) -> int:
     return last_import_line + 1  # Insert after the last import
 
 
-def add_decorator_to_function(file_path: Path, cc_args: str, line_num: int, col_num: int):
+def add_decorator_to_function(
+    file_path: Path,
+    cc_args: str,
+    line_num: int,
+    col_num: int,
+    tracker: str = "codecarbon",
+):
     """Add CodeCarbon decorator to a function."""
     lines = get_code_lines(file_path)
 
     logging.debug(f"Initial line number: {line_num}")
 
+    # Add import if not present
+    if tracker == "codecarbon":
+        package = "codecarbon"
+        track_import = "EmissionsTracker"
+        decorator = "track_emissions"
+    else:
+        package = "crtracker"
+        track_import = "MemoryCPUTracker"
+        decorator = "MemoryCPUTracker.track_usage"
+
     # Add the decorator
-    decorator_line = " " * (col_num) + f"@track_emissions({cc_args})\n"
+    decorator_line = " " * (col_num) + f"@{decorator}({cc_args})\n"
     lines.insert(line_num - 1, decorator_line)
 
     # Add import if not present
-    import_id = find_import_insertion_point(lines)
+    if not any(
+        line.strip().startswith((f"from {package} import {track_import}", f"import {package}"))
+        for line in lines
+    ):
+        import_id = find_import_insertion_point(lines)
 
-    if not any(line.strip().startswith("from codecarbon import track_emissions") for line in lines):
-        lines.insert(import_id, "from codecarbon import track_emissions\n")
+        lines.insert(import_id, f"from {package} import {track_import}\n")
 
     write_code_lines(file_path, lines)
     logging.info(f"Added decorator to function in {file_path} at line {line_num}")
@@ -180,6 +198,7 @@ def wrap_with_context_manager(
     start_col: Optional[int] = None,
     end_col: Optional[int] = None,
     tab_size: int = 4,
+    tracker: str = "codecarbon",
 ):
     """Wrap code block with CodeCarbon context manager, handling multi-line expressions."""
     lines = get_code_lines(file_path)
@@ -286,8 +305,16 @@ def wrap_with_context_manager(
         : len(lines[insertion_line - 1]) - len(lines[insertion_line - 1].lstrip())
     ]
 
+    # Add import if not present
+    if tracker == "codecarbon":
+        package = "codecarbon"
+        track_import = "EmissionsTracker"
+    else:
+        package = "crtracker"
+        track_import = "MemoryCPUTracker"
+
     # Insert context manager
-    start_context = f"{indent}with EmissionsTracker({cc_args}) as tracker:\n"
+    start_context = f"{indent}with {track_import}({cc_args}) as tracker:\n"
     lines.insert(insertion_line - 1, start_context)
 
     # Indent the block
@@ -296,14 +323,13 @@ def wrap_with_context_manager(
     for i in range(start_line, end_line + 1):
         lines[i] = " " * tab_size + lines[i]
 
-    # Add import if not present
     if not any(
-        line.strip().startswith(("from codecarbon import EmissionsTracker", "import codecarbon"))
+        line.strip().startswith((f"from {package} import {track_import}", f"import {package}"))
         for line in lines
     ):
         import_id = find_import_insertion_point(lines)
 
-        lines.insert(import_id, "from codecarbon import EmissionsTracker\n")
+        lines.insert(import_id, f"from {package} import {track_import}\n")
 
     write_code_lines(file_path, lines)
     logging.info(f"Wrapped lines {start_line}-{end_line} in {file_path}")
@@ -312,7 +338,7 @@ def wrap_with_context_manager(
         return insertion_line, start_column, end_column  # type: ignore
 
 
-def process_smell(smell_data: dict, repo_name: str):
+def process_smell(smell_data: dict, repo_name: str, tracker: str):
     """Process a single smell and annotate the code accordingly."""
     file_path = WORKTREE_DIR / repo_name / smell_data["path"]
     logging.debug(f"File path: {file_path}")
@@ -325,21 +351,29 @@ def process_smell(smell_data: dict, repo_name: str):
 
     # Prepare the context manager lines
     file_tag = f"{smell_data['messageId']}_{smell_data['id']}"
-    ccarbon_output_file = Path(
-        f"emissions/{repo_name}/{smell_data['symbol']}/{smell_data['id']}.csv"
-    ).resolve()
-    ccarbon_output_file.parent.mkdir(parents=True, exist_ok=True)
+    if tracker == "codecarbon":
+        output_file = Path(
+            f"emissions/{repo_name}/{smell_data['symbol']}/{smell_data['id']}.csv"
+        ).resolve()
 
-    cc_args = f"project_name='{repo_name}-benchmark', measure_power_secs=1, experiment_id='{repo_name}_{file_tag}', output_file='{ccarbon_output_file}'"
+        args = f"project_name='{repo_name}-benchmark', measure_power_secs=1, experiment_id='{repo_name}_{file_tag}', output_file='{output_file}'"
+    else:
+        output_file = Path(
+            f"emissions/{repo_name}/{smell_data['symbol']}/{smell_data['id']}_usage.csv"
+        ).resolve()
+
+        args = f"project_id='{repo_name}-benchmark', experiment_id='{repo_name}_{file_tag}', output_file='{output_file}'"
 
     if energy_meta.get("isFunc", False):
         # Function/method case - use decorator
         if energy_meta.get("useOccurences", False):
             for occ in smell_data["occurences"]:
-                add_decorator_to_function(file_path, cc_args, occ["line"], occ.get("column", 0))
+                add_decorator_to_function(
+                    file_path, args, occ["line"], occ.get("column", 0), tracker
+                )
         else:
             add_decorator_to_function(
-                file_path, cc_args, energy_meta["start"], energy_meta.get("col", 0)
+                file_path, args, energy_meta["start"], energy_meta.get("col", 0), tracker
             )
 
         smell_data["occurences"][0]["line"] += 2
@@ -353,13 +387,14 @@ def process_smell(smell_data: dict, repo_name: str):
             for i in range(len(smell_data["occurences"])):
                 new_location = wrap_with_context_manager(
                     file_path,
-                    cc_args,
+                    args,
                     occurences[i]["line"],
                     occurences[i]["endLine"],
                     False,
                     occurences[i]["column"],
                     occurences[i]["endColumn"],
                     tab_size,
+                    tracker,
                 )
                 if new_location:
                     smell_data["occurences"][i]["line"] = new_location[0]
@@ -375,10 +410,11 @@ def process_smell(smell_data: dict, repo_name: str):
             logging.info("Wrapping code block with context manager")
             wrap_with_context_manager(
                 file_path,
-                cc_args,
+                args,
                 energy_meta["start"],
                 energy_meta["end"],
                 tab_size=tab_size,
+                tracker=tracker,
             )
             for i in range(len(smell_data["occurences"])):
                 smell_data["occurences"][i]["line"] += 2
@@ -391,10 +427,10 @@ def process_smell(smell_data: dict, repo_name: str):
     return smell_data
 
 
-def get_analysis_file_path(repo_name: str):
+def get_analysis_file_path(repo_name: str, tracker: str = "codecarbon"):
     """Determine the analysis file path based on inputs."""
     file_name = f"{repo_name}.json"
-    annotated_path = ANNOTATED_SMELLS_DIR / file_name
+    annotated_path = ANNOTATED_SMELLS_DIR / tracker / file_name
 
     if not annotated_path.exists():
         logging.debug(f"No annotated smells found for {repo_name}, creating new analysis file.")
@@ -404,7 +440,7 @@ def get_analysis_file_path(repo_name: str):
     return annotated_path
 
 
-def main(repo_name: str, smell_id: str):
+def main(repo_name: str, smell_id: str, tracker: str = "codecarbon"):
     """Main function to process a specific smell."""
     setup_logging(repo_name)
     logging.info(f"Starting annotation for smell {smell_id} in repo {repo_name}")
@@ -433,11 +469,11 @@ def main(repo_name: str, smell_id: str):
     # Process only the specified smell
     try:
         logging.info(f"Processing smell: {target_smell.get('message', 'unknown')}")
-        updated_smell_data = process_smell(target_smell, repo_name)
+        updated_smell_data = process_smell(target_smell, repo_name, tracker)
 
         smells[smell_id] = updated_smell_data
         # Save the updated analysis file
-        ann_path = ANNOTATED_SMELLS_DIR / f"{repo_name}.json"
+        ann_path = ANNOTATED_SMELLS_DIR / tracker / f"{repo_name}.json"
         ann_path.parent.mkdir(parents=True, exist_ok=True)
         with ann_path.open("w", encoding="utf-8") as f:
             json.dump(smells, f, indent=4)
@@ -456,7 +492,14 @@ if __name__ == "__main__":
         "repo_name", help="Repository name to analyze (used for automatic file path resolution)"
     )
     parser.add_argument("smell_id", help="ID of the smell to annotate")
+    parser.add_argument(
+        "--tracker",
+        type=str,
+        choices=["codecarbon", "usage"],
+        default="codecarbon",
+        help="Which tracker to annotate with (default: codecarbon)",
+    )
 
     args = parser.parse_args()
 
-    main(repo_name=args.repo_name, smell_id=args.smell_id)
+    main(repo_name=args.repo_name, smell_id=args.smell_id, tracker=args.tracker)

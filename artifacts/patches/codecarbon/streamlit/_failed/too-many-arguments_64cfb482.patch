@@ -1,0 +1,20 @@
+diff --git a/lib/streamlit/elements/media.py b/lib/streamlit/elements/media.py
+index a92d62681..7c8dcd89d 100644
+--- a/lib/streamlit/elements/media.py
++++ b/lib/streamlit/elements/media.py
+@@ -34,6 +34,7 @@ from streamlit.proto.WidthConfig_pb2 import WidthConfig
+ from streamlit.runtime import caching
+ from streamlit.runtime.metrics_util import gather_metrics
+ from streamlit.time_util import time_to_seconds
++from codecarbon import track_emissions
+ 
+ if TYPE_CHECKING:
+     from typing import Any
+@@ -222,6 +223,7 @@ class MediaMixin:
+         return self.dg._enqueue("audio", audio_proto)
+ 
+     @gather_metrics("video")
++    @track_emissions(project_name='streamlit-benchmark', measure_power_secs=1, experiment_id='streamlit_R0913_64cfb482', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/too-many-arguments/64cfb482.csv')
+     def video(
+         self,
+         data: MediaData,

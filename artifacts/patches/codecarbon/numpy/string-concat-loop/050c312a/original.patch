@@ -16,7 +16,7 @@ index 8e71e6d4b1..3b8ea33c65 100644
 -        remaining_str = ",".join(remaining) + "->" + output_subscript
 -        path_run = (scale_list[n], einsum_str, remaining_str)
 -        path_print += "\n%4d    %24s %40s" % path_run
-+    with EmissionsTracker(project_name='numpy-benchmark', experiment_id='numpy_SCL001_050c312a', output_file='/root/ecooptimizer_benchmark/emissions/numpy/string-concat-loop/050c312a.csv') as tracker:
++    with EmissionsTracker(project_name='numpy-benchmark', measure_power_secs=1, experiment_id='numpy_SCL001_050c312a', output_file='/root/ecooptimizer_benchmark/emissions/numpy/string-concat-loop/050c312a.csv') as tracker:
 +        for n, contraction in enumerate(contraction_list):
 +            inds, idx_rm, einsum_str, remaining, blas = contraction
 +            remaining_str = ",".join(remaining) + "->" + output_subscript
