@@ -1,2 +1,3 @@
 timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
 2025-08-07_10-47-38,dask,use-a-generator,0fa92701,original,30,1372.90,0.0,16.2
+2025-08-07_11-23-18,dask,use-a-generator,0fa92701,refactored,30,2140.10,0.0,16.2
