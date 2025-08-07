@@ -6,6 +6,7 @@ import subprocess
 import logging
 import textwrap
 from threading import Thread, Event
+from typing import Optional
 import yaml
 import time
 import psutil
@@ -264,15 +265,18 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
     return elapsed, avg_cpu, mem_mb
 
 
-def move_named_subfolders(folder_names: set[str]):
+def move_named_subfolders(folder_names: set[str], output_dir: Optional[str] = None):
     """
     Move subfolders with specific names into a new UTC-timestamped subfolder,
     unless they are already inside a timestamp-named folder.
     """
 
     # Prepare destination folder
-    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%SZ")
-    destination = EMISSIONS_DIR / timestamp
+    if output_dir:
+        dir_name = output_dir
+    else:
+        dir_name = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%SZ")
+    destination = EMISSIONS_DIR / dir_name
     destination.mkdir()
 
     moved = False
@@ -326,6 +330,11 @@ def main():
     )
     parser.add_argument(
         "--verbose", action="store_true", help="Enable verbose output with emissions monitoring"
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        help="Directory name for storing emissions data in emissions folder",
     )
     args = parser.parse_args()
 
@@ -460,7 +469,7 @@ def main():
                             break
                     except KeyboardInterrupt:
                         logging.info("Benchmark run interrupted by user.")
-                        move_named_subfolders(selected_repos)
+                        move_named_subfolders(selected_repos, args.output_dir)
                         sys.exit(0)
                     except Exception as e:
                         logging.error(
@@ -475,7 +484,7 @@ def main():
     # --- Move Emissions Files ---
     if EMISSIONS_DIR.exists():
         logging.info("\nMoving emissions files to timestamped folder...")
-        move_named_subfolders(selected_repos)
+        move_named_subfolders(selected_repos, args.output_dir)
 
     if raised_error:
         logging.error("\n❗ Some benchmarks encountered errors. Please check the logs for details.")
