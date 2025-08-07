@@ -16,7 +16,7 @@ index c56e13999..ba6395b8f 100644
          representation += f"<{self.__class__.__module__}.{self.__class__.__name__} object at {hex(id(self))}>\n"
 -        for i, layerkey in enumerate(self._toposort_layers()):
 -            representation += f" {i}. {layerkey}\n"
-+        with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_SCL001_5254055f', output_file='/root/ecooptimizer_benchmark/emissions/dask/string-concat-loop/5254055f.csv') as tracker:
++        with EmissionsTracker(project_name='dask-benchmark', measure_power_secs=1, experiment_id='dask_SCL001_5254055f', output_file='/root/ecooptimizer_benchmark/emissions/dask/string-concat-loop/5254055f.csv') as tracker:
 +            for i, layerkey in enumerate(self._toposort_layers()):
 +                representation += f" {i}. {layerkey}\n"
          return representation

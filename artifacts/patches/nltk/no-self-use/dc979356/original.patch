@@ -14,7 +14,7 @@ index e4121b6cf..69259819e 100644
              return token[:-2]
          return token
  
-+    @track_emissions(project_name='nltk-benchmark', experiment_id='nltk_R6301_dc979356', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/dc979356.csv')
++    @track_emissions(project_name='nltk-benchmark', measure_power_secs=1, experiment_id='nltk_R6301_dc979356', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/dc979356.csv')
      def fem2masc(self, token):
          """
          transform the word from the feminine form to the masculine form.

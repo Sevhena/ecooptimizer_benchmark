@@ -15,7 +15,7 @@ index 2f2c56ae5d..bf7b6a2a67 100644
          self.out_of_bounds = out_of_bounds
  
 -    def _check_input_data_shape(self, X):
-+    @track_emissions(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_R6301_db63474a', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/no-self-use/db63474a_refactored.csv')
++    @track_emissions(project_name='scikit-learn-benchmark', measure_power_secs=1, experiment_id='scikit-learn_R6301_db63474a', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/no-self-use/db63474a_refactored.csv')
 +    @staticmethod
 +    def _check_input_data_shape(X):
          if not (X.ndim == 1 or (X.ndim == 2 and X.shape[1] == 1)):

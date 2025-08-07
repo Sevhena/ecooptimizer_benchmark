@@ -1,0 +1,20 @@
+diff --git a/gpiozero/boards.py b/gpiozero/boards.py
+index 7abc9f4..8a68586 100644
+--- a/gpiozero/boards.py
++++ b/gpiozero/boards.py
+@@ -24,6 +24,7 @@ from threading import Lock
+ from collections import OrderedDict, Counter, namedtuple
+ from collections.abc import MutableMapping
+ from pprint import pformat
++from codecarbon import track_emissions
+ 
+ # Remove the try clause when 3.7 support is no longer trivial
+ try:
+@@ -576,6 +577,7 @@ class LEDBoard(LEDCollection):
+         self.blink(
+             on_time, off_time, fade_in_time, fade_out_time, n, background)
+ 
++    @track_emissions(project_name='gpiozero-benchmark', measure_power_secs=1, experiment_id='gpiozero_R0913_068d4643', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/too-many-arguments/068d4643.csv')
+     def _blink_device(
+             self, on_time, off_time, fade_in_time, fade_out_time, n, fps=25):
+         sequence = []

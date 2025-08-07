@@ -20,7 +20,7 @@ index 9680f15..8090745 100644
 -            (1 - t) * on + t * off
 -            for off, on in zip(off_color, on_color)
 -            )
-+        with EmissionsTracker(project_name='gpiozero-benchmark', experiment_id='gpiozero_LLE001_e04be5d7', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/long-lambda-expr/e04be5d7.csv') as tracker:
++        with EmissionsTracker(project_name='gpiozero-benchmark', measure_power_secs=1, experiment_id='gpiozero_LLE001_e04be5d7', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/long-lambda-expr/e04be5d7.csv') as tracker:
 +            lerp = lambda t, fade_in: tuple(
 +                (1 - t) * off + t * on
 +                if fade_in else

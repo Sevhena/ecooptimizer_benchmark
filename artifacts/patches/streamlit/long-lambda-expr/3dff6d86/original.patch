@@ -17,7 +17,7 @@ index a4ab9fb20..6decb8dca 100644
 -        self.no_secrets_found: Callable[[list[str]], str] = lambda file_paths: (
 -            f"No secrets found. Valid paths for a secrets.toml file or secret directories are: {', '.join(file_paths)}"
 -        )
-+        with EmissionsTracker(project_name='streamlit-benchmark', experiment_id='streamlit_LLE001_3dff6d86', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-lambda-expr/3dff6d86.csv') as tracker:
++        with EmissionsTracker(project_name='streamlit-benchmark', measure_power_secs=1, experiment_id='streamlit_LLE001_3dff6d86', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-lambda-expr/3dff6d86.csv') as tracker:
 +            self.no_secrets_found: Callable[[list[str]], str] = lambda file_paths: (
 +                f"No secrets found. Valid paths for a secrets.toml file or secret directories are: {', '.join(file_paths)}"
 +            )

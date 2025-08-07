@@ -25,7 +25,7 @@ index cf8b2d219c..8b9f440b47 100644
 -                cnt = 0
 -            int_part_gd += digit
 -            cnt += 1
-+        with EmissionsTracker(project_name='django-benchmark', experiment_id='django_SCL001_871b0de2', output_file='/root/ecooptimizer_benchmark/emissions/django/string-concat-loop/871b0de2_refactored.csv') as tracker:
++        with EmissionsTracker(project_name='django-benchmark', measure_power_secs=1, experiment_id='django_SCL001_871b0de2', output_file='/root/ecooptimizer_benchmark/emissions/django/string-concat-loop/871b0de2_refactored.csv') as tracker:
 +            for digit in int_part[::-1]:
 +                if cnt and cnt == active_interval:
 +                    if intervals:

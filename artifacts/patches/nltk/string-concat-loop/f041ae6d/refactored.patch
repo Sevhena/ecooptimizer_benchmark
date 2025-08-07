@@ -23,7 +23,7 @@ index 36c5bdf36..5e068e3f0 100644
 -                cv_sequence += "c"
 -            else:
 -                cv_sequence += "v"
-+        with EmissionsTracker(project_name='nltk-benchmark', experiment_id='nltk_SCL001_f041ae6d', output_file='/root/ecooptimizer_benchmark/emissions/nltk/string-concat-loop/f041ae6d_refactored.csv') as tracker:
++        with EmissionsTracker(project_name='nltk-benchmark', measure_power_secs=1, experiment_id='nltk_SCL001_f041ae6d', output_file='/root/ecooptimizer_benchmark/emissions/nltk/string-concat-loop/f041ae6d_refactored.csv') as tracker:
 +            for i in range(len(stem)):
 +                if self._is_consonant(stem, i):
 +                    cv_sequence.append('c')

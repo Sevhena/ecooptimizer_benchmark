@@ -1,5 +1,5 @@
 diff --git a/scipy/sparse/_lil.py b/scipy/sparse/_lil.py
-index 479472445..13fc49521 100644
+index 479472445..17fd4d95f 100644
 --- a/scipy/sparse/_lil.py
 +++ b/scipy/sparse/_lil.py
 @@ -1,3 +1,4 @@
@@ -12,11 +12,11 @@ index 479472445..13fc49521 100644
  
      def transpose(self, axes=None, copy=False):
 -        return self.tocsr(copy=copy).transpose(axes=axes, copy=False).tolil(copy=False)
-+        with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_LMC001_f7d9627c', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-message-chain/f7d9627c_refactored.csv') as tracker:
++        with EmissionsTracker(project_name='scipy-benchmark', measure_power_secs=1, experiment_id='scipy_LMC001_f7d9627c', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-message-chain/f7d9627c_refactored.csv') as tracker:
 +            intermediate_0 = self.tocsr(copy=copy)
 +            intermediate_1 = intermediate_0.transpose(axes=axes, copy=False)
-+            _carbon_wrapped_c17765dd = intermediate_1.tolil(copy=False)
-+        return _carbon_wrapped_c17765dd
++            _carbon_wrapped_fa9db249 = intermediate_1.tolil(copy=False)
++        return _carbon_wrapped_fa9db249
  
      transpose.__doc__ = _spbase.transpose.__doc__
  

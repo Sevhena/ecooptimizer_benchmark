@@ -14,7 +14,7 @@ index 0e16f3ed9..c6f5a4c1f 100644
          """Number of bytes"""
          return new_collection(self.expr.nbytes)
  
-+    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R6301_81ec5021', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/81ec5021.csv')
++    @track_emissions(project_name='dask-benchmark', measure_power_secs=1, experiment_id='dask_R6301_81ec5021', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/81ec5021.csv')
      def __array_ufunc__(self, numpy_ufunc, method, *inputs, **kwargs):
          out = kwargs.get("out", ())
          for x in inputs + out:

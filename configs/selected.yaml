@@ -28,17 +28,16 @@ smells:
     string-concat-loop:
     - 871b0de2
     use-a-generator:
-    - cf18c1e1
+    # - cf18c1e1
+    - a1f57a8c
   gpiozero:
     long-lambda-expr:
     - e04be5d7
     no-self-use:
     - fc7e33d2
     too-many-arguments:
-    - e50ab4c5
+    - 068d4643
   nltk:
-    long-lambda-expr:
-    - 13d438e9
     no-self-use:
     - dc979356
     string-concat-loop:
@@ -51,8 +50,6 @@ smells:
   paho.mqtt.python:
     long-message-chain:
     - 89b86924
-    # string-concat-loop:
-    # - cbf43c4b
   scikit-learn:
     long-message-chain:
     - 5f1cf174
@@ -61,7 +58,7 @@ smells:
     string-concat-loop:
     - de2a415f
     too-many-arguments:
-    - 809dea56
+    - 0136992b
     use-a-generator:
     - bebfc193
   scipy:
@@ -77,5 +74,12 @@ smells:
   streamlit:
     long-lambda-expr:
     - 3dff6d86
+    - 9fed98e9
     too-many-arguments:
-    - f5d06531
+    # - f5d06531
+    - 4f9c48cd
+    - 54f8faef
+    - 64cfb482
+    - 684ba73c
+    - 75efd7fe
+

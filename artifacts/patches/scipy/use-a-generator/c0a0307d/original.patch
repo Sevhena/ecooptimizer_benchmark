@@ -1,5 +1,5 @@
 diff --git a/scipy/special/_mptestutils.py b/scipy/special/_mptestutils.py
-index 9e519093d..28287c07b 100644
+index 9e519093d..3fdff3189 100644
 --- a/scipy/special/_mptestutils.py
 +++ b/scipy/special/_mptestutils.py
 @@ -8,6 +8,7 @@ from numpy.testing import assert_
@@ -17,7 +17,7 @@ index 9e519093d..28287c07b 100644
 -            self.is_complex = any(
 -                [isinstance(arg, ComplexArg) for arg in self.arg_spec]
 -            )
-+            with EmissionsTracker(project_name='scipy-benchmark', experiment_id='scipy_R1729_c0a0307d', output_file='/root/ecooptimizer_benchmark/emissions/scipy/use-a-generator/c0a0307d.csv') as tracker:
++            with EmissionsTracker(project_name='scipy-benchmark', measure_power_secs=1, experiment_id='scipy_R1729_c0a0307d', output_file='/root/ecooptimizer_benchmark/emissions/scipy/use-a-generator/c0a0307d.csv') as tracker:
 +                self.is_complex = any(
 +                    [isinstance(arg, ComplexArg) for arg in self.arg_spec]
 +                )

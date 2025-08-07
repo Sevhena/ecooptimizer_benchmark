@@ -15,7 +15,7 @@ index 66c6e76d20..366e826a13 100644
      filter instead.
      """
 -    return value.replace("\\", "\\\\").replace('"', '\\"').replace("'", "\\'")
-+    with EmissionsTracker(project_name='django-benchmark', experiment_id='django_LMC001_dfadbb34', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/dfadbb34_refactored.csv') as tracker:
++    with EmissionsTracker(project_name='django-benchmark', measure_power_secs=1, experiment_id='django_LMC001_dfadbb34', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/dfadbb34_refactored.csv') as tracker:
 +        intermediate_0 = value.replace("\\", "\\\\")
 +        intermediate_1 = intermediate_0.replace('"', '\\"')
 +        _carbon_wrapped_9b787da1 = intermediate_1.replace("'", "\\'")

@@ -15,7 +15,7 @@ index a27936b..10ce069 100644
              return f"<gpiozero.{self.__class__.__name__} object closed>"
  
 -    def _conflicts_with(self, other):
-+    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_fc7e33d2', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/fc7e33d2_refactored.csv')
++    @track_emissions(project_name='gpiozero-benchmark', measure_power_secs=1, experiment_id='gpiozero_R6301_fc7e33d2', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/fc7e33d2_refactored.csv')
 +    @staticmethod
 +    def _conflicts_with(other):
          """

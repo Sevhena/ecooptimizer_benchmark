@@ -15,7 +15,7 @@ ARTIFACTS_DIR = ROOT_DIR / "artifacts"
 WORKTREE_DIR = ROOT_DIR / "worktrees"
 PATCHES_DIR = ARTIFACTS_DIR / "patches"
 ANNOTATED_SMELLS_DIR = ARTIFACTS_DIR / "smells" / "annotated"
-SELECTED_SMELLS_DIR = ARTIFACTS_DIR / "smells" / "selected"
+COVERED_SMELLS_DIR = ARTIFACTS_DIR / "smells" / "covered"
 SELECTED_REPOS_CONFIG = ROOT_DIR / "configs" / "selected.yaml"
 
 LOG_DIR = Path("logs").resolve()
@@ -204,7 +204,7 @@ def create_patches(smell: tuple[str, str], repo_name: str, base_repo: Path) -> N
 
 # --- Load smells from analysis results ---
 def load_smells(repo_name: str) -> dict[str, dict]:
-    path = SELECTED_SMELLS_DIR / f"{repo_name}.json"
+    path = COVERED_SMELLS_DIR / f"{repo_name}.json"
     if not path.exists():
         logging.error(f"Analysis results not found for repo: {repo_name}")
         return {}

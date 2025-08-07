@@ -61,15 +61,43 @@ def write_code_lines(file_path: Path, lines: list):
 
 def find_import_insertion_point(lines: list[str]) -> int:
     last_import_line = -1
+    in_docstring = False
+    in_multi_import = False
     for i, line in enumerate(lines):
         line = line.strip()
+        logging.debug(f"Import line: {line}")
         # Skip empty lines, comments, and docstrings before imports
-        if not line or line.startswith("#") or line.startswith('"""') or line.startswith("'''"):
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith('"""'):
+            if not line.replace('"""', "", 1).endswith('"""'):
+                if in_docstring:
+                    in_docstring = False
+                else:
+                    in_docstring = True
+
+            continue
+        if line.startswith("'''"):
+            if not line.replace("'''", "", 1).endswith("'''"):
+                if in_docstring:
+                    in_docstring = False
+                else:
+                    in_docstring = True
+
             continue
         if line.startswith(("from __future__", "import ", "from ")):
+            if "(" in line and ")" not in line:
+                # If the last import line is a multi-line import, continue
+                in_multi_import = True
+                continue
             last_import_line = i
-        elif lines[last_import_line].strip().endswith("("):
-            # If the last import line is a multi-line import, continue
+            continue
+        elif in_multi_import:
+            if line.endswith(")"):
+                in_multi_import = False
+                last_import_line = i
+            continue
+        elif in_docstring:
             continue
         else:
             break
@@ -79,6 +107,8 @@ def find_import_insertion_point(lines: list[str]) -> int:
 def add_decorator_to_function(file_path: Path, cc_args: str, line_num: int, col_num: int):
     """Add CodeCarbon decorator to a function."""
     lines = get_code_lines(file_path)
+
+    logging.debug(f"Initial line number: {line_num}")
 
     # Add the decorator
     decorator_line = " " * (col_num) + f"@track_emissions({cc_args})\n"
@@ -300,7 +330,7 @@ def process_smell(smell_data: dict, repo_name: str):
     ).resolve()
     ccarbon_output_file.parent.mkdir(parents=True, exist_ok=True)
 
-    cc_args = f"project_name='{repo_name}-benchmark', experiment_id='{repo_name}_{file_tag}', output_file='{ccarbon_output_file}'"
+    cc_args = f"project_name='{repo_name}-benchmark', measure_power_secs=1, experiment_id='{repo_name}_{file_tag}', output_file='{ccarbon_output_file}'"
 
     if energy_meta.get("isFunc", False):
         # Function/method case - use decorator

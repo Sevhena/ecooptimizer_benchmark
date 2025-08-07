@@ -26,7 +26,7 @@ index 47ecdcd14d..894298a367 100644
 -                warning_msg += (
 -                    f"  url: https://www.openml.org/search?type=data&id={r['did']}\n"
 -                )
-+            with EmissionsTracker(project_name='scikit-learn-benchmark', experiment_id='scikit-learn_SCL001_de2a415f', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/string-concat-loop/de2a415f_refactored.csv') as tracker:
++            with EmissionsTracker(project_name='scikit-learn-benchmark', measure_power_secs=1, experiment_id='scikit-learn_SCL001_de2a415f', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/string-concat-loop/de2a415f_refactored.csv') as tracker:
 +                for r in res:
 +                    warning_msg.append(f"- version {r['version']}, status: {r['status']}\n")
 +                    warning_msg.append(f"  url: https://www.openml.org/search?type=data&id={r['did']}\n")

@@ -15,7 +15,7 @@ index 060b66a37..2ae5ae427 100644
      else:
          out = df.fillna()
 -    if check and out.isnull().values.all(axis=0).any():
-+    with EmissionsTracker(project_name='dask-benchmark', experiment_id='dask_LMC001_8da83e08', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/8da83e08_refactored.csv') as tracker:
++    with EmissionsTracker(project_name='dask-benchmark', measure_power_secs=1, experiment_id='dask_LMC001_8da83e08', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/8da83e08_refactored.csv') as tracker:
 +        intermediate_0 = out.isnull()
 +        intermediate_1 = intermediate_0.values.all(axis=0)
 +        _carbon_wrapped_49091daa = intermediate_1.any()

@@ -119,7 +119,7 @@ index 2df3f6504..1a095ee3e 100644
      return q
  
  
-+@track_emissions(project_name='dask-benchmark', experiment_id='dask_R0913_4e24e944', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/4e24e944_refactored.csv')
++@track_emissions(project_name='dask-benchmark', measure_power_secs=1, experiment_id='dask_R0913_4e24e944', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/4e24e944_refactored.csv')
  def to_sql(
 -    df,
 -    name: str,

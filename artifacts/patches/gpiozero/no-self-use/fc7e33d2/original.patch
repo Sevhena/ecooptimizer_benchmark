@@ -14,7 +14,7 @@ index a27936b..25085e2 100644
          except DeviceClosed:
              return f"<gpiozero.{self.__class__.__name__} object closed>"
  
-+    @track_emissions(project_name='gpiozero-benchmark', experiment_id='gpiozero_R6301_fc7e33d2', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/fc7e33d2.csv')
++    @track_emissions(project_name='gpiozero-benchmark', measure_power_secs=1, experiment_id='gpiozero_R6301_fc7e33d2', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/fc7e33d2.csv')
      def _conflicts_with(self, other):
          """
          Called by :meth:`Factory.reserve_pins` to test whether the *other*

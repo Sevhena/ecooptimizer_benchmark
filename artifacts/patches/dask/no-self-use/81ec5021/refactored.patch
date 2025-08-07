@@ -15,7 +15,7 @@ index 0e16f3ed9..839a4aafc 100644
          return new_collection(self.expr.nbytes)
  
 -    def __array_ufunc__(self, numpy_ufunc, method, *inputs, **kwargs):
-+    @track_emissions(project_name='dask-benchmark', experiment_id='dask_R6301_81ec5021', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/81ec5021_refactored.csv')
++    @track_emissions(project_name='dask-benchmark', measure_power_secs=1, experiment_id='dask_R6301_81ec5021', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/81ec5021_refactored.csv')
 +    @staticmethod
 +    def __array_ufunc__(numpy_ufunc, method, *inputs, **kwargs):
          out = kwargs.get("out", ())

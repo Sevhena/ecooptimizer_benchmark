@@ -1,37 +1,37 @@
 {
-    "143bf683": {
+    "00cddb09": {
         "additionalInfo": {
-            "callString": null,
+            "callString": "current_form_id(dg)",
             "concatTarget": null,
             "innerLoopLine": null,
-            "repetitions": null
+            "repetitions": 3
         },
-        "confidence": "INFERENCE",
+        "confidence": "HIGH",
         "energyMetadata": {
             "end": null,
-            "isFunc": true,
+            "isFunc": false,
             "start": null,
             "useOccurences": true
         },
-        "id": "143bf683",
-        "message": "Method could be a function",
-        "messageId": "R6301",
-        "module": "streamlit.web.server.oauth_authlib_routes",
-        "obj": "AuthCallbackHandler._get_origin_from_secrets",
+        "id": "00cddb09",
+        "message": "Repeated function call detected (3/2). Consider caching the result: current_form_id(dg)",
+        "messageId": "CRC001",
+        "module": "custom_component",
+        "obj": null,
         "occurences": [
             {
-                "column": 4,
-                "endColumn": 32,
-                "endLine": 195,
-                "line": 195
+                "column": 49,
+                "endColumn": 68,
+                "endLine": 167,
+                "line": 167
             }
         ],
-        "path": "lib/streamlit/web/server/oauth_authlib_routes.py",
-        "symbol": "no-self-use",
-        "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/web/server/oauth_authlib_routes.py"
+        "path": "lib/streamlit/components/v1/custom_component.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/components/v1/custom_component.py"
     },
-    "efac49af": {
+    "020d4091": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -45,17 +45,81 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "efac49af",
+        "id": "020d4091",
         "message": "Method could be a function",
         "messageId": "R6301",
-        "module": "streamlit.elements.deck_gl_json_chart",
-        "obj": "PydeckSelectionSerde.serialize",
+        "module": "streamlit.elements.widgets.time_widgets",
+        "obj": "DateInputSerde.serialize",
         "occurences": [
             {
                 "column": 4,
                 "endColumn": 17,
-                "endLine": 256,
-                "line": 256
+                "endLine": 306,
+                "line": 306
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/time_widgets.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/time_widgets.py"
+    },
+    "05e19351": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "05e19351",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.time_widgets",
+        "obj": "TimeWidgetsMixin.time_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 316,
+                "line": 316
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/time_widgets.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/time_widgets.py"
+    },
+    "063590b8": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "063590b8",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.deck_gl_json_chart",
+        "obj": "PydeckSelectionSerde.deserialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 236,
+                "line": 236
             }
         ],
         "path": "lib/streamlit/elements/deck_gl_json_chart.py",
@@ -63,7 +127,71 @@
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/deck_gl_json_chart.py"
     },
-    "88168186": {
+    "06c44ca1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "06c44ca1",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "streamlit.runtime.scriptrunner.script_runner",
+        "obj": "ScriptRunner.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 169,
+                "line": 169
+            }
+        ],
+        "path": "lib/streamlit/runtime/scriptrunner/script_runner.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/scriptrunner/script_runner.py"
+    },
+    "07e83ab2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "07e83ab2",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.runtime.app_session",
+        "obj": "AppSession.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 86,
+                "line": 86
+            }
+        ],
+        "path": "lib/streamlit/runtime/app_session.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/app_session.py"
+    },
+    "0a44d74d": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -77,23 +205,87 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "88168186",
+        "id": "0a44d74d",
         "message": "Method could be a function",
         "messageId": "R6301",
-        "module": "streamlit.runtime.app_session",
-        "obj": "AppSession._populate_app_pages",
+        "module": "streamlit.elements.plotly_chart",
+        "obj": "PlotlyChartSelectionSerde.serialize",
         "occurences": [
             {
                 "column": 4,
-                "endColumn": 27,
-                "endLine": 892,
-                "line": 892
+                "endColumn": 17,
+                "endLine": 238,
+                "line": 238
             }
         ],
-        "path": "lib/streamlit/runtime/app_session.py",
+        "path": "lib/streamlit/elements/plotly_chart.py",
         "symbol": "no-self-use",
         "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/app_session.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/plotly_chart.py"
+    },
+    "0a715de2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0a715de2",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.plotly_chart",
+        "obj": "PlotlyMixin.plotly_chart",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 272,
+                "line": 272
+            }
+        ],
+        "path": "lib/streamlit/elements/plotly_chart.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/plotly_chart.py"
+    },
+    "0d122609": {
+        "additionalInfo": {
+            "callString": "self._new_widget_state.widget_metadata.get(state_id)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0d122609",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._new_widget_state.widget_metadata.get(state_id)",
+        "messageId": "CRC001",
+        "module": "session_state",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 75,
+                "endLine": 613,
+                "line": 613
+            }
+        ],
+        "path": "lib/streamlit/runtime/state/session_state.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/state/session_state.py"
     },
     "0d45d624": {
         "additionalInfo": {
@@ -127,7 +319,7 @@
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/audio_input.py"
     },
-    "f5d06531": {
+    "106915b5": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -141,23 +333,431 @@
             "start": null,
             "useOccurences": true
         },
-        "id": "f5d06531",
-        "message": "Too many arguments (12/6)",
+        "id": "106915b5",
+        "message": "Too many arguments (15/6)",
         "messageId": "R0913",
-        "module": "streamlit.elements.widgets.file_uploader",
-        "obj": "FileUploaderMixin.file_uploader",
+        "module": "streamlit.elements.widgets.radio",
+        "obj": "RadioMixin.radio",
         "occurences": [
             {
                 "column": 4,
-                "endColumn": 21,
-                "endLine": 164,
-                "line": 164
+                "endColumn": 13,
+                "endLine": 150,
+                "line": 150
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/radio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/radio.py"
+    },
+    "10cfd247": {
+        "additionalInfo": {
+            "callString": "callable(on_select)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "10cfd247",
+        "message": "Repeated function call detected (3/2). Consider caching the result: callable(on_select)",
+        "messageId": "CRC001",
+        "module": "vega_charts",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 47,
+                "endColumn": 66,
+                "endLine": 1992,
+                "line": 1992
+            }
+        ],
+        "path": "lib/streamlit/elements/vega_charts.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/vega_charts.py"
+    },
+    "12041f59": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "12041f59",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "time_widgets",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 35,
+                "endColumn": 59,
+                "endLine": 969,
+                "line": 969
+            },
+            {
+                "column": 20,
+                "endColumn": 44,
+                "endLine": 908,
+                "line": 908
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/time_widgets.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/time_widgets.py"
+    },
+    "143bf683": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "143bf683",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.web.server.oauth_authlib_routes",
+        "obj": "AuthCallbackHandler._get_origin_from_secrets",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 32,
+                "endLine": 195,
+                "line": 195
+            }
+        ],
+        "path": "lib/streamlit/web/server/oauth_authlib_routes.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/web/server/oauth_authlib_routes.py"
+    },
+    "172ee9d7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "172ee9d7",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.number_input",
+        "obj": "NumberInputSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 75,
+                "line": 75
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/number_input.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/number_input.py"
+    },
+    "177ece9f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "177ece9f",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.web.server.browser_websocket_handler",
+        "obj": "BrowserWebSocketHandler.select_subprotocol",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 26,
+                "endLine": 131,
+                "line": 131
+            }
+        ],
+        "path": "lib/streamlit/web/server/browser_websocket_handler.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/web/server/browser_websocket_handler.py"
+    },
+    "1958026e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1958026e",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.caching.storage.dummy_cache_storage",
+        "obj": "DummyCacheStorage.get",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 43,
+                "line": 43
+            }
+        ],
+        "path": "lib/streamlit/runtime/caching/storage/dummy_cache_storage.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/caching/storage/dummy_cache_storage.py"
+    },
+    "1ab183aa": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1ab183aa",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.runtime.caching.cache_data_api",
+        "obj": "CachedDataFuncInfo.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 90,
+                "line": 90
+            }
+        ],
+        "path": "lib/streamlit/runtime/caching/cache_data_api.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/caching/cache_data_api.py"
+    },
+    "1b3316d7": {
+        "additionalInfo": {
+            "callString": "current_form_id(dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1b3316d7",
+        "message": "Repeated function call detected (3/2). Consider caching the result: current_form_id(dg)",
+        "messageId": "CRC001",
+        "module": "custom_component",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 49,
+                "endColumn": 68,
+                "endLine": 167,
+                "line": 167
+            }
+        ],
+        "path": "lib/streamlit/components/v1/custom_component.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/components/v1/custom_component.py"
+    },
+    "1c270799": {
+        "additionalInfo": {
+            "callString": "msg.SerializeToString()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1c270799",
+        "message": "Repeated function call detected (2/2). Consider caching the result: msg.SerializeToString()",
+        "messageId": "CRC001",
+        "module": "runtime_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 14,
+                "endColumn": 37,
+                "endLine": 73,
+                "line": 73
+            },
+            {
+                "column": 18,
+                "endColumn": 41,
+                "endLine": 88,
+                "line": 88
+            }
+        ],
+        "path": "lib/streamlit/runtime/runtime_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/runtime_util.py"
+    },
+    "1ceeef84": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1ceeef84",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "file_uploader",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 38,
+                "endColumn": 62,
+                "endLine": 467,
+                "line": 467
+            },
+            {
+                "column": 20,
+                "endColumn": 44,
+                "endLine": 446,
+                "line": 446
             }
         ],
         "path": "lib/streamlit/elements/widgets/file_uploader.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/file_uploader.py"
+    },
+    "1d2b385c": {
+        "additionalInfo": {
+            "callString": "metric.labels.add()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1d2b385c",
+        "message": "Repeated function call detected (2/2). Consider caching the result: metric.labels.add()",
+        "messageId": "CRC001",
+        "module": "stats",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 35,
+                "endLine": 51,
+                "line": 51
+            },
+            {
+                "column": 16,
+                "endColumn": 35,
+                "endLine": 55,
+                "line": 55
+            }
+        ],
+        "path": "lib/streamlit/runtime/stats.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/stats.py"
+    },
+    "1f382753": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1f382753",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.button",
+        "obj": "ButtonMixin.button",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 89,
+                "line": 89
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/button.py",
         "symbol": "too-many-arguments",
         "type": "refactor",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/file_uploader.py"
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/button.py"
     },
     "1fbba654": {
         "additionalInfo": {
@@ -191,6 +791,630 @@
         "type": "refactor",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/button.py"
     },
+    "1fd787cc": {
+        "additionalInfo": {
+            "callString": "_unify_missing_values(df)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 6
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1fd787cc",
+        "message": "Repeated function call detected (6/2). Consider caching the result: _unify_missing_values(df)",
+        "messageId": "CRC001",
+        "module": "dataframe_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 13,
+                "endColumn": 38,
+                "endLine": 1396,
+                "line": 1396
+            },
+            {
+                "column": 15,
+                "endColumn": 40,
+                "endLine": 1381,
+                "line": 1381
+            },
+            {
+                "column": 15,
+                "endColumn": 40,
+                "endLine": 1386,
+                "line": 1386
+            },
+            {
+                "column": 15,
+                "endColumn": 40,
+                "endLine": 1388,
+                "line": 1388
+            },
+            {
+                "column": 15,
+                "endColumn": 40,
+                "endLine": 1384,
+                "line": 1384
+            }
+        ],
+        "path": "lib/streamlit/dataframe_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/dataframe_util.py"
+    },
+    "1ff5eb67": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1ff5eb67",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.deck_gl_json_chart",
+        "obj": "PydeckMixin.pydeck_chart",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 262,
+                "line": 262
+            }
+        ],
+        "path": "lib/streamlit/elements/deck_gl_json_chart.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/deck_gl_json_chart.py"
+    },
+    "25ce7ab6": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "25ce7ab6",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.arrow",
+        "obj": "DataframeSelectionSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 179,
+                "line": 179
+            }
+        ],
+        "path": "lib/streamlit/elements/arrow.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/arrow.py"
+    },
+    "28dfaf52": {
+        "additionalInfo": {
+            "callString": "to_microseconds(timer() - exec_start)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "28dfaf52",
+        "message": "Repeated function call detected (2/2). Consider caching the result: to_microseconds(timer() - exec_start)",
+        "messageId": "CRC001",
+        "module": "metrics_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 37,
+                "endColumn": 74,
+                "endLine": 459,
+                "line": 459
+            }
+        ],
+        "path": "lib/streamlit/runtime/metrics_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/metrics_util.py"
+    },
+    "29e4475c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "29e4475c",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "streamlit.runtime.app_session",
+        "obj": "AppSession._on_scriptrunner_event",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 30,
+                "endLine": 501,
+                "line": 501
+            }
+        ],
+        "path": "lib/streamlit/runtime/app_session.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/app_session.py"
+    },
+    "2d4103cc": {
+        "additionalInfo": {
+            "callString": "to_microseconds(timer() - exec_start)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2d4103cc",
+        "message": "Repeated function call detected (2/2). Consider caching the result: to_microseconds(timer() - exec_start)",
+        "messageId": "CRC001",
+        "module": "metrics_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 37,
+                "endColumn": 74,
+                "endLine": 459,
+                "line": 459
+            }
+        ],
+        "path": "lib/streamlit/runtime/metrics_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/metrics_util.py"
+    },
+    "2f41d34e": {
+        "additionalInfo": {
+            "callString": "f.read()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2f41d34e",
+        "message": "Repeated function call detected (2/2). Consider caching the result: f.read()",
+        "messageId": "CRC001",
+        "module": "metrics_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 25,
+                "endColumn": 33,
+                "endLine": 173,
+                "line": 173
+            },
+            {
+                "column": 25,
+                "endColumn": 33,
+                "endLine": 177,
+                "line": 177
+            }
+        ],
+        "path": "lib/streamlit/runtime/metrics_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/metrics_util.py"
+    },
+    "2fc0f712": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2fc0f712",
+        "message": "Lambda function too long (262 characters, max 100)",
+        "messageId": "LLE001",
+        "module": "secrets",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 57,
+                "endColumn": 9,
+                "endLine": 59,
+                "line": 54
+            }
+        ],
+        "path": "lib/streamlit/runtime/secrets.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/secrets.py"
+    },
+    "300587f6": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "300587f6",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.data_editor",
+        "obj": "DataEditorSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 168,
+                "line": 168
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/data_editor.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/data_editor.py"
+    },
+    "30326c1f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "30326c1f",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 298,
+                "line": 298
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "3077969b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3077969b",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "streamlit.runtime.caching.cache_resource_api",
+        "obj": "CacheResourceAPI.__call__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 227,
+                "line": 227
+            }
+        ],
+        "path": "lib/streamlit/runtime/caching/cache_resource_api.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/caching/cache_resource_api.py"
+    },
+    "3118088a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3118088a",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.deck_gl_json_chart",
+        "obj": "PydeckMixin.pydeck_chart",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 278,
+                "line": 278
+            }
+        ],
+        "path": "lib/streamlit/elements/deck_gl_json_chart.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/deck_gl_json_chart.py"
+    },
+    "31b9a4e8": {
+        "additionalInfo": {
+            "callString": "str(self._page)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "31b9a4e8",
+        "message": "Repeated function call detected (2/2). Consider caching the result: str(self._page)",
+        "messageId": "CRC001",
+        "module": "page",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 42,
+                "endColumn": 57,
+                "endLine": 295,
+                "line": 295
+            },
+            {
+                "column": 63,
+                "endColumn": 78,
+                "endLine": 292,
+                "line": 292
+            }
+        ],
+        "path": "lib/streamlit/navigation/page.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/navigation/page.py"
+    },
+    "32583725": {
+        "additionalInfo": {
+            "callString": "self._manager.get_stats()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "32583725",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._manager.get_stats()",
+        "messageId": "CRC001",
+        "module": "stats_request_handler",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 41,
+                "endLine": 48,
+                "line": 48
+            },
+            {
+                "column": 43,
+                "endColumn": 68,
+                "endLine": 57,
+                "line": 57
+            }
+        ],
+        "path": "lib/streamlit/web/server/stats_request_handler.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/web/server/stats_request_handler.py"
+    },
+    "336f64ea": {
+        "additionalInfo": {
+            "callString": "pa.Table.from_pandas(df)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "336f64ea",
+        "message": "Repeated function call detected (2/2). Consider caching the result: pa.Table.from_pandas(df)",
+        "messageId": "CRC001",
+        "module": "dataframe_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 40,
+                "endLine": 822,
+                "line": 822
+            },
+            {
+                "column": 16,
+                "endColumn": 40,
+                "endLine": 831,
+                "line": 831
+            }
+        ],
+        "path": "lib/streamlit/dataframe_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/dataframe_util.py"
+    },
+    "343fd33c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "343fd33c",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.data_editor",
+        "obj": "DataEditorMixin.data_editor",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 619,
+                "line": 619
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/data_editor.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/data_editor.py"
+    },
+    "3b4fc0f6": {
+        "additionalInfo": {
+            "callString": "callable(on_select)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3b4fc0f6",
+        "message": "Repeated function call detected (3/2). Consider caching the result: callable(on_select)",
+        "messageId": "CRC001",
+        "module": "deck_gl_json_chart",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 56,
+                "endColumn": 75,
+                "endLine": 486,
+                "line": 486
+            }
+        ],
+        "path": "lib/streamlit/elements/deck_gl_json_chart.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/deck_gl_json_chart.py"
+    },
+    "3df4ac97": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3df4ac97",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.audio_input",
+        "obj": "AudioInputSerde.deserialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 77,
+                "line": 77
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/audio_input.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/audio_input.py"
+    },
     "3dff6d86": {
         "additionalInfo": {
             "callString": null,
@@ -212,16 +1436,1852 @@
         "obj": null,
         "occurences": [
             {
-                "column": 64,
-                "endColumn": 13,
-                "endLine": 64,
-                "line": 62
+                "column": 60,
+                "endColumn": 9,
+                "endLine": 62,
+                "line": 60
             }
         ],
         "path": "lib/streamlit/runtime/secrets.py",
         "symbol": "long-lambda-expr",
         "type": "convention",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/secrets.py"
+    },
+    "3e3bc976": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3e3bc976",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 409,
+                "line": 409
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "41fbb685": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "41fbb685",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.config",
+        "obj": "_create_option",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 18,
+                "endLine": 237,
+                "line": 237
+            }
+        ],
+        "path": "lib/streamlit/config.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/config.py"
+    },
+    "45c573dc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "45c573dc",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.text_widgets",
+        "obj": "TextAreaSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 76,
+                "line": 76
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/text_widgets.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/text_widgets.py"
+    },
+    "47baeccb": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "47baeccb",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.runtime_util",
+        "obj": "MessageSizeError._get_message",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 38,
+                "line": 38
+            }
+        ],
+        "path": "lib/streamlit/runtime/runtime_util.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/runtime_util.py"
+    },
+    "47e04f9f": {
+        "additionalInfo": {
+            "callString": "data.limit(max_unevaluated_rows).to_pandas()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "47e04f9f",
+        "message": "Repeated function call detected (2/2). Consider caching the result: data.limit(max_unevaluated_rows).to_pandas()",
+        "messageId": "CRC001",
+        "module": "dataframe_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 59,
+                "endLine": 665,
+                "line": 665
+            }
+        ],
+        "path": "lib/streamlit/dataframe_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/dataframe_util.py"
+    },
+    "48a12b9b": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "48a12b9b",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "color_picker",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 37,
+                "endColumn": 61,
+                "endLine": 245,
+                "line": 245
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/color_picker.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/color_picker.py"
+    },
+    "4971d3a7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4971d3a7",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "hashing",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 82,
+                "endLine": 429,
+                "line": 429
+            }
+        ],
+        "path": "lib/streamlit/runtime/caching/hashing.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/caching/hashing.py"
+    },
+    "4a34a08c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4a34a08c",
+        "message": "Too many arguments (16/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.text_widgets",
+        "obj": "TextWidgetsMixin.text_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 82,
+                "line": 82
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/text_widgets.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/text_widgets.py"
+    },
+    "4c0eb49d": {
+        "additionalInfo": {
+            "callString": "data.read()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4c0eb49d",
+        "message": "Repeated function call detected (3/2). Consider caching the result: data.read()",
+        "messageId": "CRC001",
+        "module": "button",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 33,
+                "endLine": 1090,
+                "line": 1090
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/button.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/button.py"
+    },
+    "4d2d0e0d": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4d2d0e0d",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "checkbox",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 33,
+                "endColumn": 57,
+                "endLine": 340,
+                "line": 340
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/checkbox.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/checkbox.py"
+    },
+    "4e2c9fc7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4e2c9fc7",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.time_widgets",
+        "obj": "TimeWidgetsMixin.time_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 352,
+                "line": 352
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/time_widgets.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/time_widgets.py"
+    },
+    "4e9367ee": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4e9367ee",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.deck_gl_json_chart",
+        "obj": "PydeckMixin.pydeck_chart",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 291,
+                "line": 291
+            }
+        ],
+        "path": "lib/streamlit/elements/deck_gl_json_chart.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/deck_gl_json_chart.py"
+    },
+    "4f9c48cd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4f9c48cd",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "streamlit.runtime.app_session",
+        "obj": "AppSession._handle_scriptrunner_event_on_event_loop",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 48,
+                "endLine": 531,
+                "line": 531
+            }
+        ],
+        "path": "lib/streamlit/runtime/app_session.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/app_session.py"
+    },
+    "501a82f8": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "501a82f8",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.state.query_params_proxy",
+        "obj": "QueryParamsProxy.get_all",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 113,
+                "line": 113
+            }
+        ],
+        "path": "lib/streamlit/runtime/state/query_params_proxy.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/state/query_params_proxy.py"
+    },
+    "5044ab12": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5044ab12",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "streamlit.config_option",
+        "obj": "ConfigOption.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 98,
+                "line": 98
+            }
+        ],
+        "path": "lib/streamlit/config_option.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/config_option.py"
+    },
+    "5170fe2d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5170fe2d",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.color_picker",
+        "obj": "ColorPickerSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 58,
+                "line": 58
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/color_picker.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/color_picker.py"
+    },
+    "54314d57": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "54314d57",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.state.session_state_proxy",
+        "obj": "SessionStateProxy.to_dict",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 144,
+                "line": 144
+            }
+        ],
+        "path": "lib/streamlit/runtime/state/session_state_proxy.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/state/session_state_proxy.py"
+    },
+    "54f8faef": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "54f8faef",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.file_uploader",
+        "obj": "FileUploaderMixin.file_uploader",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 181,
+                "line": 181
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/file_uploader.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/file_uploader.py"
+    },
+    "56365b92": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "56365b92",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 431,
+                "line": 431
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "58cfa62a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "58cfa62a",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.web.server.browser_websocket_handler",
+        "obj": "BrowserWebSocketHandler.get_compression_options",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 31,
+                "endLine": 196,
+                "line": 196
+            }
+        ],
+        "path": "lib/streamlit/web/server/browser_websocket_handler.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/web/server/browser_websocket_handler.py"
+    },
+    "596f520e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "596f520e",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.arrow",
+        "obj": "ArrowMixin.dataframe",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 242,
+                "line": 242
+            }
+        ],
+        "path": "lib/streamlit/elements/arrow.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/arrow.py"
+    },
+    "5c00c651": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5c00c651",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "data_editor",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 48,
+                "endLine": 981,
+                "line": 981
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/data_editor.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/data_editor.py"
+    },
+    "5cdf1131": {
+        "additionalInfo": {
+            "callString": "callable(on_select)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5cdf1131",
+        "message": "Repeated function call detected (3/2). Consider caching the result: callable(on_select)",
+        "messageId": "CRC001",
+        "module": "arrow",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 26,
+                "endColumn": 45,
+                "endLine": 548,
+                "line": 548
+            },
+            {
+                "column": 56,
+                "endColumn": 75,
+                "endLine": 537,
+                "line": 537
+            }
+        ],
+        "path": "lib/streamlit/elements/arrow.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/arrow.py"
+    },
+    "5dd92db4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5dd92db4",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.text_widgets",
+        "obj": "TextInputSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 65,
+                "line": 65
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/text_widgets.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/text_widgets.py"
+    },
+    "5e75babf": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5e75babf",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.radio",
+        "obj": "RadioMixin.radio",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 90,
+                "line": 90
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/radio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/radio.py"
+    },
+    "60161610": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "60161610",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.checkbox",
+        "obj": "CheckboxMixin.checkbox",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 65,
+                "line": 65
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/checkbox.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/checkbox.py"
+    },
+    "62ee79a7": {
+        "additionalInfo": {
+            "callString": "name.lower()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "62ee79a7",
+        "message": "Repeated function call detected (2/2). Consider caching the result: name.lower()",
+        "messageId": "CRC001",
+        "module": "chat",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 33,
+                "endLine": 334,
+                "line": 334
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/chat.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/chat.py"
+    },
+    "6465fcf0": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6465fcf0",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.web.server.media_file_handler",
+        "obj": "MediaFileHandler.get_modified_time",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 25,
+                "endLine": 110,
+                "line": 110
+            }
+        ],
+        "path": "lib/streamlit/web/server/media_file_handler.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/web/server/media_file_handler.py"
+    },
+    "64cfb482": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "64cfb482",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.media",
+        "obj": "MediaMixin.video",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 225,
+                "line": 225
+            }
+        ],
+        "path": "lib/streamlit/elements/media.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/media.py"
+    },
+    "64fa7f98": {
+        "additionalInfo": {
+            "callString": "timer()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "64fa7f98",
+        "message": "Repeated function call detected (3/2). Consider caching the result: timer()",
+        "messageId": "CRC001",
+        "module": "metrics_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 28,
+                "endLine": 401,
+                "line": 401
+            },
+            {
+                "column": 53,
+                "endColumn": 60,
+                "endLine": 459,
+                "line": 459
+            }
+        ],
+        "path": "lib/streamlit/runtime/metrics_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/metrics_util.py"
+    },
+    "66156a4b": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "66156a4b",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "audio_input",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 44,
+                "endLine": 237,
+                "line": 237
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/audio_input.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/audio_input.py"
+    },
+    "662b0201": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "662b0201",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.secrets",
+        "obj": "Secrets._parse_directory",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 278,
+                "line": 278
+            }
+        ],
+        "path": "lib/streamlit/runtime/secrets.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/secrets.py"
+    },
+    "67d0c560": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "67d0c560",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.arrow",
+        "obj": "DataframeSelectionSerde.deserialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 163,
+                "line": 163
+            }
+        ],
+        "path": "lib/streamlit/elements/arrow.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/arrow.py"
+    },
+    "684ba73c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "684ba73c",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.code",
+        "obj": "CodeMixin.code",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 37,
+                "line": 37
+            }
+        ],
+        "path": "lib/streamlit/elements/code.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/code.py"
+    },
+    "69d170d5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "69d170d5",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.data_editor",
+        "obj": "DataEditorMixin.data_editor",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 577,
+                "line": 577
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/data_editor.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/data_editor.py"
+    },
+    "70b96e40": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "70b96e40",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.runtime.caching.cache_resource_api",
+        "obj": "CachedResourceFuncInfo.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 146,
+                "line": 146
+            }
+        ],
+        "path": "lib/streamlit/runtime/caching/cache_resource_api.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/caching/cache_resource_api.py"
+    },
+    "74745eb3": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "74745eb3",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.user_info",
+        "obj": "UserInfoProxy.to_dict",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 510,
+                "line": 510
+            }
+        ],
+        "path": "lib/streamlit/user_info.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/user_info.py"
+    },
+    "75efd7fe": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "75efd7fe",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.iframe",
+        "obj": "marshall",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 12,
+                "endLine": 193,
+                "line": 193
+            }
+        ],
+        "path": "lib/streamlit/elements/iframe.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/iframe.py"
+    },
+    "7ade4ebd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7ade4ebd",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.lib.column_types",
+        "obj": "CheckboxColumn",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 18,
+                "endLine": 788,
+                "line": 788
+            }
+        ],
+        "path": "lib/streamlit/elements/lib/column_types.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/lib/column_types.py"
+    },
+    "7d8603c0": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7d8603c0",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.secrets",
+        "obj": "Secrets._parse_toml_file",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 250,
+                "line": 250
+            }
+        ],
+        "path": "lib/streamlit/runtime/secrets.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/secrets.py"
+    },
+    "7f721fe7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7f721fe7",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.state.query_params_proxy",
+        "obj": "QueryParamsProxy.to_dict",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 148,
+                "line": 148
+            }
+        ],
+        "path": "lib/streamlit/runtime/state/query_params_proxy.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/state/query_params_proxy.py"
+    },
+    "806ca59a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "806ca59a",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.number_input",
+        "obj": "NumberInputMixin.number_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 93,
+                "line": 93
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/number_input.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/number_input.py"
+    },
+    "81d397d2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "81d397d2",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.app_session",
+        "obj": "AppSession._create_exception_message",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 33,
+                "endLine": 777,
+                "line": 777
+            }
+        ],
+        "path": "lib/streamlit/runtime/app_session.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/app_session.py"
+    },
+    "81e8879e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "81e8879e",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.plotly_chart",
+        "obj": "PlotlyMixin.plotly_chart",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 306,
+                "line": 306
+            }
+        ],
+        "path": "lib/streamlit/elements/plotly_chart.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/plotly_chart.py"
+    },
+    "82a308bb": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "82a308bb",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.caching.storage.dummy_cache_storage",
+        "obj": "MemoryCacheStorageManager.create",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 28,
+                "line": 28
+            }
+        ],
+        "path": "lib/streamlit/runtime/caching/storage/dummy_cache_storage.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/caching/storage/dummy_cache_storage.py"
+    },
+    "8547f8e4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8547f8e4",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.data_editor",
+        "obj": "DataEditorMixin.data_editor",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 598,
+                "line": 598
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/data_editor.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/data_editor.py"
+    },
+    "8644f5a0": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8644f5a0",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.camera_input",
+        "obj": "CameraInputMixin.camera_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 89,
+                "line": 89
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/camera_input.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/camera_input.py"
+    },
+    "88168186": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "88168186",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.app_session",
+        "obj": "AppSession._populate_app_pages",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 27,
+                "endLine": 892,
+                "line": 892
+            }
+        ],
+        "path": "lib/streamlit/runtime/app_session.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/app_session.py"
+    },
+    "8a9eb589": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8a9eb589",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.form",
+        "obj": "FormMixin.form",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 12,
+                "endLine": 71,
+                "line": 71
+            }
+        ],
+        "path": "lib/streamlit/elements/form.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/form.py"
+    },
+    "8bc1b1fe": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8bc1b1fe",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.lib.built_in_chart_utils",
+        "obj": "generate_chart",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 18,
+                "endLine": 148,
+                "line": 148
+            }
+        ],
+        "path": "lib/streamlit/elements/lib/built_in_chart_utils.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/lib/built_in_chart_utils.py"
+    },
+    "8cbd1904": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8cbd1904",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.scriptrunner.script_runner",
+        "obj": "ScriptRunner._new_module",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 754,
+                "line": 754
+            }
+        ],
+        "path": "lib/streamlit/runtime/scriptrunner/script_runner.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/scriptrunner/script_runner.py"
+    },
+    "91b157ab": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "91b157ab",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.map",
+        "obj": "MapMixin.map",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 11,
+                "endLine": 79,
+                "line": 79
+            }
+        ],
+        "path": "lib/streamlit/elements/map.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/map.py"
+    },
+    "942ea592": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "942ea592",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.arrow",
+        "obj": "ArrowMixin.dataframe",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 259,
+                "line": 259
+            }
+        ],
+        "path": "lib/streamlit/elements/arrow.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/arrow.py"
+    },
+    "95ace02e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "95ace02e",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.plotly_chart",
+        "obj": "PlotlyMixin.plotly_chart",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 289,
+                "line": 289
+            }
+        ],
+        "path": "lib/streamlit/elements/plotly_chart.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/plotly_chart.py"
+    },
+    "9a9dc723": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9a9dc723",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.multiselect",
+        "obj": "MultiSelectMixin.multiselect",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 156,
+                "line": 156
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/multiselect.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/multiselect.py"
+    },
+    "9b6400c7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9b6400c7",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.metric",
+        "obj": "MetricMixin.metric",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 53,
+                "line": 53
+            }
+        ],
+        "path": "lib/streamlit/elements/metric.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/metric.py"
+    },
+    "9c934a61": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "9c934a61",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.button_group",
+        "obj": "ButtonGroupMixin._button_group",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 912,
+                "line": 912
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/button_group.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/button_group.py"
     },
     "9fed98e9": {
         "additionalInfo": {
@@ -244,16 +3304,866 @@
         "obj": null,
         "occurences": [
             {
-                "column": 58,
-                "endColumn": 9,
-                "endLine": 53,
-                "line": 48
+                "column": 62,
+                "endColumn": 13,
+                "endLine": 55,
+                "line": 50
             }
         ],
         "path": "lib/streamlit/runtime/secrets.py",
         "symbol": "long-lambda-expr",
         "type": "convention",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/secrets.py"
+    },
+    "a1793283": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a1793283",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.time_widgets",
+        "obj": "TimeInputSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 278,
+                "line": 278
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/time_widgets.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/time_widgets.py"
+    },
+    "a3920462": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a3920462",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 385,
+                "line": 385
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "a72861fd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a72861fd",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.camera_input",
+        "obj": "CameraInputSerde.deserialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 77,
+                "line": 77
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/camera_input.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/camera_input.py"
+    },
+    "a79bae39": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a79bae39",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.file_uploader",
+        "obj": "FileUploaderMixin.file_uploader",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 241,
+                "line": 241
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/file_uploader.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/file_uploader.py"
+    },
+    "a9610835": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a9610835",
+        "message": "Dictionary chain too long (3/3)",
+        "messageId": "LEC001",
+        "module": "connection_factory",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 31,
+                "endColumn": 77,
+                "endLine": 394,
+                "line": 394
+            }
+        ],
+        "path": "lib/streamlit/runtime/connection_factory.py",
+        "symbol": "long-element-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/connection_factory.py"
+    },
+    "abb21840": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "abb21840",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 320,
+                "line": 320
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "acbdca5e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "acbdca5e",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 276,
+                "line": 276
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "afac334c": {
+        "additionalInfo": {
+            "callString": "str(value)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "afac334c",
+        "message": "Repeated function call detected (2/2). Consider caching the result: str(value)",
+        "messageId": "CRC001",
+        "module": "color_picker",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 37,
+                "endColumn": 47,
+                "endLine": 244,
+                "line": 244
+            },
+            {
+                "column": 18,
+                "endColumn": 28,
+                "endLine": 216,
+                "line": 216
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/color_picker.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/color_picker.py"
+    },
+    "afe61eab": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "afe61eab",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.number_input",
+        "obj": "NumberInputMixin.number_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 119,
+                "line": 119
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/number_input.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/number_input.py"
+    },
+    "b4b48cfc": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b4b48cfc",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "page_config",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 34,
+                "endLine": 61,
+                "line": 61
+            }
+        ],
+        "path": "lib/streamlit/commands/page_config.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/commands/page_config.py"
+    },
+    "b54f5539": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b54f5539",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "time_widgets",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 35,
+                "endColumn": 59,
+                "endLine": 546,
+                "line": 546
+            },
+            {
+                "column": 20,
+                "endColumn": 44,
+                "endLine": 527,
+                "line": 527
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/time_widgets.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/time_widgets.py"
+    },
+    "b695a0e7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b695a0e7",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.image",
+        "obj": "ImageMixin.image",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 48,
+                "line": 48
+            }
+        ],
+        "path": "lib/streamlit/elements/image.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/image.py"
+    },
+    "b7efe586": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b7efe586",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "radio",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 30,
+                "endColumn": 54,
+                "endLine": 402,
+                "line": 402
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/radio.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/radio.py"
+    },
+    "b829ba95": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b829ba95",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 232,
+                "line": 232
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "bb85fe29": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bb85fe29",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.number_input",
+        "obj": "NumberInputMixin.number_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 143,
+                "line": 143
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/number_input.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/number_input.py"
+    },
+    "bd88733d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bd88733d",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 342,
+                "line": 342
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "bda31108": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bda31108",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.checkbox",
+        "obj": "CheckboxSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 56,
+                "line": 56
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/checkbox.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/checkbox.py"
+    },
+    "bee5f1fb": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bee5f1fb",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.file_uploader",
+        "obj": "FileUploaderSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 128,
+                "line": 128
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/file_uploader.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/file_uploader.py"
+    },
+    "c132b25d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c132b25d",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.file_uploader",
+        "obj": "FileUploaderMixin.file_uploader",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 205,
+                "line": 205
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/file_uploader.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/file_uploader.py"
+    },
+    "c1fbc280": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c1fbc280",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.state.query_params_proxy",
+        "obj": "QueryParamsProxy.from_dict",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 176,
+                "line": 176
+            }
+        ],
+        "path": "lib/streamlit/runtime/state/query_params_proxy.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/state/query_params_proxy.py"
+    },
+    "c292cadf": {
+        "additionalInfo": {
+            "callString": "_dirfiles(dir_path, glob_pattern)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c292cadf",
+        "message": "Repeated function call detected (2/2). Consider caching the result: _dirfiles(dir_path, glob_pattern)",
+        "messageId": "CRC001",
+        "module": "util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 48,
+                "endLine": 137,
+                "line": 137
+            },
+            {
+                "column": 23,
+                "endColumn": 56,
+                "endLine": 140,
+                "line": 140
+            }
+        ],
+        "path": "lib/streamlit/watcher/util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/watcher/util.py"
+    },
+    "c29f87c9": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c29f87c9",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.lib.image_utils",
+        "obj": "marshall_images",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 19,
+                "endLine": 345,
+                "line": 345
+            }
+        ],
+        "path": "lib/streamlit/elements/lib/image_utils.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/lib/image_utils.py"
+    },
+    "c3d0e94c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c3d0e94c",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.number_input",
+        "obj": "NumberInputMixin.number_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 169,
+                "line": 169
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/number_input.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/number_input.py"
+    },
+    "c94d201e": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c94d201e",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "select_slider",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 31,
+                "endColumn": 55,
+                "endLine": 391,
+                "line": 391
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/select_slider.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/select_slider.py"
+    },
+    "cbedfa91": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cbedfa91",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.camera_input",
+        "obj": "CameraInputSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 60,
+                "line": 60
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/camera_input.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/camera_input.py"
+    },
+    "cf38b9c3": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cf38b9c3",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.data_editor",
+        "obj": "DataEditorSerde.deserialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 140,
+                "line": 140
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/data_editor.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/data_editor.py"
     },
     "d25eb7e8": {
         "additionalInfo": {
@@ -287,6 +4197,632 @@
         "type": "convention",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/time_widgets.py"
     },
+    "d2e68a85": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d2e68a85",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.memory_media_file_storage",
+        "obj": "MemoryMediaFileStorage._read_file",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 161,
+                "line": 161
+            }
+        ],
+        "path": "lib/streamlit/runtime/memory_media_file_storage.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/memory_media_file_storage.py"
+    },
+    "d59f2066": {
+        "additionalInfo": {
+            "callString": "df.copy()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d59f2066",
+        "message": "Repeated function call detected (2/2). Consider caching the result: df.copy()",
+        "messageId": "CRC001",
+        "module": "dataframe_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 31,
+                "endLine": 1142,
+                "line": 1142
+            },
+            {
+                "column": 26,
+                "endColumn": 35,
+                "endLine": 1127,
+                "line": 1127
+            }
+        ],
+        "path": "lib/streamlit/dataframe_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/dataframe_util.py"
+    },
+    "d70ed2aa": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d70ed2aa",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.time_widgets",
+        "obj": "TimeWidgetsMixin.time_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 18,
+                "endLine": 334,
+                "line": 334
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/time_widgets.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/time_widgets.py"
+    },
+    "d9558f07": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d9558f07",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "streamlit.runtime.caching.legacy_cache_api",
+        "obj": "cache",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 9,
+                "endLine": 34,
+                "line": 34
+            }
+        ],
+        "path": "lib/streamlit/runtime/caching/legacy_cache_api.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/caching/legacy_cache_api.py"
+    },
+    "db352079": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "db352079",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.media",
+        "obj": "marshall_audio",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 18,
+                "endLine": 758,
+                "line": 758
+            }
+        ],
+        "path": "lib/streamlit/elements/media.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/media.py"
+    },
+    "db4627ea": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "db4627ea",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.delta_generator",
+        "obj": "DeltaGenerator._count_num_of_parent_columns",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 36,
+                "endLine": 401,
+                "line": 401
+            }
+        ],
+        "path": "lib/streamlit/delta_generator.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/delta_generator.py"
+    },
+    "dd143ad1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "dd143ad1",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.app_session",
+        "obj": "AppSession._create_file_change_message",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 35,
+                "endLine": 710,
+                "line": 710
+            }
+        ],
+        "path": "lib/streamlit/runtime/app_session.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/app_session.py"
+    },
+    "dd5dec64": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "dd5dec64",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.plotly_chart",
+        "obj": "PlotlyChartSelectionSerde.deserialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 217,
+                "line": 217
+            }
+        ],
+        "path": "lib/streamlit/elements/plotly_chart.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/plotly_chart.py"
+    },
+    "e0e6df27": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e0e6df27",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "streamlit.runtime.state.widgets",
+        "obj": "register_widget",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 19,
+                "endLine": 36,
+                "line": 36
+            }
+        ],
+        "path": "lib/streamlit/runtime/state/widgets.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/state/widgets.py"
+    },
+    "e35dca63": {
+        "additionalInfo": {
+            "callString": "timer()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 3
+        },
+        "confidence": "HIGH",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e35dca63",
+        "message": "Repeated function call detected (3/2). Consider caching the result: timer()",
+        "messageId": "CRC001",
+        "module": "metrics_util",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 28,
+                "endLine": 401,
+                "line": 401
+            },
+            {
+                "column": 53,
+                "endColumn": 60,
+                "endLine": 459,
+                "line": 459
+            }
+        ],
+        "path": "lib/streamlit/runtime/metrics_util.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/metrics_util.py"
+    },
+    "e386115c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e386115c",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.number_input",
+        "obj": "NumberInputMixin.number_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 195,
+                "line": 195
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/number_input.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/number_input.py"
+    },
+    "e4498442": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e4498442",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.app_session",
+        "obj": "AppSession._create_script_finished_message",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 39,
+                "endLine": 769,
+                "line": 769
+            }
+        ],
+        "path": "lib/streamlit/runtime/app_session.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/app_session.py"
+    },
+    "e80a2465": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e80a2465",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.file_uploader",
+        "obj": "FileUploaderMixin.file_uploader",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 224,
+                "line": 224
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/file_uploader.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/file_uploader.py"
+    },
+    "ec631829": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ec631829",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.runtime.runtime",
+        "obj": "Runtime._send_message",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 679,
+                "line": 679
+            }
+        ],
+        "path": "lib/streamlit/runtime/runtime.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/runtime.py"
+    },
+    "ec845074": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ec845074",
+        "message": "Too many arguments (17/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.number_input",
+        "obj": "NumberInputMixin.number_input",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 217,
+                "line": 217
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/number_input.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/number_input.py"
+    },
+    "eda69379": {
+        "additionalInfo": {
+            "callString": "self._requests.on_scriptrunner_ready()",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "eda69379",
+        "message": "Repeated function call detected (2/2). Consider caching the result: self._requests.on_scriptrunner_ready()",
+        "messageId": "CRC001",
+        "module": "script_runner",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 18,
+                "endColumn": 56,
+                "endLine": 372,
+                "line": 372
+            },
+            {
+                "column": 22,
+                "endColumn": 60,
+                "endLine": 379,
+                "line": 379
+            }
+        ],
+        "path": "lib/streamlit/runtime/scriptrunner/script_runner.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/runtime/scriptrunner/script_runner.py"
+    },
+    "ede042f5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ede042f5",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 363,
+                "line": 363
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "ef660066": {
+        "additionalInfo": {
+            "callString": "current_form_id(self.dg)",
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": 2
+        },
+        "confidence": "MEDIUM",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ef660066",
+        "message": "Repeated function call detected (2/2). Consider caching the result: current_form_id(self.dg)",
+        "messageId": "CRC001",
+        "module": "number_input",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 37,
+                "endColumn": 61,
+                "endLine": 586,
+                "line": 586
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/number_input.py",
+        "symbol": "cached-repeated-calls",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/number_input.py"
+    },
+    "efac49af": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "efac49af",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.deck_gl_json_chart",
+        "obj": "PydeckSelectionSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 256,
+                "line": 256
+            }
+        ],
+        "path": "lib/streamlit/elements/deck_gl_json_chart.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/deck_gl_json_chart.py"
+    },
     "f1d47f3f": {
         "additionalInfo": {
             "callString": null,
@@ -319,7 +4855,7 @@
         "type": "convention",
         "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/dataframe_util.py"
     },
-    "b4b48cfc": {
+    "f5d06531": {
         "additionalInfo": {
             "callString": null,
             "concatTarget": null,
@@ -329,26 +4865,282 @@
         "confidence": "UNDEFINED",
         "energyMetadata": {
             "end": null,
-            "isFunc": false,
+            "isFunc": true,
             "start": null,
             "useOccurences": true
         },
-        "id": "b4b48cfc",
-        "message": "Method chain too long (3/3)",
-        "messageId": "LMC001",
-        "module": "page_config",
-        "obj": null,
+        "id": "f5d06531",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.file_uploader",
+        "obj": "FileUploaderMixin.file_uploader",
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 34,
-                "endLine": 61,
-                "line": 61
+                "column": 4,
+                "endColumn": 21,
+                "endLine": 162,
+                "line": 162
             }
         ],
-        "path": "lib/streamlit/commands/page_config.py",
-        "symbol": "long-message-chain",
-        "type": "convention",
-        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/commands/page_config.py"
+        "path": "lib/streamlit/elements/widgets/file_uploader.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/file_uploader.py"
+    },
+    "f7e79578": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f7e79578",
+        "message": "Too many arguments (12/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.arrow",
+        "obj": "ArrowMixin.dataframe",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 225,
+                "line": 225
+            }
+        ],
+        "path": "lib/streamlit/elements/arrow.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/arrow.py"
+    },
+    "f8c1a4a8": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f8c1a4a8",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.vega_charts",
+        "obj": "VegaLiteStateSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 248,
+                "line": 248
+            }
+        ],
+        "path": "lib/streamlit/elements/vega_charts.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/vega_charts.py"
+    },
+    "f97679da": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f97679da",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.button",
+        "obj": "ButtonSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 80,
+                "line": 80
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/button.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/button.py"
+    },
+    "fa3c3c7e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "fa3c3c7e",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.slider",
+        "obj": "SliderMixin.slider",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 14,
+                "endLine": 254,
+                "line": 254
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/slider.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/slider.py"
+    },
+    "fc22786f": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "fc22786f",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.color_picker",
+        "obj": "ColorPickerMixin.color_picker",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 67,
+                "line": 67
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/color_picker.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/color_picker.py"
+    },
+    "fc85aa71": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "fc85aa71",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.radio",
+        "obj": "RadioMixin.radio",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 110,
+                "line": 110
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/radio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/radio.py"
+    },
+    "fdd64247": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "fdd64247",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "streamlit.elements.widgets.audio_input",
+        "obj": "AudioInputSerde.serialize",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 17,
+                "endLine": 60,
+                "line": 60
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/audio_input.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/audio_input.py"
+    },
+    "feb1d061": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "feb1d061",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "streamlit.elements.widgets.radio",
+        "obj": "RadioMixin.radio",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 13,
+                "endLine": 130,
+                "line": 130
+            }
+        ],
+        "path": "lib/streamlit/elements/widgets/radio.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/streamlit/lib/streamlit/elements/widgets/radio.py"
     }
 }

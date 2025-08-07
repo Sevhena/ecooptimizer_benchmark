@@ -15,7 +15,7 @@ index 4ccc869..0c8f325 100644
                  if len(self._readbuffer) > 2:
                      # check upgrade
 -                    if b"connection" in str(self._readbuffer).lower().encode('utf-8'):
-+                    with EmissionsTracker(project_name='paho.mqtt.python-benchmark', experiment_id='paho.mqtt.python_LMC001_89b86924', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/long-message-chain/89b86924.csv') as tracker:
++                    with EmissionsTracker(project_name='paho.mqtt.python-benchmark', measure_power_secs=1, experiment_id='paho.mqtt.python_LMC001_89b86924', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/long-message-chain/89b86924.csv') as tracker:
 +                        _carbon_wrapped_82393ceb = str(self._readbuffer).lower().encode('utf-8')
 +                    if b"connection" in _carbon_wrapped_82393ceb:
                          if b"upgrade" not in str(self._readbuffer).lower().encode('utf-8'):
