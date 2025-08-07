@@ -375,7 +375,10 @@ def main():
     else:
         target_repos = selected_repos
 
-    exclusions = [SMELL_TYPES_REF[smell] for smell in args.exclude]
+    if args.exclude:
+        exclusions = [SMELL_TYPES_REF[smell] for smell in args.exclude]
+    else:
+        exclusions = []
 
     # --- Smell Filtering ---
     smells_to_run = {}
