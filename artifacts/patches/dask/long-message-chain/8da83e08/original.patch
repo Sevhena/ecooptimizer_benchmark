@@ -5,8 +5,8 @@ index 060b66a37..c0bb4103f 100644
 @@ -17,6 +17,7 @@ from dask.dataframe._compat import (
  
  #  preserve compatibility while moving dispatch objects
- from dask.dataframe.dispatch import (  # noqa: F401
 +from codecarbon import EmissionsTracker
+ from dask.dataframe.dispatch import (  # noqa: F401
      concat,
      concat_dispatch,
      group_split_dispatch,
