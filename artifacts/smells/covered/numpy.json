@@ -26,9 +26,10 @@
         "line": 27
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/function_base.py",
+    "path": "numpy/_core/function_base.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/function_base.py"
   },
   "003b92cc": {
     "additionalInfo": {
@@ -57,9 +58,10 @@
         "line": 1520
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/multiarray.py",
+    "path": "numpy/_core/multiarray.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/multiarray.py"
   },
   "0176918d": {
     "additionalInfo": {
@@ -94,9 +96,10 @@
         "line": 2151
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/numeric.py",
+    "path": "numpy/_core/numeric.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/numeric.py"
   },
   "01a8d794": {
     "additionalInfo": {
@@ -125,9 +128,10 @@
         "line": 233
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/gnu.py",
+    "path": "numpy/distutils/fcompiler/gnu.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/gnu.py"
   },
   "01c42185": {
     "additionalInfo": {
@@ -156,9 +160,10 @@
         "line": 59
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py",
+    "path": "numpy/distutils/fcompiler/arm.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py"
   },
   "01cdee6a": {
     "additionalInfo": {
@@ -187,9 +192,10 @@
         "line": 459
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py",
+    "path": "numpy/lib/_polynomial_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py"
   },
   "025523f4": {
     "additionalInfo": {
@@ -224,9 +230,10 @@
         "line": 655
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py",
+    "path": "numpy/_core/_internal.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py"
   },
   "0299f932": {
     "additionalInfo": {
@@ -261,9 +268,10 @@
         "line": 575
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_utils_impl.py",
+    "path": "numpy/lib/_utils_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_utils_impl.py"
   },
   "033f71f0": {
     "additionalInfo": {
@@ -292,9 +300,10 @@
         "line": 659
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py",
+    "path": "numpy/ma/mrecords.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py"
   },
   "045db8fc": {
     "additionalInfo": {
@@ -323,9 +332,10 @@
         "line": 1895
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "050c312a": {
     "additionalInfo": {
@@ -354,9 +364,10 @@
         "line": 1043
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "string-concat-loop",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "05711d0f": {
     "additionalInfo": {
@@ -385,9 +396,10 @@
         "line": 5785
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "06db73ba": {
     "additionalInfo": {
@@ -416,9 +428,10 @@
         "line": 4073
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py",
+    "path": "numpy/_core/fromnumeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py"
   },
   "08634baa": {
     "additionalInfo": {
@@ -453,9 +466,10 @@
         "line": 1599
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "09d69123": {
     "additionalInfo": {
@@ -490,9 +504,10 @@
         "line": 1066
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "0aa7cb84": {
     "additionalInfo": {
@@ -521,9 +536,10 @@
         "line": 413
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py",
+    "path": "numpy/lib/_datasource.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py"
   },
   "0b294ed9": {
     "additionalInfo": {
@@ -552,9 +568,10 @@
         "line": 2699
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "0be51fd5": {
     "additionalInfo": {
@@ -583,9 +600,10 @@
         "line": 79
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_pytesttester.py",
+    "path": "numpy/_pytesttester.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_pytesttester.py"
   },
   "0c2a52df": {
     "additionalInfo": {
@@ -614,9 +632,10 @@
         "line": 63
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_array_api_info.py",
+    "path": "numpy/_array_api_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_array_api_info.py"
   },
   "0d27be98": {
     "additionalInfo": {
@@ -651,9 +670,10 @@
         "line": 1608
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "0eba46e8": {
     "additionalInfo": {
@@ -682,9 +702,10 @@
         "line": 2457
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "0f0e87e1": {
     "additionalInfo": {
@@ -713,9 +734,10 @@
         "line": 269
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py",
+    "path": "numpy/lib/_datasource.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py"
   },
   "0f5b8088": {
     "additionalInfo": {
@@ -744,9 +766,10 @@
         "line": 106
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py",
+    "path": "numpy/distutils/fcompiler/compaq.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py"
   },
   "0f68047b": {
     "additionalInfo": {
@@ -775,9 +798,10 @@
         "line": 44
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py",
+    "path": "numpy/distutils/fcompiler/compaq.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py"
   },
   "0f8fc864": {
     "additionalInfo": {
@@ -812,9 +836,10 @@
         "line": 692
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "11beb3dc": {
     "additionalInfo": {
@@ -843,9 +868,10 @@
         "line": 53
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py",
+    "path": "numpy/distutils/fcompiler/arm.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py"
   },
   "120ac2fc": {
     "additionalInfo": {
@@ -874,9 +900,10 @@
         "line": 114
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/mingw32ccompiler.py",
+    "path": "numpy/distutils/mingw32ccompiler.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/mingw32ccompiler.py"
   },
   "125e5cfc": {
     "additionalInfo": {
@@ -911,9 +938,10 @@
         "line": 2452
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "12dd0cbf": {
     "additionalInfo": {
@@ -948,9 +976,10 @@
         "line": 980
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py",
+    "path": "numpy/lib/_format_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py"
   },
   "13bfce52": {
     "additionalInfo": {
@@ -985,9 +1014,10 @@
         "line": 869
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_iotools.py",
+    "path": "numpy/lib/_iotools.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_iotools.py"
   },
   "13ed3231": {
     "additionalInfo": {
@@ -1022,9 +1052,10 @@
         "line": 176
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py",
+    "path": "numpy/_core/_internal.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py"
   },
   "156918a9": {
     "additionalInfo": {
@@ -1059,9 +1090,10 @@
         "line": 1308
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py",
+    "path": "numpy/lib/_polynomial_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py"
   },
   "16029ec0": {
     "additionalInfo": {
@@ -1090,9 +1122,10 @@
         "line": 430
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "16872f94": {
     "additionalInfo": {
@@ -1127,9 +1160,10 @@
         "line": 509
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "17e40ee4": {
     "additionalInfo": {
@@ -1164,9 +1198,10 @@
         "line": 1592
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "18604008": {
     "additionalInfo": {
@@ -1195,9 +1230,10 @@
         "line": 2693
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "188c4e49": {
     "additionalInfo": {
@@ -1226,9 +1262,10 @@
         "line": 3328
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py",
+    "path": "numpy/_core/fromnumeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py"
   },
   "1a72f208": {
     "additionalInfo": {
@@ -1257,9 +1294,10 @@
         "line": 5017
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "long-message-chain",
-    "type": "convention"
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "1a8477b9": {
     "additionalInfo": {
@@ -1288,9 +1326,10 @@
         "line": 111
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py",
+    "path": "numpy/distutils/fcompiler/compaq.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py"
   },
   "1b16b69b": {
     "additionalInfo": {
@@ -1319,9 +1358,10 @@
         "line": 396
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/build_src.py",
+    "path": "numpy/distutils/command/build_src.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/build_src.py"
   },
   "1b4b5618": {
     "additionalInfo": {
@@ -1350,9 +1390,10 @@
         "line": 49
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py",
+    "path": "numpy/_core/_methods.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py"
   },
   "1c36d2b3": {
     "additionalInfo": {
@@ -1381,9 +1422,10 @@
         "line": 391
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py",
+    "path": "numpy/distutils/fcompiler/__init__.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py"
   },
   "1ca258d9": {
     "additionalInfo": {
@@ -1412,9 +1454,10 @@
         "line": 113
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py",
+    "path": "numpy/distutils/fcompiler/compaq.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py"
   },
   "1d169402": {
     "additionalInfo": {
@@ -1443,9 +1486,10 @@
         "line": 2153
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/numeric.py",
+    "path": "numpy/_core/numeric.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/numeric.py"
   },
   "1f87b96a": {
     "additionalInfo": {
@@ -1474,9 +1518,10 @@
         "line": 5617
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "20d7b19f": {
     "additionalInfo": {
@@ -1505,9 +1550,10 @@
         "line": 36
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/getlimits.py",
+    "path": "numpy/_core/getlimits.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/getlimits.py"
   },
   "221a1697": {
     "additionalInfo": {
@@ -1536,9 +1582,10 @@
         "line": 394
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/numeric.py",
+    "path": "numpy/_core/numeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/numeric.py"
   },
   "22afb0a3": {
     "additionalInfo": {
@@ -1573,9 +1620,10 @@
         "line": 948
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "231df557": {
     "additionalInfo": {
@@ -1604,9 +1652,10 @@
         "line": 169
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_utils/_inspect.py",
+    "path": "numpy/_utils/_inspect.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_utils/_inspect.py"
   },
   "24089507": {
     "additionalInfo": {
@@ -1635,9 +1684,10 @@
         "line": 33
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/extension.py",
+    "path": "numpy/distutils/extension.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/extension.py"
   },
   "277ce45c": {
     "additionalInfo": {
@@ -1672,9 +1722,10 @@
         "line": 372
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py",
+    "path": "numpy/lib/_arraypad_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py"
   },
   "27935105": {
     "additionalInfo": {
@@ -1703,9 +1754,10 @@
         "line": 299
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py",
+    "path": "numpy/lib/_datasource.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py"
   },
   "27b2d5c4": {
     "additionalInfo": {
@@ -1734,9 +1786,10 @@
         "line": 650
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py",
+    "path": "numpy/distutils/fcompiler/__init__.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py"
   },
   "27c55677": {
     "additionalInfo": {
@@ -1765,9 +1818,10 @@
         "line": 201
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/testutils.py",
+    "path": "numpy/ma/testutils.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/testutils.py"
   },
   "29620294": {
     "additionalInfo": {
@@ -1796,9 +1850,10 @@
         "line": 254
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py",
+    "path": "numpy/_core/_internal.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py"
   },
   "2a0fae95": {
     "additionalInfo": {
@@ -1833,9 +1888,10 @@
         "line": 1301
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "2a32c1a7": {
     "additionalInfo": {
@@ -1864,9 +1920,10 @@
         "line": 1154
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "2a61e075": {
     "additionalInfo": {
@@ -1895,9 +1952,10 @@
         "line": 696
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "string-concat-loop",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "2a76f148": {
     "additionalInfo": {
@@ -1932,9 +1990,10 @@
         "line": 6603
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "2b27a96b": {
     "additionalInfo": {
@@ -1963,9 +2022,10 @@
         "line": 620
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "2b7b9645": {
     "additionalInfo": {
@@ -1994,9 +2054,10 @@
         "line": 44
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/sun.py",
+    "path": "numpy/distutils/fcompiler/sun.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/sun.py"
   },
   "2bacd037": {
     "additionalInfo": {
@@ -2031,9 +2092,10 @@
         "line": 487
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "2bcd6f3d": {
     "additionalInfo": {
@@ -2062,9 +2124,10 @@
         "line": 7233
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "2e0e69b8": {
     "additionalInfo": {
@@ -2093,9 +2156,10 @@
         "line": 1604
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "2ea15b18": {
     "additionalInfo": {
@@ -2124,9 +2188,10 @@
         "line": 2523
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py",
+    "path": "numpy/distutils/system_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py"
   },
   "2eca4810": {
     "additionalInfo": {
@@ -2155,9 +2220,10 @@
         "line": 4829
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "3015f4be": {
     "additionalInfo": {
@@ -2192,9 +2258,10 @@
         "line": 1555
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite_e.py",
+    "path": "numpy/polynomial/hermite_e.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite_e.py"
   },
   "30178085": {
     "additionalInfo": {
@@ -2223,9 +2290,10 @@
         "line": 62
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py",
+    "path": "numpy/distutils/fcompiler/arm.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py"
   },
   "309e22d8": {
     "additionalInfo": {
@@ -2254,9 +2322,10 @@
         "line": 7215
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "31bfd8a3": {
     "additionalInfo": {
@@ -2285,9 +2354,10 @@
         "line": 1666
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "32cee962": {
     "additionalInfo": {
@@ -2316,9 +2386,10 @@
         "line": 6550
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "33f83324": {
     "additionalInfo": {
@@ -2353,9 +2424,10 @@
         "line": 1026
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "34300933": {
     "additionalInfo": {
@@ -2384,9 +2456,10 @@
         "line": 262
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py",
+    "path": "numpy/lib/_datasource.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py"
   },
   "34513d0e": {
     "additionalInfo": {
@@ -2421,9 +2494,10 @@
         "line": 1301
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "3452f271": {
     "additionalInfo": {
@@ -2452,9 +2526,10 @@
         "line": 1417
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "3474e9d5": {
     "additionalInfo": {
@@ -2489,9 +2564,10 @@
         "line": 6982
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "34fd9cf8": {
     "additionalInfo": {
@@ -2520,9 +2596,10 @@
         "line": 1062
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "3b153290": {
     "additionalInfo": {
@@ -2551,9 +2628,10 @@
         "line": 1705
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "3d273c14": {
     "additionalInfo": {
@@ -2582,9 +2660,10 @@
         "line": 5047
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "long-message-chain",
-    "type": "convention"
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "3d27f9c5": {
     "additionalInfo": {
@@ -2613,9 +2692,10 @@
         "line": 644
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "long-message-chain",
-    "type": "convention"
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "3dad5cd8": {
     "additionalInfo": {
@@ -2650,9 +2730,10 @@
         "line": 3439
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "3e80fb48": {
     "additionalInfo": {
@@ -2681,9 +2762,10 @@
         "line": 4079
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "3eaf8412": {
     "additionalInfo": {
@@ -2712,9 +2794,10 @@
         "line": 50
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py",
+    "path": "numpy/distutils/fcompiler/arm.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py"
   },
   "3ed73dcb": {
     "additionalInfo": {
@@ -2749,9 +2832,10 @@
         "line": 523
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py",
+    "path": "numpy/lib/_arraypad_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py"
   },
   "4056ec1f": {
     "additionalInfo": {
@@ -2846,9 +2930,10 @@
         "line": 2098
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "4360fdc6": {
     "additionalInfo": {
@@ -2877,9 +2962,10 @@
         "line": 1902
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "43a07206": {
     "additionalInfo": {
@@ -2914,9 +3000,10 @@
         "line": 8456
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "441f86f3": {
     "additionalInfo": {
@@ -2945,9 +3032,10 @@
         "line": 1602
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "44f0e0b5": {
     "additionalInfo": {
@@ -2982,9 +3070,10 @@
         "line": 30
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/matrixlib/defmatrix.py",
+    "path": "numpy/matrixlib/defmatrix.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/matrixlib/defmatrix.py"
   },
   "450ae8b4": {
     "additionalInfo": {
@@ -3019,9 +3108,10 @@
         "line": 1141
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "45c5fa6e": {
     "additionalInfo": {
@@ -3050,9 +3140,10 @@
         "line": 2968
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "465117ad": {
     "additionalInfo": {
@@ -3087,9 +3178,10 @@
         "line": 629
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "4715240a": {
     "additionalInfo": {
@@ -3118,9 +3210,10 @@
         "line": 252
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py",
+    "path": "numpy/_core/_methods.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py"
   },
   "475e330b": {
     "additionalInfo": {
@@ -3167,9 +3260,10 @@
         "line": 882
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite_e.py",
+    "path": "numpy/polynomial/hermite_e.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite_e.py"
   },
   "4958c19f": {
     "additionalInfo": {
@@ -3204,9 +3298,10 @@
         "line": 1116
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "49b03ab1": {
     "additionalInfo": {
@@ -3235,9 +3330,10 @@
         "line": 109
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py",
+    "path": "numpy/distutils/fcompiler/compaq.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py"
   },
   "49debb68": {
     "additionalInfo": {
@@ -3266,9 +3362,10 @@
         "line": 49
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py",
+    "path": "numpy/distutils/fcompiler/compaq.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py"
   },
   "4a00481e": {
     "additionalInfo": {
@@ -3297,9 +3394,10 @@
         "line": 719
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py",
+    "path": "numpy/distutils/fcompiler/__init__.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py"
   },
   "4a30d02f": {
     "additionalInfo": {
@@ -3334,9 +3432,10 @@
         "line": 240
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py",
+    "path": "numpy/lib/_polynomial_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py"
   },
   "4ab6b16d": {
     "additionalInfo": {
@@ -3371,9 +3470,10 @@
         "line": 1658
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/chebyshev.py",
+    "path": "numpy/polynomial/chebyshev.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/chebyshev.py"
   },
   "4b54cab6": {
     "additionalInfo": {
@@ -3444,9 +3544,10 @@
         "line": 2074
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "4b5abb44": {
     "additionalInfo": {
@@ -3475,9 +3576,10 @@
         "line": 727
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "4cc60457": {
     "additionalInfo": {
@@ -3506,9 +3608,10 @@
         "line": 315
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "4dd06932": {
     "additionalInfo": {
@@ -3543,9 +3646,10 @@
         "line": 965
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py",
+    "path": "numpy/lib/_arraysetops_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py"
   },
   "4ddada50": {
     "additionalInfo": {
@@ -3574,9 +3678,10 @@
         "line": 454
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py",
+    "path": "numpy/lib/_polynomial_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py"
   },
   "4ef36f2a": {
     "additionalInfo": {
@@ -3611,9 +3716,10 @@
         "line": 832
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "506eee49": {
     "additionalInfo": {
@@ -3648,9 +3754,10 @@
         "line": 211
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "50f6a2bd": {
     "additionalInfo": {
@@ -3697,9 +3804,10 @@
         "line": 883
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/laguerre.py",
+    "path": "numpy/polynomial/laguerre.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/laguerre.py"
   },
   "51b9837f": {
     "additionalInfo": {
@@ -3734,9 +3842,10 @@
         "line": 930
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "52347b12": {
     "additionalInfo": {
@@ -3771,9 +3880,10 @@
         "line": 1000
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "53941361": {
     "additionalInfo": {
@@ -3802,9 +3912,10 @@
         "line": 94
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py",
+    "path": "numpy/ma/mrecords.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py"
   },
   "53a933cf": {
     "additionalInfo": {
@@ -3833,9 +3944,10 @@
         "line": 31
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/gnu.py",
+    "path": "numpy/distutils/fcompiler/gnu.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/gnu.py"
   },
   "54f82199": {
     "additionalInfo": {
@@ -3864,9 +3976,10 @@
         "line": 148
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/typing/mypy_plugin.py",
+    "path": "numpy/typing/mypy_plugin.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/typing/mypy_plugin.py"
   },
   "55462f93": {
     "additionalInfo": {
@@ -3907,9 +4020,10 @@
         "line": 911
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "58a3f31c": {
     "additionalInfo": {
@@ -3944,9 +4058,10 @@
         "line": 8457
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "58bf0058": {
     "additionalInfo": {
@@ -3975,9 +4090,10 @@
         "line": 620
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "string-concat-loop",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "59d4dd31": {
     "additionalInfo": {
@@ -4006,9 +4122,10 @@
         "line": 2332
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py",
+    "path": "numpy/_core/fromnumeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py"
   },
   "5a79e5a8": {
     "additionalInfo": {
@@ -4037,9 +4154,10 @@
         "line": 975
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "5ad2ea72": {
     "additionalInfo": {
@@ -4068,9 +4186,10 @@
         "line": 150
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py",
+    "path": "numpy/_core/_methods.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py"
   },
   "5b9a41bd": {
     "additionalInfo": {
@@ -4105,9 +4224,10 @@
         "line": 1845
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py",
+    "path": "numpy/linalg/_linalg.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py"
   },
   "5bcf7dff": {
     "additionalInfo": {
@@ -4136,9 +4256,10 @@
         "line": 458
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/build_src.py",
+    "path": "numpy/distutils/command/build_src.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/build_src.py"
   },
   "5bde6d79": {
     "additionalInfo": {
@@ -4167,9 +4288,10 @@
         "line": 440
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/config.py",
+    "path": "numpy/distutils/command/config.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/config.py"
   },
   "5cce1654": {
     "additionalInfo": {
@@ -4204,9 +4326,10 @@
         "line": 449
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "5ce10c11": {
     "additionalInfo": {
@@ -4235,9 +4358,10 @@
         "line": 40
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py",
+    "path": "numpy/distutils/fcompiler/compaq.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py"
   },
   "5d3c8cc7": {
     "additionalInfo": {
@@ -4266,9 +4390,10 @@
         "line": 112
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/config.py",
+    "path": "numpy/distutils/command/config.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/config.py"
   },
   "5d66f15f": {
     "additionalInfo": {
@@ -4297,9 +4422,10 @@
         "line": 3863
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py",
+    "path": "numpy/_core/fromnumeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py"
   },
   "5e045bc5": {
     "additionalInfo": {
@@ -4334,9 +4460,10 @@
         "line": 8235
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "5e23501b": {
     "additionalInfo": {
@@ -4407,9 +4534,10 @@
         "line": 2074
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "5f1e4013": {
     "additionalInfo": {
@@ -4444,9 +4572,10 @@
         "line": 228
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py",
+    "path": "numpy/_core/_methods.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py"
   },
   "605e1859": {
     "additionalInfo": {
@@ -4475,9 +4604,10 @@
         "line": 406
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py",
+    "path": "numpy/distutils/fcompiler/__init__.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py"
   },
   "618c51e1": {
     "additionalInfo": {
@@ -4512,9 +4642,10 @@
         "line": 4079
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "62081925": {
     "additionalInfo": {
@@ -4549,9 +4680,10 @@
         "line": 6159
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "620f4c66": {
     "additionalInfo": {
@@ -4598,9 +4730,10 @@
         "line": 905
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/legendre.py",
+    "path": "numpy/polynomial/legendre.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/legendre.py"
   },
   "625e8eb8": {
     "additionalInfo": {
@@ -4635,9 +4768,10 @@
         "line": 3931
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "63909dab": {
     "additionalInfo": {
@@ -4666,9 +4800,10 @@
         "line": 838
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "6408115c": {
     "additionalInfo": {
@@ -4697,9 +4832,10 @@
         "line": 3869
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py",
+    "path": "numpy/_core/fromnumeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py"
   },
   "64cee6dc": {
     "additionalInfo": {
@@ -4728,9 +4864,10 @@
         "line": 379
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/matlib.py",
+    "path": "numpy/matlib.py",
     "symbol": "long-message-chain",
-    "type": "convention"
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/matlib.py"
   },
   "64e5d189": {
     "additionalInfo": {
@@ -4759,9 +4896,10 @@
         "line": 1408
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "662a8d34": {
     "additionalInfo": {
@@ -4790,9 +4928,10 @@
         "line": 35
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/sun.py",
+    "path": "numpy/distutils/fcompiler/sun.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/sun.py"
   },
   "66333666": {
     "additionalInfo": {
@@ -4833,9 +4972,10 @@
         "line": 911
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "6637cb3f": {
     "additionalInfo": {
@@ -4864,9 +5004,10 @@
         "line": 1331
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "681ad4de": {
     "additionalInfo": {
@@ -4895,9 +5036,10 @@
         "line": 842
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "6837320a": {
     "additionalInfo": {
@@ -4926,9 +5068,10 @@
         "line": 494
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py",
+    "path": "numpy/ma/mrecords.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py"
   },
   "685988df": {
     "additionalInfo": {
@@ -4963,9 +5106,10 @@
         "line": 3465
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "6984e94e": {
     "additionalInfo": {
@@ -5036,9 +5180,10 @@
         "line": 2074
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "69f312b6": {
     "additionalInfo": {
@@ -5067,9 +5212,10 @@
         "line": 402
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/numeric.py",
+    "path": "numpy/_core/numeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/numeric.py"
   },
   "6b0e730d": {
     "additionalInfo": {
@@ -5098,9 +5244,10 @@
         "line": 946
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/_polybase.py",
+    "path": "numpy/polynomial/_polybase.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/_polybase.py"
   },
   "6b220a97": {
     "additionalInfo": {
@@ -5135,9 +5282,10 @@
         "line": 5441
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "6be4d10a": {
     "additionalInfo": {
@@ -5172,9 +5320,10 @@
         "line": 425
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_histograms_impl.py",
+    "path": "numpy/lib/_histograms_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_histograms_impl.py"
   },
   "6cbbee20": {
     "additionalInfo": {
@@ -5203,9 +5352,10 @@
         "line": 1343
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py",
+    "path": "numpy/distutils/system_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py"
   },
   "6d5734c4": {
     "additionalInfo": {
@@ -5234,9 +5384,10 @@
         "line": 2302
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "6da2f5f8": {
     "additionalInfo": {
@@ -5265,9 +5416,10 @@
         "line": 1228
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "6dffb04c": {
     "additionalInfo": {
@@ -5302,9 +5454,10 @@
         "line": 638
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_twodim_base_impl.py",
+    "path": "numpy/lib/_twodim_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_twodim_base_impl.py"
   },
   "6e0c5d2f": {
     "additionalInfo": {
@@ -5381,9 +5534,10 @@
         "line": 2098
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "6f5c9cb8": {
     "additionalInfo": {
@@ -5418,9 +5572,10 @@
         "line": 8558
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "7028c5f5": {
     "additionalInfo": {
@@ -5449,9 +5604,10 @@
         "line": 731
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "70c4bf7f": {
     "additionalInfo": {
@@ -5486,9 +5642,10 @@
         "line": 1087
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "7102b666": {
     "additionalInfo": {
@@ -5523,9 +5680,10 @@
         "line": 1643
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite.py",
+    "path": "numpy/polynomial/hermite.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite.py"
   },
   "723bb453": {
     "additionalInfo": {
@@ -5554,9 +5712,10 @@
         "line": 1941
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py",
+    "path": "numpy/distutils/system_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py"
   },
   "727f4d2b": {
     "additionalInfo": {
@@ -5585,9 +5744,10 @@
         "line": 5556
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "74193fc2": {
     "additionalInfo": {
@@ -5616,9 +5776,10 @@
         "line": 123
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "7475f13b": {
     "additionalInfo": {
@@ -5665,9 +5826,10 @@
         "line": 501
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/laguerre.py",
+    "path": "numpy/polynomial/laguerre.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/laguerre.py"
   },
   "74cb8a5c": {
     "additionalInfo": {
@@ -5696,9 +5858,10 @@
         "line": 1128
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "74ea83a1": {
     "additionalInfo": {
@@ -5727,9 +5890,10 @@
         "line": 5170
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "long-message-chain",
-    "type": "convention"
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "76252997": {
     "additionalInfo": {
@@ -5764,9 +5928,10 @@
         "line": 1065
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "767f8b57": {
     "additionalInfo": {
@@ -5801,9 +5966,10 @@
         "line": 890
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_histograms_impl.py",
+    "path": "numpy/lib/_histograms_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_histograms_impl.py"
   },
   "768c615b": {
     "additionalInfo": {
@@ -5832,9 +5998,10 @@
         "line": 874
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "77b3ceed": {
     "additionalInfo": {
@@ -5863,9 +6030,10 @@
         "line": 387
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "787957f9": {
     "additionalInfo": {
@@ -5912,9 +6080,10 @@
         "line": 885
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite.py",
+    "path": "numpy/polynomial/hermite.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite.py"
   },
   "797b23f2": {
     "additionalInfo": {
@@ -5949,9 +6118,10 @@
         "line": 481
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "79e6a8f5": {
     "additionalInfo": {
@@ -5986,9 +6156,10 @@
         "line": 8455
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "7b8e9eac": {
     "additionalInfo": {
@@ -6017,9 +6188,10 @@
         "line": 4294
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "7f1b7254": {
     "additionalInfo": {
@@ -6054,9 +6226,10 @@
         "line": 650
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "7fb9aa84": {
     "additionalInfo": {
@@ -6127,9 +6300,10 @@
         "line": 1267
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "7fe0221c": {
     "additionalInfo": {
@@ -6158,9 +6332,10 @@
         "line": 891
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py",
+    "path": "numpy/lib/_format_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py"
   },
   "804f5e8c": {
     "additionalInfo": {
@@ -6207,9 +6382,10 @@
         "line": 505
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite_e.py",
+    "path": "numpy/polynomial/hermite_e.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite_e.py"
   },
   "825bd842": {
     "additionalInfo": {
@@ -6238,9 +6414,10 @@
         "line": 5948
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "long-message-chain",
-    "type": "convention"
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "82e1f178": {
     "additionalInfo": {
@@ -6269,9 +6446,10 @@
         "line": 2309
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "860e52dc": {
     "additionalInfo": {
@@ -6300,9 +6478,10 @@
         "line": 349
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/config.py",
+    "path": "numpy/distutils/command/config.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/config.py"
   },
   "8666ebf0": {
     "additionalInfo": {
@@ -6337,9 +6516,10 @@
         "line": 871
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_iotools.py",
+    "path": "numpy/lib/_iotools.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_iotools.py"
   },
   "870a6b2b": {
     "additionalInfo": {
@@ -6368,9 +6548,10 @@
         "line": 21
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/function_base.py",
+    "path": "numpy/_core/function_base.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/function_base.py"
   },
   "8759172c": {
     "additionalInfo": {
@@ -6399,9 +6580,10 @@
         "line": 5480
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "887b0bfa": {
     "additionalInfo": {
@@ -6430,9 +6612,10 @@
         "line": 220
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py",
+    "path": "numpy/_core/_methods.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py"
   },
   "88addcd3": {
     "additionalInfo": {
@@ -6461,9 +6644,10 @@
         "line": 1079
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "88d1d92f": {
     "additionalInfo": {
@@ -6498,9 +6682,10 @@
         "line": 1730
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "88f19e09": {
     "additionalInfo": {
@@ -6535,9 +6720,10 @@
         "line": 1307
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/defchararray.py",
+    "path": "numpy/_core/defchararray.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/defchararray.py"
   },
   "899ce422": {
     "additionalInfo": {
@@ -6572,9 +6758,10 @@
         "line": 380
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py",
+    "path": "numpy/ma/mrecords.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py"
   },
   "89f273f0": {
     "additionalInfo": {
@@ -6609,9 +6796,10 @@
         "line": 765
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py",
+    "path": "numpy/lib/_arraypad_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py"
   },
   "8a6ed85d": {
     "additionalInfo": {
@@ -6646,9 +6834,10 @@
         "line": 1395
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "8ab142c9": {
     "additionalInfo": {
@@ -6677,9 +6866,10 @@
         "line": 648
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "8bab521e": {
     "additionalInfo": {
@@ -6708,9 +6898,10 @@
         "line": 610
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "8cc3cd3e": {
     "additionalInfo": {
@@ -6745,9 +6936,10 @@
         "line": 930
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "8d61b3c1": {
     "additionalInfo": {
@@ -6776,9 +6968,10 @@
         "line": 4067
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py",
+    "path": "numpy/_core/fromnumeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py"
   },
   "8d9c8049": {
     "additionalInfo": {
@@ -6807,9 +7000,10 @@
         "line": 1475
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "8dc6a368": {
     "additionalInfo": {
@@ -6838,9 +7032,10 @@
         "line": 537
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py",
+    "path": "numpy/ma/mrecords.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py"
   },
   "8ef8add4": {
     "additionalInfo": {
@@ -6887,9 +7082,10 @@
         "line": 505
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite.py",
+    "path": "numpy/polynomial/hermite.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/hermite.py"
   },
   "8f74fb82": {
     "additionalInfo": {
@@ -6924,9 +7120,10 @@
         "line": 257
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/getlimits.py",
+    "path": "numpy/_core/getlimits.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/getlimits.py"
   },
   "8fe3bb63": {
     "additionalInfo": {
@@ -6961,9 +7158,10 @@
         "line": 384
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py",
+    "path": "numpy/lib/_arraypad_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py"
   },
   "91fe208e": {
     "additionalInfo": {
@@ -6992,9 +7190,10 @@
         "line": 419
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "92666b10": {
     "additionalInfo": {
@@ -7029,9 +7228,10 @@
         "line": 1039
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "933fe643": {
     "additionalInfo": {
@@ -7060,9 +7260,10 @@
         "line": 665
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "94298be6": {
     "additionalInfo": {
@@ -7103,9 +7304,10 @@
         "line": 3273
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "954c4001": {
     "additionalInfo": {
@@ -7146,9 +7348,10 @@
         "line": 1344
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "972ae11f": {
     "additionalInfo": {
@@ -7177,9 +7380,10 @@
         "line": 53
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py",
+    "path": "numpy/_core/_methods.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_methods.py"
   },
   "977e0ab0": {
     "additionalInfo": {
@@ -7208,9 +7412,10 @@
         "line": 39
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/sun.py",
+    "path": "numpy/distutils/fcompiler/sun.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/sun.py"
   },
   "981f3f21": {
     "additionalInfo": {
@@ -7245,9 +7450,10 @@
         "line": 1141
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "99d7aac8": {
     "additionalInfo": {
@@ -7288,9 +7494,10 @@
         "line": 4864
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "9a34b442": {
     "additionalInfo": {
@@ -7319,9 +7526,10 @@
         "line": 190
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/function_base.py",
+    "path": "numpy/_core/function_base.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/function_base.py"
   },
   "9abfbeed": {
     "additionalInfo": {
@@ -7356,9 +7564,10 @@
         "line": 176
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py",
+    "path": "numpy/_core/_internal.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py"
   },
   "9d2a49de": {
     "additionalInfo": {
@@ -7393,9 +7602,10 @@
         "line": 1158
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py",
+    "path": "numpy/linalg/_linalg.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py"
   },
   "9f081807": {
     "additionalInfo": {
@@ -7424,9 +7634,10 @@
         "line": 149
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_iotools.py",
+    "path": "numpy/lib/_iotools.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_iotools.py"
   },
   "a0fb238f": {
     "additionalInfo": {
@@ -7455,9 +7666,10 @@
         "line": 37
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/sun.py",
+    "path": "numpy/distutils/fcompiler/sun.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/sun.py"
   },
   "a1c90839": {
     "additionalInfo": {
@@ -7486,9 +7698,10 @@
         "line": 635
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "a1e8f592": {
     "additionalInfo": {
@@ -7517,9 +7730,10 @@
         "line": 311
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "a42b67b1": {
     "additionalInfo": {
@@ -7554,9 +7768,10 @@
         "line": 944
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "a43ffe05": {
     "additionalInfo": {
@@ -7585,9 +7800,10 @@
         "line": 584
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/polyutils.py",
+    "path": "numpy/polynomial/polyutils.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/polyutils.py"
   },
   "a55f07f6": {
     "additionalInfo": {
@@ -7616,9 +7832,10 @@
         "line": 1221
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "a56c8811": {
     "additionalInfo": {
@@ -7647,9 +7864,10 @@
         "line": 1659
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "a662500a": {
     "additionalInfo": {
@@ -7678,9 +7896,10 @@
         "line": 36
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/mips.py",
+    "path": "numpy/distutils/fcompiler/mips.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/mips.py"
   },
   "a821639b": {
     "additionalInfo": {
@@ -7709,9 +7928,10 @@
         "line": 2202
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "a8b41be8": {
     "additionalInfo": {
@@ -7740,9 +7960,10 @@
         "line": 1712
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "a90990f9": {
     "additionalInfo": {
@@ -7777,9 +7998,10 @@
         "line": 852
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "aad2a135": {
     "additionalInfo": {
@@ -7814,9 +8036,10 @@
         "line": 1153
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py",
+    "path": "numpy/linalg/_linalg.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py"
   },
   "adb56d75": {
     "additionalInfo": {
@@ -7845,9 +8068,10 @@
         "line": 4174
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "adbaf17b": {
     "additionalInfo": {
@@ -7882,9 +8106,10 @@
         "line": 691
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "ae16556a": {
     "additionalInfo": {
@@ -7913,9 +8138,10 @@
         "line": 321
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_array_api_info.py",
+    "path": "numpy/_array_api_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_array_api_info.py"
   },
   "aef7b77e": {
     "additionalInfo": {
@@ -7944,9 +8170,10 @@
         "line": 134
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_array_api_info.py",
+    "path": "numpy/_array_api_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_array_api_info.py"
   },
   "af4b715b": {
     "additionalInfo": {
@@ -7981,9 +8208,10 @@
         "line": 1141
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "af86e530": {
     "additionalInfo": {
@@ -8018,9 +8246,10 @@
         "line": 410
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "b22b9118": {
     "additionalInfo": {
@@ -8067,9 +8296,10 @@
         "line": 526
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/legendre.py",
+    "path": "numpy/polynomial/legendre.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/legendre.py"
   },
   "b2599d31": {
     "additionalInfo": {
@@ -8098,9 +8328,10 @@
         "line": 6860
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "b2ffe2d0": {
     "additionalInfo": {
@@ -8135,9 +8366,10 @@
         "line": 948
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "b4d4e85d": {
     "additionalInfo": {
@@ -8172,9 +8404,10 @@
         "line": 2610
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "b5beec85": {
     "additionalInfo": {
@@ -8209,9 +8442,10 @@
         "line": 409
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "b5f0abf7": {
     "additionalInfo": {
@@ -8240,9 +8474,10 @@
         "line": 1075
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "b6118d57": {
     "additionalInfo": {
@@ -8271,9 +8506,10 @@
         "line": 754
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "b68be5da": {
     "additionalInfo": {
@@ -8302,9 +8538,10 @@
         "line": 3322
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py",
+    "path": "numpy/_core/fromnumeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py"
   },
   "b6a6d94a": {
     "additionalInfo": {
@@ -8339,9 +8576,10 @@
         "line": 5619
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "b6b90095": {
     "additionalInfo": {
@@ -8370,9 +8608,10 @@
         "line": 57
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "b7fcf569": {
     "additionalInfo": {
@@ -8407,9 +8646,10 @@
         "line": 351
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py",
+    "path": "numpy/lib/_format_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py"
   },
   "b89c2eb1": {
     "additionalInfo": {
@@ -8438,9 +8678,10 @@
         "line": 4702
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "long-lambda-expr",
-    "type": "convention"
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "b90ad240": {
     "additionalInfo": {
@@ -8475,9 +8716,10 @@
         "line": 882
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "bb282264": {
     "additionalInfo": {
@@ -8506,9 +8748,10 @@
         "line": 1929
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py",
+    "path": "numpy/distutils/system_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py"
   },
   "bb6cc1b8": {
     "additionalInfo": {
@@ -8543,9 +8786,10 @@
         "line": 944
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "bc3baaf6": {
     "additionalInfo": {
@@ -8580,9 +8824,10 @@
         "line": 1308
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py",
+    "path": "numpy/lib/_polynomial_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py"
   },
   "bcb88e1c": {
     "additionalInfo": {
@@ -8617,9 +8862,10 @@
         "line": 272
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py",
+    "path": "numpy/_core/_internal.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py"
   },
   "be4b0eea": {
     "additionalInfo": {
@@ -8648,9 +8894,10 @@
         "line": 436
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_ufunc_config.py",
+    "path": "numpy/_core/_ufunc_config.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_ufunc_config.py"
   },
   "be6a83ef": {
     "additionalInfo": {
@@ -8685,9 +8932,10 @@
         "line": 1141
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "bed19dd6": {
     "additionalInfo": {
@@ -8722,9 +8970,10 @@
         "line": 621
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/polyutils.py",
+    "path": "numpy/polynomial/polyutils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/polynomial/polyutils.py"
   },
   "bef79a55": {
     "additionalInfo": {
@@ -8759,9 +9008,10 @@
         "line": 663
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py",
+    "path": "numpy/lib/_format_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py"
   },
   "bf269a73": {
     "additionalInfo": {
@@ -8790,9 +9040,10 @@
         "line": 47
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py",
+    "path": "numpy/distutils/fcompiler/arm.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py"
   },
   "bf30385a": {
     "additionalInfo": {
@@ -8863,9 +9114,10 @@
         "line": 2864
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py",
+    "path": "numpy/linalg/_linalg.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py"
   },
   "bf44a3db": {
     "additionalInfo": {
@@ -8894,9 +9146,10 @@
         "line": 737
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "bf71f8ef": {
     "additionalInfo": {
@@ -8931,9 +9184,10 @@
         "line": 30
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/matrixlib/defmatrix.py",
+    "path": "numpy/matrixlib/defmatrix.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/matrixlib/defmatrix.py"
   },
   "bf812e32": {
     "additionalInfo": {
@@ -8962,9 +9216,10 @@
         "line": 963
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py",
+    "path": "numpy/lib/_arraysetops_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py"
   },
   "bfd77e64": {
     "additionalInfo": {
@@ -8993,9 +9248,10 @@
         "line": 1209
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "c0271f74": {
     "additionalInfo": {
@@ -9024,9 +9280,10 @@
         "line": 6053
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "long-message-chain",
-    "type": "convention"
+    "type": "convention",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "c22463e6": {
     "additionalInfo": {
@@ -9061,9 +9318,10 @@
         "line": 483
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "c23a8509": {
     "additionalInfo": {
@@ -9092,9 +9350,10 @@
         "line": 1263
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py",
+    "path": "numpy/distutils/system_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py"
   },
   "c25f0efd": {
     "additionalInfo": {
@@ -9123,9 +9382,10 @@
         "line": 256
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py",
+    "path": "numpy/lib/_polynomial_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_polynomial_impl.py"
   },
   "c2d6ef3a": {
     "additionalInfo": {
@@ -9160,9 +9420,10 @@
         "line": 360
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py",
+    "path": "numpy/lib/_datasource.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py"
   },
   "c432c236": {
     "additionalInfo": {
@@ -9197,9 +9458,10 @@
         "line": 635
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "string-concat-loop",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "c54847ea": {
     "additionalInfo": {
@@ -9228,9 +9490,10 @@
         "line": 460
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "c6d7c79c": {
     "additionalInfo": {
@@ -9265,9 +9528,10 @@
         "line": 2165
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "c6fe3de1": {
     "additionalInfo": {
@@ -9302,9 +9566,10 @@
         "line": 1001
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "c7e6e0a3": {
     "additionalInfo": {
@@ -9333,9 +9598,10 @@
         "line": 1075
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py",
+    "path": "numpy/distutils/system_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/system_info.py"
   },
   "c7f93f3a": {
     "additionalInfo": {
@@ -9364,9 +9630,10 @@
         "line": 107
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_array_api_info.py",
+    "path": "numpy/_array_api_info.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_array_api_info.py"
   },
   "c9173902": {
     "additionalInfo": {
@@ -9395,9 +9662,10 @@
         "line": 146
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py",
+    "path": "numpy/lib/_arraysetops_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py"
   },
   "cb627a3d": {
     "additionalInfo": {
@@ -9426,9 +9694,10 @@
         "line": 315
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/config.py",
+    "path": "numpy/distutils/command/config.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/command/config.py"
   },
   "cb7d7bdb": {
     "additionalInfo": {
@@ -9457,9 +9726,10 @@
         "line": 4558
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "cbddafa6": {
     "additionalInfo": {
@@ -9488,9 +9758,10 @@
         "line": 401
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/gnu.py",
+    "path": "numpy/distutils/fcompiler/gnu.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/gnu.py"
   },
   "cbf6603c": {
     "additionalInfo": {
@@ -9525,9 +9796,10 @@
         "line": 407
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "cc6f072e": {
     "additionalInfo": {
@@ -9562,9 +9834,10 @@
         "line": 133
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/conftest.py",
+    "path": "numpy/conftest.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/conftest.py"
   },
   "cdfedc63": {
     "additionalInfo": {
@@ -9593,9 +9866,10 @@
         "line": 717
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py",
+    "path": "numpy/ma/mrecords.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/mrecords.py"
   },
   "cfeea828": {
     "additionalInfo": {
@@ -9624,9 +9898,10 @@
         "line": 412
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py",
+    "path": "numpy/distutils/fcompiler/__init__.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py"
   },
   "d0099ea4": {
     "additionalInfo": {
@@ -9661,9 +9936,10 @@
         "line": 1727
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "d0dd2ebd": {
     "additionalInfo": {
@@ -9758,9 +10034,10 @@
         "line": 2098
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "d0ec1878": {
     "additionalInfo": {
@@ -9789,9 +10066,10 @@
         "line": 178
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_twodim_base_impl.py",
+    "path": "numpy/lib/_twodim_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_twodim_base_impl.py"
   },
   "d1cca942": {
     "additionalInfo": {
@@ -9820,9 +10098,10 @@
         "line": 436
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "d236ac8c": {
     "additionalInfo": {
@@ -9851,9 +10130,10 @@
         "line": 158
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/typing/mypy_plugin.py",
+    "path": "numpy/typing/mypy_plugin.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/typing/mypy_plugin.py"
   },
   "d2a31fae": {
     "additionalInfo": {
@@ -9888,9 +10168,10 @@
         "line": 1497
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py",
+    "path": "numpy/_core/arrayprint.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/arrayprint.py"
   },
   "d368d03b": {
     "additionalInfo": {
@@ -9925,9 +10206,10 @@
         "line": 410
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "d3a387de": {
     "additionalInfo": {
@@ -9962,9 +10244,10 @@
         "line": 2157
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "d3f7cd0c": {
     "additionalInfo": {
@@ -10005,9 +10288,10 @@
         "line": 182
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_index_tricks_impl.py",
+    "path": "numpy/lib/_index_tricks_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_index_tricks_impl.py"
   },
   "d4b5fdb2": {
     "additionalInfo": {
@@ -10042,9 +10326,10 @@
         "line": 4850
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "d51c8872": {
     "additionalInfo": {
@@ -10079,9 +10364,10 @@
         "line": 4079
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "d548bfe8": {
     "additionalInfo": {
@@ -10110,9 +10396,10 @@
         "line": 885
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/ccompiler_opt.py",
+    "path": "numpy/distutils/ccompiler_opt.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/ccompiler_opt.py"
   },
   "d6f4373b": {
     "additionalInfo": {
@@ -10171,9 +10458,10 @@
         "line": 881
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py",
+    "path": "numpy/lib/_arraypad_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py"
   },
   "d715c78b": {
     "additionalInfo": {
@@ -10220,9 +10508,10 @@
         "line": 1380
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "d778f8e7": {
     "additionalInfo": {
@@ -10257,9 +10546,10 @@
         "line": 488
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "d9cd86fb": {
     "additionalInfo": {
@@ -10288,9 +10578,10 @@
         "line": 141
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_utils/_inspect.py",
+    "path": "numpy/_utils/_inspect.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_utils/_inspect.py"
   },
   "da4397d5": {
     "additionalInfo": {
@@ -10319,9 +10610,10 @@
         "line": 47
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py",
+    "path": "numpy/distutils/fcompiler/compaq.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py"
   },
   "db50d3b0": {
     "additionalInfo": {
@@ -10356,9 +10648,10 @@
         "line": 618
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "string-concat-loop",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "db9e5dc9": {
     "additionalInfo": {
@@ -10387,9 +10680,10 @@
         "line": 348
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py",
+    "path": "numpy/lib/_arraysetops_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py"
   },
   "dc179d09": {
     "additionalInfo": {
@@ -10418,9 +10712,10 @@
         "line": 570
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "de5c5515": {
     "additionalInfo": {
@@ -10461,9 +10756,10 @@
         "line": 1344
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "e11c8bf8": {
     "additionalInfo": {
@@ -10492,9 +10788,10 @@
         "line": 204
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/extbuild.py",
+    "path": "numpy/testing/_private/extbuild.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/extbuild.py"
   },
   "e2286caf": {
     "additionalInfo": {
@@ -10523,9 +10820,10 @@
         "line": 196
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/function_base.py",
+    "path": "numpy/_core/function_base.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/function_base.py"
   },
   "e3090286": {
     "additionalInfo": {
@@ -10554,9 +10852,10 @@
         "line": 139
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py",
+    "path": "numpy/lib/_arraysetops_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraysetops_impl.py"
   },
   "e37d3de2": {
     "additionalInfo": {
@@ -10585,9 +10884,10 @@
         "line": 917
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "e3f3b502": {
     "additionalInfo": {
@@ -10616,9 +10916,10 @@
         "line": 302
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ctypeslib/_ctypeslib.py",
+    "path": "numpy/ctypeslib/_ctypeslib.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ctypeslib/_ctypeslib.py"
   },
   "e45556d5": {
     "additionalInfo": {
@@ -10653,9 +10954,10 @@
         "line": 167
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py",
+    "path": "numpy/_core/_internal.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py"
   },
   "e5200c3c": {
     "additionalInfo": {
@@ -10684,9 +10986,10 @@
         "line": 873
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py",
+    "path": "numpy/distutils/fcompiler/__init__.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py"
   },
   "e55c33a9": {
     "additionalInfo": {
@@ -10715,9 +11018,10 @@
         "line": 409
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py",
+    "path": "numpy/distutils/fcompiler/__init__.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py"
   },
   "e65974b1": {
     "additionalInfo": {
@@ -10746,9 +11050,10 @@
         "line": 56
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py",
+    "path": "numpy/distutils/fcompiler/arm.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/arm.py"
   },
   "e68b1fa8": {
     "additionalInfo": {
@@ -10783,9 +11088,10 @@
         "line": 2502
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "e70aff50": {
     "additionalInfo": {
@@ -10814,9 +11120,10 @@
         "line": 629
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "e7378018": {
     "additionalInfo": {
@@ -10845,9 +11152,10 @@
         "line": 1628
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "e7ff6384": {
     "additionalInfo": {
@@ -10876,9 +11184,10 @@
         "line": 438
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py",
+    "path": "numpy/ma/extras.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/extras.py"
   },
   "e893394c": {
     "additionalInfo": {
@@ -10907,9 +11216,10 @@
         "line": 2883
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py",
+    "path": "numpy/ma/core.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/ma/core.py"
   },
   "e899b4f9": {
     "additionalInfo": {
@@ -10944,9 +11254,10 @@
         "line": 167
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py",
+    "path": "numpy/_core/_internal.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/_internal.py"
   },
   "e9347e82": {
     "additionalInfo": {
@@ -10975,9 +11286,10 @@
         "line": 1410
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "ea5cf002": {
     "additionalInfo": {
@@ -11018,9 +11330,10 @@
         "line": 496
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/getlimits.py",
+    "path": "numpy/_core/getlimits.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/getlimits.py"
   },
   "eaba9c73": {
     "additionalInfo": {
@@ -11055,9 +11368,10 @@
         "line": 71
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/shape_base.py",
+    "path": "numpy/_core/shape_base.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/shape_base.py"
   },
   "eaff98bc": {
     "additionalInfo": {
@@ -11086,9 +11400,10 @@
         "line": 544
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_utils_impl.py",
+    "path": "numpy/lib/_utils_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_utils_impl.py"
   },
   "eb4a39a7": {
     "additionalInfo": {
@@ -11117,9 +11432,10 @@
         "line": 2021
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py",
+    "path": "numpy/lib/_nanfunctions_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_nanfunctions_impl.py"
   },
   "ec36975b": {
     "additionalInfo": {
@@ -11148,9 +11464,10 @@
         "line": 1750
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "ec3d95ac": {
     "additionalInfo": {
@@ -11179,9 +11496,10 @@
         "line": 4301
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "ec909a16": {
     "additionalInfo": {
@@ -11210,9 +11528,10 @@
         "line": 1133
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "ee9c04cb": {
     "additionalInfo": {
@@ -11247,9 +11566,10 @@
         "line": 2471
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "f01cf97b": {
     "additionalInfo": {
@@ -11284,9 +11604,10 @@
         "line": 362
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py",
+    "path": "numpy/lib/_datasource.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_datasource.py"
   },
   "f0728728": {
     "additionalInfo": {
@@ -11315,9 +11636,10 @@
         "line": 1482
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "f21d8092": {
     "additionalInfo": {
@@ -11412,9 +11734,10 @@
         "line": 2098
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "f24b92be": {
     "additionalInfo": {
@@ -11443,9 +11766,10 @@
         "line": 943
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py",
+    "path": "numpy/_core/records.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/records.py"
   },
   "f26bd121": {
     "additionalInfo": {
@@ -11474,9 +11798,10 @@
         "line": 559
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/defchararray.py",
+    "path": "numpy/_core/defchararray.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/defchararray.py"
   },
   "f271aae7": {
     "additionalInfo": {
@@ -11505,9 +11830,10 @@
         "line": 58
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/fft/_pocketfft.py",
+    "path": "numpy/fft/_pocketfft.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/fft/_pocketfft.py"
   },
   "f2d197ee": {
     "additionalInfo": {
@@ -11536,9 +11862,10 @@
         "line": 4713
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "f34ea825": {
     "additionalInfo": {
@@ -11573,9 +11900,10 @@
         "line": 1873
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py",
+    "path": "numpy/linalg/_linalg.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/linalg/_linalg.py"
   },
   "f408f585": {
     "additionalInfo": {
@@ -11604,9 +11932,10 @@
         "line": 2338
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py",
+    "path": "numpy/_core/fromnumeric.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/fromnumeric.py"
   },
   "f6071d26": {
     "additionalInfo": {
@@ -11635,9 +11964,10 @@
         "line": 1415
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py",
+    "path": "numpy/lib/_npyio_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_npyio_impl.py"
   },
   "f61d7801": {
     "additionalInfo": {
@@ -11666,9 +11996,10 @@
         "line": 4086
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py",
+    "path": "numpy/lib/_function_base_impl.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_function_base_impl.py"
   },
   "f7a487e7": {
     "additionalInfo": {
@@ -11745,9 +12076,10 @@
         "line": 2098
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   },
   "f7c8c77d": {
     "additionalInfo": {
@@ -11782,9 +12114,10 @@
         "line": 453
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py",
+    "path": "numpy/lib/_arraypad_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_arraypad_impl.py"
   },
   "f9307fde": {
     "additionalInfo": {
@@ -11813,9 +12146,10 @@
         "line": 42
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py",
+    "path": "numpy/distutils/fcompiler/compaq.py",
     "symbol": "no-self-use",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/compaq.py"
   },
   "f9fbee56": {
     "additionalInfo": {
@@ -11844,9 +12178,10 @@
         "line": 576
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py",
+    "path": "numpy/distutils/fcompiler/__init__.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/distutils/fcompiler/__init__.py"
   },
   "fa64814c": {
     "additionalInfo": {
@@ -11881,9 +12216,10 @@
         "line": 351
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py",
+    "path": "numpy/lib/_format_impl.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/_format_impl.py"
   },
   "faa80aac": {
     "additionalInfo": {
@@ -11912,9 +12248,10 @@
         "line": 222
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py",
+    "path": "numpy/_core/einsumfunc.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/einsumfunc.py"
   },
   "fc1f6621": {
     "additionalInfo": {
@@ -11943,9 +12280,10 @@
         "line": 655
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py",
+    "path": "numpy/lib/recfunctions.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/lib/recfunctions.py"
   },
   "fd9a0fa0": {
     "additionalInfo": {
@@ -11974,9 +12312,10 @@
         "line": 216
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/memmap.py",
+    "path": "numpy/_core/memmap.py",
     "symbol": "too-many-arguments",
-    "type": "refactor"
+    "type": "refactor",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/_core/memmap.py"
   },
   "fdffd523": {
     "additionalInfo": {
@@ -12053,8 +12392,9 @@
         "line": 2098
       }
     ],
-    "path": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py",
+    "path": "numpy/testing/_private/utils.py",
     "symbol": "cached-repeated-calls",
-    "type": "performance"
+    "type": "performance",
+    "absolutePath": "/root/ecooptimizer_benchmark/repositories/numpy/numpy/testing/_private/utils.py"
   }
 }

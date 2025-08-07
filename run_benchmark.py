@@ -469,7 +469,7 @@ def main():
                             break
                     except KeyboardInterrupt:
                         logging.info("Benchmark run interrupted by user.")
-                        move_named_subfolders(selected_repos, args.output_dir)
+                        # move_named_subfolders(selected_repos, args.output_dir)
                         sys.exit(0)
                     except Exception as e:
                         logging.error(
@@ -484,7 +484,7 @@ def main():
     # --- Move Emissions Files ---
     if EMISSIONS_DIR.exists():
         logging.info("\nMoving emissions files to timestamped folder...")
-        move_named_subfolders(selected_repos, args.output_dir)
+        # move_named_subfolders(selected_repos, args.output_dir)
 
     if raised_error:
         logging.error("\n❗ Some benchmarks encountered errors. Please check the logs for details.")

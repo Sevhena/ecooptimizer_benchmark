@@ -259,7 +259,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "buffer",
-            "innerLoopLine": 297,
+            "innerLoopLine": 295,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -276,16 +276,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 24,
-                "endColumn": 46,
-                "endLine": 301,
-                "line": 301
+                "column": 20,
+                "endColumn": 42,
+                "endLine": 299,
+                "line": 299
             },
             {
-                "column": 20,
-                "endColumn": 91,
-                "endLine": 302,
-                "line": 302
+                "column": 16,
+                "endColumn": 87,
+                "endLine": 300,
+                "line": 300
             }
         ],
         "path": "src/paho/mqtt/properties.py",
