@@ -1,0 +1,456 @@
+{
+    "40b20e67": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "40b20e67",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "django.contrib.admin.views.main",
+        "obj": "ChangeList.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 68,
+                "line": 68
+            }
+        ],
+        "path": "django/contrib/admin/views/main.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/contrib/admin/views/main.py"
+    },
+    "fe1ad8e7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "fe1ad8e7",
+        "message": "Too many arguments (25/6)",
+        "messageId": "R0913",
+        "module": "django.forms.models",
+        "obj": "inlineformset_factory",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 25,
+                "endLine": 1300,
+                "line": 1300
+            }
+        ],
+        "path": "django/forms/models.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/forms/models.py"
+    },
+    "b3935b4a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b3935b4a",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "django.test.client",
+        "obj": "AsyncClient.trace",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 19,
+                "endLine": 1698,
+                "line": 1698
+            }
+        ],
+        "path": "django/test/client.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/test/client.py"
+    },
+    "f0dffe2e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f0dffe2e",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "django.db.backends.mysql.features",
+        "obj": "DatabaseFeatures.test_collations",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 73,
+                "line": 73
+            }
+        ],
+        "path": "django/db/backends/mysql/features.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/db/backends/mysql/features.py"
+    },
+    "e257c14b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e257c14b",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "django.middleware.cache",
+        "obj": "UpdateCacheMiddleware._should_update_cache",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 28,
+                "endLine": 82,
+                "line": 82
+            }
+        ],
+        "path": "django/middleware/cache.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/middleware/cache.py"
+    },
+    "5041c570": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "5041c570",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "django.template.engine",
+        "obj": "Engine.get_template_libraries",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 30,
+                "endLine": 123,
+                "line": 123
+            }
+        ],
+        "path": "django/template/engine.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/template/engine.py"
+    },
+    "aded0240": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "encoded",
+            "innerLoopLine": 70,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 72,
+            "isFunc": false,
+            "start": 70,
+            "useOccurences": false
+        },
+        "id": "aded0240",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "signing.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 54,
+                "endLine": 72,
+                "line": 72
+            }
+        ],
+        "path": "django/core/signing.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/core/signing.py"
+    },
+    "c23ed0ad": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "ns_pattern",
+            "innerLoopLine": 60,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 92,
+            "isFunc": false,
+            "start": 60,
+            "useOccurences": false
+        },
+        "id": "c23ed0ad",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "base.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 47,
+                "endLine": 83,
+                "line": 83
+            }
+        ],
+        "path": "django/urls/base.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/urls/base.py"
+    },
+    "871b0de2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "int_part_gd",
+            "innerLoopLine": 98,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 103,
+            "isFunc": false,
+            "start": 96,
+            "useOccurences": false
+        },
+        "id": "871b0de2",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "numberformat.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 66,
+                "endLine": 102,
+                "line": 102
+            },
+            {
+                "column": 16,
+                "endColumn": 49,
+                "endLine": 104,
+                "line": 104
+            }
+        ],
+        "path": "django/utils/numberformat.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/utils/numberformat.py"
+    },
+    "ff438a32": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ff438a32",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "python",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 32,
+                "endColumn": 88,
+                "endLine": 89,
+                "line": 89
+            }
+        ],
+        "path": "django/core/serializers/python.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/core/serializers/python.py"
+    },
+    "bae09c6d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "bae09c6d",
+        "message": "Method chain too long (4/3)",
+        "messageId": "LMC001",
+        "module": "operations",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 83,
+                "endLine": 502,
+                "line": 502
+            }
+        ],
+        "path": "django/db/backends/base/operations.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/db/backends/base/operations.py"
+    },
+    "dfadbb34": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "dfadbb34",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "defaultfilters",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 35,
+                "endColumn": 102,
+                "endLine": 70,
+                "line": 70
+            }
+        ],
+        "path": "django/template/defaultfilters.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/template/defaultfilters.py"
+    },
+    "a1f57a8c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "a1f57a8c",
+        "message": "Use a generator instead 'all(formset.is_valid() for formset in formsets)'",
+        "messageId": "R1729",
+        "module": "django.forms.formsets",
+        "obj": "all_valid",
+        "occurences": [
+            {
+                "column": 35,
+                "endColumn": 84,
+                "endLine": 586,
+                "line": 586
+            }
+        ],
+        "path": "django/forms/formsets.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/forms/formsets.py"
+    },
+    "cf18c1e1": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cf18c1e1",
+        "message": "Use a generator instead 'all(form.is_valid() for form in self.forms if not (self.can_delete and self._should_delete_form(form)))'",
+        "messageId": "R1729",
+        "module": "django.forms.formsets",
+        "obj": "BaseFormSet.is_valid",
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 9,
+                "endLine": 393,
+                "line": 387
+            }
+        ],
+        "path": "django/forms/formsets.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/django/django/forms/formsets.py"
+    }
+}

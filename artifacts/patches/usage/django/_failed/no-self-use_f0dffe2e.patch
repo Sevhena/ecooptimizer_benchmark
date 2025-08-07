@@ -1,0 +1,20 @@
+diff --git a/django/db/backends/mysql/features.py b/django/db/backends/mysql/features.py
+index 6ae4c56af1..5816db4f8a 100644
+--- a/django/db/backends/mysql/features.py
++++ b/django/db/backends/mysql/features.py
+@@ -2,6 +2,7 @@ import operator
+ 
+ from django.db.backends.base.features import BaseDatabaseFeatures
+ from django.utils.functional import cached_property
++from crtracker import MemoryCPUTracker
+ 
+ 
+ class DatabaseFeatures(BaseDatabaseFeatures):
+@@ -68,6 +69,7 @@ class DatabaseFeatures(BaseDatabaseFeatures):
+             return (8, 0, 11)
+ 
+     @cached_property
++    @MemoryCPUTracker.track_usage(project_id='django-benchmark', experiment_id='django_R6301_f0dffe2e', output_file='/root/ecooptimizer_benchmark/emissions/django/no-self-use/f0dffe2e_usage.csv')
+     def test_collations(self):
+         return {
+             "ci": "utf8mb4_general_ci",

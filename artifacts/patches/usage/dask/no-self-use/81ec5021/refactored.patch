@@ -1,0 +1,23 @@
+diff --git a/dask/dataframe/dask_expr/_collection.py b/dask/dataframe/dask_expr/_collection.py
+index 0e16f3ed9..aaa6ce4af 100644
+--- a/dask/dataframe/dask_expr/_collection.py
++++ b/dask/dataframe/dask_expr/_collection.py
+@@ -144,6 +144,7 @@ from dask.utils import (
+     typename,
+ )
+ from dask.widgets import get_template
++from crtracker import MemoryCPUTracker
+ 
+ #
+ # Utilities to wrap Expr API
+@@ -4150,7 +4151,9 @@ class Series(FrameBase):
+         """Number of bytes"""
+         return new_collection(self.expr.nbytes)
+ 
+-    def __array_ufunc__(self, numpy_ufunc, method, *inputs, **kwargs):
++    @MemoryCPUTracker.track_usage(project_id='dask-benchmark', experiment_id='dask_R6301_81ec5021', output_file='/root/ecooptimizer_benchmark/emissions/dask/no-self-use/81ec5021_usage_refactored.csv')
++    @staticmethod
++    def __array_ufunc__(numpy_ufunc, method, *inputs, **kwargs):
+         out = kwargs.get("out", ())
+         for x in inputs + out:
+             # ufuncs work with 0-dimensional NumPy ndarrays

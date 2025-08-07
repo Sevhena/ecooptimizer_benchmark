@@ -235,7 +235,7 @@ def clear_patches(
     repo_name: str, smell_data: Optional[dict] = None, tracker: str = "codecarbon"
 ) -> None:
     """Clear existing patches for a specific smell or all smells in a repo."""
-    annotated_smells_file = ANNOTATED_SMELLS_DIR / f"{repo_name}.json"
+    annotated_smells_file = ANNOTATED_SMELLS_DIR / tracker / f"{repo_name}.json"
 
     if smell_data:
         patch_path = (
@@ -477,7 +477,7 @@ def main():
                 ]
 
                 if args.all:
-                    clear_patches(repo_name, args.tracker)
+                    clear_patches(repo_name, tracker=args.tracker)
                 else:
                     logging.debug(
                         f"Clearing existing patches for smells in {repo_name} before patch creation"
@@ -512,11 +512,13 @@ def main():
                 smells_processed += 1
 
     if any(failed_patch for failed_patch in failed_patches.values()):
-        logging.warning("Some patches failed to create:")
+        patch_fail_msg = "Some patches failed to create:\n"
         for repo, smell_ids in failed_patches.items():
             if smell_ids:
                 display_ids = "\n  - ".join(smell_ids)
-                logging.warning(f"[{repo}]\n  - {display_ids}")
+                patch_fail_msg += f"[{repo}]\n  - {display_ids}"
+                patch_fail_msg += "\n"
+        logging.warning(patch_fail_msg)
     else:
         logging.info("All patches created successfully.")
 

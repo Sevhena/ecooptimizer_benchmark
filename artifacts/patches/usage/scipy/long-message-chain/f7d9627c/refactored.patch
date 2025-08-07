@@ -1,0 +1,20 @@
+diff --git a/scipy/sparse/_lil.py b/scipy/sparse/_lil.py
+index 479472445..943745110 100644
+--- a/scipy/sparse/_lil.py
++++ b/scipy/sparse/_lil.py
+@@ -1,3 +1,4 @@
++from crtracker import MemoryCPUTracker
+ """List of Lists sparse matrix class
+ """
+ 
+@@ -387,7 +388,9 @@ class _lil_base(_spbase, IndexMixin):
+     toarray.__doc__ = _spbase.toarray.__doc__
+ 
+     def transpose(self, axes=None, copy=False):
+-        return self.tocsr(copy=copy).transpose(axes=axes, copy=False).tolil(copy=False)
++        with MemoryCPUTracker(project_id='scipy-benchmark', experiment_id='scipy_LMC001_f7d9627c', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-message-chain/f7d9627c_usage_refactored.csv') as tracker:
++            _carbon_wrapped_8e0e1b11 = self.tocsr(copy=copy).transpose(axes=axes, copy=False).tolil(copy=False)
++        return _carbon_wrapped_8e0e1b11
+ 
+     transpose.__doc__ = _spbase.transpose.__doc__
+ 

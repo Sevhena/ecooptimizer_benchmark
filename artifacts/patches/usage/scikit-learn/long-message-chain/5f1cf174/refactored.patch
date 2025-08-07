@@ -1,0 +1,22 @@
+diff --git a/sklearn/datasets/_samples_generator.py b/sklearn/datasets/_samples_generator.py
+index e2d80422e7..8c1d090e51 100644
+--- a/sklearn/datasets/_samples_generator.py
++++ b/sklearn/datasets/_samples_generator.py
+@@ -21,6 +21,7 @@ from ..utils import check_array, check_random_state
+ from ..utils import shuffle as util_shuffle
+ from ..utils._param_validation import Interval, StrOptions, validate_params
+ from ..utils.random import sample_without_replacement
++from crtracker import MemoryCPUTracker
+ 
+ 
+ def _generate_hypercube(samples, dimensions, rng):
+@@ -537,7 +538,8 @@ def make_multilabel_classification(
+             return words, y
+ 
+         # sample words with replacement from selected classes
+-        cumulative_p_w_sample = p_w_c.take(y, axis=1).sum(axis=1).cumsum()
++        with MemoryCPUTracker(project_id='scikit-learn-benchmark', experiment_id='scikit-learn_LMC001_5f1cf174', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/long-message-chain/5f1cf174_usage_refactored.csv') as tracker:
++            cumulative_p_w_sample = p_w_c.take(y, axis=1).sum(axis=1).cumsum()
+         cumulative_p_w_sample /= cumulative_p_w_sample[-1]
+         words = np.searchsorted(cumulative_p_w_sample, generator.uniform(size=n_words))
+         return words, y

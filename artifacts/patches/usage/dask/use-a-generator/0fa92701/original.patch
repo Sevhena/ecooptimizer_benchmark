@@ -1,0 +1,23 @@
+diff --git a/dask/array/overlap.py b/dask/array/overlap.py
+index 4d52db810..76885229c 100644
+--- a/dask/array/overlap.py
++++ b/dask/array/overlap.py
+@@ -21,6 +21,7 @@ from dask.base import tokenize
+ from dask.highlevelgraph import HighLevelGraph
+ from dask.layers import ArrayOverlapLayer
+ from dask.utils import derived_from
++from crtracker import MemoryCPUTracker
+ 
+ 
+ def _overlap_internal_chunks(original_chunks, axes):
+@@ -709,7 +710,9 @@ def map_overlap(
+         _, args = unify_chunks(*list(concat(zip(args, inds))), warn=False)
+ 
+     # Escape to map_blocks if depth is zero (a more efficient computation)
+-    if all([all(depth_val == 0 for depth_val in d.values()) for d in depth]):
++    with MemoryCPUTracker(project_id='dask-benchmark', experiment_id='dask_R1729_0fa92701', output_file='/root/ecooptimizer_benchmark/emissions/dask/use-a-generator/0fa92701_usage.csv') as tracker:
++        _carbon_wrapped_b4a6a577 = all([all(depth_val == 0 for depth_val in d.values()) for d in depth])
++    if _carbon_wrapped_b4a6a577:
+         return map_blocks(func, *args, **kwargs)
+ 
+     for i, x in enumerate(args):

@@ -1,0 +1,25 @@
+diff --git a/dask/dataframe/methods.py b/dask/dataframe/methods.py
+index 060b66a37..c849a2716 100644
+--- a/dask/dataframe/methods.py
++++ b/dask/dataframe/methods.py
+@@ -29,6 +29,7 @@ from dask.dataframe.dispatch import (  # noqa: F401
+ )
+ from dask.dataframe.utils import is_dataframe_like, is_index_like, is_series_like
+ from dask.utils import _deprecated_kwarg
++from crtracker import MemoryCPUTracker
+ 
+ # cuDF may try to import old dispatch functions
+ hash_df = hash_object_dispatch
+@@ -410,7 +411,11 @@ def fillna_check(df, method, check=True):
+         out = getattr(df, method)()
+     else:
+         out = df.fillna()
+-    if check and out.isnull().values.all(axis=0).any():
++    with MemoryCPUTracker(project_id='dask-benchmark', experiment_id='dask_LMC001_8da83e08', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/8da83e08_usage_refactored.csv') as tracker:
++        intermediate_0 = out.isnull()
++        intermediate_1 = intermediate_0.values.all(axis=0)
++        _carbon_wrapped_d9073493 = intermediate_1.any()
++    if check and _carbon_wrapped_d9073493:
+         raise ValueError(
+             "All NaN partition encountered in `fillna`. Try "
+             "using ``df.repartition`` to increase the partition "

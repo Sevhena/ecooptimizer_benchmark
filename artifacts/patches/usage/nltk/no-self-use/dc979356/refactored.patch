@@ -1,0 +1,29 @@
+diff --git a/nltk/stem/arlstem2.py b/nltk/stem/arlstem2.py
+index e4121b6cf..e8fac18d2 100644
+--- a/nltk/stem/arlstem2.py
++++ b/nltk/stem/arlstem2.py
+@@ -28,6 +28,7 @@ online and do not use any dictionary.
+ import re
+ 
+ from nltk.stem.api import StemmerI
++from crtracker import MemoryCPUTracker
+ 
+ 
+ class ARLSTem2(StemmerI):
+@@ -123,7 +124,7 @@ class ARLSTem2(StemmerI):
+             if pre is not None:
+                 token = pre
+             # transform the feminine form to masculine form
+-            fm = self.fem2masc(token)
++            fm = ARLSTem2.fem2masc(token)
+             if fm is not None:
+                 return fm
+             # strip the adjective affixes
+@@ -261,6 +262,7 @@ class ARLSTem2(StemmerI):
+             return token[:-2]
+         return token
+ 
++    @MemoryCPUTracker.track_usage(project_id='nltk-benchmark', experiment_id='nltk_R6301_dc979356', output_file='/root/ecooptimizer_benchmark/emissions/nltk/no-self-use/dc979356_usage_refactored.csv')
+     def fem2masc(self, token):
+         """
+         transform the word from the feminine form to the masculine form.

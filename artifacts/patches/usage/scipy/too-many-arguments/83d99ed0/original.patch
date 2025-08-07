@@ -1,0 +1,20 @@
+diff --git a/scipy/cluster/hierarchy.py b/scipy/cluster/hierarchy.py
+index 1a7d21235..a281452c9 100644
+--- a/scipy/cluster/hierarchy.py
++++ b/scipy/cluster/hierarchy.py
+@@ -138,6 +138,7 @@ from scipy._lib._array_api import (_asarray, array_namespace, is_dask,
+                                    is_lazy_array, xp_capabilities, xp_copy)
+ from scipy._lib._disjoint_set import DisjointSet
+ import scipy._lib.array_api_extra as xpx
++from crtracker import MemoryCPUTracker
+ 
+ 
+ _LINKAGE_METHODS = {'single': 0, 'complete': 1, 'average': 2, 'centroid': 3,
+@@ -3579,6 +3580,7 @@ def _append_contraction_marks_sub(Z, iv, i, n, contraction_marks, xp):
+                                       n, contraction_marks, xp)
+ 
+ 
++@MemoryCPUTracker.track_usage(project_id='scipy-benchmark', experiment_id='scipy_R0913_83d99ed0', output_file='/root/ecooptimizer_benchmark/emissions/scipy/too-many-arguments/83d99ed0_usage.csv')
+ def _dendrogram_calculate_info(Z, p, truncate_mode,
+                                color_threshold=np.inf, get_leaves=True,
+                                orientation='top', labels=None,

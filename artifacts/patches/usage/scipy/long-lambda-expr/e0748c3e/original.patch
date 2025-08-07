@@ -1,0 +1,24 @@
+diff --git a/scipy/sparse/linalg/_eigen/arpack/arpack.py b/scipy/sparse/linalg/_eigen/arpack/arpack.py
+index f678deabe..9018e85a1 100644
+--- a/scipy/sparse/linalg/_eigen/arpack/arpack.py
++++ b/scipy/sparse/linalg/_eigen/arpack/arpack.py
+@@ -47,6 +47,7 @@ from scipy.sparse.linalg import gmres, splu
+ from scipy._lib._util import _aligned_zeros
+ from scipy._lib._threadsafety import ReentrancyLock
+ from . import _arpack
++from crtracker import MemoryCPUTracker
+ arpack_int = _arpack.timing.nbx.dtype
+ 
+ __docformat__ = "restructuredtext en"
+@@ -506,8 +507,9 @@ class _SymmetricArpackParams(_ArpackParams):
+                 self.B = lambda x: x
+                 self.bmat = 'I'
+             else:
+-                self.OP = lambda x: Minv_matvec(matvec(x)
+-                                                + sigma * M_matvec(x))
++                with MemoryCPUTracker(project_id='scipy-benchmark', experiment_id='scipy_LLE001_e0748c3e', output_file='/root/ecooptimizer_benchmark/emissions/scipy/long-lambda-expr/e0748c3e_usage.csv') as tracker:
++                    self.OP = lambda x: Minv_matvec(matvec(x)
++                                                    + sigma * M_matvec(x))
+                 self.B = M_matvec
+                 self.bmat = 'G'
+         else:

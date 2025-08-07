@@ -446,7 +446,7 @@ def main(repo_name: str, smell_id: str, tracker: str = "codecarbon"):
     logging.info(f"Starting annotation for smell {smell_id} in repo {repo_name}")
 
     # Resolve analysis file path
-    analysis_path = get_analysis_file_path(repo_name)
+    analysis_path = get_analysis_file_path(repo_name, tracker)
     if not analysis_path.exists():
         logging.error(f"Analysis file not found: {analysis_path}")
         return

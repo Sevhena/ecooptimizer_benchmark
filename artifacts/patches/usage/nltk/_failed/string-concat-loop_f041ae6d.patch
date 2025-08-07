@@ -1,0 +1,27 @@
+diff --git a/nltk/stem/porter.py b/nltk/stem/porter.py
+index 36c5bdf36..12de2e9e9 100644
+--- a/nltk/stem/porter.py
++++ b/nltk/stem/porter.py
+@@ -1,3 +1,4 @@
++from crtracker import MemoryCPUTracker
+ """
+ Porter Stemmer
+ 
+@@ -184,11 +185,12 @@ class PorterStemmer(StemmerI):
+         # character in `stem` is a consonant or a vowel.
+         # e.g. 'falafel' becomes 'cvcvcvc',
+         #      'architecture' becomes 'vcccvcvccvcv'
+-        for i in range(len(stem)):
+-            if self._is_consonant(stem, i):
+-                cv_sequence += "c"
+-            else:
+-                cv_sequence += "v"
++        with MemoryCPUTracker(project_id='nltk-benchmark', experiment_id='nltk_SCL001_f041ae6d', output_file='/root/ecooptimizer_benchmark/emissions/nltk/string-concat-loop/f041ae6d_usage.csv') as tracker:
++            for i in range(len(stem)):
++                if self._is_consonant(stem, i):
++                    cv_sequence += "c"
++                else:
++                    cv_sequence += "v"
+ 
+         # Count the number of 'vc' occurrences, which is equivalent to
+         # the number of 'VC' occurrences in Porter's reduced form in the

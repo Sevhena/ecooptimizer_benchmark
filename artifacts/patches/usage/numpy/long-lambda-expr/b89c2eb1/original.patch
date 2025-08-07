@@ -1,0 +1,22 @@
+diff --git a/numpy/lib/_function_base_impl.py b/numpy/lib/_function_base_impl.py
+index 63346088b6..5f7487fb67 100644
+--- a/numpy/lib/_function_base_impl.py
++++ b/numpy/lib/_function_base_impl.py
+@@ -52,6 +52,7 @@
+ # needed in this module for compatibility
+ from numpy.lib._histograms_impl import histogram, histogramdd  # noqa: F401
+ from numpy.lib._twodim_base_impl import diag
++from crtracker import MemoryCPUTracker
+ 
+ array_function_dispatch = functools.partial(
+     overrides.array_function_dispatch, module='numpy')
+@@ -4699,7 +4700,8 @@ def _discrete_interpolation_to_boundaries(index, gamma_condition_fun):
+ def _closest_observation(n, quantiles):
+     # "choose the nearest even order statistic at g=0" (H&F (1996) pp. 362).
+     # Order is 1-based so for zero-based indexing round to nearest odd index.
+-    gamma_fun = lambda gamma, index: (gamma == 0) & (np.floor(index) % 2 == 1)
++    with MemoryCPUTracker(project_id='numpy-benchmark', experiment_id='numpy_LLE001_b89c2eb1', output_file='/root/ecooptimizer_benchmark/emissions/numpy/long-lambda-expr/b89c2eb1_usage.csv') as tracker:
++        gamma_fun = lambda gamma, index: (gamma == 0) & (np.floor(index) % 2 == 1)
+     return _discrete_interpolation_to_boundaries((n * quantiles) - 1 - 0.5,
+                                                  gamma_fun)
+ 

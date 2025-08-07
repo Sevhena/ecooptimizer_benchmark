@@ -1,0 +1,20 @@
+diff --git a/gpiozero/devices.py b/gpiozero/devices.py
+index a27936b..6c695e9 100644
+--- a/gpiozero/devices.py
++++ b/gpiozero/devices.py
+@@ -16,6 +16,7 @@ import warnings
+ from collections import namedtuple
+ from itertools import chain
+ from types import FunctionType
++from crtracker import MemoryCPUTracker
+ 
+ # NOTE: Remove try when compatibility moves beyond Python 3.10
+ try:
+@@ -324,6 +325,7 @@ class Device(ValuesMixin, GPIOBase):
+         except DeviceClosed:
+             return f"<gpiozero.{self.__class__.__name__} object closed>"
+ 
++    @MemoryCPUTracker.track_usage(project_id='gpiozero-benchmark', experiment_id='gpiozero_R6301_fc7e33d2', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/no-self-use/fc7e33d2_usage.csv')
+     def _conflicts_with(self, other):
+         """
+         Called by :meth:`Factory.reserve_pins` to test whether the *other*

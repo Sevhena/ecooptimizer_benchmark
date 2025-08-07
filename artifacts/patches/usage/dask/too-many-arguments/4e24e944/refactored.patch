@@ -1,0 +1,408 @@
+diff --git a/dask/dataframe/dask_expr/_collection.py b/dask/dataframe/dask_expr/_collection.py
+index 0e16f3ed9..942f485b4 100644
+--- a/dask/dataframe/dask_expr/_collection.py
++++ b/dask/dataframe/dask_expr/_collection.py
+@@ -144,6 +144,21 @@ from dask.utils import (
+     typename,
+ )
+ from dask.widgets import get_template
++class DataParams_to_sql_427:
++    def __init__(self, df, name, uri, schema = None, if_exists = "fail", index = True, index_label = None, chunksize = None, dtype = None, method = None, compute = True, parallel = False, engine_kwargs = None):
++        self.df = df
++        self.name = name
++        self.uri = uri
++        self.schema = schema
++        self.if_exists = if_exists
++        self.index = index
++        self.index_label = index_label
++        self.chunksize = chunksize
++        self.dtype = dtype
++        self.method = method
++        self.compute = compute
++        self.parallel = parallel
++        self.engine_kwargs = engine_kwargs
+ 
+ #
+ # Utilities to wrap Expr API
+@@ -2409,20 +2424,7 @@ Expr={expr}"""
+         from dask.dataframe.io.sql import to_sql
+ 
+         return to_sql(
+-            self,
+-            name,
+-            uri,
+-            schema=schema,
+-            if_exists=if_exists,
+-            index=index,
+-            index_label=index_label,
+-            chunksize=chunksize,
+-            dtype=dtype,
+-            method=method,
+-            compute=compute,
+-            parallel=parallel,
+-            engine_kwargs=engine_kwargs,
+-        )
++            DataParams_to_sql_427(self, name, uri, schema = schema, if_exists = if_exists, index = index, index_label = index_label, chunksize = chunksize, dtype = dtype, method = method, compute = compute, parallel = parallel, engine_kwargs = engine_kwargs))
+ 
+     def to_orc(self, path, *args, **kwargs):
+         """See dd.to_orc docstring for more information"""
+diff --git a/dask/dataframe/dask_expr/io/tests/test_sql.py b/dask/dataframe/dask_expr/io/tests/test_sql.py
+index 789c12c52..b2f8c654a 100644
+--- a/dask/dataframe/dask_expr/io/tests/test_sql.py
++++ b/dask/dataframe/dask_expr/io/tests/test_sql.py
+@@ -10,6 +10,21 @@ from dask.utils import tmpfile
+ pd = _backend_library()
+ 
+ pytest.importorskip("sqlalchemy")
++class DataParams_to_sql_427:
++    def __init__(self, df, name, uri, schema = None, if_exists = "fail", index = True, index_label = None, chunksize = None, dtype = None, method = None, compute = True, parallel = False, engine_kwargs = None):
++        self.df = df
++        self.name = name
++        self.uri = uri
++        self.schema = schema
++        self.if_exists = if_exists
++        self.index = index
++        self.index_label = index_label
++        self.chunksize = chunksize
++        self.dtype = dtype
++        self.method = method
++        self.compute = compute
++        self.parallel = parallel
++        self.engine_kwargs = engine_kwargs
+ 
+ 
+ def test_shuffle_after_read_sql():
+@@ -33,7 +48,7 @@ def test_shuffle_after_read_sql():
+         ).set_index("id")
+         ddf = from_pandas(df, npartitions=1)
+ 
+-        ddf.to_sql("test_table", uri, if_exists="append")
++        ddf.to_sql(DataParams_to_sql_427("test_table", uri, if_exists = "append"))
+         result = read_sql_table("test_table", con=uri, index_col="id")
+         assert_eq(
+             result["value"].unique(), pd.Series(df["value"].unique(), name="value")
+diff --git a/dask/dataframe/io/sql.py b/dask/dataframe/io/sql.py
+index 2df3f6504..8efb1f959 100644
+--- a/dask/dataframe/io/sql.py
++++ b/dask/dataframe/io/sql.py
+@@ -12,6 +12,22 @@ from dask.dataframe._compat import PANDAS_GE_300
+ from dask.dataframe.utils import pyarrow_strings_enabled
+ from dask.delayed import delayed, tokenize
+ from dask.utils import parse_bytes
++from crtracker import MemoryCPUTracker
++class DataParams_to_sql_427:
++    def __init__(self, df, name, uri, schema = None, if_exists = "fail", index = True, index_label = None, chunksize = None, dtype = None, method = None, compute = True, parallel = False, engine_kwargs = None):
++        self.df = df
++        self.name = name
++        self.uri = uri
++        self.schema = schema
++        self.if_exists = if_exists
++        self.index = index
++        self.index_label = index_label
++        self.chunksize = chunksize
++        self.dtype = dtype
++        self.method = method
++        self.compute = compute
++        self.parallel = parallel
++        self.engine_kwargs = engine_kwargs
+ 
+ 
+ def read_sql_query(
+@@ -416,27 +432,15 @@ def _to_sql_chunk(d, uri, engine_kwargs=None, **kwargs):
+     engine_kwargs = engine_kwargs or {}
+     engine = sa.create_engine(uri, **engine_kwargs)
+ 
+-    q = d.to_sql(con=engine, **kwargs)
++    q = d.to_sql(DataParams_to_sql_427(kwargs), con = engine)
+     engine.dispose()
+ 
+     return q
+ 
+ 
++@MemoryCPUTracker.track_usage(project_id='dask-benchmark', experiment_id='dask_R0913_4e24e944', output_file='/root/ecooptimizer_benchmark/emissions/dask/too-many-arguments/4e24e944_usage_refactored.csv')
+ def to_sql(
+-    df,
+-    name: str,
+-    uri: str,
+-    schema=None,
+-    if_exists: str = "fail",
+-    index: bool = True,
+-    index_label=None,
+-    chunksize=None,
+-    dtype=None,
+-    method=None,
+-    compute=True,
+-    parallel=False,
+-    engine_kwargs=None,
+-):
++    data_params):
+     """Store Dask Dataframe to a SQL table
+ 
+     An empty table is created based on the "meta" DataFrame (and conforming to the caller's "if_exists" preference), and
+@@ -547,29 +551,29 @@ def to_sql(
+     >>> result
+     [(0, 0, '00'), (1, 1, '11'), (2, 2, '22'), (3, 3, '33')]
+     """
+-    if not isinstance(uri, str):
+-        raise ValueError(f"Expected URI to be a string, got {type(uri)}.")
++    if not isinstance(data_params.uri, str):
++        raise ValueError(f"Expected URI to be a string, got {type(data_params.uri)}.")
+ 
+     # This is the only argument we add on top of what Pandas supports
+     kwargs = dict(
+-        name=name,
+-        uri=uri,
+-        engine_kwargs=engine_kwargs,
+-        schema=schema,
+-        if_exists=if_exists,
+-        index=index,
+-        index_label=index_label,
+-        chunksize=chunksize,
+-        dtype=dtype,
+-        method=method,
++        data_params.name=data_params.name,
++        data_params.uri=data_params.uri,
++        data_params.engine_kwargs=data_params.engine_kwargs,
++        data_params.schema=data_params.schema,
++        data_params.if_exists=data_params.if_exists,
++        data_params.index=data_params.index,
++        data_params.index_label=data_params.index_label,
++        data_params.chunksize=data_params.chunksize,
++        data_params.dtype=data_params.dtype,
++        data_params.method=data_params.method,
+     )
+ 
+-    meta_task = delayed(_to_sql_chunk)(df._meta, **kwargs)
++    meta_task = delayed(_to_sql_chunk)(data_params.df._meta, **kwargs)
+ 
+     # Partitions should always append to the empty table created from `meta` above
+-    worker_kwargs = dict(kwargs, if_exists="append")
++    worker_kwargs = dict(kwargs, data_params.if_exists="append")
+ 
+-    if parallel:
++    if data_params.parallel:
+         # Perform the meta insert, then one task that inserts all blocks concurrently:
+         result = [
+             _extra_deps(
+@@ -579,13 +583,13 @@ def to_sql(
+                 **worker_kwargs,
+                 dask_key_name="to_sql-%s" % tokenize(d, **worker_kwargs),
+             )
+-            for d in df.to_delayed()
++            for d in data_params.df.to_delayed()
+         ]
+     else:
+         # Chain the "meta" insert and each block's insert
+         result = []
+         last = meta_task
+-        for d in df.to_delayed():
++        for d in data_params.df.to_delayed():
+             result.append(
+                 _extra_deps(
+                     _to_sql_chunk,
+@@ -598,7 +602,7 @@ def to_sql(
+             last = result[-1]
+     result = delayed(result)
+ 
+-    if compute:
++    if data_params.compute:
+         dask_compute(result)
+     else:
+         return result
+diff --git a/dask/dataframe/io/tests/test_sql.py b/dask/dataframe/io/tests/test_sql.py
+index a68ec58ea..6f88d715f 100644
+--- a/dask/dataframe/io/tests/test_sql.py
++++ b/dask/dataframe/io/tests/test_sql.py
+@@ -30,13 +30,28 @@ Garreth,6,20,0
+ """
+ 
+ df = pd.read_csv(io.StringIO(data), index_col="number")
++class DataParams_to_sql_427:
++    def __init__(self, df, name, uri, schema = None, if_exists = "fail", index = True, index_label = None, chunksize = None, dtype = None, method = None, compute = True, parallel = False, engine_kwargs = None):
++        self.df = df
++        self.name = name
++        self.uri = uri
++        self.schema = schema
++        self.if_exists = if_exists
++        self.index = index
++        self.index_label = index_label
++        self.chunksize = chunksize
++        self.dtype = dtype
++        self.method = method
++        self.compute = compute
++        self.parallel = parallel
++        self.engine_kwargs = engine_kwargs
+ 
+ 
+ @pytest.fixture
+ def db():
+     with tmpfile() as f:
+         uri = "sqlite:///%s" % f
+-        df.to_sql("test", uri, index=True, if_exists="replace")
++        df.to_sql(DataParams_to_sql_427("test", uri, index = True, if_exists = "replace"))
+         yield uri
+ 
+ 
+@@ -81,7 +96,7 @@ def test_single_column(db, use_head):
+         )
+         metadata.create_all(engine)
+         test_data = pd.DataFrame({"id": list(range(50))}).set_index("id")
+-        test_data.to_sql(table.name, uri, index=True, if_exists="replace")
++        test_data.to_sql(DataParams_to_sql_427(table.name, uri, index = True, if_exists = "replace"))
+ 
+         if use_head:
+             dask_df = read_sql_table(table.name, uri, index_col="id", npartitions=2)
+@@ -111,7 +126,7 @@ def test_passing_engine_as_uri_raises_helpful_error(db):
+         db = "sqlite:///%s" % f
+         engine = create_engine(db)
+         with pytest.raises(ValueError, match="Expected URI to be a string"):
+-            ddf.to_sql("test", engine, if_exists="replace")
++            ddf.to_sql(DataParams_to_sql_427("test", engine, if_exists = "replace"))
+ 
+ 
+ @pytest.mark.skip(
+@@ -187,7 +202,7 @@ def test_needs_rational(db):
+     string_dtype = get_string_dtype()
+     with tmpfile() as f:
+         uri = "sqlite:///%s" % f
+-        df.to_sql("test", uri, index=False, if_exists="replace")
++        df.to_sql(DataParams_to_sql_427("test", uri, index = False, if_exists = "replace"))
+ 
+         # one partition contains NULL
+         data = read_sql_table("test", uri, npartitions=2, index_col="b")
+@@ -355,7 +370,7 @@ def test_datetimes():
+     )
+     with tmpfile() as f:
+         uri = "sqlite:///%s" % f
+-        df.to_sql("test", uri, index=False, if_exists="replace")
++        df.to_sql(DataParams_to_sql_427("test", uri, index = False, if_exists = "replace"))
+         data = read_sql_table("test", uri, npartitions=2, index_col="b")
+         assert data.index.dtype.kind == "M"
+         assert data.divisions[0] == df.b.min()
+@@ -490,14 +505,14 @@ def test_to_sql(npartitions, parallel):
+ 
+     # Simple round trip test: use existing "number" index_col
+     with tmp_db_uri() as uri:
+-        ddf.to_sql("test", uri, parallel=parallel)
++        ddf.to_sql(DataParams_to_sql_427("test", uri, parallel = parallel))
+         result = read_sql_table("test", uri, "number")
+         assert_eq(df, result)
+ 
+     # Test writing no index, and reading back in with one of the other columns as index (`read_sql_table` requires
+     # an index_col)
+     with tmp_db_uri() as uri:
+-        ddf.to_sql("test", uri, parallel=parallel, index=False)
++        ddf.to_sql(DataParams_to_sql_427("test", uri, parallel = parallel, index = False))
+ 
+         result = read_sql_table("test", uri, "negish")
+         assert_eq(df.set_index("negish"), result)
+@@ -507,13 +522,13 @@ def test_to_sql(npartitions, parallel):
+ 
+     # Index by "age" instead
+     with tmp_db_uri() as uri:
+-        ddf_by_age.to_sql("test", uri, parallel=parallel)
++        ddf_by_age.to_sql(DataParams_to_sql_427("test", uri, parallel = parallel))
+         result = read_sql_table("test", uri, "age")
+         assert_eq(df_by_age, result)
+ 
+     # Index column can't have "object" dtype if no partitions are provided
+     with tmp_db_uri() as uri:
+-        ddf.set_index("name").to_sql("test", uri)
++        ddf.set_index("name").to_sql(DataParams_to_sql_427("test", uri))
+         with pytest.raises(
+             TypeError,
+             match='Provided index column is of type "object".  If divisions is not provided the index column type must be numeric or datetime.',  # noqa: E501
+@@ -522,24 +537,24 @@ def test_to_sql(npartitions, parallel):
+ 
+     # Test various "if_exists" values
+     with tmp_db_uri() as uri:
+-        ddf.to_sql("test", uri)
++        ddf.to_sql(DataParams_to_sql_427("test", uri))
+ 
+         # Writing a table that already exists fails
+         with pytest.raises(ValueError, match="Table 'test' already exists"):
+-            ddf.to_sql("test", uri)
++            ddf.to_sql(DataParams_to_sql_427("test", uri))
+ 
+-        ddf.to_sql("test", uri, parallel=parallel, if_exists="append")
++        ddf.to_sql(DataParams_to_sql_427("test", uri, parallel = parallel, if_exists = "append"))
+         result = read_sql_table("test", uri, "number")
+ 
+         assert_eq(df_appended, result)
+ 
+-        ddf_by_age.to_sql("test", uri, parallel=parallel, if_exists="replace")
++        ddf_by_age.to_sql(DataParams_to_sql_427("test", uri, parallel = parallel, if_exists = "replace"))
+         result = read_sql_table("test", uri, "age")
+         assert_eq(df_by_age, result)
+ 
+     # Verify number of partitions returned, when compute=False
+     with tmp_db_uri() as uri:
+-        result = ddf.to_sql("test", uri, parallel=parallel, compute=False)
++        result = ddf.to_sql(DataParams_to_sql_427("test", uri, parallel = parallel, compute = False))
+ 
+         # the first result is from the "meta" insert
+         actual = len(result.compute())
+@@ -550,23 +565,23 @@ def test_to_sql(npartitions, parallel):
+ def test_to_sql_kwargs():
+     ddf = dd.from_pandas(df, 2)
+     with tmp_db_uri() as uri:
+-        ddf.to_sql("test", uri, method="multi")
++        ddf.to_sql(DataParams_to_sql_427("test", uri, method = "multi"))
+         with pytest.raises(
+             TypeError, match="to_sql\\(\\) got an unexpected keyword argument 'unknown'"
+         ):
+-            ddf.to_sql("test", uri, unknown=None)
++            ddf.to_sql(DataParams_to_sql_427("test", uri), unknown = None)
+ 
+ 
+ def test_to_sql_engine_kwargs(caplog):
+     ddf = dd.from_pandas(df, 2)
+     with tmp_db_uri() as uri:
+-        ddf.to_sql("test", uri, engine_kwargs={"echo": False})
++        ddf.to_sql(DataParams_to_sql_427("test", uri, engine_kwargs = {"echo": False}))
+         logs = "\n".join(r.message for r in caplog.records)
+         assert logs == ""
+         assert_eq(df, read_sql_table("test", uri, "number"))
+ 
+     with tmp_db_uri() as uri:
+-        ddf.to_sql("test", uri, engine_kwargs={"echo": True})
++        ddf.to_sql(DataParams_to_sql_427("test", uri, engine_kwargs = {"echo": True}))
+         logs = "\n".join(r.message for r in caplog.records)
+         assert "CREATE" in logs
+         assert "INSERT" in logs
+diff --git a/dask/tests/test_distributed.py b/dask/tests/test_distributed.py
+index ec6beff23..07a6b9104 100644
+--- a/dask/tests/test_distributed.py
++++ b/dask/tests/test_distributed.py
+@@ -58,6 +58,21 @@ ignore_sync_scheduler_warning = pytest.mark.filterwarnings(
+     "ignore:Running on a single-machine scheduler when a distributed client "
+     "is active might lead to unexpected results."
+ )
++class DataParams_to_sql_427:
++    def __init__(self, df, name, uri, schema = None, if_exists = "fail", index = True, index_label = None, chunksize = None, dtype = None, method = None, compute = True, parallel = False, engine_kwargs = None):
++        self.df = df
++        self.name = name
++        self.uri = uri
++        self.schema = schema
++        self.if_exists = if_exists
++        self.index = index
++        self.index_label = index_label
++        self.chunksize = chunksize
++        self.dtype = dtype
++        self.method = method
++        self.compute = compute
++        self.parallel = parallel
++        self.engine_kwargs = engine_kwargs
+ 
+ 
+ def test_can_import_client():
+@@ -831,8 +846,7 @@ async def test_to_sql_engine_kwargs(c, s, a, b):
+     with tmpfile() as f:
+         uri = f"sqlite:///{f}"
+         result = ddf.to_sql(
+-            "test", uri, index=True, engine_kwargs={"echo": False}, compute=False
+-        )
++            DataParams_to_sql_427("test", uri, index = True, engine_kwargs = {"echo": False}, compute = False))
+         await c.compute(result)
+ 
+         dd.utils.assert_eq(

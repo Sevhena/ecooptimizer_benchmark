@@ -1,0 +1,24 @@
+diff --git a/dask/highlevelgraph.py b/dask/highlevelgraph.py
+index c56e13999..07c1bf96d 100644
+--- a/dask/highlevelgraph.py
++++ b/dask/highlevelgraph.py
+@@ -29,6 +29,7 @@ from dask.tokenize import normalize_token, tokenize
+ from dask.typing import DaskCollection, Graph, Key
+ from dask.utils import ensure_dict, import_required, key_split
+ from dask.widgets import get_template
++from crtracker import MemoryCPUTracker
+ 
+ 
+ def compute_layer_dependencies(layers):
+@@ -852,8 +853,9 @@ class HighLevelGraph(Graph):
+     def __repr__(self) -> str:
+         representation = f"{type(self).__name__} with {len(self.layers)} layers.\n"
+         representation += f"<{self.__class__.__module__}.{self.__class__.__name__} object at {hex(id(self))}>\n"
+-        for i, layerkey in enumerate(self._toposort_layers()):
+-            representation += f" {i}. {layerkey}\n"
++        with MemoryCPUTracker(project_id='dask-benchmark', experiment_id='dask_SCL001_5254055f', output_file='/root/ecooptimizer_benchmark/emissions/dask/string-concat-loop/5254055f_usage.csv') as tracker:
++            for i, layerkey in enumerate(self._toposort_layers()):
++                representation += f" {i}. {layerkey}\n"
+         return representation
+ 
+     def _repr_html_(self) -> str:

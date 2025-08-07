@@ -1,0 +1,290 @@
+{
+    "cb611f29": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "cb611f29",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gpiozero.pins",
+        "obj": "SPI._get_lsb_first",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 680,
+                "line": 680
+            }
+        ],
+        "path": "gpiozero/pins/__init__.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
+    },
+    "b3e91708": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b3e91708",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gpiozero.pins",
+        "obj": "Pin._get_frequency",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 22,
+                "endLine": 369,
+                "line": 369
+            }
+        ],
+        "path": "gpiozero/pins/__init__.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/pins/__init__.py"
+    },
+    "fc7e33d2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "fc7e33d2",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "gpiozero.devices",
+        "obj": "Device._conflicts_with",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 23,
+                "endLine": 329,
+                "line": 329
+            }
+        ],
+        "path": "gpiozero/devices.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/devices.py"
+    },
+    "e50ab4c5": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e50ab4c5",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "gpiozero.input_devices",
+        "obj": "LineSensor.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 496,
+                "line": 496
+            }
+        ],
+        "path": "gpiozero/input_devices.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/input_devices.py"
+    },
+    "d091a9bd": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "d091a9bd",
+        "message": "Too many arguments (11/6)",
+        "messageId": "R0913",
+        "module": "gpiozero.input_devices",
+        "obj": "SmoothedInputDevice.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 252,
+                "line": 252
+            }
+        ],
+        "path": "gpiozero/input_devices.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/input_devices.py"
+    },
+    "e18fe1c4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e18fe1c4",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "gpiozero.boards",
+        "obj": "ButtonBoard.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 215,
+                "line": 215
+            }
+        ],
+        "path": "gpiozero/boards.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/boards.py"
+    },
+    "7f920cd3": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7f920cd3",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "boards",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 82,
+                "endLine": 957,
+                "line": 957
+            }
+        ],
+        "path": "gpiozero/boards.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/boards.py"
+    },
+    "ddfcea54": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "ddfcea54",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "internal_devices",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 27,
+                "endColumn": 51,
+                "endLine": 435,
+                "line": 435
+            }
+        ],
+        "path": "gpiozero/internal_devices.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/internal_devices.py"
+    },
+    "e04be5d7": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e04be5d7",
+        "message": "Lambda function too long (10/5 expressions)",
+        "messageId": "LLE001",
+        "module": "output_devices",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 19,
+                "endColumn": 17,
+                "endLine": 1120,
+                "line": 1115
+            }
+        ],
+        "path": "gpiozero/output_devices.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/gpiozero/gpiozero/output_devices.py"
+    }
+}

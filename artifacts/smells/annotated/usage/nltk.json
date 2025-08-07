@@ -1,0 +1,398 @@
+{
+    "da4d0f22": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "da4d0f22",
+        "message": "Too many arguments (13/6)",
+        "messageId": "R0913",
+        "module": "nltk.tokenize.stanford_segmenter",
+        "obj": "StanfordSegmenter.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 56,
+                "line": 56
+            }
+        ],
+        "path": "nltk/tokenize/stanford_segmenter.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/tokenize/stanford_segmenter.py"
+    },
+    "3e0580a8": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3e0580a8",
+        "message": "Too many arguments (9/6)",
+        "messageId": "R0913",
+        "module": "nltk.corpus.reader.chunked",
+        "obj": "ChunkedCorpusReader.__init__",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 38,
+                "line": 38
+            }
+        ],
+        "path": "nltk/corpus/reader/chunked.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/chunked.py"
+    },
+    "c8457a5b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "c8457a5b",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "nltk.parse.chart",
+        "obj": "demo",
+        "occurences": [
+            {
+                "column": 0,
+                "endColumn": 8,
+                "endLine": 1723,
+                "line": 1723
+            }
+        ],
+        "path": "nltk/parse/chart.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/parse/chart.py"
+    },
+    "dc979356": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "dc979356",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "nltk.stem.arlstem2",
+        "obj": "ARLSTem2.fem2masc",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 16,
+                "endLine": 266,
+                "line": 266
+            }
+        ],
+        "path": "nltk/stem/arlstem2.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/stem/arlstem2.py"
+    },
+    "4e040ff2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "4e040ff2",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "nltk.corpus.reader.framenet",
+        "obj": "FramenetCorpusReader._exemplar_of_fes",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 24,
+                "endLine": 2468,
+                "line": 2468
+            }
+        ],
+        "path": "nltk/corpus/reader/framenet.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/corpus/reader/framenet.py"
+    },
+    "e8965bd2": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e8965bd2",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "nltk.cluster.api",
+        "obj": "ClusterI.cluster_name",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 70,
+                "line": 70
+            }
+        ],
+        "path": "nltk/cluster/api.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/cluster/api.py"
+    },
+    "13d438e9": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "13d438e9",
+        "message": "Lambda function too long (7/5 expressions)",
+        "messageId": "LLE001",
+        "module": "tgrep",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 21,
+                "endColumn": 13,
+                "endLine": 619,
+                "line": 614
+            }
+        ],
+        "path": "nltk/tgrep.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/tgrep.py"
+    },
+    "f041ae6d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "cv_sequence",
+            "innerLoopLine": 189,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 191,
+            "isFunc": false,
+            "start": 187,
+            "useOccurences": false
+        },
+        "id": "f041ae6d",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "porter.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 20,
+                "endColumn": 51,
+                "endLine": 191,
+                "line": 191
+            },
+            {
+                "column": 20,
+                "endColumn": 51,
+                "endLine": 193,
+                "line": 193
+            }
+        ],
+        "path": "nltk/stem/porter.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/stem/porter.py"
+    },
+    "48b77d42": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "result",
+            "innerLoopLine": 162,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 172,
+            "isFunc": false,
+            "start": 162,
+            "useOccurences": false
+        },
+        "id": "48b77d42",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "util.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 34,
+                "endLine": 165,
+                "line": 165
+            },
+            {
+                "column": 12,
+                "endColumn": 34,
+                "endLine": 168,
+                "line": 168
+            }
+        ],
+        "path": "nltk/util.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/util.py"
+    },
+    "5829a76e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "inside",
+            "innerLoopLine": 141,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 147,
+            "isFunc": false,
+            "start": 141,
+            "useOccurences": false
+        },
+        "id": "5829a76e",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "lexicon.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 37,
+                "endLine": 146,
+                "line": 146
+            }
+        ],
+        "path": "nltk/ccg/lexicon.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/ccg/lexicon.py"
+    },
+    "781f1a9a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "781f1a9a",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "snowball",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 15,
+                "endColumn": 78,
+                "endLine": 5176,
+                "line": 5176
+            }
+        ],
+        "path": "nltk/stem/snowball.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/stem/snowball.py"
+    },
+    "e3bd1ce6": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e3bd1ce6",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "snowball",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 13,
+                "endColumn": 74,
+                "endLine": 5194,
+                "line": 5194
+            }
+        ],
+        "path": "nltk/stem/snowball.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/nltk/nltk/stem/snowball.py"
+    }
+}
