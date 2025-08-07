@@ -239,7 +239,7 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
     env["VIRTUAL_ENV"] = str(venv_dir)
     env["PATH"] = str(venv_bin) + os.pathsep + env["PATH"]
 
-    console_out_log = LOG_DIR / "bench_console_output.log"
+    console_out_log = LOG_DIR / f"bench_console_output_{repo}.log"
 
     logging.debug(f"Running test command: {test_cmd} in {repo}")
     start_time = time.time()
