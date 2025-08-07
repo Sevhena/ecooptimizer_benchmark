@@ -1,12 +1,15 @@
 diff --git a/nltk/tgrep.py b/nltk/tgrep.py
-index dead3d856..268b58598 100644
+index dead3d856..d1a49a0de 100644
 --- a/nltk/tgrep.py
 +++ b/nltk/tgrep.py
-@@ -1,3 +1,4 @@
+@@ -111,6 +111,7 @@ macro definitions to ``m`` and initialises ``l`` to an empty dictionary.
+ 
+ import functools
+ import re
 +from codecarbon import EmissionsTracker
- #!/usr/bin/env python
- #
- # Natural Language Toolkit: TGrep search
+ 
+ try:
+     import pyparsing
 @@ -611,12 +612,13 @@ def _tgrep_relation_action(_s, _l, tokens):
              )
          # A $,, B     A is a sister of and follows B.

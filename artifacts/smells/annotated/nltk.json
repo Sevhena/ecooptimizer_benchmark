@@ -212,10 +212,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 25,
-                "endColumn": 17,
-                "endLine": 621,
-                "line": 616
+                "column": 21,
+                "endColumn": 13,
+                "endLine": 619,
+                "line": 614
             }
         ],
         "path": "nltk/tgrep.py",

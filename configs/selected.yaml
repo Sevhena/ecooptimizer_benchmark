@@ -41,6 +41,8 @@ smells:
     - 13d438e9
     no-self-use:
     - dc979356
+    string-concat-loop:
+    - f041ae6d
   numpy:
     long-lambda-expr:
     - b89c2eb1
@@ -49,8 +51,8 @@ smells:
   paho.mqtt.python:
     long-message-chain:
     - 89b86924
-    string-concat-loop:
-    - cbf43c4b
+    # string-concat-loop:
+    # - cbf43c4b
   scikit-learn:
     long-message-chain:
     - 5f1cf174

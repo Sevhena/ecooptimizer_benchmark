@@ -1,12 +1,15 @@
 diff --git a/nltk/stem/arlstem2.py b/nltk/stem/arlstem2.py
-index e4121b6cf..0b2b68d88 100644
+index e4121b6cf..69259819e 100644
 --- a/nltk/stem/arlstem2.py
 +++ b/nltk/stem/arlstem2.py
-@@ -1,3 +1,4 @@
+@@ -28,6 +28,7 @@ online and do not use any dictionary.
+ import re
+ 
+ from nltk.stem.api import StemmerI
 +from codecarbon import track_emissions
- #
- # Natural Language Toolkit: ARLSTem Stemmer v2
- #
+ 
+ 
+ class ARLSTem2(StemmerI):
 @@ -261,6 +262,7 @@ class ARLSTem2(StemmerI):
              return token[:-2]
          return token
