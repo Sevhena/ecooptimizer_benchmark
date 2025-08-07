@@ -1,0 +1,5 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-07_21-56-29,gpiozero,long-lambda-expr,e04be5d7,original,30,60.58,0.0,16.2
+2025-08-07_21-57-27,gpiozero,long-lambda-expr,e04be5d7,original,30,57.71,0.0,16.2
+2025-08-07_21-58-24,gpiozero,long-lambda-expr,e04be5d7,original,30,57.80,0.0,16.2
+2025-08-07_22-00-30,gpiozero,long-lambda-expr,e04be5d7,refactored,30,125.61,0.0,16.2
