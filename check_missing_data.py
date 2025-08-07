@@ -6,7 +6,6 @@ Checks emissions/<repo>/<smell_type>/ for the 4 required files for every smell i
 listed in configs/selected.yaml, and reports missing data in a summarised way.
 """
 
-import os
 import argparse
 import sys
 import yaml
@@ -28,27 +27,35 @@ def load_smells(path: Path) -> dict:
     return {}
 
 
-def classify_missing(present):
-    """present is a set of keys from FILE_TYPES that exist."""
-    all_types = set(FILE_TYPES.keys())
+def classify_missing(present, file_types):
+    """present is a set of keys that exist, file_types is the current dict of files to check."""
+    all_types = set(file_types.keys())
     missing = all_types - present
 
-    if len(missing) == 4:
+    if len(missing) == len(file_types):
         return "all data missing"
-    carbon_missing = {"carbon_orig", "carbon_ref"}
-    usage_missing = {"usage_orig", "usage_ref"}
+
+    carbon_missing = {"carbon_orig", "carbon_ref"} & all_types
+    usage_missing = {"usage_orig", "usage_ref"} & all_types
+
     if missing == carbon_missing:
         return "only carbon data missing"
-    if missing == {"carbon_ref", "usage_ref"}:
+    if missing == {"carbon_ref"} & all_types | {"usage_ref"} & all_types:
         return "only refactored data missing"
-    if missing == usage_missing:
+    if missing == usage_missing and usage_missing:
         return "only usage data missing"
     return "partial data missing: " + ", ".join(sorted(missing))
 
 
-def check_missing(emissions_dir: Path, smells_map: dict[str, dict[str, str]]):
-    report = {}
+def check_missing(
+    emissions_dir: Path, smells_map: dict[str, dict[str, str]], ignore_usage: bool = False
+):
+    file_types = dict(FILE_TYPES)
+    if ignore_usage:
+        file_types.pop("usage_orig")
+        file_types.pop("usage_ref")
 
+    report = {}
     for repo, smell_types in sorted(smells_map.items()):
         for smell_type, ids in sorted(smell_types.items()):
             if not ids:
@@ -56,16 +63,16 @@ def check_missing(emissions_dir: Path, smells_map: dict[str, dict[str, str]]):
             smell_dir = emissions_dir / repo / smell_type
             for sid in ids:
                 present = set()
-                for key, template in FILE_TYPES.items():
+                for key, template in file_types.items():
                     fname = template.format(id=sid)
                     fpath = smell_dir / fname
                     if fpath.exists():
                         present.add(key)
 
-                if len(present) == 4:
+                if len(present) == len(file_types):
                     continue  # all present
 
-                category = classify_missing(present)
+                category = classify_missing(present, file_types)
                 report.setdefault(f"{repo}/{smell_type}", []).append((sid, category))
 
     return report
@@ -84,6 +91,11 @@ def main():
     parser.add_argument(
         "-e", "--emissions-dir", default="emissions", help="Emissions root dir (default: emissions)"
     )
+    parser.add_argument(
+        "--ignore-usage",
+        action="store_true",
+        help="Ignore CPU/RAM usage files when checking for missing data",
+    )
     args = parser.parse_args()
 
     config = Path(args.config)
@@ -101,7 +113,7 @@ def main():
         print(f"No 'smells' mapping found in {args.config} or it's empty.", file=sys.stderr)
         sys.exit(3)
 
-    report = check_missing(emissions, smells_map)
+    report = check_missing(emissions, smells_map, args.ignore_usage)
 
     if not report:
         print("All data present ✅")
