@@ -16714,10 +16714,10 @@
         "obj": "all_valid",
         "occurences": [
             {
-                "column": 35,
-                "endColumn": 84,
-                "endLine": 586,
-                "line": 586
+                "column": 11,
+                "endColumn": 60,
+                "endLine": 584,
+                "line": 584
             }
         ],
         "path": "django/forms/formsets.py",
@@ -20465,7 +20465,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "ns_pattern",
-            "innerLoopLine": 60,
+            "innerLoopLine": 62,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -20482,10 +20482,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 47,
-                "endLine": 83,
-                "line": 83
+                "column": 20,
+                "endColumn": 51,
+                "endLine": 85,
+                "line": 85
             }
         ],
         "path": "django/urls/base.py",

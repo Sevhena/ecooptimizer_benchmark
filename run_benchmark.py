@@ -332,6 +332,11 @@ def main():
         "--verbose", action="store_true", help="Enable verbose output with emissions monitoring"
     )
     parser.add_argument(
+        "--refactor-only",
+        action="store_true",
+        help="Only run benchmarks for the refactored smell instance.",
+    )
+    parser.add_argument(
         "--output-dir",
         type=str,
         help="Directory name for storing emissions data in emissions folder",
@@ -450,7 +455,12 @@ def main():
                 logging.info(f"   {smell_id}")
 
                 # --- Apply and Run Original ---
-                for version in ["original", "refactored"]:
+                if args.refactor_only:
+                    versions = ["refactored"]
+                else:
+                    versions = ["original", "refactored"]
+
+                for version in versions:
                     logging.info(f"    [{version}]")
                     try:
                         apply_patch(smell_dir / f"{version}.patch", repo_dir)
