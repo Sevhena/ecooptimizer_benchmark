@@ -183,8 +183,10 @@ def _run_single_test(
                 stderr=subprocess.STDOUT,
             )
 
-            dots_to_print = 0
-            while proc.poll() is None:
+            while True:
+                if proc.poll() is not None:
+                    break  # process already finished naturally
+
                 time.sleep(0.1)
 
                 if emissions_csv.exists():
@@ -193,22 +195,20 @@ def _run_single_test(
 
                     datapoints = current_lines - initial_lines
 
-                    if verbose:
-                        dots_to_print = datapoints - dots_printed
-                        if dots_to_print > 0:
-                            print(".", end="", flush=True)
-                            dots_printed += 1
-                            dots_to_print -= 1
+                    if verbose and datapoints > dots_printed:
+                        print(".", end="", flush=True)
+                        dots_printed = datapoints
 
                     if datapoints >= target_points:
                         logging.debug(f"Reached {datapoints} datapoints, stopping test.")
-                        print("." * (target_points - dots_printed), end="", flush=True)
+                        if verbose and dots_printed < target_points:
+                            print("." * (target_points - dots_printed), end="", flush=True)
                         proc.terminate()
                         try:
                             proc.wait(timeout=5)
                         except subprocess.TimeoutExpired:
                             proc.kill()
-                        break
+                        break  # ✅ immediately exit loop after stopping process
 
     except Exception as e:
         logging.debug(f"Error raised during testing. Check logs. {e}")
