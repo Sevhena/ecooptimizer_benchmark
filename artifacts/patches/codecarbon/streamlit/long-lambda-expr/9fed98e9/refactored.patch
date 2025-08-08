@@ -20,7 +20,7 @@ index a4ab9fb20..e140b42bb 100644
 -            "on Streamlit Cloud? More info: "
 -            "https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management"
 -        )
-+        track_emissions(project_name='streamlit-benchmark', measure_power_secs=1, experiment_id='streamlit_LLE001_9fed98e9', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-lambda-expr/9fed98e9_refactored.csv')
++        @track_emissions(project_name='streamlit-benchmark', measure_power_secs=1, experiment_id='streamlit_LLE001_9fed98e9', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-lambda-expr/9fed98e9_refactored.csv')
 +        def converted_lambda_1(attr_name):
 +            return (
 +                f'st.secrets has no attribute "{attr_name}". '
