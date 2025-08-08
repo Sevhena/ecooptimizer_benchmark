@@ -15,12 +15,12 @@ index 47ecdcd14d..894298a367 100644
          if len(res) > 1:
              first_version = version = res[0]["version"]
 -            warning_msg = (
+-                "Multiple active versions of the dataset matching the name"
+-                f" {name} exist. Versions may be fundamentally different, "
+-                f"returning version {first_version}. "
+-                "Available versions:\n"
+-            )
 +            warning_msg = [f'Multiple active versions of the dataset matching the name {name} exist. Versions may be fundamentally different, returning version {first_version}. Available versions:\n']
-                 "Multiple active versions of the dataset matching the name"
-                 f" {name} exist. Versions may be fundamentally different, "
-                 f"returning version {first_version}. "
-                 "Available versions:\n"
-             )
 -            for r in res:
 -                warning_msg += f"- version {r['version']}, status: {r['status']}\n"
 -                warning_msg += (
