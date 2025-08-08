@@ -247,7 +247,7 @@ def main():
         ),
     )
     parser.add_argument(
-        "--smell-ids", type=str, help="Benchmark a specific smell ID (must use with --repo)"
+        "--smell-ids", nargs="+", help="Benchmark a specific smell ID (must use with --repo)"
     )
     parser.add_argument(
         "--iters", type=int, default=DEFAULT_ITERS, help="Number of iterations to run (default: 30)"
