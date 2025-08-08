@@ -1,0 +1,30 @@
+diff --git a/sklearn/utils/validation.py b/sklearn/utils/validation.py
+index d766ad1654..2e7103ba4a 100644
+--- a/sklearn/utils/validation.py
++++ b/sklearn/utils/validation.py
+@@ -30,6 +30,7 @@ from ..utils.fixes import ComplexWarning, _preserve_dia_indices_dtype
+ from ._isfinite import FiniteStatus, cy_isfinite
+ from ._tags import get_tags
+ from .fixes import _object_dtype_isnan
++from codecarbon import EmissionsTracker
+ 
+ FLOAT_DTYPES = (np.float64, np.float32, np.float16)
+ 
+@@ -2777,11 +2778,12 @@ def _check_feature_names(estimator, X, *, reset):
+         def add_names(names):
+             output = ""
+             max_n_names = 5
+-            for i, name in enumerate(names):
+-                if i >= max_n_names:
+-                    output += "- ...\n"
+-                    break
+-                output += f"- {name}\n"
++            with EmissionsTracker(project_name='scikit-learn-benchmark', measure_power_secs=1, experiment_id='scikit-learn_SCL001_d880725b', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/string-concat-loop/d880725b.csv') as tracker:
++                for i, name in enumerate(names):
++                    if i >= max_n_names:
++                        output += "- ...\n"
++                        break
++                    output += f"- {name}\n"
+             return output
+ 
+         if unexpected_names:

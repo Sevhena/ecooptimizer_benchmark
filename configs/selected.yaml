@@ -55,7 +55,7 @@ smells:
     no-self-use:    
     - db63474a
     string-concat-loop:
-    - de2a415f
+    - d880725b
     too-many-arguments:
     - 0136992b
     use-a-generator:

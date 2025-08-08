@@ -142,8 +142,8 @@
             {
                 "column": 4,
                 "endColumn": 22,
-                "endLine": 1043,
-                "line": 1043
+                "endLine": 1041,
+                "line": 1041
             }
         ],
         "path": "sklearn/_loss/loss.py",
@@ -206,8 +206,8 @@
             {
                 "column": 4,
                 "endColumn": 24,
-                "endLine": 237,
-                "line": 237
+                "endLine": 235,
+                "line": 235
             }
         ],
         "path": "sklearn/neural_network/_multilayer_perceptron.py",
@@ -346,8 +346,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 1019,
-                "line": 1019
+                "endLine": 1017,
+                "line": 1017
             }
         ],
         "path": "sklearn/ensemble/_forest.py",
@@ -410,8 +410,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 437,
-                "line": 437
+                "endLine": 435,
+                "line": 435
             }
         ],
         "path": "sklearn/semi_supervised/_label_propagation.py",
@@ -818,8 +818,8 @@
             {
                 "column": 4,
                 "endColumn": 16,
-                "endLine": 452,
-                "line": 452
+                "endLine": 450,
+                "line": 450
             }
         ],
         "path": "sklearn/cluster/_mean_shift.py",
@@ -13419,7 +13419,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "output",
-            "innerLoopLine": 2780,
+            "innerLoopLine": 2782,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -13436,10 +13436,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 20,
-                "endColumn": 47,
-                "endLine": 2782,
-                "line": 2782
+                "column": 24,
+                "endColumn": 51,
+                "endLine": 2784,
+                "line": 2784
             }
         ],
         "path": "sklearn/utils/validation.py",
