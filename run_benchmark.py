@@ -307,10 +307,11 @@ def main():
     parser = argparse.ArgumentParser(description="Run benchmark tests for smells.")
     parser.add_argument("--domain", type=str, help="Benchmark all smells in a domain")
     parser.add_argument("--repo", type=str, help="Benchmark a specific repository")
+    parser.add_argument("--repos", nargs="+", help="Benchmark specific repositories")
     parser.add_argument(
         "--smell-types",
         nargs="+",
-        default=ALL_SMELL_TYPES,
+        default=SMELL_TYPES_REF.keys(),
         help="Benchmark specific smell types",
     )
     parser.add_argument(
@@ -359,6 +360,14 @@ def main():
         )
         sys.exit(1)
 
+    if args.smell_id and not args.repo:
+        logging.error("--smell-id must be used with --repo")
+        sys.exit(1)
+
+    if args.repos and args.smell_id:
+        logging.error("Cannot use --smell-id with --repos. Use the singular version --repo instead")
+        sys.exit(1)
+
     repos_config = load_yaml(REPOS_YAML)
     selected_config = load_yaml(SELECTED_YAML)
     domain_config = load_yaml(DOMAIN_YAML)
@@ -375,6 +384,13 @@ def main():
             )
             sys.exit(1)
         target_repos.add(args.repo)
+
+    elif args.repos:
+        for repo in args.repos:
+            if args.repo not in selected_repos:
+                logging.error(f"Repo {repo} not in selected calibration set. Skipping. ")
+                continue
+            target_repos.add(repo)
 
     elif args.domain:
         domain_repos = set(domain_config.get(args.domain.lower(), []))
