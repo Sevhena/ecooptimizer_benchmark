@@ -95,6 +95,7 @@ def run_benchmark(
     smell_id: str,
     version: str,
     test_cmd: list[str],
+    tracker: str = "codecarbon",
     iters: int = DEFAULT_ITERS,
     verbose: bool = False,
 ):
@@ -106,7 +107,7 @@ def run_benchmark(
         EMISSIONS_DIR
         / repo
         / smell_type
-        / f"{smell_id}{'_refactored' if version == 'refactored' else ''}.csv"
+        / f"{smell_id}{'' if tracker == 'codecarbon' else '_usage'}{'_refactored' if version == 'refactored' else ''}.csv"
     )
     emissions_csv.parent.mkdir(parents=True, exist_ok=True)
 
@@ -198,7 +199,7 @@ def _run_single_test(
                             dots_printed += dots_to_print
 
                     if datapoints >= target_points:
-                        logging.info(f"Reached {datapoints} datapoints, stopping test.")
+                        logging.debug(f"Reached {datapoints} datapoints, stopping test.")
                         proc.terminate()
                         try:
                             proc.wait(timeout=5)
@@ -426,6 +427,7 @@ def main():
                             smell_id,
                             version,
                             test_cmd,
+                            args.tracker,
                             args.iters,
                             args.verbose,
                         )
