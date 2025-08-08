@@ -1436,10 +1436,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 60,
-                "endColumn": 9,
-                "endLine": 62,
-                "line": 60
+                "column": 64,
+                "endColumn": 13,
+                "endLine": 64,
+                "line": 62
             }
         ],
         "path": "lib/streamlit/runtime/secrets.py",
@@ -1854,8 +1854,8 @@
             {
                 "column": 4,
                 "endColumn": 48,
-                "endLine": 533,
-                "line": 533
+                "endLine": 531,
+                "line": 531
             }
         ],
         "path": "lib/streamlit/runtime/app_session.py",
@@ -2014,8 +2014,8 @@
             {
                 "column": 4,
                 "endColumn": 21,
-                "endLine": 183,
-                "line": 183
+                "endLine": 181,
+                "line": 181
             }
         ],
         "path": "lib/streamlit/elements/widgets/file_uploader.py",
@@ -2372,8 +2372,8 @@
             {
                 "column": 4,
                 "endColumn": 13,
-                "endLine": 227,
-                "line": 227
+                "endLine": 225,
+                "line": 225
             }
         ],
         "path": "lib/streamlit/elements/media.py",
@@ -2538,8 +2538,8 @@
             {
                 "column": 4,
                 "endColumn": 12,
-                "endLine": 39,
-                "line": 39
+                "endLine": 37,
+                "line": 37
             }
         ],
         "path": "lib/streamlit/elements/code.py",
@@ -2666,8 +2666,8 @@
             {
                 "column": 0,
                 "endColumn": 12,
-                "endLine": 195,
-                "line": 195
+                "endLine": 193,
+                "line": 193
             }
         ],
         "path": "lib/streamlit/elements/iframe.py",
@@ -3304,10 +3304,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 58,
-                "endColumn": 9,
-                "endLine": 53,
-                "line": 48
+                "column": 62,
+                "endColumn": 13,
+                "endLine": 55,
+                "line": 50
             }
         ],
         "path": "lib/streamlit/runtime/secrets.py",

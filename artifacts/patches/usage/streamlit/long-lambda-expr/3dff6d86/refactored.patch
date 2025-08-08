@@ -1,5 +1,5 @@
 diff --git a/lib/streamlit/runtime/secrets.py b/lib/streamlit/runtime/secrets.py
-index a4ab9fb20..8d2180d0b 100644
+index a4ab9fb20..343cf4d40 100644
 --- a/lib/streamlit/runtime/secrets.py
 +++ b/lib/streamlit/runtime/secrets.py
 @@ -31,6 +31,7 @@ import streamlit.watcher.path_watcher
@@ -10,17 +10,19 @@ index a4ab9fb20..8d2180d0b 100644
  
  _LOGGER: Final = get_logger(__name__)
  
-@@ -57,9 +58,10 @@ class SecretErrorMessages:
+@@ -57,9 +58,12 @@ class SecretErrorMessages:
              "on Streamlit Cloud? More info: "
              "https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/secrets-management"
          )
 -        self.no_secrets_found: Callable[[list[str]], str] = lambda file_paths: (
 -            f"No secrets found. Valid paths for a secrets.toml file or secret directories are: {', '.join(file_paths)}"
 -        )
-+        with MemoryCPUTracker(project_id='streamlit-benchmark', experiment_id='streamlit_LLE001_3dff6d86', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-lambda-expr/3dff6d86_usage_refactored.csv') as tracker:
-+            self.no_secrets_found: Callable[[list[str]], str] = lambda file_paths: (
++        @MemoryCPUTracker.track_usage(project_id='streamlit-benchmark', experiment_id='streamlit_LLE001_3dff6d86', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/long-lambda-expr/3dff6d86_usage_refactored.csv')
++        def converted_lambda_1(file_paths):
++            return (
 +                f"No secrets found. Valid paths for a secrets.toml file or secret directories are: {', '.join(file_paths)}"
 +            )
++        self.no_secrets_found: Callable[[list[str]], str] = converted_lambda_1
          self.error_parsing_file_at_path: Callable[[str, Exception], str] = (
              lambda path, ex: f"Error parsing secrets file at {path}: {ex}"
          )

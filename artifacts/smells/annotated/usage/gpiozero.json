@@ -54,8 +54,8 @@
             {
                 "column": 4,
                 "endColumn": 21,
-                "endLine": 581,
-                "line": 581
+                "endLine": 579,
+                "line": 579
             }
         ],
         "path": "gpiozero/boards.py",
@@ -1222,10 +1222,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 15,
-                "endColumn": 13,
-                "endLine": 1118,
-                "line": 1113
+                "column": 19,
+                "endColumn": 17,
+                "endLine": 1120,
+                "line": 1115
             }
         ],
         "path": "gpiozero/output_devices.py",

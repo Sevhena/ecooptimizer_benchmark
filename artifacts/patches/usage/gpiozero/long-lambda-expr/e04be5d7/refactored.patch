@@ -1,5 +1,5 @@
 diff --git a/gpiozero/output_devices.py b/gpiozero/output_devices.py
-index 9680f15..ead2ebf 100644
+index 9680f15..e0f0a2c 100644
 --- a/gpiozero/output_devices.py
 +++ b/gpiozero/output_devices.py
 @@ -32,6 +32,7 @@ from .devices import GPIODevice, Device, CompositeDevice
@@ -10,7 +10,7 @@ index 9680f15..ead2ebf 100644
  try:
      from .pins.pigpio import PiGPIOFactory
  except ImportError:
-@@ -1110,12 +1111,13 @@ class RGBLED(SourceMixin, Device):
+@@ -1110,12 +1111,14 @@ class RGBLED(SourceMixin, Device):
              off_color, n, fps=25):
          # Define a simple lambda to perform linear interpolation between
          # off_color and on_color
@@ -20,8 +20,9 @@ index 9680f15..ead2ebf 100644
 -            (1 - t) * on + t * off
 -            for off, on in zip(off_color, on_color)
 -            )
-+        with MemoryCPUTracker(project_id='gpiozero-benchmark', experiment_id='gpiozero_LLE001_e04be5d7', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/long-lambda-expr/e04be5d7_usage_refactored.csv') as tracker:
-+            lerp = lambda t, fade_in: tuple(
++        @MemoryCPUTracker.track_usage(project_id='gpiozero-benchmark', experiment_id='gpiozero_LLE001_e04be5d7', output_file='/root/ecooptimizer_benchmark/emissions/gpiozero/long-lambda-expr/e04be5d7_usage_refactored.csv')
++        def lerp(t, fade_in):
++            return tuple(
 +                (1 - t) * off + t * on
 +                if fade_in else
 +                (1 - t) * on + t * off
