@@ -1,11 +1,14 @@
 diff --git a/nltk/stem/porter.py b/nltk/stem/porter.py
-index 36c5bdf36..c7b7b49cf 100644
+index 36c5bdf36..2bdf0a603 100644
 --- a/nltk/stem/porter.py
 +++ b/nltk/stem/porter.py
-@@ -1,3 +1,4 @@
-+from codecarbon import EmissionsTracker
+@@ -17,6 +17,7 @@ algorithm at
+ which includes another Python implementation and other implementations
+ in many languages.
  """
- Porter Stemmer
++from codecarbon import EmissionsTracker
+ 
+ __docformat__ = "plaintext"
  
 @@ -184,11 +185,12 @@ class PorterStemmer(StemmerI):
          # character in `stem` is a consonant or a vowel.

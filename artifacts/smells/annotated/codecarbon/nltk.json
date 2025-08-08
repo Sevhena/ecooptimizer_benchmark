@@ -1160,10 +1160,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 25,
-                "endColumn": 17,
-                "endLine": 621,
-                "line": 616
+                "column": 21,
+                "endColumn": 13,
+                "endLine": 619,
+                "line": 614
             }
         ],
         "path": "nltk/tgrep.py",
@@ -14687,7 +14687,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "cv_sequence",
-            "innerLoopLine": 187,
+            "innerLoopLine": 189,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -14704,16 +14704,16 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 47,
-                "endLine": 189,
-                "line": 189
-            },
-            {
-                "column": 16,
-                "endColumn": 47,
+                "column": 20,
+                "endColumn": 51,
                 "endLine": 191,
                 "line": 191
+            },
+            {
+                "column": 20,
+                "endColumn": 51,
+                "endLine": 193,
+                "line": 193
             }
         ],
         "path": "nltk/stem/porter.py",

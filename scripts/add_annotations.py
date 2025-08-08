@@ -71,8 +71,11 @@ def find_import_insertion_point(lines: list[str]) -> int:
         if line.startswith('"""'):
             if not line.replace('"""', "", 1).endswith('"""'):
                 if in_docstring:
+                    logging.debug("Exiting docstring")
                     in_docstring = False
+                    last_import_line = i
                 else:
+                    logging.debug("Entering docstring")
                     in_docstring = True
 
             continue
