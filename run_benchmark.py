@@ -202,6 +202,7 @@ def _run_single_test(
 
                     if datapoints >= target_points:
                         logging.debug(f"Reached {datapoints} datapoints, stopping test.")
+                        print("." * (target_points - dots_printed), end="", flush=True)
                         proc.terminate()
                         try:
                             proc.wait(timeout=5)
