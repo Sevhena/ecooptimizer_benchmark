@@ -152,7 +152,7 @@ def run_benchmark(
 
     try:
         while datapoints < iters + 1:
-            elapsed, avg_cpu, peak_mem = _run_single_test(venv_dir, test_cmd, repo)
+            elapsed, avg_cpu, peak_mem = _run_single_test(venv_dir, test_cmd, repo, tracker)
 
             timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
             row = [
@@ -211,7 +211,7 @@ def run_benchmark(
     return True
 
 
-def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
+def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str, tracker: str = "codecarbon"):
     """Run a single test iteration and collect system metrics."""
     process = psutil.Process()
     venv_bin = venv_dir / "bin"
@@ -226,7 +226,7 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
     env["VIRTUAL_ENV"] = str(venv_dir)
     env["PATH"] = str(venv_bin) + os.pathsep + env["PATH"]
 
-    console_out_log = LOG_DIR / f"bench_console_output_{repo}.log"
+    console_out_log = LOG_DIR / f"bench_console_output_{tracker}_{repo}.log"
 
     logging.debug(f"Running test command: {test_cmd} in {repo}")
     start_time = time.time()
@@ -354,7 +354,7 @@ def main():
 
     elif args.repos:
         for repo in args.repos:
-            if args.repo not in selected_repos:
+            if repo not in selected_repos:
                 logging.error(f"Repo {repo} not in selected calibration set. Skipping. ")
                 continue
             target_repos.add(repo)
