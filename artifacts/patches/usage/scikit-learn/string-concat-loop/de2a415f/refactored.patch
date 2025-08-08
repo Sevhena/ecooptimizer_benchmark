@@ -1,0 +1,45 @@
+diff --git a/sklearn/datasets/_openml.py b/sklearn/datasets/_openml.py
+index 47ecdcd14d..747b25c97f 100644
+--- a/sklearn/datasets/_openml.py
++++ b/sklearn/datasets/_openml.py
+@@ -30,6 +30,7 @@ from ..utils._param_validation import (
+ )
+ from . import get_data_home
+ from ._arff_parser import load_arff_from_gzip_file
++from crtracker import MemoryCPUTracker
+ 
+ __all__ = ["fetch_openml"]
+ 
+@@ -310,17 +311,19 @@ def _get_data_info_by_name(
+         res = json_data["data"]["dataset"]
+         if len(res) > 1:
+             first_version = version = res[0]["version"]
+-            warning_msg = (
++            warning_msg = [f'Multiple active versions of the dataset matching the name {name} exist. Versions may be fundamentally different, returning version {first_version}. Available versions:\n']
+                 "Multiple active versions of the dataset matching the name"
+                 f" {name} exist. Versions may be fundamentally different, "
+                 f"returning version {first_version}. "
+                 "Available versions:\n"
+             )
+-            for r in res:
+-                warning_msg += f"- version {r['version']}, status: {r['status']}\n"
+-                warning_msg += (
+-                    f"  url: https://www.openml.org/search?type=data&id={r['did']}\n"
+-                )
++            with MemoryCPUTracker(project_id='scikit-learn-benchmark', experiment_id='scikit-learn_SCL001_de2a415f', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/string-concat-loop/de2a415f_usage_refactored.csv') as tracker:
++                for r in res:
++                    warning_msg.append(f"- version {r['version']}, status: {r['status']}\n")
++                    warning_msg.append(f"  url: https://www.openml.org/search?type=data&id={r['did']}\n")
++                        f"  url: https://www.openml.org/search?type=data&id={r['did']}\n"
++                    )
++                warning_msg = ''.join(warning_msg)
+             warn(warning_msg)
+         return res[0]
+ 
+@@ -1157,4 +1160,4 @@ def fetch_openml(
+         url="https://www.openml.org/d/{}".format(data_id),
+     )
+ 
+-    return bunch
++    return bunch
+\ No newline at end of file

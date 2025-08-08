@@ -96,11 +96,13 @@ def add_annotations(repo_name: str, smell_id: str, tracker: str = "codecarbon") 
 def refactor_smell(repo_name: str, smell_id: str, tracker: str = "codecarbon") -> bool:
     try:
         logging.debug(f"Refactoring smell {smell_id} in {repo_name}")
+        smell_file = f"{ANNOTATED_SMELLS_DIR}/{tracker}/{repo_name}.json"
+        logging.debug(f"Smells file: {smell_file}")
         subprocess.run(
             [
                 "ecooptimizer",
                 "refactor",
-                f"{ANNOTATED_SMELLS_DIR}/{tracker}/{repo_name}.json",
+                smell_file,
                 "--smell-id",
                 smell_id,
                 "--save-to-original",
@@ -184,7 +186,7 @@ def create_patches(
             raise Exception(f"Original patch creation failed for smell {smell_id}")
         logging.debug(f"[{smell_id}] Original patch created at {patch_path_original}")
 
-        refactor_smell(repo_name, smell_id)
+        refactor_smell(repo_name, smell_id, tracker)
         if not create_patch(patch_path_refactored, smell_id, worktree_path):
             raise Exception(f"Refactored patch creation failed for smell {smell_id}")
         if not fix_refactored_patch_path(patch_path_refactored, smell_id, symbol, tracker):

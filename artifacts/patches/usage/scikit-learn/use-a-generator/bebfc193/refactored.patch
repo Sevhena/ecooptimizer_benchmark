@@ -1,5 +1,5 @@
 diff --git a/sklearn/impute/_base.py b/sklearn/impute/_base.py
-index 689ba8acee..d8afa1978b 100644
+index 689ba8acee..59e9975351 100644
 --- a/sklearn/impute/_base.py
 +++ b/sklearn/impute/_base.py
 @@ -24,6 +24,7 @@ from ..utils.validation import (
@@ -18,8 +18,8 @@ index 689ba8acee..d8afa1978b 100644
 -                [all(missing_mask[:, i].data) for i in range(missing_mask.shape[1])]
 -            ):
 +            with MemoryCPUTracker(project_id='scikit-learn-benchmark', experiment_id='scikit-learn_R1729_bebfc193', output_file='/root/ecooptimizer_benchmark/emissions/scikit-learn/use-a-generator/bebfc193_usage_refactored.csv') as tracker:
-+                _carbon_wrapped_7fd65c3b = any( [all(missing_mask[:, i].data) for i in range(missing_mask.shape[1])] )
-+            if not self.keep_empty_features and _carbon_wrapped_7fd65c3b:
++                _carbon_wrapped_f53bfc18 = any( [all(missing_mask[:, i].data) for i in range(missing_mask.shape[1])] )
++            if not self.keep_empty_features and _carbon_wrapped_f53bfc18:
                  warnings.warn(
                      "Currently, when `keep_empty_feature=False` and "
                      '`strategy="constant"`, empty features are not dropped. '

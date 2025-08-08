@@ -1,0 +1,97 @@
+diff --git a/django/urls/base.py b/django/urls/base.py
+index b7c1b83ea3..a0b0571244 100644
+--- a/django/urls/base.py
++++ b/django/urls/base.py
+@@ -9,6 +9,7 @@ from django.utils.translation import override
+ from .exceptions import NoReverseMatch, Resolver404
+ from .resolvers import _get_cached_resolver, get_ns_resolver, get_resolver
+ from .utils import get_callable
++from crtracker import MemoryCPUTracker
+ 
+ # SCRIPT_NAME prefixes for each thread are stored here. If there's no entry for
+ # the current thread (which is the only one we ever access), it is assumed to
+@@ -55,41 +56,43 @@ def reverse(
+             current_path = None
+ 
+         resolved_path = []
+-        ns_pattern = ""
++        ns_pattern = []
+         ns_converters = {}
+-        for ns in path:
+-            current_ns = current_path.pop() if current_path else None
+-            # Lookup the name to see if it could be an app identifier.
+-            try:
+-                app_list = resolver.app_dict[ns]
+-                # Yes! Path part matches an app in the current Resolver.
+-                if current_ns and current_ns in app_list:
+-                    # If we are reversing for a particular app, use that
+-                    # namespace.
+-                    ns = current_ns
+-                elif ns not in app_list:
+-                    # The name isn't shared by one of the instances (i.e.,
+-                    # the default) so pick the first instance as the default.
+-                    ns = app_list[0]
+-            except KeyError:
+-                pass
+-
+-            if ns != current_ns:
+-                current_path = None
+-
+-            try:
+-                extra, resolver = resolver.namespace_dict[ns]
+-                resolved_path.append(ns)
+-                ns_pattern += extra
+-                ns_converters.update(resolver.pattern.converters)
+-            except KeyError as key:
+-                if resolved_path:
+-                    raise NoReverseMatch(
+-                        "%s is not a registered namespace inside '%s'"
+-                        % (key, ":".join(resolved_path))
+-                    )
+-                else:
+-                    raise NoReverseMatch("%s is not a registered namespace" % key)
++        with MemoryCPUTracker(project_id='django-benchmark', experiment_id='django_SCL001_c23ed0ad', output_file='/root/ecooptimizer_benchmark/emissions/django/string-concat-loop/c23ed0ad_usage_refactored.csv') as tracker:
++            for ns in path:
++                current_ns = current_path.pop() if current_path else None
++                # Lookup the name to see if it could be an app identifier.
++                try:
++                    app_list = resolver.app_dict[ns]
++                    # Yes! Path part matches an app in the current Resolver.
++                    if current_ns and current_ns in app_list:
++                        # If we are reversing for a particular app, use that
++                        # namespace.
++                        ns = current_ns
++                    elif ns not in app_list:
++                        # The name isn't shared by one of the instances (i.e.,
++                        # the default) so pick the first instance as the default.
++                        ns = app_list[0]
++                except KeyError:
++                    pass
++    
++                if ns != current_ns:
++                    current_path = None
++    
++                try:
++                    extra, resolver = resolver.namespace_dict[ns]
++                    resolved_path.append(ns)
++                    ns_pattern.append(extra)
++                    ns_converters.update(resolver.pattern.converters)
++                except KeyError as key:
++                    if resolved_path:
++                        raise NoReverseMatch(
++                            "%s is not a registered namespace inside '%s'"
++                            % (key, ":".join(resolved_path))
++                        )
++                    else:
++                        raise NoReverseMatch("%s is not a registered namespace" % key)
++            ns_pattern = ''.join(ns_pattern)
+         if ns_pattern:
+             resolver = get_ns_resolver(
+                 ns_pattern, resolver, tuple(ns_converters.items())
+@@ -205,4 +208,4 @@ def translate_url(url, lang_code):
+                 url = urlunsplit(
+                     (parsed.scheme, parsed.netloc, url, parsed.query, parsed.fragment)
+                 )
+-    return url
++    return url
+\ No newline at end of file

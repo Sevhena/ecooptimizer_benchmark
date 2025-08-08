@@ -1,5 +1,5 @@
 diff --git a/django/template/defaultfilters.py b/django/template/defaultfilters.py
-index 66c6e76d20..bccdc69417 100644
+index 66c6e76d20..a5f5e3ad7f 100644
 --- a/django/template/defaultfilters.py
 +++ b/django/template/defaultfilters.py
 @@ -26,6 +26,7 @@ from django.utils.translation import gettext, ngettext
@@ -16,8 +16,8 @@ index 66c6e76d20..bccdc69417 100644
      """
 -    return value.replace("\\", "\\\\").replace('"', '\\"').replace("'", "\\'")
 +    with MemoryCPUTracker(project_id='django-benchmark', experiment_id='django_LMC001_dfadbb34', output_file='/root/ecooptimizer_benchmark/emissions/django/long-message-chain/dfadbb34_usage_refactored.csv') as tracker:
-+        _carbon_wrapped_06954fec = value.replace("\\", "\\\\").replace('"', '\\"').replace("'", "\\'")
-+    return _carbon_wrapped_06954fec
++        _carbon_wrapped_bc57c8dd = value.replace("\\", "\\\\").replace('"', '\\"').replace("'", "\\'")
++    return _carbon_wrapped_bc57c8dd
  
  
  @register.filter(is_safe=True)

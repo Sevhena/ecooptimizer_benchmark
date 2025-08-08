@@ -227,7 +227,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "path_print",
-            "innerLoopLine": 1041,
+            "innerLoopLine": 1039,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -244,10 +244,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 12,
-                "endColumn": 69,
-                "endLine": 1045,
-                "line": 1045
+                "column": 8,
+                "endColumn": 65,
+                "endLine": 1043,
+                "line": 1043
             }
         ],
         "path": "numpy/_core/einsumfunc.py",

@@ -3,10 +3,14 @@ import os
 import subprocess
 import logging
 import textwrap
+from threading import Thread, Event
 import yaml
 import time
+import psutil
 from pathlib import Path
+from datetime import datetime, timezone
 import sys
+import csv
 
 # --- Paths ---
 BENCHMARK_ROOT = Path().resolve()
@@ -88,6 +92,25 @@ def apply_patch(patch_path: Path, repo_path: Path):
         raise e
 
 
+def monitor_emissions_file(
+    initial_lines: int, emissions_csv: Path, stop_event: Event, interval: float = 0.1
+):
+    """Background process to monitor line count changes in emissions file."""
+
+    dots_printed = 0
+    while not stop_event.is_set():  # Check if we should stop
+        time.sleep(interval)
+        if emissions_csv.exists():
+            with emissions_csv.open() as f:
+                current_lines = sum(1 for _ in f)
+            if current_lines > initial_lines:
+                new_lines = current_lines - initial_lines
+                dots_to_print = new_lines - dots_printed
+                print("." * dots_to_print, end="", flush=True)
+                dots_printed += dots_to_print
+                initial_lines = current_lines
+
+
 # --- Energy Run + Measurement ---
 def run_benchmark(
     repo: str,
@@ -109,7 +132,8 @@ def run_benchmark(
         / smell_type
         / f"{smell_id}{'' if tracker == 'codecarbon' else '_usage'}{'_refactored' if version == 'refactored' else ''}.csv"
     )
-    emissions_csv.parent.mkdir(parents=True, exist_ok=True)
+    stats_csv = EMISSIONS_DIR / repo / smell_type / f"{smell_id}_stats.csv"
+    stats_csv.parent.mkdir(parents=True, exist_ok=True)
 
     initial_lines = 0
     if emissions_csv.exists():
@@ -117,15 +141,56 @@ def run_benchmark(
             initial_lines = sum(1 for _ in f)
 
     print("\n     [bench]", end="", flush=True)
+    header_written = stats_csv.exists()
+
+    stop_event = Event()
+    monitor_thread = Thread(
+        target=monitor_emissions_file, args=(initial_lines, emissions_csv, stop_event), daemon=True
+    )
+    if verbose:
+        monitor_thread.start()
 
     try:
         while datapoints < iters + 1:
-            datapoints = _run_single_test(
-                venv_dir, test_cmd, repo, emissions_csv, initial_lines, iters, verbose
-            )
+            elapsed, avg_cpu, peak_mem = _run_single_test(venv_dir, test_cmd, repo)
+
+            timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
+            row = [
+                timestamp,
+                repo,
+                smell_type,
+                smell_id,
+                version,
+                iters,
+                f"{elapsed:.2f}",
+                f"{avg_cpu:.1f}",
+                f"{peak_mem:.1f}",
+            ]
+
+            with stats_csv.open("a", newline="") as f:
+                writer = csv.writer(f)
+                if not header_written:
+                    writer.writerow(
+                        [
+                            "timestamp",
+                            "repo",
+                            "smell_type",
+                            "smell_id",
+                            "run_type",
+                            "iters",
+                            "elapsed_sec",
+                            "avg_cpu_percent",
+                            "peak_memory_mb",
+                        ]
+                    )
+                    header_written = True
+                writer.writerow(row)
 
             # Check how many lines CodeCarbon recorded (excluding header)
-            if not emissions_csv.exists():
+            if emissions_csv.exists():
+                with emissions_csv.open() as f:
+                    datapoints = sum(1 for _ in f) - initial_lines
+            else:
                 logging.warning(f"No emissions file found: {emissions_csv}")
                 raise Exception(f"Emissions file not found for {repo} | {smell_id} | {version}")
 
@@ -137,25 +202,18 @@ def run_benchmark(
         raise e
     except Exception as e:
         raise e
+    finally:
+        if verbose:
+            stop_event.set()
+            monitor_thread.join(timeout=1.0)
 
     print(f" [{datapoints} collected]\n", flush=True)
     return True
 
 
-import signal
-import os
-
-
-def _run_single_test(
-    venv_dir: Path,
-    test_cmd: list[str],
-    repo: str,
-    emissions_csv: Path,
-    initial_lines: int,
-    target_points: int,
-    verbose: bool = False,
-):
-    """Run a single test iteration, stopping if emissions file has enough datapoints."""
+def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
+    """Run a single test iteration and collect system metrics."""
+    process = psutil.Process()
     venv_bin = venv_dir / "bin"
     python_path = venv_bin / "python"
 
@@ -171,67 +229,27 @@ def _run_single_test(
     console_out_log = LOG_DIR / f"bench_console_output_{repo}.log"
 
     logging.debug(f"Running test command: {test_cmd} in {repo}")
-
-    dots_printed = 0
-    datapoints = 0
+    start_time = time.time()
 
     try:
         with console_out_log.open("a") as f:  # append mode
-            f.write(f"\n\n=== New Test Run: {time.ctime()} ===\n")
-
-            # Start the process in a new process group
-            proc = subprocess.Popen(
+            f.write(f"\n=== New Test Run: {time.ctime()} ===\n")
+            subprocess.run(
                 command,
                 cwd=(WORKTREES_DIR / repo),
                 env=env,
+                check=True,
                 stdout=f,
                 stderr=subprocess.STDOUT,
-                preexec_fn=os.setsid,  # Create a new process group
             )
-
-            while True:
-                if proc.poll() is not None:
-                    break  # process already finished naturally
-
-                time.sleep(0.1)
-
-                if emissions_csv.exists():
-                    try:
-                        with emissions_csv.open() as ef:
-                            current_lines = sum(1 for _ in ef)
-                            datapoints = current_lines - initial_lines
-                    except IOError:
-                        continue
-
-                    if verbose and datapoints > dots_printed:
-                        print(".", end="", flush=True)
-                        dots_printed = datapoints
-
-                    if datapoints >= target_points:
-                        logging.debug(f"Reached {datapoints} datapoints, stopping test.")
-                        if verbose and dots_printed < target_points:
-                            print("." * (target_points - dots_printed), end="", flush=True)
-
-                        # Terminate the entire process group
-                        try:
-                            os.killpg(
-                                os.getpgid(proc.pid), signal.SIGTERM
-                            )  # Send SIGTERM to the group
-                            proc.wait(timeout=5)
-                        except subprocess.TimeoutExpired:
-                            os.killpg(os.getpgid(proc.pid), signal.SIGKILL)  # Force kill if needed
-                        break
-
     except Exception as e:
         logging.debug(f"Error raised during testing. Check logs. {e}")
-        # Ensure process is killed even if an exception occurs
-        if "proc" in locals():
-            try:
-                os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
-            except ProcessLookupError:
-                pass
 
-    return datapoints
+    elapsed = time.time() - start_time
+    avg_cpu = process.cpu_percent(interval=0.1)
+    mem_mb = process.memory_info().rss / (1024**2)
+
+    return elapsed, avg_cpu, mem_mb
 
 
 SMELL_TYPES_REF = {

@@ -1,11 +1,14 @@
 diff --git a/nltk/stem/porter.py b/nltk/stem/porter.py
-index 36c5bdf36..12de2e9e9 100644
+index 36c5bdf36..23c6337d0 100644
 --- a/nltk/stem/porter.py
 +++ b/nltk/stem/porter.py
-@@ -1,3 +1,4 @@
-+from crtracker import MemoryCPUTracker
+@@ -17,6 +17,7 @@ algorithm at
+ which includes another Python implementation and other implementations
+ in many languages.
  """
- Porter Stemmer
++from crtracker import MemoryCPUTracker
+ 
+ __docformat__ = "plaintext"
  
 @@ -184,11 +185,12 @@ class PorterStemmer(StemmerI):
          # character in `stem` is a consonant or a vowel.

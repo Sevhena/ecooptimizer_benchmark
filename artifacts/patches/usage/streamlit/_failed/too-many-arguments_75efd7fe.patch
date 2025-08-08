@@ -1,0 +1,20 @@
+diff --git a/lib/streamlit/elements/iframe.py b/lib/streamlit/elements/iframe.py
+index 4f1e40ba5..7763c3a8f 100644
+--- a/lib/streamlit/elements/iframe.py
++++ b/lib/streamlit/elements/iframe.py
+@@ -19,6 +19,7 @@ from typing import TYPE_CHECKING, cast
+ from streamlit.errors import StreamlitAPIException
+ from streamlit.proto.IFrame_pb2 import IFrame as IFrameProto
+ from streamlit.runtime.metrics_util import gather_metrics
++from crtracker import MemoryCPUTracker
+ 
+ if TYPE_CHECKING:
+     from streamlit.delta_generator import DeltaGenerator
+@@ -190,6 +191,7 @@ class IframeMixin:
+         return cast("DeltaGenerator", self)
+ 
+ 
++@MemoryCPUTracker.track_usage(project_id='streamlit-benchmark', experiment_id='streamlit_R0913_75efd7fe', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/too-many-arguments/75efd7fe_usage.csv')
+ def marshall(
+     proto: IFrameProto,
+     src: str | None = None,

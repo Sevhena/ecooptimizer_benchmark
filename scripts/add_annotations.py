@@ -14,7 +14,7 @@ BENCHMARK_ROOT = Path().resolve()
 ARTIFACTS_DIR = BENCHMARK_ROOT / "artifacts"
 WORKTREE_DIR = BENCHMARK_ROOT / "worktrees"
 SMELLS_DIR = ARTIFACTS_DIR / "smells"
-SELECTED_SMELLS_DIR = SMELLS_DIR / "selected"
+COVERED_SMELLS_DIR = SMELLS_DIR / "covered"
 ANNOTATED_SMELLS_DIR = SMELLS_DIR / "annotated"
 
 
@@ -437,7 +437,7 @@ def get_analysis_file_path(repo_name: str, tracker: str = "codecarbon"):
 
     if not annotated_path.exists():
         logging.debug(f"No annotated smells found for {repo_name}, creating new analysis file.")
-        return SELECTED_SMELLS_DIR / file_name
+        return COVERED_SMELLS_DIR / file_name
 
     logging.debug(f'Existing annotions for "{repo_name}" found. Loading existing file.')
     return annotated_path

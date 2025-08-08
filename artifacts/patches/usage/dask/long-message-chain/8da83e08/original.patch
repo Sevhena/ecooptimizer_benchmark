@@ -1,5 +1,5 @@
 diff --git a/dask/dataframe/methods.py b/dask/dataframe/methods.py
-index 060b66a37..833871e20 100644
+index 060b66a37..cb999dee7 100644
 --- a/dask/dataframe/methods.py
 +++ b/dask/dataframe/methods.py
 @@ -29,6 +29,7 @@ from dask.dataframe.dispatch import (  # noqa: F401
@@ -16,8 +16,8 @@ index 060b66a37..833871e20 100644
          out = df.fillna()
 -    if check and out.isnull().values.all(axis=0).any():
 +    with MemoryCPUTracker(project_id='dask-benchmark', experiment_id='dask_LMC001_8da83e08', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/8da83e08_usage.csv') as tracker:
-+        _carbon_wrapped_d9073493 = out.isnull().values.all(axis=0).any()
-+    if check and _carbon_wrapped_d9073493:
++        _carbon_wrapped_29dc946b = out.isnull().values.all(axis=0).any()
++    if check and _carbon_wrapped_29dc946b:
          raise ValueError(
              "All NaN partition encountered in `fillna`. Try "
              "using ``df.repartition`` to increase the partition "

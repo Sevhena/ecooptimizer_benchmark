@@ -1,5 +1,5 @@
 diff --git a/scipy/ndimage/_interpolation.py b/scipy/ndimage/_interpolation.py
-index 9527cdce7..972afcfdc 100644
+index 9527cdce7..dc7766fde 100644
 --- a/scipy/ndimage/_interpolation.py
 +++ b/scipy/ndimage/_interpolation.py
 @@ -39,6 +39,7 @@ from scipy import special
@@ -16,8 +16,8 @@ index 9527cdce7..972afcfdc 100644
  
 -    if not all([float(ax).is_integer() for ax in axes]):
 +    with MemoryCPUTracker(project_id='scipy-benchmark', experiment_id='scipy_R1729_2bbdf916', output_file='/root/ecooptimizer_benchmark/emissions/scipy/use-a-generator/2bbdf916_usage_refactored.csv') as tracker:
-+        _carbon_wrapped_2bc48cc2 = all([float(ax).is_integer() for ax in axes])
-+    if not _carbon_wrapped_2bc48cc2:
++        _carbon_wrapped_82903e34 = all([float(ax).is_integer() for ax in axes])
++    if not _carbon_wrapped_82903e34:
          raise ValueError('axes should contain only integer values')
  
      if axes[0] < 0:

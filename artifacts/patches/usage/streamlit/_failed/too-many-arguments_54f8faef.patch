@@ -1,0 +1,20 @@
+diff --git a/lib/streamlit/elements/widgets/file_uploader.py b/lib/streamlit/elements/widgets/file_uploader.py
+index 58d043fca..ee0ce4844 100644
+--- a/lib/streamlit/elements/widgets/file_uploader.py
++++ b/lib/streamlit/elements/widgets/file_uploader.py
+@@ -54,6 +54,7 @@ from streamlit.runtime.state import (
+     register_widget,
+ )
+ from streamlit.runtime.uploaded_file_manager import DeletedFile, UploadedFile
++from crtracker import MemoryCPUTracker
+ 
+ if TYPE_CHECKING:
+     from collections.abc import Sequence
+@@ -178,6 +179,7 @@ class FileUploaderMixin:
+     # 1. type is given as not a keyword-only argument
+     # 2. accept_multiple_files = False or omitted
+     @overload
++    @MemoryCPUTracker.track_usage(project_id='streamlit-benchmark', experiment_id='streamlit_R0913_54f8faef', output_file='/root/ecooptimizer_benchmark/emissions/streamlit/too-many-arguments/54f8faef_usage.csv')
+     def file_uploader(
+         self,
+         label: str,

@@ -1,5 +1,5 @@
 diff --git a/src/paho/mqtt/client.py b/src/paho/mqtt/client.py
-index 4ccc869..8de9996 100644
+index 4ccc869..1e93719 100644
 --- a/src/paho/mqtt/client.py
 +++ b/src/paho/mqtt/client.py
 @@ -44,6 +44,7 @@ from .matcher import MQTTMatcher
@@ -18,8 +18,8 @@ index 4ccc869..8de9996 100644
 +                    with MemoryCPUTracker(project_id='paho.mqtt.python-benchmark', experiment_id='paho.mqtt.python_LMC001_89b86924', output_file='/root/ecooptimizer_benchmark/emissions/paho.mqtt.python/long-message-chain/89b86924_usage_refactored.csv') as tracker:
 +                        intermediate_0 = str(self._readbuffer)
 +                        intermediate_1 = intermediate_0.lower()
-+                        _carbon_wrapped_85efacf4 = intermediate_1.encode('utf-8')
-+                    if b"connection" in _carbon_wrapped_85efacf4:
++                        _carbon_wrapped_39004d10 = intermediate_1.encode('utf-8')
++                    if b"connection" in _carbon_wrapped_39004d10:
                          if b"upgrade" not in str(self._readbuffer).lower().encode('utf-8'):
                              raise WebsocketConnectionError(
                                  "WebSocket handshake error, connection not upgraded")
