@@ -5,3 +5,7 @@ timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,pe
 2025-08-07_23-30-42,streamlit,long-lambda-expr,9fed98e9,original,30,215.28,0.0,16.2
 2025-08-07_23-34-17,streamlit,long-lambda-expr,9fed98e9,original,30,215.04,0.0,16.2
 2025-08-07_23-36-44,streamlit,long-lambda-expr,9fed98e9,refactored,30,147.42,0.0,16.2
+2025-08-08_08-59-58,streamlit,long-lambda-expr,9fed98e9,refactored,30,161.26,0.0,15.6
+2025-08-08_09-16-23,streamlit,long-lambda-expr,9fed98e9,refactored,30,162.29,0.0,15.6
+2025-08-08_09-19-05,streamlit,long-lambda-expr,9fed98e9,refactored,30,161.92,0.0,15.6
+2025-08-08_09-23-55,streamlit,long-lambda-expr,9fed98e9,refactored,30,159.91,0.0,15.7

@@ -8,3 +8,5 @@ timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,pe
 2025-08-08_07-15-54,paho.mqtt.python,long-message-chain,89b86924,refactored,30,1.43,0.0,15.7
 2025-08-08_07-18-43,paho.mqtt.python,long-message-chain,89b86924,original,30,2.17,9.8,15.7
 2025-08-08_07-18-45,paho.mqtt.python,long-message-chain,89b86924,refactored,30,2.37,0.0,16.0
+2025-08-08_07-38-21,paho.mqtt.python,long-message-chain,89b86924,original,30,35.56,0.0,15.9
+2025-08-08_07-38-58,paho.mqtt.python,long-message-chain,89b86924,refactored,30,36.57,0.0,15.9

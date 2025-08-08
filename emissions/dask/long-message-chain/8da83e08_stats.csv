@@ -5,3 +5,5 @@ timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,pe
 2025-08-08_00-02-13,dask,long-message-chain,8da83e08,refactored,30,0.93,0.0,16.1
 2025-08-08_02-17-40,dask,long-message-chain,8da83e08,original,30,1144.52,10.0,16.2
 2025-08-08_02-36-45,dask,long-message-chain,8da83e08,refactored,30,1144.40,0.0,16.2
+2025-08-08_10-20-37,dask,long-message-chain,8da83e08,original,30,1193.77,0.0,15.6
+2025-08-08_10-38-05,dask,long-message-chain,8da83e08,refactored,30,1047.86,0.0,15.6

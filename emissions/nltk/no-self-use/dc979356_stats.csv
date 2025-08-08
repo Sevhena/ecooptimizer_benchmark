@@ -5,3 +5,5 @@ timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,pe
 2025-08-08_06-41-41,nltk,no-self-use,dc979356,refactored,30,40.64,0.0,15.6
 2025-08-08_07-19-14,nltk,no-self-use,dc979356,original,30,1.57,0.0,15.9
 2025-08-08_07-19-16,nltk,no-self-use,dc979356,refactored,30,1.73,0.0,15.9
+2025-08-08_07-39-25,nltk,no-self-use,dc979356,original,30,27.40,0.0,15.9
+2025-08-08_07-39-53,nltk,no-self-use,dc979356,refactored,30,27.15,0.0,15.9
