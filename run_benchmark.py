@@ -3,14 +3,10 @@ import os
 import subprocess
 import logging
 import textwrap
-from threading import Thread, Event
 import yaml
 import time
-import psutil
 from pathlib import Path
-from datetime import datetime, timezone
 import sys
-import csv
 
 # --- Paths ---
 BENCHMARK_ROOT = Path().resolve()
@@ -92,25 +88,6 @@ def apply_patch(patch_path: Path, repo_path: Path):
         raise e
 
 
-def monitor_emissions_file(
-    initial_lines: int, emissions_csv: Path, stop_event: Event, interval: float = 0.1
-):
-    """Background process to monitor line count changes in emissions file."""
-
-    dots_printed = 0
-    while not stop_event.is_set():  # Check if we should stop
-        time.sleep(interval)
-        if emissions_csv.exists():
-            with emissions_csv.open() as f:
-                current_lines = sum(1 for _ in f)
-            if current_lines > initial_lines:
-                new_lines = current_lines - initial_lines
-                dots_to_print = new_lines - dots_printed
-                print("." * dots_to_print, end="", flush=True)
-                dots_printed += dots_to_print
-                initial_lines = current_lines
-
-
 # --- Energy Run + Measurement ---
 def run_benchmark(
     repo: str,
@@ -131,8 +108,7 @@ def run_benchmark(
         / smell_type
         / f"{smell_id}{'_refactored' if version == 'refactored' else ''}.csv"
     )
-    stats_csv = EMISSIONS_DIR / repo / smell_type / f"{smell_id}_stats.csv"
-    stats_csv.parent.mkdir(parents=True, exist_ok=True)
+    emissions_csv.parent.mkdir(parents=True, exist_ok=True)
 
     initial_lines = 0
     if emissions_csv.exists():
@@ -140,56 +116,15 @@ def run_benchmark(
             initial_lines = sum(1 for _ in f)
 
     print("\n     [bench]", end="", flush=True)
-    header_written = stats_csv.exists()
-
-    stop_event = Event()
-    monitor_thread = Thread(
-        target=monitor_emissions_file, args=(initial_lines, emissions_csv, stop_event), daemon=True
-    )
-    if verbose:
-        monitor_thread.start()
 
     try:
         while datapoints < iters + 1:
-            elapsed, avg_cpu, peak_mem = _run_single_test(venv_dir, test_cmd, repo)
-
-            timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
-            row = [
-                timestamp,
-                repo,
-                smell_type,
-                smell_id,
-                version,
-                iters,
-                f"{elapsed:.2f}",
-                f"{avg_cpu:.1f}",
-                f"{peak_mem:.1f}",
-            ]
-
-            with stats_csv.open("a", newline="") as f:
-                writer = csv.writer(f)
-                if not header_written:
-                    writer.writerow(
-                        [
-                            "timestamp",
-                            "repo",
-                            "smell_type",
-                            "smell_id",
-                            "run_type",
-                            "iters",
-                            "elapsed_sec",
-                            "avg_cpu_percent",
-                            "peak_memory_mb",
-                        ]
-                    )
-                    header_written = True
-                writer.writerow(row)
+            datapoints = _run_single_test(
+                venv_dir, test_cmd, repo, emissions_csv, initial_lines, iters, verbose
+            )
 
             # Check how many lines CodeCarbon recorded (excluding header)
-            if emissions_csv.exists():
-                with emissions_csv.open() as f:
-                    datapoints = sum(1 for _ in f) - initial_lines
-            else:
+            if not emissions_csv.exists():
                 logging.warning(f"No emissions file found: {emissions_csv}")
                 raise Exception(f"Emissions file not found for {repo} | {smell_id} | {version}")
 
@@ -201,18 +136,21 @@ def run_benchmark(
         raise e
     except Exception as e:
         raise e
-    finally:
-        if verbose:
-            stop_event.set()
-            monitor_thread.join(timeout=1.0)
 
     print(f" [{datapoints} collected]\n", flush=True)
     return True
 
 
-def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
-    """Run a single test iteration and collect system metrics."""
-    process = psutil.Process()
+def _run_single_test(
+    venv_dir: Path,
+    test_cmd: list[str],
+    repo: str,
+    emissions_csv: Path,
+    initial_lines: int,
+    target_points: int,
+    verbose: bool = False,
+):
+    """Run a single test iteration, stopping if emissions file has enough datapoints."""
     venv_bin = venv_dir / "bin"
     python_path = venv_bin / "python"
 
@@ -228,27 +166,50 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
     console_out_log = LOG_DIR / f"bench_console_output_{repo}.log"
 
     logging.debug(f"Running test command: {test_cmd} in {repo}")
-    start_time = time.time()
+
+    dots_printed = 0
+    datapoints = 0
 
     try:
         with console_out_log.open("a") as f:  # append mode
-            f.write(f"\n=== New Test Run: {time.ctime()} ===\n")
-            subprocess.run(
+            f.write(f"\n\n=== New Test Run: {time.ctime()} ===\n")
+
+            proc = subprocess.Popen(
                 command,
                 cwd=(WORKTREES_DIR / repo),
                 env=env,
-                check=True,
                 stdout=f,
                 stderr=subprocess.STDOUT,
             )
+
+            while proc.poll() is None:
+                time.sleep(0.1)
+
+                if emissions_csv.exists():
+                    with emissions_csv.open() as ef:
+                        current_lines = sum(1 for _ in ef)
+
+                    datapoints = current_lines - initial_lines
+
+                    if verbose:
+                        dots_to_print = datapoints - dots_printed
+                        if dots_to_print > 0:
+                            print("." * dots_to_print, end="", flush=True)
+                            dots_printed += dots_to_print
+
+                    if datapoints >= target_points:
+                        logging.info(f"Reached {datapoints} datapoints, stopping test.")
+                        proc.terminate()
+                        try:
+                            proc.wait(timeout=5)
+                        except subprocess.TimeoutExpired:
+                            proc.kill()
+                        break
+
     except Exception as e:
         logging.debug(f"Error raised during testing. Check logs. {e}")
 
-    elapsed = time.time() - start_time
-    avg_cpu = process.cpu_percent(interval=0.1)
-    mem_mb = process.memory_info().rss / (1024**2)
-
-    return elapsed, avg_cpu, mem_mb
+    return datapoints
 
 
 SMELL_TYPES_REF = {
@@ -286,7 +247,7 @@ def main():
         ),
     )
     parser.add_argument(
-        "--smell-id", type=str, help="Benchmark a specific smell ID (must use with --repo)"
+        "--smell-ids", type=str, help="Benchmark a specific smell ID (must use with --repo)"
     )
     parser.add_argument(
         "--iters", type=int, default=DEFAULT_ITERS, help="Number of iterations to run (default: 30)"
@@ -324,12 +285,14 @@ def main():
         )
         sys.exit(1)
 
-    if args.smell_id and not args.repo:
-        logging.error("--smell-id must be used with --repo")
+    if args.smell_ids and not args.repo:
+        logging.error("--smell-ids must be used with --repo")
         sys.exit(1)
 
-    if args.repos and args.smell_id:
-        logging.error("Cannot use --smell-id with --repos. Use the singular version --repo instead")
+    if args.repos and args.smell_ids:
+        logging.error(
+            "Cannot use --smell-ids with --repos. Use the singular version --repo instead"
+        )
         sys.exit(1)
 
     repos_config = load_yaml(REPOS_YAML)
@@ -372,20 +335,22 @@ def main():
         exclusions = []
 
     # --- Smell Filtering ---
-    if args.smell_id:
-        symbol = next(
-            smell_type
-            for smell_type, ids in selected_config["smells"][args.repo].items()
-            if args.smell_id in ids
-        )
+    smells_to_run = {}
+    if args.smell_ids:
+        smells_to_run[args.repo] = {}
+        for smell_id in args.smell_ids:
+            symbol = next(
+                smell_type
+                for smell_type, ids in selected_config["smells"][args.repo].items()
+                if smell_id in ids
+            )
+            if not smells_to_run[args.repo].get(symbol):
+                smells_to_run[args.repo][symbol] = []
 
-        smell_dir = PATCHES_DIR / args.tracker / args.repo / symbol / args.smell_id
-
-        smells_to_run = {args.repo: {symbol: [(args.repo, symbol, args.smell_id, smell_dir)]}}
+            smell_dir = PATCHES_DIR / args.tracker / args.repo / symbol / smell_id
+            smells_to_run[args.repo][symbol].append((args.repo, symbol, smell_id, smell_dir))
 
     else:
-        smells_to_run = {}
-
         for repo in target_repos:
             patch_repo_dir = PATCHES_DIR / args.tracker / repo
             if not patch_repo_dir.exists():
