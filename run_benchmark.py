@@ -353,7 +353,7 @@ def main():
     setup_logging()
 
     # --- Validate Smell Types ---
-    if len(set(args.smell_types) & set(ALL_SMELL_TYPES)) == 0:
+    if args.smell_types and len(set(args.smell_types) & set(ALL_SMELL_TYPES)) == 0:
         logging.error(
             "No valid smell types specified.\nUse --smell-types to select from following valid smells with a space between each:\n- "
             + "\n- ".join(ALL_SMELL_TYPES)
@@ -367,6 +367,10 @@ def main():
     if args.repos and args.smell_id:
         logging.error("Cannot use --smell-id with --repos. Use the singular version --repo instead")
         sys.exit(1)
+
+    smell_types = ALL_SMELL_TYPES
+    if args.smell_types:
+        smell_types = args.smell_types
 
     repos_config = load_yaml(REPOS_YAML)
     selected_config = load_yaml(SELECTED_YAML)
@@ -420,14 +424,10 @@ def main():
         for smell_dir in sorted(patch_repo_dir.rglob("*")):
             if not smell_dir.is_dir():
                 continue
-            elif (
-                smell_dir.name in ALL_SMELL_TYPES
-                and smell_dir.name not in exclusions
-                and smell_dir.name in args.smell_types
-            ):
+            elif smell_dir.name not in exclusions and smell_dir.name in smell_types:
                 smells_to_run[repo][smell_dir.name] = []
                 continue
-            elif smell_dir.parent.name not in ALL_SMELL_TYPES:
+            elif smell_dir.parent.name not in smell_types:
                 continue
             elif smell_dir.parent.name not in smells_to_run[repo]:
                 continue
