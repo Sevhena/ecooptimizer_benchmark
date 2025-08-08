@@ -1,15 +1,15 @@
 diff --git a/dask/dataframe/methods.py b/dask/dataframe/methods.py
-index 060b66a37..2ae5ae427 100644
+index 060b66a37..2e0e597a3 100644
 --- a/dask/dataframe/methods.py
 +++ b/dask/dataframe/methods.py
-@@ -17,6 +17,7 @@ from dask.dataframe._compat import (
- 
- #  preserve compatibility while moving dispatch objects
- from dask.dataframe.dispatch import (  # noqa: F401
+@@ -29,6 +29,7 @@ from dask.dataframe.dispatch import (  # noqa: F401
+ )
+ from dask.dataframe.utils import is_dataframe_like, is_index_like, is_series_like
+ from dask.utils import _deprecated_kwarg
 +from codecarbon import EmissionsTracker
-     concat,
-     concat_dispatch,
-     group_split_dispatch,
+ 
+ # cuDF may try to import old dispatch functions
+ hash_df = hash_object_dispatch
 @@ -410,7 +411,11 @@ def fillna_check(df, method, check=True):
          out = getattr(df, method)()
      else:
@@ -18,8 +18,8 @@ index 060b66a37..2ae5ae427 100644
 +    with EmissionsTracker(project_name='dask-benchmark', measure_power_secs=1, experiment_id='dask_LMC001_8da83e08', output_file='/root/ecooptimizer_benchmark/emissions/dask/long-message-chain/8da83e08_refactored.csv') as tracker:
 +        intermediate_0 = out.isnull()
 +        intermediate_1 = intermediate_0.values.all(axis=0)
-+        _carbon_wrapped_49091daa = intermediate_1.any()
-+    if check and _carbon_wrapped_49091daa:
++        _carbon_wrapped_ad37376d = intermediate_1.any()
++    if check and _carbon_wrapped_ad37376d:
          raise ValueError(
              "All NaN partition encountered in `fillna`. Try "
              "using ``df.repartition`` to increase the partition "
