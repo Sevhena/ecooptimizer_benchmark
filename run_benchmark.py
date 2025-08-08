@@ -194,6 +194,11 @@ def _run_single_test(
 
                     if verbose:
                         dots_to_print = datapoints - dots_printed
+                        dots_to_print = (
+                            target_points - dots_printed
+                            if dots_to_print > target_points
+                            else dots_to_print
+                        )
                         if dots_to_print > 0:
                             print("." * dots_to_print, end="", flush=True)
                             dots_printed += dots_to_print
