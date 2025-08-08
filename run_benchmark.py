@@ -142,6 +142,10 @@ def run_benchmark(
     return True
 
 
+import signal
+import os
+
+
 def _run_single_test(
     venv_dir: Path,
     test_cmd: list[str],
@@ -175,12 +179,14 @@ def _run_single_test(
         with console_out_log.open("a") as f:  # append mode
             f.write(f"\n\n=== New Test Run: {time.ctime()} ===\n")
 
+            # Start the process in a new process group
             proc = subprocess.Popen(
                 command,
                 cwd=(WORKTREES_DIR / repo),
                 env=env,
                 stdout=f,
                 stderr=subprocess.STDOUT,
+                preexec_fn=os.setsid,  # Create a new process group
             )
 
             while True:
@@ -190,10 +196,12 @@ def _run_single_test(
                 time.sleep(0.1)
 
                 if emissions_csv.exists():
-                    with emissions_csv.open() as ef:
-                        current_lines = sum(1 for _ in ef)
-
-                    datapoints = current_lines - initial_lines
+                    try:
+                        with emissions_csv.open() as ef:
+                            current_lines = sum(1 for _ in ef)
+                            datapoints = current_lines - initial_lines
+                    except IOError:
+                        continue
 
                     if verbose and datapoints > dots_printed:
                         print(".", end="", flush=True)
@@ -203,15 +211,25 @@ def _run_single_test(
                         logging.debug(f"Reached {datapoints} datapoints, stopping test.")
                         if verbose and dots_printed < target_points:
                             print("." * (target_points - dots_printed), end="", flush=True)
-                        proc.terminate()
+
+                        # Terminate the entire process group
                         try:
+                            os.killpg(
+                                os.getpgid(proc.pid), signal.SIGTERM
+                            )  # Send SIGTERM to the group
                             proc.wait(timeout=5)
                         except subprocess.TimeoutExpired:
-                            proc.kill()
-                        break  # ✅ immediately exit loop after stopping process
+                            os.killpg(os.getpgid(proc.pid), signal.SIGKILL)  # Force kill if needed
+                        break
 
     except Exception as e:
         logging.debug(f"Error raised during testing. Check logs. {e}")
+        # Ensure process is killed even if an exception occurs
+        if "proc" in locals():
+            try:
+                os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
+            except ProcessLookupError:
+                pass
 
     return datapoints
 
