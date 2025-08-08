@@ -1,12 +1,9 @@
 import argparse
-import json
 import os
-import shutil
 import subprocess
 import logging
 import textwrap
 from threading import Thread, Event
-from typing import Optional
 import yaml
 import time
 import psutil
@@ -93,17 +90,6 @@ def apply_patch(patch_path: Path, repo_path: Path):
     except FileNotFoundError as e:
         logging.error(f"Patch file not found: {patch_path}")
         raise e
-
-
-def load_analysis_results(repo_name: str, tracker: str = "codecarbon") -> dict[str, dict] | None:
-    """Load analysis results for a specific repository."""
-    results_file = SMELLS_DIR / tracker / f"{repo_name}.json"
-    if not results_file.exists():
-        logging.error(f"No analysis results found for {repo_name}")
-        return None
-
-    with results_file.open() as f:
-        return json.load(f)
 
 
 def monitor_emissions_file(
@@ -265,31 +251,6 @@ def _run_single_test(venv_dir: Path, test_cmd: list[str], repo: str):
     return elapsed, avg_cpu, mem_mb
 
 
-def move_named_subfolders(folder_names: set[str], output_dir: Optional[str] = None):
-    """
-    Move subfolders with specific names into a new UTC-timestamped subfolder,
-    unless they are already inside a timestamp-named folder.
-    """
-
-    # Prepare destination folder
-    if output_dir:
-        dir_name = output_dir
-    else:
-        dir_name = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%SZ")
-    destination = EMISSIONS_DIR / dir_name
-    destination.mkdir()
-
-    moved = False
-    for name in folder_names:
-        subfolder = EMISSIONS_DIR / name
-        if subfolder.exists():
-            shutil.move(str(subfolder), str(destination))
-            moved = True
-
-    if not moved:
-        destination.rmdir()  # Clean up if nothing was moved
-
-
 SMELL_TYPES_REF = {
     "crc": "cached-repeated-calls",
     "lec": "long-element-chain",
@@ -411,33 +372,39 @@ def main():
         exclusions = []
 
     # --- Smell Filtering ---
-    smells_to_run = {}
-    for repo in target_repos:
-        patch_repo_dir = PATCHES_DIR / args.tracker / repo
-        if not patch_repo_dir.exists():
-            logging.warning(f"No patches found for {repo}")
-            continue
+    if args.smell_id:
+        symbol = next(
+            smell_type
+            for smell_type, ids in selected_config["smells"][args.repo].items()
+            if args.smell_id in ids
+        )
 
-        smells_to_run[repo] = {}
+        smell_dir = PATCHES_DIR / args.tracker / args.repo / symbol / args.smell_id
 
-        for smell_dir in sorted(patch_repo_dir.rglob("*")):
-            if not smell_dir.is_dir():
+        smells_to_run = {args.repo: {symbol: [(args.repo, symbol, args.smell_id, smell_dir)]}}
+
+    else:
+        smells_to_run = {}
+
+        for repo in target_repos:
+            patch_repo_dir = PATCHES_DIR / args.tracker / repo
+            if not patch_repo_dir.exists():
+                logging.warning(f"No patches found for {repo}")
                 continue
-            elif smell_dir.name not in exclusions and smell_dir.name in smell_types:
-                smells_to_run[repo][smell_dir.name] = []
-                continue
-            elif smell_dir.parent.name not in ALL_SMELL_TYPES:
-                continue
-            elif smell_dir.parent.name not in smells_to_run[repo]:
-                continue
-            smell_id = smell_dir.name
-            if args.smell_id and repo != args.repo:
-                continue
-            if args.smell_id and smell_id != args.smell_id:
-                continue
-            smells_to_run[repo][smell_dir.parent.name].append(
-                (repo, smell_dir.parent.name, smell_id, smell_dir)
-            )
+
+            smells_to_run[repo] = {}
+            for smell_type in smell_types:
+                type_dir = patch_repo_dir / smell_type
+
+                if not type_dir.exists() or smell_type in exclusions:
+                    continue
+
+                smells_to_run[repo][smell_type] = []
+
+                for smell_dir in type_dir.iterdir():
+                    smells_to_run[repo][smell_type].append(
+                        (repo, smell_type, smell_dir.name, smell_dir)
+                    )
 
     if not smells_to_run:
         logging.warning("No smell instances matched the filters.")
@@ -453,8 +420,10 @@ def main():
     for repo, smell_items in smells_to_run.items():
         logging.info(f"\nRunning benchmarks for {repo}...")
         logging.info(f"Smell types: {smell_items.keys()}")
+
         for smell_type, smell_instances in smell_items.items():
             logging.info(f"\n  {smell_type}:")
+
             for repo, smell_type, smell_id, smell_dir in smell_instances:
                 test_cmd = repos_config[repo].get("test_command")
 
@@ -503,7 +472,6 @@ def main():
                             break
                     except KeyboardInterrupt:
                         logging.info("Benchmark run interrupted by user.")
-                        # move_named_subfolders(selected_repos, args.output_dir)
                         sys.exit(0)
                     except Exception as e:
                         logging.error(
@@ -514,11 +482,6 @@ def main():
                     finally:
                         logging.info(f"    Restoring {repo_dir} to original state...")
                         subprocess.run(["git", "restore", "."], cwd=repo_dir)
-
-    # --- Move Emissions Files ---
-    if EMISSIONS_DIR.exists():
-        logging.info("\nMoving emissions files to timestamped folder...")
-        # move_named_subfolders(selected_repos, args.output_dir)
 
     if raised_error:
         logging.error("\n❗ Some benchmarks encountered errors. Please check the logs for details.")
