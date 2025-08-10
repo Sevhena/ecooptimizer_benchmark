@@ -1,0 +1,28 @@
+diff --git a/eco_smells/member_ignoring.py b/eco_smells/member_ignoring.py
+index 23aec60..5ee22d8 100644
+--- a/eco_smells/member_ignoring.py
++++ b/eco_smells/member_ignoring.py
+@@ -1,10 +1,13 @@
++from crtracker import MemoryCPUTracker
+ # Class demonstrating the smell pattern
+ class StringProcessor:
+     def __init__(self):
+         self.unused_field = "This is never used"
+ 
+     # Smelly method - instance method that doesn't use self
+-    def reverse(self, text):
++    @MemoryCPUTracker.track_usage(project_id='synth-benchmark', experiment_id='synth_R6301_6dcb54ec', output_file='/root/ecooptimizer_benchmark/emissions/synth/no-self-use/6dcb54ec_usage_refactored.csv')
++    @staticmethod
++    def reverse(text):
+         return text[::-1]
+ 
+     # Smelly method - instance method that doesn't use self
+@@ -24,7 +27,7 @@ class MemberIgnoringSmells:
+     @classmethod
+     def unecessary_instance_obj(cls):
+         processor = StringProcessor()
+-        result = processor.reverse(cls.attr_text)
++        result = StringProcessor.reverse(cls.attr_text)
+         return result
+ 
+     @classmethod

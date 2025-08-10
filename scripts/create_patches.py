@@ -108,6 +108,8 @@ def refactor_smell(repo_name: str, smell_id: str, tracker: str = "codecarbon") -
                 "--save-to-original",
                 "--log-dir",
                 f"{LOG_DIR / 'ecooptimizer' / repo_name}",
+                "-lv",
+                "DEBUG",
             ],
             cwd=(WORKTREE_DIR / repo_name),
             check=True,

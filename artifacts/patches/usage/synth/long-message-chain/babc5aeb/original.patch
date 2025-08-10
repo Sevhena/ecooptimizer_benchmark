@@ -1,0 +1,38 @@
+diff --git a/eco_smells/message_chains.py b/eco_smells/message_chains.py
+index f79488b..f64a3b4 100644
+--- a/eco_smells/message_chains.py
++++ b/eco_smells/message_chains.py
+@@ -2,6 +2,7 @@ import hashlib
+ import statistics
+ import random
+ from datetime import datetime, timedelta
++from crtracker import MemoryCPUTracker
+ 
+ 
+ class MessageChainSmells:
+@@ -132,15 +133,16 @@ class MessageChainSmells:
+     def long_chain():
+         """8-level chain with medium data set"""
+         return (
+-            MessageChainSmells.DataPipeline()
+-            .generate_initial_dataset(50_000)
+-            .filter_active_users()
+-            .add_computed_fields()
+-            .calculate_demographics()
+-            .compute_engagement_metrics()
+-            .hash_sensitive_data()
+-            .analyze_metadata()
+-            .build_final_report()
++            with MemoryCPUTracker(project_id='synth-benchmark', experiment_id='synth_LMC001_babc5aeb', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-message-chain/babc5aeb_usage.csv') as tracker:
++                MessageChainSmells.DataPipeline()
++                .generate_initial_dataset(50_000)
++                .filter_active_users()
++                .add_computed_fields()
++                .calculate_demographics()
++                .compute_engagement_metrics()
++                .hash_sensitive_data()
++                .analyze_metadata()
++                .build_final_report()
+         )
+ 
+     @staticmethod

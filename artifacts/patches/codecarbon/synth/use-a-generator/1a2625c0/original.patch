@@ -1,0 +1,22 @@
+diff --git a/eco_smells/list_comp_predicate.py b/eco_smells/list_comp_predicate.py
+index a4ad6ef..9c9c018 100644
+--- a/eco_smells/list_comp_predicate.py
++++ b/eco_smells/list_comp_predicate.py
+@@ -1,5 +1,6 @@
+ import random
+ from datetime import datetime, timedelta
++from codecarbon import EmissionsTracker
+ 
+ 
+ class ListCompPredicateSmells:
+@@ -16,7 +17,9 @@ class ListCompPredicateSmells:
+             {"active": random.random() > 0.3, "score": random.gauss(50, 15)}
+             for _ in range(10_000)
+         ]
+-        return all([u["active"] and u["score"] > 30 for u in users])
++        with EmissionsTracker(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_R1729_1a2625c0', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/1a2625c0.csv') as tracker:
++            _carbon_wrapped_22cee380 = all([u["active"] and u["score"] > 30 for u in users])
++        return _carbon_wrapped_22cee380
+ 
+     @staticmethod
+     def large_case():

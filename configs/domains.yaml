@@ -42,3 +42,5 @@ domains:
     - gpiozero
     - rclpy
     - homeassistant
+  synthetic:
+    - synth

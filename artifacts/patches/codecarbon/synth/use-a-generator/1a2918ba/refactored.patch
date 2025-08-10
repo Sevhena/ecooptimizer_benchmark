@@ -1,0 +1,25 @@
+diff --git a/eco_smells/list_comp_predicate.py b/eco_smells/list_comp_predicate.py
+index a4ad6ef..b0006e3 100644
+--- a/eco_smells/list_comp_predicate.py
++++ b/eco_smells/list_comp_predicate.py
+@@ -1,5 +1,6 @@
+ import random
+ from datetime import datetime, timedelta
++from codecarbon import EmissionsTracker
+ 
+ 
+ class ListCompPredicateSmells:
+@@ -47,10 +48,6 @@ class ListCompPredicateSmells:
+             }
+             for _ in range(1_000_000)
+         ]
+-        return all(
+-            [
+-                log["status"] == "success"
+-                or (log["latency"] < 100 and log["path"].startswith("/api"))
+-                for log in logs
+-            ]
+-        )
++        with EmissionsTracker(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_R1729_1a2918ba', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/1a2918ba_refactored.csv') as tracker:
++            _carbon_wrapped_20cac66f = all( log["status"] == "success" or (log["latency"] < 100 and log["path"].startswith("/api")) for log in logs )
++        return _carbon_wrapped_20cac66f

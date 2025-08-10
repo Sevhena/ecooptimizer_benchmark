@@ -104,6 +104,9 @@ repos:
   - name: streamlit
     url: https://github.com/streamlit/streamlit.git
     commit: 5260c9e2364a4fd71df39d30a90b2e7e24cfe55a
+  - name: synth
+    url: https://github.com/Sevhena/ecooptimizer-synth.git
+    commit: 92f57f65b6a0723a43592c3fc43bd913710021be
   - name: taichi
     url: https://github.com/taichi-dev/taichi.git
     commit: e2b5e9d184160d1c49cdafa730e873756439043d

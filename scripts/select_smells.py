@@ -18,7 +18,7 @@ SELECTED_SMELLS_DIR = SMELLS_DIR / "selected"
 
 SELECTED_SMELLS_DIR.mkdir(exist_ok=True)
 
-SMELL_COUNT = 3
+SMELL_COUNT = 4
 
 EXCLUDED_SMELLS = {"cached-repeated-calls", "long-element-chain"}
 

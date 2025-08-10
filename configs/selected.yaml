@@ -1,84 +1,32 @@
 repos:
-- numpy
-- scipy
-- nltk
-- scikit-learn
-- django
-- streamlit
-- gpiozero
-- dask
-- paho.mqtt.python
+- synth
 smells:
-  dask:
-    long-message-chain:
-    - 8da83e08
-    no-self-use:
-    - 81ec5021
-    string-concat-loop:
-    - 5254055f
-    too-many-arguments:
-    - 4e24e944
-    use-a-generator:
-    - 0fa92701
-  django:
-    long-message-chain:
-    - dfadbb34
-    no-self-use:
-    - f0dffe2e
-    string-concat-loop:
-    - 871b0de2
-    - c23ed0ad
-    use-a-generator:
-    # - cf18c1e1
-    - a1f57a8c
-  gpiozero:
+  synth:
     long-lambda-expr:
-    - e04be5d7
+      - "0f527350"
+      - "6d468403"
+      - "b367f70b"
+      - "b1fedaae"
+    long-message-chain:
+      - "7cfd2157"
+      - "35598e97"
+      - "79a1e8fb"
+      - "babc5aeb"
     no-self-use:
-    - fc7e33d2
-    too-many-arguments:
-    - 068d4643
-  nltk:
-    no-self-use:
-    - dc979356
+      - "6dcb54ec"
+      - "8d27bc9e"
     string-concat-loop:
-    - f041ae6d
-  numpy:
-    long-lambda-expr:
-    - b89c2eb1
-  paho.mqtt.python:
-    long-message-chain:
-    - 89b86924
-  scikit-learn:
-    long-message-chain:
-    - 5f1cf174
-    no-self-use:    
-    - db63474a
-    string-concat-loop:
-    - d880725b
+      - "17a9551a"
+      - "2596bf89"
+      - "55c7a99c"
+      - "8f04fcd4"
     too-many-arguments:
-    - 0136992b
+      - "f594f0ca"
+      - "3b50209a"
+      - "054d2763"
+      - "e08eff87"
     use-a-generator:
-    - bebfc193
-  scipy:
-    long-lambda-expr:
-    - e0748c3e
-    long-message-chain:
-    - f7d9627c
-    too-many-arguments:
-    - 83d99ed0
-    use-a-generator:
-    - c0a0307d
-    - 2bbdf916
-  streamlit:
-    long-lambda-expr:
-    - 3dff6d86
-    - 9fed98e9
-    too-many-arguments:
-    # - f5d06531
-    - 4f9c48cd
-    - 54f8faef
-    - 64cfb482
-    - 684ba73c
-    - 75efd7fe
-
+      - "1a2625c0"
+      - "2214871d"
+      - "b545619a"
+      - "1a2918ba"

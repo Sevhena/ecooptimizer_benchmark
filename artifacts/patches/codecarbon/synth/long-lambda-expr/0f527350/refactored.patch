@@ -1,0 +1,25 @@
+diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
+index 2204204..c8fad69 100644
+--- a/eco_smells/long_lambda.py
++++ b/eco_smells/long_lambda.py
+@@ -1,12 +1,15 @@
++from codecarbon import EmissionsTracker
+ class LongLambdaSmells:
+     @staticmethod
+     def small_lambda():
+         """Lambda with string processing (>100 chars)"""
+-        process_text = lambda text: (
+-            text.strip().lower().replace(' ', '_') 
+-            if len(text) > 3 
+-            else text.upper() + '!'
+-        )
++        with EmissionsTracker(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_LLE001_0f527350', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/0f527350_refactored.csv') as tracker:
++            def process_text(text):
++                return (
++                    text.strip().lower().replace(' ', '_') 
++                    if len(text) > 3 
++                    else text.upper() + '!'
++                )
+         return process_text("  Hello World  ")  # -> "hello_world"
+ 
+ 

@@ -1,3 +1,8 @@
+synth:
+  test_command: ["-m", "bench"]
+  target: "synth/eco_smells" 
+  patterns_to_exclude:
+    - "**/test_*/**"
 django:
   test_command: ["tests/runtests.py", "--settings=test_sqlite"]
   target: "django/django" 

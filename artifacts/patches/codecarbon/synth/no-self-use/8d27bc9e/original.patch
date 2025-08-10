@@ -1,0 +1,17 @@
+diff --git a/eco_smells/member_ignoring.py b/eco_smells/member_ignoring.py
+index 23aec60..a2c5c89 100644
+--- a/eco_smells/member_ignoring.py
++++ b/eco_smells/member_ignoring.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ # Class demonstrating the smell pattern
+ class StringProcessor:
+     def __init__(self):
+@@ -8,6 +9,7 @@ class StringProcessor:
+         return text[::-1]
+ 
+     # Smelly method - instance method that doesn't use self
++    @track_emissions(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_R6301_8d27bc9e', output_file='/root/ecooptimizer_benchmark/emissions/synth/no-self-use/8d27bc9e.csv')
+     def count_vowels(self, text):
+         return sum(1 for char in text.lower() if char in "aeiou")
+ 

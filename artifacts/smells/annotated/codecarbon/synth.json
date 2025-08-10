@@ -1,0 +1,738 @@
+{
+    "054d2763": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "054d2763",
+        "message": "Too many arguments (8/6)",
+        "messageId": "R0913",
+        "module": "eco_smells.long_parameters",
+        "obj": "LongParameterSmells.eight_parameters.create_profile",
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 26,
+                "endLine": 14,
+                "line": 14
+            }
+        ],
+        "path": "eco_smells/long_parameters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/long_parameters.py"
+    },
+    "0f527350": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "0f527350",
+        "message": "Lambda function too long (8/5 expressions)",
+        "messageId": "LLE001",
+        "module": "long_lambda",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 27,
+                "endColumn": 13,
+                "endLine": 11,
+                "line": 7
+            }
+        ],
+        "path": "eco_smells/long_lambda.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/long_lambda.py"
+    },
+    "17a9551a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "result",
+            "innerLoopLine": 8,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 7,
+            "isFunc": false,
+            "start": 6,
+            "useOccurences": false
+        },
+        "id": "17a9551a",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "string_concat.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 47,
+                "endLine": 9,
+                "line": 9
+            }
+        ],
+        "path": "eco_smells/string_concat.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/string_concat.py"
+    },
+    "1a2625c0": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1a2625c0",
+        "message": "Use a generator instead 'all(u['active'] and u['score'] > 30 for u in users)'",
+        "messageId": "R1729",
+        "module": "eco_smells.list_comp_predicate",
+        "obj": "ListCompPredicateSmells.medium_case",
+        "occurences": [
+            {
+                "column": 39,
+                "endColumn": 92,
+                "endLine": 21,
+                "line": 21
+            }
+        ],
+        "path": "eco_smells/list_comp_predicate.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/list_comp_predicate.py"
+    },
+    "1a2918ba": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "1a2918ba",
+        "message": "Use a generator instead 'all(log['status'] == 'success' or log['latency'] < 100 and log['path'].startswith('/api') for log in logs)'",
+        "messageId": "R1729",
+        "module": "eco_smells.list_comp_predicate",
+        "obj": "ListCompPredicateSmells.extreme_case",
+        "occurences": [
+            {
+                "column": 39,
+                "endColumn": 153,
+                "endLine": 52,
+                "line": 52
+            }
+        ],
+        "path": "eco_smells/list_comp_predicate.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/list_comp_predicate.py"
+    },
+    "2214871d": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "2214871d",
+        "message": "Use a generator instead 'any(x > 90 and x % 7 == 0 for x in numbers)'",
+        "messageId": "R1729",
+        "module": "eco_smells.list_comp_predicate",
+        "obj": "ListCompPredicateSmells.small_case",
+        "occurences": [
+            {
+                "column": 39,
+                "endColumn": 84,
+                "endLine": 12,
+                "line": 12
+            }
+        ],
+        "path": "eco_smells/list_comp_predicate.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/list_comp_predicate.py"
+    },
+    "2596bf89": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "result",
+            "innerLoopLine": 24,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 23,
+            "isFunc": false,
+            "start": 22,
+            "useOccurences": false
+        },
+        "id": "2596bf89",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "string_concat.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 48,
+                "endLine": 25,
+                "line": 25
+            }
+        ],
+        "path": "eco_smells/string_concat.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/string_concat.py"
+    },
+    "35598e97": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "35598e97",
+        "message": "Method chain too long (4/3)",
+        "messageId": "LMC001",
+        "module": "message_chains",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 37,
+                "endLine": 117,
+                "line": 114
+            }
+        ],
+        "path": "eco_smells/message_chains.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/message_chains.py"
+    },
+    "3b50209a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "3b50209a",
+        "message": "Too many arguments (7/6)",
+        "messageId": "R0913",
+        "module": "eco_smells.long_parameters",
+        "obj": "LongParameterSmells.seven_parameters.process",
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 19,
+                "endLine": 6,
+                "line": 6
+            }
+        ],
+        "path": "eco_smells/long_parameters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/long_parameters.py"
+    },
+    "55c7a99c": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "result",
+            "innerLoopLine": 16,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 15,
+            "isFunc": false,
+            "start": 14,
+            "useOccurences": false
+        },
+        "id": "55c7a99c",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "string_concat.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 46,
+                "endLine": 17,
+                "line": 17
+            }
+        ],
+        "path": "eco_smells/string_concat.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/string_concat.py"
+    },
+    "6d468403": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6d468403",
+        "message": "Lambda function too long (19/5 expressions)",
+        "messageId": "LLE001",
+        "module": "long_lambda",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 24,
+                "endColumn": 13,
+                "endLine": 40,
+                "line": 34
+            }
+        ],
+        "path": "eco_smells/long_lambda.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/long_lambda.py"
+    },
+    "6dcb54ec": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "6dcb54ec",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "eco_smells.member_ignoring",
+        "obj": "StringProcessor.reverse",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 15,
+                "endLine": 9,
+                "line": 9
+            }
+        ],
+        "path": "eco_smells/member_ignoring.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/member_ignoring.py"
+    },
+    "79a1e8fb": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "79a1e8fb",
+        "message": "Method chain too long (7/3)",
+        "messageId": "LMC001",
+        "module": "message_chains",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 37,
+                "endLine": 130,
+                "line": 124
+            }
+        ],
+        "path": "eco_smells/message_chains.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/message_chains.py"
+    },
+    "7cfd2157": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "7cfd2157",
+        "message": "Method chain too long (9/3)",
+        "messageId": "LMC001",
+        "module": "message_chains",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 37,
+                "endLine": 160,
+                "line": 152
+            }
+        ],
+        "path": "eco_smells/message_chains.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/message_chains.py"
+    },
+    "8d27bc9e": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "INFERENCE",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "8d27bc9e",
+        "message": "Method could be a function",
+        "messageId": "R6301",
+        "module": "eco_smells.member_ignoring",
+        "obj": "StringProcessor.count_vowels",
+        "occurences": [
+            {
+                "column": 4,
+                "endColumn": 20,
+                "endLine": 13,
+                "line": 13
+            }
+        ],
+        "path": "eco_smells/member_ignoring.py",
+        "symbol": "no-self-use",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/member_ignoring.py"
+    },
+    "8f04fcd4": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": "result",
+            "innerLoopLine": 32,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": 31,
+            "isFunc": false,
+            "start": 30,
+            "useOccurences": false
+        },
+        "id": "8f04fcd4",
+        "message": "String concatenation inside loop detected",
+        "messageId": "SCL001",
+        "module": "string_concat.py",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 61,
+                "endLine": 33,
+                "line": 33
+            }
+        ],
+        "path": "eco_smells/string_concat.py",
+        "symbol": "string-concat-loop",
+        "type": "performance",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/string_concat.py"
+    },
+    "afc56cf9": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "afc56cf9",
+        "message": "Method chain too long (3/3)",
+        "messageId": "LMC001",
+        "module": "long_lambda",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 12,
+                "endColumn": 50,
+                "endLine": 6,
+                "line": 6
+            }
+        ],
+        "path": "eco_smells/long_lambda.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/long_lambda.py"
+    },
+    "b1fedaae": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b1fedaae",
+        "message": "Lambda function too long (8/5 expressions)",
+        "messageId": "LLE001",
+        "module": "long_lambda",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 23,
+                "endColumn": 13,
+                "endLine": 57,
+                "line": 46
+            }
+        ],
+        "path": "eco_smells/long_lambda.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/long_lambda.py"
+    },
+    "b367f70b": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b367f70b",
+        "message": "Lambda function too long (158 characters, max 100)",
+        "messageId": "LLE001",
+        "module": "long_lambda",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 22,
+                "endColumn": 13,
+                "endLine": 24,
+                "line": 17
+            }
+        ],
+        "path": "eco_smells/long_lambda.py",
+        "symbol": "long-lambda-expr",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/long_lambda.py"
+    },
+    "b545619a": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "b545619a",
+        "message": "Use a generator instead 'any(t['amount'] > 500 and t['fraud'] and t['time'].hour < 3 for t in transactions)'",
+        "messageId": "R1729",
+        "module": "eco_smells.list_comp_predicate",
+        "obj": "ListCompPredicateSmells.large_case",
+        "occurences": [
+            {
+                "column": 39,
+                "endColumn": 127,
+                "endLine": 34,
+                "line": 34
+            }
+        ],
+        "path": "eco_smells/list_comp_predicate.py",
+        "symbol": "use-a-generator",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/list_comp_predicate.py"
+    },
+    "babc5aeb": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": false,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "babc5aeb",
+        "message": "Method chain too long (9/3)",
+        "messageId": "LMC001",
+        "module": "message_chains",
+        "obj": null,
+        "occurences": [
+            {
+                "column": 16,
+                "endColumn": 37,
+                "endLine": 145,
+                "line": 137
+            }
+        ],
+        "path": "eco_smells/message_chains.py",
+        "symbol": "long-message-chain",
+        "type": "convention",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/message_chains.py"
+    },
+    "e08eff87": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "e08eff87",
+        "message": "Too many arguments (10/6)",
+        "messageId": "R0913",
+        "module": "eco_smells.long_parameters",
+        "obj": "LongParameterSmells.ten_parameters.analyze_data",
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 24,
+                "endLine": 33,
+                "line": 33
+            }
+        ],
+        "path": "eco_smells/long_parameters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/long_parameters.py"
+    },
+    "f594f0ca": {
+        "additionalInfo": {
+            "callString": null,
+            "concatTarget": null,
+            "innerLoopLine": null,
+            "repetitions": null
+        },
+        "confidence": "UNDEFINED",
+        "energyMetadata": {
+            "end": null,
+            "isFunc": true,
+            "start": null,
+            "useOccurences": true
+        },
+        "id": "f594f0ca",
+        "message": "Too many arguments (15/6)",
+        "messageId": "R0913",
+        "module": "eco_smells.long_parameters",
+        "obj": "LongParameterSmells.extreme_parameters.mega_function",
+        "occurences": [
+            {
+                "column": 8,
+                "endColumn": 25,
+                "endLine": 41,
+                "line": 41
+            }
+        ],
+        "path": "eco_smells/long_parameters.py",
+        "symbol": "too-many-arguments",
+        "type": "refactor",
+        "absolutePath": "/root/ecooptimizer_benchmark/repositories/synth/eco_smells/long_parameters.py"
+    }
+}
