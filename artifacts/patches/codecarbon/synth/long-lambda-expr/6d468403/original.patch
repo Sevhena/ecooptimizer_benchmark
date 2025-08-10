@@ -1,5 +1,5 @@
 diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
-index 2204204..cdb398a 100644
+index 2204204..c8468cb 100644
 --- a/eco_smells/long_lambda.py
 +++ b/eco_smells/long_lambda.py
 @@ -1,3 +1,4 @@
@@ -18,7 +18,7 @@ index 2204204..cdb398a 100644
 -            + sum(i for i in range(10) if i % 2 == 0)
 -            - len([c for c in "abcdefghijklmnopqrstuvwxyz" if c in "aeiou"])
 -        )
-+        with EmissionsTracker(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_LLE001_6d468403', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/6d468403.csv') as tracker:
++        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_LLE001_6d468403', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/6d468403.csv') as tracker:
 +            transform = lambda x, y, z: (
 +                (x * y * z) / (x**2 + y**2 + z**2)
 +                if (x**2 + y**2 + z**2) != 0

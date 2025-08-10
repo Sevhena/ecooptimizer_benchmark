@@ -1,5 +1,5 @@
 diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
-index 2204204..29cea8d 100644
+index 2204204..499129e 100644
 --- a/eco_smells/long_lambda.py
 +++ b/eco_smells/long_lambda.py
 @@ -1,3 +1,4 @@
@@ -19,7 +19,7 @@ index 2204204..29cea8d 100644
 -            and item["category"] in ("A", "B", "C")
 -            and not item.get("excluded", False)
 -        ]
-+        with EmissionsTracker(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_LLE001_b367f70b', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/b367f70b_refactored.csv') as tracker:
++        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_LLE001_b367f70b', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/b367f70b_refactored.csv') as tracker:
 +            def process(data):
 +                return [
 +                    item

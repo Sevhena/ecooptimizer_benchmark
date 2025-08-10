@@ -359,7 +359,7 @@ def process_smell(smell_data: dict, repo_name: str, tracker: str):
             f"emissions/{repo_name}/{smell_data['symbol']}/{smell_data['id']}.csv"
         ).resolve()
 
-        args = f"project_name='{repo_name}-benchmark', measure_power_secs=1, experiment_id='{repo_name}_{file_tag}', output_file='{output_file}'"
+        args = f"project_name='{repo_name}-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='{repo_name}_{file_tag}', output_file='{output_file}'"
     else:
         output_file = Path(
             f"emissions/{repo_name}/{smell_data['symbol']}/{smell_data['id']}_usage.csv"

@@ -1,5 +1,5 @@
 diff --git a/eco_smells/string_concat.py b/eco_smells/string_concat.py
-index f529dae..0898052 100644
+index f529dae..bed59ca 100644
 --- a/eco_smells/string_concat.py
 +++ b/eco_smells/string_concat.py
 @@ -1,10 +1,12 @@
@@ -11,7 +11,7 @@ index f529dae..0898052 100644
          result = ""
 -        for i in range(100):
 -            result += f"Item {i}, "
-+        with EmissionsTracker(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_SCL001_17a9551a', output_file='/root/ecooptimizer_benchmark/emissions/synth/string-concat-loop/17a9551a.csv') as tracker:
++        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_SCL001_17a9551a', output_file='/root/ecooptimizer_benchmark/emissions/synth/string-concat-loop/17a9551a.csv') as tracker:
 +            for i in range(100):
 +                result += f"Item {i}, "
          return result

@@ -1,5 +1,5 @@
 diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
-index 2204204..f84a1a3 100644
+index 2204204..2ed4dc0 100644
 --- a/eco_smells/long_lambda.py
 +++ b/eco_smells/long_lambda.py
 @@ -1,12 +1,14 @@
@@ -13,7 +13,7 @@ index 2204204..f84a1a3 100644
 -            if len(text) > 3 
 -            else text.upper() + '!'
 -        )
-+        with EmissionsTracker(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_LLE001_0f527350', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/0f527350.csv') as tracker:
++        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_LLE001_0f527350', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/0f527350.csv') as tracker:
 +            process_text = lambda text: (
 +                text.strip().lower().replace(' ', '_') 
 +                if len(text) > 3 

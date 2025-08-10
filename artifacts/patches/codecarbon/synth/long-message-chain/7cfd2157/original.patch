@@ -1,5 +1,5 @@
 diff --git a/eco_smells/message_chains.py b/eco_smells/message_chains.py
-index f79488b..c3e152e 100644
+index f79488b..b348f3b 100644
 --- a/eco_smells/message_chains.py
 +++ b/eco_smells/message_chains.py
 @@ -2,6 +2,7 @@ import hashlib
@@ -23,7 +23,7 @@ index f79488b..c3e152e 100644
 -            .hash_sensitive_data()
 -            .analyze_metadata()
 -            .build_final_report()
-+            with EmissionsTracker(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_LMC001_7cfd2157', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-message-chain/7cfd2157.csv') as tracker:
++            with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_LMC001_7cfd2157', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-message-chain/7cfd2157.csv') as tracker:
 +                MessageChainSmells.DataPipeline()
 +                .generate_initial_dataset(100_000)
 +                .filter_active_users()

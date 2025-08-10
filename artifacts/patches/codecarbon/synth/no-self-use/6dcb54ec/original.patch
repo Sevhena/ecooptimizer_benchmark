@@ -1,5 +1,5 @@
 diff --git a/eco_smells/member_ignoring.py b/eco_smells/member_ignoring.py
-index 23aec60..68586fd 100644
+index 23aec60..9ad70e9 100644
 --- a/eco_smells/member_ignoring.py
 +++ b/eco_smells/member_ignoring.py
 @@ -1,9 +1,11 @@
@@ -10,7 +10,7 @@ index 23aec60..68586fd 100644
          self.unused_field = "This is never used"
  
      # Smelly method - instance method that doesn't use self
-+    @track_emissions(project_name='synth-benchmark', measure_power_secs=1, experiment_id='synth_R6301_6dcb54ec', output_file='/root/ecooptimizer_benchmark/emissions/synth/no-self-use/6dcb54ec.csv')
++    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R6301_6dcb54ec', output_file='/root/ecooptimizer_benchmark/emissions/synth/no-self-use/6dcb54ec.csv')
      def reverse(self, text):
          return text[::-1]
  
