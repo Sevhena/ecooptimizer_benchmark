@@ -1,0 +1,9 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-10_23-07-41,synth,long-message-chain,7cfd2157,original,30,0.00,0.0,15.7
+2025-08-10_23-07-41,synth,long-message-chain,7cfd2157,refactored,30,0.00,0.0,15.7
+2025-08-10_23-10-42,synth,long-message-chain,7cfd2157,original,30,0.00,0.0,15.9
+2025-08-10_23-10-42,synth,long-message-chain,7cfd2157,refactored,30,0.00,0.0,15.9
+2025-08-10_23-36-28,synth,long-message-chain,7cfd2157,original,30,0.55,0.0,15.9
+2025-08-10_23-36-29,synth,long-message-chain,7cfd2157,refactored,30,0.55,0.0,15.9
+2025-08-11_00-45-45,synth,long-message-chain,7cfd2157,original,30,0.55,0.0,15.6
+2025-08-11_00-45-46,synth,long-message-chain,7cfd2157,refactored,30,0.55,0.0,15.6
