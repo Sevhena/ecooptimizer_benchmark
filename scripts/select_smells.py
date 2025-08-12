@@ -177,9 +177,9 @@ def process_repo(
         logging.debug(
             f"{repo}: Processing smell type '{smell_type}' with {len(instances)} instances"
         )
-        if len(instances) < SMELL_COUNT:
+        if len(instances) <= SMELL_COUNT:
             logging.warning(
-                f"{repo}: Only {len(instances)} instances found for smell type '{smell_type}' (less than {SMELL_COUNT}). Selecting all."
+                f"{repo}: Only {len(instances)} instances found for smell type '{smell_type}' (<= than {SMELL_COUNT}). Selecting all."
             )
             selected = instances
         else:

@@ -1,0 +1,36 @@
+diff --git a/eco_smells/message_chains.py b/eco_smells/message_chains.py
+index f79488b..f36b692 100644
+--- a/eco_smells/message_chains.py
++++ b/eco_smells/message_chains.py
+@@ -2,6 +2,7 @@ import hashlib
+ import statistics
+ import random
+ from datetime import datetime, timedelta
++from codecarbon import EmissionsTracker
+ 
+ 
+ class MessageChainSmells:
+@@ -118,14 +119,16 @@ class MessageChainSmells:
+     @staticmethod
+     def medium_chain():
+         """6-level chain"""
++        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_LMC001_b434f086', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-message-chain/b434f086_refactored.csv') as tracker:
++            intermediate_0 = MessageChainSmells.DataPipeline()
++            intermediate_1 = intermediate_0.generate_initial_dataset()
++            intermediate_2 = intermediate_1.filter_active_users()
++            intermediate_3 = intermediate_2.add_computed_fields()
++            intermediate_4 = intermediate_3.calculate_demographics()
++            intermediate_5 = intermediate_4.hash_sensitive_data()
++            _carbon_wrapped_b9075d9d = intermediate_5.build_final_report()
+         return (
+-            MessageChainSmells.DataPipeline()
+-            .generate_initial_dataset(25_000)
+-            .filter_active_users()
+-            .add_computed_fields()
+-            .calculate_demographics()
+-            .hash_sensitive_data()
+-            .build_final_report()
++            _carbon_wrapped_b9075d9d
+         )
+ 
+     @staticmethod

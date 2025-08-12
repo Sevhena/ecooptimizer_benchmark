@@ -1,5 +1,0 @@
-timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
-2025-08-10_23-57-24,synth,string-concat-loop,2596bf89,original,30,104.44,0.0,15.9
-2025-08-10_23-59-08,synth,string-concat-loop,2596bf89,refactored,30,103.87,0.0,15.9
-2025-08-11_01-05-37,synth,string-concat-loop,2596bf89,original,30,168.49,0.0,15.6
-2025-08-11_01-08-26,synth,string-concat-loop,2596bf89,refactored,30,168.36,0.0,15.6

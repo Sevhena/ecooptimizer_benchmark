@@ -236,9 +236,7 @@ def wrap_with_context_manager(
             f"Checking if expression is sole assignment: {is_sole_assign} for lines {start_line}-{end_line}"
         )
 
-        is_in_expression = (
-            not is_sole_assign and not lines[start_line - 1][:start_col].strip() == ""
-        )
+        is_in_expression = not is_sole_assign
 
         logging.debug(
             f"Expression spanning lines {start_line}-{end_line}, is_in_expression={is_in_expression}"

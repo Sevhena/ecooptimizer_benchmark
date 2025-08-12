@@ -55,7 +55,7 @@ def load_yaml(path: Path):
 def create_worktree(base_repo: Path, worktree_dir: Path) -> bool:
     try:
         subprocess.run(
-            ["git", "worktree", "add", str(worktree_dir), "--force"],
+            ["git", "worktree", "add", str(worktree_dir), "HEAD", "--force"],
             cwd=base_repo,
             check=True,
             capture_output=True,

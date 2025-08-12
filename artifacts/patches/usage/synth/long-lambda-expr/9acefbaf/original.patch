@@ -1,0 +1,31 @@
+diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
+index 2204204..d7cc014 100644
+--- a/eco_smells/long_lambda.py
++++ b/eco_smells/long_lambda.py
+@@ -1,3 +1,4 @@
++from crtracker import MemoryCPUTracker
+ class LongLambdaSmells:
+     @staticmethod
+     def small_lambda():
+@@ -29,13 +30,14 @@ class LongLambdaSmells:
+ 
+     @staticmethod
+     def large_lambda():
+-        transform = lambda x, y, z: (
+-            (x * y * z) / (x**2 + y**2 + z**2)
+-            if (x**2 + y**2 + z**2) != 0
+-            else 0
+-            + sum(i for i in range(10) if i % 2 == 0)
+-            - len([c for c in "abcdefghijklmnopqrstuvwxyz" if c in "aeiou"])
+-        )
++        with MemoryCPUTracker(project_id='synth-benchmark', experiment_id='synth_LLE001_9acefbaf', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/9acefbaf_usage.csv') as tracker:
++            transform = lambda x, y, z: (
++                (x * y * z) / (x**2 + y**2 + z**2)
++                if (x**2 + y**2 + z**2) != 0
++                else 0
++                + sum(i for i in range(10) if i % 2 == 0)
++                - len([c for c in "abcdefghijklmnopqrstuvwxyz" if c in "aeiou"])
++            )
+         result = [transform(i, i + 1, i + 2) for i in range(100)]
+         return result
+ 

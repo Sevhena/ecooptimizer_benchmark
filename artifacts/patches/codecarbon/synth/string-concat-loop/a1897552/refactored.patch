@@ -1,0 +1,31 @@
+diff --git a/eco_smells/string_concat.py b/eco_smells/string_concat.py
+index f529dae..aa5d5e9 100644
+--- a/eco_smells/string_concat.py
++++ b/eco_smells/string_concat.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ class StringConcatSmells:
+     @staticmethod
+     def small_concat():
+@@ -10,9 +11,11 @@ class StringConcatSmells:
+     @staticmethod
+     def medium_concat():
+         """Concatenate 1,000 strings (small batch)"""
+-        result = "START:"
+-        for i in range(1000):
+-            result += str(i) + ","
++        result = ['START:']
++        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_SCL001_a1897552', output_file='/root/ecooptimizer_benchmark/emissions/synth/string-concat-loop/a1897552_refactored.csv') as tracker:
++            for i in range(1000):
++                result.append(str(i) + ',')
++            result = ''.join(result)
+         return result
+ 
+     @staticmethod
+@@ -29,4 +32,4 @@ class StringConcatSmells:
+         result = ""
+         for i in range(50_000):
+             result += f"ID_{i}_" + "X" * (i % 10)  # Varying string sizes
+-        return result
++        return result
+\ No newline at end of file

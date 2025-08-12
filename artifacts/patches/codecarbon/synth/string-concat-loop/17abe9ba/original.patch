@@ -1,0 +1,21 @@
+diff --git a/eco_smells/string_concat.py b/eco_smells/string_concat.py
+index f529dae..8726281 100644
+--- a/eco_smells/string_concat.py
++++ b/eco_smells/string_concat.py
+@@ -1,3 +1,4 @@
++from codecarbon import EmissionsTracker
+ class StringConcatSmells:
+     @staticmethod
+     def small_concat():
+@@ -19,8 +20,9 @@ class StringConcatSmells:
+     def large_concat():
+         """Concatenate 10,000 strings (memory spiky)"""
+         result = ""
+-        for i in range(10_000):
+-            result += f"{i}:{i**2}|"
++        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_SCL001_17abe9ba', output_file='/root/ecooptimizer_benchmark/emissions/synth/string-concat-loop/17abe9ba.csv') as tracker:
++            for i in range(10_000):
++                result += f"{i}:{i**2}|"
+         return result
+ 
+     @staticmethod

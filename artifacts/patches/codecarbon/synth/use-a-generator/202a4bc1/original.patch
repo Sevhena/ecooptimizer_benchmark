@@ -1,0 +1,27 @@
+diff --git a/eco_smells/list_comp_predicate.py b/eco_smells/list_comp_predicate.py
+index a4ad6ef..e7f88f6 100644
+--- a/eco_smells/list_comp_predicate.py
++++ b/eco_smells/list_comp_predicate.py
+@@ -1,5 +1,6 @@
+ import random
+ from datetime import datetime, timedelta
++from codecarbon import EmissionsTracker
+ 
+ 
+ class ListCompPredicateSmells:
+@@ -29,12 +30,9 @@ class ListCompPredicateSmells:
+             }
+             for _ in range(100_000)
+         ]
+-        return any(
+-            [
+-                t["amount"] > 500 and t["fraud"] and t["time"].hour < 3
+-                for t in transactions
+-            ]
+-        )
++        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R1729_202a4bc1', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/202a4bc1.csv') as tracker:
++            _carbon_wrapped_274919b9 = any( [ t["amount"] > 500 and t["fraud"] and t["time"].hour < 3 for t in transactions ] )
++        return _carbon_wrapped_274919b9
+ 
+     @staticmethod
+     def extreme_case():

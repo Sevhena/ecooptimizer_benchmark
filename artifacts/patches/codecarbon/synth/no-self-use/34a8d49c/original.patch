@@ -1,0 +1,16 @@
+diff --git a/eco_smells/member_ignoring.py b/eco_smells/member_ignoring.py
+index 23aec60..69162a0 100644
+--- a/eco_smells/member_ignoring.py
++++ b/eco_smells/member_ignoring.py
+@@ -1,9 +1,11 @@
++from codecarbon import EmissionsTracker
+ # Class demonstrating the smell pattern
+ class StringProcessor:
+     def __init__(self):
+         self.unused_field = "This is never used"
+ 
+     # Smelly method - instance method that doesn't use self
++    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R6301_34a8d49c', output_file='/root/ecooptimizer_benchmark/emissions/synth/no-self-use/34a8d49c.csv')
+     def reverse(self, text):
+         return text[::-1]
+ 

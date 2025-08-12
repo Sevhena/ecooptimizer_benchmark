@@ -3,30 +3,30 @@ repos:
 smells:
   synth:
     long-lambda-expr:
-      - "0f527350"
-      - "6d468403"
-      - "b367f70b"
-      - "b1fedaae"
+    - 18ff6862
+    - '70892924'
+    - 9acefbaf
+    - c7496f4f
     long-message-chain:
-      - "7cfd2157"
-      - "35598e97"
-      - "79a1e8fb"
-      - "babc5aeb"
+    - 886a20f4
+    - 9c65bec9
+    - b0bca795
+    - b434f086
     no-self-use:
-      - "6dcb54ec"
-      - "8d27bc9e"
+    - 34a8d49c
+    - dd5452c6
     string-concat-loop:
-      - "17a9551a"
-      - "2596bf89"
-      - "55c7a99c"
-      - "8f04fcd4"
+    - 17abe9ba
+    - 7196cd51
+    - 7870bf53
+    - a1897552
     too-many-arguments:
-      - "f594f0ca"
-      - "3b50209a"
-      - "054d2763"
-      - "e08eff87"
+    - 0a31c3d7
+    - 0f94663e
+    - 63e31e14
+    - ad943db7
     use-a-generator:
-      - "1a2625c0"
-      - "2214871d"
-      - "b545619a"
-      - "1a2918ba"
+    - 202a4bc1
+    - 470013c7
+    - 70a52d09
+    - fae4b02f

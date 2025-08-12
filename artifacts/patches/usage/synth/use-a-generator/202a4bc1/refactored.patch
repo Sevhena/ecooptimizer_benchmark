@@ -1,0 +1,27 @@
+diff --git a/eco_smells/list_comp_predicate.py b/eco_smells/list_comp_predicate.py
+index a4ad6ef..053b5d8 100644
+--- a/eco_smells/list_comp_predicate.py
++++ b/eco_smells/list_comp_predicate.py
+@@ -1,5 +1,6 @@
+ import random
+ from datetime import datetime, timedelta
++from crtracker import MemoryCPUTracker
+ 
+ 
+ class ListCompPredicateSmells:
+@@ -29,12 +30,9 @@ class ListCompPredicateSmells:
+             }
+             for _ in range(100_000)
+         ]
+-        return any(
+-            [
+-                t["amount"] > 500 and t["fraud"] and t["time"].hour < 3
+-                for t in transactions
+-            ]
+-        )
++        with MemoryCPUTracker(project_id='synth-benchmark', experiment_id='synth_R1729_202a4bc1', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/202a4bc1_usage_refactored.csv') as tracker:
++            _carbon_wrapped_c92cc9eb = any( t["amount"] > 500 and t["fraud"] and t["time"].hour < 3 for t in transactions )
++        return _carbon_wrapped_c92cc9eb
+ 
+     @staticmethod
+     def extreme_case():
