@@ -1,5 +1,5 @@
 diff --git a/eco_smells/message_chains.py b/eco_smells/message_chains.py
-index f79488b..a24673d 100644
+index f79488b..dd4a38e 100644
 --- a/eco_smells/message_chains.py
 +++ b/eco_smells/message_chains.py
 @@ -2,6 +2,7 @@ import hashlib
@@ -18,13 +18,13 @@ index f79488b..a24673d 100644
 +            intermediate_0 = MessageChainSmells.DataPipeline()
 +            intermediate_1 = intermediate_0.generate_initial_dataset()
 +            intermediate_2 = intermediate_1.filter_active_users()
-+            _carbon_wrapped_a4c71552 = intermediate_2.build_final_report()
++            _carbon_wrapped_3a98ff11 = intermediate_2.build_final_report()
          return (
 -            MessageChainSmells.DataPipeline()
 -            .generate_initial_dataset(10_000)
 -            .filter_active_users()
 -            .build_final_report()
-+            _carbon_wrapped_a4c71552
++            _carbon_wrapped_3a98ff11
          )
  
      @staticmethod

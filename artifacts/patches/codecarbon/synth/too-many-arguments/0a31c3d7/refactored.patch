@@ -1,0 +1,43 @@
+diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
+index 2204204..7c13ed7 100644
+--- a/eco_smells/long_lambda.py
++++ b/eco_smells/long_lambda.py
+@@ -24,7 +24,7 @@ class LongLambdaSmells:
+             {"active": True, "value": 150, "category": "A", "excluded": False}
+             for _ in range(50)
+         ]
+-        result = process(test_data)
++        result = process(DataParams_process_6(test_data))
+         return result
+ 
+     @staticmethod
+diff --git a/eco_smells/long_parameters.py b/eco_smells/long_parameters.py
+index 6b7de68..2f680ea 100644
+--- a/eco_smells/long_parameters.py
++++ b/eco_smells/long_parameters.py
+@@ -1,10 +1,22 @@
++from codecarbon import track_emissions
+ class LongParameterSmells:
+     @staticmethod
+     def seven_parameters():
+-        def process(a, b, c, d, e, f, g):
+-            return a + b - c * d / e + f % g
++        class DataParams_process_6:
++            def __init__(self, a, b, c, d, e, f, g):
++                self.a = a
++                self.b = b
++                self.c = c
++                self.d = d
++                self.e = e
++                self.f = f
++                self.g = g
++        
++        @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R0913_0a31c3d7', output_file='/root/ecooptimizer_benchmark/emissions/synth/too-many-arguments/0a31c3d7_refactored.csv')
++        def process(data_params):
++            return data_params.a + data_params.b - data_params.c * data_params.d / data_params.e + data_params.f % data_params.g
+ 
+-        result = process(1, 2, 3, 4, 5, 6, 7)
++        result = process(DataParams_process_6(1, 2, 3, 4, 5, 6, 7))
+         return result
+ 
+     @staticmethod

@@ -1,5 +1,5 @@
 diff --git a/eco_smells/list_comp_predicate.py b/eco_smells/list_comp_predicate.py
-index a4ad6ef..d4cc3c8 100644
+index a4ad6ef..ad747fd 100644
 --- a/eco_smells/list_comp_predicate.py
 +++ b/eco_smells/list_comp_predicate.py
 @@ -1,5 +1,6 @@
@@ -15,8 +15,8 @@ index a4ad6ef..d4cc3c8 100644
          ]
 -        return all([u["active"] and u["score"] > 30 for u in users])
 +        with MemoryCPUTracker(project_id='synth-benchmark', experiment_id='synth_R1729_470013c7', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/470013c7_usage_refactored.csv') as tracker:
-+            _carbon_wrapped_2fb2c3da = all(u["active"] and u["score"] > 30 for u in users)
-+        return _carbon_wrapped_2fb2c3da
++            _carbon_wrapped_4608010a = all(u["active"] and u["score"] > 30 for u in users)
++        return _carbon_wrapped_4608010a
  
      @staticmethod
      def large_case():

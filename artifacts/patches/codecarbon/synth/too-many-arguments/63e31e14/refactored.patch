@@ -1,9 +1,9 @@
 diff --git a/eco_smells/long_parameters.py b/eco_smells/long_parameters.py
-index 6b7de68..6d59c5f 100644
+index 6b7de68..6ce8be8 100644
 --- a/eco_smells/long_parameters.py
 +++ b/eco_smells/long_parameters.py
 @@ -1,3 +1,4 @@
-+from codecarbon import EmissionsTracker
++from codecarbon import track_emissions
  class LongParameterSmells:
      @staticmethod
      def seven_parameters():
