@@ -22,8 +22,8 @@
             {
                 "column": 8,
                 "endColumn": 19,
-                "endLine": 6,
-                "line": 6
+                "endLine": 4,
+                "line": 4
             }
         ],
         "path": "eco_smells/long_parameters.py",
@@ -54,8 +54,8 @@
             {
                 "column": 8,
                 "endColumn": 24,
-                "endLine": 33,
-                "line": 33
+                "endLine": 31,
+                "line": 31
             }
         ],
         "path": "eco_smells/long_parameters.py",
@@ -67,7 +67,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 24,
+            "innerLoopLine": 22,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -84,10 +84,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 48,
-                "endLine": 25,
-                "line": 25
+                "column": 12,
+                "endColumn": 44,
+                "endLine": 23,
+                "line": 23
             }
         ],
         "path": "eco_smells/string_concat.py",
@@ -116,10 +116,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 23,
-                "endColumn": 13,
-                "endLine": 57,
-                "line": 46
+                "column": 19,
+                "endColumn": 9,
+                "endLine": 55,
+                "line": 44
             }
         ],
         "path": "eco_smells/long_lambda.py",
@@ -148,10 +148,10 @@
         "obj": "ListCompPredicateSmells.large_case",
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 127,
-                "endLine": 34,
-                "line": 34
+                "column": 15,
+                "endColumn": 9,
+                "endLine": 37,
+                "line": 32
             }
         ],
         "path": "eco_smells/list_comp_predicate.py",
@@ -182,8 +182,8 @@
             {
                 "column": 4,
                 "endColumn": 15,
-                "endLine": 9,
-                "line": 9
+                "endLine": 7,
+                "line": 7
             }
         ],
         "path": "eco_smells/member_ignoring.py",
@@ -212,10 +212,10 @@
         "obj": "ListCompPredicateSmells.medium_case",
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 92,
-                "endLine": 21,
-                "line": 21
+                "column": 15,
+                "endColumn": 68,
+                "endLine": 19,
+                "line": 19
             }
         ],
         "path": "eco_smells/list_comp_predicate.py",
@@ -246,8 +246,8 @@
             {
                 "column": 8,
                 "endColumn": 26,
-                "endLine": 14,
-                "line": 14
+                "endLine": 12,
+                "line": 12
             }
         ],
         "path": "eco_smells/long_parameters.py",
@@ -276,10 +276,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 27,
-                "endColumn": 13,
-                "endLine": 11,
-                "line": 7
+                "column": 23,
+                "endColumn": 9,
+                "endLine": 9,
+                "line": 5
             }
         ],
         "path": "eco_smells/long_lambda.py",
@@ -308,10 +308,10 @@
         "obj": "ListCompPredicateSmells.small_case",
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 84,
-                "endLine": 12,
-                "line": 12
+                "column": 15,
+                "endColumn": 60,
+                "endLine": 10,
+                "line": 10
             }
         ],
         "path": "eco_smells/list_comp_predicate.py",
@@ -323,7 +323,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 8,
+            "innerLoopLine": 6,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -340,10 +340,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 47,
-                "endLine": 9,
-                "line": 9
+                "column": 12,
+                "endColumn": 43,
+                "endLine": 7,
+                "line": 7
             }
         ],
         "path": "eco_smells/string_concat.py",
@@ -355,7 +355,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 32,
+            "innerLoopLine": 30,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -372,10 +372,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 61,
-                "endLine": 33,
-                "line": 33
+                "column": 12,
+                "endColumn": 57,
+                "endLine": 31,
+                "line": 31
             }
         ],
         "path": "eco_smells/string_concat.py",
@@ -404,10 +404,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 274,
-                "endLine": 151,
-                "line": 151
+                "column": 12,
+                "endColumn": 33,
+                "endLine": 158,
+                "line": 150
             }
         ],
         "path": "eco_smells/message_chains.py",
@@ -436,10 +436,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 24,
-                "endColumn": 13,
-                "endLine": 40,
-                "line": 34
+                "column": 20,
+                "endColumn": 9,
+                "endLine": 38,
+                "line": 32
             }
         ],
         "path": "eco_smells/long_lambda.py",
@@ -468,10 +468,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 151,
-                "endLine": 113,
-                "line": 113
+                "column": 12,
+                "endColumn": 33,
+                "endLine": 115,
+                "line": 112
             }
         ],
         "path": "eco_smells/message_chains.py",
@@ -483,7 +483,7 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 16,
+            "innerLoopLine": 14,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
@@ -500,10 +500,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 16,
-                "endColumn": 46,
-                "endLine": 17,
-                "line": 17
+                "column": 12,
+                "endColumn": 42,
+                "endLine": 15,
+                "line": 15
             }
         ],
         "path": "eco_smells/string_concat.py",
@@ -564,10 +564,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 273,
-                "endLine": 136,
-                "line": 136
+                "column": 12,
+                "endColumn": 33,
+                "endLine": 143,
+                "line": 135
             }
         ],
         "path": "eco_smells/message_chains.py",
@@ -596,10 +596,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 223,
-                "endLine": 123,
-                "line": 123
+                "column": 12,
+                "endColumn": 33,
+                "endLine": 128,
+                "line": 122
             }
         ],
         "path": "eco_smells/message_chains.py",
@@ -628,10 +628,10 @@
         "obj": null,
         "occurences": [
             {
-                "column": 22,
-                "endColumn": 13,
-                "endLine": 24,
-                "line": 17
+                "column": 18,
+                "endColumn": 9,
+                "endLine": 22,
+                "line": 15
             }
         ],
         "path": "eco_smells/long_lambda.py",
@@ -662,8 +662,8 @@
             {
                 "column": 4,
                 "endColumn": 20,
-                "endLine": 13,
-                "line": 13
+                "endLine": 11,
+                "line": 11
             }
         ],
         "path": "eco_smells/member_ignoring.py",
@@ -692,10 +692,10 @@
         "obj": "ListCompPredicateSmells.extreme_case",
         "occurences": [
             {
-                "column": 39,
-                "endColumn": 153,
-                "endLine": 52,
-                "line": 52
+                "column": 15,
+                "endColumn": 9,
+                "endLine": 56,
+                "line": 50
             }
         ],
         "path": "eco_smells/list_comp_predicate.py",
