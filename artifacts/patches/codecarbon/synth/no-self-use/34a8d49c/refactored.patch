@@ -1,9 +1,9 @@
 diff --git a/eco_smells/member_ignoring.py b/eco_smells/member_ignoring.py
-index 23aec60..ddb21b3 100644
+index 23aec60..f6a9703 100644
 --- a/eco_smells/member_ignoring.py
 +++ b/eco_smells/member_ignoring.py
 @@ -1,10 +1,13 @@
-+from codecarbon import EmissionsTracker
++from codecarbon import track_emissions
  # Class demonstrating the smell pattern
  class StringProcessor:
      def __init__(self):

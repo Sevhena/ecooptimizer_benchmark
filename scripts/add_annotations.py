@@ -121,7 +121,7 @@ def add_decorator_to_function(
     # Add import if not present
     if tracker == "codecarbon":
         package = "codecarbon"
-        track_import = "EmissionsTracker"
+        track_import = "track_emissions"
         decorator = "track_emissions"
     else:
         package = "crtracker"
