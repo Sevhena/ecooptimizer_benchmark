@@ -1,5 +1,0 @@
-timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
-2025-08-12_04-48-29,synth,long-lambda-expr,9acefbaf,original,30,167.29,0.0,15.6
-2025-08-12_04-51-18,synth,long-lambda-expr,9acefbaf,refactored,30,168.28,0.0,15.6
-2025-08-12_11-48-41,synth,long-lambda-expr,9acefbaf,original,30,105.13,0.0,15.7
-2025-08-12_11-50-26,synth,long-lambda-expr,9acefbaf,refactored,30,104.60,0.0,15.7

@@ -1,5 +1,0 @@
-timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
-2025-08-12_05-10-37,synth,long-message-chain,9c65bec9,original,30,167.81,0.0,15.6
-2025-08-12_05-13-31,synth,long-message-chain,9c65bec9,refactored,30,173.94,0.0,15.6
-2025-08-12_12-02-15,synth,long-message-chain,9c65bec9,original,30,103.32,0.0,15.7
-2025-08-12_12-04-04,synth,long-message-chain,9c65bec9,refactored,30,108.36,0.0,15.7
