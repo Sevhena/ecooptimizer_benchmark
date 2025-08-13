@@ -1,16 +1,3 @@
-diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
-index 2204204..7c13ed7 100644
---- a/eco_smells/long_lambda.py
-+++ b/eco_smells/long_lambda.py
-@@ -24,7 +24,7 @@ class LongLambdaSmells:
-             {"active": True, "value": 150, "category": "A", "excluded": False}
-             for _ in range(50)
-         ]
--        result = process(test_data)
-+        result = process(DataParams_process_6(test_data))
-         return result
- 
-     @staticmethod
 diff --git a/eco_smells/long_parameters.py b/eco_smells/long_parameters.py
 index 6b7de68..f8ddab5 100644
 --- a/eco_smells/long_parameters.py
