@@ -1,25 +1,26 @@
 diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
-index 2204204..c6af1a5 100644
+index 2204204..5c1a2c9 100644
 --- a/eco_smells/long_lambda.py
 +++ b/eco_smells/long_lambda.py
-@@ -1,12 +1,15 @@
+@@ -1,13 +1,14 @@
 +from crtracker import MemoryCPUTracker
  class LongLambdaSmells:
      @staticmethod
++    @MemoryCPUTracker.track_usage(project_id='synth-benchmark', experiment_id='synth_LLE001_70892924', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/70892924_usage_refactored.csv')
      def small_lambda():
-         """Lambda with string processing (>100 chars)"""
+-        """Lambda with string processing (>100 chars)"""
 -        process_text = lambda text: (
 -            text.strip().lower().replace(' ', '_') 
 -            if len(text) > 3 
 -            else text.upper() + '!'
 -        )
-+        with MemoryCPUTracker(project_id='synth-benchmark', experiment_id='synth_LLE001_70892924', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/70892924_usage_refactored.csv') as tracker:
-+            def process_text(text):
-+                return (
-+                    text.strip().lower().replace(' ', '_') 
-+                    if len(text) > 3 
-+                    else text.upper() + '!'
-+                )
-         return process_text("  Hello World  ")  # -> "hello_world"
+-        return process_text("  Hello World  ")  # -> "hello_world"
++        def process_text(text):
++            return (
++                text.strip().lower().replace(' ', '_') 
++                if len(text) > 3 
++                else text.upper() + '!'
++            )
  
  
+     @staticmethod

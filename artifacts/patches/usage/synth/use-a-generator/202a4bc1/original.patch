@@ -1,5 +1,5 @@
 diff --git a/eco_smells/list_comp_predicate.py b/eco_smells/list_comp_predicate.py
-index a4ad6ef..44c7403 100644
+index a4ad6ef..26e89d0 100644
 --- a/eco_smells/list_comp_predicate.py
 +++ b/eco_smells/list_comp_predicate.py
 @@ -1,5 +1,6 @@
@@ -9,19 +9,11 @@ index a4ad6ef..44c7403 100644
  
  
  class ListCompPredicateSmells:
-@@ -29,12 +30,9 @@ class ListCompPredicateSmells:
-             }
-             for _ in range(100_000)
-         ]
--        return any(
--            [
--                t["amount"] > 500 and t["fraud"] and t["time"].hour < 3
--                for t in transactions
--            ]
--        )
-+        with MemoryCPUTracker(project_id='synth-benchmark', experiment_id='synth_R1729_202a4bc1', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/202a4bc1_usage.csv') as tracker:
-+            _carbon_wrapped_51464aba = any( [ t["amount"] > 500 and t["fraud"] and t["time"].hour < 3 for t in transactions ] )
-+        return _carbon_wrapped_51464aba
+@@ -19,6 +20,7 @@ class ListCompPredicateSmells:
+         return all([u["active"] and u["score"] > 30 for u in users])
  
      @staticmethod
-     def extreme_case():
++    @MemoryCPUTracker.track_usage(project_id='synth-benchmark', experiment_id='synth_R1729_202a4bc1', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/202a4bc1_usage.csv')
+     def large_case():
+         """Nested conditions in any() with 100K elements"""
+         transactions = [

@@ -1,22 +1,27 @@
 diff --git a/eco_smells/list_comp_predicate.py b/eco_smells/list_comp_predicate.py
-index a4ad6ef..25e56ce 100644
+index a4ad6ef..f1f5548 100644
 --- a/eco_smells/list_comp_predicate.py
 +++ b/eco_smells/list_comp_predicate.py
 @@ -1,5 +1,6 @@
  import random
  from datetime import datetime, timedelta
-+from codecarbon import EmissionsTracker
++from codecarbon import track_emissions
  
  
  class ListCompPredicateSmells:
-@@ -16,7 +17,9 @@ class ListCompPredicateSmells:
+@@ -10,13 +11,14 @@ class ListCompPredicateSmells:
+         return any([x > 90 and x % 7 == 0 for x in numbers])
+ 
+     @staticmethod
++    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R1729_470013c7', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/470013c7_refactored.csv')
+     def medium_case():
+         """List comp inside all() with 10K elements"""
+         users = [
              {"active": random.random() > 0.3, "score": random.gauss(50, 15)}
              for _ in range(10_000)
          ]
 -        return all([u["active"] and u["score"] > 30 for u in users])
-+        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R1729_470013c7', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/470013c7_refactored.csv') as tracker:
-+            _carbon_wrapped_7094bce6 = all(u["active"] and u["score"] > 30 for u in users)
-+        return _carbon_wrapped_7094bce6
++        return all(u["active"] and u["score"] > 30 for u in users)
  
      @staticmethod
      def large_case():

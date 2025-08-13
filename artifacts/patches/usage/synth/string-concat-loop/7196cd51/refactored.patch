@@ -1,21 +1,20 @@
 diff --git a/eco_smells/string_concat.py b/eco_smells/string_concat.py
-index f529dae..9eed6b7 100644
+index f529dae..281b579 100644
 --- a/eco_smells/string_concat.py
 +++ b/eco_smells/string_concat.py
 @@ -1,10 +1,13 @@
 +from crtracker import MemoryCPUTracker
  class StringConcatSmells:
      @staticmethod
++    @MemoryCPUTracker.track_usage(project_id='synth-benchmark', experiment_id='synth_SCL001_7196cd51', output_file='/root/ecooptimizer_benchmark/emissions/synth/string-concat-loop/7196cd51_usage_refactored.csv')
      def small_concat():
          """Concatenate 100 strings (typical use case)"""
 -        result = ""
--        for i in range(100):
--            result += f"Item {i}, "
 +        result = []
-+        with MemoryCPUTracker(project_id='synth-benchmark', experiment_id='synth_SCL001_7196cd51', output_file='/root/ecooptimizer_benchmark/emissions/synth/string-concat-loop/7196cd51_usage_refactored.csv') as tracker:
-+            for i in range(100):
-+                result.append(f'Item {i}, ')
-+            result = ''.join(result)
+         for i in range(100):
+-            result += f"Item {i}, "
++            result.append(f'Item {i}, ')
++        result = ''.join(result)
          return result
  
      @staticmethod

@@ -1,25 +1,17 @@
 diff --git a/eco_smells/member_ignoring.py b/eco_smells/member_ignoring.py
-index 23aec60..f87a269 100644
+index 23aec60..ebbb3a9 100644
 --- a/eco_smells/member_ignoring.py
 +++ b/eco_smells/member_ignoring.py
-@@ -1,10 +1,13 @@
+@@ -1,3 +1,4 @@
 +from codecarbon import track_emissions
  # Class demonstrating the smell pattern
  class StringProcessor:
      def __init__(self):
-         self.unused_field = "This is never used"
- 
-     # Smelly method - instance method that doesn't use self
--    def reverse(self, text):
-+    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R6301_34a8d49c', output_file='/root/ecooptimizer_benchmark/emissions/synth/no-self-use/34a8d49c_refactored.csv')
-+    @staticmethod
-+    def reverse(text):
-         return text[::-1]
- 
-     # Smelly method - instance method that doesn't use self
-@@ -23,8 +26,7 @@ class MemberIgnoringSmells:
+@@ -22,9 +23,9 @@ class MemberIgnoringSmells:
+     attr_text = "qXjKpDvFmWcLbNhGsYrTzVnPxQaEoMuIeZyBwRtSdUgOiHlJfAkCvNmGpBsXhDqYrTlVwKfZxPcOeUiJaMdSgNnFbLkHvGtRyDpWwQzXmAsVfCjJlKdHgEoPqNrTbYuMiOxLvFwSkGpDnHcJzQaVeRtByXmKoIsPlUdFgChJwNqMvTkSrYbOxZpGmLnVfDcHjWwAqEsKiBvYtNpXrFgUoLdJhCzMmVeGtPqYbXwNkSrDfHlJvAoUcZiBpMeQyTsFdKgLnVwHxJjCqRzDmGtYfPkSoUvBlNwAeXrMiQhDpFjKgLzVcTyBnHwMs"
  
      @classmethod
++    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R6301_34a8d49c', output_file='/root/ecooptimizer_benchmark/emissions/synth/no-self-use/34a8d49c_refactored.csv')
      def unecessary_instance_obj(cls):
 -        processor = StringProcessor()
 -        result = processor.reverse(cls.attr_text)

@@ -1,19 +1,12 @@
 diff --git a/eco_smells/string_concat.py b/eco_smells/string_concat.py
-index f529dae..4ee10fe 100644
+index f529dae..39ac2eb 100644
 --- a/eco_smells/string_concat.py
 +++ b/eco_smells/string_concat.py
-@@ -1,10 +1,12 @@
-+from codecarbon import EmissionsTracker
+@@ -1,5 +1,7 @@
++from codecarbon import track_emissions
  class StringConcatSmells:
      @staticmethod
++    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_SCL001_7196cd51', output_file='/root/ecooptimizer_benchmark/emissions/synth/string-concat-loop/7196cd51.csv')
      def small_concat():
          """Concatenate 100 strings (typical use case)"""
          result = ""
--        for i in range(100):
--            result += f"Item {i}, "
-+        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_SCL001_7196cd51', output_file='/root/ecooptimizer_benchmark/emissions/synth/string-concat-loop/7196cd51.csv') as tracker:
-+            for i in range(100):
-+                result += f"Item {i}, "
-         return result
- 
-     @staticmethod

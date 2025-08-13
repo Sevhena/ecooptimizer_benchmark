@@ -1,5 +1,5 @@
 diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
-index 2204204..052800b 100644
+index 2204204..b0f98a4 100644
 --- a/eco_smells/long_lambda.py
 +++ b/eco_smells/long_lambda.py
 @@ -1,3 +1,4 @@
@@ -7,35 +7,11 @@ index 2204204..052800b 100644
  class LongLambdaSmells:
      @staticmethod
      def small_lambda():
-@@ -41,18 +42,19 @@ class LongLambdaSmells:
+@@ -40,6 +41,7 @@ class LongLambdaSmells:
+         return result
  
      @staticmethod
++    @MemoryCPUTracker.track_usage(project_id='synth-benchmark', experiment_id='synth_LLE001_18ff6862', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/18ff6862_usage.csv')
      def extreme_lambda():
--        pipeline = lambda dataset: [
--            {
--                "id": item["id"],
--                "processed": True,
--                "value": item["value"] * 1.2
--                if item["type"] == "A"
--                else (item["value"] * 0.8 if item["type"] == "B" else item["value"]),
--                "status": "active" if item["value"] > 50 else "inactive",
--            }
--            for item in dataset
--            if item["valid"] and not item.get("deleted", False)
--        ]
-+        with MemoryCPUTracker(project_id='synth-benchmark', experiment_id='synth_LLE001_18ff6862', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/18ff6862_usage.csv') as tracker:
-+            pipeline = lambda dataset: [
-+                {
-+                    "id": item["id"],
-+                    "processed": True,
-+                    "value": item["value"] * 1.2
-+                    if item["type"] == "A"
-+                    else (item["value"] * 0.8 if item["type"] == "B" else item["value"]),
-+                    "status": "active" if item["value"] > 50 else "inactive",
-+                }
-+                for item in dataset
-+                if item["valid"] and not item.get("deleted", False)
-+            ]
-         test_data = [
+         pipeline = lambda dataset: [
              {
-                 "id": i,

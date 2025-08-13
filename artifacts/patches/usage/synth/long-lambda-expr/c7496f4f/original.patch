@@ -1,5 +1,5 @@
 diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
-index 2204204..9ea6e6b 100644
+index 2204204..9e16806 100644
 --- a/eco_smells/long_lambda.py
 +++ b/eco_smells/long_lambda.py
 @@ -1,3 +1,4 @@
@@ -7,27 +7,11 @@ index 2204204..9ea6e6b 100644
  class LongLambdaSmells:
      @staticmethod
      def small_lambda():
-@@ -12,14 +13,15 @@ class LongLambdaSmells:
+@@ -11,6 +12,7 @@ class LongLambdaSmells:
+ 
  
      @staticmethod
++    @MemoryCPUTracker.track_usage(project_id='synth-benchmark', experiment_id='synth_LLE001_c7496f4f', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/c7496f4f_usage.csv')
      def medium_lambda():
--        process = lambda data: [
--            item
--            for item in data
--            if item["active"]
--            and item["value"] > 100
--            and item["category"] in ("A", "B", "C")
--            and not item.get("excluded", False)
--        ]
-+        with MemoryCPUTracker(project_id='synth-benchmark', experiment_id='synth_LLE001_c7496f4f', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/c7496f4f_usage.csv') as tracker:
-+            process = lambda data: [
-+                item
-+                for item in data
-+                if item["active"]
-+                and item["value"] > 100
-+                and item["category"] in ("A", "B", "C")
-+                and not item.get("excluded", False)
-+            ]
-         test_data = [
-             {"active": True, "value": 150, "category": "A", "excluded": False}
-             for _ in range(50)
+         process = lambda data: [
+             item

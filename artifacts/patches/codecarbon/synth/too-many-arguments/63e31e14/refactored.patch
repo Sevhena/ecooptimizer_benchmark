@@ -1,5 +1,5 @@
 diff --git a/eco_smells/long_parameters.py b/eco_smells/long_parameters.py
-index 6b7de68..6ce8be8 100644
+index 6b7de68..4db2b84 100644
 --- a/eco_smells/long_parameters.py
 +++ b/eco_smells/long_parameters.py
 @@ -1,3 +1,4 @@
@@ -7,11 +7,12 @@ index 6b7de68..6ce8be8 100644
  class LongParameterSmells:
      @staticmethod
      def seven_parameters():
-@@ -9,21 +10,16 @@ class LongParameterSmells:
+@@ -8,22 +9,17 @@ class LongParameterSmells:
+         return result
  
      @staticmethod
++    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R0913_63e31e14', output_file='/root/ecooptimizer_benchmark/emissions/synth/too-many-arguments/63e31e14_refactored.csv')
      def eight_parameters():
-+        @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R0913_63e31e14', output_file='/root/ecooptimizer_benchmark/emissions/synth/too-many-arguments/63e31e14_refactored.csv')
          def create_profile(
 -            name, age, address, phone, email, is_active, created_at, updated_at
 -        ):

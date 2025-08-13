@@ -110,7 +110,6 @@ def add_decorator_to_function(
     file_path: Path,
     cc_args: str,
     line_num: int,
-    col_num: int,
     tracker: str = "codecarbon",
 ):
     """Add CodeCarbon decorator to a function."""
@@ -129,7 +128,8 @@ def add_decorator_to_function(
         decorator = "MemoryCPUTracker.track_usage"
 
     # Add the decorator
-    decorator_line = " " * (col_num) + f"@{decorator}({cc_args})\n"
+    cols = len(lines[line_num - 1]) - len(lines[line_num - 1].lstrip())
+    decorator_line = " " * (cols) + f"@{decorator}({cc_args})\n"
     lines.insert(line_num - 1, decorator_line)
 
     # Add import if not present
@@ -369,16 +369,14 @@ def process_smell(smell_data: dict, repo_name: str, tracker: str):
         # Function/method case - use decorator
         if energy_meta.get("useOccurences", False):
             for occ in smell_data["occurences"]:
-                add_decorator_to_function(
-                    file_path, args, occ["line"], occ.get("column", 0), tracker
-                )
+                add_decorator_to_function(file_path, args, occ["line"], tracker)
         else:
-            add_decorator_to_function(
-                file_path, args, energy_meta["start"], energy_meta.get("col", 0), tracker
-            )
+            add_decorator_to_function(file_path, args, energy_meta["start"], tracker)
 
         smell_data["occurences"][0]["line"] += 2
         smell_data["occurences"][0]["endLine"] += 2
+        if smell_data["additionalInfo"].get("innerLoopLine"):
+            smell_data["additionalInfo"]["innerLoopLine"] += 2
     else:
         # Non-function case - use context manager
         tab_size = 4

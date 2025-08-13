@@ -8,10 +8,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
+            "end": 3,
             "isFunc": true,
-            "start": null,
-            "useOccurences": true
+            "start": 3,
+            "useOccurences": false
         },
         "id": "0a31c3d7",
         "message": "Too many arguments (7/6)",
@@ -22,8 +22,8 @@
             {
                 "column": 8,
                 "endColumn": 19,
-                "endLine": 4,
-                "line": 4
+                "endLine": 6,
+                "line": 6
             }
         ],
         "path": "eco_smells/long_parameters.py",
@@ -40,10 +40,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
+            "end": 30,
             "isFunc": true,
-            "start": null,
-            "useOccurences": true
+            "start": 30,
+            "useOccurences": false
         },
         "id": "0f94663e",
         "message": "Too many arguments (10/6)",
@@ -54,8 +54,8 @@
             {
                 "column": 8,
                 "endColumn": 24,
-                "endLine": 31,
-                "line": 31
+                "endLine": 33,
+                "line": 33
             }
         ],
         "path": "eco_smells/long_parameters.py",
@@ -67,14 +67,14 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 22,
+            "innerLoopLine": 24,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": 23,
-            "isFunc": false,
-            "start": 22,
+            "end": 19,
+            "isFunc": true,
+            "start": 19,
             "useOccurences": false
         },
         "id": "17abe9ba",
@@ -86,8 +86,8 @@
             {
                 "column": 12,
                 "endColumn": 44,
-                "endLine": 23,
-                "line": 23
+                "endLine": 25,
+                "line": 25
             }
         ],
         "path": "eco_smells/string_concat.py",
@@ -104,10 +104,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 43,
+            "isFunc": true,
+            "start": 43,
+            "useOccurences": false
         },
         "id": "18ff6862",
         "message": "Lambda function too long (8/5 expressions)",
@@ -118,8 +118,8 @@
             {
                 "column": 19,
                 "endColumn": 9,
-                "endLine": 55,
-                "line": 44
+                "endLine": 57,
+                "line": 46
             }
         ],
         "path": "eco_smells/long_lambda.py",
@@ -136,10 +136,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 22,
+            "isFunc": true,
+            "start": 22,
+            "useOccurences": false
         },
         "id": "202a4bc1",
         "message": "Use a generator instead 'any(t['amount'] > 500 and t['fraud'] and t['time'].hour < 3 for t in transactions)'",
@@ -150,8 +150,8 @@
             {
                 "column": 15,
                 "endColumn": 9,
-                "endLine": 37,
-                "line": 32
+                "endLine": 39,
+                "line": 34
             }
         ],
         "path": "eco_smells/list_comp_predicate.py",
@@ -168,10 +168,10 @@
         },
         "confidence": "INFERENCE",
         "energyMetadata": {
-            "end": null,
+            "end": 25,
             "isFunc": true,
-            "start": null,
-            "useOccurences": true
+            "start": 25,
+            "useOccurences": false
         },
         "id": "34a8d49c",
         "message": "Method could be a function",
@@ -200,10 +200,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 13,
+            "isFunc": true,
+            "start": 13,
+            "useOccurences": false
         },
         "id": "470013c7",
         "message": "Use a generator instead 'all(u['active'] and u['score'] > 30 for u in users)'",
@@ -214,8 +214,8 @@
             {
                 "column": 15,
                 "endColumn": 68,
-                "endLine": 19,
-                "line": 19
+                "endLine": 21,
+                "line": 21
             }
         ],
         "path": "eco_smells/list_comp_predicate.py",
@@ -232,10 +232,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
+            "end": 11,
             "isFunc": true,
-            "start": null,
-            "useOccurences": true
+            "start": 11,
+            "useOccurences": false
         },
         "id": "63e31e14",
         "message": "Too many arguments (8/6)",
@@ -246,8 +246,8 @@
             {
                 "column": 8,
                 "endColumn": 26,
-                "endLine": 12,
-                "line": 12
+                "endLine": 14,
+                "line": 14
             }
         ],
         "path": "eco_smells/long_parameters.py",
@@ -264,10 +264,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 3,
+            "isFunc": true,
+            "start": 3,
+            "useOccurences": false
         },
         "id": "70892924",
         "message": "Lambda function too long (8/5 expressions)",
@@ -278,8 +278,8 @@
             {
                 "column": 23,
                 "endColumn": 9,
-                "endLine": 9,
-                "line": 5
+                "endLine": 11,
+                "line": 7
             }
         ],
         "path": "eco_smells/long_lambda.py",
@@ -296,10 +296,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 7,
+            "isFunc": true,
+            "start": 7,
+            "useOccurences": false
         },
         "id": "70a52d09",
         "message": "Use a generator instead 'any(x > 90 and x % 7 == 0 for x in numbers)'",
@@ -310,8 +310,8 @@
             {
                 "column": 15,
                 "endColumn": 60,
-                "endLine": 10,
-                "line": 10
+                "endLine": 12,
+                "line": 12
             }
         ],
         "path": "eco_smells/list_comp_predicate.py",
@@ -323,14 +323,14 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 6,
+            "innerLoopLine": 8,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": 7,
-            "isFunc": false,
-            "start": 6,
+            "end": 3,
+            "isFunc": true,
+            "start": 3,
             "useOccurences": false
         },
         "id": "7196cd51",
@@ -342,8 +342,8 @@
             {
                 "column": 12,
                 "endColumn": 43,
-                "endLine": 7,
-                "line": 7
+                "endLine": 9,
+                "line": 9
             }
         ],
         "path": "eco_smells/string_concat.py",
@@ -355,14 +355,14 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 30,
+            "innerLoopLine": 32,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": 31,
-            "isFunc": false,
-            "start": 30,
+            "end": 27,
+            "isFunc": true,
+            "start": 27,
             "useOccurences": false
         },
         "id": "7870bf53",
@@ -374,8 +374,8 @@
             {
                 "column": 12,
                 "endColumn": 57,
-                "endLine": 31,
-                "line": 31
+                "endLine": 33,
+                "line": 33
             }
         ],
         "path": "eco_smells/string_concat.py",
@@ -392,10 +392,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 147,
+            "isFunc": true,
+            "start": 147,
+            "useOccurences": false
         },
         "id": "886a20f4",
         "message": "Method chain too long (9/3)",
@@ -406,8 +406,8 @@
             {
                 "column": 12,
                 "endColumn": 33,
-                "endLine": 158,
-                "line": 150
+                "endLine": 160,
+                "line": 152
             }
         ],
         "path": "eco_smells/message_chains.py",
@@ -424,10 +424,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 31,
+            "isFunc": true,
+            "start": 31,
+            "useOccurences": false
         },
         "id": "9acefbaf",
         "message": "Lambda function too long (19/5 expressions)",
@@ -438,8 +438,8 @@
             {
                 "column": 20,
                 "endColumn": 9,
-                "endLine": 38,
-                "line": 32
+                "endLine": 40,
+                "line": 34
             }
         ],
         "path": "eco_smells/long_lambda.py",
@@ -456,10 +456,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 109,
+            "isFunc": true,
+            "start": 109,
+            "useOccurences": false
         },
         "id": "9c65bec9",
         "message": "Method chain too long (4/3)",
@@ -470,8 +470,8 @@
             {
                 "column": 12,
                 "endColumn": 33,
-                "endLine": 115,
-                "line": 112
+                "endLine": 117,
+                "line": 114
             }
         ],
         "path": "eco_smells/message_chains.py",
@@ -483,14 +483,14 @@
         "additionalInfo": {
             "callString": null,
             "concatTarget": "result",
-            "innerLoopLine": 14,
+            "innerLoopLine": 16,
             "repetitions": null
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": 15,
-            "isFunc": false,
-            "start": 14,
+            "end": 11,
+            "isFunc": true,
+            "start": 11,
             "useOccurences": false
         },
         "id": "a1897552",
@@ -502,8 +502,8 @@
             {
                 "column": 12,
                 "endColumn": 42,
-                "endLine": 15,
-                "line": 15
+                "endLine": 17,
+                "line": 17
             }
         ],
         "path": "eco_smells/string_concat.py",
@@ -520,10 +520,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
+            "end": 38,
             "isFunc": true,
-            "start": null,
-            "useOccurences": true
+            "start": 38,
+            "useOccurences": false
         },
         "id": "ad943db7",
         "message": "Too many arguments (15/6)",
@@ -534,8 +534,8 @@
             {
                 "column": 8,
                 "endColumn": 25,
-                "endLine": 39,
-                "line": 39
+                "endLine": 41,
+                "line": 41
             }
         ],
         "path": "eco_smells/long_parameters.py",
@@ -552,10 +552,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 132,
+            "isFunc": true,
+            "start": 132,
+            "useOccurences": false
         },
         "id": "b0bca795",
         "message": "Method chain too long (9/3)",
@@ -566,8 +566,8 @@
             {
                 "column": 12,
                 "endColumn": 33,
-                "endLine": 143,
-                "line": 135
+                "endLine": 145,
+                "line": 137
             }
         ],
         "path": "eco_smells/message_chains.py",
@@ -584,10 +584,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 119,
+            "isFunc": true,
+            "start": 119,
+            "useOccurences": false
         },
         "id": "b434f086",
         "message": "Method chain too long (7/3)",
@@ -598,8 +598,8 @@
             {
                 "column": 12,
                 "endColumn": 33,
-                "endLine": 128,
-                "line": 122
+                "endLine": 130,
+                "line": 124
             }
         ],
         "path": "eco_smells/message_chains.py",
@@ -616,10 +616,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 14,
+            "isFunc": true,
+            "start": 14,
+            "useOccurences": false
         },
         "id": "c7496f4f",
         "message": "Lambda function too long (158 characters, max 100)",
@@ -630,8 +630,8 @@
             {
                 "column": 18,
                 "endColumn": 9,
-                "endLine": 22,
-                "line": 15
+                "endLine": 24,
+                "line": 17
             }
         ],
         "path": "eco_smells/long_lambda.py",
@@ -648,10 +648,10 @@
         },
         "confidence": "INFERENCE",
         "energyMetadata": {
-            "end": null,
+            "end": 31,
             "isFunc": true,
-            "start": null,
-            "useOccurences": true
+            "start": 31,
+            "useOccurences": false
         },
         "id": "dd5452c6",
         "message": "Method could be a function",
@@ -680,10 +680,10 @@
         },
         "confidence": "UNDEFINED",
         "energyMetadata": {
-            "end": null,
-            "isFunc": false,
-            "start": null,
-            "useOccurences": true
+            "end": 40,
+            "isFunc": true,
+            "start": 40,
+            "useOccurences": false
         },
         "id": "fae4b02f",
         "message": "Use a generator instead 'all(log['status'] == 'success' or log['latency'] < 100 and log['path'].startswith('/api') for log in logs)'",
@@ -694,8 +694,8 @@
             {
                 "column": 15,
                 "endColumn": 9,
-                "endLine": 56,
-                "line": 50
+                "endLine": 58,
+                "line": 52
             }
         ],
         "path": "eco_smells/list_comp_predicate.py",

@@ -8,10 +8,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 3,
+      "end": null,
       "isFunc": true,
-      "start": 3,
-      "useOccurences": false
+      "start": null,
+      "useOccurences": true
     },
     "id": "0a31c3d7",
     "message": "Too many arguments (7/6)",
@@ -40,10 +40,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 30,
+      "end": null,
       "isFunc": true,
-      "start": 30,
-      "useOccurences": false
+      "start": null,
+      "useOccurences": true
     },
     "id": "0f94663e",
     "message": "Too many arguments (10/6)",
@@ -72,9 +72,9 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 19,
-      "isFunc": true,
-      "start": 19,
+      "end": 23,
+      "isFunc": false,
+      "start": 22,
       "useOccurences": false
     },
     "id": "17abe9ba",
@@ -104,10 +104,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 43,
-      "isFunc": true,
-      "start": 43,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "18ff6862",
     "message": "Lambda function too long (8/5 expressions)",
@@ -136,10 +136,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 22,
-      "isFunc": true,
-      "start": 22,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "202a4bc1",
     "message": "Use a generator instead 'any(t['amount'] > 500 and t['fraud'] and t['time'].hour < 3 for t in transactions)'",
@@ -168,10 +168,10 @@
     },
     "confidence": "INFERENCE",
     "energyMetadata": {
-      "end": 25,
+      "end": null,
       "isFunc": true,
-      "start": 25,
-      "useOccurences": false
+      "start": null,
+      "useOccurences": true
     },
     "id": "34a8d49c",
     "message": "Method could be a function",
@@ -200,10 +200,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 13,
-      "isFunc": true,
-      "start": 13,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "470013c7",
     "message": "Use a generator instead 'all(u['active'] and u['score'] > 30 for u in users)'",
@@ -232,10 +232,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 11,
+      "end": null,
       "isFunc": true,
-      "start": 11,
-      "useOccurences": false
+      "start": null,
+      "useOccurences": true
     },
     "id": "63e31e14",
     "message": "Too many arguments (8/6)",
@@ -264,10 +264,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 3,
-      "isFunc": true,
-      "start": 3,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "70892924",
     "message": "Lambda function too long (8/5 expressions)",
@@ -296,10 +296,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 7,
-      "isFunc": true,
-      "start": 7,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "70a52d09",
     "message": "Use a generator instead 'any(x > 90 and x % 7 == 0 for x in numbers)'",
@@ -328,9 +328,9 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 3,
-      "isFunc": true,
-      "start": 3,
+      "end": 7,
+      "isFunc": false,
+      "start": 6,
       "useOccurences": false
     },
     "id": "7196cd51",
@@ -360,9 +360,9 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 27,
-      "isFunc": true,
-      "start": 27,
+      "end": 31,
+      "isFunc": false,
+      "start": 30,
       "useOccurences": false
     },
     "id": "7870bf53",
@@ -392,10 +392,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 147,
-      "isFunc": true,
-      "start": 147,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "886a20f4",
     "message": "Method chain too long (9/3)",
@@ -424,10 +424,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 31,
-      "isFunc": true,
-      "start": 31,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "9acefbaf",
     "message": "Lambda function too long (19/5 expressions)",
@@ -456,10 +456,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 109,
-      "isFunc": true,
-      "start": 109,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "9c65bec9",
     "message": "Method chain too long (4/3)",
@@ -488,9 +488,9 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 11,
-      "isFunc": true,
-      "start": 11,
+      "end": 15,
+      "isFunc": false,
+      "start": 14,
       "useOccurences": false
     },
     "id": "a1897552",
@@ -520,10 +520,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 38,
+      "end": null,
       "isFunc": true,
-      "start": 38,
-      "useOccurences": false
+      "start": null,
+      "useOccurences": true
     },
     "id": "ad943db7",
     "message": "Too many arguments (15/6)",
@@ -552,10 +552,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 132,
-      "isFunc": true,
-      "start": 132,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "b0bca795",
     "message": "Method chain too long (9/3)",
@@ -584,10 +584,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 119,
-      "isFunc": true,
-      "start": 119,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "b434f086",
     "message": "Method chain too long (7/3)",
@@ -616,10 +616,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 14,
-      "isFunc": true,
-      "start": 14,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "c7496f4f",
     "message": "Lambda function too long (158 characters, max 100)",
@@ -648,10 +648,10 @@
     },
     "confidence": "INFERENCE",
     "energyMetadata": {
-      "end": 31,
+      "end": null,
       "isFunc": true,
-      "start": 31,
-      "useOccurences": false
+      "start": null,
+      "useOccurences": true
     },
     "id": "dd5452c6",
     "message": "Method could be a function",
@@ -680,10 +680,10 @@
     },
     "confidence": "UNDEFINED",
     "energyMetadata": {
-      "end": 40,
-      "isFunc": true,
-      "start": 40,
-      "useOccurences": false
+      "end": null,
+      "isFunc": false,
+      "start": null,
+      "useOccurences": true
     },
     "id": "fae4b02f",
     "message": "Use a generator instead 'all(log['status'] == 'success' or log['latency'] < 100 and log['path'].startswith('/api') for log in logs)'",

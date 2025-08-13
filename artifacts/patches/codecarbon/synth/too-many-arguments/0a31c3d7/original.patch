@@ -1,13 +1,12 @@
 diff --git a/eco_smells/long_parameters.py b/eco_smells/long_parameters.py
-index 6b7de68..59fd021 100644
+index 6b7de68..5de5a7b 100644
 --- a/eco_smells/long_parameters.py
 +++ b/eco_smells/long_parameters.py
-@@ -1,6 +1,8 @@
+@@ -1,5 +1,7 @@
 +from codecarbon import track_emissions
  class LongParameterSmells:
      @staticmethod
++    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R0913_0a31c3d7', output_file='/root/ecooptimizer_benchmark/emissions/synth/too-many-arguments/0a31c3d7.csv')
      def seven_parameters():
-+        @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R0913_0a31c3d7', output_file='/root/ecooptimizer_benchmark/emissions/synth/too-many-arguments/0a31c3d7.csv')
          def process(a, b, c, d, e, f, g):
              return a + b - c * d / e + f % g
- 

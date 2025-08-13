@@ -1,33 +1,17 @@
 diff --git a/eco_smells/long_lambda.py b/eco_smells/long_lambda.py
-index 2204204..017b3d6 100644
+index 2204204..1260486 100644
 --- a/eco_smells/long_lambda.py
 +++ b/eco_smells/long_lambda.py
 @@ -1,3 +1,4 @@
-+from codecarbon import EmissionsTracker
++from codecarbon import track_emissions
  class LongLambdaSmells:
      @staticmethod
      def small_lambda():
-@@ -12,14 +13,15 @@ class LongLambdaSmells:
+@@ -11,6 +12,7 @@ class LongLambdaSmells:
+ 
  
      @staticmethod
++    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_LLE001_c7496f4f', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/c7496f4f.csv')
      def medium_lambda():
--        process = lambda data: [
--            item
--            for item in data
--            if item["active"]
--            and item["value"] > 100
--            and item["category"] in ("A", "B", "C")
--            and not item.get("excluded", False)
--        ]
-+        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_LLE001_c7496f4f', output_file='/root/ecooptimizer_benchmark/emissions/synth/long-lambda-expr/c7496f4f.csv') as tracker:
-+            process = lambda data: [
-+                item
-+                for item in data
-+                if item["active"]
-+                and item["value"] > 100
-+                and item["category"] in ("A", "B", "C")
-+                and not item.get("excluded", False)
-+            ]
-         test_data = [
-             {"active": True, "value": 150, "category": "A", "excluded": False}
-             for _ in range(50)
+         process = lambda data: [
+             item

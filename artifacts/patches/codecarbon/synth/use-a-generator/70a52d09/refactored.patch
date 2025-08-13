@@ -1,22 +1,21 @@
 diff --git a/eco_smells/list_comp_predicate.py b/eco_smells/list_comp_predicate.py
-index a4ad6ef..200e7a3 100644
+index a4ad6ef..71cfc3e 100644
 --- a/eco_smells/list_comp_predicate.py
 +++ b/eco_smells/list_comp_predicate.py
-@@ -1,5 +1,6 @@
+@@ -1,13 +1,15 @@
  import random
  from datetime import datetime, timedelta
-+from codecarbon import EmissionsTracker
++from codecarbon import track_emissions
  
  
  class ListCompPredicateSmells:
-@@ -7,7 +8,9 @@ class ListCompPredicateSmells:
+     @staticmethod
++    @track_emissions(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R1729_70a52d09', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/70a52d09_refactored.csv')
      def small_case():
          """List comp inside any() with 1K elements"""
          numbers = [random.randint(0, 100) for _ in range(1_000)]
 -        return any([x > 90 and x % 7 == 0 for x in numbers])
-+        with EmissionsTracker(project_name='synth-benchmark', tracking_mode='process', measure_power_secs=1, experiment_id='synth_R1729_70a52d09', output_file='/root/ecooptimizer_benchmark/emissions/synth/use-a-generator/70a52d09_refactored.csv') as tracker:
-+            _carbon_wrapped_9a50ba94 = any(x > 90 and x % 7 == 0 for x in numbers)
-+        return _carbon_wrapped_9a50ba94
++        return any(x > 90 and x % 7 == 0 for x in numbers)
  
      @staticmethod
      def medium_case():

@@ -1,13 +1,12 @@
 diff --git a/eco_smells/long_parameters.py b/eco_smells/long_parameters.py
-index 6b7de68..e815ca7 100644
+index 6b7de68..c961fb6 100644
 --- a/eco_smells/long_parameters.py
 +++ b/eco_smells/long_parameters.py
-@@ -1,6 +1,8 @@
+@@ -1,5 +1,7 @@
 +from crtracker import MemoryCPUTracker
  class LongParameterSmells:
      @staticmethod
++    @MemoryCPUTracker.track_usage(project_id='synth-benchmark', experiment_id='synth_R0913_0a31c3d7', output_file='/root/ecooptimizer_benchmark/emissions/synth/too-many-arguments/0a31c3d7_usage.csv')
      def seven_parameters():
-+        @MemoryCPUTracker.track_usage(project_id='synth-benchmark', experiment_id='synth_R0913_0a31c3d7', output_file='/root/ecooptimizer_benchmark/emissions/synth/too-many-arguments/0a31c3d7_usage.csv')
          def process(a, b, c, d, e, f, g):
              return a + b - c * d / e + f % g
- 
