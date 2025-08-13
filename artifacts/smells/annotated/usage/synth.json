@@ -182,8 +182,8 @@
             {
                 "column": 4,
                 "endColumn": 15,
-                "endLine": 7,
-                "line": 7
+                "endLine": 9,
+                "line": 9
             }
         ],
         "path": "eco_smells/member_ignoring.py",
@@ -534,8 +534,8 @@
             {
                 "column": 8,
                 "endColumn": 25,
-                "endLine": 41,
-                "line": 41
+                "endLine": 39,
+                "line": 39
             }
         ],
         "path": "eco_smells/long_parameters.py",
@@ -662,8 +662,8 @@
             {
                 "column": 4,
                 "endColumn": 20,
-                "endLine": 11,
-                "line": 11
+                "endLine": 13,
+                "line": 13
             }
         ],
         "path": "eco_smells/member_ignoring.py",
