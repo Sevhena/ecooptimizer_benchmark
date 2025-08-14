@@ -1,5 +1,5 @@
 synth:
-  test_command: ["-m", "bench"]
+  test_command: ["-m", "bench", "-n", "100"]
   target: "synth/eco_smells" 
   patterns_to_exclude:
     - "**/test_*/**"

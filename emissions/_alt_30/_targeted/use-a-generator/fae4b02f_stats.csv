@@ -1,0 +1,5 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-12_06-23-17,synth,use-a-generator,fae4b02f,original,30,164.39,0.0,15.6
+2025-08-12_06-25-58,synth,use-a-generator,fae4b02f,refactored,30,161.06,0.0,15.6
+2025-08-12_12-58-57,synth,use-a-generator,fae4b02f,original,30,101.69,0.0,15.7
+2025-08-12_13-00-38,synth,use-a-generator,fae4b02f,refactored,30,100.68,0.0,15.7

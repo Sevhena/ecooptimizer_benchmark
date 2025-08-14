@@ -1,0 +1,3 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-13_21-51-29,synth,too-many-arguments,0a31c3d7,original,30,561.79,0.0,15.9
+2025-08-13_22-00-49,synth,too-many-arguments,0a31c3d7,refactored,30,559.72,0.0,15.9
