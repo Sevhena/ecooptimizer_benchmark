@@ -1,0 +1,3 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-06_14-57-09,numpy,no-self-use,49debb68,original,30,0.05,0.0,15.8
+2025-08-06_14-57-09,numpy,no-self-use,49debb68,refactored,30,0.05,0.0,15.8

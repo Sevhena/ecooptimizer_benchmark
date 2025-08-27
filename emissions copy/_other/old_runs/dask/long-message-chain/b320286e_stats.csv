@@ -1,0 +1,3 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-07-31_18-05-15,dask,long-message-chain,b320286e,original,30,0.21,0.0,16.0
+2025-07-31_19-39-37,dask,long-message-chain,b320286e,original,30,0.22,0.0,16.0

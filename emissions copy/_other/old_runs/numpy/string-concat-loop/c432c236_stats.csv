@@ -1,0 +1,2 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-07-28_06-38-18,numpy,string-concat-loop,c432c236,original,30,0.18,0.0,16.4

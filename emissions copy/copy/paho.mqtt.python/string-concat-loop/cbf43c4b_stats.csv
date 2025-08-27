@@ -1,0 +1,3 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-07_05-54-55,paho.mqtt.python,string-concat-loop,cbf43c4b,original,30,51.36,0.0,16.1
+2025-08-07_05-55-46,paho.mqtt.python,string-concat-loop,cbf43c4b,refactored,30,50.80,0.0,16.1

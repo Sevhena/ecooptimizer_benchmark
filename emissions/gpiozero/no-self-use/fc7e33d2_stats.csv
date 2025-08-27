@@ -29,4 +29,3 @@ timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,pe
 2025-08-08_07-30-20,gpiozero,no-self-use,fc7e33d2,refactored,30,41.56,0.0,15.9
 2025-08-08_07-31-02,gpiozero,no-self-use,fc7e33d2,refactored,30,41.79,0.0,15.9
 2025-08-08_07-31-43,gpiozero,no-self-use,fc7e33d2,refactored,30,40.69,0.0,15.9
-2025-08-08_07-32-24,gpiozero,no-self-use,fc7e33d2,refactored,30,40.96,0.0,15.9

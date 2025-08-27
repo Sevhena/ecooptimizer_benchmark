@@ -1,0 +1,7 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-07_02-48-27,dask,string-concat-loop,5254055f,original,30,1179.97,0.0,16.1
+2025-08-07_03-08-11,dask,string-concat-loop,5254055f,original,30,1184.31,0.0,16.1
+2025-08-07_03-28-01,dask,string-concat-loop,5254055f,original,30,1189.96,0.0,16.1
+2025-08-07_03-47-55,dask,string-concat-loop,5254055f,original,30,1193.38,0.0,16.1
+2025-08-07_04-07-45,dask,string-concat-loop,5254055f,original,30,1190.40,0.0,16.1
+2025-08-07_04-27-40,dask,string-concat-loop,5254055f,original,30,1194.55,0.0,16.1

@@ -486,7 +486,7 @@ def main():
                         raised_error = True
                         continue
                     finally:
-                        logging.info(f"    Restoring {repo_dir} to original state...")
+                        logging.debug(f"    Restoring {repo_dir} to original state...")
                         subprocess.run(["git", "restore", "."], cwd=repo_dir)
 
     if raised_error:

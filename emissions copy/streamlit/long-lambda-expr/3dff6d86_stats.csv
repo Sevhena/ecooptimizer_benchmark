@@ -1,0 +1,4 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-07_16-47-07,streamlit,long-lambda-expr,3dff6d86,original,30,273.87,0.0,16.1
+2025-08-07_16-51-46,streamlit,long-lambda-expr,3dff6d86,original,30,279.02,0.0,16.2
+2025-08-07_16-58-27,streamlit,long-lambda-expr,3dff6d86,refactored,30,401.21,10.0,16.2

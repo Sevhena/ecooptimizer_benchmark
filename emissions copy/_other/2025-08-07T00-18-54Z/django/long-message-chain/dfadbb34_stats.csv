@@ -1,0 +1,5 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-06_22-09-54,django,long-message-chain,dfadbb34,original,30,485.56,0.0,16.2
+2025-08-06_22-18-01,django,long-message-chain,dfadbb34,original,30,486.95,0.0,16.5
+2025-08-06_22-26-11,django,long-message-chain,dfadbb34,refactored,30,489.43,0.0,16.5
+2025-08-06_22-34-19,django,long-message-chain,dfadbb34,refactored,30,488.22,0.0,16.5

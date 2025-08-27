@@ -1,0 +1,4 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-07-28_03-37-54,gpiozero,no-self-use,02f79a90,original,30,34.98,0.0,15.9
+2025-07-28_04-14-21,gpiozero,no-self-use,02f79a90,original,30,35.05,0.0,15.9
+2025-07-29_03-22-00,gpiozero,no-self-use,02f79a90,original,30,35.06,0.0,16.0

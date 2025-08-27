@@ -1,0 +1,16 @@
+timestamp,repo,smell_type,smell_id,run_type,iters,elapsed_sec,avg_cpu_percent,peak_memory_mb
+2025-08-07_05-07-16,dask,string-concat-loop,5254055f,refactored,30,1187.48,0.0,16.1
+2025-08-07_05-27-04,dask,string-concat-loop,5254055f,refactored,30,1187.82,0.0,16.1
+2025-08-07_05-46-58,dask,string-concat-loop,5254055f,refactored,30,1193.61,0.0,16.1
+2025-08-07_06-06-58,dask,string-concat-loop,5254055f,refactored,30,1200.61,0.0,16.1
+2025-08-07_06-27-12,dask,string-concat-loop,5254055f,refactored,30,1213.63,0.0,16.1
+2025-08-07_06-47-55,dask,string-concat-loop,5254055f,refactored,30,1242.55,0.0,16.1
+2025-08-07_07-08-19,dask,string-concat-loop,5254055f,refactored,30,1224.31,0.0,16.1
+2025-08-07_07-28-36,dask,string-concat-loop,5254055f,refactored,30,1216.30,0.0,16.2
+2025-08-07_07-48-49,dask,string-concat-loop,5254055f,refactored,30,1213.45,0.0,16.2
+2025-08-07_08-09-05,dask,string-concat-loop,5254055f,refactored,30,1215.28,0.0,16.2
+2025-08-07_08-29-27,dask,string-concat-loop,5254055f,refactored,30,1222.43,0.0,16.2
+2025-08-07_08-49-49,dask,string-concat-loop,5254055f,refactored,30,1222.03,0.0,16.2
+2025-08-07_09-15-40,dask,string-concat-loop,5254055f,refactored,30,1550.39,0.0,16.2
+2025-08-07_09-46-16,dask,string-concat-loop,5254055f,refactored,30,1836.27,0.0,16.2
+2025-08-07_10-07-09,dask,string-concat-loop,5254055f,refactored,30,1252.26,0.0,16.2
